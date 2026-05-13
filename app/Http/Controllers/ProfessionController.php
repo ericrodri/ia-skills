@@ -24,6 +24,8 @@ class ProfessionController extends Controller
 
     public function show(Profession $profession): Response
     {
+        $profession->loadCount(['skills as skills_count' => fn ($q) => $q->where('status', 'published')]);
+
         $skills = $profession->publishedSkills()
             ->with('author:id,name,username,avatar,is_verified_expert')
             ->withCount('comments')
