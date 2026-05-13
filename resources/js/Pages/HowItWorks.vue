@@ -1,7 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
 import { Head, Link } from '@inertiajs/vue3'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 
 const activeAI = ref('claude')
 
@@ -153,7 +153,56 @@ const aiTools = [
     },
 ]
 
-const currentTool = computed => aiTools.find(t => t.id === activeAI.value)
+const currentTool = computed(() => aiTools.find(t => t.id === activeAI.value))
+
+const faqItems = [
+    {
+        q: '¿Qué son las IA skills?',
+        a: 'Las IA skills son instrucciones estructuradas — prompts, workflows o extensiones — que permiten a profesionales obtener resultados específicos y repetibles con herramientas de inteligencia artificial como Claude, ChatGPT o Gemini. A diferencia de un prompt genérico, una skill está diseñada para un caso de uso concreto (redactar un brief, analizar un contrato, generar código) y puede reutilizarse indefinidamente con distintos datos de entrada.',
+    },
+    {
+        q: '¿Para qué sirven las skills de inteligencia artificial?',
+        a: 'Las skills de IA sirven para automatizar y acelerar tareas profesionales repetitivas: generación de contenido, análisis de documentos, escritura de código, investigación de mercado, atención al cliente y mucho más. En lugar de escribir instrucciones desde cero cada vez, usas una skill ya validada por la comunidad que produce resultados de alta calidad de forma consistente.',
+    },
+    {
+        q: '¿Qué herramientas de IA puedo usar con estas skills?',
+        a: 'La mayoría de skills funcionan con cualquier IA conversacional: Claude (Anthropic), ChatGPT (OpenAI), Gemini (Google) y Perplexity. Las skills de tipo "Claude Skill" o "Claude Plugin" son exclusivas de Claude Code, la herramienta de desarrollo de Anthropic. Cada skill indica con qué herramienta está optimizada.',
+    },
+    {
+        q: '¿Las IA skills son gratuitas?',
+        a: 'Sí, todas las skills de esta biblioteca son gratuitas. Puedes explorar, copiar y usar cualquier skill sin coste. Algunas skills requieren herramientas de IA de pago (como Claude Pro o ChatGPT Plus) para obtener los mejores resultados, pero la skill en sí siempre es de acceso libre.',
+    },
+    {
+        q: '¿Necesito saber programar para usar las skills?',
+        a: 'No. Las skills de tipo Prompt y Workflow son texto — copias el prompt, rellenas las variables con tu información y lo pegas en Claude, ChatGPT o cualquier IA. No hay código, ni instalaciones, ni configuraciones técnicas. Las skills de tipo "Claude Skill" o "Plugin" sí requieren usar la terminal, pero incluyen instrucciones de instalación paso a paso.',
+    },
+    {
+        q: '¿Funcionan con la versión gratuita de Claude o ChatGPT?',
+        a: 'Sí, la mayoría funcionan. Las skills marcadas como "avanzadas" dan mejores resultados con modelos de pago (Claude Sonnet/Opus, GPT-4o, Gemini Advanced) porque requieren razonamiento más complejo. Las skills de nivel principiante e intermedio funcionan bien con los modelos gratuitos.',
+    },
+    {
+        q: '¿Puedo modificar una skill para adaptarla a mi caso?',
+        a: 'Sí. Las skills son plantillas, no recetas cerradas. Puedes añadir variables, cambiar el idioma de salida, ajustar el tono o eliminar secciones que no necesites. Cuanto más adaptes la skill a tu contexto, mejor será el resultado.',
+    },
+    {
+        q: '¿Qué diferencia hay entre un Prompt, un Skill y un Plugin?',
+        a: 'Un Prompt es texto con instrucciones que copias y pegas en cualquier IA, sin instalación. Una Skill (Claude Skill) es un archivo SKILL.md que enseña a Claude Code un comportamiento específico, se instala con git clone y se activa con un comando /nombre. Un Plugin es una extensión instalada vía el marketplace oficial de Claude Code, más potente que una Skill: puede incluir hooks y scripts, y permanece activo en todas las sesiones.',
+    },
+    {
+        q: '¿Cómo sé que las skills son seguras?',
+        a: 'Todas las skills pasan por un proceso de revisión humana antes de publicarse. Nuestro equipo verifica que el contenido sea seguro, profesional y útil. Rechazamos cualquier skill que contenga instrucciones maliciosas, código ejecutable peligroso o contenido que pueda usarse para dañar a terceros.',
+    },
+]
+
+const faqJsonLd = computed(() => JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    'mainEntity': faqItems.map(item => ({
+        '@type': 'Question',
+        'name': item.q,
+        'acceptedAnswer': { '@type': 'Answer', 'text': item.a },
+    })),
+}))
 </script>
 
 <template>
@@ -603,65 +652,22 @@ const currentTool = computed => aiTools.find(t => t.id === activeAI.value)
             </section>
 
             <!-- FAQ -->
+            <component :is="'script'" type="application/ld+json" :innerHTML="faqJsonLd" />
             <section class="bg-gray-50 dark:bg-gray-800/50 py-20 transition-colors">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6">
-                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">Preguntas frecuentes</h2>
+                    <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">Preguntas frecuentes</h2>
+                    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8">Todo lo que necesitas saber sobre las skills de inteligencia artificial</p>
                     <div class="space-y-4">
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
+                        <details
+                            v-for="item in faqItems"
+                            :key="item.q"
+                            class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group"
+                        >
                             <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Necesito saber programar para usar las skills?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0">▾</span>
+                                {{ item.q }}
+                                <span class="text-gray-400 group-open:rotate-180 transition-transform shrink-0 ml-3">▾</span>
                             </summary>
-                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                                No. Las skills son texto — copias el prompt, rellenas las variables con tu información y lo pegas en Claude, ChatGPT o cualquier IA. No hay código, ni instalaciones, ni configuraciones técnicas.
-                            </p>
-                        </details>
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
-                            <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Funcionan con la versión gratuita de Claude o ChatGPT?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
-                            </summary>
-                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                                Sí, la mayoría funcionan. Las skills marcadas como "avanzadas" dan mejores resultados con modelos de pago (Claude Sonnet/Opus, GPT-4o, Gemini Advanced) porque requieren razonamiento más complejo. Las skills de nivel beginner e intermediate funcionan bien con los modelos gratuitos.
-                            </p>
-                        </details>
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
-                            <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Puedo modificar una skill para adaptarla a mi caso?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
-                            </summary>
-                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                                Sí. Las skills son plantillas, no recetas cerradas. Puedes añadir variables, cambiar el idioma de salida, ajustar el tono o eliminar secciones que no necesites. Cuanto más adaptes la skill a tu contexto, mejor será el resultado.
-                            </p>
-                        </details>
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
-                            <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Qué pasa si el resultado no es lo que esperaba?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
-                            </summary>
-                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                                Primero comprueba que hayas rellenado bien todas las variables — cuanto más contexto específico des, mejor. Si sigue sin convencerte, puedes pedir ajustes en el mismo chat ("hazlo más conciso", "añade ejemplos", "enfócate más en X"). Las IAs modernas entienden bien el feedback conversacional.
-                            </p>
-                        </details>
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
-                            <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Qué diferencia hay entre un Prompt, un Skill y un Plugin?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
-                            </summary>
-                            <div class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed space-y-2">
-                                <p><strong class="text-gray-700 dark:text-gray-300">Prompt</strong> — el tipo más común. Un texto con instrucciones que copias y pegas en cualquier IA (Claude, ChatGPT, Gemini...). Sin instalación, funciona al instante.</p>
-                                <p><strong class="text-violet-600 dark:text-violet-400">Skill</strong> — un archivo SKILL.md que enseña a Claude Code un comportamiento específico. Se instala con <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git clone</code> en <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">~/.claude/skills/</code> y se activa con un comando <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">/nombre</code>. Solo para Claude Code.</p>
-                                <p><strong class="text-amber-600 dark:text-amber-400">Plugin</strong> — una extensión instalada a través del marketplace oficial de Claude Code con <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">claude plugin install</code>. Más potente que un Skill: puede incluir hooks y scripts. Permanece activo en todas las sesiones. Solo para Claude Code.</p>
-                            </div>
-                        </details>
-                        <details class="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 transition-colors group">
-                            <summary class="px-5 py-4 cursor-pointer font-medium text-gray-900 dark:text-white flex items-center justify-between list-none">
-                                ¿Cómo sé que las skills son seguras y no tienen código malicioso?
-                                <span class="text-gray-400 group-open:rotate-180 transition-transform">▾</span>
-                            </summary>
-                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                                Todas las skills pasan por un proceso de revisión humana antes de publicarse. Nuestro equipo verifica que el prompt sea seguro, profesional y útil. Rechazamos cualquier skill que contenga instrucciones maliciosas, código ejecutable peligroso o contenido que pueda usarse para dañar a terceros.
-                            </p>
+                            <p class="px-5 pb-4 text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{{ item.a }}</p>
                         </details>
                     </div>
                 </div>
