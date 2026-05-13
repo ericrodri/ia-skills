@@ -16,11 +16,13 @@ const selectedProfession = ref(props.filters?.profession || '')
 const selectedTool = ref(props.filters?.tool || '')
 const selectedDifficulty = ref(props.filters?.difficulty || '')
 const selectedSort = ref(props.filters?.sort || 'top')
+const searching = ref(false)
 
 let searchTimeout = null
-watch(search, (val) => {
+watch(search, () => {
     clearTimeout(searchTimeout)
-    searchTimeout = setTimeout(() => applyFilters(), 400)
+    searching.value = true
+    searchTimeout = setTimeout(() => applyFilters(), 300)
 })
 
 function applyFilters() {
@@ -30,7 +32,16 @@ function applyFilters() {
         tool: selectedTool.value || undefined,
         difficulty: selectedDifficulty.value || undefined,
         sort: selectedSort.value,
-    }, { preserveScroll: true, replace: true })
+    }, {
+        preserveScroll: true,
+        replace: true,
+        onFinish: () => { searching.value = false },
+    })
+}
+
+function clearSearch() {
+    search.value = ''
+    applyFilters()
 }
 
 const difficultyOptions = [
@@ -86,10 +97,21 @@ const itemListJsonLd = computed(() => JSON.stringify({
                     </svg>
                     <input
                         v-model="search"
-                        type="search"
+                        type="text"
                         placeholder="Buscar skills..."
-                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/30 outline-none text-sm transition-colors"
+                        class="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/30 outline-none text-sm transition-colors"
                     />
+                    <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+                        <svg v-if="searching" class="animate-spin w-4 h-4 text-brand-400" fill="none" viewBox="0 0 24 24">
+                            <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                        </svg>
+                        <button v-else-if="search" @click="clearSearch" type="button" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </button>
+                    </div>
                 </div>
             </div>
 

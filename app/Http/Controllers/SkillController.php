@@ -31,20 +31,26 @@ class SkillController extends Controller
             $query->where('difficulty', $request->difficulty);
         }
 
-        if ($request->filled('q')) {
+        $hasSearch = $request->filled('q');
+
+        if ($hasSearch) {
             $search = $request->q;
-            $query->where(function ($q) use ($search) {
-                $q->where('title', 'ilike', "%{$search}%")
-                    ->orWhere('description', 'ilike', "%{$search}%");
-            });
+            $query->whereRaw("search_vector @@ plainto_tsquery('simple', ?)", [$search]);
         }
 
         $sort = $request->get('sort', 'top');
-        match ($sort) {
-            'new' => $query->orderByDesc('created_at'),
-            'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),
-            default => $query->orderByDesc('vote_score'),
-        };
+
+        if ($hasSearch) {
+            // When searching, order by relevance first, then vote_score as tiebreaker
+            $query->orderByRaw("ts_rank(search_vector, plainto_tsquery('simple', ?)) DESC", [$request->q])
+                  ->orderByDesc('vote_score');
+        } else {
+            match ($sort) {
+                'new'      => $query->orderByDesc('created_at'),
+                'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),
+                default    => $query->orderByDesc('vote_score'),
+            };
+        }
 
         return Inertia::render('Skills/Index', [
             'skills' => $query->paginate(20)->withQueryString(),
