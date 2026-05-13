@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        @apply antialiased;
+    }
+    body {
+        @apply bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-200;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-brand-600 dark:bg-brand-500 text-white text-sm font-semibold hover:bg-brand-700 dark:hover:bg-brand-600 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+    }
+    .btn-secondary {
+        @apply inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 text-sm font-medium border border-gray-200 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-700 hover:border-gray-300 dark:hover:border-gray-600 transition-colors focus:outline-none focus:ring-2 focus:ring-brand-500 focus:ring-offset-2 dark:focus:ring-offset-gray-900;
+    }
+    .skill-card {
+        @apply flex gap-4 p-5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl hover:border-brand-300 dark:hover:border-brand-500 hover:shadow-sm transition-all;
+    }
+    .badge {
+        @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+    }
+    .badge-tool {
+        @apply badge bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300;
+    }
+    .badge-difficulty-beginner {
+        @apply badge bg-green-50 dark:bg-green-900/30 text-green-700 dark:text-green-400;
+    }
+    .badge-difficulty-intermediate {
+        @apply badge bg-yellow-50 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-500;
+    }
+    .badge-difficulty-advanced {
+        @apply badge bg-red-50 dark:bg-red-900/30 text-red-700 dark:text-red-400;
+    }
+}

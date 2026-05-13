@@ -1,0 +1,8 @@
+User-agent: *
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /guardadas
+Disallow: /admin/
+Disallow: /skills/crear
+
+Sitemap: https://ia-skills.com/sitemap.xml

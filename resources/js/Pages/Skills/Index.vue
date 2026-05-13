@@ -1,0 +1,183 @@
+<script setup>
+import { Head, Link, router } from '@inertiajs/vue3'
+import { ref, watch } from 'vue'
+import AppLayout from '@/Layouts/AppLayout.vue'
+import SkillCard from '@/Components/SkillCard.vue'
+
+const props = defineProps({
+    skills: Object,
+    professions: Array,
+    filters: Object,
+    tools: Array,
+})
+
+const search = ref(props.filters?.q || '')
+const selectedProfession = ref(props.filters?.profession || '')
+const selectedTool = ref(props.filters?.tool || '')
+const selectedDifficulty = ref(props.filters?.difficulty || '')
+const selectedSort = ref(props.filters?.sort || 'top')
+
+let searchTimeout = null
+watch(search, (val) => {
+    clearTimeout(searchTimeout)
+    searchTimeout = setTimeout(() => applyFilters(), 400)
+})
+
+function applyFilters() {
+    router.get(route('skills.index'), {
+        q: search.value || undefined,
+        profession: selectedProfession.value || undefined,
+        tool: selectedTool.value || undefined,
+        difficulty: selectedDifficulty.value || undefined,
+        sort: selectedSort.value !== 'top' ? selectedSort.value : undefined,
+    }, { preserveScroll: true, replace: true })
+}
+
+const difficultyOptions = [
+    { value: '', label: 'Dificultad' },
+    { value: 'beginner', label: 'Principiante' },
+    { value: 'intermediate', label: 'Intermedio' },
+    { value: 'advanced', label: 'Avanzado' },
+]
+const sortOptions = [
+    { value: 'top', label: 'Más valoradas' },
+    { value: 'new', label: 'Más recientes' },
+    { value: 'trending', label: 'Trending' },
+]
+</script>
+
+<template>
+    <Head>
+        <title>Skills de IA para profesionales — ia-skills</title>
+        <meta name="description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
+        <link rel="canonical" :href="route('skills.index')" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" :content="route('skills.index')" />
+        <meta property="og:title" content="Skills de IA para profesionales — ia-skills" />
+        <meta property="og:description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
+        <meta name="twitter:card" content="summary" />
+    </Head>
+
+    <AppLayout>
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+            <!-- Header + search -->
+            <div class="mb-8">
+                <h1 class="text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">Explorar skills de IA</h1>
+                <div class="relative">
+                    <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    </svg>
+                    <input
+                        v-model="search"
+                        type="search"
+                        placeholder="Buscar skills..."
+                        class="w-full pl-10 pr-4 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/30 outline-none text-sm transition-colors"
+                    />
+                </div>
+            </div>
+
+            <div class="flex flex-col lg:flex-row gap-8">
+                <!-- Sidebar filters -->
+                <aside class="lg:w-52 shrink-0">
+                    <div class="space-y-6 sticky top-20">
+                        <!-- Sort -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Ordenar</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    v-for="opt in sortOptions"
+                                    :key="opt.value"
+                                    @click="selectedSort = opt.value; applyFilters()"
+                                    :class="[
+                                        'px-3 py-1.5 rounded-lg text-sm text-left transition-colors',
+                                        selectedSort === opt.value ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900'
+                                    ]"
+                                >{{ opt.label }}</button>
+                            </div>
+                        </div>
+
+                        <!-- Profession -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Profesión</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    @click="selectedProfession = ''; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedProfession ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
+                                >Todas</button>
+                                <button
+                                    v-for="p in professions"
+                                    :key="p.id"
+                                    @click="selectedProfession = p.slug; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedProfession === p.slug ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
+                                >{{ p.name }}</button>
+                            </div>
+                        </div>
+
+                        <!-- Tool -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Herramienta</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    @click="selectedTool = ''; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedTool ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
+                                >Todas</button>
+                                <button
+                                    v-for="t in tools"
+                                    :key="t"
+                                    @click="selectedTool = t; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
+                                >{{ t }}</button>
+                            </div>
+                        </div>
+
+                        <!-- Difficulty -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Dificultad</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    v-for="opt in difficultyOptions"
+                                    :key="opt.value"
+                                    @click="selectedDifficulty = opt.value; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedDifficulty === opt.value ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
+                                >{{ opt.label }}</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Results -->
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between mb-4">
+                        <p class="text-sm text-gray-500 dark:text-gray-400 dark:text-gray-500">{{ skills.total }} skills encontradas</p>
+                        <Link :href="route('skills.create')" class="btn-primary text-xs">+ Compartir skill</Link>
+                    </div>
+
+                    <div v-if="skills.data.length" class="flex flex-col gap-3">
+                        <SkillCard v-for="skill in skills.data" :key="skill.id" :skill="skill" />
+                    </div>
+                    <div v-else class="text-center py-20 text-gray-400 dark:text-gray-500">
+                        <p class="text-lg">No hay skills con esos filtros.</p>
+                        <button @click="search=''; selectedProfession=''; selectedTool=''; selectedDifficulty=''; applyFilters()" class="mt-4 text-sm text-brand-600 hover:underline">
+                            Limpiar filtros
+                        </button>
+                    </div>
+
+                    <!-- Pagination -->
+                    <div v-if="skills.last_page > 1" class="mt-8 flex justify-center gap-2 flex-wrap">
+                        <Link
+                            v-for="link in skills.links"
+                            :key="link.label"
+                            :href="link.url || '#'"
+                            :class="[
+                                'px-3 py-1.5 rounded-lg text-sm border transition-colors',
+                                link.active ? 'bg-brand-600 text-white border-brand-600' : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:border-brand-300',
+                                !link.url ? 'opacity-40 pointer-events-none' : ''
+                            ]"
+                            v-html="link.label"
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </AppLayout>
+</template>
