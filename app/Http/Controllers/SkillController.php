@@ -49,7 +49,7 @@ class SkillController extends Controller
         return Inertia::render('Skills/Index', [
             'skills' => $query->paginate(20)->withQueryString(),
             'professions' => Profession::where('is_active', true)->orderBy('sort_order')->get(['id', 'name', 'slug']),
-            'filters' => $request->only(['profession', 'tool', 'difficulty', 'q', 'sort']),
+            'filters' => array_merge(['sort' => $sort], $request->only(['profession', 'tool', 'difficulty', 'q'])),
             'tools' => ['ChatGPT', 'Claude', 'Midjourney', 'Gemini', 'Perplexity', 'Zapier', 'Make', 'Otro'],
         ]);
     }
