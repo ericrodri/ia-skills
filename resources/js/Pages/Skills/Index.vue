@@ -121,7 +121,7 @@ const itemListJsonLd = computed(() => JSON.stringify({
             <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Sidebar filters -->
                 <aside class="lg:w-52 shrink-0">
-                    <div class="space-y-6 sticky top-20 overflow-y-auto max-h-[calc(100vh-5.5rem)] pr-1">
+                    <div class="space-y-6 sticky top-20">
                         <!-- Sort -->
                         <div>
                             <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Ordenar</p>
@@ -164,35 +164,27 @@ const itemListJsonLd = computed(() => JSON.stringify({
                         <!-- Profession -->
                         <div>
                             <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Profesión</p>
-                            <div class="flex flex-col gap-1">
-                                <button
-                                    @click="selectedProfession = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedProfession ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Todas</button>
-                                <button
-                                    v-for="p in professions"
-                                    :key="p.id"
-                                    @click="selectedProfession = p.slug; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedProfession === p.slug ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >{{ p.name }}</button>
-                            </div>
+                            <select
+                                v-model="selectedProfession"
+                                @change="applyFilters()"
+                                class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
+                            >
+                                <option value="">Todas</option>
+                                <option v-for="p in professions" :key="p.id" :value="p.slug">{{ p.name }}</option>
+                            </select>
                         </div>
 
                         <!-- Tool -->
                         <div>
                             <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Herramienta</p>
-                            <div class="flex flex-col gap-1">
-                                <button
-                                    @click="selectedTool = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedTool ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Todas</button>
-                                <button
-                                    v-for="t in tools"
-                                    :key="t"
-                                    @click="selectedTool = t; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >{{ t }}</button>
-                            </div>
+                            <select
+                                v-model="selectedTool"
+                                @change="applyFilters()"
+                                class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
+                            >
+                                <option value="">Todas</option>
+                                <option v-for="t in tools" :key="t" :value="t">{{ t }}</option>
+                            </select>
                         </div>
 
                         <!-- Difficulty -->
