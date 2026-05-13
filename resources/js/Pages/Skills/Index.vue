@@ -48,14 +48,16 @@ const sortOptions = [
 
 <template>
     <Head>
-        <title>Skills de IA para profesionales — ia-skills</title>
+        <title>Explorar Skills de IA para profesionales — ia-skills</title>
         <meta name="description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
         <link rel="canonical" :href="route('skills.index')" />
         <meta property="og:type" content="website" />
         <meta property="og:url" :content="route('skills.index')" />
-        <meta property="og:title" content="Skills de IA para profesionales — ia-skills" />
+        <meta property="og:title" content="Explorar Skills de IA para profesionales — ia-skills" />
         <meta property="og:description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="/og-default.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/og-default.svg" />
     </Head>
 
     <AppLayout>

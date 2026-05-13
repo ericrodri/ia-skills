@@ -1,6 +1,6 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue'
-import { Link } from '@inertiajs/vue3'
+import { Head, Link } from '@inertiajs/vue3'
 import { ref } from 'vue'
 
 const activeAI = ref('claude')
@@ -158,6 +158,18 @@ const currentTool = computed => aiTools.find(t => t.id === activeAI.value)
 
 <template>
     <AppLayout>
+        <Head>
+            <title>Cómo funciona ia-skills — Aprende a usar skills de IA</title>
+            <meta name="description" content="Descubre cómo importar, usar y compartir skills de IA con ia-skills. Guía paso a paso para sacar el máximo partido a tus herramientas de IA." />
+            <link rel="canonical" :href="route('how-it-works')" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" :content="route('how-it-works')" />
+            <meta property="og:title" content="Cómo funciona ia-skills — Aprende a usar skills de IA" />
+            <meta property="og:description" content="Descubre cómo importar, usar y compartir skills de IA con ia-skills." />
+            <meta property="og:image" content="/og-default.svg" />
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:image" content="/og-default.svg" />
+        </Head>
         <div class="bg-white dark:bg-gray-900 transition-colors">
 
             <!-- Hero -->

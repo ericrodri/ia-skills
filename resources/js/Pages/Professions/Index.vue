@@ -14,7 +14,9 @@ defineProps({ professions: Array })
         <meta property="og:url" :content="route('professions.index')" />
         <meta property="og:title" content="Skills de IA por profesión — ia-skills" />
         <meta property="og:description" content="Explora skills de IA organizadas por profesión: marketing, desarrollo, diseño, ventas, RRHH y más." />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="/og-default.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/og-default.svg" />
     </Head>
 
     <AppLayout>

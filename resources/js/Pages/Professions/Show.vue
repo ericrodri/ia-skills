@@ -18,8 +18,19 @@ defineProps({
         <meta property="og:url" :content="route('professions.show', { profession: profession.slug })" />
         <meta property="og:title" :content="`Skills de IA para ${profession.name} — ia-skills`" />
         <meta property="og:description" :content="`Los mejores workflows y prompts de IA para ${profession.name}. Validados por la comunidad.`" />
-        <meta name="twitter:card" content="summary" />
+        <meta property="og:image" content="/og-default.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content="/og-default.svg" />
     </Head>
+
+    <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Profesiones", "item": route("professions.index") },
+            { "@type": "ListItem", "position": 2, "name": profession.name, "item": route("professions.show", { profession: profession.slug }) }
+        ]
+    })' />
 
     <AppLayout>
         <!-- Header -->
