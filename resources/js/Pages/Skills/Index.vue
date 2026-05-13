@@ -29,7 +29,7 @@ function applyFilters() {
         profession: selectedProfession.value || undefined,
         tool: selectedTool.value || undefined,
         difficulty: selectedDifficulty.value || undefined,
-        sort: selectedSort.value !== 'top' ? selectedSort.value : undefined,
+        sort: selectedSort.value,
     }, { preserveScroll: true, replace: true })
 }
 
@@ -107,7 +107,7 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                     @click="selectedSort = opt.value; applyFilters()"
                                     :class="[
                                         'px-3 py-1.5 rounded-lg text-sm text-left transition-colors',
-                                        selectedSort === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
+                                        selectedSort === opt.value ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900'
                                     ]"
                                 >{{ opt.label }}</button>
                             </div>
@@ -119,13 +119,13 @@ const itemListJsonLd = computed(() => JSON.stringify({
                             <div class="flex flex-col gap-1">
                                 <button
                                     @click="selectedProfession = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedProfession ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedProfession ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
                                 >Todas</button>
                                 <button
                                     v-for="p in professions"
                                     :key="p.id"
                                     @click="selectedProfession = p.slug; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedProfession === p.slug ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedProfession === p.slug ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
                                 >{{ p.name }}</button>
                             </div>
                         </div>
@@ -136,13 +136,13 @@ const itemListJsonLd = computed(() => JSON.stringify({
                             <div class="flex flex-col gap-1">
                                 <button
                                     @click="selectedTool = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedTool ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedTool ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
                                 >Todas</button>
                                 <button
                                     v-for="t in tools"
                                     :key="t"
                                     @click="selectedTool = t; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
                                 >{{ t }}</button>
                             </div>
                         </div>
@@ -155,7 +155,7 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                     v-for="opt in difficultyOptions"
                                     :key="opt.value"
                                     @click="selectedDifficulty = opt.value; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedDifficulty === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedDifficulty === opt.value ? 'bg-brand-50 text-brand-700 font-medium' : 'text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:bg-gray-50 dark:bg-gray-900']"
                                 >{{ opt.label }}</button>
                             </div>
                         </div>
