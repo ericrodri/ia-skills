@@ -149,11 +149,9 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                 <span>Profesión</span>
                                 <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showProfesion ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </button>
-                            <div v-if="showProfesion">
-                                <select v-model="selectedProfession" @change="applyFilters()" class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors">
-                                    <option value="">Todas</option>
-                                    <option v-for="p in professions" :key="p.id" :value="p.slug">{{ p.name }}</option>
-                                </select>
+                            <div v-if="showProfesion" class="flex flex-col gap-1">
+                                <button @click="selectedProfession = ''; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedProfession ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Todas</button>
+                                <button v-for="p in professions" :key="p.id" @click="selectedProfession = p.slug; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedProfession === p.slug ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">{{ p.name }}</button>
                             </div>
                         </div>
 
@@ -177,11 +175,9 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                 <span>Herramienta</span>
                                 <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showHerramienta ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </button>
-                            <div v-if="showHerramienta">
-                                <select v-model="selectedTool" @change="applyFilters()" class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors">
-                                    <option value="">Todas</option>
-                                    <option v-for="t in tools" :key="t" :value="t">{{ t }}</option>
-                                </select>
+                            <div v-if="showHerramienta" class="flex flex-col gap-1">
+                                <button @click="selectedTool = ''; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedTool ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Todas</button>
+                                <button v-for="t in tools" :key="t" @click="selectedTool = t; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">{{ t }}</button>
                             </div>
                         </div>
 
