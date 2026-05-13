@@ -42,7 +42,7 @@ class SkillController extends Controller
         $sort = $request->get('sort', 'top');
         match ($sort) {
             'new' => $query->orderByDesc('created_at'),
-            'trending' => $query->where('created_at', '>=', now()->subDays(7))->orderByDesc('vote_score'),
+            'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),
             default => $query->orderByDesc('vote_score'),
         };
 
