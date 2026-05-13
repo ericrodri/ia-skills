@@ -18,6 +18,8 @@ const selectedDifficulty = ref(props.filters?.difficulty || '')
 const selectedType = ref(props.filters?.type || '')
 const selectedSort = ref(props.filters?.sort || 'top')
 const searching = ref(false)
+const showHerramienta = ref(!!props.filters?.tool)
+const showDificultad = ref(!!props.filters?.difficulty)
 
 let searchTimeout = null
 watch(search, () => {
@@ -174,23 +176,41 @@ const itemListJsonLd = computed(() => JSON.stringify({
                             </select>
                         </div>
 
-                        <!-- Tool -->
+                        <!-- Tool (collapsible) -->
                         <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Herramienta</p>
-                            <select
-                                v-model="selectedTool"
-                                @change="applyFilters()"
-                                class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
+                            <button
+                                @click="showHerramienta = !showHerramienta"
+                                class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
                             >
-                                <option value="">Todas</option>
-                                <option v-for="t in tools" :key="t" :value="t">{{ t }}</option>
-                            </select>
+                                <span>Herramienta</span>
+                                <svg :class="['w-3.5 h-3.5 transition-transform', showHerramienta ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div v-if="showHerramienta">
+                                <select
+                                    v-model="selectedTool"
+                                    @change="applyFilters()"
+                                    class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
+                                >
+                                    <option value="">Todas</option>
+                                    <option v-for="t in tools" :key="t" :value="t">{{ t }}</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <!-- Difficulty -->
+                        <!-- Difficulty (collapsible) -->
                         <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Dificultad</p>
-                            <div class="flex flex-col gap-1">
+                            <button
+                                @click="showDificultad = !showDificultad"
+                                class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+                            >
+                                <span>Dificultad</span>
+                                <svg :class="['w-3.5 h-3.5 transition-transform', showDificultad ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+                            <div v-if="showDificultad" class="flex flex-col gap-1">
                                 <button
                                     v-for="opt in difficultyOptions"
                                     :key="opt.value"
