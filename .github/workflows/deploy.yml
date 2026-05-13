@@ -22,6 +22,7 @@ jobs:
             npm install
             npm run build
             php artisan migrate --force
+            for f in database/imports/*.json; do [ -f "$f" ] && php artisan skills:import "$f" && rm "$f"; done
             php artisan config:cache
             php artisan route:cache
             php artisan view:cache

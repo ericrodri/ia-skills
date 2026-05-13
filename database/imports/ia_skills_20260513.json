@@ -1,0 +1,52 @@
+[
+  {
+    "title": "Patrones de Workflow Agente con Claude Code",
+    "description": "Aprende a implementar los 4 patrones de agentes IA más efectivos en 2026: secuencial, operador, split-and-merge y equipos de agentes. Con ejemplos prácticos usando Claude Code.",
+    "prompt_content": "# Patrones de Workflow Agente con Claude Code\n\n## Por qué importa\n\nLos agentes IA en 2026 siguen 4 patrones base. Conocerlos te permite diseñar sistemas robustos en lugar de improvisar.\n\n## Los 4 Patrones\n\n### 1. Secuencial\nCada agente pasa el resultado al siguiente. Ideal para pipelines lineales.\n```\nAgente A → Agente B → Agente C → Resultado\n```\nPrompt: *\"Actúa como pipeline. Primero extrae los datos, luego analiza, luego genera el informe. Muestra el resultado de cada fase antes de pasar a la siguiente.\"*\n\n### 2. Operador\nUn agente orquestador delega subtareas a agentes especializados.\nPrompt: *\"Eres el orquestador. Tienes acceso a: [investigador], [redactor], [revisor]. Para cada tarea decide qué agente usar y coordina el resultado final.\"*\n\n### 3. Split-and-Merge\nDivide trabajo en paralelo, luego combina resultados.\nPrompt: *\"Divide este análisis en 3 partes independientes. Procesa cada una por separado y luego sintetiza en un resultado cohesivo.\"*\n\n### 4. Equipos de Agentes\nMúltiples agentes con roles definidos colaboran.\nPrompt: *\"Forma un equipo con: PM (prioridades), Dev (implementación), QA (revisión). Itera hasta que QA apruebe.\"*\n\n## Cuándo usar cada uno\n\n| Patrón | Usar cuando |\n|--------|-------------|\n| Secuencial | Dependencias lineales claras |\n| Operador | Tareas heterogéneas, necesitas routing |\n| Split-Merge | Trabajo paralelizable, volumen alto |\n| Equipos | Proyectos complejos con roles distintos |",
+    "tool_name": "Claude",
+    "difficulty": "advanced",
+    "use_case": "Diseñar sistemas de agentes IA para automatizar flujos de trabajo complejos",
+    "profession_slug": "desarrollo",
+    "resource_type": "prompt"
+  },
+  {
+    "title": "Script de Venta Consultiva con IA para B2B",
+    "description": "Genera scripts de ventas consultivas personalizados para cada prospecto usando Claude. Incluye preguntas de descubrimiento, manejo de objeciones y cierre adaptado al sector.",
+    "prompt_content": "# Script de Venta Consultiva con IA\n\n## Cómo usar\n\nProporciona a Claude el contexto del prospecto y obtén un script completo adaptado.\n\n## Prompt base\n\n```\nActúa como un consultor de ventas B2B experto. Tengo una reunión con:\n\n- Empresa: [nombre y sector]\n- Cargo del contacto: [título]\n- Tamaño empresa: [empleados/facturación]\n- Problema que detecté: [problema o dolor específico]\n- Mi solución: [producto/servicio]\n\nCrea un script de 30 minutos con:\n1. Apertura y rapport (2 min)\n2. Preguntas de descubrimiento SPIN (10 min) - situación, problema, implicación, necesidad\n3. Presentación de solución adaptada a su problema específico (10 min)\n4. Manejo de las 3 objeciones más probables en este sector (5 min)\n5. Cierre consultivo con siguiente paso concreto (3 min)\n\nIncluye las preguntas exactas a hacer y las frases de transición entre etapas.\n```\n\n## Variante: manejo de objeciones\n\n```\nEl prospecto dijo: \"[objeción exacta]\"\nContexto: [sector, cargo, fase de la venta]\n\nDame 3 formas de responder esta objeción que:\n- No sean defensivas\n- Reencuadren hacia el valor\n- Lleven a una pregunta de clarificación\n```\n\n## Tip\n\nGuarda los scripts exitosos. Claude puede aprender del patrón para futuros prospectos similares.",
+    "tool_name": "Claude",
+    "difficulty": "intermediate",
+    "use_case": "Preparar reuniones de ventas B2B con scripts personalizados en minutos",
+    "profession_slug": "ventas",
+    "resource_type": "prompt"
+  },
+  {
+    "title": "Estrategia de Contenido B2B con Claude: de 0 a Calendario Editorial",
+    "description": "Crea una estrategia completa de contenido B2B en una sesión con Claude: ICP, pilares de contenido, calendario de 30 días y adaptación por canal.",
+    "prompt_content": "# Estrategia de Contenido B2B con Claude\n\n## Flujo completo en 4 prompts\n\n### Prompt 1: Definir ICP y mensajes clave\n```\nNecesito una estrategia de contenido B2B para:\n- Empresa: [descripción breve]\n- Producto/servicio: [qué vende]\n- ICP objetivo: [a quién va dirigido]\n- Diferenciador: [por qué somos distintos]\n\nDefine:\n1. ICP detallado (cargo, empresa, dolores, objeciones)\n2. 3 mensajes clave que resuenan con ese ICP\n3. Tono de voz recomendado\n```\n\n### Prompt 2: Pilares de contenido\n```\nBasándote en el ICP anterior, define 4 pilares de contenido:\n- Pilar educativo (resolver problemas del ICP)\n- Pilar autoridad (demostrar expertise)\n- Pilar social (casos de éxito, comunidad)\n- Pilar conversión (bottom-of-funnel)\n\nPara cada pilar: nombre, objetivo, 5 ideas de contenido específicas.\n```\n\n### Prompt 3: Calendario 30 días\n```\nCrea un calendario editorial de 30 días con:\n- Frecuencia: [X posts/semana en LinkedIn, Y emails, Z artículos]\n- Usa los 4 pilares definidos\n- Formato para cada pieza: título, tipo (artículo/carrusel/vídeo/email), pilar, CTA\n- Distribuye equilibradamente sin saturar con ventas\n```\n\n### Prompt 4: Adaptar por canal\n```\nToma esta idea: [idea de contenido]\nAdáptala para:\n1. LinkedIn (post profesional, 1200-1500 chars, gancho potente)\n2. Email newsletter (asunto + cuerpo 300 palabras)\n3. Twitter/X (hilo de 5 tweets)\n```\n\n## Resultado esperado\nEstrategia lista para ejecutar en <2 horas de trabajo con Claude.",
+    "tool_name": "Claude",
+    "difficulty": "intermediate",
+    "use_case": "Construir presencia de contenido B2B sin contratar agencia externa",
+    "profession_slug": "marketing",
+    "resource_type": "prompt"
+  },
+  {
+    "title": "Automatizar Documentación de Procesos con Claude",
+    "description": "Convierte procesos manuales o verbales en documentación estructurada, SOPs y diagramas de flujo usando Claude. Reduce el tiempo de documentación de horas a minutos.",
+    "prompt_content": "# Automatizar Documentación de Procesos\n\n## Para qué sirve\n\nDocumentar procesos es crítico pero tedioso. Claude puede transformar una descripción informal en documentación lista para usar.\n\n## Prompt: descripción informal → SOP\n\n```\nVoy a describir cómo hacemos [nombre del proceso] en nuestra empresa.\nEs una descripción informal, tal como lo explicaría a un nuevo empleado.\n\n[DESCRIPCIÓN]\n\nTransforma esto en un SOP (Standard Operating Procedure) con:\n1. Propósito y alcance\n2. Roles y responsabilidades\n3. Pasos numerados con detalle suficiente para que alguien nuevo lo siga\n4. Puntos de decisión (si X entonces Y)\n5. Errores comunes y cómo evitarlos\n6. Métricas de éxito / cómo saber que el proceso se completó bien\n\nFormato: Markdown, listo para pegar en Notion/Confluence.\n```\n\n## Prompt: generar diagrama de flujo (Mermaid)\n\n```\nBasándote en el SOP anterior, genera un diagrama de flujo en sintaxis Mermaid\nque muestre los pasos principales y los puntos de decisión.\n\nUsa formas estándar: rectángulos para acciones, rombos para decisiones.\n```\n\n## Prompt: traducir proceso a checklist\n\n```\nConvierte el SOP en una checklist operativa que un empleado pueda marcar\nmientras ejecuta el proceso. Máximo 15 ítems, accionables y concretos.\n```\n\n## Casos de uso reales\n- Onboarding de empleados\n- Procesos de atención al cliente\n- Flujos de aprobación interna\n- Cierre mensual contable\n- Gestión de proveedores",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "use_case": "Documentar procesos de empresa de forma rápida y consistente",
+    "profession_slug": "product-management",
+    "resource_type": "prompt"
+  },
+  {
+    "title": "Gestión de Clientes Freelance con Claude: Propuestas, Seguimiento y Cierre",
+    "description": "Flujo completo para freelancers: genera propuestas personalizadas, emails de seguimiento, contratos básicos y mensajes de cierre usando Claude como asistente comercial.",
+    "prompt_content": "# Gestión de Clientes Freelance con Claude\n\n## El problema\n\nComo freelance, pierdes tiempo en comunicación comercial repetitiva. Claude puede actuar como tu asistente de ventas.\n\n## Prompt 1: Propuesta personalizada\n\n```\nSoy freelance especializado en [especialidad].\nUn potencial cliente me contactó con este brief:\n\n[BRIEF DEL CLIENTE]\n\nCrea una propuesta de proyecto profesional que incluya:\n1. Entendimiento del problema (demuestra que escuché)\n2. Mi enfoque / metodología (3-4 pasos)\n3. Entregables concretos con descripción\n4. Timeline propuesto\n5. Inversión: [rango de precio] — justificada por el valor\n6. Por qué yo (diferenciador específico para este proyecto)\n7. Siguiente paso claro (llamada de 30 min para alinear)\n\nTono: profesional pero cercano, sin jerga corporativa.\n```\n\n## Prompt 2: Follow-up sin ser pesado\n\n```\nEnvié una propuesta hace [N días] a [empresa/nombre] y no he recibido respuesta.\nContexto de la propuesta: [resumen breve]\n\nEscribe un email de seguimiento que:\n- Sea corto (máximo 5 líneas)\n- Aporte algo de valor (una idea, un recurso, una observación)\n- No suene desesperado\n- Tenga un CTA suave\n```\n\n## Prompt 3: Contrato básico\n\n```\nNecesito un contrato de servicios freelance para:\n- Servicio: [descripción]\n- Cliente: [tipo de empresa]\n- Duración: [plazo]\n- Precio: [importe y forma de pago]\n- Mis condiciones clave: [revisiones incluidas, propiedad intelectual, etc.]\n\nRedacta un contrato claro, en español, sin lenguaje legal complejo.\n```\n\n## Prompt 4: Manejo de cliente que pide descuento\n\n```\nMi cliente dice: \"[mensaje exacto pidiendo descuento o más trabajo sin pagar más]\"\n\nDame 3 formas de responder que:\n- Mantengan mi tarifa\n- No cierren la puerta\n- Ofrezcan una alternativa de valor\n```",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "use_case": "Profesionalizar la gestión comercial como freelance sin contratar equipo de ventas",
+    "profession_slug": "freelancers",
+    "resource_type": "prompt"
+  }
+]
