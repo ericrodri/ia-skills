@@ -15,6 +15,7 @@ const search = ref(props.filters?.q || '')
 const selectedProfession = ref(props.filters?.profession || '')
 const selectedTool = ref(props.filters?.tool || '')
 const selectedDifficulty = ref(props.filters?.difficulty || '')
+const selectedType = ref(props.filters?.type || '')
 const selectedSort = ref(props.filters?.sort || 'top')
 const searching = ref(false)
 
@@ -31,6 +32,7 @@ function applyFilters() {
         profession: selectedProfession.value || undefined,
         tool: selectedTool.value || undefined,
         difficulty: selectedDifficulty.value || undefined,
+        type: selectedType.value || undefined,
         sort: selectedSort.value,
     }, {
         preserveScroll: true,
@@ -170,6 +172,29 @@ const itemListJsonLd = computed(() => JSON.stringify({
                             </div>
                         </div>
 
+                        <!-- Type -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Tipo</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    @click="selectedType = ''; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedType ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >Todos</button>
+                                <button
+                                    @click="selectedType = 'prompt'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >Prompt / Workflow</button>
+                                <button
+                                    @click="selectedType = 'claude_skill'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >🟣 Claude Skill</button>
+                                <button
+                                    @click="selectedType = 'claude_plugin'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >🟡 Claude Plugin</button>
+                            </div>
+                        </div>
+
                         <!-- Difficulty -->
                         <div>
                             <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Dificultad</p>
@@ -197,7 +222,7 @@ const itemListJsonLd = computed(() => JSON.stringify({
                     </div>
                     <div v-else class="text-center py-20 text-gray-400 dark:text-gray-500">
                         <p class="text-lg">No hay skills con esos filtros.</p>
-                        <button @click="search=''; selectedProfession=''; selectedTool=''; selectedDifficulty=''; applyFilters()" class="mt-4 text-sm text-brand-600 hover:underline">
+                        <button @click="search=''; selectedProfession=''; selectedTool=''; selectedDifficulty=''; selectedType=''; applyFilters()" class="mt-4 text-sm text-brand-600 hover:underline">
                             Limpiar filtros
                         </button>
                     </div>

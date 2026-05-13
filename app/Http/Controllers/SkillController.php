@@ -31,6 +31,10 @@ class SkillController extends Controller
             $query->where('difficulty', $request->difficulty);
         }
 
+        if ($request->filled('type')) {
+            $query->where('resource_type', $request->type);
+        }
+
         $sort = $request->get('sort', 'top');
         $tsQuery = null;
         $tsBindings = [];
@@ -74,7 +78,7 @@ class SkillController extends Controller
         return Inertia::render('Skills/Index', [
             'skills' => $query->paginate(20)->withQueryString(),
             'professions' => Profession::where('is_active', true)->orderBy('sort_order')->get(['id', 'name', 'slug']),
-            'filters' => array_merge(['sort' => $sort], $request->only(['profession', 'tool', 'difficulty', 'q'])),
+            'filters' => array_merge(['sort' => $sort], $request->only(['profession', 'tool', 'difficulty', 'type', 'q'])),
             'tools' => ['ChatGPT', 'Claude', 'Midjourney', 'Gemini', 'Perplexity', 'Zapier', 'Make', 'Otro'],
         ]);
     }
@@ -98,6 +102,7 @@ class SkillController extends Controller
             'difficulty' => 'required|in:beginner,intermediate,advanced',
             'estimated_minutes' => 'nullable|integer|min:1|max:480',
             'use_case' => 'nullable|string|max:500',
+            'resource_type' => 'nullable|in:prompt,claude_skill,claude_plugin',
         ]);
 
         $slug = Str::slug($data['title']);
@@ -112,6 +117,7 @@ class SkillController extends Controller
             'user_id' => $request->user()->id,
             'slug' => $slug,
             'status' => 'draft',
+            'resource_type' => $data['resource_type'] ?? 'prompt',
         ]);
 
         SkillVersion::create([

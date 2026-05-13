@@ -1,0 +1,57 @@
+[
+  {
+    "profession_slug": "desarrollo",
+    "title": "Caveman — Reduce un 75% los tokens de respuesta en Claude Code",
+    "description": "Plugin que hace que Claude responda en modo 'hombre de las cavernas': misma precisión técnica, drásticamente menos tokens. Tres niveles de intensidad (lite/full/ultra). Incluye caveman-compress para reducir también los tokens de input.",
+    "prompt_content": "## Instalación\n\n```bash\n/plugin marketplace add JuliusBrussee/caveman\n/plugin install caveman@caveman\n```\n\n## Activación\n\nEscribe en el chat:\n```\n/caveman\n```\n\n## Niveles disponibles\n\n| Nivel | Reducción | Uso recomendado |\n|-------|-----------|------------------|\n| `/caveman lite` | ~40% | Respuestas equilibradas |\n| `/caveman full` | ~75% | Sesiones largas de desarrollo |\n| `/caveman ultra` | ~85% | Máximo ahorro, solo técnico |\n\n## Desactivar\n\n```\nstop caveman\n```\no\n```\nnormal mode\n```\n\n## Caveman Compress (bonus)\n\nReduce ~46% de los tokens de INPUT comprimiendo archivos de contexto (CLAUDE.md, notas, etc.):\n\n```\n/caveman-compress\n```\n\n## Ejemplo antes/después\n\n**Normal (69 tokens):**\n> \"The reason your React component is re-rendering is likely because you're creating a new object reference on each render cycle...\"\n\n**Caveman (19 tokens):**\n> \"New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`.\"",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "use_case": "Sesiones largas de desarrollo donde el coste de tokens importa, o cuando Claude tiende a ser excesivamente verboso.",
+    "resource_type": "claude_plugin"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Token Optimizer — Dashboard y auditoría completa de tokens en Claude Code",
+    "description": "Plugin que cubre el 100% del consumo de contexto: audita configs infladas, memoria obsoleta y pérdidas en compactación. Dashboard en vivo con tokens, coste y turnos por sesión. Totalmente local, sin telemetría.",
+    "prompt_content": "## Instalación\n\n```bash\n/plugin marketplace add alexgreensh/token-optimizer\n/plugin install token-optimizer@alexgreensh-token-optimizer\n```\n\n**Importante:** Activa auto-update después de instalar:\n`/plugin` → Marketplaces → `alexgreensh-token-optimizer` → Enable auto-update\n\n## Uso básico\n\n```\n/token-optimizer\n```\n\n## Comandos disponibles\n\n```\n/token-optimizer          # Análisis completo + recomendaciones\n/token-optimizer quick    # Escaneo rápido del estado actual\n/token-optimizer health   # Estado de salud del contexto\n```\n\n## Qué audita\n\n- **CLAUDE.md inflado** — elimina reglas redundantes o contradictorias\n- **Skills/plugins no usados** — libera espacio de sistema\n- **Memoria obsoleta** — detecta recuerdos desactualizados\n- **Pérdidas por compactación** — el 60-70% que se pierde al comprimir\n\n## Dashboard\n\nActualización automática tras cada sesión. Muestra:\n- Tokens consumidos (input/output/caché)\n- Coste estimado en USD\n- Turnos por sesión\n- Tendencia histórica\n\n## Instalación alternativa (macOS/Linux)\n\n```bash\ngit clone https://github.com/alexgreensh/token-optimizer.git ~/.claude/token-optimizer\nbash ~/.claude/token-optimizer/install.sh\n```",
+    "tool_name": "Claude",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "use_case": "Proyectos grandes donde el contexto se degrada con el tiempo y los costes de API son relevantes. Imprescindible si usas Claude Code profesionalmente.",
+    "resource_type": "claude_plugin"
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Humanizer — Elimina marcadores de IA y humaniza cualquier texto",
+    "description": "Skill para Claude Code que reescribe texto generado por IA haciéndolo sonar natural y humano. Soporta calibración de voz: le das una muestra de tu escritura y replica tu estilo personal.",
+    "prompt_content": "## Instalación\n\n```bash\nmkdir -p ~/.claude/skills\ngit clone https://github.com/blader/humanizer.git ~/.claude/skills/humanizer\n```\n\n## Uso básico\n\n```\n/humanizer\n\n[pega aquí el texto a humanizar]\n```\n\n## Calibración de voz personalizada\n\nPara que replique TU estilo de escritura, primero dale una muestra tuya:\n\n```\n/humanizer\n\nAquí tienes una muestra de mi escritura para calibrar el estilo:\n[pega 2-3 párrafos propios]\n\nAhora humaniza este texto:\n[pega el texto IA a reescribir]\n```\n\n## Qué elimina\n\n- Frases típicas de IA: \"Certainly!\", \"Of course!\", \"As an AI...\"\n- Estructura demasiado ordenada (bullet hell, headers innecesarios)\n- Vocabulario inflado (\"utilize\" → \"use\", \"leverage\" → \"use\")\n- Ritmo uniforme y predecible\n\n## Resultado esperado\n\nTexto con variación de longitud de frases, contracciones naturales, alguna imperfección deliberada y el ritmo de conversación humana. Ideal para emails, posts, artículos y copys.",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 3,
+    "use_case": "Emails a clientes, posts de LinkedIn, artículos de blog o cualquier texto donde importa que no suene a robot.",
+    "resource_type": "claude_skill"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Napkin — Memoria persistente por proyecto para Claude Code",
+    "description": "Skill que mantiene un scratchpad local por repo (.claude/napkin.md) con lo que falló, correcciones y lo que funcionó. Claude lo lee al inicio de cada sesión para no repetir errores. Máximo 10 items por categoría, continuamente curado.",
+    "prompt_content": "## Instalación\n\n```bash\nclaude install-skill https://github.com/blader/napkin\n```\n\no manualmente:\n\n```bash\nmkdir -p ~/.claude/skills/napkin\ncurl -o ~/.claude/skills/napkin/SKILL.md \\\n  https://raw.githubusercontent.com/blader/napkin/main/SKILL.md\n```\n\n## Cómo funciona\n\n1. Claude crea `.claude/napkin.md` en la raíz de tu proyecto\n2. Al inicio de cada sesión lee el napkin y aplica las lecciones silenciosamente\n3. Cuando algo falla o se corrige, actualiza el napkin automáticamente\n\n## Estructura del napkin.md\n\n```markdown\n## What went wrong\n- [2025-01-15] Ran migrations without --force in production → always use --force\n\n## What was corrected  \n- [2025-01-14] Used artisan tinker for bulk ops → use dedicated command instead\n\n## What worked well\n- [2025-01-13] Seeded test data before running feature tests → faster debugging\n```\n\n## Reglas internas\n\n- Máximo 10 items por categoría\n- Cada entrada incluye fecha + instrucción \"do instead\"\n- Se re-prioriza en cada lectura (más reciente y más relevante arriba)\n- Claude nunca menciona que está usando el napkin — simplemente lo aplica\n\n## Hacer commit del napkin\n\n```bash\ngit add .claude/napkin.md\ngit commit -m \"docs: update napkin with session learnings\"\n```\n\nSe recomienda incluirlo en el repo para que todo el equipo comparta las lecciones.",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "use_case": "Proyectos donde Claude repite los mismos errores entre sesiones. Especialmente útil en equipos donde distintas personas abren el mismo repo con Claude.",
+    "resource_type": "claude_skill"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Graphify — Convierte cualquier codebase en un knowledge graph navegable",
+    "description": "Skill que analiza cualquier carpeta (código, docs, papers, vídeos, imágenes) y genera un knowledge graph con detección de comunidades, HTML interactivo, JSON para GraphRAG y un GRAPH_REPORT.md legible. Persistente entre sesiones.",
+    "prompt_content": "## Instalación\n\n```bash\npip install graphifyy\ngraphify install\n```\n\n## Uso básico\n\n```\n/graphify                          # grafo del directorio actual\n/graphify <ruta>                   # grafo de una ruta específica\n/graphify https://github.com/...   # clonar repo y hacer grafo\n```\n\n## Modos de análisis\n\n```\n/graphify <ruta>                   # estándar\n/graphify <ruta> --mode deep       # más profundo, más edges INFERRED\n/graphify <ruta> --update          # incremental — solo archivos nuevos/modificados\n/graphify <ruta> --watch           # reconstruye automáticamente al guardar\n```\n\n## Consultas al grafo (sin LLM)\n\n```bash\ngraphify query \"cómo funciona la autenticación\"\ngraphify path \"AuthModule\" \"Database\"    # camino más corto entre dos conceptos\ngraphify explain \"NombreDeClase\"         # explicación en lenguaje natural\n```\n\n## Outputs generados\n\n| Archivo | Descripción |\n|---------|-------------|\n| `graphify-out/graph.json` | GraphRAG-ready JSON |\n| `graphify-out/graph.html` | Visualización interactiva |\n| `graphify-out/GRAPH_REPORT.md` | Resumen legible con god nodes y comunidades |\n| `graphify-out/wiki/` | Wiki navegable por agentes |\n\n## Exportar a otros formatos\n\n```\n/graphify <ruta> --svg        # SVG (Notion, GitHub)\n/graphify <ruta> --graphml   # Gephi, yEd\n/graphify <ruta> --neo4j     # genera cypher.txt para Neo4j\n```\n\n## Integración con Claude Code\n\nUna vez generado el grafo, Claude lo usa automáticamente para responder preguntas sobre el código. Mucho más preciso que grep para preguntas como \"¿cómo se relaciona X con Y?\".",
+    "tool_name": "Claude",
+    "difficulty": "intermediate",
+    "estimated_minutes": 15,
+    "use_case": "Onboarding en codebases desconocidas, auditorías de arquitectura, documentación automática o cuando necesitas entender relaciones entre módulos sin leer todo el código.",
+    "resource_type": "claude_skill"
+  }
+]

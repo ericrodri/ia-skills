@@ -16,7 +16,14 @@ const form = useForm({
     difficulty: 'beginner',
     estimated_minutes: '',
     use_case: '',
+    resource_type: 'prompt',
 })
+
+const resourceTypeOptions = [
+    { value: 'prompt',        label: 'Prompt / Workflow', desc: 'Prompt o flujo de trabajo', icon: '💬' },
+    { value: 'claude_skill',  label: 'Claude Skill',      desc: 'Skill para Claude Code',    icon: '🟣' },
+    { value: 'claude_plugin', label: 'Claude Plugin',     desc: 'Plugin para Claude Code',   icon: '🟡' },
+]
 
 function submit() {
     form.post(route('skills.store'))
@@ -64,6 +71,28 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             <option v-for="p in professions" :key="p.id" :value="p.id">{{ p.name }}</option>
                         </select>
                         <p v-if="form.errors.profession_id" class="mt-1.5 text-xs text-red-500">{{ form.errors.profession_id }}</p>
+                    </div>
+
+                    <!-- Resource type -->
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tipo <span class="text-red-400">*</span></label>
+                        <div class="grid grid-cols-3 gap-2">
+                            <label
+                                v-for="opt in resourceTypeOptions"
+                                :key="opt.value"
+                                :class="[
+                                    'flex flex-col items-center gap-1.5 p-3 rounded-xl border cursor-pointer transition-all text-center',
+                                    form.resource_type === opt.value
+                                        ? 'border-brand-400 bg-brand-50 dark:bg-brand-900/30 dark:border-brand-500'
+                                        : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:border-gray-300 dark:hover:border-gray-500'
+                                ]"
+                            >
+                                <input type="radio" :value="opt.value" v-model="form.resource_type" class="sr-only" />
+                                <span class="text-xl">{{ opt.icon }}</span>
+                                <span class="text-xs font-semibold" :class="form.resource_type === opt.value ? 'text-brand-700 dark:text-brand-300' : 'text-gray-700 dark:text-gray-300'">{{ opt.label }}</span>
+                                <span class="text-xs text-gray-400 dark:text-gray-500 leading-tight">{{ opt.desc }}</span>
+                            </label>
+                        </div>
                     </div>
 
                     <!-- Tool -->
