@@ -121,7 +121,7 @@ const itemListJsonLd = computed(() => JSON.stringify({
             <div class="flex flex-col lg:flex-row gap-8">
                 <!-- Sidebar filters -->
                 <aside class="lg:w-52 shrink-0">
-                    <div class="space-y-6 sticky top-20">
+                    <div class="space-y-6 sticky top-20 overflow-y-auto max-h-[calc(100vh-5.5rem)] pr-1">
                         <!-- Sort -->
                         <div>
                             <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Ordenar</p>
@@ -135,6 +135,29 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                         selectedSort === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
                                     ]"
                                 >{{ opt.label }}</button>
+                            </div>
+                        </div>
+
+                        <!-- Type -->
+                        <div>
+                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Tipo</p>
+                            <div class="flex flex-col gap-1">
+                                <button
+                                    @click="selectedType = ''; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedType ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >Todos</button>
+                                <button
+                                    @click="selectedType = 'prompt'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >Prompt / Workflow</button>
+                                <button
+                                    @click="selectedType = 'claude_skill'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >🟣 Claude Skill</button>
+                                <button
+                                    @click="selectedType = 'claude_plugin'; applyFilters()"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
+                                >🟡 Claude Plugin</button>
                             </div>
                         </div>
 
@@ -169,29 +192,6 @@ const itemListJsonLd = computed(() => JSON.stringify({
                                     @click="selectedTool = t; applyFilters()"
                                     :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedTool === t ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
                                 >{{ t }}</button>
-                            </div>
-                        </div>
-
-                        <!-- Type -->
-                        <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Tipo</p>
-                            <div class="flex flex-col gap-1">
-                                <button
-                                    @click="selectedType = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedType ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Todos</button>
-                                <button
-                                    @click="selectedType = 'prompt'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Prompt / Workflow</button>
-                                <button
-                                    @click="selectedType = 'claude_skill'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >🟣 Claude Skill</button>
-                                <button
-                                    @click="selectedType = 'claude_plugin'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >🟡 Claude Plugin</button>
                             </div>
                         </div>
 
