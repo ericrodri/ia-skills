@@ -18,6 +18,9 @@ const selectedDifficulty = ref(props.filters?.difficulty || '')
 const selectedType = ref(props.filters?.type || '')
 const selectedSort = ref(props.filters?.sort || 'top')
 const searching = ref(false)
+const showOrdenar = ref(true)
+const showProfesion = ref(true)
+const showTipo = ref(true)
 const showHerramienta = ref(!!props.filters?.tool)
 const showDificultad = ref(!!props.filters?.difficulty)
 
@@ -126,97 +129,70 @@ const itemListJsonLd = computed(() => JSON.stringify({
                     <div class="space-y-6 sticky top-20">
                         <!-- Sort -->
                         <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Ordenar</p>
-                            <div class="flex flex-col gap-1">
+                            <button @click="showOrdenar = !showOrdenar" class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                                <span>Ordenar</span>
+                                <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showOrdenar ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div v-if="showOrdenar" class="flex flex-col gap-1">
                                 <button
                                     v-for="opt in sortOptions"
                                     :key="opt.value"
                                     @click="selectedSort = opt.value; applyFilters()"
-                                    :class="[
-                                        'px-3 py-1.5 rounded-lg text-sm text-left transition-colors',
-                                        selectedSort === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50'
-                                    ]"
+                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedSort === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
                                 >{{ opt.label }}</button>
-                            </div>
-                        </div>
-
-                        <!-- Type -->
-                        <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Tipo</p>
-                            <div class="flex flex-col gap-1">
-                                <button
-                                    @click="selectedType = ''; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedType ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Todos</button>
-                                <button
-                                    @click="selectedType = 'prompt'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >Prompt / Workflow</button>
-                                <button
-                                    @click="selectedType = 'claude_skill'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >🟣 Claude Skill</button>
-                                <button
-                                    @click="selectedType = 'claude_plugin'; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >🟡 Claude Plugin</button>
                             </div>
                         </div>
 
                         <!-- Profession -->
                         <div>
-                            <p class="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2">Profesión</p>
-                            <select
-                                v-model="selectedProfession"
-                                @change="applyFilters()"
-                                class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
-                            >
-                                <option value="">Todas</option>
-                                <option v-for="p in professions" :key="p.id" :value="p.slug">{{ p.name }}</option>
-                            </select>
+                            <button @click="showProfesion = !showProfesion" class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                                <span>Profesión</span>
+                                <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showProfesion ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div v-if="showProfesion">
+                                <select v-model="selectedProfession" @change="applyFilters()" class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors">
+                                    <option value="">Todas</option>
+                                    <option v-for="p in professions" :key="p.id" :value="p.slug">{{ p.name }}</option>
+                                </select>
+                            </div>
                         </div>
 
-                        <!-- Tool (collapsible) -->
+                        <!-- Type -->
                         <div>
-                            <button
-                                @click="showHerramienta = !showHerramienta"
-                                class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                            >
+                            <button @click="showTipo = !showTipo" class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                                <span>Tipo</span>
+                                <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showTipo ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                            </button>
+                            <div v-if="showTipo" class="flex flex-col gap-1">
+                                <button @click="selectedType = ''; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', !selectedType ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Todos</button>
+                                <button @click="selectedType = 'prompt'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Prompt / Workflow</button>
+                                <button @click="selectedType = 'claude_skill'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">🟣 Claude Skill</button>
+                                <button @click="selectedType = 'claude_plugin'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">🟡 Claude Plugin</button>
+                            </div>
+                        </div>
+
+                        <!-- Tool (collapsed by default) -->
+                        <div>
+                            <button @click="showHerramienta = !showHerramienta" class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                                 <span>Herramienta</span>
-                                <svg :class="['w-3.5 h-3.5 transition-transform', showHerramienta ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
+                                <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showHerramienta ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </button>
                             <div v-if="showHerramienta">
-                                <select
-                                    v-model="selectedTool"
-                                    @change="applyFilters()"
-                                    class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors"
-                                >
+                                <select v-model="selectedTool" @change="applyFilters()" class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-2 outline-none focus:border-brand-400 transition-colors">
                                     <option value="">Todas</option>
                                     <option v-for="t in tools" :key="t" :value="t">{{ t }}</option>
                                 </select>
                             </div>
                         </div>
 
-                        <!-- Difficulty (collapsible) -->
+                        <!-- Difficulty (collapsed by default) -->
                         <div>
-                            <button
-                                @click="showDificultad = !showDificultad"
-                                class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
-                            >
+                            <button @click="showDificultad = !showDificultad" class="flex items-center justify-between w-full text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-2 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                                 <span>Dificultad</span>
-                                <svg :class="['w-3.5 h-3.5 transition-transform', showDificultad ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-                                </svg>
+                                <svg :class="['w-3.5 h-3.5 transition-transform duration-200', showDificultad ? 'rotate-180' : '']" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
                             </button>
                             <div v-if="showDificultad" class="flex flex-col gap-1">
-                                <button
-                                    v-for="opt in difficultyOptions"
-                                    :key="opt.value"
-                                    @click="selectedDifficulty = opt.value; applyFilters()"
-                                    :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedDifficulty === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']"
-                                >{{ opt.label }}</button>
+                                <button v-for="opt in difficultyOptions" :key="opt.value" @click="selectedDifficulty = opt.value; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedDifficulty === opt.value ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">{{ opt.label }}</button>
                             </div>
                         </div>
                     </div>
