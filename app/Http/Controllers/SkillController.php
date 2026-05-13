@@ -50,7 +50,13 @@ class SkillController extends Controller
                 $tsBindings[] = $lastTerm;
 
                 $tsQuery = implode(' && ', $parts);
-                $query->whereRaw("search_vector @@ ($tsQuery)", $tsBindings);
+                $rawQ = '%' . trim($request->q) . '%';
+                $query->where(function ($q) use ($tsQuery, $tsBindings, $rawQ) {
+                    $q->whereRaw("search_vector @@ ($tsQuery)", $tsBindings)
+                      ->orWhereHas('profession', fn ($pq) =>
+                          $pq->whereRaw("unaccent(name) ILIKE unaccent(?)", [$rawQ])
+                      );
+                });
             }
         }
 
