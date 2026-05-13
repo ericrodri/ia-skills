@@ -34,6 +34,7 @@ function applyFilters() {
         sort: selectedSort.value,
     }, {
         preserveScroll: true,
+        preserveState: true,
         replace: true,
         onFinish: () => { searching.value = false },
     })
