@@ -22,7 +22,13 @@ class SkillImportCommand extends Command
             return self::FAILURE;
         }
 
-        $data = json_decode(file_get_contents($path), true);
+        $json = file_get_contents($path);
+        $data = json_decode($json, true);
+
+        if (json_last_error() !== JSON_ERROR_NONE) {
+            $this->error('JSON inválido: ' . json_last_error_msg());
+            return self::FAILURE;
+        }
 
         if (! is_array($data)) {
             $this->error('JSON must be an array of skill objects.');
@@ -50,7 +56,7 @@ class SkillImportCommand extends Command
                 continue;
             }
 
-            if (Skill::whereRaw('LOWER(title) = ?', [strtolower($item['title'])])->exists()) {
+            if (Skill::whereRaw('LOWER(title) = ?', [strtolower(trim($item['title']))])->exists()) {
                 $this->line("  ⚠ Título duplicado: {$item['title']} — omitida");
                 $skipped++;
                 continue;
@@ -61,7 +67,7 @@ class SkillImportCommand extends Command
             $skill = Skill::create([
                 'profession_id'     => $professionId,
                 'user_id'           => 1,
-                'title'             => $item['title'],
+                'title'             => trim($item['title']),
                 'slug'              => $slug,
                 'description'       => $item['description'],
                 'prompt_content'    => $item['prompt_content'],
