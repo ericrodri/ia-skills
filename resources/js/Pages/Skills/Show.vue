@@ -18,10 +18,9 @@ const jsonLd = computed(() => JSON.stringify({
     'name': props.skill.title,
     'description': props.skill.description,
     'tool': [{ '@type': 'HowToTool', 'name': props.skill.tool_name }],
-    'author': props.skill.author ? {
-        '@type': 'Person',
-        'name': props.skill.author.name,
-    } : undefined,
+    ...(props.skill.author ? {
+        'author': { '@type': 'Person', 'name': props.skill.author.name }
+    } : {}),
     'datePublished': props.skill.created_at,
     'dateModified': props.skill.updated_at,
 }))
@@ -154,13 +153,24 @@ function submitComment() {
         <link rel="canonical" :href="route('skills.show', { skill: skill.slug })" />
         <meta property="og:type" content="article" />
         <meta property="og:url" :content="route('skills.show', { skill: skill.slug })" />
-        <meta property="og:title" :content="skill.title" />
+        <meta property="og:title" :content="`${skill.title} — ia-skills`" />
         <meta property="og:description" :content="skill.description" />
-        <meta name="twitter:card" content="summary" />
-        <meta name="twitter:title" :content="skill.title" />
+        <meta property="og:image" content="/og-default.svg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" :content="`${skill.title} — ia-skills`" />
         <meta name="twitter:description" :content="skill.description" />
+        <meta name="twitter:image" content="/og-default.svg" />
     </Head>
     <component :is="'script'" type="application/ld+json" v-text="jsonLd" />
+        <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                { "@type": "ListItem", "position": 1, "name": "Skills", "item": route("skills.index") },
+                { "@type": "ListItem", "position": 2, "name": skill.profession?.name, "item": route("professions.show", { profession: skill.profession?.slug }) },
+                { "@type": "ListItem", "position": 3, "name": skill.title, "item": route("skills.show", { skill: skill.slug }) }
+            ]
+        })' />
 
     <AppLayout>
         <!-- Toast notificación otras IAs -->
