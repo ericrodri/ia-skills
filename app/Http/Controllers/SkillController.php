@@ -31,18 +31,31 @@ class SkillController extends Controller
             $query->where('difficulty', $request->difficulty);
         }
 
-        $hasSearch = $request->filled('q');
+        $sort = $request->get('sort', 'top');
+        $tsQuery = null;
+        $tsBindings = [];
 
-        if ($hasSearch) {
-            $search = $request->q;
-            $query->whereRaw("search_vector @@ plainto_tsquery('simple', ?)", [$search]);
+        if ($request->filled('q')) {
+            $terms = array_values(array_filter(preg_split('/\s+/', trim($request->q))));
+
+            if (!empty($terms)) {
+                $lastTerm = array_pop($terms);
+                $parts = [];
+
+                foreach ($terms as $term) {
+                    $parts[] = "plainto_tsquery('simple', ?)";
+                    $tsBindings[] = $term;
+                }
+                $parts[] = "to_tsquery('simple', ?)";
+                $tsBindings[] = $lastTerm . ':*';
+
+                $tsQuery = implode(' && ', $parts);
+                $query->whereRaw("search_vector @@ ($tsQuery)", $tsBindings);
+            }
         }
 
-        $sort = $request->get('sort', 'top');
-
-        if ($hasSearch) {
-            // When searching, order by relevance first, then vote_score as tiebreaker
-            $query->orderByRaw("ts_rank(search_vector, plainto_tsquery('simple', ?)) DESC", [$request->q])
+        if ($tsQuery) {
+            $query->orderByRaw("ts_rank(search_vector, ($tsQuery)) DESC", $tsBindings)
                   ->orderByDesc('vote_score');
         } else {
             match ($sort) {
