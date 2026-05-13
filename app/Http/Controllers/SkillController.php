@@ -43,11 +43,11 @@ class SkillController extends Controller
                 $parts = [];
 
                 foreach ($terms as $term) {
-                    $parts[] = "plainto_tsquery('simple', ?)";
+                    $parts[] = "plainto_tsquery('simple', unaccent(?))";
                     $tsBindings[] = $term;
                 }
-                $parts[] = "to_tsquery('simple', ?)";
-                $tsBindings[] = $lastTerm . ':*';
+                $parts[] = "to_tsquery('simple', unaccent(?) || ':*')";
+                $tsBindings[] = $lastTerm;
 
                 $tsQuery = implode(' && ', $parts);
                 $query->whereRaw("search_vector @@ ($tsQuery)", $tsBindings);
