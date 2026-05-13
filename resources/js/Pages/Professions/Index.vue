@@ -18,6 +18,19 @@ defineProps({ professions: Array })
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/og-default.svg" />
     </Head>
+    <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": "Skills de IA por profesión",
+        "description": "Explora skills de IA organizadas por profesión: marketing, desarrollo, diseño, ventas, RRHH y más.",
+        "url": route("professions.index"),
+        "itemListElement": professions.map((p, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": p.name,
+            "url": route("professions.show", { profession: p.slug }),
+        })),
+    })' />
 
     <AppLayout>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">

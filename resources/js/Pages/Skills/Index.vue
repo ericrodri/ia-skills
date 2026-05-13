@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, router } from '@inertiajs/vue3'
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import SkillCard from '@/Components/SkillCard.vue'
 
@@ -44,6 +44,20 @@ const sortOptions = [
     { value: 'new', label: 'Más recientes' },
     { value: 'trending', label: 'Trending' },
 ]
+
+const itemListJsonLd = computed(() => JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'ItemList',
+    'name': 'Explorar Skills de IA para profesionales',
+    'description': 'Biblioteca de workflows, prompts y técnicas de IA para profesionales',
+    'url': route('skills.index'),
+    'itemListElement': (props.skills?.data ?? []).map((skill, i) => ({
+        '@type': 'ListItem',
+        'position': i + 1,
+        'name': skill.title,
+        'url': route('skills.show', { skill: skill.slug }),
+    })),
+}))
 </script>
 
 <template>
@@ -59,6 +73,7 @@ const sortOptions = [
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:image" content="/og-default.svg" />
     </Head>
+    <component :is="'script'" type="application/ld+json" :innerHTML="itemListJsonLd" />
 
     <AppLayout>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
