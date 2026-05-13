@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title inertia>{{ config('app.name', 'IA Skills') }}</title>
+    <meta property="og:image" content="{{ config('app.url') }}/og-default.svg">
+    <meta name="twitter:image" content="{{ config('app.url') }}/og-default.svg">
+    <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 
