@@ -208,16 +208,15 @@ const faqJsonLd = computed(() => JSON.stringify({
 <template>
     <AppLayout>
         <Head>
-            <title>Cómo funciona ia-skills — Aprende a usar skills de IA</title>
-            <meta name="description" content="Descubre cómo importar, usar y compartir skills de IA con ia-skills. Guía paso a paso para sacar el máximo partido a tus herramientas de IA." />
+            <title>Cómo funciona ia-skills — Guía completa de skills de IA</title>
+            <meta name="description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin. Guía completa con ejemplos reales." />
             <link rel="canonical" :href="route('how-it-works')" />
-            <meta property="og:type" content="website" />
+            <meta property="og:type" content="article" />
             <meta property="og:url" :content="route('how-it-works')" />
-            <meta property="og:title" content="Cómo funciona ia-skills — Aprende a usar skills de IA" />
-            <meta property="og:description" content="Descubre cómo importar, usar y compartir skills de IA con ia-skills." />
-            <meta property="og:image" content="/og-default.svg" />
-            <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:image" content="/og-default.svg" />
+            <meta property="og:title" content="Cómo funciona ia-skills — Guía completa de skills de IA" />
+            <meta property="og:description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin." />
+            <meta name="twitter:title" content="Cómo funciona ia-skills — Guía completa de skills de IA" />
+            <meta name="twitter:description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin." />
         </Head>
         <div class="bg-white dark:bg-gray-900 transition-colors">
 

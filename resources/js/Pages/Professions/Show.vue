@@ -17,12 +17,17 @@ defineProps({
         <meta property="og:type" content="website" />
         <meta property="og:url" :content="route('professions.show', { profession: profession.slug })" />
         <meta property="og:title" :content="`Skills de IA para ${profession.name} — ia-skills`" />
-        <meta property="og:description" :content="`Los mejores workflows y prompts de IA para ${profession.name}. Validados por la comunidad.`" />
-        <meta property="og:image" content="/og-default.svg" />
+        <meta property="og:description" :content="`Los mejores workflows y prompts de IA para ${profession.name}. ${profession.skills_count ?? ''} skills validadas por la comunidad.`" />
+        <meta property="og:image" :content="route('og.profession', { profession: profession.slug })" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/og-default.svg" />
+        <meta name="twitter:title" :content="`Skills de IA para ${profession.name} — ia-skills`" />
+        <meta name="twitter:description" :content="`Los mejores workflows y prompts de IA para ${profession.name}. Validados por la comunidad.`" />
+        <meta name="twitter:image" :content="route('og.profession', { profession: profession.slug })" />
     </Head>
 
+    <!-- BreadcrumbList + ItemList combinados -->
     <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
@@ -30,6 +35,20 @@ defineProps({
             { "@type": "ListItem", "position": 1, "name": "Profesiones", "item": route("professions.index") },
             { "@type": "ListItem", "position": 2, "name": profession.name, "item": route("professions.show", { profession: profession.slug }) }
         ]
+    })' />
+    <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        "name": `Skills de IA para ${profession.name}`,
+        "description": `Los mejores workflows y prompts de IA para ${profession.name}`,
+        "url": route("professions.show", { profession: profession.slug }),
+        "numberOfItems": profession.skills_count ?? 0,
+        "itemListElement": (skills?.data ?? []).map((skill, i) => ({
+            "@type": "ListItem",
+            "position": i + 1,
+            "name": skill.title,
+            "url": route("skills.show", { skill: skill.slug }),
+        })),
     })' />
 
     <AppLayout>

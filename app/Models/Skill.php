@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use App\Observers\SkillObserver;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
@@ -9,6 +10,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
+#[\Illuminate\Database\Eloquent\Attributes\ObservedBy([SkillObserver::class])]
 class Skill extends Model
 {
     use HasFactory;

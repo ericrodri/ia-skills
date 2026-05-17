@@ -18,11 +18,15 @@ const jsonLd = computed(() => JSON.stringify({
     'name': props.skill.title,
     'description': props.skill.description,
     'tool': [{ '@type': 'HowToTool', 'name': props.skill.tool_name }],
+    ...(props.skill.estimated_minutes ? {
+        'totalTime': `PT${props.skill.estimated_minutes}M`,
+    } : {}),
     ...(props.skill.author ? {
         'author': { '@type': 'Person', 'name': props.skill.author.name }
     } : {}),
     'datePublished': props.skill.created_at,
     'dateModified': props.skill.updated_at,
+    'inLanguage': 'es',
 }))
 
 const page = usePage()
@@ -155,11 +159,16 @@ function submitComment() {
         <meta property="og:url" :content="route('skills.show', { skill: skill.slug })" />
         <meta property="og:title" :content="`${skill.title} — ia-skills`" />
         <meta property="og:description" :content="skill.description" />
-        <meta property="og:image" content="/og-default.svg" />
+        <meta property="og:image" :content="route('og.skill', { skill: skill.slug })" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta property="article:published_time" :content="skill.created_at" />
+        <meta property="article:modified_time" :content="skill.updated_at" />
+        <meta property="article:section" :content="skill.profession?.name" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" :content="`${skill.title} — ia-skills`" />
         <meta name="twitter:description" :content="skill.description" />
-        <meta name="twitter:image" content="/og-default.svg" />
+        <meta name="twitter:image" :content="route('og.skill', { skill: skill.slug })" />
     </Head>
     <component :is="'script'" type="application/ld+json" v-text="jsonLd" />
         <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({

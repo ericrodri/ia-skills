@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\OpenCodeController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\ProfileController;
@@ -30,6 +31,10 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+
+// OG Images (dynamic PNG per skill/profession)
+Route::get('/og/skill/{skill:slug}', [OgImageController::class, 'skill'])->name('og.skill');
+Route::get('/og/profession/{profession:slug}', [OgImageController::class, 'profession'])->name('og.profession');
 
 // Professions
 Route::get('/profesiones', [ProfessionController::class, 'index'])->name('professions.index');

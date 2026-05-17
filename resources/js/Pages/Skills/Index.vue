@@ -70,9 +70,10 @@ const itemListJsonLd = computed(() => JSON.stringify({
     'name': 'Explorar Skills de IA para profesionales',
     'description': 'Biblioteca de workflows, prompts y técnicas de IA para profesionales',
     'url': route('skills.index'),
+    'numberOfItems': props.skills?.total ?? (props.skills?.data ?? []).length,
     'itemListElement': (props.skills?.data ?? []).map((skill, i) => ({
         '@type': 'ListItem',
-        'position': i + 1,
+        'position': (props.skills?.current_page - 1) * (props.skills?.per_page ?? 20) + i + 1,
         'name': skill.title,
         'url': route('skills.show', { skill: skill.slug }),
     })),

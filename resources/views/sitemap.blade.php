@@ -3,18 +3,21 @@
 
     <url>
         <loc>{{ url('/') }}</loc>
+        <lastmod>{{ $skills->first()?->updated_at->toAtomString() ?? now()->toAtomString() }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
         <loc>{{ url('/skills') }}</loc>
+        <lastmod>{{ $skills->first()?->updated_at->toAtomString() ?? now()->toAtomString() }}</lastmod>
         <changefreq>daily</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>{{ url('/profesiones') }}</loc>
+        <lastmod>{{ $professions->first()?->updated_at->toAtomString() ?? now()->toAtomString() }}</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -22,7 +25,7 @@
     <url>
         <loc>{{ url('/como-funciona') }}</loc>
         <changefreq>monthly</changefreq>
-        <priority>0.5</priority>
+        <priority>0.6</priority>
     </url>
 
     @foreach($professions as $profession)
