@@ -17,6 +17,8 @@ const jsonLd = computed(() => JSON.stringify({
     '@type': 'HowTo',
     'name': props.skill.title,
     'description': props.skill.description,
+    ...(props.skill.use_case ? { 'disambiguatingDescription': props.skill.use_case } : {}),
+    'text': props.skill.prompt_content,
     'tool': [{ '@type': 'HowToTool', 'name': props.skill.tool_name }],
     ...(props.skill.estimated_minutes ? {
         'totalTime': `PT${props.skill.estimated_minutes}M`,
@@ -270,9 +272,9 @@ function submitComment() {
                     <p class="mt-3 text-gray-600 dark:text-gray-400 dark:text-gray-500 leading-relaxed">{{ skill.description }}</p>
 
                     <!-- Use case -->
-                    <div v-if="skill.use_case" class="mt-5 p-4 bg-brand-50 rounded-xl border border-brand-100">
-                        <p class="text-xs font-semibold text-brand-700 uppercase tracking-wider mb-1">Caso de uso</p>
-                        <p class="text-sm text-brand-800">{{ skill.use_case }}</p>
+                    <div v-if="skill.use_case" class="mt-5 p-4 bg-brand-50 dark:bg-brand-900/20 rounded-xl border border-brand-100 dark:border-brand-800/50">
+                        <p class="text-xs font-semibold text-brand-700 dark:text-brand-400 uppercase tracking-wider mb-1">Caso de uso</p>
+                        <p class="text-sm text-brand-800 dark:text-brand-200">{{ skill.use_case }}</p>
                     </div>
 
                     <!-- Instalación rápida para Plugins y Skills de Claude Code -->
