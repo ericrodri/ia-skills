@@ -1,31 +1,41 @@
 <script setup>
 import { ref, computed } from 'vue'
-import { useForm, usePage } from '@inertiajs/vue3'
+import { useForm } from '@inertiajs/vue3'
 
 const props = defineProps({
-    apiToken: { type: String, default: null },
+    hasApiToken: { type: Boolean, default: false },
+    apiTokenPrefix: { type: String, default: null },
+    apiTokenLastUsedAt: { type: String, default: null },
+    // Solo llega en la respuesta inmediata a "generar": después ya no existe en claro.
+    plainTextApiToken: { type: String, default: null },
 })
 
-const page = usePage()
 const copied = ref(false)
-const showToken = ref(false)
 
 const endpointUrl = computed(() =>
-    props.apiToken
-        ? `https://ia-skills.com/api/v1/saved-skills?api_key=${props.apiToken}`
+    props.plainTextApiToken
+        ? `https://ia-skills.com/api/v1/saved-skills?api_key=${props.plainTextApiToken}`
         : null
 )
+
+const lastUsedLabel = computed(() => {
+    if (!props.apiTokenLastUsedAt) return 'Sin usar todavía'
+    return `Último uso: ${new Date(props.apiTokenLastUsedAt).toLocaleString('es-ES')}`
+})
 
 const generateForm = useForm({})
 const revokeForm = useForm({})
 
 function generate() {
-    generateForm.post(route('profile.api-token.generate'))
+    if (props.hasApiToken && !confirm('Al regenerar, la clave actual dejará de funcionar. ¿Continuar?')) {
+        return
+    }
+    generateForm.post(route('profile.api-token.generate'), { preserveScroll: true })
 }
 
 function revoke() {
     if (confirm('¿Seguro que quieres revocar la API key? Dejarán de funcionar todas las integraciones que la usen.')) {
-        revokeForm.delete(route('profile.api-token.revoke'))
+        revokeForm.delete(route('profile.api-token.revoke'), { preserveScroll: true })
     }
 }
 
@@ -47,51 +57,29 @@ function copyEndpoint() {
         </header>
 
         <div class="mt-6">
-            <!-- Sin token -->
-            <div v-if="!apiToken">
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    No tienes ninguna API key activa. Genera una para poder usar el endpoint.
-                </p>
-                <button
-                    @click="generate"
-                    :disabled="generateForm.processing"
-                    class="btn-primary"
-                >
-                    Generar API key
-                </button>
-            </div>
+            <!-- Clave recién generada: única oportunidad de copiarla -->
+            <div v-if="plainTextApiToken" class="space-y-4">
+                <div class="rounded-lg bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 px-4 py-3">
+                    <p class="text-sm font-medium text-amber-800 dark:text-amber-300">
+                        Copia esta URL ahora: no volveremos a mostrarla.
+                    </p>
+                    <p class="mt-1 text-xs text-amber-700 dark:text-amber-400">
+                        Solo guardamos un hash de la clave, así que no podemos recuperarla. Si la pierdes, genera otra.
+                    </p>
+                </div>
 
-            <!-- Con token -->
-            <div v-else class="space-y-4">
-                <!-- Endpoint URL -->
                 <div>
-                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
-                        Endpoint
-                    </label>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Endpoint</label>
                     <div class="flex items-center gap-2">
-                        <div class="flex-1 flex items-center gap-2 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-2 font-mono text-xs text-gray-700 dark:text-gray-300 overflow-x-auto">
-                            <span v-if="showToken">{{ endpointUrl }}</span>
-                            <span v-else>https://ia-skills.com/api/v1/saved-skills?api_key=••••••••</span>
+                        <div class="flex-1 rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-2 font-mono text-xs text-gray-700 dark:text-gray-300 overflow-x-auto">
+                            {{ endpointUrl }}
                         </div>
-                        <button
-                            type="button"
-                            @click="showToken = !showToken"
-                            class="shrink-0 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200 transition-colors px-2 py-2"
-                            :title="showToken ? 'Ocultar' : 'Mostrar'"
-                        >
-                            {{ showToken ? '🙈' : '👁' }}
-                        </button>
-                        <button
-                            type="button"
-                            @click="copyEndpoint"
-                            class="shrink-0 btn-secondary text-sm px-3 py-2"
-                        >
+                        <button type="button" @click="copyEndpoint" class="shrink-0 btn-secondary text-sm px-3 py-2">
                             {{ copied ? '✓ Copiado' : 'Copiar' }}
                         </button>
                     </div>
                 </div>
 
-                <!-- Instrucciones rápidas -->
                 <div class="rounded-lg bg-brand-50 dark:bg-brand-900/20 border border-brand-100 dark:border-brand-800 px-4 py-3 text-sm text-brand-800 dark:text-brand-300 space-y-1">
                     <p class="font-medium">¿Cómo usarlo?</p>
                     <p>Pégale esta URL a cualquier IA (Claude, ChatGPT, Gemini…) con el mensaje:</p>
@@ -99,9 +87,23 @@ function copyEndpoint() {
                         "Fetch this URL and show me my saved skills in a summary"
                     </p>
                 </div>
+            </div>
 
-                <!-- Acciones -->
-                <div class="flex items-center gap-4 pt-2">
+            <!-- Hay una clave activa, pero ya no es visible -->
+            <div v-else-if="hasApiToken" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Clave activa</label>
+                    <div class="rounded-lg border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-3 py-2 font-mono text-xs text-gray-700 dark:text-gray-300">
+                        {{ apiTokenPrefix ? `${apiTokenPrefix}${'•'.repeat(40)}` : '••••••••' }}
+                    </div>
+                    <p class="mt-1.5 text-xs text-gray-400 dark:text-gray-500">{{ lastUsedLabel }}</p>
+                </div>
+
+                <p class="text-sm text-gray-500 dark:text-gray-400">
+                    Por seguridad solo guardamos un hash de tu clave. Si ya no la tienes a mano, genera una nueva.
+                </p>
+
+                <div class="flex items-center gap-4 pt-1">
                     <button
                         @click="generate"
                         :disabled="generateForm.processing"
@@ -117,6 +119,16 @@ function copyEndpoint() {
                         Revocar
                     </button>
                 </div>
+            </div>
+
+            <!-- Sin clave -->
+            <div v-else>
+                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                    No tienes ninguna API key activa. Genera una para poder usar el endpoint.
+                </p>
+                <button @click="generate" :disabled="generateForm.processing" class="btn-primary">
+                    Generar API key
+                </button>
             </div>
         </div>
     </section>

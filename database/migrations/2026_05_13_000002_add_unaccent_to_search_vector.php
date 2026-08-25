@@ -7,6 +7,11 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // Full-text search is PostgreSQL-specific; skip on other drivers (tests use SQLite).
+        if (DB::getDriverName() !== 'pgsql') {
+            return;
+        }
+
         DB::statement("CREATE EXTENSION IF NOT EXISTS unaccent");
 
         // IMMUTABLE wrapper needed for generated columns (unaccent() itself is STABLE)
@@ -35,6 +40,10 @@ return new class extends Migration
 
     public function down(): void
     {
+        if (DB::getDriverName() !== 'pgsql') {
+            return;
+        }
+
         DB::statement("DROP INDEX IF EXISTS skills_search_vector_gin");
         DB::statement("ALTER TABLE skills DROP COLUMN IF EXISTS search_vector");
         DB::statement("DROP FUNCTION IF EXISTS f_unaccent(text)");

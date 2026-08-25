@@ -3,7 +3,6 @@
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\OgImageController;
-use App\Http\Controllers\OpenCodeController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SavedSkillController;
@@ -48,14 +47,15 @@ Route::get('/como-funciona', fn () => Inertia::render('HowItWorks'))->name('how-
 // Auth-protected routes
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/skills/crear', [SkillController::class, 'create'])->name('skills.create');
-    Route::post('/skills', [SkillController::class, 'store'])->name('skills.store');
+    Route::post('/skills', [SkillController::class, 'store'])->middleware('throttle:skill-writes')->name('skills.store');
 
-    Route::post('/skills/{skill:slug}/votar', VoteController::class)->name('skills.vote');
-    Route::post('/skills/{skill:slug}/guardar', [SavedSkillController::class, 'toggle'])->name('skills.save');
+    Route::get('/skills/{skill:slug}/editar', [SkillController::class, 'edit'])->name('skills.edit');
+    Route::patch('/skills/{skill:slug}', [SkillController::class, 'update'])->middleware('throttle:skill-writes')->name('skills.update');
 
-    Route::post('/skills/{skill:slug}/opencode', [OpenCodeController::class, 'import'])->name('skills.opencode');
+    Route::post('/skills/{skill:slug}/votar', VoteController::class)->middleware('throttle:votes')->name('skills.vote');
+    Route::post('/skills/{skill:slug}/guardar', [SavedSkillController::class, 'toggle'])->middleware('throttle:votes')->name('skills.save');
 
-    Route::post('/skills/{skill:slug}/comentarios', [CommentController::class, 'store'])->name('comments.store');
+    Route::post('/skills/{skill:slug}/comentarios', [CommentController::class, 'store'])->middleware('throttle:comments')->name('comments.store');
     Route::delete('/comentarios/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
     Route::get('/dashboard', function () {
@@ -65,7 +65,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-    Route::post('/profile/api-token', [ProfileController::class, 'generateApiToken'])->name('profile.api-token.generate');
+    Route::post('/profile/api-token', [ProfileController::class, 'generateApiToken'])->middleware('throttle:skill-writes')->name('profile.api-token.generate');
     Route::delete('/profile/api-token', [ProfileController::class, 'revokeApiToken'])->name('profile.api-token.revoke');
 });
 

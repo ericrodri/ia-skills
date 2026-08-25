@@ -8,7 +8,6 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Redirect;
-use Illuminate\Support\Str;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -19,23 +18,32 @@ class ProfileController extends Controller
      */
     public function edit(Request $request): Response
     {
+        $user = $request->user();
+
         return Inertia::render('Profile/Edit', [
-            'mustVerifyEmail' => $request->user() instanceof MustVerifyEmail,
+            'mustVerifyEmail' => $user instanceof MustVerifyEmail,
             'status' => session('status'),
-            'apiToken' => $request->user()->api_token,
+            'hasApiToken' => $user->api_token !== null,
+            'apiTokenPrefix' => $user->api_token_prefix,
+            'apiTokenLastUsedAt' => $user->api_token_last_used_at?->toIso8601String(),
+            // Solo llega en el redirect inmediato tras generarla: en la base de
+            // datos únicamente vive su hash, así que no hay forma de mostrarla luego.
+            'plainTextApiToken' => session('plainTextApiToken'),
         ]);
     }
 
     public function generateApiToken(Request $request): RedirectResponse
     {
-        $request->user()->update(['api_token' => Str::random(48)]);
+        $plainTextToken = $request->user()->createApiToken();
 
-        return Redirect::route('profile.edit')->with('status', 'api-token-generated');
+        return Redirect::route('profile.edit')
+            ->with('status', 'api-token-generated')
+            ->with('plainTextApiToken', $plainTextToken);
     }
 
     public function revokeApiToken(Request $request): RedirectResponse
     {
-        $request->user()->update(['api_token' => null]);
+        $request->user()->revokeApiToken();
 
         return Redirect::route('profile.edit')->with('status', 'api-token-revoked');
     }

@@ -7,6 +7,11 @@ return new class extends Migration
 {
     public function up(): void
     {
+        // Full-text search is PostgreSQL-specific; skip on other drivers (tests use SQLite).
+        if (DB::getDriverName() !== 'pgsql') {
+            return;
+        }
+
         // Generated tsvector column with weighted fields:
         // A = title (highest), B = description, C = use_case, D = tool_name
         DB::statement("
@@ -28,6 +33,10 @@ return new class extends Migration
 
     public function down(): void
     {
+        if (DB::getDriverName() !== 'pgsql') {
+            return;
+        }
+
         DB::statement("DROP INDEX IF EXISTS skills_search_vector_gin");
         DB::statement("ALTER TABLE skills DROP COLUMN IF EXISTS search_vector");
     }

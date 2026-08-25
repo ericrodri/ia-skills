@@ -16,11 +16,13 @@ class ApiController extends Controller
             return response()->json(['error' => 'API key requerida. Añade ?api_key=TU_CLAVE a la URL.'], 401);
         }
 
-        $user = User::where('api_token', $token)->first();
+        $user = User::findByApiToken($token);
 
         if (! $user) {
             return response()->json(['error' => 'API key inválida.'], 401);
         }
+
+        $user->forceFill(['api_token_last_used_at' => now()])->save();
 
         $skills = $user->savedSkills()
             ->published()

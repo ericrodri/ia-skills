@@ -10,7 +10,10 @@ import { Head } from '@inertiajs/vue3';
 defineProps({
     mustVerifyEmail: { type: Boolean },
     status: { type: String },
-    apiToken: { type: String, default: null },
+    hasApiToken: { type: Boolean, default: false },
+    apiTokenPrefix: { type: String, default: null },
+    apiTokenLastUsedAt: { type: String, default: null },
+    plainTextApiToken: { type: String, default: null },
 });
 </script>
 
@@ -47,7 +50,13 @@ defineProps({
                 <div
                     class="bg-white p-4 shadow-sm border border-gray-100 sm:rounded-xl sm:p-8 dark:bg-gray-800 dark:border-gray-700"
                 >
-                    <ApiTokenForm :api-token="apiToken" class="max-w-xl" />
+                    <ApiTokenForm
+                        :has-api-token="hasApiToken"
+                        :api-token-prefix="apiTokenPrefix"
+                        :api-token-last-used-at="apiTokenLastUsedAt"
+                        :plain-text-api-token="plainTextApiToken"
+                        class="max-w-xl"
+                    />
                 </div>
 
                 <div

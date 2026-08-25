@@ -8,8 +8,10 @@ import { computed } from 'vue'
 
 const props = defineProps({
     skill: Object,
+    versions: { type: Array, default: () => [] },
     userVote: { type: Number, default: null },
     userSaved: { type: Boolean, default: false },
+    canEdit: { type: Boolean, default: false },
 })
 
 const jsonLd = computed(() => JSON.stringify({
@@ -40,7 +42,6 @@ const saved = ref(props.userSaved)
 const savesCount = ref(props.skill.saves_count)
 const commentContent = ref('')
 const copied = ref(false)
-const opencodeCopied = ref(false)
 const showAIMenu = ref(false)
 const aiToast = ref('')
 
@@ -312,7 +313,16 @@ function submitComment() {
                         </div>
                     </Transition>
 
-                    <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{{ skill.title }}</h1>
+                    <div class="flex items-start justify-between gap-4">
+                        <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{{ skill.title }}</h1>
+                        <Link
+                            v-if="canEdit"
+                            :href="route('skills.edit', skill.slug)"
+                            class="shrink-0 mt-1 inline-flex items-center gap-1.5 rounded-lg border border-gray-200 dark:border-gray-700 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-brand-300 hover:text-brand-600 dark:hover:border-brand-500 dark:hover:text-brand-400 transition-colors"
+                        >
+                            <span aria-hidden="true">✏️</span> Editar
+                        </Link>
+                    </div>
                     <p class="mt-3 text-gray-600 dark:text-gray-400 dark:text-gray-500 leading-relaxed">{{ skill.description }}</p>
 
                     <!-- Use case -->
@@ -392,7 +402,7 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                                         </button>
 
                                         <div class="border-t border-gray-100 dark:border-gray-800 mt-1 pt-1">
-                                            <button @click="openInOpenCode; showAIMenu = false" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
+                                            <button @click="openInOpenCode(); showAIMenu = false" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                                 <span class="text-base">🟪</span>
                                                 <span class="font-medium">OpenCode</span>
                                                 <span class="ml-auto text-[10px] text-gray-400">deep link</span>
@@ -422,6 +432,32 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                         </div>
                         <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono">{{ skill.prompt_content }}</pre>
                     </div>
+
+                    <!-- Historial de versiones -->
+                    <details v-if="versions.length > 1" class="mt-6 group">
+                        <summary class="cursor-pointer list-none flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                            <span class="text-xs transition-transform group-open:rotate-90" aria-hidden="true">▶</span>
+                            Historial de versiones
+                            <span class="text-xs font-normal text-gray-400 dark:text-gray-500">({{ versions.length }} versiones · actual v{{ skill.version }})</span>
+                        </summary>
+                        <ol class="mt-4 space-y-3 border-l-2 border-gray-100 dark:border-gray-800 pl-4">
+                            <li v-for="v in versions" :key="v.id" class="text-sm">
+                                <div class="flex items-baseline gap-2 flex-wrap">
+                                    <span
+                                        class="font-mono text-xs px-1.5 py-0.5 rounded"
+                                        :class="v.version === skill.version
+                                            ? 'bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-semibold'
+                                            : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'"
+                                    >v{{ v.version }}</span>
+                                    <span class="text-gray-700 dark:text-gray-300">{{ v.changelog || 'Sin descripción de cambios' }}</span>
+                                </div>
+                                <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">
+                                    {{ v.editor?.name ?? 'Autor desconocido' }} ·
+                                    {{ new Date(v.created_at).toLocaleDateString('es-ES', { day: 'numeric', month: 'short', year: 'numeric' }) }}
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
 
                     <!-- Author -->
                     <div class="mt-8 flex items-center gap-3 pb-8 border-b border-gray-100 dark:border-gray-800">
