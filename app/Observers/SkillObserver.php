@@ -8,20 +8,25 @@ use Illuminate\Support\Facades\Cache;
 class SkillObserver
 {
     /**
-     * Bust sitemap and any relevant OG image caches when a skill is saved.
+     * Invalida el sitemap, el feed y los contadores del sitio cuando una skill
+     * cambia, además de su imagen OG.
      */
     public function saved(Skill $skill): void
     {
-        Cache::forget('sitemap.data');
-
-        if ($skill->slug) {
-            Cache::forget("og.skill.{$skill->slug}");
-        }
+        $this->flush($skill);
     }
 
     public function deleted(Skill $skill): void
     {
-        Cache::forget('sitemap.data');
+        $this->flush($skill);
+    }
+
+    private function flush(Skill $skill): void
+    {
+        Cache::forget('sitemap.skills.rows');
+        Cache::forget('feed.items');
+        Cache::forget('site.skills_count');
+        Cache::forget('site.professions');
 
         if ($skill->slug) {
             Cache::forget("og.skill.{$skill->slug}");

@@ -7,30 +7,8 @@ defineProps({ professions: Array })
 
 <template>
     <Head>
-        <title>Skills de IA por profesión — ia-skills</title>
-        <meta name="description" content="Explora skills de IA organizadas por profesión: marketing, desarrollo, diseño, ventas, RRHH y más." />
-        <link rel="canonical" :href="route('professions.index')" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" :content="route('professions.index')" />
-        <meta property="og:title" content="Skills de IA por profesión — ia-skills" />
-        <meta property="og:description" content="Explora skills de IA organizadas por profesión: marketing, desarrollo, diseño, ventas, RRHH y más." />
-        <meta property="og:image" content="/og-default.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/og-default.svg" />
+        <title>Prompts de IA por profesión — ia-skills</title>
     </Head>
-    <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "ItemList",
-        "name": "Skills de IA por profesión",
-        "description": "Explora skills de IA organizadas por profesión: marketing, desarrollo, diseño, ventas, RRHH y más.",
-        "url": route("professions.index"),
-        "itemListElement": professions.map((p, i) => ({
-            "@type": "ListItem",
-            "position": i + 1,
-            "name": p.name,
-            "url": route("professions.show", { profession: p.slug }),
-        })),
-    })' />
 
     <AppLayout>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12">

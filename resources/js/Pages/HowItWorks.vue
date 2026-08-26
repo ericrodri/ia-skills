@@ -194,29 +194,12 @@ const faqItems = [
     },
 ]
 
-const faqJsonLd = computed(() => JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    'mainEntity': faqItems.map(item => ({
-        '@type': 'Question',
-        'name': item.q,
-        'acceptedAnswer': { '@type': 'Answer', 'text': item.a },
-    })),
-}))
 </script>
 
 <template>
     <AppLayout>
         <Head>
-            <title>Cómo funciona ia-skills — Guía completa de skills de IA</title>
-            <meta name="description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin. Guía completa con ejemplos reales." />
-            <link rel="canonical" :href="route('how-it-works')" />
-            <meta property="og:type" content="article" />
-            <meta property="og:url" :content="route('how-it-works')" />
-            <meta property="og:title" content="Cómo funciona ia-skills — Guía completa de skills de IA" />
-            <meta property="og:description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin." />
-            <meta name="twitter:title" content="Cómo funciona ia-skills — Guía completa de skills de IA" />
-            <meta name="twitter:description" content="Aprende qué es una skill de IA, cómo usarla en Claude, ChatGPT o Gemini, y la diferencia entre Prompt, Skill y Plugin." />
+            <title>Cómo funciona ia-skills — usar prompts y skills de IA</title>
         </Head>
         <div class="bg-white dark:bg-gray-900 transition-colors">
 
@@ -651,7 +634,6 @@ const faqJsonLd = computed(() => JSON.stringify({
             </section>
 
             <!-- FAQ -->
-            <component :is="'script'" type="application/ld+json" :innerHTML="faqJsonLd" />
             <section class="bg-gray-50 dark:bg-gray-800/50 py-20 transition-colors">
                 <div class="max-w-3xl mx-auto px-4 sm:px-6">
                     <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2 text-center">Preguntas frecuentes</h2>

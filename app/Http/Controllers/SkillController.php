@@ -7,6 +7,8 @@ use App\Http\Requests\UpdateSkillRequest;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\SkillVersion;
+use App\Support\Seo;
+use App\Support\SiteData;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -89,8 +91,12 @@ class SkillController extends Controller
             };
         }
 
+        $skills = $query->paginate(20)->withQueryString();
+
+        $this->shareIndexSeo($request, $skills);
+
         return Inertia::render('Skills/Index', [
-            'skills' => $query->paginate(20)->withQueryString(),
+            'skills' => $skills,
             'professions' => $this->activeProfessions(),
             'filters' => array_merge(['sort' => $sort], $request->only(['profession', 'tool', 'difficulty', 'type', 'q'])),
             'tools' => self::TOOLS,
@@ -204,12 +210,169 @@ class SkillController extends Controller
             'comments.replies.user:id,name,username,avatar',
         ]);
 
+        $this->shareShowSeo($skill);
+
         return Inertia::render('Skills/Show', [
             'skill'     => $skill,
             'versions'  => $this->versionHistory($skill),
             'userVote'  => $user ? $user->hasVoted($skill) : null,
             'userSaved' => $user ? $user->hasSaved($skill) : false,
             'canEdit'   => $user ? $user->can('update', $skill) : false,
+        ]);
+    }
+
+    /**
+     * Metadatos del listado.
+     *
+     * El listado es facetable (?q, ?profession, ?tool, ?difficulty, ?type, ?sort)
+     * y cada combinación genera una URL distinta con contenido casi idéntico.
+     * Regla aplicada: la búsqueda interna nunca se indexa, un filtro suelto por
+     * profesión canonicaliza hacia su landing, y el resto de combinaciones van
+     * noindex/follow para que Google siga los enlaces sin inflar el índice.
+     *
+     * @param  \Illuminate\Contracts\Pagination\LengthAwarePaginator<Skill>  $skills
+     */
+    private function shareIndexSeo(Request $request, $skills): void
+    {
+        $filters = array_filter($request->only(['q', 'profession', 'tool', 'difficulty', 'type']));
+        $sort = $request->get('sort', 'top');
+        $page = (int) $request->get('page', 1);
+        $count = SiteData::skillsCountLabel();
+
+        $canonical = route('skills.index');
+        $robots = null;
+        $title = "Explorar prompts y skills de IA: {$count} workflows por profesión";
+        $description = "Busca entre {$count} prompts y skills de IA por profesión, herramienta y dificultad. Ordenados por los votos de la comunidad y listos para copiar.";
+
+        if (isset($filters['q'])) {
+            $robots = 'noindex, follow';
+            $title = "Resultados para «{$filters['q']}» en skills de IA";
+            $description = "Prompts y skills de IA que coinciden con «{$filters['q']}».";
+        } elseif (count($filters) === 1 && isset($filters['profession'])) {
+            $profession = collect(SiteData::professions())->firstWhere('slug', $filters['profession']);
+
+            if ($profession) {
+                $canonical = route('professions.show', ['profession' => $profession['slug']]);
+                $title = "Prompts y skills de IA para {$profession['name']}";
+                $description = "Los mejores prompts y skills de IA para {$profession['name']}, votados por la comunidad.";
+            }
+        } elseif ($filters !== []) {
+            $robots = 'noindex, follow';
+        } elseif ($sort !== 'top') {
+            $robots = 'noindex, follow';
+        }
+
+        if ($page > 1 && $canonical === route('skills.index')) {
+            $canonical = route('skills.index', ['page' => $page]);
+            $title = "Explorar prompts y skills de IA · página {$page}";
+        }
+
+        Seo::share([
+            'title' => $title,
+            'description' => $description,
+            'canonical' => $canonical,
+            'robots' => $robots,
+            'prev' => $skills->currentPage() > 1 ? $skills->previousPageUrl() : null,
+            'next' => $skills->hasMorePages() ? $skills->nextPageUrl() : null,
+            'fallback' => [
+                'heading' => $title,
+                'paragraphs' => [$description],
+                'links' => collect($skills->items())
+                    ->mapWithKeys(fn (Skill $skill) => [
+                        $skill->title => route('skills.show', ['skill' => $skill->slug]),
+                    ])->all(),
+            ],
+            'schema' => [
+                Seo::organization(),
+                Seo::breadcrumbs([
+                    'Inicio' => route('home'),
+                    'Skills' => route('skills.index'),
+                ]),
+                [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'CollectionPage',
+                    'name' => $title,
+                    'url' => $canonical,
+                    'inLanguage' => 'es',
+                    'mainEntity' => [
+                        '@type' => 'ItemList',
+                        'numberOfItems' => $skills->total(),
+                        'itemListElement' => collect($skills->items())->values()
+                            ->map(fn (Skill $skill, int $i) => [
+                                '@type' => 'ListItem',
+                                'position' => $skills->firstItem() + $i,
+                                'name' => $skill->title,
+                                'url' => route('skills.show', ['skill' => $skill->slug]),
+                            ])->all(),
+                    ],
+                ],
+            ],
+        ]);
+    }
+
+    /**
+     * Metadatos de la ficha.
+     *
+     * El JSON-LD se emite desde el servidor: es la única forma de que el prompt
+     * completo y sus metadatos lleguen a un crawler que no ejecute JavaScript.
+     */
+    private function shareShowSeo(Skill $skill): void
+    {
+        $url = route('skills.show', ['skill' => $skill->slug]);
+        $profession = $skill->profession?->name;
+
+        $howTo = array_filter([
+            '@context' => 'https://schema.org',
+            '@type' => 'HowTo',
+            'name' => $skill->title,
+            'description' => Seo::clean($skill->description),
+            'disambiguatingDescription' => $skill->use_case ? Seo::clean($skill->use_case) : null,
+            'text' => $skill->prompt_content,
+            'inLanguage' => 'es',
+            'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => $url],
+            'tool' => $skill->tool_name ? [['@type' => 'HowToTool', 'name' => $skill->tool_name]] : null,
+            'totalTime' => $skill->estimated_minutes ? "PT{$skill->estimated_minutes}M" : null,
+            'author' => $skill->author ? ['@type' => 'Person', 'name' => $skill->author->name] : null,
+            'publisher' => ['@id' => url('/').'#organization'],
+            'datePublished' => $skill->created_at?->toAtomString(),
+            'dateModified' => $skill->updated_at?->toAtomString(),
+        ]);
+
+        $breadcrumbs = ['Inicio' => route('home')];
+
+        if ($skill->profession) {
+            $breadcrumbs[$skill->profession->name] = route('professions.show', ['profession' => $skill->profession->slug]);
+        }
+
+        $breadcrumbs[$skill->title] = $url;
+
+        Seo::share([
+            'title' => $skill->title,
+            'description' => $profession
+                ? Seo::clean($skill->description).' · Prompt de IA para '.$profession.'.'
+                : Seo::clean($skill->description),
+            'canonical' => $url,
+            'robots' => $skill->status === 'published' ? null : 'noindex, nofollow',
+            'ogType' => 'article',
+            'ogImage' => route('og.skill', ['skill' => $skill->slug]),
+            'ogImageAlt' => $skill->title,
+            'fallback' => [
+                'heading' => $skill->title,
+                'paragraphs' => array_filter([
+                    Seo::clean($skill->description),
+                    $skill->use_case ? 'Cuándo usarlo: '.Seo::clean($skill->use_case) : null,
+                    $skill->tool_name ? 'Herramienta recomendada: '.$skill->tool_name : null,
+                ]),
+                'pre' => $skill->prompt_content,
+                'links' => $skill->profession ? [
+                    'Más prompts de IA para '.$skill->profession->name => route('professions.show', ['profession' => $skill->profession->slug]),
+                ] : [],
+            ],
+            'schema' => [
+                Seo::organization(),
+                Seo::breadcrumbs($breadcrumbs),
+                $howTo,
+            ],
         ]);
     }
 

@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\FeedController;
+use App\Http\Controllers\GuideController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\OgImageController;
+use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\SavedSkillController;
@@ -12,26 +16,21 @@ use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
-Route::get('/', function () {
-    return Inertia::render('Welcome', [
-        'professions' => \App\Models\Profession::where('is_active', true)
-            ->withCount(['skills as skills_count' => function ($query) {
-                $query->where('status', 'published');
-            }])
-            ->orderBy('sort_order')
-            ->get(['id', 'name', 'slug', 'icon']),
-        'topSkills' => \App\Models\Skill::published()
-            ->with(['profession:id,name,slug', 'author:id,name,username,is_verified_expert'])
-            ->withCount('comments')
-            ->orderByDesc('vote_score')
-            ->limit(5)
-            ->get(),
-    ]);
-})->name('home');
+// Sin closures en las rutas públicas: así `php artisan route:cache` funciona.
+Route::get('/', HomeController::class)->name('home');
 
+// Sitemap en formato índice + un fichero por tipo de contenido
 Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap');
+Route::get('/sitemap-paginas.xml', [SitemapController::class, 'pages'])->name('sitemap.pages');
+Route::get('/sitemap-profesiones.xml', [SitemapController::class, 'professions'])->name('sitemap.professions');
+Route::get('/sitemap-guias.xml', [SitemapController::class, 'guides'])->name('sitemap.guides');
+Route::get('/sitemap-skills-{page}.xml', [SitemapController::class, 'skills'])->whereNumber('page')->name('sitemap.skills');
+
+// Feed RSS de las últimas skills
+Route::get('/feed.xml', [FeedController::class, 'index'])->name('feed');
 
 // OG Images (dynamic PNG per skill/profession)
+Route::get('/og/default.png', [OgImageController::class, 'default'])->name('og.default');
 Route::get('/og/skill/{skill:slug}', [OgImageController::class, 'skill'])->name('og.skill');
 Route::get('/og/profession/{profession:slug}', [OgImageController::class, 'profession'])->name('og.profession');
 
@@ -39,9 +38,13 @@ Route::get('/og/profession/{profession:slug}', [OgImageController::class, 'profe
 Route::get('/profesiones', [ProfessionController::class, 'index'])->name('professions.index');
 Route::get('/profesiones/{profession:slug}', [ProfessionController::class, 'show'])->name('professions.show');
 
+// Guías (HTML renderizado en servidor, sin Inertia)
+Route::get('/guias', [GuideController::class, 'index'])->name('guides.index');
+Route::get('/guias/{slug}', [GuideController::class, 'show'])->name('guides.show');
+
 // Skills
 Route::get('/skills', [SkillController::class, 'index'])->name('skills.index');
-Route::get('/como-funciona', fn () => Inertia::render('HowItWorks'))->name('how-it-works');
+Route::get('/como-funciona', [PageController::class, 'howItWorks'])->name('how-it-works');
 
 
 // Auth-protected routes

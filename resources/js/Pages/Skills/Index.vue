@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, router } from '@inertiajs/vue3'
-import { ref, watch, computed } from 'vue'
+import { ref, watch } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import SkillCard from '@/Components/SkillCard.vue'
 
@@ -64,36 +64,12 @@ const sortOptions = [
     { value: 'trending', label: 'Trending' },
 ]
 
-const itemListJsonLd = computed(() => JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    'name': 'Explorar Skills de IA para profesionales',
-    'description': 'Biblioteca de workflows, prompts y técnicas de IA para profesionales',
-    'url': route('skills.index'),
-    'numberOfItems': props.skills?.total ?? (props.skills?.data ?? []).length,
-    'itemListElement': (props.skills?.data ?? []).map((skill, i) => ({
-        '@type': 'ListItem',
-        'position': (props.skills?.current_page - 1) * (props.skills?.per_page ?? 20) + i + 1,
-        'name': skill.title,
-        'url': route('skills.show', { skill: skill.slug }),
-    })),
-}))
 </script>
 
 <template>
     <Head>
-        <title>Explorar Skills de IA para profesionales — ia-skills</title>
-        <meta name="description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
-        <link rel="canonical" :href="route('skills.index')" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" :content="route('skills.index')" />
-        <meta property="og:title" content="Explorar Skills de IA para profesionales — ia-skills" />
-        <meta property="og:description" content="Explora la biblioteca de workflows, prompts y técnicas de IA para profesionales. Filtrados por profesión, herramienta y dificultad." />
-        <meta property="og:image" content="/og-default.svg" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:image" content="/og-default.svg" />
+        <title>Explorar prompts y skills de IA — ia-skills</title>
     </Head>
-    <component :is="'script'" type="application/ld+json" :innerHTML="itemListJsonLd" />
 
     <AppLayout>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">

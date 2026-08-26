@@ -14,25 +14,6 @@ const props = defineProps({
     canEdit: { type: Boolean, default: false },
 })
 
-const jsonLd = computed(() => JSON.stringify({
-    '@context': 'https://schema.org',
-    '@type': 'HowTo',
-    'name': props.skill.title,
-    'description': props.skill.description,
-    ...(props.skill.use_case ? { 'disambiguatingDescription': props.skill.use_case } : {}),
-    'text': props.skill.prompt_content,
-    'tool': [{ '@type': 'HowToTool', 'name': props.skill.tool_name }],
-    ...(props.skill.estimated_minutes ? {
-        'totalTime': `PT${props.skill.estimated_minutes}M`,
-    } : {}),
-    ...(props.skill.author ? {
-        'author': { '@type': 'Person', 'name': props.skill.author.name }
-    } : {}),
-    'datePublished': props.skill.created_at,
-    'dateModified': props.skill.updated_at,
-    'inLanguage': 'es',
-}))
-
 const page = usePage()
 const auth = page.props.auth
 
@@ -204,33 +185,7 @@ function submitComment() {
 <template>
     <Head>
         <title>{{ skill.title }} — ia-skills</title>
-        <meta name="description" :content="skill.description" />
-        <link rel="canonical" :href="route('skills.show', { skill: skill.slug })" />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" :content="route('skills.show', { skill: skill.slug })" />
-        <meta property="og:title" :content="`${skill.title} — ia-skills`" />
-        <meta property="og:description" :content="skill.description" />
-        <meta property="og:image" :content="route('og.skill', { skill: skill.slug })" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="article:published_time" :content="skill.created_at" />
-        <meta property="article:modified_time" :content="skill.updated_at" />
-        <meta property="article:section" :content="skill.profession?.name" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" :content="`${skill.title} — ia-skills`" />
-        <meta name="twitter:description" :content="skill.description" />
-        <meta name="twitter:image" :content="route('og.skill', { skill: skill.slug })" />
     </Head>
-    <component :is="'script'" type="application/ld+json" v-text="jsonLd" />
-        <component :is="'script'" type="application/ld+json" :innerHTML='JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-                { "@type": "ListItem", "position": 1, "name": "Skills", "item": route("skills.index") },
-                { "@type": "ListItem", "position": 2, "name": skill.profession?.name, "item": route("professions.show", { profession: skill.profession?.slug }) },
-                { "@type": "ListItem", "position": 3, "name": skill.title, "item": route("skills.show", { skill: skill.slug }) }
-            ]
-        })' />
 
     <AppLayout>
         <!-- Toast notificación otras IAs -->

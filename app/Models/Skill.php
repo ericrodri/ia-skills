@@ -34,6 +34,15 @@ class Skill extends Model
         'resource_type',
     ];
 
+    /**
+     * La columna generada `search_vector` viajaba en el payload de Inertia de
+     * cada ficha (un tsvector completo, cientos de bytes por skill) sin que el
+     * frontend la use nunca.
+     */
+    protected $hidden = [
+        'search_vector',
+    ];
+
     protected $casts = [
         'estimated_minutes' => 'integer',
         'vote_score' => 'integer',

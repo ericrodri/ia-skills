@@ -29,6 +29,10 @@ function logout() {
                         <Link :href="route('professions.index')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
                             Profesiones
                         </Link>
+                        <!-- Las guías son páginas Blade (sin Inertia): enlace normal, no <Link> -->
+                        <a href="/guias" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
+                            Guías
+                        </a>
                         <Link :href="route('how-it-works')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
                             Cómo funciona
                         </Link>
@@ -125,6 +129,8 @@ function logout() {
                     <nav class="flex flex-wrap gap-x-6 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
                         <Link :href="route('skills.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Explorar</Link>
                         <Link :href="route('professions.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Profesiones</Link>
+                        <a href="/guias" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guías</a>
+                        <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-white transition-colors">RSS</a>
                         <Link :href="route('how-it-works')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Cómo funciona</Link>
                         <Link :href="route('skills.saved')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guardadas</Link>
                         <Link v-if="!auth?.user" :href="route('register')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Registrarse</Link>

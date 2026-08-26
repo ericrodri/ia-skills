@@ -51,6 +51,29 @@ class OgImageController extends Controller
         ]);
     }
 
+    /**
+     * Imagen por defecto en PNG.
+     *
+     * Antes el og:image global era un SVG y ninguna red social lo renderiza:
+     * los enlaces compartidos salían sin preview.
+     */
+    public function default(): Response
+    {
+        $png = Cache::remember('og.default', now()->addWeek(), function () {
+            return $this->generate(
+                label: 'ia-skills',
+                title: 'Prompts y skills de IA para profesionales',
+                subtitle: 'Workflows validados por la comunidad, organizados por profesión.',
+                meta: '⚡ ia-skills.com',
+            );
+        });
+
+        return response($png, 200, [
+            'Content-Type' => 'image/png',
+            'Cache-Control' => 'public, max-age=604800',
+        ]);
+    }
+
     private function generate(string $label, string $title, string $subtitle, string $meta): string
     {
         $img = imagecreatetruecolor(self::W, self::H);

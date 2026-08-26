@@ -15,30 +15,8 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
 
 <template>
     <Head>
-        <title>ia-skills — Workflows de IA para profesionales</title>
-        <meta name="description" content="Descubre cómo los mejores profesionales usan IA en su trabajo. Skills reales, workflows y prompts validados por la comunidad." />
-        <link rel="canonical" :href="route('home')" />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" :content="route('home')" />
-        <meta property="og:title" content="ia-skills — Workflows de IA para profesionales" />
-        <meta property="og:description" content="La biblioteca colaborativa de workflows de IA para profesionales." />
-        <meta property="og:site_name" content="ia-skills" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="ia-skills — Workflows de IA para profesionales" />
-        <meta name="twitter:description" content="Descubre cómo los mejores profesionales usan IA en su trabajo. Skills reales, workflows y prompts validados por la comunidad." />
+        <title>Prompts y skills de IA para profesionales — ia-skills</title>
     </Head>
-    <component :is="'script'" type="application/ld+json" v-text='JSON.stringify({
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "ia-skills",
-        "url": "https://ia-skills.com",
-        "description": "La biblioteca colaborativa de workflows de IA para profesionales.",
-        "potentialAction": {
-            "@type": "SearchAction",
-            "target": { "@type": "EntryPoint", "urlTemplate": "https://ia-skills.com/skills?q={search_term_string}" },
-            "query-input": "required name=search_term_string"
-        }
-    })' />
 
     <AppLayout>
         <!-- Hero -->
