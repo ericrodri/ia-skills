@@ -35,4 +35,15 @@ return [
         ],
     ],
 
+    /*
+     * Verificación de propiedad en las herramientas para webmasters. Se pega el
+     * token del panel correspondiente en el .env y se renderiza en el <head>
+     * (ver partials/seo.blade.php). Alternativa al registro TXT en el DNS,
+     * útil cuando no se tiene acceso al panel del registrador.
+     */
+    'site_verification' => [
+        'google' => env('GOOGLE_SITE_VERIFICATION'),
+        'bing' => env('BING_SITE_VERIFICATION'),
+    ],
+
 ];

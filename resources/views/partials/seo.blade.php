@@ -14,6 +14,12 @@
 @endif
 <link rel="canonical" href="{{ $seo['canonical'] }}">
 <meta name="robots" content="{{ $seo['robots'] }}">
+@if(config('services.site_verification.google'))
+<meta name="google-site-verification" content="{{ config('services.site_verification.google') }}">
+@endif
+@if(config('services.site_verification.bing'))
+<meta name="msvalidate.01" content="{{ config('services.site_verification.bing') }}">
+@endif
 @if($seo['prev'])
 <link rel="prev" href="{{ $seo['prev'] }}">
 @endif
