@@ -164,10 +164,14 @@ function openInTool(toolId) {
         chatgpt: 'ChatGPT', gemini: 'Gemini', copilot: 'Copilot', perplexity: 'Perplexity',
     }
 
+    // Gemini no soporta prefill por URL: gemini.google.com/app ignora ?q= y abre
+    // un chat vacío. No hay parámetro alternativo, así que va siempre por copiar.
+    const noPrefill = ['gemini']
+
     // Los navegadores y servidores suelen tener límite ~8000 chars de URL.
     // Usamos 4000 como umbral conservador para garantizar compatibilidad.
     const url = withParam[toolId]
-    if (url.length <= 4000) {
+    if (url.length <= 4000 && !noPrefill.includes(toolId)) {
         // El prompt cabe en la URL → se carga automáticamente al abrir
         window.open(url, '_blank', 'noopener,noreferrer')
         aiToast.value = `✓ Abriendo ${names[toolId]} con el prompt cargado`
