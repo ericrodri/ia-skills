@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La pregunta correcta no es cuál es mejor, sino cuál es mejor para lo que tú haces. Comparativa por tarea real y qué señales usar para decidir.',
     'category' => 'Herramientas',
     'published' => '2026-08-23',
-    'updated' => '2026-08-26',
+    'updated' => '2026-08-27',
     'readingMinutes' => 9,
     'words' => 1500,
     'about' => 'Asistentes de IA',
-    'related' => ['como-escribir-prompts-efectivos', 'plugins-y-mcp-en-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['prompts-de-ia-por-profesion', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'la-pregunta' => 'La pregunta mal planteada',
         'por-tarea' => 'Qué elegir según la tarea',
@@ -109,5 +109,7 @@ return [
 </ol>
 
 <p>El criterio de «cuánto tuve que retocar» es mucho mejor que cualquier impresión general: es tiempo tuyo, medido en tus tareas reales, con tus estándares de calidad.</p>
+
+<p>Y si lo que buscas no es cuál elegir sino qué pedirle una vez elegida, la comparativa por oficio está en <a href="/guias/prompts-de-ia-por-profesion">prompts de IA por profesión</a>: qué merece la pena delegar en cada área y qué conviene seguir haciendo a mano.</p>
 HTML,
 ];

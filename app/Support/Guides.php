@@ -22,9 +22,12 @@ class Guides
         'que-son-los-skills-de-claude-code',
         'como-crear-un-skill-para-claude-code',
         'como-escribir-prompts-efectivos',
+        'prompts-de-ia-por-profesion',
+        'que-es-un-agente-de-ia',
         'claude-vs-chatgpt-para-trabajar',
         'plugins-y-mcp-en-claude-code',
         'automatizar-tareas-con-ia-en-el-trabajo',
+        'aparecer-en-chatgpt-y-perplexity-geo',
     ];
 
     /** @var array<string, array<string, mixed>>|null */

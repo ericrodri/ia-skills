@@ -24,7 +24,7 @@ class GuideController extends Controller
 
         Seo::share([
             'title' => 'Guías de IA para profesionales: skills, prompts y automatización',
-            'description' => "Guías prácticas para usar la IA en tu trabajo: qué es un skill, cómo escribir prompts que funcionan, qué herramienta elegir y cómo automatizar tareas reales.",
+            'description' => "Guías prácticas para usar la IA en tu trabajo: qué es un skill, qué es un agente de IA, cómo escribir prompts que funcionan y qué prompts usar en cada profesión.",
             'canonical' => route('guides.index'),
             'ogImage' => route('og.default'),
             'schema' => [

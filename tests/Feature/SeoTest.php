@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Profession;
 use App\Models\Skill;
+use App\Support\Guides;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -157,6 +158,37 @@ class SeoTest extends TestCase
     public function test_una_guia_inexistente_devuelve_404(): void
     {
         $this->get('/guias/esta-guia-no-existe')->assertNotFound();
+    }
+
+    public function test_todas_las_guias_registradas_responden_con_metadatos_completos(): void
+    {
+        foreach (Guides::all() as $guide) {
+            $this->get('/guias/'.$guide['slug'])
+                ->assertOk()
+                ->assertSee('<h1', false)
+                ->assertSee('"@type":"Article"', false)
+                ->assertSee('rel="canonical"', false);
+        }
+    }
+
+    public function test_el_indice_de_guias_lista_todas_las_guias_publicadas(): void
+    {
+        $response = $this->get('/guias')->assertOk();
+
+        foreach (Guides::all() as $guide) {
+            $response->assertSee(route('guides.show', ['slug' => $guide['slug']]), false);
+        }
+    }
+
+    public function test_llms_txt_indexa_guias_profesiones_y_paginas_clave(): void
+    {
+        $this->get('/llms.txt')
+            ->assertOk()
+            ->assertHeader('Content-Type', 'text/plain; charset=utf-8')
+            ->assertSee('# ia-skills', false)
+            ->assertSee(route('guides.show', ['slug' => 'que-es-un-agente-de-ia']), false)
+            ->assertSee(route('professions.show', ['profession' => 'marketing']), false)
+            ->assertSee(route('sitemap'), false);
     }
 
     /**

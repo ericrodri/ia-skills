@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La diferencia entre un resultado mediocre y uno que puedes usar tal cual casi nunca está en la herramienta. Está en cinco decisiones que tomas al escribir la petición.',
     'category' => 'Fundamentos',
     'published' => '2026-08-22',
-    'updated' => '2026-08-26',
+    'updated' => '2026-08-27',
     'readingMinutes' => 11,
     'words' => 1700,
     'about' => 'Prompt engineering',
-    'related' => ['que-son-los-skills-de-claude-code', 'claude-vs-chatgpt-para-trabajar', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['prompts-de-ia-por-profesion', 'que-son-los-skills-de-claude-code', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
         'por-que-falla' => 'Por qué falla un prompt normal',
         'cinco-piezas' => 'Las cinco piezas',
@@ -147,5 +147,7 @@ Ahora clasifica estos 20 tickets:</code></pre>
 </ol>
 
 <p>Seis preguntas, medio minuto, y el resultado cambia lo suficiente como para que merezca la pena convertirlo en costumbre.</p>
+
+<p>Para ver la estructura aplicada a casos concretos —marketing, desarrollo, ventas, RRHH, finanzas o legal— pasa por <a href="/guias/prompts-de-ia-por-profesion">prompts de IA por profesión</a>.</p>
 HTML,
 ];

@@ -38,3 +38,5 @@ User-agent: Google-Extended
 Allow: /
 
 Sitemap: https://ia-skills.com/sitemap.xml
+
+# Índice en Markdown para motores generativos: https://ia-skills.com/llms.txt

@@ -10,9 +10,9 @@
             </nav>
             <h1 class="text-4xl font-extrabold tracking-tight text-gray-900 dark:text-white">Guías de IA para profesionales</h1>
             <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">
-                Cómo usar la inteligencia artificial en tu trabajo sin humo: qué es un skill, cómo se escribe un prompt
-                que funciona, qué herramienta elegir para cada tarea y cómo automatizar lo que hoy te come el día.
-                Guías escritas para gente que trabaja, no para gente que colecciona novedades.
+                Cómo usar la inteligencia artificial en tu trabajo sin humo: qué es un skill, qué es un agente de IA,
+                cómo se escribe un prompt que funciona, qué prompts merecen la pena en cada profesión y cómo automatizar
+                lo que hoy te come el día. Guías escritas para gente que trabaja, no para gente que colecciona novedades.
             </p>
         </div>
     </section>

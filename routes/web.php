@@ -5,6 +5,7 @@ use App\Http\Controllers\CommentController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LlmsTxtController;
 use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfessionController;
@@ -25,6 +26,9 @@ Route::get('/sitemap-paginas.xml', [SitemapController::class, 'pages'])->name('s
 Route::get('/sitemap-profesiones.xml', [SitemapController::class, 'professions'])->name('sitemap.professions');
 Route::get('/sitemap-guias.xml', [SitemapController::class, 'guides'])->name('sitemap.guides');
 Route::get('/sitemap-skills-{page}.xml', [SitemapController::class, 'skills'])->whereNumber('page')->name('sitemap.skills');
+
+// Índice en Markdown para motores generativos (ChatGPT, Claude, Perplexity)
+Route::get('/llms.txt', LlmsTxtController::class)->name('llms');
 
 // Feed RSS de las últimas skills
 Route::get('/feed.xml', [FeedController::class, 'index'])->name('feed');
