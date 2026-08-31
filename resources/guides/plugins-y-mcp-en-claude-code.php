@@ -9,8 +9,8 @@ return [
     'category' => 'Herramientas',
     'published' => '2026-08-24',
     'updated' => '2026-08-26',
-    'readingMinutes' => 9,
-    'words' => 1450,
+    'readingMinutes' => 7,
+    'words' => 1120,
     'about' => 'Model Context Protocol',
     'related' => ['que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
@@ -117,5 +117,7 @@ return [
 </ol>
 
 <p>Si estás en la casilla de salida, empieza por <a href="/guias/que-son-los-skills-de-claude-code">qué son los skills</a> y por el catálogo de <a href="/profesiones/desarrollo">skills para desarrollo</a>, que es donde hay más recursos de este tipo ya probados.</p>
+
+<p>Si aún no tienes la herramienta instalada, empieza por <a href="/guias/empezar-con-claude-code">los primeros pasos con Claude Code</a>: los plugins y los MCP rinden cuando ya hay un proyecto que responde y un <code>CLAUDE.md</code> con lo básico.</p>
 HTML,
 ];

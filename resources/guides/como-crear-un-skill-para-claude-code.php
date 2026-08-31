@@ -9,8 +9,8 @@ return [
     'category' => 'Tutorial',
     'published' => '2026-08-21',
     'updated' => '2026-08-26',
-    'readingMinutes' => 10,
-    'words' => 1600,
+    'readingMinutes' => 7,
+    'words' => 1170,
     'about' => 'Claude Code',
     'related' => ['que-son-los-skills-de-claude-code', 'como-escribir-prompts-efectivos', 'plugins-y-mcp-en-claude-code'],
     'toc' => [

@@ -9,8 +9,8 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-08-22',
     'updated' => '2026-08-27',
-    'readingMinutes' => 11,
-    'words' => 1700,
+    'readingMinutes' => 8,
+    'words' => 1290,
     'about' => 'Prompt engineering',
     'related' => ['prompts-de-ia-por-profesion', 'que-son-los-skills-de-claude-code', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [

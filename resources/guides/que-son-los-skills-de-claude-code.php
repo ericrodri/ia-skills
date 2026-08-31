@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-20',
     'updated' => '2026-08-26',
     'readingMinutes' => 8,
-    'words' => 1450,
+    'words' => 1310,
     'about' => 'Claude Code',
-    'related' => ['como-crear-un-skill-para-claude-code', 'como-escribir-prompts-efectivos', 'plugins-y-mcp-en-claude-code'],
+    'related' => ['como-crear-un-skill-para-claude-code', 'empezar-con-claude-code', 'plugins-y-mcp-en-claude-code'],
     'toc' => [
         'que-es' => 'Qué es exactamente un skill',
         'prompt-vs-skill' => 'Prompt, skill y plugin: las diferencias',
@@ -135,5 +135,7 @@ Si no hay nada, dilo en una línea y termina.</code></pre>
 </ol>
 
 <p>Cuando tengas claro esto, el siguiente paso es escribir el tuyo. Lo cubrimos paso a paso en <a href="/guias/como-crear-un-skill-para-claude-code">cómo crear un skill para Claude Code</a>, y si lo que necesitas es afinar el texto de las instrucciones, en <a href="/guias/como-escribir-prompts-efectivos">cómo escribir prompts efectivos</a>.</p>
+
+<p>Y si has llegado hasta aquí sin tener la herramienta instalada, el orden natural es el inverso: primero <a href="/guias/empezar-con-claude-code">instalar Claude Code y sobrevivir a la primera semana</a>, y volver a los skills cuando el proyecto ya te responda.</p>
 HTML,
 ];

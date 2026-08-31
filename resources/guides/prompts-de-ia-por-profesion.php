@@ -9,8 +9,8 @@ return [
     'category' => 'Catálogo',
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
-    'readingMinutes' => 10,
-    'words' => 1700,
+    'readingMinutes' => 8,
+    'words' => 1380,
     'about' => 'Prompts de IA',
     'related' => ['como-escribir-prompts-efectivos', 'que-son-los-skills-de-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [

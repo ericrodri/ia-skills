@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-08-25',
     'updated' => '2026-08-27',
-    'readingMinutes' => 10,
-    'words' => 1550,
+    'readingMinutes' => 7,
+    'words' => 1210,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-un-agente-de-ia', 'como-escribir-prompts-efectivos', 'plugins-y-mcp-en-claude-code'],
+    'related' => ['que-es-un-agente-de-ia', 'como-escribir-prompts-efectivos', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -115,5 +115,7 @@ return [
 <p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
 
 <p>Y si la tarea que has elegido tiene demasiados pasos para resolverla con un prompt suelto, lo que necesitas es un agente que los encadene por su cuenta: cómo funcionan y hasta dónde conviene dejarlos solos está en <a href="/guias/que-es-un-agente-de-ia">qué es un agente de IA</a>.</p>
+
+<p>Un último apunte si esto va a salir de tu portátil: en cuanto una automatización toca datos de clientes o envía algo al exterior, deja de ser una decisión personal. Lo que conviene tener escrito —qué datos, qué herramientas, quién aprueba— está en <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA en la empresa</a>.</p>
 HTML,
 ];

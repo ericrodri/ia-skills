@@ -9,8 +9,8 @@ return [
     'category' => 'Método',
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
-    'readingMinutes' => 10,
-    'words' => 1750,
+    'readingMinutes' => 9,
+    'words' => 1550,
     'about' => 'Generative Engine Optimization',
     'related' => ['como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [

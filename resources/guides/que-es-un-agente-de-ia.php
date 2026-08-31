@@ -9,10 +9,10 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
-    'readingMinutes' => 9,
-    'words' => 1650,
+    'readingMinutes' => 8,
+    'words' => 1420,
     'about' => 'Agentes de IA',
-    'related' => ['plugins-y-mcp-en-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-son-los-skills-de-claude-code'],
+    'related' => ['plugins-y-mcp-en-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [
         'que-es' => 'Qué es un agente de IA',
         'chatbot-vs-agente' => 'Chatbot, asistente y agente: las diferencias',
@@ -130,5 +130,7 @@ return [
 </ol>
 
 <p>El método completo, con los controles que conviene dejar puestos antes de soltarle la mano, está en <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">cómo automatizar tareas con IA en el trabajo</a>.</p>
+
+<p>Y si el agente va a trabajar con datos de la empresa, la conversación pendiente no es técnica: es qué permisos tiene, con qué datos y quién responde de lo que haga. Eso se resuelve por escrito, con una <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA</a>.</p>
 HTML,
 ];

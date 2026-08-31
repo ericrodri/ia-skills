@@ -174,7 +174,9 @@ topología de despliegue y conviene hacerlo con el servidor delante.
 **Semanas 3-12 — contenido, dos guías al mes.** Siguientes temas por orden de
 oportunidad:
 
-1. Cómo instalar y empezar con Claude Code (tutorial de entrada, volumen alto)
+1. ~~Cómo instalar y empezar con Claude Code~~ — publicado el 31/08/2026, junto
+   con «Claude Code vs Cursor» y «Política de uso de IA en la empresa». Detalle
+   en [2026-08-31-contenido-guias-y-100-skills.md](2026-08-31-contenido-guias-y-100-skills.md)
 2. 20 prompts de IA para \[profesión\] — uno por profesión, hub hacia el catálogo
 3. Cómo usar IA sin filtrar datos de clientes (RGPD, ángulo que casi nadie cubre)
 4. Errores al usar IA en el trabajo
