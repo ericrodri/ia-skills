@@ -46,7 +46,11 @@ class Seo
             $title .= self::TITLE_SUFFIX;
         }
 
-        $description = Str::limit(self::clean($data['description'] ?? ''), self::DESCRIPTION_MAX, '…');
+        // `preserveWords` corta por la última palabra entera, no por el
+        // carácter 158: sin él, 677 de las 1.103 fichas publicadas servían una
+        // description partida a media palabra («...enfoques (emocional, urgen…»),
+        // que es lo que Google enseña en el snippet.
+        $description = Str::limit(self::clean($data['description'] ?? ''), self::DESCRIPTION_MAX, '…', preserveWords: true);
         $canonical = $data['canonical'] ?? url()->current();
 
         return [
