@@ -4,7 +4,7 @@ return [
     'title' => 'Qué son los skills de Claude Code y para qué sirven',
     'navTitle' => 'Qué son los skills',
     'seoTitle' => 'Qué son los skills de Claude Code: guía práctica',
-    'description' => 'Un skill es una carpeta con un SKILL.md que enseña a Claude a hacer una tarea concreta siempre igual. Qué son, en qué se diferencian de un prompt y cuándo usar cada cosa.',
+    'description' => 'Un skill es una carpeta con un SKILL.md que enseña a la IA a hacer una tarea siempre igual. En qué se diferencia de un prompt y cuándo usar cada uno.',
     'excerpt' => 'Un prompt se escribe una vez y se olvida. Un skill se instala una vez y se usa siempre. Esta es la diferencia y por qué importa cuando trabajas con IA todos los días.',
     'category' => 'Fundamentos',
     'published' => '2026-08-20',

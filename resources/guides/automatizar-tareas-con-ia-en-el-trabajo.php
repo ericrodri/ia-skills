@@ -4,7 +4,7 @@ return [
     'title' => 'Cómo automatizar tareas con IA en el trabajo sin romper nada',
     'navTitle' => 'Automatizar con IA',
     'seoTitle' => 'Cómo automatizar tareas con IA en el trabajo (método)',
-    'description' => 'Método en cinco pasos para decidir qué tareas automatizar con IA, cuáles no tocar, cómo medir si ha servido y qué controles poner antes de dejarlo funcionando solo.',
+    'description' => 'Método en cinco pasos para elegir qué tareas automatizar con IA y cuáles no tocar, cómo medir si ha servido y qué controles poner antes.',
     'excerpt' => 'Casi todo el mundo automatiza la tarea equivocada: la que es fácil de automatizar en lugar de la que cuesta tiempo. Un método para elegir bien y no dejar bombas activadas.',
     'category' => 'Método',
     'published' => '2026-08-25',

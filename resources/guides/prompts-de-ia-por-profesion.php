@@ -4,7 +4,7 @@ return [
     'title' => 'Prompts de IA por profesión: cuáles usar según tu trabajo',
     'navTitle' => 'Prompts por profesión',
     'seoTitle' => 'Prompts de IA por profesión: guía por oficio',
-    'description' => 'Qué prompts de IA merecen la pena en marketing, desarrollo, ventas, RRHH, finanzas, legal, diseño y soporte. Con qué empezar en cada área y cómo adaptar un prompt genérico a tu contexto.',
+    'description' => 'Con qué prompt de IA empezar en cada oficio: marketing, desarrollo, ventas, RRHH, finanzas, legal, diseño y soporte. Y cómo adaptarlo a lo tuyo.',
     'excerpt' => 'Los prompts que circulan por LinkedIn valen para la demo y fallan en el trabajo real. Esta guía recorre las ocho áreas donde la IA ya ahorra horas y dice por dónde empezar en cada una.',
     'category' => 'Catálogo',
     'published' => '2026-08-27',

@@ -4,7 +4,7 @@ return [
     'title' => 'Cómo instalar Claude Code y sacarle partido la primera semana',
     'navTitle' => 'Empezar con Claude Code',
     'seoTitle' => 'Cómo instalar Claude Code: guía de primeros pasos',
-    'description' => 'Comandos de instalación para macOS, Linux y Windows, qué plan hace falta, los comandos que se usan de verdad y en qué orden aprenderlos para no abandonar a los tres días.',
+    'description' => 'Instalación en macOS, Linux y Windows, qué plan necesitas y los comandos que se usan de verdad. Y en qué orden aprenderlos para no abandonar.',
     'excerpt' => 'Instalarlo cuesta dos minutos. Lo que separa a quien lo deja en tres días de quien no vuelve atrás es el orden en que aprende cuatro cosas.',
     'category' => 'Tutorial',
     'published' => '2026-08-31',

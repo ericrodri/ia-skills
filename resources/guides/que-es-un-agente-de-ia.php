@@ -4,7 +4,7 @@ return [
     'title' => 'Qué es un agente de IA y en qué se diferencia de un chatbot',
     'navTitle' => 'Qué es un agente de IA',
     'seoTitle' => 'Qué es un agente de IA: guía práctica en español',
-    'description' => 'Un agente de IA no responde: ejecuta. Qué lo diferencia de un chatbot, qué necesita para funcionar, en qué tareas rinde de verdad y dónde conviene no dejarlo solo.',
+    'description' => 'Un agente de IA no responde: ejecuta. Qué lo diferencia de un chatbot, en qué tareas rinde de verdad y dónde conviene no dejarlo solo.',
     'excerpt' => 'La diferencia entre un chatbot y un agente no está en el modelo, está en si puede tocar tus herramientas. Esto es lo que cambia cuando le das esa capacidad, y lo que conviene vigilar.',
     'category' => 'Fundamentos',
     'published' => '2026-08-27',

@@ -4,7 +4,7 @@ return [
     'title' => 'Política de uso de IA en la empresa: qué escribir y qué exige la norma',
     'navTitle' => 'Política de uso de IA',
     'seoTitle' => 'Política de uso de IA en la empresa: guía y plantilla',
-    'description' => 'Cómo redactar una política interna de uso de IA que la gente respete: inventario, clasificación de datos, herramientas aprobadas, quién aprueba, formación y una plantilla de una página.',
+    'description' => 'Plantilla de una página y el método para redactar una política de uso de IA que la gente respete: qué datos, qué herramientas y quién aprueba.',
     'excerpt' => 'Tu equipo ya está usando IA, con política o sin ella. La diferencia entre tenerla y no tenerla es saber con qué datos y poder demostrarlo.',
     'category' => 'Método',
     'published' => '2026-08-31',

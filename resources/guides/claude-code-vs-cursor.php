@@ -4,7 +4,7 @@ return [
     'title' => 'Claude Code vs Cursor: cuál elegir según cómo trabajas',
     'navTitle' => 'Claude Code vs Cursor',
     'seoTitle' => 'Claude Code vs Cursor: comparativa y cuál elegir',
-    'description' => 'Agente de terminal frente a editor con IA integrada: qué hace mejor cada uno, cuánto cuestan de verdad, cuándo compensa pagar los dos y cómo decidirlo con una prueba de cinco días.',
+    'description' => 'Agente de terminal frente a editor con IA: qué hace mejor cada uno, cuánto cuestan de verdad y cómo decidirlo en una prueba de cinco días.',
     'excerpt' => 'No compiten en lo mismo. Uno optimiza el trabajo autónomo sobre un repositorio entero; el otro, la edición asistida línea a línea. La respuesta depende de dónde pasas el día.',
     'category' => 'Herramientas',
     'published' => '2026-08-31',

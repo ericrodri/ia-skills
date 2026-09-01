@@ -4,7 +4,7 @@ return [
     'title' => 'Cómo escribir prompts efectivos: la estructura que funciona',
     'navTitle' => 'Escribir buenos prompts',
     'seoTitle' => 'Cómo escribir prompts efectivos para IA (con ejemplos)',
-    'description' => 'Las cinco piezas de un prompt que funciona, cómo dar contexto sin escribir una novela, cómo pedir el formato de salida y qué hacer cuando el resultado no es el que esperabas.',
+    'description' => 'Las cinco piezas de un prompt que funciona, con ejemplos. Cómo dar contexto sin escribir una novela y qué hacer cuando el resultado falla.',
     'excerpt' => 'La diferencia entre un resultado mediocre y uno que puedes usar tal cual casi nunca está en la herramienta. Está en cinco decisiones que tomas al escribir la petición.',
     'category' => 'Fundamentos',
     'published' => '2026-08-22',

@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Support\Guides;
+use App\Support\Seo;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -39,6 +40,22 @@ class NewGuidesSmokeTest extends TestCase
             foreach ($matches[1] as $target) {
                 $this->assertNotNull(Guides::find($target), "{$guide['slug']} enlaza a /guias/{$target}, que no existe");
             }
+        }
+    }
+
+    /**
+     * Las guías son contenido editorial: su description la escribimos nosotros,
+     * así que no hay excusa para servirla recortada. Google corta por ancho en
+     * píxeles (~155 caracteres en escritorio, ~115 en móvil), de modo que el
+     * gancho tiene que caber en los primeros 115.
+     */
+    public function test_ninguna_guia_sirve_la_description_recortada(): void
+    {
+        foreach (Guides::all() as $guide) {
+            $servida = Seo::normalize(['description' => $guide['description']])['description'];
+
+            $this->assertStringEndsNotWith('…', $servida, "la description de {$guide['slug']} se sirve recortada");
+            $this->assertSame($guide['description'], $servida, $guide['slug']);
         }
     }
 

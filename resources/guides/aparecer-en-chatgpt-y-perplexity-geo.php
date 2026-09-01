@@ -4,7 +4,7 @@ return [
     'title' => 'GEO: cómo conseguir que ChatGPT y Perplexity citen tu web',
     'navTitle' => 'GEO: aparecer en ChatGPT',
     'seoTitle' => 'GEO: cómo aparecer en ChatGPT y Perplexity',
-    'description' => 'La búsqueda ya no acaba en Google. Qué es GEO, en qué se diferencia del SEO clásico, qué revisar en tu web para que los motores generativos te citen y cómo medir si está funcionando.',
+    'description' => 'Qué es GEO y en qué se diferencia del SEO: qué revisar en tu web para que ChatGPT y Perplexity te citen, y cómo medir si está funcionando.',
     'excerpt' => 'Cada vez más gente pregunta a ChatGPT lo que antes buscaba en Google, y en esa respuesta solo aparecen tres o cuatro fuentes. Esto es lo que hay que tener en orden para ser una de ellas.',
     'category' => 'Método',
     'published' => '2026-08-27',
