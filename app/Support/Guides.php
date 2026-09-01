@@ -20,6 +20,7 @@ class Guides
     /** Orden de publicación: primero el contenido pilar. */
     private const ORDER = [
         'que-son-los-skills-de-claude-code',
+        'agent-skills-estandar-abierto',
         'empezar-con-claude-code',
         'como-crear-un-skill-para-claude-code',
         'como-escribir-prompts-efectivos',
@@ -29,7 +30,9 @@ class Guides
         'claude-code-vs-cursor',
         'plugins-y-mcp-en-claude-code',
         'automatizar-tareas-con-ia-en-el-trabajo',
+        'medir-si-la-ia-ahorra-tiempo',
         'politica-de-uso-de-ia-en-la-empresa',
+        'usar-ia-sin-filtrar-datos-de-clientes',
         'aparecer-en-chatgpt-y-perplexity-geo',
     ];
 

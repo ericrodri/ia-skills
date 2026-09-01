@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2170,
     'about' => 'Gobernanza de la inteligencia artificial',
-    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion', 'que-es-un-agente-de-ia'],
+    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia'],
     'toc' => [
         'por-que' => 'Por qué dos páginas evitan casi todos los problemas',
         'norma' => 'Qué exige la norma a día de hoy',
@@ -149,6 +149,8 @@ return [
 <p><strong>7. Agentes y automatizaciones.</strong> Toda automatización que escriba, borre o envíe algo fuera de la empresa necesita aprobación previa, un responsable con nombre y un registro de lo que hace.</p>
 <p><strong>8. Incidentes.</strong> Si crees que se han expuesto datos indebidamente, comunícalo a [nombre/correo] el mismo día. Comunicar de buena fe no conlleva sanción; ocultarlo, sí.</p>
 <p><strong>9. Formación.</strong> Toda persona incluida en el alcance completa la sesión de alfabetización en IA antes de usar estas herramientas para trabajo con datos ámbar o rojos.</p>
+<p><strong>9 bis. Datos de clientes.</strong> Antes de pegar nada que identifique a una persona, se sustituye por marcadores. El criterio completo, con los cuatro cajones de clasificación y el umbral que la AEPD marca para los agentes, está en <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">cómo usar IA sin filtrar datos de clientes</a>.</p>
+
 <p><strong>10. Vigencia.</strong> Revisión cada seis meses. Responsable: [nombre]. Próxima revisión: [fecha].</p>
 </blockquote>
 

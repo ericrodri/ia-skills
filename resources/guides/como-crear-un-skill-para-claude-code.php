@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1170,
     'about' => 'Claude Code',
-    'related' => ['que-son-los-skills-de-claude-code', 'como-escribir-prompts-efectivos', 'plugins-y-mcp-en-claude-code'],
+    'related' => ['que-son-los-skills-de-claude-code', 'agent-skills-estandar-abierto', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'antes-de-empezar' => 'Antes de empezar: elige la tarea correcta',
         'estructura' => 'La estructura mínima',
@@ -183,6 +183,8 @@ description: [Qué hace, en una frase con verbo.]
 - No [cosa que no debe hacer]
 - No [cosa que no debe hacer]</code></pre>
 
-<p>Con eso tienes un skill funcionando. Si el siguiente paso es enganchar herramientas externas o automatizar algo que ocurre solo, eso ya son plugins y MCP: lo cubrimos en <a href="/guias/plugins-y-mcp-en-claude-code">plugins y MCP en Claude Code</a>.</p>
+<p>Con eso tienes un skill funcionando, y funciona en más sitios de los que crees: el formato es un estándar abierto y el mismo archivo lo leen Cursor, Copilot, VS Code o Codex, cada uno desde su propia carpeta. Qué campos de la cabecera sobreviven al salto y dónde hay que dejar el archivo está en <a href="/guias/agent-skills-estandar-abierto">Agent Skills: el estándar abierto</a>.</p>
+
+<p>Si el siguiente paso es enganchar herramientas externas o automatizar algo que ocurre solo, eso ya son plugins y MCP: lo cubrimos en <a href="/guias/plugins-y-mcp-en-claude-code">plugins y MCP en Claude Code</a>.</p>
 HTML,
 ];

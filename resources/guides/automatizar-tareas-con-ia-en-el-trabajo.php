@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1210,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-un-agente-de-ia', 'como-escribir-prompts-efectivos', 'politica-de-uso-de-ia-en-la-empresa'],
+    'related' => ['que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -112,7 +112,7 @@ return [
     <li><strong><a href="/profesiones/rrhh">RRHH</a>:</strong> redactar la descripción de una vacante a partir de las funciones reales y de los criterios de evaluación, para que ambas cosas digan lo mismo. La valoración de candidatos, fuera.</li>
 </ul>
 
-<p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
+<p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro —con línea base y contando el tiempo de revisar, como se explica en <a href="/guias/medir-si-la-ia-ahorra-tiempo">cómo medir si la IA te está ahorrando tiempo de verdad</a>—, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
 
 <p>Y si la tarea que has elegido tiene demasiados pasos para resolverla con un prompt suelto, lo que necesitas es un agente que los encadene por su cuenta: cómo funcionan y hasta dónde conviene dejarlos solos está en <a href="/guias/que-es-un-agente-de-ia">qué es un agente de IA</a>.</p>
 

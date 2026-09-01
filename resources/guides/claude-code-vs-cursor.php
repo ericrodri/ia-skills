@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1660,
     'about' => 'Herramientas de programación con IA',
-    'related' => ['empezar-con-claude-code', 'claude-vs-chatgpt-para-trabajar', 'plugins-y-mcp-en-claude-code'],
+    'related' => ['agent-skills-estandar-abierto', 'empezar-con-claude-code', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
         'dos-filosofias' => 'Dos filosofías, no dos versiones de lo mismo',
         'tabla' => 'La comparativa, fila a fila',
@@ -142,6 +142,8 @@ return [
     <li><strong>Fíjate también en la fricción</strong> que no sale en los números: dónde te sentiste vigilando en lugar de trabajando.</li>
     <li><strong>Decide con los datos y no con la sensación</strong> del último intento, que siempre tira de la balanza.</li>
 </ol>
+
+<p>Y hay un motivo nuevo para que la decisión pese menos que hace un año: los skills se han estandarizado y las dos herramientas leen el mismo formato de <code>SKILL.md</code>, aunque desde carpetas distintas. Lo que escribas para una se aprovecha en la otra; el mapa de rutas está en <a href="/guias/agent-skills-estandar-abierto">Agent Skills: el estándar abierto</a>.</p>
 
 <p>Si el resultado sale empatado, quédate con la que menos te obligue a cambiar de sitio: la herramienta que se usa gana siempre a la que se admira. Y si vienes de decidir antes qué modelo usar para cada cosa, la lógica es la misma que en <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a>: la pregunta útil nunca es cuál es mejor, es cuál es mejor para esta tarea.</p>
 HTML,
