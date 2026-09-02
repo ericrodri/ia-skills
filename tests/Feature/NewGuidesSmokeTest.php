@@ -18,6 +18,9 @@ class NewGuidesSmokeTest extends TestCase
         $this->assertContains('agent-skills-estandar-abierto', $slugs);
         $this->assertContains('usar-ia-sin-filtrar-datos-de-clientes', $slugs);
         $this->assertContains('medir-si-la-ia-ahorra-tiempo', $slugs);
+        $this->assertContains('ai-act-obligaciones-empresas', $slugs);
+        $this->assertContains('ia-en-excel-y-google-sheets', $slugs);
+        $this->assertContains('ia-para-reuniones-y-actas', $slugs);
 
         foreach (Guides::all() as $guide) {
             $response = $this->get(route('guides.show', ['slug' => $guide['slug']]));
@@ -64,7 +67,7 @@ class NewGuidesSmokeTest extends TestCase
         $sitemap = $this->get('/sitemap-guias.xml')->assertOk()->getContent();
         $llms = $this->get('/llms.txt')->assertOk()->getContent();
 
-        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo'] as $slug) {
+        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas'] as $slug) {
             $this->assertStringContainsString("/guias/{$slug}", $sitemap, $slug);
             $this->assertStringContainsString("/guias/{$slug}", $llms, $slug);
         }

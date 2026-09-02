@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2237,
     'about' => 'Protección de datos e inteligencia artificial',
-    'related' => ['politica-de-uso-de-ia-en-la-empresa', 'que-es-un-agente-de-ia', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'la-pregunta' => 'La pregunta no es «¿es legal usar IA?»',
         'que-pasa' => 'Qué pasa con lo que escribes en el prompt',

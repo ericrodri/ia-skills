@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1290,
     'about' => 'Prompt engineering',
-    'related' => ['prompts-de-ia-por-profesion', 'que-son-los-skills-de-claude-code', 'claude-vs-chatgpt-para-trabajar'],
+    'related' => ['prompts-de-ia-por-profesion', 'ia-en-excel-y-google-sheets', 'que-son-los-skills-de-claude-code'],
     'toc' => [
         'por-que-falla' => 'Por qué falla un prompt normal',
         'cinco-piezas' => 'Las cinco piezas',
@@ -102,6 +102,8 @@ si recibió el email anterior.</code></pre>
     <li>«Como CSV con estas columnas exactas: fecha, importe, categoría.»</li>
     <li>«Como tabla de tres columnas y sin texto antes ni después.»</li>
 </ul>
+
+<p>El caso de la hoja de cálculo tiene además una regla propia que conviene conocer antes de pedir nada: el modelo escribe fórmulas muy bien y calcula muy mal, así que el formato correcto casi nunca es un número. Está explicado en la <a href="/guias/ia-en-excel-y-google-sheets">guía de IA en Excel y Google Sheets</a>.</p>
 
 <p>Y si te importa la consistencia entre ejecuciones, no describas el formato: enséñalo.</p>
 

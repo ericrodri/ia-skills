@@ -30,8 +30,11 @@ class Guides
         'claude-code-vs-cursor',
         'plugins-y-mcp-en-claude-code',
         'automatizar-tareas-con-ia-en-el-trabajo',
+        'ia-en-excel-y-google-sheets',
+        'ia-para-reuniones-y-actas',
         'medir-si-la-ia-ahorra-tiempo',
         'politica-de-uso-de-ia-en-la-empresa',
+        'ai-act-obligaciones-empresas',
         'usar-ia-sin-filtrar-datos-de-clientes',
         'aparecer-en-chatgpt-y-perplexity-geo',
     ];

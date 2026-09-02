@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 1910,
     'about' => 'Medición del retorno de la inteligencia artificial',
-    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'politica-de-uso-de-ia-en-la-empresa', 'que-es-un-agente-de-ia'],
+    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'ia-para-reuniones-y-actas', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [
         'la-brecha' => 'La brecha entre lo que se siente y lo que se mide',
         'por-que-falla' => 'Por qué falla la medición habitual',

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2170,
     'about' => 'Gobernanza de la inteligencia artificial',
-    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia'],
+    'related' => ['ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'por-que' => 'Por qué dos páginas evitan casi todos los problemas',
         'norma' => 'Qué exige la norma a día de hoy',
@@ -125,7 +125,7 @@ return [
 
 <h2 id="formacion">Paso 5: formación y registro</h2>
 
-<p>La obligación de alfabetización en IA no exige un máster: exige que quien usa estos sistemas entienda lo que hace, sus límites y sus riesgos, de forma proporcionada al puesto. En la práctica, y para poder demostrarlo:</p>
+<p>La obligación de alfabetización en IA no exige un máster: exige que quien usa estos sistemas entienda lo que hace, sus límites y sus riesgos, de forma proporcionada al puesto. Lo que el artículo 4 dice exactamente y lo que se te puede pedir como evidencia está desglosado en la <a href="/guias/ai-act-obligaciones-empresas">guía del AI Act para empresas</a>. En la práctica, y para poder demostrarlo:</p>
 
 <ol>
     <li><strong>Una sesión de una hora</strong> por área, con ejemplos de su trabajo real y no diapositivas genéricas.</li>

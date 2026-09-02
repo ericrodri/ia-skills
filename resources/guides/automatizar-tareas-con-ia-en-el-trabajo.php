@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1210,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo', 'politica-de-uso-de-ia-en-la-empresa'],
+    'related' => ['que-es-un-agente-de-ia', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -111,6 +111,8 @@ return [
     <li><strong><a href="/profesiones/finanzas">Finanzas</a>:</strong> preparar el comentario de las desviaciones del mes a partir del cierre, con la regla de no interpretar nada que no esté en los datos. Los números se verifican siempre.</li>
     <li><strong><a href="/profesiones/rrhh">RRHH</a>:</strong> redactar la descripción de una vacante a partir de las funciones reales y de los criterios de evaluación, para que ambas cosas digan lo mismo. La valoración de candidatos, fuera.</li>
 </ul>
+
+<p>Dos tareas se repiten en el inventario de casi cualquier puesto y tienen guía propia, porque cada una esconde su propia trampa: pelearse con una hoja de cálculo —donde la IA escribe la fórmula bien y calcula mal, explicado en <a href="/guias/ia-en-excel-y-google-sheets">IA en Excel y Google Sheets</a>— y redactar el acta de una reunión, en <a href="/guias/ia-para-reuniones-y-actas">IA para reuniones</a>.</p>
 
 <p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro —con línea base y contando el tiempo de revisar, como se explica en <a href="/guias/medir-si-la-ia-ahorra-tiempo">cómo medir si la IA te está ahorrando tiempo de verdad</a>—, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
 
