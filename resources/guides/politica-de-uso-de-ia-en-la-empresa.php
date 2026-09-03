@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2170,
     'about' => 'Gobernanza de la inteligencia artificial',
-    'related' => ['ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['errores-al-usar-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-que' => 'Por qué dos páginas evitan casi todos los problemas',
         'norma' => 'Qué exige la norma a día de hoy',
@@ -133,6 +133,8 @@ return [
     <li><strong>Un registro sencillo:</strong> quién asistió, cuándo, qué versión de la política, qué herramientas estaban aprobadas en esa fecha. Una hoja de cálculo cumple.</li>
     <li><strong>Una revisión semestral</strong> con fecha en el calendario. Sin fecha no ocurre.</li>
 </ol>
+
+<p>Para el contenido de esa sesión de una hora, lo que mejor funciona no es explicar cómo funciona un modelo, sino repasar los fallos concretos que la gente ya está cometiendo y la comprobación que los evita. Están recogidos en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>, con las señales por las que se detecta cada uno.</p>
 
 <h2 id="plantilla">Plantilla de una página para copiar</h2>
 

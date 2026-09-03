@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1840,
     'about' => 'Uso de inteligencia artificial en hojas de cálculo',
-    'related' => ['como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'regla' => 'La regla que evita el 90 % de los errores',
         'tres-caminos' => 'Los tres caminos y cuál te toca',
@@ -185,5 +185,7 @@ Dame las cinco comprobaciones de calidad de datos que harías sobre
 esta tabla, con la fórmula de cada una. No calcules resultados.</code></pre>
 
 <p>Ninguno de los cuatro pide un número, y eso no es casualidad: es la regla del principio aplicada cuatro veces. La IA redacta, la hoja calcula.</p>
+
+<p>La regla se extiende al sitio donde acaban esos números: una cifra mal calculada en un documento se corrige antes de enviarlo, pero en una diapositiva se proyecta delante de quien la conoce de memoria. Cómo repartir el trabajo cuando el destino es una presentación está en la guía de <a href="/guias/presentaciones-con-ia">presentaciones con IA</a>.</p>
 HTML,
 ];

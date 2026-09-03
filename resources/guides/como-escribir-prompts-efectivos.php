@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1290,
     'about' => 'Prompt engineering',
-    'related' => ['prompts-de-ia-por-profesion', 'ia-en-excel-y-google-sheets', 'que-son-los-skills-de-claude-code'],
+    'related' => ['errores-al-usar-ia-en-el-trabajo', 'prompts-de-ia-por-profesion', 'ia-en-excel-y-google-sheets'],
     'toc' => [
         'por-que-falla' => 'Por qué falla un prompt normal',
         'cinco-piezas' => 'Las cinco piezas',
@@ -132,6 +132,8 @@ Ahora clasifica estos 20 tickets:</code></pre>
     <li><strong>Se ha inventado algo:</strong> «Marca con [?] cada afirmación que no puedas sostener con lo que te he dado.»</li>
     <li><strong>No sabes qué falta:</strong> «Antes de responder, hazme las tres preguntas que más cambiarían tu respuesta.» Esta última es la más útil de todas.</li>
 </ul>
+
+<p>Las dos últimas apuntan a algo que un prompt bien escrito no arregla por sí solo: hay tareas en las que un error no se ve al leer el resultado, y ahí el trabajo no acaba cuando llega la respuesta. Cuáles son y qué comprobar está en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>.</p>
 
 <p>Y cuando por fin funcione: <strong>guárdalo</strong>. Un prompt que ha funcionado dos veces es un activo. Si lo repites cada semana, conviértelo en un skill y deja de buscarlo. Cómo hacerlo está en <a href="/guias/como-crear-un-skill-para-claude-code">cómo crear un skill</a>.</p>
 

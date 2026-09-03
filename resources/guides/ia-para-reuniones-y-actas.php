@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1720,
     'about' => 'Automatización de actas y resúmenes de reuniones con IA',
-    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
+    'related' => ['resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-esta-resuelto' => 'Lo que está resuelto y lo que no',
         'tipos' => 'Tres formas de grabar, con tres consecuencias distintas',
@@ -148,6 +148,7 @@ Cita la parte de la transcripción en cada caso.</code></pre>
     <li><strong>Nombres propios y jerga interna.</strong> Los nombres de vuestros productos y de vuestros clientes salen mal transcritos, y con ellos las decisiones que los mencionan. Casi todas las herramientas permiten cargar un vocabulario personalizado: hacerlo una vez arregla esto para siempre.</li>
     <li><strong>La ironía y el «bueno, ya veremos».</strong> El modelo lee el «sí, claro, lo hacemos mañana» sarcástico como un compromiso con fecha. Es una de las razones para exigir la cita literal.</li>
     <li><strong>Decisiones implícitas.</strong> «Pues eso» y nadie objeta. Un humano entiende que se aprobó; la transcripción no registra el silencio ni los gestos. Estas decisiones se pierden siempre, y es un buen argumento para cerrar en voz alta lo que se decide.</li>
+    <li><strong>Reuniones de dos horas.</strong> Una transcripción larga es un documento largo, y le pasa lo que a cualquier documento largo: lo que se dijo en el tramo central es lo que el resumen recoge peor. Si la reunión pasó de la hora, pregunta por bloques en vez de pedir un resumen único, con el método de la guía sobre <a href="/guias/resumir-documentos-largos-con-ia">resumir documentos largos con IA</a>.</li>
 </ul>
 
 <h2 id="responsable">El acta sigue teniendo un dueño humano</h2>
