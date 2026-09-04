@@ -134,7 +134,7 @@ return [
     <li><strong>Una revisión semestral</strong> con fecha en el calendario. Sin fecha no ocurre.</li>
 </ol>
 
-<p>Para el contenido de esa sesión de una hora, lo que mejor funciona no es explicar cómo funciona un modelo, sino repasar los fallos concretos que la gente ya está cometiendo y la comprobación que los evita. Están recogidos en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>, con las señales por las que se detecta cada uno.</p>
+<p>Para el contenido de esa sesión de una hora, lo que mejor funciona no es explicar cómo funciona un modelo, sino repasar los fallos concretos que la gente ya está cometiendo y la comprobación que los evita. Están recogidos en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>, con las señales por las que se detecta cada uno. Conviene añadir un punto más si en algún proceso interno se usa un detector automático: por qué su resultado no puede ser concluyente por sí solo está explicado en <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">qué detectan los detectores de IA</a>.</p>
 
 <h2 id="plantilla">Plantilla de una página para copiar</h2>
 

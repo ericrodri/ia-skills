@@ -58,7 +58,7 @@ return [
 </table>
 </figure>
 
-<p>Ahí está toda la asimetría. Cuando un modelo inventa, el error deja un rastro visible; cuando omite, el hueco no se ve, y la persona que lee el resumen se queda con la impresión de haber leído el documento. Un resumen bien escrito es <em>más</em> peligroso que uno mediocre, porque no invita a comprobar nada.</p>
+<p>Ahí está toda la asimetría. Cuando un modelo inventa, el error deja un rastro visible; cuando omite, el hueco no se ve, y la persona que lee el resumen se queda con la impresión de haber leído el documento. Un resumen bien escrito es <em>más</em> peligroso que uno mediocre, porque no invita a comprobar nada. El otro lado de la moneda —lo que el modelo añade cuando no tiene de dónde leer— está en la guía de <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</p>
 
 <p>Y hay un agravante de diseño: cuando pides «un resumen», estás pidiendo brevedad y coherencia. El modelo entrega justo eso, y para lograrlo descarta lo que no encaja en el hilo principal. La excepción, el caso raro, la nota a pie con la penalización: precisamente lo que hace que ese documento se distinga de los otros cuarenta parecidos.</p>
 

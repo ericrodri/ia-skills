@@ -74,7 +74,7 @@ return [
 
 <h2 id="error-2">2. Dar por buenas cifras, citas y referencias</h2>
 
-<p>Los tres formatos que más se inventan son también los tres que menos se comprueban: el porcentaje atribuido a una consultora, la cita textual de una persona real y la referencia bibliográfica con año y editorial. Salen bien formateados, y el formato correcto es justo lo que apaga la sospecha.</p>
+<p>Los tres formatos que más se inventan son también los tres que menos se comprueban: el porcentaje atribuido a una consultora, la cita textual de una persona real y la referencia bibliográfica con año y editorial. Salen bien formateados, y el formato correcto es justo lo que apaga la sospecha. Los cinco tipos de invención y el minuto de comprobación que los caza están desglosados en la guía sobre <a href="/guias/alucinaciones-de-la-ia">las alucinaciones de la IA</a>.</p>
 
 <p>La medida más seria que existe sobre esto es el estudio de la Unión Europea de Radiodifusión y la BBC publicado en octubre de 2025: más de 3.000 respuestas de ChatGPT, Copilot, Gemini y Perplexity, evaluadas por 22 medios públicos de 18 países en 14 idiomas. El <strong>45 % contenía al menos un problema importante</strong>; el 31 %, fallos graves de atribución —fuente mal citada, incompleta o engañosa—; el 20 %, errores de precisión, incluida información inventada o caducada.</p>
 

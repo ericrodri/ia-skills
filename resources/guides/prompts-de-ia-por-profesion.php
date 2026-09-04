@@ -103,7 +103,7 @@ return [
     <li><strong>Síntesis de encuestas de clima</strong>: agrupar cientos de respuestas abiertas en temas, con citas textuales de apoyo.</li>
 </ul>
 
-<p>Lo que no debe delegarse: la decisión de descartar. Que la IA ordene y documente; que el criterio sea humano y quede por escrito.</p>
+<p>Lo que no debe delegarse: la decisión de descartar. Que la IA ordene y documente; que el criterio sea humano y quede por escrito. Y por el otro lado del mostrador, lo que hace un ATS con una candidatura y qué parte del CV conviene delegar está en la guía de <a href="/guias/cv-y-carta-de-presentacion-con-ia">CV y carta de presentación con IA</a>.</p>
 
 <p><a href="/profesiones/rrhh">Ver los prompts de RRHH del catálogo →</a></p>
 
