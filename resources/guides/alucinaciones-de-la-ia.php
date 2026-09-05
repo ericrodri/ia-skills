@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1840,
     'about' => 'Alucinaciones de los modelos de lenguaje y verificación de sus respuestas',
-    'related' => ['errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'como-escribir-prompts-efectivos'],
+    'related' => ['investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'que-es' => 'Una alucinación no es una mentira: es un relleno',
         'por-que' => 'Por qué el entrenamiento premia adivinar antes que callar',

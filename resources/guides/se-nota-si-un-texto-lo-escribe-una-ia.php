@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1790,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
-    'related' => ['errores-al-usar-ia-en-el-trabajo', 'politica-de-uso-de-ia-en-la-empresa', 'como-escribir-prompts-efectivos'],
+    'related' => ['escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'que-miden' => 'Qué mide un detector, que no es lo que parece',
         'falsos-positivos' => 'Falsos positivos: quién paga el error',

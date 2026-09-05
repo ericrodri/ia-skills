@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1310,
     'about' => 'Claude Code',
-    'related' => ['como-crear-un-skill-para-claude-code', 'agent-skills-estandar-abierto', 'empezar-con-claude-code'],
+    'related' => ['como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
     'toc' => [
         'que-es' => 'Qué es exactamente un skill',
         'prompt-vs-skill' => 'Prompt, skill y plugin: las diferencias',

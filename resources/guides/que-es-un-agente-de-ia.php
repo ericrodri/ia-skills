@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1420,
     'about' => 'Agentes de IA',
-    'related' => ['plugins-y-mcp-en-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo', 'politica-de-uso-de-ia-en-la-empresa'],
+    'related' => ['investigar-con-ia-deep-research', 'plugins-y-mcp-en-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'que-es' => 'Qué es un agente de IA',
         'chatbot-vs-agente' => 'Chatbot, asistente y agente: las diferencias',

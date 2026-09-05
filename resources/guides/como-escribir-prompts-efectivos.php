@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1290,
     'about' => 'Prompt engineering',
-    'related' => ['errores-al-usar-ia-en-el-trabajo', 'prompts-de-ia-por-profesion', 'ia-en-excel-y-google-sheets'],
+    'related' => ['prompts-de-ia-por-profesion', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'por-que-falla' => 'Por qué falla un prompt normal',
         'cinco-piezas' => 'Las cinco piezas',

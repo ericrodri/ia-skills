@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1210,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-un-agente-de-ia', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas'],
+    'related' => ['que-es-un-agente-de-ia', 'escribir-correos-con-ia', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',

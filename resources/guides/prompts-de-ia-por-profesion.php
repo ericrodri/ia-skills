@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1380,
     'about' => 'Prompts de IA',
-    'related' => ['como-escribir-prompts-efectivos', 'que-son-los-skills-de-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'que-son-los-skills-de-claude-code'],
     'toc' => [
         'por-que-profesion' => 'Por qué los prompts genéricos fallan',
         'marketing' => 'Marketing y contenido',

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1830,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['errores-al-usar-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-para-reuniones-y-actas'],
+    'related' => ['investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',

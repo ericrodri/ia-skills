@@ -3,7 +3,7 @@
 return [
     'title' => 'Cómo medir si la IA te está ahorrando tiempo de verdad',
     'navTitle' => 'Medir si la IA ahorra tiempo',
-    'seoTitle' => 'Cómo medir el ahorro de tiempo con IA (y el ROI que sí se puede probar)',
+    'seoTitle' => 'Medir el ahorro de tiempo con IA: el ROI demostrable',
     'description' => 'El 80% de quienes usan IA se cree más productivo y solo el 6% de las empresas ve impacto real. Método de cuatro semanas para medirlo en una tarea concreta.',
     'excerpt' => 'La sensación de ir más rápido es real y engañosa a partes iguales. Un método de cuatro semanas para saber cuánto tiempo ahorra la IA en una tarea concreta, contando también el tiempo de revisar lo que devuelve.',
     'category' => 'Método',
