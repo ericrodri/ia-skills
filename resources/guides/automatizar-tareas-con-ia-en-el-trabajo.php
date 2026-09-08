@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Casi todo el mundo automatiza la tarea equivocada: la que es fácil de automatizar en lugar de la que cuesta tiempo. Un método para elegir bien y no dejar bombas activadas.',
     'category' => 'Método',
     'published' => '2026-08-25',
-    'updated' => '2026-08-27',
+    'updated' => '2026-09-08',
     'readingMinutes' => 7,
     'words' => 1210,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-un-agente-de-ia', 'escribir-correos-con-ia', 'ia-para-reuniones-y-actas'],
+    'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -40,6 +40,8 @@ return [
 <p>Al final de la semana tendrás una lista que suele sorprender. Las tareas que más tiempo consumen casi nunca son las que uno recuerda como pesadas; son las pequeñas que ocurren doce veces: contestar el mismo tipo de correo, reformatear un informe, pasar notas a limpio, preparar el mismo resumen para tres personas distintas.</p>
 
 <p>Ordena por <strong>tiempo total a la semana</strong>, no por lo mucho que te fastidie cada una.</p>
+
+<p>Si quieres clasificar esa lista con un criterio ya probado, y ver qué tareas de tu perfil concreto están hoy automatizadas y cuáles no, la guía sobre <a href="/guias/que-tareas-de-tu-profesion-automatiza-la-ia">qué tareas de tu profesión automatiza la IA</a> tiene la tabla por profesión y los datos de exposición en España.</p>
 
 <h2 id="que-automatizar">Paso 2: qué automatizar y qué no tocar</h2>
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1811,
     'about' => 'Investigación documental asistida por agentes de IA con búsqueda web',
-    'related' => ['alucinaciones-de-la-ia', 'resumir-documentos-largos-con-ia', 'que-es-un-agente-de-ia'],
+    'related' => ['gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
     'toc' => [
         'que-es' => 'Qué hace un modo de investigación profunda',
         'no-es' => 'El fallo no es inventar: es seleccionar',

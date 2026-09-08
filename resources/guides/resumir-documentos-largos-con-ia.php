@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Pedir el resumen de un PDF de doscientas páginas funciona a la primera y ahí está la trampa: no hay forma de ver lo que se quedó fuera. El método consiste en obligar al resumen a señalar de dónde sale cada frase.',
     'category' => 'Práctica',
     'published' => '2026-09-03',
-    'updated' => '2026-09-03',
+    'updated' => '2026-09-08',
     'readingMinutes' => 11,
     'words' => 1830,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',
@@ -95,7 +95,7 @@ return [
     <li><strong>Sacar a la superficie lo que no tiene respaldo.</strong> Cuando el modelo no encuentra de dónde sale una frase, o la reformula con menos seguridad o la deja sin cita. Ambas cosas son información.</li>
 </ol>
 
-<p>Las herramientas que hoy lo hacen bien son las pensadas para documentos: NotebookLM devuelve el fragmento exacto de cada fuente, Claude cita con número de página en PDFs, y Perplexity con un archivo subido enlaza a la sección. Esa capacidad pesa más en la elección que el tamaño de contexto que anuncie cada una.</p>
+<p>Las herramientas que hoy lo hacen bien son las pensadas para documentos: <a href="/guias/gemini-notebook-antes-notebooklm">Gemini Notebook</a> —el antiguo NotebookLM, renombrado en julio de 2026— devuelve el fragmento exacto de cada fuente, Claude cita con número de página en PDFs, y Perplexity con un archivo subido enlaza a la sección. Esa capacidad pesa más en la elección que el tamaño de contexto que anuncie cada una.</p>
 
 <h2 id="prompts">Tres prompts: el mapa, el resumen y la pregunta directa</h2>
 
