@@ -12,679 +12,1156 @@ class TopSearchedSkills94Seeder extends Seeder
         $admin = User::first();
         $skills = [
             [
-                'profession_id'    => 5,
-                'title'            => 'PRD asistido por IA que el equipo puede implementar sin volver a preguntarte',
-                'description'      => 'Estructura el documento de requisitos con el problema, las decisiones tomadas, los casos límite y lo que queda fuera, de forma que diseño y desarrollo puedan empezar sin diez rondas de aclaraciones.',
+                'profession_id'    => 1,
+                'title'            => 'Estrategia de contenido con IA: producción escalable',
+                'description'      => 'Sistema para crear más contenido sin sacrificar autenticidad: el flujo de producción escalable con IA que mantiene la voz de marca y multiplica el output del equipo de marketing.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como product manager senior que escribe documentos que el equipo lee de verdad. Quiero un PRD que responda de antemano las preguntas que siempre llegan por chat tres días después de empezar.
+Actúa como un director de contenido que ha implementado procesos de producción con IA en equipos de marketing de empresas B2B y B2C. Ayúdame a construir el sistema de producción de contenido que escala sin que el contenido parezca generado por máquinas.
 
-## Contexto que necesito
+**Mi contexto:**
+- Tipo de empresa y sector: [describe tu empresa]
+- Audiencia objetivo: [a quién va dirigido el contenido]
+- Canales principales: [blog / LinkedIn / newsletter / redes sociales / YouTube / podcast]
+- Volumen de contenido actual: [piezas/mes por canal]
+- Objetivo de volumen: [cuánto quieres producir]
+- Tamaño del equipo de contenido: [número de personas]
+- Herramientas actuales: [qué usas ahora para crear contenido]
+- Principal miedo al usar IA para contenido: [que suene robótico / que pierda autenticidad / que no rankee / que el equipo lo use mal]
 
-1. El problema: quién lo tiene, con qué frecuencia y qué hace hoy para resolverlo.
-2. Evidencia disponible: datos de uso, tickets, entrevistas, peticiones.
-3. Objetivo de negocio y métrica que debería moverse.
-4. Restricciones conocidas: técnicas, legales, de plazo, de equipo.
-5. Qué has decidido ya y qué está abierto de verdad.
+---
 
-## Estructura del documento
+**Parte 1 – El sistema de pilares y clusters de contenido**
 
-### 1. Problema (media página, sin solución dentro)
-Quién, cuándo, con qué frecuencia, qué coste tiene hoy. Con la evidencia citada. Si la evidencia es una petición de un cliente grande, dilo tal cual: es una razón legítima, pero es distinta de un patrón observado.
+Antes de hablar de IA, el sistema que hace que la producción escale con calidad:
+- Qué son los pilares de contenido y por qué son la base del sistema: 3-5 temas en los que tu marca puede ser referente
+- Clusters de contenido: cómo un pilar genera 10-20 piezas de contenido relacionadas sin repetirse
+- La matriz de contenido: formatos × canales × audiencia para identificar qué piezas producir primero
 
-### 2. Por qué ahora
-Qué cambia si lo hacemos este trimestre en lugar del siguiente. Sin esta sección, cualquier cosa parece prioritaria.
+**Crea la matriz de contenido para mi negocio:**
 
-### 3. Resultado esperado
-Métrica principal, valor actual, valor objetivo y plazo de evaluación. Más las métricas de control que no deben empeorar. Un objetivo sin métrica de control es una invitación a optimizar una cosa rompiendo otra.
+| Pilar | Formato | Canal | Audiencia | Objetivo | Frecuencia |
+|---|---|---|---|---|---|
+| [Pilar 1] | Artículo largo | Blog | Decision makers | SEO | 2/mes |
+| [Pilar 1] | Post corto | LinkedIn | Profesionales del sector | Alcance | 3/semana |
+| ... | ... | ... | ... | ... | ... |
 
-### 4. Alcance
-Dos listas explícitas: **dentro** y **fuera**. La lista de fuera es la que evita la mitad de las discusiones, y hay que escribirla aunque parezca obvia.
+---
 
-### 5. Comportamiento esperado
-Los recorridos principales, paso a paso, en presente y en lenguaje de usuario. Para cada uno: qué ve, qué hace, qué ocurre, qué pasa si falla.
+**Parte 2 – Dónde entra la IA en el proceso de producción**
 
-### 6. Casos límite y estados
-Tabla con: sin datos, un solo elemento, muchísimos elementos, sin permisos, sin conexión, operación duplicada, valores extremos, texto muy largo, usuario que no ha completado un paso previo. Y la decisión para cada uno. **Este apartado es el que distingue un PRD útil de una idea escrita**: cada hueco aquí se convierte en una decisión improvisada de quien implemente.
+La distinción crítica: qué hace la IA y qué hace el humano:
 
-### 7. Decisiones tomadas y descartadas
-Qué se decidió, qué alternativas se valoraron y por qué se descartaron. Evita que la discusión vuelva cada dos semanas.
+**IA para:** (alto volumen, bajo riesgo de pérdida de autenticidad)
+- Research y síntesis de información: compilar datos, tendencias y fuentes en minutos
+- Generación de ángulos y enfoques alternativos para el mismo tema
+- Adaptación de un contenido a múltiples formatos (artículo → LinkedIn → newsletter → hilo de Twitter)
+- Primer borrador de contenido templado (estructuras predefinidas)
+- SEO: research de keywords, sugerencias de H2s, meta descriptions
 
-### 8. Preguntas abiertas
-Con responsable y fecha. Ninguna pregunta abierta sin dueño.
+**Humano para:** (baja tolerancia a la pérdida de autenticidad)
+- La opinión real y el punto de vista diferenciador
+- Los ejemplos propios y los casos de la empresa
+- La edición final que inyecta la voz de marca
+- La historia personal o de cliente que hace el contenido memorable
+- La decisión estratégica sobre qué publicar y cuándo
 
-### 9. Lanzamiento
-Cómo se despliega (a quién primero), qué se mide, cuándo se revisa y en qué condiciones se revierte.
+---
 
-## Lo que quiero que hagas además
+**Parte 3 – Construir la voz de marca para la IA**
 
-- Señálame las contradicciones o los huecos de la información que te he dado, en lugar de rellenarlos.
-- Marca cada afirmación del documento como «dato», «supuesto» o «decisión». Los supuestos son los que hay que validar antes de construir.
-- Propón la versión mínima que aprende lo mismo con menos trabajo.
+El problema no es usar IA; el problema es no haberle enseñado cómo habla tu marca:
+- Cómo crear un "Brand Voice Document" que los modelos de IA puedan usar
+  - Tono y registro (formal / cercano / técnico / inspiracional)
+  - Palabras y expresiones que usamos y que NO usamos
+  - Longitud de frases característica
+  - Tipo de ejemplos que ponemos (datos / historias / analogías)
+  - Qué evitamos (el clickbait, las listas vacías, el lenguaje corporativo)
+- Cómo incluir este documento en los prompts para que la IA lo respete
+- Prueba: dame el brand voice document inicial para mi marca basándote en el contexto que te he dado
 
-## Entregables
+---
 
-1. El PRD completo con los nueve apartados.
-2. Lista de supuestos que conviene validar antes de empezar, y cómo validarlos rápido.
-3. Preguntas que le harán al equipo y que el documento ya responde (para comprobar que está completo).
-4. La versión mínima alternativa, con lo que se sacrifica.
+**Parte 4 – El flujo de producción semana a semana**
+
+El proceso semanal del equipo de contenido con IA:
+
+**Lunes – Planificación:**
+- Revisar el calendario editorial y seleccionar los temas de la semana
+- Usar IA para hacer el research inicial de cada tema (fuentes, datos, ángulos posibles)
+- Asignar piezas al equipo con el brief ya semi-preparado por la IA
+
+**Martes-Miércoles – Producción:**
+- El redactor humano revisa el research de IA y añade su perspectiva
+- Usa IA para el primer borrador (con el brand voice document en el prompt)
+- El humano edita: añade ejemplos propios, ajusta el tono, añade la opinión
+
+**Jueves – Adaptación de formatos:**
+- IA adapta el contenido principal a los formatos secundarios (LinkedIn, newsletter, hilo)
+- Revisión rápida de cada adaptación
+
+**Viernes – Revisión y programación:**
+- Revisión final de todas las piezas de la semana
+- Programación en las herramientas de distribución
+
+---
+
+**Parte 5 – Métricas y optimización del sistema**
+
+Cómo medir si el sistema está funcionando:
+- Métricas de producción: piezas por persona por semana antes y después de implementar IA
+- Métricas de calidad: engagement rate, tiempo en página, CTR — para asegurar que la calidad no cae
+- Métricas de autenticidad: comentarios que mencionan "parecía un bot" o similar (una señal de alerta)
+- El proceso de aprendizaje: cómo los prompts mejoran con el tiempo basándose en qué contenido funciona mejor
+
+Termina con los 5 errores más frecuentes cuando los equipos de marketing empiezan a usar IA para contenido y cómo evitarlos desde el principio.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 45,
+                'use_case'         => 'Construir el sistema de producción de contenido con IA que multiplica el output sin perder la autenticidad de la voz de marca.',
+                'vote_score'       => 38,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 2,
+                'title'            => 'Feature flags y continuous delivery',
+                'description'      => 'Implementa feature flags con LaunchDarkly o Unleash para separar deployment de release, gestionar experimentos y hacer rollouts seguros: la práctica que transforma el proceso de entrega de software.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un platform engineer con experiencia en implementar sistemas de feature flags en startups y scale-ups que necesitan aumentar su cadencia de deployment sin aumentar el riesgo. Ayúdame a diseñar e implementar la estrategia de feature flags para nuestro producto.
+
+**Mi contexto:**
+- Stack tecnológico: [lenguaje(s), framework(s), arquitectura]
+- Infraestructura de deployment: [monolito / microservicios / serverless / contenedores]
+- Tamaño del equipo de ingeniería: [número de devs]
+- Cadencia de deployment actual: [cuántas veces al día/semana desplegáis]
+- Problema principal que quiero resolver con feature flags: [reducir riesgo de releases / hacer A/B testing / gestionar acceso a features beta / separar frontend de backend releases]
+- Herramientas de CI/CD actuales: [GitHub Actions / GitLab CI / Jenkins / etc.]
+
+---
+
+**Parte 1 – Los tres tipos de feature flags que todo equipo necesita**
+
+No todos los flags son iguales. Explica los tres tipos y cuándo usar cada uno:
+
+**1. Release flags (los más comunes)**
+- Propósito: desplegar código desactivado para activarlo cuando esté listo
+- Ciclo de vida: se crean para un feature y se eliminan cuando el feature está estable
+- Quién los controla: el equipo de ingeniería o el PM
+- Ejemplo de uso: nuevo flujo de checkout desplegado pero solo visible al 0% de usuarios hasta QA aprobado
+
+**2. Experiment flags (A/B testing)**
+- Propósito: probar hipótesis con tráfico dividido y medir resultados estadísticamente
+- Ciclo de vida: viven mientras dura el experimento (días o semanas)
+- Quién los controla: el equipo de producto o de growth
+- Ejemplo de uso: variante A vs. variante B del CTA en la landing con medición de conversión
+
+**3. Permission flags (acceso a features)**
+- Propósito: controlar qué usuarios o grupos tienen acceso a qué funcionalidades
+- Ciclo de vida: indefinido, son parte de la lógica de negocio (planes, betas, etc.)
+- Quién los controla: el negocio (CS, ventas, producto)
+- Ejemplo de uso: feature X solo para clientes del plan Enterprise o beta testers
+
+**Tabla de selección rápida:**
+
+| Necesidad | Tipo de flag | Herramienta recomendada | Duración |
+|---|---|---|---|
+| Lanzar sin riesgo | Release | Cualquiera | Días-semanas |
+| Medir qué versión convierte más | Experiment | Statsig, Growthbook | Semanas |
+| Dar acceso a Enterprise | Permission | LaunchDarkly, Unleash | Indefinida |
+| Kill switch de emergencia | Ops | Cualquiera | Permanente |
+
+---
+
+**Parte 2 – Elegir la herramienta correcta**
+
+Comparativa honesta de las herramientas más usadas:
+
+**LaunchDarkly:**
+- Para quién: empresas con presupuesto, que necesitan feature flags como parte crítica del negocio
+- Ventajas: SDKs para cualquier lenguaje, evaluación en cliente, targeting avanzado, analytics integrado
+- Precio: caro para startups (desde ~300€/mes para uso serio)
+- Cuándo elegirlo: si tienes más de 20 devs y los flags son parte central de la estrategia
+
+**Unleash (open source):**
+- Para quién: equipos técnicos que prefieren autoalojamiento y control total
+- Ventajas: completamente open source, sin límites de flags, deploy propio
+- Coste: hosting (puede ser gratis en tu propia infra)
+- Cuándo elegirlo: equipo técnico, presupuesto ajustado, control de datos importante
+
+**Growthbook:**
+- Para quién: equipos que principalmente quieren hacer A/B testing con datos propios
+- Ventajas: se integra con tu warehouse (BigQuery, Snowflake, Redshift) para análisis estadístico real
+- Precio: tier gratuito generoso
+- Cuándo elegirlo: si el A/B testing con datos propios es la prioridad
+
+**Opción DIY (Redis + base de datos):**
+- Para quién: equipos muy pequeños que solo necesitan on/off simple
+- Ventajas: coste cero, control total
+- Desventajas: no hay UI, no hay targeting avanzado, hay que construirlo
+- Cuándo elegirlo: MVP, startup muy temprana, solo necesitas toggles simples
+
+---
+
+**Parte 3 – Implementación técnica**
+
+Implementa feature flags en mi stack:
+- Cómo instalar y configurar el SDK en [mi lenguaje/framework]
+- El patrón de código correcto para evaluar un flag (síncrono vs. asíncrono, caching, fallback)
+- Cómo pasar contexto de usuario para targeting (userId, plan, país, etc.)
+- El antipatrón que más problemas causa: anidar flags dentro de flags
+- Cómo gestionar los flags en tests automatizados sin que contaminen los resultados
+
+**Ejemplo de código comentado para mi stack:**
+```
+// Muéstrame el patrón correcto de evaluación de flag en [mi lenguaje]
+// con manejo de error, fallback al valor por defecto y logging
+```
+
+---
+
+**Parte 4 – Proceso de rollout con feature flags**
+
+El proceso de lanzamiento gradual que minimiza el riesgo:
+
+**La secuencia estándar de rollout:**
+1. 0% – Feature desplegada, flag off. Solo equipo de dev puede verla (targeting por userId)
+2. 5% – Internal beta: empleados de la empresa
+3. 10% – Beta pública: clientes que se han apuntado voluntariamente
+4. 25% – Rollout gradual: usuarios aleatorios
+5. 50% – Mitad del tráfico. Momento de revisar métricas antes de continuar
+6. 100% – Release completo
+7. Flag eliminada – Limpiar el código una vez estabilizado
+
+**Métricas a monitorizar en cada fase:**
+- Error rate por variante del flag
+- Latencia (algunos features afectan el rendimiento)
+- Métricas de negocio relevantes para el feature (conversión, engagement, etc.)
+- Feedback cualitativo de la beta
+
+**Cuándo pausar o hacer rollback:**
+- Error rate sube más de 2x respecto al baseline
+- Latencia p99 sube más de 20%
+- Métrica de negocio cae de forma estadísticamente significativa
+
+---
+
+**Parte 5 – Gobernanza y ciclo de vida de los flags**
+
+El problema de la deuda técnica de flags: cómo evitar que los flags se acumulen y el código se vuelva inmantenible:
+- La política de "fecha de expiración" para cada flag: cómo asignarla y hacerla cumplir
+- El proceso de limpieza mensual: cómo identificar y eliminar los flags obsoletos
+- Documentación de flags: qué información capturar en el momento de creación (propósito, dueño, fecha de expiración, comportamiento cuando se elimine)
+- Cómo incluir la limpieza de flags en el ciclo de sprint
+
+Termina con los 5 errores más frecuentes al implementar feature flags por primera vez y cómo evitar cada uno desde el inicio.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 50,
+                'use_case'         => 'Implementar feature flags para separar deployment de release, hacer rollouts graduales y gestionar experimentos de forma segura.',
+                'vote_score'       => 45,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 3,
+                'title'            => 'Diseño para conversión (CRO): principios que aumentan ventas',
+                'description'      => 'Los principios de diseño que realmente aumentan la conversión: jerarquía visual, CTA irresistibles, trust signals y reducción de fricción con ejemplos aplicados a landing pages, formularios y checkouts.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un diseñador especializado en Conversion Rate Optimization (CRO) que ha trabajado en el rediseño de landing pages, formularios y checkouts para startups y ecommerces. Ayúdame a aplicar los principios de diseño para conversión a mi producto.
+
+**Mi contexto:**
+- Tipo de página / flujo que quiero optimizar: [landing page / formulario de lead / checkout / página de pricing / onboarding]
+- Tipo de negocio: [SaaS / ecommerce / servicios / marketplace]
+- Conversión objetivo: [registro / compra / demo request / descarga]
+- Tasa de conversión actual (si la conoces): [%]
+- Principal hipótesis de por qué no convierte bien: [el CTA no es claro / hay demasiada fricción / no genera confianza / el mensaje no conecta]
+- Herramientas de análisis disponibles: [Google Analytics / Hotjar / Clarity / FullStory / ninguna]
+
+---
+
+**Parte 1 – Jerarquía visual: lo primero que el usuario lee**
+
+Explica cómo la jerarquía visual afecta directamente a la conversión:
+- El patrón F y el patrón Z: cómo los usuarios leen una página web y cómo diseñar para que lo más importante esté en el camino visual correcto
+- Tamaño y peso tipográfico como guía de atención: el orden de prioridad que el ojo del usuario sigue
+- Contraste como herramienta de conversión: cómo el contraste guía al usuario hacia la acción deseada
+- El principio de "una página, una acción": por qué las páginas con múltiples CTAs suelen convertir menos
+
+**Auditoría de jerarquía visual para mi página:**
+Basándote en mi tipo de página y objetivo, dame:
+- Los 3 elementos que deben estar "above the fold" (antes del scroll) y en qué orden de prioridad visual
+- Qué elementos suelen entorpecer la jerarquía en este tipo de página
+- Cómo verificar que la jerarquía funciona: la prueba del "squint test" y otras técnicas
+
+---
+
+**Parte 2 – CTAs que generan clics**
+
+La anatomía de un CTA que convierte:
+- Texto del CTA: el impacto de verbos de acción específicos vs. genéricos
+
+| Texto genérico | Texto específico | Impacto típico en conversión |
+|---|---|---|
+| "Enviar" | "Quiero empezar gratis" | +40-80% |
+| "Más información" | "Ver cómo funciona en 2 min" | +25-50% |
+| "Registrarse" | "Crear mi cuenta gratis" | +30-60% |
+| "Comprar" | "Añadir al carrito · 27,99€" | +10-25% |
+
+- Diseño del botón: tamaño, color, forma y espaciado que maximizan la tasa de clic
+  - Por qué el color del CTA debe contrastar con el fondo, no con los colores de la marca
+  - El "borde respirable": cuánto espacio en blanco alrededor del botón es suficiente
+  - Qué señales visuales alrededor del CTA aumentan la tasa de clic (flechas, miradas, aislamiento)
+- Posicionamiento: cuántos CTAs poner en una landing page y dónde
+- El microcopy bajo el CTA: la línea de texto que elimina la objeción final (privacidad, cancelación, etc.)
+
+---
+
+**Parte 3 – Trust signals: generar confianza que convierte**
+
+Los elementos que eliminan el miedo a convertir, por orden de efectividad:
+1. **Prueba social cuantificada**: "Más de 5.000 equipos confían en [producto]" con logo wall
+2. **Testimonios específicos**: no "genial producto" sino "[resultado concreto] en [tiempo concreto]"
+3. **Casos de estudio**: el formato que funciona y los datos que deben incluir
+4. **Sellos y certificaciones**: cuáles importan en B2B (SOC2, ISO) y cuáles en B2C (SSL, sellos de pago)
+5. **Garantías**: la "garantía de devolución" y su impacto en la conversión de ecommerce
+6. **Medios y reconocimientos**: "como se ha visto en" y cuándo incluirlo
+
+Para mi tipo de negocio, diseña la estrategia de trust signals:
+- Cuáles son más relevantes para mi audiencia
+- Dónde colocarlos en el flujo de conversión (antes del CTA, junto al CTA, durante el checkout)
+- El trust signal que más se olvida y que tiene mayor impacto en mi tipo de página
+
+---
+
+**Parte 4 – Reducción de fricción en formularios**
+
+Los formularios son el mayor asesino de conversión. Cómo optimizarlos:
+- La regla del mínimo campo viable: cuántos campos pedir y cuándo pedir el resto
+- El orden de los campos: por qué empezar por los campos fáciles aumenta la tasa de completado
+- Validación inline vs. al enviar: cuál genera menos abandono
+- Autocompletado y microinteracciones que facilitan el rellenado
+- Mensajes de error que no frustran y cómo redactarlos
+- El impacto del "paso a paso" vs. el formulario en una sola página según la longitud
+
+**Checklist de formulario optimizado:**
+- [ ] Solo los campos estrictamente necesarios para el objetivo
+- [ ] Labels encima del campo, nunca solo placeholder
+- [ ] Botón de envío con texto específico y de color contrastante
+- [ ] Microcopy de privacidad junto al email
+- [ ] Validación inline con mensajes de error específicos
+- [ ] Autofocus en el primer campo
+- [ ] Funcionamiento correcto en mobile
+
+---
+
+**Parte 5 – Testing y mejora continua**
+
+Cómo implementar la mejora de conversión como proceso:
+- Cómo priorizar qué elementos testear primero: el framework ICE (Impacto / Confianza / Esfuerzo)
+- Cómo diseñar un A/B test que produce resultados estadísticamente válidos:
+  - Calculadora de tamaño de muestra necesario
+  - Duración mínima del test (por qué "tengo suficientes datos en 3 días" suele ser falso)
+  - Cómo interpretar los resultados sin cometer errores estadísticos
+- Las herramientas de testing asequibles para equipos pequeños
+- El proceso de documentación de tests: qué aprendimos y cómo aplicarlo
+
+Termina con el plan de auditoría de mi página específica: los 5 cambios que implementaría primero basándome en los principios de CRO con mayor impacto potencial y menor esfuerzo de implementación.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'intermediate',
                 'estimated_minutes'=> 40,
-                'use_case'         => 'Escribir un PRD completo con problema, alcance explícito, casos límite decididos y supuestos marcados para que el equipo empiece sin aclaraciones',
+                'use_case'         => 'Aplicar principios de CRO al diseño de landing pages, formularios y checkouts para aumentar la tasa de conversión.',
+                'vote_score'       => 37,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 4,
+                'title'            => 'Revenue Operations (RevOps): alinear ventas, marketing y CS',
+                'description'      => 'Implementa RevOps para eliminar los silos entre marketing, ventas y customer success: datos compartidos, procesos alineados y las métricas que revelan dónde se pierde revenue en el embudo.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un VP of Revenue Operations con experiencia en startups B2B SaaS que han escalado de 1M a 10M ARR. Ayúdame a diseñar e implementar la función de RevOps en mi empresa.
+
+**Mi contexto:**
+- Etapa y tamaño: [ARR actual, número de empleados en ventas, marketing y CS]
+- CRM actual: [Salesforce / HubSpot / Pipedrive / otro]
+- Problema principal que quiero resolver: [los datos de marketing y ventas no cuadran / no sabemos dónde se pierde el pipeline / CS y ventas no hablan / proceso de venta sin sistematizar]
+- Herramientas del stack actual: [lista tus herramientas de ventas, marketing y CS]
+- ¿Tienes alguien dedicado a operaciones ahora mismo?: [sí/no]
+
+---
+
+**Parte 1 – Qué es RevOps y por qué importa más que nunca**
+
+Explica con precisión el concepto:
+- La diferencia entre SalesOps, MarketingOps y RevOps: cuándo tiene sentido tener cada uno y cuándo integrarlos bajo RevOps
+- El costo real de los silos entre marketing, ventas y CS: con ejemplos concretos de revenue perdido
+- El modelo de RevOps: tres áreas (personas / procesos / tecnología) y cómo se relacionan
+- Cuándo es demasiado pronto para tener RevOps y cuándo ya es tarde
+
+---
+
+**Parte 2 – El stack tecnológico integrado**
+
+El objetivo de RevOps en tecnología es una única fuente de verdad para los datos de revenue:
+- Cómo diseñar la arquitectura del stack para que los datos fluyan sin silos:
+  - CRM como sistema de registro central
+  - Integración con herramientas de marketing automation (HubSpot, Marketo, etc.)
+  - Integración con herramientas de CS (Gainsight, ChurnZero, Intercom)
+  - Data warehouse para análisis avanzado (cuando tiene sentido añadirlo)
+
+**Mapa del flujo de datos:**
+
+| Fuente | Dato clave | Destino | Frecuencia | Propósito |
+|---|---|---|---|---|
+| Marketing Automation | Lead creado, fuente | CRM | Tiempo real | Atribución |
+| CRM | Deal stage, valor | Analytics | Diario | Forecasting |
+| CS Tool | Health score, NPS | CRM | Semanal | Expansion pipeline |
+| Billing | MRR, churn | Dashboard | Diario | Revenue metrics |
+
+- Auditoría de mi stack actual: identifica las integraciones que faltan y su impacto
+- Cómo limpiar los datos del CRM: el proceso de deduplicación, normalización y enriquecimiento
+
+---
+
+**Parte 3 – Los procesos que RevOps define**
+
+Las definiciones y acuerdos que eliminan la fricción entre equipos:
+
+**La definición de MQL y SQL (Marketing Qualified Lead / Sales Qualified Lead):**
+- Por qué la falta de definición compartida es la principal fuente de conflicto entre marketing y ventas
+- Cómo crear una definición de MQL/SQL basada en comportamiento y fit que todos acepten
+- El SLA (Service Level Agreement) entre marketing y ventas: tiempos de respuesta a MQLs y consecuencias
+
+**El proceso de handoff entre ventas y CS:**
+- Qué información debe transferir ventas a CS en el momento del cierre
+- La "customer success handoff checklist" que evita el churn en los primeros 90 días
+- Cómo CS alimenta información de expansión a ventas
+
+**El proceso de forecasting:**
+- Cómo construir un modelo de forecasting fiable en el CRM
+- Las categorías de forecast (Commit / Most Likely / Pipeline) y sus definiciones
+- Cadencia de revisión de forecast: weekly por los reps, monthly por el VP Sales, quarterly para el board
+
+---
+
+**Parte 4 – Las métricas de RevOps**
+
+El dashboard de RevOps que todos en la empresa deben ver:
+
+**Métricas de top-of-funnel (Marketing):**
+- Leads generados por canal con CAC por canal
+- MQL to SQL conversion rate (si es < 20%, hay problema)
+- Time to MQL: cuánto tarda un lead en cualificarse
+
+**Métricas de mid-funnel (Ventas):**
+- Win rate por etapa del pipeline
+- Average Sales Cycle: cuántos días de lead a cierre
+- Average Contract Value (ACV) por segmento
+- Pipeline coverage: cuánto pipeline necesitas para tu objetivo de ingresos (regla del 3x)
+
+**Métricas de post-venta (Customer Success):**
+- Net Revenue Retention (NRR): la métrica que muestra si el negocio es saludable
+- Time to Value: cuánto tarda el cliente en conseguir el primer resultado
+- Customer Health Score promedio de la base
+
+**Cómo crear el dashboard unificado para mi empresa con las herramientas que tengo**
+
+---
+
+**Parte 5 – Implementar RevOps en 90 días**
+
+El plan de acción para construir la función de RevOps:
+
+**Mes 1 – Diagnóstico y fundaciones:**
+- Auditoría del stack tecnológico: integraciones que funcionan, datos que no cuadran
+- Entrevistas con los tres equipos (marketing, ventas, CS) para identificar los principales puntos de fricción
+- Definir las métricas clave y asegurarse de que se miden correctamente
+
+**Mes 2 – Quick wins:**
+- Los 3 problemas de proceso que generan más fricción: resolverlos primero para ganar confianza interna
+- Construir el dashboard de revenue unificado
+- Implementar el SLA de MQL y el proceso de handoff
+
+**Mes 3 – Sistematización:**
+- Documentar todos los procesos en un manual de RevOps
+- Calendario de revisiones: qué métricas se revisan cuándo y con quién
+- Roadmap de mejoras para el trimestre siguiente
+
+Termina con las 3 conversaciones que hay que tener con el CEO antes de empezar a implementar RevOps para asegurar el apoyo ejecutivo que necesita la función.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 55,
+                'use_case'         => 'Implementar Revenue Operations para alinear marketing, ventas y CS bajo datos y procesos compartidos que eliminan la pérdida de revenue.',
                 'vote_score'       => 43,
                 'resource_type'    => 'prompt',
             ],
             [
                 'profession_id'    => 5,
-                'title'            => 'Analiza 500 opiniones de usuarios y sal con una lista priorizada de decisiones',
-                'description'      => 'Convierte reseñas, encuestas y tickets en temas cuantificados, separa problema de solución pedida y cruza con impacto de negocio para decidir qué se construye.',
+                'title'            => 'PM con IA: research, PRDs y decisiones más rápidas',
+                'description'      => 'Cómo los product managers usan IA para hacer research de usuario más rápido, escribir PRDs más completos, priorizar con más datos y liberar tiempo para el trabajo estratégico que no puede delegar.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como product manager con experiencia en análisis de feedback a escala. Tengo mucho texto de usuarios acumulado y quiero decisiones, no un mural de post-its.
+Actúa como un product manager senior que ha integrado la IA en todas las partes del trabajo de producto y ha desarrollado un sistema que le permite hacer el doble de trabajo con la misma calidad. Ayúdame a construir mi propio sistema de trabajo de PM con IA.
 
-## Lo que te voy a dar
+**Mi contexto:**
+- Etapa del producto: [MVP / PMF / escala / madurez]
+- Tipo de producto: [SaaS B2B / app móvil / marketplace / plataforma de datos / etc.]
+- Tamaño del equipo: [número de devs, diseñadores, otros PMs]
+- Cadencia de trabajo: [metodología: scrum / kanban / shape up / otro]
+- Las tareas de PM en las que pierdo más tiempo: [research / documentación / reuniones / priorización / stakeholders]
+- Herramientas actuales: [Notion / Jira / Linear / ProductBoard / otro]
 
-1. El corpus: reseñas, respuestas de encuestas, tickets, mensajes de comunidad (pégalo por lotes).
-2. De dónde sale cada bloque y de qué periodo.
-3. Segmentos de cliente y, si es posible, plan o tamaño de cuenta de quien opina.
-4. La estrategia actual del producto, para poder señalar los conflictos.
+---
 
-## Paso 1 — Limpieza y sesgos declarados
+**Parte 1 – User research con IA: 10x la velocidad**
 
-Antes de analizar, dime a quién estoy escuchando y a quién no:
+Cómo la IA transforma las diferentes partes del proceso de research:
 
-- Reparto del corpus por fuente y por segmento.
-- Quiénes están sobrerrepresentados (los que escriben reseñas son un perfil concreto; los que abren tickets, otro).
-- Qué segmentos importantes no aparecen y qué habría que hacer para oírlos.
+**Antes de las entrevistas:**
+- Cómo usar IA para analizar el feedback histórico (tickets de soporte, reseñas de appstores, NPS verbatims) y encontrar los patrones antes de diseñar las preguntas
+- El prompt para generar una guía de entrevista de usuario en 10 minutos para cualquier hipótesis
+- Cómo usar IA para crear las screener questions que filtran a los usuarios correctos para la entrevista
 
-Un análisis sin este apartado lleva a construir para los que hablan, no para los que pagan.
+**Durante el análisis:**
+- Cómo transcribir y analizar entrevistas con IA: herramientas (Otter.ai, Fathom, Grain) y el prompt para extraer los jobs to be done, pain points y citas clave de una transcripción
+- Síntesis de múltiples entrevistas: el prompt que genera un informe de research a partir de 10 transcripciones en minutos
+- Análisis de datos cuantitativos: cómo describir tus métricas a Claude y pedir interpretaciones que no ves
 
-## Paso 2 — Temas cuantificados
+**Validación:**
+- Cómo usar IA para generar hipótesis alternativas que refuten tu interpretación (el "abogado del diablo" para el research)
+- El prompt de "desafía mi conclusión": cómo asegurarte de que no estás viendo solo los datos que confirman lo que ya crees
 
-Agrupa en temas y entrega la tabla:
+---
 
-| Tema | Menciones | % del corpus | Segmentos donde pesa | Intensidad | Tendencia |
-|---|---|---|---|---|---|
+**Parte 2 – PRDs y documentación de producto**
 
-Intensidad: cuánto bloquea o cuánto irrita. Tendencia: si crece o decrece respecto al periodo anterior, si tengo datos comparables.
+El PRD es el documento que más tiempo tarda en escribir. Cómo acelerarlo:
+- La estructura del PRD que los devs y diseñadores realmente leen (y la parte que nadie lee y se puede eliminar)
+- El prompt para generar el borrador inicial de un PRD a partir de la descripción del problema y los user stories
+- Cómo usar IA para completar las secciones más tediosas:
+  - Casos extremos (edge cases) y escenarios que se olvidan
+  - Dependencias técnicas y riesgos
+  - Métricas de éxito del feature
+  - Criterios de aceptación
 
-## Paso 3 — Separar problema de solución pedida
+**Plantilla de prompt para PRD:**
+Proporcióname el prompt exacto que puedo usar para generar el primer borrador de cualquier PRD a partir de:
+- La descripción del problema que resuelve
+- El usuario objetivo y el job to be done
+- La solución propuesta (a nivel alto)
+- Las restricciones técnicas conocidas
 
-Para cada tema, distingue:
+---
 
-- **El problema** (lo que le impide conseguir lo que quiere).
-- **La solución que pide** (su propuesta, que casi nunca es la mejor).
-- **El trabajo que intenta hacer** (por qué le importa).
+**Parte 3 – Priorización con más datos**
 
-Cuando cinco clientes piden cinco funciones distintas para el mismo problema, la decisión correcta no es construir cinco cosas.
+Cómo la IA mejora el proceso de priorización:
+- Análisis de impacto vs. esfuerzo: cómo describir tu backlog a Claude y pedir una primera ordenación con justificación
+- Frameworks de priorización con IA:
+  - RICE (Reach, Impact, Confidence, Effort): cómo usar IA para estimar los valores y su razonamiento
+  - Jobs to be Done como criterio de priorización: cómo la IA puede ayudar a mapear features a jobs
+  - Priorización por segmento: cómo usar IA para identificar qué features mueven más el NRR de los clientes más valiosos
 
-## Paso 4 — Cruce con negocio
+- El contrapeso: por qué la priorización final siempre es una decisión humana y qué variables la IA no puede evaluar (política interna, apuestas estratégicas, intuición de usuario)
 
-Añade a cada tema, con lo que yo te dé o marcando que falta el dato: ingresos afectados, relación con abandono, coste de soporte asociado, y encaje con la estrategia. Un tema con muchas menciones de usuarios gratuitos y otro con tres menciones de tres cuentas grandes en renovación no compiten en la misma liga.
+---
 
-## Paso 5 — Decisiones
+**Parte 4 – Comunicación con stakeholders**
 
-Clasifica cada tema y justifica:
+La parte del trabajo de PM que más energía consume:
+- Preparar el weekly status update en 5 minutos: el prompt que convierte tus notas en un resumen claro para el CEO y el equipo
+- Cómo usar IA para preparar las preguntas difíciles de un board o una revisión de producto: el "modo abogado del diablo" para preparar las objeciones
+- Slides de producto: el prompt para generar el guion de una presentación de producto a partir del PRD
+- El followup de reuniones: cómo pasar transcripciones o notas a Claude y obtener un resumen con decisiones, action items y dueños
 
-| Decisión | Criterio |
-|---|---|
-| Construir ahora | Problema real, impacto alto, encaje estratégico |
-| Arreglar barato | Coste bajo, alivio inmediato (copy, documentación, ajuste) |
-| No es producto | Se resuelve con soporte, formación o comercial |
-| No lo vamos a hacer | Con el motivo, para poder responderlo cuando vuelva |
-| Investigar | Falta información; con la pregunta concreta y el método |
+---
 
-El cubo «no lo vamos a hacer» es obligatorio: un backlog donde todo está pendiente es un backlog que no decide.
+**Parte 5 – El sistema de trabajo semanal del PM con IA**
 
-## Entregables
+Diseña la rutina semanal ideal para un PM como yo:
 
-1. Declaración de sesgos del corpus y quién falta.
-2. Tabla de temas cuantificados.
-3. Desglose problema / solución pedida / trabajo por tema.
-4. Cruce con impacto de negocio.
-5. Decisiones por tema, con las cinco primeras acciones concretas.
+| Tarea | Tiempo sin IA | Tiempo con IA | Herramienta / Prompt |
+|---|---|---|---|
+| Analizar feedback semanal | 3h | 45 min | Claude + datos de soporte |
+| Escribir un PRD | 4h | 1.5h | Claude con plantilla |
+| Preparar reunión de roadmap | 2h | 30 min | Claude + Notion |
+| Weekly update para CEO | 1h | 15 min | Claude |
+| Priorización de backlog | 3h | 1h | Claude + Linear |
+
+- Las 5 tareas de PM que la IA NO puede hacer bien todavía (y por qué no delegar en ella)
+- Cómo mantenerse al día con las capacidades de IA que más afectan al trabajo de producto
+
+Termina con los 5 prompts más útiles para PMs que deberías guardar como templates permanentes.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Analizar cientos de opiniones de usuarios y convertirlas en temas cuantificados y decisiones de producto con el sesgo del corpus declarado',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Integrar la IA en el trabajo diario del product manager para hacer research más rápido, PRDs mejores y decisiones más informadas.',
                 'vote_score'       => 40,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 5,
-                'title'            => 'Especifica una función con criterios de aceptación y casos límite cerrados',
-                'description'      => 'Pasa de «hay que hacer que se pueda exportar» a una especificación con reglas, estados, errores y criterios verificables que diseño, desarrollo y QA interpretan igual.',
+                'profession_id'    => 6,
+                'title'            => 'Employee engagement: medir y actuar antes de perder talento',
+                'description'      => 'El sistema para medir el engagement de verdad, interpretar los resultados y actuar a tiempo: encuestas de clima que generan datos accionables y no simples reportes que nadie lee.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como product manager con experiencia escribiendo especificaciones para equipos que no quieren adivinar. Te describo una función en lenguaje coloquial y quiero la especificación cerrada.
+Actúa como un experto en People Analytics y employee engagement con experiencia en diseñar y gestionar programas de escucha en empresas de tecnología. Ayúdame a construir el sistema de medición y acción sobre el engagement de mi equipo.
 
-## Lo que te voy a dar
+**Mi contexto:**
+- Tamaño del equipo: [número de empleados]
+- Distribución: [presencial / remoto / híbrido] y [una sola oficina / varias ciudades / internacional]
+- Sector y cultura: [startup ágil / empresa consolidada / etc.]
+- Situación actual de engagement: [no medimos nada / hacemos una encuesta anual / hacemos pulse surveys / tenemos eNPS]
+- Principal síntoma que me preocupa: [alta rotación / desconexión del equipo / bajo rendimiento / mucho absentismo / dificultad para retener]
+- Herramientas de RRHH actuales: [Workday / BambooHR / Personio / Excel / etc.]
 
-1. La función, tal como la diría en una reunión.
-2. Quién la usa y en qué momento de su trabajo.
-3. Restricciones conocidas y sistemas implicados.
-4. Lo que ya existe en el producto y con lo que tiene que convivir.
+---
 
-## Paso 1 — Preguntas antes de escribir
+**Parte 1 – Por qué las encuestas tradicionales no funcionan**
 
-Hazme las preguntas cuya respuesta cambia la implementación. No las genéricas: las que si no se responden ahora se responderán solas y mal. Máximo 10, ordenadas por impacto.
+El diagnóstico honesto del estado del arte:
+- Por qué las encuestas anuales son inútiles para prevenir el churn (la persona ya decidió irse cuando contestas)
+- El problema del "encuesta sin acción": por qué hacer encuestas y no actuar destruye la confianza más que no hacer ninguna
+- El sesgo de deseabilidad social: por qué los empleados no dicen lo que realmente piensan y cómo reducirlo
+- Cómo distinguir entre "satisfacción" y "engagement": son conceptos diferentes y se miden diferente
 
-## Paso 2 — Reglas de negocio
+---
 
-Enumera las reglas, cada una comprobable y sin ambigüedad. Formato: «Si [condición], entonces [resultado]». Marca las que yo he decidido y las que has tenido que suponer.
+**Parte 2 – Diseñar el sistema de escucha**
 
-## Paso 3 — Criterios de aceptación
+El modelo de escucha de tres capas:
 
-Escríbelos así, y que cada uno sea verificable por alguien que no haya participado en la conversación:
+**Capa 1 – Pulse survey mensual (5 preguntas, 3 minutos)**
+- Las 5 preguntas que mejor predicen el riesgo de fuga con una sola encuesta mensual
+- Por qué 5 preguntas es el máximo antes de que la tasa de respuesta se desplome
+- Cómo rotar las preguntas para cubrir diferentes dimensiones sin agotamiento
+- Timing: cuándo enviar la encuesta para maximizar la tasa de respuesta
+- Benchmark de tasa de respuesta: si es < 70%, hay un problema de confianza antes de analizar los datos
 
-```
-Dado [estado inicial concreto]
-Cuando [acción]
-Entonces [resultado observable]
-```
+**Capa 2 – Encuesta trimestral de clima (15-20 preguntas)**
+Las dimensiones que hay que medir en una encuesta de clima completa:
 
-Nada de «funciona correctamente» ni «es rápido». Si es rendimiento, con número.
-
-## Paso 4 — Casos límite y errores
-
-Tabla completa con el comportamiento decidido:
-
-| Situación | Comportamiento esperado | Mensaje al usuario |
+| Dimensión | Qué mide | Preguntas tipo |
 |---|---|---|
-| Sin datos | | |
-| Un solo elemento | | |
-| Volumen máximo esperado | | |
-| Por encima del máximo | | |
-| Permisos insuficientes | | |
-| Operación repetida (doble clic, reintento) | | |
-| Fallo del sistema externo | | |
-| Datos inválidos o corruptos | | |
-| Operación concurrente sobre el mismo recurso | | |
-| Cancelación a mitad | | |
+| Claridad del rol | El empleado sabe qué se espera de él | "Tengo claro cómo se mide mi éxito en este puesto" |
+| Reconocimiento | Se siente valorado | "Mi trabajo es reconocido cuando lo hago bien" |
+| Desarrollo | Ve futuro profesional aquí | "Esta empresa me da oportunidades para crecer" |
+| Relación con el manager | La calidad del liderazgo directo | "Mi manager me da feedback útil y a tiempo" |
+| Colaboración | Dinámica del equipo | "El equipo con el que trabajo colabora bien" |
+| Pertenencia | Inclusión y seguridad psicológica | "Me siento libre de expresar opiniones sin miedo" |
+| Carga de trabajo | Sostenibilidad | "Mi carga de trabajo es manejable" |
+| Propósito | Conexión con la misión | "Entiendo cómo mi trabajo contribuye a los objetivos de la empresa" |
 
-## Paso 5 — Lo que queda fuera
+**Capa 3 – Conversación 1-a-1 estructurada (mensual con cada manager)**
+- Las preguntas de 1-a-1 que detectan señales de riesgo que la encuesta no captura
+- Cómo registrar los insights de las 1-a-1 sin crear una sensación de vigilancia
+- Qué hace el manager con lo que escucha: el protocolo de escalado
 
-Lista explícita, con el motivo. Incluye las cosas que la gente va a suponer incluidas.
+---
 
-## Paso 6 — Impactos laterales
+**Parte 3 – Analizar los datos de forma accionable**
 
-Qué más se toca: analítica y eventos a registrar, permisos y roles, notificaciones, exportaciones, documentación y ayuda, textos en otros idiomas, y qué se rompe en integraciones existentes.
+Los datos sin interpretación son ruido. Cómo convertirlos en acción:
+- Cómo calcular el eNPS y por qué es útil como métrica de tendencia pero no como métrica de acción
+- Segmentación de resultados: los cortes que revelan problemas que la media esconde
+  - Por manager / equipo: ¿hay equipos con engagement significativamente más bajo?
+  - Por antigüedad: ¿el engagement cae en los primeros 6 meses? ¿o después de 3 años?
+  - Por nivel: ¿los seniors están más desenganchados que los juniors?
+- La correlación engagement-performance: cómo identificar si el bajo engagement precede a la caída de rendimiento
+- Los indicadores de alerta temprana de fuga: las combinaciones de respuestas que predicen la salida en 3-6 meses
 
-## Entregables
+---
 
-1. Las preguntas abiertas ordenadas por impacto.
-2. Reglas de negocio, con lo supuesto marcado.
-3. Criterios de aceptación completos.
-4. Tabla de casos límite con comportamiento y mensajes.
-5. Fuera de alcance e impactos laterales.
+**Parte 4 – Cerrar el ciclo: actuar sobre los datos**
+
+El paso que distingue a las empresas que hacen encuestas útiles de las que no:
+- El informe de resultados que comparte con el equipo en las primeras 2 semanas tras la encuesta
+- Cómo priorizar qué problemas abordar: no puedes resolver todo a la vez
+- El "action planning" en cascada: qué decide RRHH, qué decide el manager, qué decide el equipo
+- Cómo comunicar los cambios que se van a hacer (y los que no se van a poder hacer y por qué)
+- El check de seguimiento: cómo medir si las acciones tomadas han mejorado el dato
+
+---
+
+**Parte 5 – Implementación para mi empresa**
+
+Dado mi contexto, dame:
+- El diseño de encuesta específico para empezar (las primeras 5-8 preguntas para mi situación)
+- La cadencia recomendada de encuestas para mi tamaño y situación
+- Herramientas recomendadas según mi presupuesto y tamaño de equipo:
+  - Sin presupuesto: Google Forms + análisis manual
+  - Presupuesto bajo (< 3€/empleado/mes): Typeform, SurveyMonkey
+  - Presupuesto medio (3-8€/empleado/mes): Leapsome, Lattice, Personio Engagement
+  - Presupuesto alto: Glint, Qualtrics
+- Los 3 primeros pasos para esta semana
+
+Termina con las 5 razones por las que los programas de engagement fracasan y cómo evitar cada una desde el diseño.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'beginner',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Diseñar el sistema de medición de engagement que detecta el riesgo de fuga antes de que sea tarde y genera datos accionables.',
+                'vote_score'       => 29,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 7,
+                'title'            => 'Estrategia de precios: pricing power y cómo subir precios',
+                'description'      => 'Fundamentos de pricing estratégico para empresas: elasticidad de la demanda, modelos de precio por valor, cómo identificar el precio óptimo y cómo subir precios sin perder clientes ni posicionamiento.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un consultor de estrategia especializado en pricing con experiencia en empresas de tecnología, SaaS y servicios B2B. Ayúdame a revisar y mejorar la estrategia de precios de mi empresa.
+
+**Mi contexto:**
+- Producto / servicio: [describe qué vendes]
+- Modelo de negocio actual: [SaaS mensual / anual / por uso / servicio de suscripción / venta unitaria]
+- Precio actual: [precio(s) actuales por plan o servicio]
+- Clientes actuales: [número aproximado, segmentos principales]
+- Ticket medio (ACV si es B2B): [€]
+- Tasa de churn actual: [% mensual o anual]
+- Última vez que subiste precios: [cuándo y cuánto]
+- Problema principal con la estrategia de precios actual: [precio demasiado bajo vs. competencia / dificultad para subir / demasiados descuentos / no sé si estoy dejando dinero sobre la mesa]
+
+---
+
+**Parte 1 – Los fundamentos del pricing por valor**
+
+Por qué el cost-plus pricing destruye el margen y el potencial de la empresa:
+- El error del 90%: "pongo precio basado en mis costes + margen" vs. el precio basado en el valor que percibe el cliente
+- Value-based pricing: cómo calcular el valor económico que tu producto entrega al cliente y usarlo como ancla del precio
+  - El valor tangible: ahorro de tiempo, reducción de costes, aumento de ingresos — cómo cuantificarlo
+  - El valor intangible: tranquilidad, estatus, reducción de riesgo — cómo aproximarlo
+- Willingness to pay (WTP): qué es, por qué importa y cómo medirlo sin una encuesta de $50k
+
+**Métodos para estimar la disposición a pagar:**
+| Método | Coste | Precisión | Cuándo usarlo |
+|---|---|---|---|
+| Van Westendorp Price Sensitivity Meter | Bajo | Media | Early stage, productos nuevos |
+| Conjoint Analysis | Alto | Alta | Cuando hay múltiples atributos |
+| Entrevistas de pricing con clientes | Bajo | Media-alta | Siempre, como complemento |
+| Análisis de conversión por cohorte de precio | Bajo (datos propios) | Alta | Cuando tienes datos históricos |
+| Experimentos de precio A/B | Medio | Muy alta | Cuando tienes volumen suficiente |
+
+---
+
+**Parte 2 – Elasticidad y cómo usarla**
+
+Explica la elasticidad-precio de la demanda de forma práctica:
+- Qué es y cómo calcularla con datos reales de tu empresa
+- Productos elásticos vs. inelásticos: ¿en qué categoría está el mío?
+- Por qué los productos con alta diferenciación tienen menor elasticidad (y por qué eso es el objetivo)
+- Cómo los descuentos frecuentes destruyen la inelasticidad que has construido con la marca
+
+**El cálculo de elasticidad para mi negocio:**
+Si tengo datos históricos de precio y demanda, ayúdame a calcular la elasticidad y a interpretar si tengo margen para subir sin impacto significativo en volumen.
+
+---
+
+**Parte 3 – Modelos de pricing para SaaS y servicios**
+
+Los modelos de pricing más efectivos y cuándo usar cada uno:
+
+**Pricing por usuario / por asiento:**
+- Ventajas e inconvenientes reales
+- Cuándo rompe: cuando el cliente usa workarounds para compartir cuentas
+
+**Pricing por uso (usage-based pricing):**
+- La tendencia que más crece en SaaS B2B: por qué alinea incentivos entre proveedor y cliente
+- Cómo diseñarlo para que sea predecible para el cliente y proteja tu margen
+- Ejemplos: Stripe (% de transacción), Twilio (por mensaje), AWS (por recurso)
+
+**Pricing por resultado (outcome-based):**
+- El modelo más avanzado: cobrar en función del valor entregado
+- Cuándo tiene sentido y cómo estructurarlo contractualmente
+
+**Pricing de paquetes (bundling):**
+- Cómo estructurar los planes para que el del medio sea el más elegido
+- El efecto ancla: por qué incluir un plan caro hace que el resto parezca razonable
+
+---
+
+**Parte 4 – Cómo subir precios sin perder clientes**
+
+La parte más delicada. El proceso paso a paso:
+- Cuándo hay señales de que el precio está demasiado bajo:
+  - Win rate demasiado alto (> 70%: probablemente estás dejando dinero)
+  - Clientes que no piden descuento
+  - Comparas favorablemente con alternativas más caras sin hacer mucho esfuerzo
+  - Márgenes bajo presión por el crecimiento del equipo
+
+**El proceso de subida de precio:**
+1. Segmentación: qué clientes son los más inelásticos (los que más valor reciben)
+2. Comunicación: cómo anunciar la subida con suficiente antelación y el mensaje correcto
+3. Grandfathering: cuándo mantener el precio a los clientes actuales y cuándo no
+4. Nuevos clientes primero: por qué la estrategia más segura es subir primero para los nuevos
+5. Testing: si tienes volumen, cómo testear la subida antes de aplicarla a todos
+
+**La comunicación de la subida de precio:**
+- El email que anuncia una subida de precio que minimiza el churn: estructura y ejemplos
+- Lo que nunca hay que decir al anunciar una subida de precio
+- Cómo preparar al equipo de CS y ventas para las objeciones
+
+---
+
+**Parte 5 – Evaluación y recomendaciones para mi situación**
+
+Dado mi contexto específico:
+- ¿Hay señales de que el precio está demasiado bajo?
+- ¿Cuánto margen de subida estimo sin riesgo significativo?
+- ¿Qué modelo de pricing se adapta mejor a mi producto y mercado?
+- ¿Cuál sería el plan de acción de los próximos 6 meses para optimizar el pricing?
+
+Termina con los 5 recursos que debería estudiar para profundizar en pricing estratégico: libros, frameworks y herramientas.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 55,
+                'use_case'         => 'Revisar y optimizar la estrategia de precios para capturar más valor sin perder clientes: desde los fundamentos hasta la ejecución de una subida de precios.',
+                'vote_score'       => 47,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 8,
+                'title'            => 'RGPD para empresas: datos de empleados y cumplimiento',
+                'description'      => 'Marco práctico de cumplimiento del RGPD en el ámbito laboral: qué datos puede tratar el empleador, por cuánto tiempo, qué consentimientos son válidos y cómo evitar las multas más frecuentes de la AEPD.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un abogado especializado en protección de datos con experiencia en el ámbito laboral y en la gestión de relaciones con la AEPD (Agencia Española de Protección de Datos). Ayúdame a establecer el marco de cumplimiento de RGPD para el tratamiento de datos de mis empleados.
+
+**Mi contexto:**
+- Tipo y tamaño de empresa: [startup / PYME / empresa mediana, número de empleados]
+- Sector: [tecnología / retail / servicios / healthcare / etc.]
+- Tipos de datos de empleados que tratas actualmente: [nóminas / expediente personal / control de presencia / videovigilancia / uso de dispositivos corporativos / geolocalización / salud]
+- Herramientas de RRHH y sistemas que usas: [Personio / BambooHR / ADP / otro]
+- Situación actual de cumplimiento: [no hemos revisado nada / tenemos política básica / DPO designado / cumplimiento parcial]
+- Incidente o motivo que ha generado esta revisión: [nueva contratación masiva / expansión a Europa / auditoría interna / incidente de datos / ninguno, es preventivo]
+
+---
+
+**Parte 1 – Bases legales para el tratamiento de datos de empleados**
+
+Explica cuáles son las bases legales disponibles bajo el RGPD para tratar datos de empleados y cuándo aplica cada una:
+
+**1. Ejecución del contrato (Art. 6.1.b RGPD)**
+- Qué cubre: los datos necesarios para gestionar la relación laboral
+- Ejemplos: datos bancarios para la nómina, datos de contacto, historial de permisos, evaluaciones de desempeño
+- Límite importante: solo cubre lo estrictamente necesario para ejecutar el contrato
+
+**2. Obligación legal (Art. 6.1.c RGPD)**
+- Qué cubre: el tratamiento que la ley laboral, tributaria o de SS obliga a hacer
+- Ejemplos: retenciones IRPF, cotizaciones a la Seguridad Social, registro de jornada (obligatorio desde 2019), PRL
+- Por qué esta base no requiere consentimiento del empleado
+
+**3. Interés legítimo (Art. 6.1.f RGPD)**
+- Qué cubre: tratamientos justificados por intereses legítimos del empleador que no prevalezcan sobre los derechos del trabajador
+- Ejemplos: videovigilancia de seguridad en instalaciones, monitorización de uso de dispositivos corporativos (con matices)
+- El test de ponderación de intereses: cómo documentarlo correctamente
+- Por qué el interés legítimo es la base más controvertida en el ámbito laboral
+
+**4. Consentimiento (Art. 6.1.a RGPD) — y por qué rara vez es válido en la relación laboral**
+- El problema del consentimiento entre empleador y empleado: la asimetría de poder hace que el consentimiento raramente sea libre
+- Cuándo SÍ puede ser la base correcta (datos de fotografía para el directorio interno, por ejemplo)
+- Por qué nunca hay que pedir consentimiento cuando existe otra base legal
+
+---
+
+**Parte 2 – Categorías especiales y datos de salud**
+
+Los datos que requieren protección reforzada:
+- Qué son los datos de categoría especial en el ámbito laboral: salud, afiliación sindical, origen racial o étnico, vida sexual
+- La base legal adicional requerida: Art. 9 RGPD y el Art. 9.2.b (ejecución de obligaciones en el ámbito laboral)
+- Casos habituales:
+  - Bajas médicas: qué información puede pedir el empleador al médico de empresa vs. al médico de cabecera
+  - Discapacidad y adaptaciones razonables: qué datos son necesarios y cuáles exceden lo permitido
+  - Pruebas de alcohol/drogas: bajo qué condiciones son legales
+  - Cámaras en el lugar de trabajo: las condiciones para que sean conformes al RGPD y a la LOPD-GDD
+
+---
+
+**Parte 3 – Plazos de conservación de datos de empleados**
+
+Uno de los incumplimientos más frecuentes detectados por la AEPD:
+
+| Tipo de dato | Plazo de conservación | Base legal del plazo |
+|---|---|---|
+| Expediente personal completo | 4 años desde la extinción del contrato | Prescripción de obligaciones laborales (Art. 59 ET) |
+| Nóminas y documentos SS | 4 años | Plazos TGSS |
+| Documentos tributarios (IRPF) | 4 años | Ley General Tributaria |
+| Registro de jornada | 4 años | Real Decreto 1561/1995 |
+| Videovigilancia | 30 días máximo (salvo incidente) | Art. 22 LOPD-GDD |
+| Datos de candidatos no contratados | 1 año máximo recomendado por AEPD | Finalidad del tratamiento |
+
+Explica cómo implementar una política de retención y eliminación de datos:
+- Cómo catalogar los datos por plazo de conservación
+- Procedimiento técnico de eliminación (no solo "borrar del servidor")
+- Documentación del proceso de eliminación para demostrar cumplimiento
+
+---
+
+**Parte 4 – Obligaciones de información y derechos de los empleados**
+
+Lo que la empresa debe cumplir en materia de transparencia:
+- La cláusula informativa en el contrato de trabajo: qué debe incluir y en qué formato
+- Derechos que tienen los empleados sobre sus datos: ARSLOP (Acceso, Rectificación, Supresión, Limitación, Oposición, Portabilidad)
+- Cómo gestionar una solicitud de ejercicio de derechos: plazos, formato de respuesta y qué hacer cuando la solicitud complica la relación laboral
+- La videovigilancia: la "zona informada" — el cartel que muchas empresas olviden poner correctamente
+
+---
+
+**Parte 5 – Las multas más frecuentes de la AEPD en el ámbito laboral y cómo evitarlas**
+
+Los 5 incumplimientos más sancionados en el ámbito laboral:
+1. Videovigilancia sin informar a los trabajadores ni a la representación legal
+2. Acceso a correo electrónico corporativo de ex-empleados sin protocolo previo
+3. Plazos de conservación excesivos (guardar datos de ex-empleados indefinidamente)
+4. Uso de cámaras orientadas a controlar el rendimiento (no permitido sin negociación previa)
+5. Transferencia de datos a RRHH externalizado sin contrato DPA firmado
+
+Para cada incumplimiento:
+- La sanción típica que impone la AEPD (cuantía aproximada)
+- La acción correctora que elimina el riesgo
+
+Termina con el plan de cumplimiento para los próximos 90 días adaptado a mi situación, priorizando por nivel de riesgo.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 35,
-                'use_case'         => 'Convertir una idea de función en especificación cerrada con reglas de negocio, criterios de aceptación verificables y casos límite decididos',
-                'vote_score'       => 38,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Síntesis de entrevistas de descubrimiento: valida o tumba tu hipótesis con evidencia',
-                'description'      => 'Analiza las entrevistas de la semana contra la hipótesis que las motivó, con el criterio de validación definido antes de empezar para no leer en los datos lo que ya querías creer.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como investigador de producto riguroso. Tengo entrevistas de descubrimiento y una hipótesis. Quiero saber si la hipótesis se sostiene, no que me la confirmes.
-
-## Lo que te voy a dar
-
-1. La hipótesis, tal como la escribimos antes de las entrevistas.
-2. El criterio de validación que fijamos, si lo fijamos.
-3. Las transcripciones o notas.
-4. Cómo se reclutó a estas personas.
-
-Si no fijamos criterio de validación de antemano, dímelo y avísame de que a partir de aquí el análisis es más débil: sin criterio previo, siempre se encuentra apoyo para lo que se quiere creer.
-
-## Paso 1 — Reconstruir el criterio
-
-Si falta, propón el criterio que habría correspondido: cuántas personas de qué perfil tendrían que decir qué para considerar la hipótesis sostenida, y qué evidencia la tumbaría.
-
-## Paso 2 — Evidencia a favor y en contra
-
-Dos columnas, con citas literales y quién lo dijo. Y una tercera categoría que casi siempre se omite: **evidencia ambigua**, la que se puede leer en los dos sentidos. Que esté a la vista.
-
-## Paso 3 — Distinguir lo que importa
-
-Para cada entrevista, separa:
-
-| Tipo de dato | Fiabilidad |
-|---|---|
-| Comportamiento pasado descrito con detalle («la semana pasada tuve que...») | Alta |
-| Proceso actual que la persona enseña o describe paso a paso | Alta |
-| Emoción sobre el problema | Media |
-| Predicción de su comportamiento futuro («lo usaría», «lo pagaría») | Baja |
-| Opinión sobre una idea que le hemos contado | Muy baja |
-
-Que la conclusión no se apoye en las dos últimas filas. La gente es mala prediciendo lo que hará y amable valorando ideas ajenas.
-
-## Paso 4 — Veredicto
-
-Uno de estos cuatro, con la justificación:
-
-- **Sostenida:** con qué grado de confianza y qué límites.
-- **Tumbada:** qué la contradice y qué aprendimos que vale más que la hipótesis.
-- **Matizada:** vale para un segmento y no para otro. Especifica cuál.
-- **Sin resolver:** qué falta y cuántas entrevistas más, con qué perfil.
-
-## Paso 5 — Siguiente paso
-
-Según el veredicto: qué se construye, qué se prueba antes con un experimento más barato, o a quién hay que entrevistar. Con la pregunta concreta de la siguiente ronda.
-
-## Entregables
-
-1. Criterio de validación (el fijado o el reconstruido).
-2. Evidencia a favor, en contra y ambigua, con citas.
-3. Clasificación de la calidad de la evidencia por entrevista.
-4. Veredicto justificado.
-5. Siguiente paso con la pregunta de la próxima ronda.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 35,
-                'use_case'         => 'Sintetizar entrevistas de descubrimiento contra una hipótesis con criterio de validación explícito y separando la evidencia fiable de la débil',
-                'vote_score'       => 35,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Define qué es «suficientemente bueno» en una función con IA antes de lanzarla',
-                'description'      => 'Fija el umbral de calidad aceptable, qué tipos de error se toleran y cuáles no, cómo se despliega por fases y en qué condiciones se retira, para no lanzar por sensación ni bloquear por miedo.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como product manager con experiencia lanzando funciones basadas en modelos de lenguaje. Vamos a lanzar una y necesito una decisión defendible sobre cuándo está lista.
-
-## Contexto que necesito
-
-1. Qué hace la función y qué entrega al usuario.
-2. Qué hace el usuario con esa salida y qué pasa si es incorrecta.
-3. Puede el usuario verificar el resultado por sí mismo, sí o no.
-4. Alternativa actual: cómo lo resuelve hoy y con qué tasa de error humano.
-5. Qué medimos ya (si tenemos evaluaciones) y qué resultados dan.
-
-## Paso 1 — Clasificar los errores por consecuencia
-
-No todos los fallos son iguales, y este es el análisis que casi nunca se hace:
-
-| Tipo de error | Ejemplo en mi función | Detectable por el usuario | Coste | Tolerancia |
-|---|---|---|---|---|
-| Vacío o negativa | No responde | Sí | Bajo | Alta |
-| Incompleto | Se deja parte | A veces | Medio | Media |
-| Plausible pero falso | Inventa un dato creíble | No | Alto | Muy baja |
-| Fuera de tono o de marca | Suena a otra empresa | Sí | Medio | Baja |
-| Dañino | Consejo peligroso, filtra datos | No siempre | Muy alto | Cero |
-
-El error plausible pero falso es el que hunde la confianza, porque el usuario no puede detectarlo. Si tu función es propensa a ese error y el usuario no puede verificar, el umbral tiene que ser muy alto o hay que rediseñar la función para que muestre sus fuentes.
-
-## Paso 2 — Umbral y comparación correcta
-
-Fija el umbral contra la alternativa real, no contra la perfección: si el proceso humano actual falla el 8% de las veces, exigir 0% a la función es una decisión política, no de calidad. Define:
-
-- Métrica principal y su umbral mínimo para lanzar.
-- Tolerancia cero para los errores de la última fila.
-- Muestra sobre la que se mide y quién la juzga.
-
-## Paso 3 — Diseño del despliegue
-
-| Fase | Audiencia | Duración | Qué se vigila | Criterio para avanzar |
-|---|---|---|---|---|
-| Interna | Equipo | 1-2 semanas | Errores graves | Cero errores dañinos |
-| Beta | Usuarios que aceptan probar | 2-4 semanas | Umbral + satisfacción | Umbral sostenido |
-| Parcial | % del tráfico | 2-4 semanas | Métricas de negocio | Sin daño en las de control |
-| General | Todos | — | Vigilancia continua | — |
-
-## Paso 4 — Retirada
-
-Define de antemano: qué señal obliga a desactivar, quién puede hacerlo sin pedir permiso, cómo se avisa a los usuarios y qué queda mientras tanto. Una función con IA sin interruptor es un riesgo operativo, no una función.
-
-## Paso 5 — Qué se promete al usuario
-
-El copy y las expectativas: qué decimos que hace, qué decimos que no garantiza, dónde se le pide que revise. Prometer menos y cumplirlo funciona mejor que lo contrario, sobre todo la segunda semana.
-
-## Entregables
-
-1. Tabla de errores clasificados para mi función concreta.
-2. Umbral de lanzamiento con la comparación contra la alternativa actual.
-3. Plan de despliegue por fases con criterios de avance.
-4. Protocolo de retirada con responsables.
-5. Copy de expectativas y de revisión.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Decidir cuándo una función con IA está lista para lanzarse, con clasificación de errores por consecuencia, umbral, despliegue por fases y protocolo de retirada',
-                'vote_score'       => 39,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Unit economics de una función con IA: coste por uso, precio y margen',
-                'description'      => 'Calcula lo que cuesta cada uso de una función basada en modelos, cómo evoluciona con la adopción y qué modelo de precio la sostiene sin comerse el margen del producto.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como product manager con perfil analítico y experiencia en productos donde el coste variable importa. Quiero saber si la función con IA que vamos a lanzar tiene sentido económico antes de que la adopción nos sorprenda.
-
-## Datos que necesito
-
-1. Qué hace la función y cuántas llamadas al modelo consume un uso típico.
-2. Tamaño aproximado de entrada y salida por llamada, y qué parte del contexto se repite.
-3. Precio por millón de tokens de entrada y de salida del modelo elegido (consúltalo actualizado; cambia).
-4. Usos previstos por usuario y por mes, en escenario bajo, medio y alto.
-5. Precio actual del producto y margen bruto objetivo.
-
-## Paso 1 — Coste por uso
-
-Calcula y muestra el desglose: tokens de entrada, de salida, número de llamadas y coste total por uso. Distingue el caso típico del caso pesado, porque la media engaña cuando la distribución tiene cola larga: unos pocos usuarios intensivos pueden representar la mitad de la factura.
-
-## Paso 2 — Escenarios de adopción
-
-| Escenario | % de usuarios que la usan | Usos/mes por usuario | Coste mensual total | % del ingreso |
-|---|---|---|---|---|
-| Bajo | | | | |
-| Medio | | | | |
-| Alto (éxito) | | | | |
-
-El escenario que hay que mirar con lupa es el de éxito: muchas funciones con IA son rentables mientras nadie las usa.
-
-## Paso 3 — Palancas de coste
-
-Ordena por rentabilidad y estima el ahorro de cada una: caché del prefijo estable, recorte de contexto, modelo más pequeño para los casos fáciles, menos llamadas por uso, salida más corta, procesamiento por lotes en lo no interactivo, resultados reutilizados entre usuarios cuando sea posible.
-
-Para cada palanca, di qué riesgo de calidad implica y cómo se verificaría.
-
-## Paso 4 — Modelo de precio
-
-Evalúa las opciones para mi caso:
-
-| Modelo | Cuándo funciona | Riesgo |
-|---|---|---|
-| Incluido en el plan | Uso predecible y coste bajo respecto al precio | Los usuarios intensivos se comen el margen |
-| Límite por plan | Uso desigual | Fricción y conversaciones de soporte |
-| Créditos o consumo | Uso muy variable | Fricción de compra, cliente vigilando el contador |
-| Plan superior | La función es diferencial | Segmenta el producto, puede frenar adopción |
-
-Recomienda uno y di qué límite concreto pondrías, con el número.
-
-## Paso 5 — Vigilancia
-
-Define las tres alarmas: coste por usuario activo, coste sobre ingreso de la función, y el percentil alto de consumo por usuario. Con umbral y con responsable.
-
-## Entregables
-
-1. Coste por uso, típico y pesado, con el desglose.
-2. Tabla de escenarios con el coste sobre el ingreso.
-3. Palancas ordenadas con ahorro estimado y riesgo.
-4. Modelo de precio recomendado con límites concretos.
-5. Alarmas de vigilancia con umbrales.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Calcular el coste por uso de una función con IA, proyectar escenarios de adopción y elegir el modelo de precio que sostiene el margen',
-                'vote_score'       => 34,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Qué prometer al usuario sobre sus datos en una función con IA',
-                'description'      => 'Decide y redacta lo que se dice sobre el tratamiento de datos en una función con IA: qué se envía, a quién, cuánto se guarda, qué controles tiene el usuario y qué no se puede afirmar.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como product manager que ha tenido que responder a un cuestionario de seguridad de un cliente grande y a una pregunta incómoda en redes sobre datos. Quiero decidir y redactar la promesa de datos de una función con IA antes de lanzarla, no después.
-
-Nota: esto ordena decisiones de producto y comunicación. La validación jurídica y la base legal del tratamiento las revisa quien lleve el asunto legal en tu organización.
-
-## Contexto que necesito
-
-1. Qué datos entran en la función: introducidos por el usuario, del producto, de terceros.
-2. Si hay datos personales, y de quién: del usuario o de terceros (sus clientes, sus empleados).
-3. Proveedor del modelo, plan contratado y qué dice su contrato sobre uso de datos y retención.
-4. Qué se guarda por nuestra parte y para qué (mejorar el producto, depurar, historial del usuario).
-5. Mercados y tipo de cliente (consumidor, empresa, sector regulado).
-
-## Paso 1 — Mapa del dato
-
-Traza el recorrido completo, paso a paso: qué sale del navegador, qué guarda nuestro sistema, qué se envía al proveedor, qué vuelve, qué se registra en trazas y por cuánto tiempo vive cada cosa. Marca los puntos donde un dato personal cruza un límite.
-
-Aquí aparecen casi siempre dos sorpresas: los registros de depuración con el contenido completo, y los datos que viajan al proveedor porque están en un contexto que nadie revisó.
-
-## Paso 2 — Decisiones de producto
-
-Para cada punto, decide y justifica:
-
-| Decisión | Opciones | Recomendación |
-|---|---|---|
-| Retención de las entradas | No guardar / guardar N días / guardar hasta que el usuario borre | |
-| Uso para mejorar el producto | No / con consentimiento explícito / anonimizado | |
-| Control del usuario | Desactivar la función / borrar historial / exportar | |
-| Datos sensibles | Bloquear la entrada / avisar / permitir | |
-| Nivel de cliente | ¿Los clientes de empresa necesitan condiciones distintas? | |
-
-Regla práctica: lo que no se guarda no se filtra, no se pide en una auditoría y no aparece en una brecha. La retención por defecto debería ser la mínima que permita operar.
-
-## Paso 3 — La promesa, redactada
-
-Escribe tres versiones del mismo contenido, coherentes entre sí:
-
-1. **En la interfaz**, junto a la función: dos frases, en lenguaje llano.
-2. **En el centro de ayuda**: media página con el recorrido del dato y los controles.
-3. **Para el cuestionario de seguridad de un cliente**: respuestas concretas a proveedor, ubicación del tratamiento, retención, subencargados, cifrado y uso para entrenamiento.
-
-## Paso 4 — Lo que no se puede afirmar
-
-Lista de frases que suenan bien y no se deben usar sin poder demostrarlas: «tus datos nunca salen de tu cuenta», «no usamos IA con tus datos», «totalmente anónimo», «cumple el RGPD» a secas. Para cada una, la alternativa precisa y verificable.
-
-## Entregables
-
-1. Mapa del dato con los cruces marcados.
-2. Tabla de decisiones con recomendación y motivo.
-3. Los tres textos de la promesa.
-4. Lista de afirmaciones prohibidas con su alternativa.
-5. Qué preguntas hay que llevar a legal antes de publicar.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Decidir y redactar la promesa de tratamiento de datos de una función con IA, con mapa del dato, controles del usuario y afirmaciones verificables',
+                'estimated_minutes'=> 45,
+                'use_case'         => 'Establecer el marco de cumplimiento del RGPD para el tratamiento de datos de empleados con las bases legales correctas y los plazos de conservación adecuados.',
                 'vote_score'       => 32,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 5,
-                'title'            => 'Notas de versión y comunicación de cambios que la gente sí lee',
-                'description'      => 'Escribe el anuncio de cada cambio desde el punto de vista de quien lo usa, con la jerarquía correcta según el impacto y el aviso previo cuando el cambio rompe algo.',
+                'profession_id'    => 9,
+                'title'            => 'Segmentación de clientes para dar el soporte correcto a cada uno',
+                'description'      => 'Usa los datos de tu base de clientes para diseñar niveles de soporte diferenciados que maximizan el impacto con los recursos disponibles y priorizan el tiempo del equipo donde más valor genera.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como product manager que ha visto dos cosas: notas de versión que nadie abre y cambios silenciosos que generan una avalancha de tickets. Quiero un sistema de comunicación de cambios proporcionado al impacto.
+Actúa como un Head of Customer Success especializado en el diseño de modelos de cobertura y segmentación de clientes para empresas SaaS B2B. Ayúdame a construir el modelo de segmentación que permite dar el nivel de atención correcto a cada cliente.
 
-## Contexto que necesito
+**Mi contexto:**
+- Tipo de producto: [SaaS B2B / plataforma / herramienta / servicio con componente tech]
+- Número de clientes actuales: [número]
+- ARR total y distribución aproximada: [total ARR, si el 20% de clientes genera el 80% del ARR]
+- Tamaño del equipo de CS: [número de CSMs]
+- Ratio actual clientes/CSM: [número de clientes por CSM]
+- Modelo de soporte actual: [todos reciben lo mismo / hay algo de diferenciación / modelo estructurado]
+- Herramientas disponibles: [CRM, tool de CS, datos de uso del producto]
+- Problema principal: [el equipo está saturado / clientes pequeños consumen tiempo desproporcionado / los grandes no reciben suficiente atención / no tenemos datos para priorizar]
 
-1. Los cambios de este ciclo, con una línea cada uno.
-2. Quién usa el producto y con qué frecuencia entra.
-3. Canales disponibles: notas en la app, correo, centro de ayuda, comunidad, comercial.
-4. Si hay clientes con integraciones o API.
+---
 
-## Paso 1 — Clasificar por impacto
+**Parte 1 – Por qué la segmentación es la decisión más importante de CS**
 
-| Nivel | Definición | Comunicación |
-|---|---|---|
-| Rompe | Algo deja de funcionar como antes | Aviso previo con plazo, correo directo, guía de migración |
-| Cambia el flujo | La tarea se hace de otra forma | Aviso en la app antes y durante, ayuda actualizada |
-| Añade | Función nueva opcional | Notas de versión, y anuncio si es relevante |
-| Mejora | Rendimiento, corrección, detalle | Notas de versión agrupadas |
-| Interno | Sin efecto visible | No se comunica |
+El argumento para convencer a la dirección de invertir en segmentación:
+- El efecto Pareto en CS: la distribución habitual de revenue por segmento de cliente y sus implicaciones
+- El coste de oportunidad de no segmentar: qué pasa cuando un CSM dedica el mismo tiempo a un cliente de €500/año que a uno de €50.000/año
+- Segmentación no es discriminación: cómo comunicar internamente que clientes pequeños recibirán diferente atención (no necesariamente peor)
+- La relación entre segmentación, NRR y capacidad de escala del equipo de CS
 
-El error más caro es tratar un cambio de nivel «rompe» como si fuera «mejora». El segundo más caro es enviar un correo a toda la base por una corrección menor: eso entrena a la gente a ignorar tus correos.
+---
 
-## Paso 2 — Redacción, cambio a cambio
+**Parte 2 – Los criterios de segmentación**
 
-Para cada uno, tres líneas con esta estructura:
+Los mejores modelos de segmentación no usan solo ARR. Los criterios relevantes:
 
-1. **Qué puedes hacer ahora** (en segunda persona, con el verbo de la acción del usuario).
-2. **Por qué te importa** (el problema que resuelve, no la tecnología).
-3. **Cómo se usa** (dónde está, en una frase o con un enlace).
+**Criterios de valor (lo que el cliente vale para la empresa):**
+- ARR o MRR actual
+- Potencial de expansión (tamaño de empresa, número de licencias no utilizadas, departamentos no implementados)
+- Riesgo de churn (antigüedad, engagement con el producto, señales de insatisfacción)
+- Strategic value (clientes que son referencia, que generan referrals, que tienen influencia en el mercado)
 
-Nada de «hemos refactorizado el módulo de exportación para mejorar la eficiencia». Sí a «ahora puedes exportar más de 10.000 filas sin que se corte».
+**Criterios de complejidad (lo que el cliente requiere del equipo):**
+- Número de usuarios o departamentos a gestionar
+- Complejidad de la implementación o integración
+- Historial de tickets de soporte (clientes que generan más tickets que otros del mismo tamaño)
+- Número de stakeholders internos
 
-## Paso 3 — El caso de los cambios que rompen
+**Criterios de engagement con el producto (señal de salud):**
+- Daily/Monthly Active Users vs. licencias contratadas
+- Features activos (los que usan más features tienen más valor percibido y menor churn)
+- Tiempo desde la última sesión (señal de riesgo)
 
-Plantilla completa: qué cambia, cuándo exactamente, por qué lo hacemos, a quién afecta (con criterio para que cada uno sepa si le toca), qué tiene que hacer, hasta cuándo funciona lo antiguo, y a quién escribir si se atasca. Enviado con antelación proporcional al trabajo que exige, y repetido cerca de la fecha.
+---
 
-## Paso 4 — Formato de las notas
+**Parte 3 – Los tres segmentos estándar y qué incluye cada uno**
 
-- Agrupadas por área del producto, no por sprint ni por número de versión.
-- Lo importante arriba; las correcciones, en una lista al final.
-- Sin números de ticket internos ni jerga de equipo.
-- Con fecha y con enlace permanente para poder citarlas.
+El modelo de tres segmentos que funciona para la mayoría de empresas SaaS B2B:
 
-## Paso 5 — Uso interno
+**Segmento 1 – Enterprise / Strategic (Top 10-20% por ARR)**
+- Criterio de entrada: [define el umbral de ARR o criterio compuesto para mi empresa]
+- Lo que reciben:
+  - CSM dedicado con < 20 cuentas
+  - QBRs trimestrales (Quarterly Business Reviews) presenciales o por videoconferencia
+  - Executive sponsor de la empresa vendedora
+  - Acceso prioritario a soporte técnico y a product management
+  - Early access a nuevas funcionalidades
 
-Prepara la versión para el equipo: qué contar a soporte antes del lanzamiento (con las preguntas que van a llegar y su respuesta), y qué contar a ventas (qué se puede prometer y qué no).
+**Segmento 2 – Mid-Market / Growth (30-40% por ARR)**
+- Criterio de entrada: [ARR intermedio o combinación de criterios]
+- Lo que reciben:
+  - CSM con 50-100 cuentas (táctil pero no dedicado)
+  - Reviews semestrales (EBRs)
+  - Acceso a soporte técnico en horario normal con SLA definido
+  - Comunicaciones de producto y webinars
 
-## Entregables
+**Segmento 3 – SMB / Tech-touch / Self-serve (50%+ de clientes, 20% del ARR)**
+- Criterio de entrada: los clientes que no cumplen los criterios anteriores
+- Lo que reciben:
+  - Soporte por ticket / email con SLAs estándar
+  - Onboarding automatizado (secuencias de email, in-app guides, video tutoriales)
+  - Community / foro de usuarios
+  - Documentación y base de conocimiento
 
-1. Los cambios clasificados por nivel de impacto.
-2. Notas de versión completas, listas para publicar.
-3. El correo de aviso de los cambios que rompen.
-4. Guía interna para soporte y para ventas.
-5. Calendario de envíos, con antelación por tipo de cambio.
+---
+
+**Parte 4 – Implementar el modelo de segmentación**
+
+El proceso de transición al nuevo modelo:
+- Cómo hacer la clasificación inicial de toda la base de clientes con los criterios definidos
+- Cómo comunicar el nuevo modelo al equipo de CS (el "esto no significa que olvidemos a los pequeños")
+- Cómo comunicar a los clientes del segmento SMB que van a tener menos atención directa sin que genere churn
+- El proceso de revisión trimestral de segmentos: clientes que suben (expansión) y bajan (contracción)
+
+**Tabla de transición por segmento:**
+
+| Acción | Enterprise | Mid-Market | SMB |
+|---|---|---|---|
+| Comunicación del cambio | Llamada personal del VP CS | Email personalizado del CSM | Email de producto |
+| Plazo de transición | 3 meses | 2 meses | 1 mes |
+| Riesgo de churn esperado | Bajo (mejoran) | Bajo-medio | Medio (los que esperaban más atención) |
+| Mitigación | Presentar el nuevo CSM dedicado | Presentar el plan del año | Activar onboarding automático |
+
+---
+
+**Parte 5 – Métricas de éxito del modelo de segmentación**
+
+Cómo saber si el modelo está funcionando:
+- Ratio de CSM por segmento: objetivo por tamaño de empresa
+- NRR por segmento: el indicador de si cada segmento está siendo bien atendido
+- Churn rate por segmento antes y después de la implementación
+- Customer Health Score promedio por segmento
+- Tiempo de respuesta de soporte por segmento (¿se están cumpliendo los SLAs diferenciados?)
+
+Dado mi contexto, dame:
+- La propuesta de criterios de segmentación específica para mi empresa
+- El ratio cliente/CSM objetivo por segmento para mi tamaño de equipo
+- Los 3 primeros pasos para implementar el modelo esta semana
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 45,
+                'use_case'         => 'Diseñar el modelo de segmentación de clientes que permite dar el nivel de atención correcto a cada uno y maximizar el impacto del equipo de CS.',
+                'vote_score'       => 36,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 10,
+                'title'            => 'Productividad extrema para freelancers: el sistema completo',
+                'description'      => 'Los sistemas, rutinas y herramientas de los freelancers que facturan el doble trabajando las mismas horas: gestión de proyectos, tiempo, energía y la eliminación del trabajo que no genera ingresos.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un freelance sénior que ha construido un negocio unipersonal altamente productivo y rentable, y que ha estudiado los sistemas de productividad que funcionan para freelancers (no para empleados de empresa, que son muy diferentes). Ayúdame a construir mi sistema de productividad.
+
+**Mi perfil:**
+- Especialidad: [tipo de trabajo freelance]
+- Horas que trabajo actualmente a la semana: [número]
+- Facturación mensual actual: [€/mes]
+- Distribución del tiempo aproximada: [% trabajo para clientes / % gestión y admin / % captación / % formación]
+- Principal problema de productividad: [procrastinación / distracciones / scope creep con clientes / dificultad para desconectar / trabajo en horas pico pero flojo en valles / gestión del tiempo entre múltiples proyectos]
+- Herramientas que ya uso: [lista tus herramientas]
+- Qué has probado que no ha funcionado: [GTD / Pomodoro / bloques de tiempo / etc.]
+
+---
+
+**Parte 1 – La diferencia entre productividad de freelance y productividad de empleado**
+
+Por qué el 90% del consejo de productividad no aplica a freelancers:
+- El freelance tiene control total sobre su tiempo: esto es un regalo y una trampa a la vez
+- Los 4 problemas únicos de productividad del freelance:
+  1. No hay separación entre "trabajo" y "vida": el trabajo se expande para llenar todo el tiempo disponible
+  2. El trabajo irregular: semanas de mucho y semanas de poco, con el estrés que genera en ambas
+  3. El trabajo no facturable consume más tiempo que el trabajo facturable: el mayor ladrón del ingreso
+  4. La soledad y la falta de accountability: sin equipo que te vea trabajar, la disciplina viene solo de dentro
+- Por qué el objetivo no es "trabajar más" sino "facturar más con las mismas horas"
+
+---
+
+**Parte 2 – La auditoría de tiempo: dónde se va el dinero**
+
+Antes de optimizar, medir:
+- Cómo hacer la auditoría de tiempo de una semana: qué registrar y cómo (Toggl, Clockify, o papel)
+- Las 5 categorías de tiempo del freelance y el porcentaje objetivo de cada una:
+
+| Categoría | Descripción | % actual (a calcular) | % objetivo |
+|---|---|---|---|
+| Trabajo facturable | Lo que cobras directamente | ? | > 60% |
+| Prospección | Buscar clientes nuevos | ? | 10-15% |
+| Admin | Facturas, emails, contabilidad | ? | < 10% |
+| Formación / mejora | Aprender y mejorar | ? | 10% |
+| Marketing y visibilidad | Contenido, networking | ? | 10% |
+
+- Cómo identificar las actividades que consumen tiempo sin generar ingresos y que podrían eliminarse, automatizarse o subcontratarse
+- El cálculo del coste real del trabajo no facturable: lo que te cuesta en ingresos perdidos cada hora de admin
+
+---
+
+**Parte 3 – El sistema de gestión de proyectos para freelancers**
+
+El sistema mínimo que evita el caos cuando tienes varios proyectos simultáneos:
+- La estructura de proyectos que funciona: cada proyecto tiene un espacio, cada tarea tiene un dueño y una fecha
+- Cómo gestionar las expectativas del cliente desde el primer día para evitar el scope creep que destroza la productividad
+- El ritual de inicio de proyecto: el checklist de onboarding del cliente que aclara expectativas desde el día 1
+- Cómo estructurar las entregas para que el cliente no te interrumpa entre hitos
+
+**Herramientas por nivel de complejidad:**
+- Freelance simple (1-3 proyectos simultáneos): Notion o Trello con plantilla básica
+- Freelance complejo (4+ proyectos): Linear, ClickUp o Asana con automatizaciones
+- Con equipo subcontratado: añadir un canal de comunicación dedicado (Slack o Teams)
+
+---
+
+**Parte 4 – Diseñar la semana ideal para mi perfil**
+
+La semana ideal del freelance no es la misma cada semana: hay semanas de producción y semanas de mantenimiento. Cómo diseñar ambas:
+
+**La semana de producción (cuando tienes plazos):**
+- Bloques de trabajo profundo (Deep Work): cuántos por semana, cuánto duran, cuándo ponerlos
+- Los rituales de entrada y salida que separan el modo trabajo del modo vida sin oficina
+- Cómo manejar las interrupciones de clientes durante los bloques de deep work
+- El "email en dos veces al día": por qué revisar el email dos veces al día multiplica la productividad
+
+**La semana de mantenimiento (cuando no hay plazos urgentes):**
+- Qué hacer con el tiempo cuando no hay trabajo urgente: prospección, formación, mejora del sistema
+- Cómo evitar la parálisis productiva de "no sé en qué trabajar hoy"
+- El "proyecto de semana lenta": siempre tener un proyecto de mejora listo para estas semanas
+
+---
+
+**Parte 5 – Automatizar y eliminar el trabajo no facturable**
+
+Las automatizaciones con más ROI para freelancers:
+
+**Facturación y gestión financiera:**
+- Herramientas de facturación automática con recordatorios de pago (Holded, Billin, FreshBooks)
+- Cómo configurar el proceso de onboarding de cliente con firma de contrato y primer pago automático (PandaDoc, DocuSign + Stripe)
+
+**Comunicación con clientes:**
+- Plantillas de email para las situaciones repetitivas (presupuesto, revisiones, entregas, retrasos)
+- Portal de cliente: cómo centralizar todo en un lugar para eliminar el caos de emails
+
+**Captación:**
+- El sistema de seguimiento de propuestas que no requiere memoria: CRM simple (Notion, Pipedrive)
+- Cómo reutilizar el 80% de cada propuesta: la estructura modular que tarda 30 minutos en vez de 3 horas
+
+**El plan de acción para mi perfil:**
+Dado mi perfil y mis problemas principales, dame:
+- Las 3 herramientas que más ROI tienen para mí en los próximos 30 días
+- Las 3 rutinas que debo implementar esta semana
+- Los 3 procesos que debo automatizar o delegar en los próximos 3 meses
+
+Termina con el cálculo de cuántas horas adicionales al mes podría recuperar implementando estas mejoras y en qué convertirlas: más ingresos, más descanso o ambos.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'beginner',
-                'estimated_minutes'=> 25,
-                'use_case'         => 'Clasificar los cambios de producto por impacto y redactar notas de versión, avisos previos y guía interna para soporte y ventas',
-                'vote_score'       => 28,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Del ticket de soporte a la decisión de producto: monta el circuito completo',
-                'description'      => 'El proceso que convierte el flujo diario de tickets en señal utilizable por producto: etiquetado mínimo, agregación semanal, criterio de escalado y respuesta de vuelta al equipo de soporte.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como product manager que trabaja pegado a soporte. Hoy los tickets se resuelven y desaparecen; quiero que dejen de ser solo trabajo y empiecen a ser información.
-
-## Contexto que necesito
-
-1. Volumen de tickets al mes y herramienta que usáis.
-2. Cómo se etiquetan hoy (o si no se etiquetan).
-3. Tamaño del equipo de soporte y del de producto.
-4. Qué relación hay hoy entre los dos equipos: reuniones, canal, nada.
-
-## Paso 1 — Etiquetado mínimo viable
-
-El etiquetado que nadie mantiene es el que tiene 40 categorías. Propón el mínimo que sirve para decidir:
-
-| Dimensión | Valores | Quién la pone |
-|---|---|---|
-| Área del producto | 6-10 valores máximo | Soporte, al cerrar |
-| Tipo | Fallo / no encuentra / no entiende / no existe / no debería ser así | Soporte, al cerrar |
-| Evitable | Sí, con producto / sí, con documentación / no evitable | Soporte, al cerrar |
-| Impacto en el cliente | Bloquea / molesta / pregunta | Soporte, al abrir |
-
-La dimensión «evitable» es la que convierte soporte en producto: separa lo que hay que construir de lo que hay que explicar mejor.
-
-## Paso 2 — Agregación semanal
-
-Define el informe automático de una página: volumen por área, top 10 de motivos, qué crece respecto a la semana anterior, tickets evitables con producto y su coste estimado en horas de soporte, y las tres citas de cliente más reveladoras.
-
-Que sea una página. Los informes de quince páginas se archivan sin leer.
-
-## Paso 3 — Criterio de escalado
-
-Cuándo un patrón de tickets entra en el proceso de producto, escrito y sin ambigüedad. Por ejemplo: más de N tickets del mismo motivo en dos semanas, o cualquier motivo que bloquee a un cliente de más de X, o cualquier fallo con pérdida de datos. Sin criterio escrito, el escalado depende de quién grite más fuerte.
-
-## Paso 4 — El circuito de vuelta
-
-La parte que casi todos olvidan y la que hace que soporte siga etiquetando: contarle qué ha pasado con lo que reportó. Define:
-
-- Estado visible de los patrones escalados: recibido, en análisis, en construcción, descartado con motivo.
-- Aviso a soporte cuando algo se soluciona, con la respuesta que puede dar al cliente que lo pidió.
-- Reconocimiento explícito de los patrones que cambiaron una decisión.
-
-## Paso 5 — Reunión de 30 minutos
-
-Guion de la reunión semanal entre soporte y producto: los tres primeros motivos, decisiones tomadas, qué se escala, qué se resuelve con documentación y quién hace qué. Con acta de tres líneas.
-
-## Entregables
-
-1. Esquema de etiquetado mínimo, listo para configurar.
-2. Plantilla del informe semanal de una página.
-3. Criterio de escalado escrito, con umbrales.
-4. Diseño del circuito de vuelta a soporte.
-5. Guion de la reunión semanal.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
                 'estimated_minutes'=> 35,
-                'use_case'         => 'Diseñar el circuito que convierte los tickets de soporte en señal para producto, con etiquetado mínimo, informe semanal y criterio de escalado',
-                'vote_score'       => 30,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 5,
-                'title'            => 'Documento de decisión de producto: deja de discutir lo mismo cada dos meses',
-                'description'      => 'Registra cada decisión relevante con su contexto, las alternativas descartadas y las condiciones que la harían cambiar, para que el equipo no reabra debates cerrados ni repita errores.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como product manager veterano que ha vivido la misma discusión tres veces en un año porque nadie escribió por qué se decidió lo que se decidió. Quiero implantar un registro de decisiones de producto.
-
-## Contexto que necesito
-
-1. La decisión concreta que hay que documentar ahora.
-2. Quién participa y quién decide.
-3. Información disponible: datos, investigación, restricciones.
-4. Dónde vivirá el registro (repositorio, wiki, herramienta de producto).
-
-## Estructura del documento (una página, no más)
-
-### Título
-Decisión en una frase afirmativa: «Cobramos el almacenamiento por volumen y no por usuario». Sin interrogaciones ni títulos vagos.
-
-### Estado
-Propuesta / decidida / revisada / revertida. Con fecha.
-
-### Contexto
-Qué situación obliga a decidir. Qué sabemos, con datos. Qué no sabemos. Restricciones reales.
-
-### Opciones consideradas
-Tabla con al menos tres, incluyendo «no hacer nada»:
-
-| Opción | A favor | En contra | Coste | Riesgo principal |
-|---|---|---|---|---|
-
-Si solo hay una opción sobre la mesa, no es una decisión: es una ejecución. Dilo.
-
-### Decisión y por qué
-La opción elegida y el criterio que la hizo ganar. El criterio importa más que la opción: es lo que permite decidir coherentemente la próxima vez.
-
-### Consecuencias aceptadas
-Lo que empeora con esta decisión, dicho explícitamente. Una decisión sin consecuencias es una decisión sin analizar.
-
-### Qué la haría cambiar
-Las condiciones concretas y medibles que obligarían a revisarla: un umbral de métrica, un cambio de mercado, un coste que se dispara. **Este apartado es el que evita la mitad de las discusiones futuras**: cuando alguien quiere reabrir el tema, la pregunta es si se cumple alguna de estas condiciones.
-
-### Fecha de revisión
-Cuándo se vuelve a mirar aunque no pase nada.
-
-## Además
-
-- Señálame los supuestos de la decisión y cuáles son verificables.
-- Dime qué información falta y si merece la pena esperar a tenerla o decidir con lo que hay (con el coste de esperar).
-- Propón las tres decisiones pasadas que convendría documentar retroactivamente porque siguen provocando debates.
-
-## Entregables
-
-1. El documento de la decisión actual, completo.
-2. Supuestos marcados y cómo validarlos.
-3. Recomendación sobre decidir ahora o esperar, con el coste de cada camino.
-4. Plantilla en blanco para las siguientes decisiones.
-5. Lista de decisiones pasadas a documentar, por prioridad.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 30,
-                'use_case'         => 'Documentar decisiones de producto con alternativas, consecuencias aceptadas y condiciones de revisión para evitar reabrir debates cerrados',
-                'vote_score'       => 33,
+                'use_case'         => 'Construir el sistema de productividad completo para freelancers que maximiza los ingresos facturables y elimina el trabajo que no genera dinero.',
+                'vote_score'       => 46,
                 'resource_type'    => 'prompt',
             ],
         ];
