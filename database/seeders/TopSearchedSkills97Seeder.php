@@ -12,682 +12,1136 @@ class TopSearchedSkills97Seeder extends Seeder
         $admin = User::first();
         $skills = [
             [
-                'profession_id'    => 8,
-                'title'            => 'Cláusulas de IA en contratos con proveedores: datos, entrenamiento y subencargados',
-                'description'      => 'Qué hay que pactar cuando un proveedor usa IA con tu información o cuando tú la usas con la de tu cliente: uso de los datos, entrenamiento, subencargados, responsabilidad y salida.',
+                'profession_id'    => 1,
+                'title'            => 'Relaciones públicas digitales para startups',
+                'description'      => 'Consigue cobertura en medios online, newsletters de nicho y podcasts sin agencia: el proceso que funciona con poco presupuesto.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como abogado de contratos tecnológicos. Quiero preparar el bloque de cláusulas sobre inteligencia artificial para nuestros contratos, en las dos direcciones: cuando somos cliente y cuando somos proveedor.
+Actúa como un especialista en relaciones públicas digitales con experiencia trabajando con startups en etapa early stage que no tienen presupuesto para agencias de PR. Tu objetivo es ayudarme a diseñar y ejecutar una estrategia de PR que consiga cobertura real en medios relevantes para mi industria.
 
-Nota: esto produce un borrador de trabajo y una lista de puntos a negociar. La versión final la revisa y firma un profesional habilitado en la jurisdicción aplicable.
+## Por qué el PR digital es diferente al PR tradicional
 
-## Contexto que necesito
+Los periodistas y creadores de contenido reciben cientos de notas de prensa y pitches por semana. El 90% van directamente a la papelera. Lo que sí funciona es construir relaciones genuinas con los periodistas que cubren tu sector antes de necesitarlos, y tener historias reales que a su audiencia le importe leer.
 
-1. ¿Somos cliente, proveedor o los dos según el contrato?
-2. Qué servicio se presta y qué datos intervienen: personales, confidenciales, de terceros, código.
-3. ¿Hay uso de IA declarado? ¿Cuál, de qué proveedor y en qué parte del servicio?
-4. Jurisdicción y ley aplicable habitual en tus contratos.
-5. Nivel de negociación posible: contrato de adhesión o negociado.
+El PR digital efectivo para startups no es "enviar nota de prensa a 200 medios". Es identificar las 10-15 personas que tienen la audiencia que necesitas y construir una relación que les haga querer escribir sobre ti.
 
-## Los puntos que hay que cerrar
+## Paso 1: Mapa de medios y periodistas objetivo
 
-Para cada uno, dame el objetivo de negociación, la cláusula tipo y qué es aceptable ceder:
+**Tipos de cobertura por objetivo:**
+| Objetivo | Tipo de medio | Qué buscan |
+|----------|--------------|-----------|
+| Credibilidad B2B | Medios sectoriales, LinkedIn | Casos de uso, datos, tendencias |
+| Atracción de talento | Medios tech, podcasts de industria | Cultura, crecimiento, visión |
+| Captación de clientes | Newsletters de nicho, blogs especializados | Comparativas, tutoriales, opinión |
+| Inversión | Medios de ecosistema (Xataka, El Referente) | Traction, rondas, equipo |
+| SEO y backlinks | Medios generales tech | Noticias con contexto novedoso |
 
-| Punto | Qué se pacta |
-|---|---|
-| Declaración de uso | Si el proveedor usa IA en la prestación, dónde y con qué proveedor subyacente |
-| Uso de los datos | Para qué puede usarlos: solo prestar el servicio, o también mejorar el producto |
-| Entrenamiento | Prohibición expresa de usar nuestros datos para entrenar modelos, salvo consentimiento escrito |
-| Subencargados | Lista, obligación de comunicar altas y derecho a oponerse |
-| Ubicación del tratamiento | Dónde se procesa y qué garantías hay si sale del espacio europeo |
-| Retención y borrado | Plazos concretos y borrado certificado al terminar |
-| Confidencialidad | Extensión expresa al contenido introducido en herramientas de IA |
-| Titularidad de resultados | Quién es titular de lo generado y con qué garantías de no infracción |
-| Supervisión humana | Compromiso de revisión humana en decisiones relevantes |
-| Responsabilidad | Reparto ante errores del sistema, y qué queda excluido |
-| Auditoría e información | Derecho a pedir evidencias razonables de cumplimiento |
-| Cambios | Notificación previa si cambia el proveedor de IA o el modo de tratamiento |
-| Salida | Portabilidad de datos y borrado al finalizar, con plazos y sin coste |
+**Cómo construir tu lista de medios:**
+1. Busca quién ha cubierto a tus competidores en los últimos 6 meses
+2. Identifica las newsletters de nicho que leen tus clientes ideales
+3. Encuentra los podcasts donde han estado los founders de empresas similares
+4. Lista los 5 periodistas que más citan otras personas de tu sector
 
-## Las dos versiones
+Para cada medio o persona: nombre, medio, tema que cubre, formato preferido, cómo contactar y cuándo fue la última vez que publicaron algo relevante para tu industria.
 
-1. **Como cliente:** la versión protectora, con las prohibiciones que de verdad importan y los derechos de información.
-2. **Como proveedor:** la versión defendible, que sea cumplible de verdad. Un compromiso que no puedes cumplir es peor que no asumirlo: propón redacciones honestas, con excepciones acotadas.
+## Paso 2: El pitch perfecto (que sí se lee)
 
-## Y una advertencia práctica
+**Anatomía de un pitch efectivo:**
 
-Cuando el proveedor de IA subyacente es un gran proveedor con condiciones de adhesión, hay cláusulas que no podrás trasladarle. Señálame cuáles son irreales de exigir y qué alternativa cabe: restringir qué datos entran en la herramienta, exigir un plan de empresa concreto, o excluir ese tratamiento del alcance.
+**Asunto (lo más importante):**
+- Máximo 6-8 palabras
+- El ángulo de la historia, no el nombre de tu empresa
+- Ejemplos: "El 73% de los CFOs no saben cuánto gastan en SaaS" / "La startup que elimina el Excel de los equipos de finanzas"
 
-## Entregables
+**Cuerpo del email:**
+```
+Línea 1: El dato o hecho llamativo que contextualiza la historia (no tu empresa)
+Línea 2-3: La historia que puedes darle y por qué es relevante para SU audiencia
+Línea 4: Por qué eres la fuente adecuada para contarla (credenciales, datos propios)
+Línea 5: CTA concreto (¿una llamada de 15 minutos? ¿te paso el comunicado completo?)
 
-1. Tabla de puntos con objetivo de negociación y margen.
-2. Bloque de cláusulas en versión cliente.
-3. Bloque de cláusulas en versión proveedor.
-4. Lista de exigencias irreales y su alternativa práctica.
-5. Preguntas a hacer al proveedor antes de firmar.
+PS: Un dato adicional que justifique el interés. Los PS se leen más que el cuerpo.
+```
+
+**Lo que nunca debes hacer:**
+- Empezar el email con el nombre de tu empresa o producto
+- Adjuntar el comunicado de prensa al primer email
+- Copiar y pegar el mismo pitch a 50 periodistas
+- Enviar a info@ o redaccion@ sin nombre de persona
+
+## Paso 3: Tipos de historia que funcionan para startups
+
+**Historia 1: Los datos propios**
+Si tu producto o servicio genera datos interesantes sobre un comportamiento o tendencia, puedes publicar un informe y ofrecérselo a medios en exclusiva o embargo. Los medios quieren datos originales que no tienen que producir ellos.
+
+**Historia 2: El punto de vista contrario**
+¿Hay un consensus en tu industria con el que genuinamente no estás de acuerdo y tienes argumentos para sostenerlo? Las opiniones argumentadas y contrarias a la corriente principal consiguen mucha más cobertura que las que confirman lo que todos ya saben.
+
+**Historia 3: El caso de cliente con cifras reales**
+Un caso de cliente con métricas concretas (% de ahorro, tiempo reducido, ingresos generados) es uno de los formatos más pedidos por medios B2B. Necesitas la autorización del cliente y números reales, no aproximaciones vagas.
+
+**Historia 4: El founder como fuente experta**
+Posiciónate como fuente experta en un tema, no solo como fundador de una empresa. Los periodistas buscan personas que puedan comentar tendencias con conocimiento, no solo vender su producto.
+
+## Paso 4: Newsletters de nicho y podcasts
+
+Los medios grandes son difíciles al principio. Las newsletters de nicho y los podcasts de industria son más accesibles y a menudo tienen audiencias más cualificadas.
+
+**Cómo aparecer en newsletters de nicho:**
+1. Suscríbete y sé lector activo durante 4-6 semanas
+2. Responde al creador con feedback genuino sobre algún número
+3. Propón un artículo de guest o una colaboración que aporte valor a SU audiencia
+4. Ofrece primicia de algún dato o historia antes de hacerlo público
+
+**Cómo conseguir entrevistas en podcasts:**
+1. Escucha 3-5 episodios del podcast antes de proponer nada
+2. El pitch de podcast es diferente: propón el tema del episodio, no que entrevisten a tu empresa
+3. Menciona a oyentes del podcast en tu propuesta: "para los CEOs de SaaS que escuchan tu podcast, creo que el tema X sería muy relevante porque..."
+4. Prepara un kit de invitado: bio, foto, temas propuestos con bullet points, episodios anteriores donde hayas participado
+
+## Paso 5: Seguimiento y medición
+
+**Sistema de seguimiento de PR:**
+Crea una hoja de cálculo con: periodista/newsletter/podcast, fecha del primer contacto, respuesta (sí/no/quizás), tipo de cobertura conseguida, fecha de publicación, alcance estimado y link.
+
+**Métricas de PR que importan:**
+- Coberturas conseguidas por período (calidad > cantidad)
+- Backlinks obtenidos (impacto SEO medible)
+- Tráfico referido desde cada cobertura
+- Leads atribuibles a menciones en medios (con UTMs en URLs compartidas)
+- Cambio en búsquedas del nombre de la marca (Google Search Console)
+
+**Cadencia recomendada:**
+- 5-10 pitches personalizados por semana es más que suficiente
+- Seguimiento a los 5-7 días si no hay respuesta (máximo 1 seguimiento)
+- Una historia nueva o actualización de datos cada 4-6 semanas
+
+## Entregable: Kit de PR mínimo viable
+
+Ayúdame a crear: lista priorizada de 15 medios/newsletters/podcasts objetivo, plantilla de pitch adaptada a mi empresa, calendario de acciones para los primeros 60 días y checklist del kit de prensa básico que debo preparar.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Diseñar y ejecutar una estrategia de PR digital para una startup sin agencia, consiguiendo cobertura real en medios, newsletters y podcasts del sector.',
+                'vote_score'       => 38,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 2,
+                'title'            => 'Arquitectura de datos moderna',
+                'description'      => 'Data warehouse, data lake, dbt, ETL/ELT: cómo elegir la arquitectura correcta según la etapa y el tamaño del equipo.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un data engineer con experiencia diseñando arquitecturas de datos para empresas en distintas etapas de crecimiento, desde startups con un analista hasta scale-ups con equipos de datos de 20 personas. Voy a describir mi situación actual y necesito recomendaciones concretas sobre qué arquitectura implementar y en qué orden.
+
+## El problema de las decisiones prematuras en datos
+
+La mayoría de las empresas copian la arquitectura de datos de empresas mucho más grandes que ellas. El resultado: un data lake en S3 que nadie consulta, pipelines de Airflow que mantiene media persona, y un data warehouse de 200€/mes con 3 tablas. La arquitectura de datos debe evolucionar con la empresa, no anticipar un tamaño que quizás nunca llegue.
+
+**Principio rector:** la arquitectura correcta es la más simple que resuelve el problema actual sin crear deuda técnica que bloquee el crecimiento futuro.
+
+## Etapa 1: < 1M registros, 1-2 personas en datos
+
+**El problema típico:** datos dispersos en múltiples SaaS (CRM, base de datos de producción, herramientas de marketing), informes manuales en Excel, decisiones basadas en intuición porque el dato está en 3 sitios diferentes.
+
+**Stack recomendado:**
+- **Extracción**: Fivetran o Airbyte (managed) — no construyas extractores propios
+- **Destino**: BigQuery o Redshift (el primero más barato en volúmenes bajos, factura por consulta)
+- **Transformación**: dbt Cloud (plan gratuito suficiente para empezar)
+- **Visualización**: Looker Studio (gratuito) o Metabase (open source)
+
+**Por qué NO necesitas todavía:**
+- Data lake (S3/GCS): añade complejidad sin beneficio a este volumen
+- Kafka o streaming: tus datos cambian en horas, no en segundos
+- Spark: overkill para < 100GB de datos
+- Airflow: dbt + el scheduler de BigQuery es suficiente
+
+**Inversión estimada mensual:** 50-200€ (principalmente BigQuery y Fivetran básico)
+
+## Etapa 2: 1M-100M registros, 3-10 personas en datos
+
+**Nuevas necesidades que emergen:**
+- Múltiples fuentes de datos con lógica de negocio compleja
+- Varios equipos consumiendo datos con definiciones diferentes de la misma métrica
+- Necesidad de histórico y auditoría de cambios
+- Latencia de datos < 1 hora en algunos casos de uso
+
+**Stack recomendado:**
+| Capa | Tecnología | Por qué |
+|------|-----------|---------|
+| Ingestión | Fivetran + extractores propios para APIs internas | Fivetran para SaaS estándar, custom para datos propietarios |
+| Storage | Snowflake o BigQuery | Snowflake mejor para carga predecible, BigQuery mejor para ad-hoc |
+| Transformación | dbt Core + Airflow o Prefect | dbt modela, Airflow orquesta |
+| Calidad | dbt tests + Great Expectations | Validación en cada capa |
+| Catálogo | dbt docs + DataHub o Amundsen | Descubribilidad de datos |
+| BI | Looker o Tableau | Semántica centralizada |
+
+**Patrones de modelado con dbt:**
+```
+staging/ — modelos 1:1 con la fuente, sin lógica de negocio, solo limpieza
+intermediate/ — joins y transformaciones complejas reutilizables
+marts/ — tablas finales orientadas al consumidor (finance, marketing, product)
+```
+
+**Materialización recomendada:**
+- staging: views (siempre frescos, sin coste de almacenamiento)
+- intermediate: tables (cuando los joins son costosos)
+- marts: tables con incremental refresh para tablas grandes
+
+## Etapa 3: > 100M registros, equipo de datos dedicado
+
+**Nuevas necesidades:**
+- Datos en tiempo real o near-real-time para product y operaciones
+- Separación entre datos para ML/AI y datos para BI
+- Gobierno de datos y control de acceso granular
+- Costes de cómputo que justifican optimización activa
+
+**Arquitectura Medallion (Bronze / Silver / Gold):**
+
+| Capa | Contenido | Consumidor | Frecuencia |
+|------|----------|-----------|-----------|
+| Bronze (raw) | Datos crudos tal como llegan de la fuente | Ingeniería de datos | Continuo o batch |
+| Silver (cleaned) | Datos validados, deduplicados, tipados | Data scientists | Cada hora / día |
+| Gold (business) | Métricas y dimensiones de negocio | Analistas, BI, producto | Cada hora / día |
+
+**Cuándo añadir streaming (Kafka + Flink/Spark Streaming):**
+Solo cuando necesites: alertas en tiempo real basadas en eventos, actualización de dashboards operativos en < 5 minutos, o pipelines de ML que requieran features en tiempo real. En cualquier otro caso, micro-batch (cada 15-30 minutos con Airflow) es suficiente y mucho más simple.
+
+## Data Lakehouse: ¿la arquitectura del futuro?
+
+El data lakehouse (Delta Lake, Apache Iceberg, Hudi) combina el bajo coste de almacenamiento del data lake con las capacidades ACID y la velocidad de consulta del data warehouse.
+
+**Cuándo tiene sentido:**
+- Tienes > 10TB de datos históricos que no consultas frecuentemente
+- Necesitas ML sobre los mismos datos que usa el BI
+- El coste del data warehouse es un problema real (> 5.000€/mes)
+
+**Stack lakehouse típico:**
+- Almacenamiento: S3 o GCS con formato Delta Lake o Iceberg
+- Motor de consulta: Trino, Spark SQL o DuckDB para analítica
+- Catálogo: Glue (AWS) o Unity Catalog (Databricks)
+- Ingesta: Delta Live Tables o Databricks Auto Loader
+
+## Decisión: ¿qué arquitectura necesito ahora?
+
+Responde estas preguntas y te daré la recomendación concreta:
+1. ¿Cuántos registros en total tiene tu tabla más grande?
+2. ¿Cuántas fuentes de datos diferentes tienes?
+3. ¿Cuántas personas van a consumir los datos?
+4. ¿Tienes algún caso de uso que requiera datos frescos en < 1 hora?
+5. ¿Cuál es tu presupuesto mensual máximo para infraestructura de datos?
+
+Con estas respuestas, diseño el stack exacto, el orden de implementación, los costes estimados y el plan de migración si ya tienes algo en marcha.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'advanced',
                 'estimated_minutes'=> 45,
-                'use_case'         => 'Redactar el bloque contractual sobre uso de IA en contratos con proveedores y clientes, en versión protectora y en versión cumplible',
-                'vote_score'       => 37,
+                'use_case'         => 'Elegir la arquitectura de datos correcta (warehouse, lake, lakehouse, dbt, streaming) según la etapa de la empresa y el tamaño del equipo, con un plan de implementación concreto.',
+                'vote_score'       => 42,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 8,
-                'title'            => 'Revisar contratos con IA sin comprometer la confidencialidad',
-                'description'      => 'El flujo de trabajo que permite acelerar la revisión documental manteniendo el secreto profesional: qué se puede procesar, cómo se anonimiza, qué se verifica siempre y qué queda registrado.',
+                'profession_id'    => 3,
+                'title'            => 'Prototipado rápido con Figma',
+                'description'      => 'De idea a prototipo funcional en 2 horas: el proceso que usan los mejores diseñadores para validar antes de escribir código.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como abogado con experiencia en implantación de herramientas en despachos y departamentos legales. Quiero usar IA para acelerar la revisión de contratos sin poner en riesgo la confidencialidad ni la calidad del criterio.
+Actúa como un product designer con experiencia en design sprints y prototipado rápido en Figma. Voy a describir la funcionalidad o flujo que quiero prototipar y necesito que me guíes en el proceso para crear un prototipo funcional y testeable en el menor tiempo posible.
 
-## Contexto que necesito
+## Por qué prototipar antes de programar
 
-1. Tipo de documentos: contratos propios, de la parte contraria, expedientes, documentación de operaciones.
-2. Herramienta y plan contratado, y qué dicen sus condiciones sobre retención y uso de datos.
-3. Volumen: documentos al mes y tamaño típico.
-4. Quién revisaría: personas con criterio o perfiles junior.
-5. Obligaciones de confidencialidad aplicables y política del cliente, si existe.
+Cada hora de programación sin validar una suposición de diseño puede representar días de trabajo tirado. Un prototipo en Figma que tarda 2 horas en hacer puede responder las mismas preguntas de usabilidad que costaba semanas descubrir en código.
 
-## Paso 1 — Qué se puede procesar y qué no
+La regla del prototipado: nunca programes algo que puedas prototipar. Nunca prototipes algo que puedas dibujar en papel primero.
 
-| Categoría | Tratamiento |
-|---|---|
-| Modelos y plantillas propias sin datos de cliente | Libre |
-| Normativa, doctrina y resoluciones públicas | Libre |
-| Contratos con datos identificativos de las partes | Solo con herramienta aprobada y con anonimización previa si es posible |
-| Documentación de operaciones en curso sujeta a confidencialidad reforzada | Solo con autorización del cliente o entorno cerrado |
-| Datos personales sensibles y expedientes con datos de salud o penales | No, salvo entorno controlado con base jurídica clara |
+## Fase 1: Definir qué quieres validar (10 minutos)
 
-Regla de partida: la obligación de secreto no se delega a un proveedor por el hecho de haber aceptado sus condiciones. Si el cliente no lo ha autorizado, no entra.
+Antes de abrir Figma, define con precisión:
 
-## Paso 2 — Anonimización operativa
+**Las 3 preguntas del prototipo:**
+1. ¿Qué hipótesis de diseño estamos testando? ("Los usuarios entenderán que deben hacer X antes de Y")
+2. ¿Qué tarea realizará el usuario en el test? ("Completa una compra con dirección nueva")
+3. ¿Qué resultado nos indica que la hipótesis es correcta? ("El 80% completa la tarea sin ayuda en < 2 minutos")
 
-Procedimiento antes de procesar: sustituir nombres, identificadores fiscales, direcciones e importes singulares por marcadores consistentes (PARTE_A, IMPORTE_1) que permitan trabajar y luego revertir. Explica cómo mantener la trazabilidad de la sustitución para poder devolver el resultado al documento real.
+Sin respuesta a estas tres preguntas, el prototipo será hermoso pero inútil para la toma de decisiones.
 
-## Paso 3 — Tareas por nivel de utilidad
+## Fase 2: Estructura del prototipo en Figma
 
-- **Alta utilidad y bajo riesgo:** resumen de un contrato largo, extracción de plazos y obligaciones a un cuadro, comparación entre dos versiones, detección de cláusulas ausentes respecto a una lista propia, generación de un primer índice de la revisión.
-- **Utilidad media, requiere criterio:** valoración de riesgo de una cláusula, propuesta de redacción alternativa, detección de contradicciones internas.
-- **No delegable:** interpretación con consecuencias, estrategia, decisión sobre firmar, cualquier conclusión que salga con la firma del despacho sin revisión completa.
+**Jerarquía de fidelidad según el objetivo:**
 
-## Paso 4 — Verificación obligatoria
+| Fidelidad | Cuándo usarla | Tiempo de creación |
+|-----------|--------------|-------------------|
+| Wireframe (solo estructura) | Validar flujo y arquitectura de información | 30-60 min |
+| Mockup (con diseño visual básico) | Validar comprensión y usabilidad | 1-2 horas |
+| Prototipo de alta fidelidad | Presentación a stakeholders, tests con usuarios reales | 3-8 horas |
 
-Antes de usar cualquier salida:
+Para la mayoría de los tests de usabilidad, un wireframe gris con texto real (no Lorem Ipsum) es suficiente. El diseño visual es una distracción en los primeros tests.
 
-1. Toda cita normativa o jurisprudencial se comprueba en la fuente oficial. Sin excepciones: la invención de referencias con formato correcto es el fallo más peligroso en este oficio.
-2. Toda cifra, plazo y fecha se localiza en el documento original.
-3. Toda cláusula «detectada como ausente» se busca a mano en el documento, porque puede estar con otro nombre.
-4. La revisión final la firma quien responde del trabajo.
+**Estructura de un archivo Figma bien organizado:**
+```
+📁 [Proyecto]
+  📄 Prototipo v1
+    🖼️ Cover (thumbnail del proyecto)
+    📦 Components (librería local)
+    📱 Flujo 1: [nombre del flujo]
+      Frame: Pantalla 1
+      Frame: Pantalla 2
+      Frame: Pantalla N
+    📱 Flujo 2: [nombre del flujo]
+```
 
-## Paso 5 — Registro y política
+## Fase 3: Componentes esenciales en Figma
 
-Qué se anota por asunto: herramienta usada, tipo de tarea, si hubo anonimización, quién revisó. Y el texto de dos líneas para informar al cliente del uso de herramientas de apoyo, cuando corresponda.
+**Los 5 componentes que aceleran cualquier prototipo:**
 
-## Entregables
+**1. Auto Layout para contenedores adaptativos:**
+Usa Auto Layout en todos los contenedores que necesiten adaptarse al contenido. La configuración más útil: gap entre elementos, padding interno y resize según contenido. Evita las posiciones absolutas dentro de contenedores que van a cambiar.
 
-1. Matriz de qué se puede procesar y con qué condiciones.
-2. Procedimiento de anonimización con ejemplo.
-3. Lista de tareas por nivel, adaptada a mi práctica.
-4. Lista de verificación obligatoria previa a usar cualquier salida.
-5. Esquema de registro y texto de información al cliente.
+**2. Variables para texto real:**
+Sustituye Lorem Ipsum por texto real desde el primer wireframe. El texto falso impide detectar problemas de truncamiento, jerarquía visual y comprensión del usuario.
+
+**3. Overlays y modals:**
+En Figma puedes crear modals y overlays que aparecen sobre la pantalla sin duplicar toda la pantalla. Usa "Open overlay" en los prototipos en lugar de crear pantallas duplicadas con el modal abierto.
+
+**4. Scroll vertical con Fixed elements:**
+Para prototipar navbars o footers fijos mientras el contenido hace scroll: agrupa el contenido en un frame con "Clip content" y "Overflow scrolling", y posiciona los elementos fijos fuera del grupo scrollable.
+
+**5. Conditional logic con Variables de Figma:**
+Para prototipos más avanzados, usa Variables booleanas para mostrar/ocultar estados (toggle on/off, logged in/out, empty/filled). Esto permite un prototipo interactivo sin duplicar pantallas para cada estado.
+
+## Fase 4: El flujo de prototipado en 2 horas
+
+**Minuto 0-20: Sketching rápido en papel o Figjam**
+Antes de Figma: dibuja a mano los 3-5 pantallas principales del flujo. No busques la perfección, busca la secuencia lógica. ¿Qué ve el usuario primero? ¿Qué ocurre cuando hace clic en X?
+
+**Minuto 20-60: Wireframes en Figma**
+Crea los frames con el tamaño correcto del dispositivo objetivo. Coloca los elementos usando Auto Layout. Usa texto real. No pierdas tiempo con colores o fuentes: todo en gris #333 y #999.
+
+**Minuto 60-90: Conexiones y interacciones**
+Activa el modo Prototype en Figma. Conecta los frames con interacciones básicas: On Click → Navigate to. Para los flujos más importantes añade transiciones (Smart Animate o Slide In). Crea un Starting Frame claro.
+
+**Minuto 90-120: Test y ajuste**
+Presenta el prototipo (Cmd/Ctrl + P) y haz un primer test tú mismo. ¿Hay alguna pantalla que falta? ¿Alguna interacción que no funciona? Ajusta y comparte el link con la primera persona de test.
+
+## Fase 5: Testing del prototipo
+
+**Protocolo de test de usabilidad rápido (30-45 min por usuario):**
+1. Contexto: "Imagina que eres [persona]. Acabas de descubrir esta app y vas a [objetivo]."
+2. Tarea: "Por favor, [tarea concreta]. Piensa en voz alta mientras lo haces."
+3. Observación: No interfieras. Toma nota de: dónde se detiene, qué dice, dónde hace clic y falla.
+4. Preguntas post-test: "¿Qué esperabas que ocurriera cuando...? / ¿Qué parte fue confusa?"
+
+**Con 5 usuarios detectas el 85% de los problemas de usabilidad.** No necesitas grupos de 20 personas.
+
+**Template de reporte rápido tras los tests:**
+| Problema | Frecuencia | Severidad (1-3) | Solución propuesta |
+|---------|-----------|----------------|-------------------|
+| | | | |
+
+## Entregable: Protocolo de prototipado para mi caso
+
+Dime la funcionalidad o flujo que quieres prototipar y te daré: lista de pantallas necesarias, componentes clave a crear, interacciones mínimas para el test, tareas para los usuarios de test y las métricas que indicarán si el diseño funciona.
 PROMPT,
                 'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Definir el flujo de revisión documental asistida por IA en un despacho o departamento legal con anonimización, verificación obligatoria y registro',
-                'vote_score'       => 35,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 8,
-                'title'            => 'Evaluación de impacto en protección de datos para un proyecto con IA',
-                'description'      => 'Determina si el proyecto necesita EIPD y, si la necesita, construye el documento: descripción del tratamiento, necesidad y proporcionalidad, riesgos para las personas y medidas.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como especialista en protección de datos con experiencia en evaluaciones de impacto de proyectos con inteligencia artificial. Tengo un proyecto y quiero saber si hace falta EIPD y, en su caso, producir el borrador.
-
-Nota: esto genera un borrador estructurado y las preguntas que hay que responder. La valoración final y la firma corresponden a quien ejerza la función de delegado de protección de datos o al asesor competente.
-
-## Contexto que necesito
-
-1. Qué hace el proyecto y para qué se usa la IA en él.
-2. Datos personales tratados: categorías, de quién, volumen y origen.
-3. Si hay decisiones automatizadas con efecto sobre las personas.
-4. Si hay categorías especiales de datos (salud, biometría, ideología, etc.).
-5. Base jurídica prevista y quién es responsable del tratamiento.
-6. Proveedores implicados y ubicación del tratamiento.
-
-## Paso 1 — ¿Hace falta EIPD?
-
-Analiza los criterios de riesgo alto y dime cuáles concurren, cuáles no y cuáles son dudosos:
-
-- Evaluación o puntuación de personas, incluido perfilado.
-- Decisiones automatizadas con efecto jurídico o significativo.
-- Observación sistemática.
-- Datos de categorías especiales o de carácter altamente personal.
-- Tratamiento a gran escala.
-- Cruce o combinación de conjuntos de datos.
-- Datos de personas vulnerables.
-- Uso innovador de tecnología.
-- Impedir el ejercicio de un derecho o el acceso a un servicio.
-
-Con dos criterios suele ser exigible; con uno, conviene documentar el análisis aunque se concluya que no. Da un veredicto claro y su justificación.
-
-## Paso 2 — Descripción del tratamiento
-
-Estructura: finalidades, categorías de datos e interesados, origen, destinatarios y subencargados, transferencias internacionales, plazos de conservación, recorrido completo del dato con los sistemas implicados, y descripción de cómo interviene el modelo (qué entra, qué sale, qué se decide con ello).
-
-## Paso 3 — Necesidad y proporcionalidad
-
-Preguntas a responder con honestidad:
-
-- ¿Se puede conseguir la finalidad con menos datos? ¿Con datos agregados? ¿Sin IA?
-- ¿La base jurídica sostiene este tratamiento concreto, y no otro parecido?
-- ¿Cómo se informa a las personas y con qué claridad?
-- ¿Cómo se ejercen los derechos de acceso, rectificación, oposición y, si aplica, a no ser objeto de decisiones automatizadas?
-- ¿Hay intervención humana real, o es un sello formal? Describe en qué consiste: qué puede cambiar la persona que revisa y con qué información.
-
-## Paso 4 — Riesgos para los derechos de las personas
-
-Tabla con: riesgo, cómo se materializa, probabilidad, gravedad para la persona (no para la empresa), medidas previstas y riesgo residual. Incluye los propios de la IA: error del modelo con consecuencia, sesgo discriminatorio, opacidad de la decisión, reutilización de datos para fines nuevos, filtración por el proveedor y falsa sensación de objetividad del resultado automático.
-
-## Paso 5 — Medidas y seguimiento
-
-Medidas técnicas y organizativas concretas, quién las implanta y cuándo se comprueban. Más el plan de revisión: cuándo se vuelve a evaluar y qué cambio del proyecto obliga a rehacer la evaluación.
-
-## Entregables
-
-1. Veredicto sobre la exigibilidad de la EIPD, con los criterios concurrentes.
-2. Descripción del tratamiento completa.
-3. Análisis de necesidad y proporcionalidad con las preguntas respondidas y los huecos marcados.
-4. Tabla de riesgos con medidas y riesgo residual.
-5. Plan de medidas y de revisión, y lista de preguntas pendientes para el responsable.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 50,
-                'use_case'         => 'Determinar si un proyecto con IA requiere evaluación de impacto en protección de datos y construir el borrador con riesgos y medidas',
-                'vote_score'       => 34,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 8,
-                'title'            => 'Inventario y clasificación de los sistemas de IA en uso en la empresa',
-                'description'      => 'El registro que permite saber qué IA se usa, para qué, con qué datos y con qué nivel de riesgo, base de cualquier cumplimiento posterior y de las respuestas a clientes y auditores.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como responsable de cumplimiento con experiencia en gobierno de la inteligencia artificial. Quiero construir el inventario de sistemas de IA de la empresa y clasificarlos, porque hoy nadie sabe con certeza qué se usa ni dónde.
-
-Nota: la calificación jurídica definitiva de cada sistema y las obligaciones aplicables las valida el asesor competente. Este trabajo produce el inventario y una clasificación preliminar bien documentada, que es lo que hace posible todo lo demás.
-
-## Contexto que necesito
-
-1. Sector y tamaño de la empresa, y si opera en varios países.
-2. Áreas de negocio y procesos principales.
-3. Lo que ya sabes que se usa, incluidas herramientas contratadas por áreas por su cuenta.
-4. Si desarrolláis IA propia o solo usáis herramientas de terceros.
-5. Quién puede ser responsable del registro.
-
-## Paso 1 — Cómo encontrar lo que hay
-
-La mayor parte del inventario no está en ninguna lista. Fuentes a cruzar:
-
-- Facturación y gastos con tarjeta: suscripciones de software.
-- Aplicaciones conectadas a las cuentas corporativas.
-- Encuesta a las áreas, sin sanción por declarar.
-- Funciones de IA incorporadas a herramientas que ya usáis (el ofimático, el CRM, el gestor de tickets, la herramienta de contratación). Este es el bloque que más se olvida: la IA que llegó dentro de un producto que ya teníais.
-- Automatizaciones y scripts internos que llaman a un modelo.
-
-## Paso 2 — Ficha por sistema
-
-| Campo | Contenido |
-|---|---|
-| Nombre y proveedor | |
-| Área y proceso donde se usa | |
-| Finalidad | Qué decide o produce |
-| Papel de la empresa | Usuario, responsable del despliegue, desarrollador |
-| Datos de entrada | Incluidos personales y de terceros |
-| Salida y su uso | Informativa, apoyo a decisión, decisión automática |
-| Personas afectadas | Empleados, candidatos, clientes, terceros |
-| Supervisión humana | Existe, en qué consiste y quién |
-| Proveedor subyacente y ubicación del tratamiento | |
-| Plan contratado y condiciones sobre datos | |
-| Responsable interno | Con nombre |
-| Fecha de alta y última revisión | |
-
-## Paso 3 — Clasificación preliminar por riesgo
-
-Clasifica cada sistema y documenta el motivo:
-
-- **Prohibido o inaceptable:** usos vetados; si aparece alguno, es la prioridad absoluta y se detiene.
-- **Alto riesgo probable:** afecta a acceso al empleo, evaluación de personas, crédito, educación, servicios esenciales, seguridad. Requiere análisis específico.
-- **Obligaciones de transparencia:** interacción con personas, generación o manipulación de contenido.
-- **Riesgo limitado o mínimo:** apoyo interno sin efecto sobre terceros.
-
-Señala especialmente los sistemas donde la salida se usa como decisión sin que nadie con criterio la revise: ahí está casi siempre el problema real, con independencia de la etiqueta.
-
-## Paso 4 — Huecos y acciones
-
-Para cada sistema: qué falta documentar, qué hay que pedir al proveedor, qué medida hay que implantar y en qué plazo. Ordenado por riesgo, no por facilidad.
-
-## Paso 5 — Mantenimiento
-
-- Alta obligatoria en el registro como paso del proceso de compra de cualquier herramienta.
-- Revisión semestral con fecha fijada.
-- Responsable único del registro y suplente.
-- Uso del registro para responder cuestionarios de clientes y auditorías: si está bien hecho, esa respuesta pasa de días a una hora.
-
-## Entregables
-
-1. Guía de búsqueda para completar el inventario, con las fuentes concretas.
-2. Plantilla de ficha lista para rellenar.
-3. Inventario preliminar con lo que ya me has contado, y las fichas incompletas marcadas.
-4. Clasificación por riesgo con justificación.
-5. Plan de acciones priorizado y procedimiento de mantenimiento.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Construir el inventario de sistemas de IA en uso en la empresa con fichas completas y clasificación preliminar por riesgo',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 30,
+                'use_case'         => 'Crear prototipos funcionales en Figma en pocas horas para validar hipótesis de diseño con usuarios antes de empezar a programar.',
                 'vote_score'       => 36,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 8,
-                'title'            => 'Accesibilidad digital obligatoria: qué exige y cómo se documenta el cumplimiento',
-                'description'      => 'Traduce la obligación de accesibilidad de webs, apps y comercio electrónico en un plan verificable: alcance, criterios técnicos, evidencias y declaración de accesibilidad.',
+                'profession_id'    => 4,
+                'title'            => 'Sales playbook',
+                'description'      => 'El documento que estandariza el proceso de ventas, acelera el onboarding y mantiene la calidad cuando el equipo escala.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como consultor de cumplimiento en accesibilidad digital. Quiero saber qué nos aplica, qué hay que hacer y cómo se demuestra.
+Actúa como un VP de Ventas con experiencia construyendo procesos de ventas escalables en empresas B2B en crecimiento. Mi objetivo es crear un sales playbook completo que estandarice cómo vende mi equipo, acelere el tiempo hasta la primera venta de los nuevos miembros y mantenga la calidad del proceso cuando el equipo crezca de 3 a 15 personas.
 
-Nota: la accesibilidad de productos y servicios digitales es exigible en la Unión Europea desde el 28 de junio de 2025, con transposición en España a través del Real Decreto 193/2023, con matices de alcance según tipo de empresa y de servicio. Contrasta la aplicación concreta a tu caso con asesoría especializada; aquí construimos el plan operativo.
+## Por qué la mayoría de los sales playbooks no funcionan
 
-## Contexto que necesito
+Un playbook de ventas que acumula polvo digital existe en el 80% de las empresas con más de 5 vendedores. No funcionan porque: están escritos por marketing, no por los vendedores que realmente cierran deals; tienen demasiado sobre el producto y muy poco sobre el cliente; describen lo que debería pasar, no lo que pasa de verdad; y nadie los actualiza cuando el mercado o el producto cambia.
 
-1. Qué tenéis: web corporativa, tienda en línea, aplicación móvil, aplicación de cliente, quioscos o terminales.
-2. Tamaño de la empresa: plantilla y facturación aproximada.
-3. Si vendéis a consumidores por internet.
-4. Sector, porque hay servicios con reglas propias (banca, transporte, telecomunicaciones, audiovisual, libro electrónico).
-5. Estado actual: ¿hay alguna auditoría de accesibilidad hecha?
+Un buen playbook es una herramienta de trabajo, no un documento para impresionar a inversores.
 
-## Paso 1 — Alcance
+## Módulo 1: El cliente ideal (ICP y personas)
 
-Dime qué nos aplica y qué no, con el razonamiento. Presta atención a la confusión más habitual: el hecho de ser una empresa pequeña no exime automáticamente si se presta un servicio de comercio electrónico a consumidores. Y señala los supuestos donde caben excepciones y qué habría que documentar para invocarlas.
+**Ideal Customer Profile (ICP) — criterios objetivos:**
+Define los atributos que hacen que un cliente sea bueno para tu empresa, no solo para cerrar el deal:
 
-## Paso 2 — Criterios técnicos y prioridad
+| Atributo | Valor ideal | Señal de alerta |
+|---------|------------|----------------|
+| Tamaño de empresa | 50-500 empleados | < 10 o > 5.000 |
+| Industria | Tech, SaaS, servicios profesionales | Manufactura, retail |
+| Presupuesto disponible | > 10.000€/año | < 5.000€/año |
+| Urgencia del problema | Problema activo, están buscando solución | "Lo necesitaremos en el futuro" |
+| Decisor accesible | Puedes hablar con el decisor en < 2 semanas | Acceso solo a nivel junior |
+| Expansión posible | > 3 potenciales usuarios en la empresa | Solo 1 usuario |
 
-Traduce la obligación a comprobaciones concretas, ordenadas por impacto real en las personas y por frecuencia de incumplimiento:
+**Personas de compra — los roles que aparecen en el proceso:**
+- **Champion**: el que quiere que la solución exista dentro de la empresa. Tu aliado interno.
+- **Economic buyer**: el que firma el presupuesto. A menudo no es el usuario.
+- **Technical buyer**: el que valida la seguridad, la integración y el contrato.
+- **End user**: quien usará el producto a diario. Puede ser un bloqueador si no está convencido.
 
-| Criterio | Qué se comprueba | Frecuencia del fallo |
-|---|---|---|
-| Contraste de color | Texto y elementos de interfaz | Muy alta |
-| Navegación por teclado | Todo el flujo, con foco visible | Muy alta |
-| Alternativas textuales | Imágenes, iconos, gráficos con información | Alta |
-| Formularios | Etiquetas asociadas, errores identificados y descritos | Alta |
-| Estructura semántica | Encabezados, listas, regiones, tablas | Alta |
-| Compatibilidad con lector de pantalla | Recorridos principales completos | Media |
-| Contenido multimedia | Subtítulos y alternativas | Media |
-| Movimiento y tiempos | Poder detener animaciones y ampliar plazos | Media |
-| Zoom y adaptación | Hasta el 200% sin pérdida de contenido | Media |
+Para cada persona: qué le importa, qué le preocupa, cómo habla de su problema y qué necesita ver para dar el OK.
 
-## Paso 3 — Cómo se audita
+## Módulo 2: El proceso de ventas paso a paso
 
-Método en tres capas, porque ninguna basta sola: comprobación automática (detecta una parte), revisión manual guiada por criterios, y prueba con personas usuarias de tecnologías de apoyo en los recorridos críticos. Define muestra de páginas y flujos: portada, plantillas principales, un proceso completo de compra o registro, formularios y área privada.
+**Las 6 etapas del proceso y cómo saber en cuál estamos:**
 
-## Paso 4 — Documentación del cumplimiento
+| Etapa | Criterio de entrada | Criterio de salida | Probabilidad |
+|-------|--------------------|--------------------|-------------|
+| 1. Prospecto | Encaja con ICP | Responde primer contacto | 10% |
+| 2. Descubrimiento | Primera reunión acordada | Pain validado, existe presupuesto | 25% |
+| 3. Demo/Propuesta | Pain confirmado + decisor identificado | Demo completa + propuesta enviada | 40% |
+| 4. Evaluación | Propuesta revisada por decisor | Negociación activa | 60% |
+| 5. Negociación | Intención de compra verbal | Contrato enviado | 80% |
+| 6. Cierre | Contrato enviado | Firmado y pagado | 95% |
 
-- Informe de auditoría con hallazgos, criterio incumplido, gravedad y plantilla afectada.
-- Plan de remediación con responsable y fecha, priorizado por impacto.
-- Declaración de accesibilidad publicada: estado, alcance, contenido no accesible y por qué, mecanismo de contacto y fecha de revisión.
-- Evidencias conservadas: informes, correcciones, formación del equipo.
+**Para cada etapa, el playbook debe incluir:**
+- El objetivo de la etapa (qué información necesitamos obtener)
+- Las preguntas clave que debemos hacer
+- Los materiales de apoyo (deck, case study, propuesta tipo)
+- Los criterios exactos para avanzar o descartar el deal
 
-## Paso 5 — Que no se rompa
+## Módulo 3: Scripts y frameworks de conversación
 
-La accesibilidad se pierde en el siguiente despliegue si no se integra: criterios en la definición de terminado, comprobación automática en el proceso de publicación, formación de diseño y desarrollo, y revisión de plantillas nuevas antes de publicar.
+**Framework de descubrimiento (MEDDIC o SPIN adaptado):**
 
-## Entregables
+MEDDIC para ventas enterprise:
+- **M — Metrics**: ¿Qué métricas impacta este problema? ¿Cuánto les cuesta no resolverlo?
+- **E — Economic buyer**: ¿Quién tiene la firma del presupuesto?
+- **D — Decision criteria**: ¿Con qué criterios van a tomar la decisión?
+- **D — Decision process**: ¿Cómo se toman las decisiones de compra en su empresa?
+- **I — Identify pain**: ¿Cuál es el impacto concreto de no resolver esto?
+- **C — Champion**: ¿Quién dentro de la empresa quiere que esto funcione?
 
-1. Alcance aplicable a mi caso, razonado.
-2. Lista de comprobaciones priorizada.
-3. Diseño de la auditoría con muestra de páginas y flujos.
-4. Estructura del informe, del plan de remediación y de la declaración.
-5. Medidas de integración para no reincidir.
+**Script de primera llamada (15 minutos):**
+```
+Apertura (1 min):
+"[Nombre], gracias por hacer tiempo. He investigado [empresa] y vi que [observación específica].
+Tenemos 15 minutos: prefiero dedicarlos a entender tu situación antes de contarte nada
+de nosotros. ¿Te parece bien si empiezo con algunas preguntas?"
+
+Descubrimiento (10 min):
+1. "¿Cómo estáis gestionando [proceso que resuelves] actualmente?"
+2. "¿Cuál es el mayor dolor en ese proceso?"
+3. "¿Qué impacto tiene ese problema en vuestros resultados?"
+4. "¿Habéis intentado resolverlo antes? ¿Qué pasó?"
+
+Cierre de la llamada (4 min):
+"Basándome en lo que me has contado, creo que podemos ayudar con [X].
+¿Tiene sentido que exploremos más? Podría mostrarte [solución específica al pain]
+en una sesión de 45 minutos con [persona relevante de tu equipo]. ¿La semana que viene?"
+```
+
+## Módulo 4: Gestión de objeciones
+
+**Las 5 objeciones más frecuentes y cómo responderlas:**
+
+**"Es muy caro"**
+No bajéis el precio directamente. Primero entiende qué hay detrás:
+- "Comparado con qué alternativa?" (puede ser un competidor, Excel, o no hacer nada)
+- "¿Cuánto os cuesta el problema que esto resuelve cada mes?"
+- Recalcula el ROI con sus números reales, no los tuyos
+
+**"Ahora no es el momento"**
+- "¿Qué necesitaría cambiar para que fuera el momento?"
+- Si la respuesta es vaga, el problema no es prioritario → descalifica o pausa
+- Si la respuesta es concreta, convierte ese hito en un trigger para retomar
+
+**"Lo necesitamos revisar con el equipo técnico / jurídico"**
+- "¿Podemos hacer esa revisión juntos? Tenemos experiencia respondiendo las preguntas que suelen surgir"
+- Ofrece un documento de seguridad / un legal FAQ que anticipen las dudas
+
+## Módulo 5: Onboarding de nuevos vendedores
+
+**Plan de 30-60-90 días:**
+| Semana 1-2 | Semana 3-4 | Mes 2 | Mes 3 |
+|-----------|-----------|-------|-------|
+| Producto + ICP | Shadowing de demos | Demos propias con supervisor | Pipeline propio con cuota |
+| Proceso interno | Primera llamada de descubrimiento supervisada | Gestión de objeciones | Cuota completa |
+| Herramientas (CRM, etc) | Rol play de objeciones | Primer cierre asistido | Autonomía total |
+
+**Métricas de ramp esperadas:**
+- Semana 4: primera oportunidad calificada propia
+- Mes 2: primera demo propia sin supervisor
+- Mes 3: primer cierre (asistido si es necesario)
+- Mes 4-5: velocidad de cruising speed (80% de cuota)
+
+## Entregable: Playbook completo para mi equipo
+
+Comparte conmigo: qué vendes, a quién, precio medio, ciclo de venta actual y tamaño del equipo. Construyo el playbook completo adaptado a tu proceso real con todos los módulos anteriores rellenados con tu información específica.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Crear un sales playbook completo y funcional que estandarice el proceso de ventas, acelere el onboarding y sea la guía real que usa el equipo cada día.',
+                'vote_score'       => 44,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 5,
+                'title'            => 'Product strategy colaborativa',
+                'description'      => 'Involucra a engineering, design, sales y marketing en la estrategia sin comités interminables ni decisiones que nadie entiende.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un Chief Product Officer con experiencia construyendo procesos de estrategia de producto que involucran a múltiples equipos sin convertirse en burocracia paralizante. Mi desafío es que cada equipo tiene perspectivas y prioridades diferentes, y necesito un proceso que integre esas perspectivas sin que el producto termine siendo un Frankenstein que intenta satisfacer a todos y no sirve a nadie.
+
+## El problema de la estrategia de producto en silos
+
+En la mayoría de las empresas, la estrategia de producto se crea en una sala pequeña (PM + CEO) y se presenta al resto del mundo. El resultado predecible: engineering tiene reservas técnicas que nadie preguntó, sales dice que los clientes quieren otra cosa, design señala inconsistencias con la visión, y marketing no entiende el posicionamiento. Todos implementan sin convicción y el producto sufre.
+
+La alternativa no es un comité donde todos votan. Es un proceso estructurado donde cada equipo aporta lo que sabe mejor, se toman decisiones claras y el proceso genera convicción, no solo alineamiento superficial.
+
+## Fase 1: Inputs de cada equipo antes de la sesión de estrategia
+
+Antes de sentarse juntos, cada equipo debe preparar su perspectiva específica. El PM integra estas perspectivas, no las promedia.
+
+**Engineering — what's possible:**
+- Deuda técnica que limita qué se puede construir y en qué plazo
+- Estimación de esfuerzo de las iniciativas en discusión (rough order of magnitude)
+- Riesgos técnicos conocidos y su impacto
+- Oportunidades técnicas que el resto de la empresa no conoce (cosas que ya podemos hacer mejor de lo que usamos)
+
+**Design — what's desirable:**
+- Hallazgos de research: lo que los usuarios dicen vs. lo que realmente hacen
+- Problemas de UX actuales que bloquean retención o adopción
+- Oportunidades de diseño identificadas en el uso real del producto
+- Benchmark de experiencia de usuario vs. competidores
+
+**Sales — what's sellable:**
+- Las 5 objeciones más frecuentes en el proceso de ventas
+- Los 3 deals más grandes perdidos en los últimos 6 meses y por qué
+- La funcionalidad que se menciona más en demos como diferenciador
+- Los clientes que se van y el motivo principal
+
+**Marketing — what's marketable:**
+- Posicionamiento actual vs. cómo nos percibe el mercado (si hay datos)
+- Las categorías y términos de búsqueda con más volumen en el espacio
+- Los mensajes que mejor convierten en paid y orgánico
+- Oportunidades de categoría o posicionamiento que el producto podría aprovechar
+
+**Customer Success — what's sticky:**
+- Las funcionalidades con más uso y cuáles tienen el uso más bajo
+- Los patrones de comportamiento de los clientes que renuevan vs. los que se van
+- Los workflows que los clientes han construido y que no documentamos
+- El "aha moment" real: qué hace el usuario en su primera semana que predice la retención
+
+## Fase 2: La sesión de estrategia (formato)
+
+**Duración recomendada:** 3-4 horas en un solo bloque, no 8 sesiones de 1 hora.
+
+**Estructura de la sesión:**
+
+**Bloque 1 — Contexto compartido (45 min):**
+- El PM presenta el estado actual: métricas de retención, activación y crecimiento
+- Cada equipo comparte sus 3 insights más importantes (no un informe, 3 puntos)
+- Regla: no se proponen soluciones todavía, solo se comparte contexto
+
+**Bloque 2 — Definición del problema estratégico (30 min):**
+- A partir de los inputs, el grupo identifica cuál es el problema estratégico central del producto para los próximos 6 meses
+- Formato: "Los usuarios de [perfil] no consiguen [resultado] porque [causa raíz]. Si resolvemos esto, [impacto esperado en la métrica X]."
+- El PM propone, el grupo debate y valida
+
+**Bloque 3 — Generación de opciones estratégicas (45 min):**
+Cada equipo propone 1-2 apuestas estratégicas que resuelvan el problema central desde su perspectiva. Regla: las propuestas deben ser mutuamente excluyentes o claramente priorizables, no aditivas.
+
+**Bloque 4 — Evaluación y decisión (60 min):**
+Evalúa cada opción en 4 dimensiones:
+| Opción | Impacto esperado | Esfuerzo estimado | Riesgo | Alineamiento con visión |
+|--------|----------------|------------------|--------|------------------------|
+| | | | | |
+
+El PM toma la decisión final con transparencia sobre los trade-offs elegidos.
+
+**Bloque 5 — Compromisos explícitos (30 min):**
+Para la opción elegida: qué hace cada equipo, con qué recursos, en qué plazos y cuáles son los hitos de validación que indicarán si la apuesta está funcionando o hay que pivotar.
+
+## Fase 3: Comunicación hacia afuera de la sesión
+
+**El documento de estrategia mínimo viable:**
+Una sola página con: el problema que resolvemos en los próximos 6 meses, las 2-3 apuestas principales ordenadas por prioridad, los criterios de éxito de cada apuesta y lo que explícitamente NO haremos (igual de importante).
+
+**Cómo comunicarlo a la empresa:**
+- All-hands de 20 minutos: problema, apuesta, por qué, qué no haremos
+- Sesión de Q&A separada para los que quieren profundizar
+- Un canal Slack o Notion page con el documento y actualizaciones semanales del progreso
+
+## Fase 4: Revisión y adaptación
+
+**Cadencia de revisión:**
+- Semanal: métricas de ejecución (velocidad de desarrollo, activación de la feature)
+- Mensual: revisión de las hipótesis con datos reales
+- Trimestral: ¿sigue siendo correcta la apuesta o hay que pivotar?
+
+**Cuándo revisar la estrategia antes del ciclo:**
+Si una métrica crítica (retención, activación) cambia > 15% inesperadamente, o si emerge información nueva de mercado que invalida las hipótesis centrales.
+
+## Entregable para mi caso
+
+Describe el contexto de tu producto: etapa, equipo, métricas actuales y el desafío de alineamiento que tienes. Diseñaré el proceso de strategy colaborativa adaptado a tu realidad, con las preguntas exactas para cada equipo y el formato de sesión que mejor funcione dado el tamaño y la cultura de tu organización.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'advanced',
                 'estimated_minutes'=> 45,
-                'use_case'         => 'Determinar el alcance de la obligación de accesibilidad digital y construir el plan de auditoría, remediación y declaración de cumplimiento',
+                'use_case'         => 'Diseñar un proceso de product strategy que involucre genuinamente a engineering, design, sales y marketing para tomar mejores decisiones con más convicción.',
+                'vote_score'       => 39,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 6,
+                'title'            => 'Cultura en adquisiciones',
+                'description'      => 'Mantén la identidad cultural de tu empresa cuando eres adquirido o cuando integras una empresa que has comprado.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un experto en integración cultural post-M&A con experiencia en procesos de adquisición tanto desde el lado del comprador como del vendido. Ayúdame a navegar el proceso de integración cultural para preservar lo que hace únicos a los equipos de ambas empresas y construir algo mejor que la suma de las partes.
+
+## Por qué fracasan culturalmente las adquisiciones
+
+El 70-80% de las adquisiciones no generan el valor esperado. La razón principal no es estratégica ni financiera: es cultural. Cuando dos empresas se unen, también chocan dos sistemas de valores, dos formas de tomar decisiones, dos visiones de lo que significa trabajar bien.
+
+Los errores más frecuentes son: asumir que la empresa compradora tiene la cultura correcta, ignorar la cultura hasta que los problemas son evidentes, y tratar la integración cultural como un proyecto de RRHH cuando es responsabilidad del liderazgo.
+
+## Fase 1: Diagnóstico cultural antes de la integración
+
+**El Due Diligence cultural (lo que suele ignorarse):**
+
+Antes de cerrar la adquisición —o inmediatamente después si ya está cerrada— necesitas entender la cultura real de la empresa que se integra, no la que describe su web:
+
+**Preguntas de diagnóstico para líderes y empleados clave:**
+1. "¿Cómo se toman las decisiones importantes aquí? ¿Quién tiene realmente la última palabra?"
+2. "¿Qué ocurre cuando alguien comete un error grave? Dame un ejemplo."
+3. "¿Qué es lo que más valoras de trabajar aquí? ¿Qué es lo que más te frustra?"
+4. "Si pudieras cambiar una sola cosa, ¿qué sería?"
+5. "¿Qué temes que ocurra con la adquisición?"
+
+**Dimensiones culturales a mapear:**
+| Dimensión | Empresa A | Empresa B | Tensión potencial |
+|-----------|----------|----------|------------------|
+| Toma de decisiones (centralizada/distribuida) | | | |
+| Comunicación (directa/formal) | | | |
+| Tolerancia al riesgo | | | |
+| Orientación (resultados/proceso) | | | |
+| Jerarquía vs. horizontalidad | | | |
+| Velocidad vs. cuidado | | | |
+
+Mapea estas dimensiones para ambas empresas y tendrás una visión clara de dónde van a surgir los conflictos.
+
+## Fase 2: Diseño del modelo de integración
+
+**Los 4 modelos de integración cultural:**
+
+**Modelo 1: Absorción**
+La empresa compradora impone su cultura. Funciona cuando la empresa adquirida es pequeña, tiene problemas culturales evidentes o el objetivo es principalmente tecnología/talento. Riesgo: pérdida del talento clave que vino con la cultura de la empresa adquirida.
+
+**Modelo 2: Preservación**
+La empresa adquirida mantiene su autonomía cultural. Funciona en adquisiciones donde la diferenciación cultural es parte del valor (una empresa creativa adquirida por un corporativo). Riesgo: la integración real nunca ocurre y los dos grupos nunca se benefician mutuamente.
+
+**Modelo 3: Fusión**
+Se construye una cultura nueva tomando lo mejor de ambas. Es el más ambicioso y el que más requiere liderazgo activo. Funciona cuando hay respeto mutuo y tiempo para hacerlo bien.
+
+**Modelo 4: Transformación**
+La adquisición es el catalizador para un cambio cultural más amplio en la empresa compradora. Poco frecuente pero poderoso cuando el objetivo estratégico es transformar la cultura de la empresa principal.
+
+Elige el modelo según el objetivo estratégico de la adquisición, no según la preferencia del comprador.
+
+## Fase 3: Comunicación en los primeros 100 días
+
+**Los primeros 72 horas son críticos:**
+
+Lo que los empleados de la empresa adquirida necesitan saber inmediatamente:
+1. ¿Me voy a quedar? (¿hay despidos previstos?)
+2. ¿Quién es mi manager ahora?
+3. ¿Cambia mi compensación?
+4. ¿Qué va a cambiar primero?
+5. ¿A quién puedo preguntar si tengo dudas?
+
+La ausencia de respuesta a estas preguntas genera los peores escenarios: rumores, búsquedas de empleo, pérdida de productividad.
+
+**Plan de comunicación para los primeros 30 días:**
+- Día 1: All-hands conjunto con los líderes de ambas empresas. Responde las 5 preguntas anteriores directamente, incluso si la respuesta es "todavía no lo sabemos y lo comunicaremos antes del [fecha]".
+- Semana 1: Reuniones 1:1 del CEO/liderazgo con los 10-15 empleados más críticos de la empresa adquirida
+- Semana 2-4: Sesiones de Q&A abiertas por equipos. Sin agenda: solo preguntas
+- Mes 1: Decisiones concretas anunciadas sobre estructura organizativa
+
+## Fase 4: Construcción de la cultura combinada
+
+**Los 4 rituales de integración que funcionan:**
+
+**1. Proyectos mixtos desde el día 1:**
+Forma equipos con personas de ambas empresas para trabajar en un proyecto real desde la primera semana. No un ejercicio de team building: trabajo real con entregable concreto. La cultura se aprende trabajando juntos, no en talleres.
+
+**2. Documentación de los "cómo hacemos las cosas":**
+Cada empresa tiene formas de hacer las cosas que no están escritas en ningún sitio. Documenta explícitamente los procesos de ambas, compáralos y decide conscientemente cuál adoptar o si hay un tercer camino mejor.
+
+**3. Embajadores culturales bidireccionales:**
+Identifica en cada empresa a 2-3 personas que encarnen los valores de su empresa y conviértelas en embajadores en la otra. No deben vender la cultura: deben escuchar y compartir cómo hacen las cosas en su empresa.
+
+**4. Victorias tempranas intencionadas:**
+Diseña 2-3 victorias rápidas (primeras 4-6 semanas) que demuestren que la unión aporta valor a los empleados de ambas empresas. Una victoria que solo beneficia al comprador refuerza la percepción de conquista, no de unión.
+
+## Fase 5: Métricas de integración cultural
+
+**Cómo medir si la integración cultural va bien:**
+- Employee NPS medido por separado para cada grupo durante los primeros 6 meses
+- Retención del talento clave de la empresa adquirida (define quién es "clave" antes de cerrar el trato)
+- Número de proyectos colaborativos cross-empresa
+- Velocidad de decisiones cross-empresa (una señal de confianza)
+- Absentismo y bajas voluntarias vs. tendencia histórica
+
+Si el eNPS cae > 15 puntos en los primeros 3 meses, hay un problema de integración que requiere atención urgente.
+
+## Entregable: Plan de integración para tu caso
+
+Comparte: ¿cuál es tu rol (comprador o adquirido)?, ¿en qué momento del proceso estás?, ¿cuáles son las diferencias culturales más evidentes que ya detectas? Con esa información, diseño el plan de integración específico para tu situación con las acciones concretas para los primeros 100 días.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Gestionar la integración cultural en una adquisición empresarial para preservar el talento y los valores de ambas empresas y construir algo más valioso que la suma de las partes.',
+                'vote_score'       => 28,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 7,
+                'title'            => 'Modelo de previsión de ingresos',
+                'description'      => 'Construye el forecast de ingresos que el board y los inversores encuentran creíble y que el equipo puede ejecutar.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un CFO con experiencia construyendo modelos financieros para empresas en crecimiento que presentan ante boards e inversores. Necesito crear un modelo de previsión de ingresos que sea riguroso, defendible y que el equipo comercial pueda usar como herramienta de gestión, no solo como ejercicio para reportar.
+
+## La diferencia entre un forecast que se usa y uno que se archiva
+
+Un mal modelo de ingresos tiene dos síntomas: el CEO lo presenta al board con poco convencimiento y el equipo de ventas lo ignora porque no refleja cómo venden realmente. Un buen modelo es la herramienta que el equipo de ventas usa para gestionar el pipeline y el CEO usa para tomar decisiones de contratación e inversión.
+
+El criterio de calidad de un forecast no es la precisión a 12 meses (nadie puede ser preciso a 12 meses). Es la consistencia de los supuestos, la transparencia sobre la incertidumbre y la capacidad de actualizar el modelo rápidamente cuando cambia la realidad.
+
+## Bloque 1: Elección del modelo de forecast según el modelo de negocio
+
+**Modelo A: Bottom-up para empresas con pipeline comercial**
+Parte del pipeline real de ventas para proyectar los ingresos de los próximos 3-6 meses, y usa supuestos de crecimiento de pipeline para los meses siguientes.
+
+**Cómo construirlo:**
+1. Toma el pipeline actual por etapa de venta
+2. Aplica la tasa de conversión histórica de cada etapa a la siguiente
+3. Aplica el ciclo de venta medio para estimar cuándo se cerrarán
+4. Suma a los ingresos recurrentes actuales (si tienes MRR/ARR)
+
+**Fórmula simplificada:**
+```
+Ingresos mes N =
+  MRR actual × (1 - churn rate)
+  + Pipeline en etapa 4-5 × win rate
+  + Pipeline en etapa 3 × win rate × 0.5 (ajuste por tiempo de ciclo)
+  + Pipeline por generar (supuesto de generación de pipeline × win rate)
+```
+
+**Modelo B: Top-down para nuevos negocios sin histórico**
+Parte del mercado total disponible y hace supuestos sobre penetración. Menos preciso, pero necesario cuando no hay suficiente histórico de pipeline.
+
+**Modelo C: Cohort-based para SaaS y modelos de suscripción**
+Proyecta los ingresos de cada cohorte de clientes (mes de adquisición) por separado, aplicando las tasas de retención y expansión observadas en cohortes anteriores.
+
+Este es el modelo más preciso para SaaS porque captura la dinámica de retención real y el efecto de la expansión.
+
+## Bloque 2: Los supuestos críticos y cómo defenderlos
+
+**Los 7 supuestos que el board siempre pregunta:**
+
+| Supuesto | Fuente del dato | Cómo validarlo |
+|---------|----------------|----------------|
+| Tasa de conversión de pipeline | Histórico CRM últimos 12 meses | Compara por rep y por cohorte |
+| Ciclo de venta medio | Histórico CRM | Segmenta por tamaño de deal |
+| Churn rate | Análisis de cohortes de clientes | Separa logo churn de revenue churn |
+| NRR (Net Revenue Retention) | Expansión - contracción - churn | Benchmark sector: > 110% es excelente |
+| Generación de pipeline | Métricas de marketing + SDR | Relación pipeline/cuota = 3-4x |
+| Ticket medio | Histórico de deals cerrados | Segmenta por ICP y por canal |
+| Velocidad de contratación comercial | Plan de headcount | Considera ramp time (3-6 meses) |
+
+**Cómo presentar la incertidumbre con honestidad:**
+Presenta siempre 3 escenarios: base case (más probable), optimista (si 2-3 cosas salen bien) y pesimista (si hay fricción en el mercado). El rango entre optimista y pesimista comunica cuánta incertidumbre genuina hay.
+
+Un rango estrecho en un negocio joven no es señal de confianza: es señal de que no entiendes las variables de tu negocio.
+
+## Bloque 3: Estructura del modelo en hoja de cálculo
+
+**Arquitectura recomendada:**
+
+**Hoja 1 — Supuestos (la única hoja que se edita):**
+Todos los supuestos del modelo en una sola hoja con color diferente. Nadie debería tener que editar fórmulas para actualizar el modelo.
+
+**Hoja 2 — Pipeline (input desde CRM):**
+Exportación mensual del pipeline con: importe, etapa, fecha de cierre esperada, rep asignado, ICP score.
+
+**Hoja 3 — Proyección de ingresos:**
+La proyección mes a mes para 12-18 meses, construida desde los supuestos y el pipeline.
+
+**Hoja 4 — P&L simplificado:**
+Los ingresos proyectados como primera línea de un P&L que muestra la relación entre crecimiento y quema de caja.
+
+**Hoja 5 — Dashboard:**
+Los 5-7 gráficos que van en el board deck: ARR bridge, pipeline coverage, cohort retention, NRR trend, forecast vs. actual.
+
+## Bloque 4: ARR Bridge — la visualización que los inversores esperan
+
+El ARR Bridge explica cómo cambia el ARR de un período al siguiente:
+
+```
+ARR inicio del período
++ New ARR (nuevos clientes)
++ Expansion ARR (upsell/cross-sell de clientes existentes)
+- Contraction ARR (downgrade de clientes existentes)
+- Churned ARR (clientes que se van)
+= ARR fin del período
+```
+
+Esta visualización convierte el ARR en un flujo explicable. Un ARR que crece gracias a expansión es una señal de salud diferente a uno que crece solo por nuevos clientes con alto churn.
+
+## Bloque 5: Forecast vs. Actual — el proceso de seguimiento
+
+**Revisión mensual del modelo:**
+Compara el forecast del mes anterior con el resultado real. Para cada desviación significativa:
+1. ¿Es una variación de timing (el deal llegó un mes después)?
+2. ¿Es una variación de supuesto (la tasa de conversión fue diferente a la esperada)?
+3. ¿Es una variación estructural (el mercado cambió)?
+
+Solo las variaciones estructurales requieren actualizar los supuestos del modelo. Las de timing y supuesto puntual son información para mejorar la precisión futura, pero no invalidan el modelo.
+
+## Entregable: Modelo para mi empresa
+
+Comparte: modelo de negocio, métricas actuales clave (MRR/ARR, churn, pipeline) y horizonte de presentación (cuántos meses de forecast necesitas). Construyo el modelo con los supuestos específicos para tu situación y el formato de presentación para tu próximo board.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 50,
+                'use_case'         => 'Construir un modelo de previsión de ingresos riguroso y defendible que el board y los inversores encuentren creíble y que el equipo comercial use para gestionar el pipeline.',
                 'vote_score'       => 33,
                 'resource_type'    => 'prompt',
             ],
             [
                 'profession_id'    => 8,
-                'title'            => 'Canal interno de información (denuncias): implantación y gestión práctica',
-                'description'      => 'Monta el sistema interno de información con las garantías de confidencialidad y no represalia, el procedimiento de tramitación y el registro, adaptado al tamaño real de la organización.',
+                'title'            => 'Comercio electrónico transfronterizo en la UE',
+                'description'      => 'IVA OSS, obligaciones aduaneras y derechos del consumidor en ventas a otros países de la Unión Europea.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como responsable de cumplimiento con experiencia implantando canales internos de información. Quiero un sistema que funcione y que cumpla, no un formulario en la intranet que nadie usa ni nadie atiende.
+Actúa como un abogado especializado en comercio electrónico transfronterizo en la Unión Europea con conocimiento del régimen OSS de IVA, las obligaciones aduaneras y la normativa de protección del consumidor aplicable a las ventas online entre países de la UE. Mi objetivo es entender qué obligaciones legales y fiscales tengo al vender online a consumidores de otros países de la UE desde España.
 
-Nota: en España el marco es la Ley 2/2023 de protección de las personas que informen sobre infracciones normativas y lucha contra la corrupción, con obligaciones que dependen del tipo y tamaño de la entidad. Contrasta la aplicación a tu caso con asesoría; aquí diseñamos la implantación.
+## El marco regulatorio del ecommerce transfronterizo en la UE
 
-## Contexto que necesito
+La UE ha armonizado gran parte de la normativa para crear el mercado único digital, pero la implementación de algunos aspectos (especialmente el IVA) sigue siendo compleja. Desde julio de 2021, el régimen OSS (One Stop Shop) ha simplificado significativamente la gestión del IVA para ventas B2C transfronterizas.
 
-1. Tipo de entidad, plantilla y sector.
-2. Si ya existe algún canal, aunque sea informal, y cómo se atiende.
-3. Quién podría ser responsable del sistema y si tiene independencia real.
-4. Si hay representación de los trabajadores y si se ha consultado.
-5. Estructura del grupo: ¿hay filiales que puedan compartir canal?
+## Bloque 1: IVA en ventas B2C transfronterizas (régimen OSS)
 
-## Paso 1 — Diseño del canal
+**El principio del país de destino:**
+Desde 2021, el IVA de las ventas online B2C a consumidores de otros países de la UE debe aplicarse al tipo del país del comprador, no del vendedor. Si vendes a un consumidor francés, cobras IVA francés (20%), no IVA español (21%).
 
-Decisiones a tomar y recomendación para mi caso:
+**Umbral de ventas que activa la obligación:**
+- Si tus ventas B2C a todos los demás países de la UE superan los 10.000€/año, debes aplicar el IVA del país del comprador
+- Por debajo de este umbral, puedes seguir aplicando el IVA español en todas las ventas
+- Este umbral es conjunto para todas las ventas a la UE, no por país
 
-| Decisión | Opciones | Criterio |
-|---|---|---|
-| Vías de entrada | Escrita, verbal, reunión presencial a petición | La ley exige que sean posibles varias |
-| Anonimato | Permitido o no | Permitirlo aumenta el uso; complica el seguimiento |
-| Gestión | Interna o externalizada | Independencia y capacidad de tramitar |
-| Herramienta | Plataforma específica, correo dedicado, buzón físico | Trazabilidad y confidencialidad |
-| Alcance | Empleados, ex empleados, candidatos, proveedores, terceros | Suele ser más amplio de lo que se piensa |
+**El régimen OSS (One Stop Shop):**
+El OSS permite que declares y pagues el IVA de todos los países de la UE a través de un único registro en la AEAT (España), eliminando la necesidad de registrarte como contribuyente del IVA en cada país donde vendes.
 
-## Paso 2 — Responsable del sistema
+**Cómo funciona el OSS:**
+1. Te registras en el OSS a través de la sede electrónica de la AEAT
+2. En cada trimestre presentas una única declaración (modelo 369) con las ventas desglosadas por país de destino y tipo de IVA aplicable
+3. Ingresas el IVA total en España
+4. La AEAT distribuye los importes a cada administración tributaria de destino
 
-Perfil, requisitos de independencia, a quién reporta, incompatibilidades (no puede ser quien tenga conflicto con los asuntos que se van a tratar), y qué recursos necesita. Es el punto donde más implantaciones fallan: se nombra a alguien sin autonomía y el canal pierde credibilidad el primer día.
+**Los tipos de IVA por país que debes conocer:**
 
-## Paso 3 — Procedimiento de tramitación
+| País | Tipo general | Libros/Cultura | Alimentos |
+|------|-------------|---------------|----------|
+| Francia | 20% | 5,5% | 5,5-10% |
+| Alemania | 19% | 7% | 7% |
+| Italia | 22% | 4% | 4-10% |
+| Portugal | 23% | 6% | 6-13% |
+| Países Bajos | 21% | 9% | 9% |
+| Polonia | 23% | 5% | 5-8% |
 
-Con plazos concretos:
+El tipo que debes aplicar depende de la categoría del producto según la legislación del país de destino. Para algunos productos con tipos reducidos (libros, alimentos, medicamentos), el tipo puede variar significativamente.
 
-1. Acuse de recibo al informante, con el plazo máximo.
-2. Análisis preliminar de admisibilidad, con criterios escritos.
-3. Instrucción: quién investiga, cómo se recaba información, cómo se preserva la evidencia.
-4. Audiencia de la persona afectada, con garantías de presunción de inocencia.
-5. Conclusión y propuesta de medidas.
-6. Comunicación al informante del resultado, con el plazo máximo de respuesta.
-7. Archivo y conservación, con plazos y con supresión de datos innecesarios.
+**Qué no cubre el OSS:**
+- Ventas B2B (entre empresas): se sigue usando el régimen de inversión del sujeto pasivo
+- Ventas desde un almacén en otro país de la UE: puede requerir registro local
+- Bienes sujetos a impuestos especiales (alcohol, tabaco, combustibles): tienen su propio régimen
 
-Y el protocolo de conflicto: qué se hace si la información afecta al propio responsable del sistema o a la dirección.
+## Bloque 2: Aduanas dentro de la UE
 
-## Paso 4 — Protección del informante
+**La buena noticia:** dentro de la UE no hay aranceles ni controles aduaneros para el movimiento de mercancías. Los productos circulan libremente sin declaraciones aduaneras.
 
-- Prohibición de represalias y ejemplos concretos de qué cuenta como represalia (cambio de funciones, exclusión, evaluación negativa repentina).
-- Confidencialidad de la identidad y quién puede conocerla.
-- Qué hacer si se detecta una represalia: procedimiento y consecuencias.
-- Información sobre canales externos, que el informante puede usar directamente.
+**Lo que sí existe:**
+- Controles de calidad y seguridad del producto (marcado CE, etiquetado)
+- Impuestos especiales para ciertos productos (alcohol, tabaco)
+- Restricciones sanitarias para algunos productos alimentarios
 
-## Paso 5 — Implantación y cultura
+**Importante para ventas fuera de la UE:**
+Si vendes también fuera de la UE (Reino Unido, USA, etc.), el IVA de la UE no aplica, pero necesitas gestionar las declaraciones de exportación y los posibles aranceles e impuestos del país de destino.
 
-Política del sistema, comunicación a la organización, formación de responsables de equipo, cartel o página visible con las vías de acceso, y revisión anual con indicadores: comunicaciones recibidas, admitidas, tramitadas, plazos cumplidos y medidas adoptadas. Cero comunicaciones en un año no es una buena noticia: es señal de desconfianza en el canal.
+## Bloque 3: Derechos del consumidor en ventas transfronterizas
 
-## Entregables
+**La Directiva de Derechos del Consumidor (2011/83/UE) establece unos mínimos comunes:**
 
-1. Diseño del canal con las decisiones recomendadas.
-2. Perfil y encaje del responsable del sistema.
-3. Procedimiento de tramitación con plazos, listo para aprobar.
-4. Medidas de protección del informante y protocolo de represalias.
-5. Plan de comunicación, formación e indicadores de revisión anual.
+**Derecho de desistimiento (devolución sin causa):**
+- 14 días calendario desde la recepción del producto para devolver sin explicar el motivo
+- El vendedor debe reembolsar en 14 días desde la devolución o el desistimiento (lo que ocurra antes)
+- Los gastos de devolución pueden ser a cargo del comprador si se informa antes de la compra
+- Excepciones: productos personalizados, perecederos, descargados digitalmente después de la autorización expresa del comprador
+
+**Garantía legal de conformidad:**
+- Mínimo 2 años de garantía legal para bienes físicos en toda la UE
+- 1 año para bienes de segunda mano (si así se acuerda)
+- Algunos países (como Francia) tienen períodos más largos
+- Esta garantía es independiente de cualquier garantía comercial adicional del fabricante
+
+**Información precontractual obligatoria:**
+Antes de la compra, el consumidor debe recibir claramente: precio total con IVA incluido, gastos de envío, plazo de entrega estimado, política de devoluciones, datos del vendedor e información del derecho de desistimiento.
+
+## Bloque 4: Obligaciones adicionales de cumplimiento
+
+**Reglamento de servicios digitales (DSA) — aplicable si tienes plataforma:**
+Si vendes a través de un marketplace o tienes una plataforma que conecta vendedores con compradores, hay obligaciones adicionales de transparencia y eliminación de contenido ilegal.
+
+**RGPD — gestión de datos de clientes europeos:**
+Las ventas transfronterizas implican transferencia de datos personales de consumidores de otros países de la UE. El RGPD aplica uniformemente en toda la UE, pero tienes la obligación de designar un único punto de contacto y gestionar los derechos de los usuarios independientemente de su país.
+
+**Resolución de disputas online (ODR):**
+Las tiendas online que venden a consumidores de la UE deben incluir un enlace a la plataforma europea de resolución de disputas online (ec.europa.eu/consumers/odr) en su web.
+
+## Bloque 5: Checklist de cumplimiento para empezar a vender transfronterizo
+
+**Antes de vender:**
+- [ ] Registrarme en el OSS a través de la AEAT si supero o voy a superar 10.000€ en ventas transfronterizas
+- [ ] Actualizar la plataforma para aplicar el tipo de IVA correcto según el país del comprador
+- [ ] Adaptar la política de devoluciones al mínimo legal de la UE (14 días)
+- [ ] Incluir enlace a la plataforma ODR
+- [ ] Revisar que la información precontractual esté completa
+- [ ] Verificar que el etiquetado del producto cumple con los requisitos del país de destino
+
+**Trimestralmente:**
+- [ ] Presentar el modelo 369 (declaración OSS) antes del final del mes siguiente al trimestre
+- [ ] Revisar los tipos de IVA de los países destino principales (pueden cambiar)
+
+Adapta este análisis a tus productos específicos y a los países donde quieres vender. Algunos sectores (alimentación, farmacia, juguetes) tienen requisitos adicionales que analizamos en detalle si aplican a tu caso.
 PROMPT,
                 'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Diseñar e implantar el canal interno de información con procedimiento de tramitación, protección del informante e indicadores de revisión',
-                'vote_score'       => 30,
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Entender y cumplir las obligaciones de IVA (régimen OSS), aduaneras y de protección al consumidor para vender online a otros países de la Unión Europea desde España.',
+                'vote_score'       => 41,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 8,
-                'title'            => 'Reclamaciones por decisiones automatizadas: derecho a explicación e intervención humana',
-                'description'      => 'Prepara el procedimiento para responder cuando alguien impugna una decisión tomada con apoyo automático: qué hay que poder explicar, quién revisa y qué se documenta.',
+                'profession_id'    => 9,
+                'title'            => 'Análisis de causa raíz de tickets',
+                'description'      => 'Convierte los tickets repetitivos en mejoras de producto, documentación y reducción del volumen de soporte.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como especialista en protección de datos y cumplimiento. Tenemos procesos donde una herramienta automática influye en decisiones sobre personas, y quiero estar preparado para la reclamación que llegará.
+Actúa como un director de Customer Success con experiencia transformando equipos de soporte reactivos en equipos que mejoran el producto y reducen el volumen de tickets a través del análisis sistemático de sus causas raíz. Mi objetivo es convertir el tiempo que mi equipo dedica a responder tickets repetitivos en mejoras concretas que reduzcan ese volumen de forma permanente.
 
-Nota: esto diseña el procedimiento operativo. La respuesta concreta a una reclamación real y la valoración jurídica corresponden al asesor competente.
+## El problema del soporte en bucle
 
-## Contexto que necesito
+Muchos equipos de soporte trabajan en un ciclo interminable: llegan tickets, se responden, se cierran y al día siguiente llegan los mismos tickets de usuarios diferentes. Cada mes el volumen crece con la base de usuarios, pero la tasa de tickets por usuario no baja porque nadie está atacando las causas raíz.
 
-1. Qué decisiones se toman con apoyo automático: selección, precios, riesgo, concesión de servicio, moderación, prioridad de atención.
-2. Grado de automatización: apoyo a una persona o decisión sin intervención.
-3. Qué información entra en la decisión y de dónde sale.
-4. Qué se le comunica hoy a la persona afectada.
-5. Quién podría revisar una decisión impugnada y con qué autoridad para cambiarla.
+El análisis de causa raíz de tickets es el proceso de pasar de "respondemos preguntas" a "eliminamos las razones por las que surgen esas preguntas".
 
-## Paso 1 — Diagnóstico de explicabilidad
+## Fase 1: Taxonomía de tickets — la base de todo análisis
 
-La prueba de fuego, antes de cualquier procedimiento: **si una persona pregunta hoy por qué se le denegó, ¿podemos contestar con precisión?** Responde con honestidad para cada proceso:
+**Por qué la mayoría de los análisis de tickets fallan:**
+Los tags "bug", "feature request" y "question" son categorías demasiado amplias para sacar conclusiones accionables. Para hacer análisis de causa raíz necesitas una taxonomía más granular que capture el área del producto, el tipo de problema y el punto del journey del usuario donde ocurre.
 
-- ¿Sabemos qué factores pesaron en esa decisión concreta?
-- ¿Conservamos los datos de entrada y la salida del sistema, con fecha?
-- ¿Podemos reconstruir la decisión con la versión del sistema que estaba activa ese día?
-- ¿Hay registro de quién la revisó y con qué información?
+**Sistema de clasificación recomendado:**
 
-Si la respuesta a cualquiera de estas es no, ese es el trabajo previo: sin trazabilidad no hay explicación posible, y la ausencia de explicación es en sí misma el problema.
+**Dimensión 1: Área del producto**
+Ejemplo: Onboarding / Configuración inicial / Integración con [herramienta] / Feature X / Facturación / Exportación
 
-## Paso 2 — Qué se explica y con qué nivel de detalle
+**Dimensión 2: Tipo de problema**
+- Bug confirmado: el software no funciona como debería
+- Bug potencial: comportamiento inesperado sin confirmar
+- Confusión UX: el usuario no entiende cómo funciona algo que funciona correctamente
+- Falta de documentación: el usuario buscó y no encontró la respuesta
+- Feature request: el producto no tiene lo que el usuario necesita
+- Proceso: el problema está en el proceso del usuario, no en el producto
 
-Distingue lo que hay que poder comunicar de lo que no procede: la lógica aplicada, las categorías de datos usadas, la importancia relativa de los factores principales y las consecuencias previstas, sí; el código, los pesos internos del modelo o información de terceros, no. Redacta el modelo de explicación en lenguaje comprensible, sin tecnicismos y sin fórmulas.
+**Dimensión 3: Momento del journey del usuario**
+- Primera semana (onboarding)
+- Mes 1 (adopción)
+- Usuario recurrente (uso avanzado)
+- Renovación / expansión
 
-## Paso 3 — Intervención humana que lo sea de verdad
+**Cómo implementarlo:**
+Añade estos campos como atributos del ticket en tu helpdesk (Zendesk, Intercom, Freshdesk). Configura que sean obligatorios al cerrar el ticket para garantizar consistencia.
 
-Define en qué consiste la revisión: quién la hace (con competencia y sin ser quien tomó la decisión inicial), qué información recibe, qué puede cambiar, en qué plazo y cómo se documenta. Un sello de aprobación sin capacidad ni información no es intervención humana, y así se valorará si llega una inspección.
+## Fase 2: El proceso de análisis mensual
 
-## Paso 4 — Procedimiento de reclamación
+**Frecuencia recomendada:** análisis mensual de tickets, con una revisión trimestral más profunda.
 
-1. Vías de entrada y acuse de recibo con plazo.
-2. Identificación de la persona y de la decisión concreta.
-3. Recuperación del expediente: entradas, salida, versión del sistema, revisor.
-4. Revisión humana con criterio y con las alegaciones aportadas.
-5. Respuesta motivada: qué se decidió, por qué, qué factores pesaron y qué puede hacer si no está conforme, incluida la vía ante la autoridad de control.
-6. Registro y análisis: si varias reclamaciones apuntan al mismo factor, el problema es el sistema y no las reclamaciones.
+**El proceso en 4 pasos:**
 
-## Paso 5 — Prevención
+**Paso 1: Exportación y agrupación (30 minutos)**
+Exporta todos los tickets cerrados del mes. Agrupa por las 3 dimensiones de la taxonomía. Identifica los 10-15 clusters con mayor volumen.
 
-- Información previa clara en el momento de la decisión, no escondida en la política de privacidad.
-- Revisión periódica de resultados por grupos, para detectar efectos discriminatorios.
-- Umbral de revisión humana obligatoria por defecto en los casos de mayor impacto.
+**Paso 2: Análisis de los top clusters (2 horas)**
+Para cada cluster de los 5 más frecuentes:
+1. Lee 10-15 tickets del cluster en detalle
+2. Identifica el patrón exacto: ¿qué momento, qué acción, qué expectativa del usuario no se cumple?
+3. Clasifica la causa raíz en: bug, UX confusa, documentación insuficiente, feature ausente o expectativa incorrecta del usuario
 
-## Entregables
+**Paso 3: Propuesta de solución (1 hora)**
+Para cada causa raíz identificada, define la solución correspondiente:
+| Tipo de causa raíz | Solución | Propietario | Impacto estimado |
+|-------------------|---------|-------------|-----------------|
+| Bug confirmado | Fix de desarrollo | Engineering | -X tickets/mes |
+| UX confusa | Mejora de diseño o copy | Product/Design | -Y tickets/mes |
+| Falta de documentación | Nuevo artículo de ayuda | Support | -Z tickets/mes |
+| Feature ausente | Feature request al roadmap | Product | -W tickets/mes |
 
-1. Diagnóstico de explicabilidad por proceso, con los huecos de trazabilidad.
-2. Modelo de explicación en lenguaje comprensible.
-3. Definición operativa de la intervención humana.
-4. Procedimiento de reclamación con plazos y plantillas de respuesta.
-5. Medidas de prevención y de vigilancia de efectos discriminatorios.
+**Paso 4: Seguimiento del impacto (el siguiente mes)**
+Verifica que el volumen del cluster atacado ha disminuido. Si no, el diagnóstico de causa raíz fue incorrecto o la solución implementada no fue efectiva.
+
+## Fase 3: El ticket como señal de producto
+
+**Cómo convertir tickets en inputs de producto:**
+
+**El informe mensual de soporte para producto:**
+No envíes un listado de tickets al equipo de producto. Envía:
+1. Top 3 causas raíz de este mes con volumen y coste estimado
+2. Propuesta de solución para cada una con esfuerzo estimado
+3. Tendencia: ¿qué está creciendo, qué está bajando?
+4. Un caso de cliente representativo de cada causa raíz (con consentimiento o anonimizado)
+
+**La pregunta que une soporte con producto:**
+"Si resolvemos este problema en el producto, ¿cuántos tickets por mes evitamos?" Traducir el volumen de tickets a tiempo de soporte y coste hace que las solicitudes de soporte compitan en el mismo idioma que las demás prioridades del producto.
+
+**Estimación del ROI de resolver causas raíz:**
+```
+Volumen mensual del cluster: 150 tickets
+Tiempo medio de resolución: 12 minutos
+Coste por hora de agente: 25€/hora
+Coste mensual del cluster: 150 × 0,2h × 25€ = 750€/mes
+Coste anual: 9.000€/año
+Si una mejora de documentación elimina el 60% del cluster: 5.400€/año ahorrados
+```
+
+## Fase 4: Reducción proactiva del volumen
+
+**Además del análisis reactivo, hay 3 acciones proactivas:**
+
+**1. Tours de onboarding basados en los tickets más frecuentes:**
+Si el 20% de los tickets del primer mes vienen de usuarios que no entienden la funcionalidad X, añade un tour interactivo en el onboarding que muestre exactamente esa funcionalidad en el momento en que el usuario la necesita por primera vez.
+
+**2. Mensajes en el producto antes de la fricción:**
+Identifica los momentos del producto donde surge confusión frecuente y añade tooltips, empty states informativos o mensajes contextuales antes de que el usuario llegue a necesitar abrir un ticket.
+
+**3. Documentación proactiva basada en búsquedas sin resultado:**
+Revisa las búsquedas en tu centro de ayuda que terminan en cero resultados. Cada búsqueda sin resultado es un artículo que falta. Prioriza los artículos faltantes por volumen de búsqueda.
+
+## Fase 5: Métricas de éxito
+
+**KPIs del programa de análisis de causa raíz:**
+| Métrica | Frecuencia | Objetivo |
+|---------|-----------|---------|
+| Tickets por usuario activo | Mensual | Reducción > 5% trimestral |
+| % tickets con causa raíz clasificada | Mensual | > 80% |
+| Causas raíz atacadas y validadas | Trimestral | Al menos 3 por trimestre |
+| Reducción de volumen en clusters atacados | Mensual | > 40% en los 2 meses post-fix |
+| Tiempo hasta la primera resolución (TTFR) | Semanal | Estable o decreciente |
+
+## Entregable: Sistema para mi equipo
+
+Comparte el volumen mensual de tickets, las categorías que ya usas y el helpdesk que tienes. Diseño el sistema de clasificación adaptado a tu producto y el proceso de análisis mensual que tu equipo puede implementar en las próximas 4 semanas sin añadir más de 2 horas semanales de trabajo adicional.
 PROMPT,
                 'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Preparar el procedimiento de respuesta a reclamaciones sobre decisiones automatizadas, con explicabilidad, intervención humana real y registro',
-                'vote_score'       => 29,
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Implementar un sistema de análisis de causa raíz de tickets que convierta el soporte reactivo en mejoras de producto y documentación que reduzcan el volumen de forma permanente.',
+                'vote_score'       => 34,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 8,
-                'title'            => 'Propiedad del código y del contenido generado con IA en contratos de desarrollo',
-                'description'      => 'Cómo pactar la titularidad, las garantías y las obligaciones de transparencia cuando parte del entregable se ha producido con asistencia de IA, en contratos de desarrollo y de creación.',
+                'profession_id'    => 10,
+                'title'            => 'Gestionar clientes difíciles como freelancer',
+                'description'      => 'Protocolos de comunicación, gestión de expectativas y cómo mantener la relación cuando el cliente se pone complicado.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como abogado especializado en propiedad intelectual y contratos de desarrollo de software y de creación de contenido. Quiero cerrar bien la parte de IA en estos contratos, en las dos posiciones.
+Actúa como un consultor senior con 15 años de experiencia como freelancer y coach de otros freelancers. He llegado a un punto difícil con un cliente y necesito ayuda para gestionar la situación de forma profesional, proteger mi trabajo y mantener (o terminar) la relación de forma que no dañe mi reputación ni mis ingresos.
 
-Nota: la protección del contenido generado con asistencia de IA es un terreno en evolución y con diferencias entre jurisdicciones. Esto produce un borrador y una lista de decisiones; la validación final corresponde a un profesional habilitado.
+## Por qué los clientes difíciles son parte inevitable del trabajo freelance
 
-## Contexto que necesito
+Todo freelancer que trabaja suficiente tiempo topará con clientes difíciles. No es una señal de que eres malo en tu trabajo: es estadística. La diferencia entre un freelancer que prospera y uno que se quema no está en evitar los clientes difíciles (imposible), sino en tener protocolos para gestionarlos que protejan el trabajo, la energía y la reputación.
 
-1. ¿Eres quien encarga o quien desarrolla?
-2. Tipo de entregable: software, diseño, texto, imagen, audio, formación.
-3. ¿Se usa IA en la producción? ¿Con qué herramientas y en qué proporción?
-4. Uso previsto del entregable: interno, comercial, redistribuido, incorporado a un producto.
-5. Jurisdicción y ley aplicable.
+Antes de aplicar cualquier protocolo, necesito entender qué tipo de situación estoy viviendo, porque la solución es diferente según el problema.
 
-## Paso 1 — Las tres preguntas que hay que decidir
+## Los 5 arquetipos de cliente difícil y cómo tratarlos
 
-1. **¿Se permite usar IA en la producción del entregable?** Sí sin condiciones, sí con declaración, sí con límites por tipo de componente, o no. Cada opción tiene consecuencias de precio y de plazo: prohibirlo encarece, y hay que decirlo.
-2. **¿Qué se transmite?** La titularidad de lo que sea susceptible de protección y, en todo caso, un derecho de uso amplio, irrevocable y suficiente para el uso previsto. Esta segunda parte es la que de verdad protege al cliente cuando la protección del resultado es dudosa.
-3. **¿Qué garantías puede dar el desarrollador?** Aquí está el punto realista: se puede garantizar que no se ha copiado a sabiendas y que se han usado herramientas con condiciones de uso comercial. Garantizar que ningún fragmento generado coincide con obra protegida ajena no es cumplible; propón redacciones honestas con obligaciones de conducta y de subsanación.
+### Tipo 1: El que cambia de opinión continuamente (scope creep)
+**Síntoma:** Cada reunión añade nuevos requisitos o cambia los que aprobó la semana anterior. El proyecto nunca termina porque el cliente siempre tiene "una cosita más".
 
-## Paso 2 — Cláusulas a redactar
+**Causa raíz:** Falta de definición inicial del alcance o proceso de aprobación que permite cambios sin coste.
 
-| Cláusula | Contenido |
-|---|---|
-| Declaración de uso de IA | Qué herramientas, en qué componentes, con qué condiciones de licencia |
-| Titularidad y cesión | De lo protegible; más licencia de uso amplia sobre el resto |
-| Garantías | Conducta diligente, licencias comerciales verificadas, no copia deliberada |
-| Dependencias y licencias | Inventario de componentes de terceros y su licencia, con prohibición de licencias incompatibles con el uso previsto |
-| Subsanación | Qué ocurre si aparece una reclamación: colaborar, sustituir el componente, plazos |
-| Indemnidad | Alcance realista, con límites y exclusiones claras |
-| Datos del cliente | Prohibición de introducirlos en herramientas no aprobadas |
-| Confidencialidad | Extensión expresa al uso de herramientas de IA |
-| Trazabilidad | Registro de qué se generó con asistencia, conservado durante N años |
-| Entrega | Fuentes, documentación y todo lo necesario para mantenerlo sin el proveedor |
+**Protocolo:**
+1. Regresa al contrato: "Revisando lo que acordamos en [fecha], el alcance incluía X pero no Y. Para añadir Y tenemos dos opciones: ajustamos el plazo/precio o postponemos Y para la siguiente fase."
+2. Implementa el Change Order: cualquier cambio de alcance requiere un documento firmado que actualiza precio y/o plazo antes de empezar a trabajar en el cambio.
+3. Template de Change Order que te doy al final del prompt.
 
-## Paso 3 — Anexo técnico de trazabilidad
+**Lo que no debes hacer:** absorber los cambios "por esta vez" pensando que el cliente lo valora. No lo valora: aprende que puede pedir cambios sin consecuencias.
 
-Formato del registro que acompaña a la entrega: componente, herramienta usada, fecha, si hubo revisión humana sustancial y quién. Sin esto, dos años después nadie puede responder de nada. Con esto, la respuesta a una reclamación es un documento.
+### Tipo 2: El que no paga a tiempo (cliente moroso)
+**Síntoma:** Las facturas vencen sin pago, hay excusas pero el dinero no llega, o hay promesas de pago que no se cumplen.
 
-## Paso 4 — La versión de cada lado
+**Protocolo de cobro escalonado:**
+- Día 0 del vencimiento: recordatorio suave por email ("adjunto factura por si se perdió")
+- Día 3: llamada telefónica directa, sin email. Los emails se ignoran; las llamadas no.
+- Día 7: email formal con consecuencias concretas: "si no recibo el pago antes del [fecha], pausaré el trabajo en el proyecto hasta regularizar la situación"
+- Día 14: pausa real del trabajo y email notificando la pausa
+- Día 30: última comunicación antes de escalar (burofax, reclamación formal o plataforma de reclamación online)
 
-Entrega dos redacciones del bloque: la del cliente exigente y la defendible por el proveedor, señalando en cada punto qué es negociable y qué no debería cederse.
+**Prevención:** cobra el 50% por adelantado en todos los proyectos. No es desconfianza: es política estándar de cualquier freelancer profesional.
 
-## Entregables
+### Tipo 3: El que no respeta los tiempos
+**Síntoma:** Necesita todo para ayer, te escribe a las 11pm esperando respuesta inmediata, y cuando tú necesitas feedback de él tarda semanas.
 
-1. Decisiones recomendadas a las tres preguntas, con sus consecuencias.
-2. Bloque de cláusulas completo, versión cliente.
-3. Bloque de cláusulas completo, versión proveedor.
-4. Anexo de trazabilidad listo para usar.
-5. Puntos que conviene consultar por la jurisdicción concreta.
+**Protocolo:**
+1. Define los tiempos de respuesta en el contrato desde el inicio: "mis horas de trabajo son L-V 9-18h. Respondo emails en 24h laborables."
+2. Cuando ya estás en el proyecto: responde siempre dentro del horario acordado, aunque el mensaje llegue a las 11pm. Si respondes a las 11pm, enseñas al cliente que puede esperar respuesta a las 11pm.
+3. Para los retrasos del cliente en dar feedback: "necesito tu revisión antes del [fecha] para mantener el plazo de entrega del [fecha final]. Si la revisión llega después, el plazo final se desplazará proporcionalmente."
+
+### Tipo 4: El que no sabe lo que quiere
+**Síntoma:** El brief está vacío o cambia constantemente. Las reuniones terminan sin decisiones claras. "No sé exactamente qué quiero pero cuando lo vea lo sabré."
+
+**Protocolo:**
+1. Antes de empezar: no arranques un proyecto sin un brief completo y firmado. Si el cliente no sabe lo que quiere, tu trabajo es ayudarle a definirlo (y cobrar por eso).
+2. Sesión de kick-off estructurada con preguntas concretas: "¿Qué resultado medible esperamos en 90 días? / ¿Quién es el usuario final y qué problema tiene? / ¿Cuál es el criterio de éxito que usaremos para evaluar el resultado?"
+3. Aprobaciones por escrito en cada etapa: "Antes de pasar a la fase 2, necesito tu aprobación por escrito de la fase 1 en este email."
+
+### Tipo 5: El que menosprecia tu trabajo
+**Síntoma:** Cuestiona cada decisión, cree que puede hacer tu trabajo mejor que tú, usa frases como "mi sobrino lo haría en 10 minutos".
+
+**Protocolo:**
+Este tipo de cliente rara vez mejora con el tiempo. Las opciones son dos:
+1. Establecer autoridad profesional claramente desde el principio: "Te contrataste porque soy el experto en X. Estoy encantado de explicar mis decisiones, pero las decisiones las tomo yo. Si en algún punto no confías en mi criterio, es mejor que lo hablemos abiertamente."
+2. Si la situación ya se degradó: evalúa si el coste de la relación (tiempo, energía, estrés) supera el ingreso. Si supera, es mejor terminar la relación de forma profesional.
+
+## Cómo terminar una relación con un cliente difícil
+
+**El off-boarding profesional:**
+1. Revisa el contrato: ¿qué dice sobre la terminación? ¿Hay período de preaviso?
+2. Notifica por escrito con el tiempo acordado (normalmente 15-30 días)
+3. Entrega todo el trabajo hasta la fecha y la documentación necesaria para que otro profesional pueda continuar
+4. Cobra todo lo pendiente antes de entregar el acceso final
+5. No burns: el sector es pequeño, sé profesional incluso si el cliente no lo ha sido
+
+**Template de email de terminación:**
+"Tras evaluar nuestra colaboración, he decidido no continuar con el proyecto a partir del [fecha]. Te entregaré [lista de entregables] y la documentación necesaria para que puedas continuar con otro profesional. Las facturas pendientes hasta la fecha son [importe]. ¿Podemos acordar una fecha esta semana para hacer la entrega?"
+
+## Prevención: los 5 elementos del contrato que evitan el 80% de los problemas
+
+1. Alcance detallado: qué incluye y qué NO incluye
+2. Proceso de cambio de alcance (Change Order)
+3. Condiciones de pago: adelanto, plazos y penalización por retraso
+4. Horario de disponibilidad y tiempo de respuesta
+5. Condiciones de terminación del contrato por ambas partes
+
+Cuéntame qué tipo de situación estás viviendo con tu cliente difícil y te doy el protocolo específico para tu caso con los textos exactos para las comunicaciones.
 PROMPT,
                 'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Pactar titularidad, garantías y trazabilidad del entregable cuando se usa IA en contratos de desarrollo o de creación de contenido',
-                'vote_score'       => 32,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 8,
-                'title'            => 'Contrato de encargado del tratamiento y transferencias internacionales: revisión práctica',
-                'description'      => 'Revisa el contrato de tratamiento de datos de un proveedor punto por punto y resuelve la parte de transferencias internacionales con la documentación que hay que conservar.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como especialista en protección de datos con experiencia revisando contratos de encargado del tratamiento de proveedores tecnológicos. Voy a contratar (o ya uso) un proveedor que tratará datos personales por nuestra cuenta.
-
-Nota: esto produce una revisión estructurada y una lista de puntos a exigir. La validación jurídica final corresponde al asesor competente.
-
-## Contexto que necesito
-
-1. Proveedor, servicio y qué datos tratará.
-2. Categorías de interesados: clientes, empleados, candidatos, usuarios finales de nuestros clientes.
-3. Documento que ofrece el proveedor: su contrato de tratamiento, sus condiciones o nada.
-4. Dónde se trata la información y qué subencargados declara.
-5. Si nosotros somos responsables o encargados frente a un tercero (cambia todo el análisis).
-
-## Paso 1 — Papeles claros
-
-Determina y justifica quién es responsable, encargado y subencargado en esta relación. Un error aquí invalida el resto del análisis, y es más frecuente de lo que parece cuando hay tres empresas en la cadena.
-
-## Paso 2 — Revisión del contrato, punto por punto
-
-Comprueba y marca conforme, insuficiente o ausente:
-
-| Elemento | Qué debe decir |
-|---|---|
-| Objeto, duración y naturaleza del tratamiento | Concreto, no genérico |
-| Categorías de datos e interesados | Enumeradas |
-| Instrucciones | Tratar solo según instrucciones del responsable |
-| Confidencialidad del personal | Obligación expresa |
-| Medidas de seguridad | Descritas, no «medidas adecuadas» |
-| Subencargados | Autorización, lista, comunicación de cambios y derecho de oposición |
-| Asistencia en derechos de los interesados | Cómo y en qué plazo |
-| Notificación de brechas | Plazo concreto y contenido mínimo |
-| Auditoría e información | Evidencias razonables: certificaciones, informes |
-| Supresión o devolución al final | Plazo y forma, con certificación |
-| Transferencias internacionales | Mecanismo identificado |
-| Uso para fines propios del proveedor | Prohibido, o delimitado con base clara |
-
-Presta atención especial a la última fila: cláusulas que permiten al proveedor usar los datos para «mejorar sus servicios» son el punto que más problemas genera y el más fácil de pasar por alto.
-
-## Paso 3 — Transferencias internacionales
-
-Para cada flujo fuera del espacio europeo: destino, mecanismo aplicable, si hay decisión de adecuación o cláusulas tipo, y qué análisis complementario procede documentar sobre el marco legal del país de destino y las garantías adicionales. Deja claro qué documentación hay que archivar, porque es lo que se pide cuando llega una inspección o un cuestionario de cliente.
-
-## Paso 4 — Lo que hay que exigir
-
-Lista priorizada de cambios a pedir al proveedor, separando lo imprescindible de lo deseable. Y una nota realista: con proveedores grandes de adhesión no habrá negociación; en esos casos la decisión es qué datos entran en el servicio y qué tratamientos se excluyen.
-
-## Paso 5 — Documentación a conservar
-
-Carpeta del proveedor: contrato firmado, anexos, lista de subencargados con fecha, certificaciones, análisis de transferencias, registro en el inventario de tratamientos y fecha de próxima revisión.
-
-## Entregables
-
-1. Determinación de papeles en la cadena.
-2. Revisión punto por punto con el estado de cada elemento.
-3. Análisis de transferencias internacionales y documentación asociada.
-4. Lista priorizada de exigencias al proveedor.
-5. Índice de la carpeta documental y calendario de revisión.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Revisar el contrato de encargado del tratamiento de un proveedor y documentar las transferencias internacionales con la evidencia conservada',
-                'vote_score'       => 31,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 8,
-                'title'            => 'Términos de servicio para un producto con funciones de IA',
-                'description'      => 'Redacta las condiciones de uso de un producto que incorpora IA: qué se promete, qué se excluye, qué puede hacer el usuario con lo generado y qué usos están prohibidos.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como abogado de producto digital. Vamos a lanzar (o ya tenemos) un producto con funciones de IA y quiero unas condiciones que protejan sin ser abusivas y que sean coherentes con lo que el producto hace de verdad.
-
-Nota: esto produce un borrador estructurado. La adaptación a la jurisdicción, la normativa de consumo aplicable y la revisión final corresponden a un profesional habilitado.
-
-## Contexto que necesito
-
-1. Producto, funciones con IA y qué genera para el usuario.
-2. Tipo de cliente: consumidor, empresa o ambos; y países.
-3. Modelo de negocio: gratuito, suscripción, consumo, límites por plan.
-4. Qué datos introduce el usuario y qué hacemos con ellos.
-5. Proveedores de modelos utilizados y sus restricciones de uso.
-
-## Bloques a redactar
-
-### 1. Descripción del servicio y de la función de IA
-Qué hace y cómo funciona en términos comprensibles. Aquí se juega la coherencia: si el marketing promete precisión y las condiciones dicen que no se garantiza nada, el problema aparecerá tarde y con un cliente enfadado.
-
-### 2. Naturaleza de la salida y responsabilidad del usuario
-Que la salida puede contener errores, que no sustituye asesoramiento profesional cuando aplique, y que el usuario debe revisar antes de usarla. Redactado en lenguaje llano, no en una cláusula sepultada en la letra pequeña.
-
-### 3. Titularidad y licencias
-| Elemento | Quién |
-|---|---|
-| Contenido que introduce el usuario | Del usuario; nosotros con licencia limitada para prestar el servicio |
-| Salida generada | Derechos que le concedemos al usuario, con el alcance del uso comercial |
-| Nuestro producto y marcas | Nuestros |
-| Sugerencias del usuario | Cómo tratarlas para evitar reclamaciones futuras |
-
-Incluye una advertencia honesta sobre la protección incierta de lo generado y sobre resultados similares entre usuarios distintos.
-
-### 4. Usos prohibidos
-Lista concreta y no meramente ornamental: usos ilegales, generación de material dañino, suplantación de identidad, elusión de límites técnicos, reventa del servicio, uso para entrenar modelos competidores, y los usos que restrinja el proveedor del modelo subyacente. Con la consecuencia de cada incumplimiento.
-
-### 5. Datos y privacidad
-Referencia a la política de privacidad, con lo esencial dicho aquí: qué se guarda, cuánto, si se usa para mejorar el servicio y qué controles tiene el usuario. Coherente palabra por palabra con la política.
-
-### 6. Límites de uso y cambios
-Cuotas por plan, qué ocurre al agotarlas, y cómo se comunican los cambios de límites o de funcionalidad. Los productos con coste variable cambian límites: mejor tenerlo previsto que improvisarlo.
-
-### 7. Disponibilidad, exclusiones y responsabilidad
-Sin garantía de disponibilidad continua, dependencia de proveedores externos, límites de responsabilidad ajustados a lo permitido según el tipo de cliente y el país. Con la advertencia de qué límites no son oponibles a consumidores.
-
-### 8. Terminación y salida
-Causas, preaviso, qué pasa con el contenido del usuario, plazo de exportación y borrado.
-
-## Entregables
-
-1. Borrador completo de las condiciones, por bloques.
-2. Resumen en lenguaje llano de los cinco puntos que más importan al usuario.
-3. Tabla de coherencia entre lo que promete el marketing y lo que dicen las condiciones.
-4. Lista de puntos a revisar con asesoría por jurisdicción y por normativa de consumo.
-5. Qué hay que actualizar en el producto para que las condiciones sean verdad.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'advanced',
-                'estimated_minutes'=> 45,
-                'use_case'         => 'Redactar los términos de servicio de un producto con funciones de IA, con titularidad de la salida, usos prohibidos y límites coherentes con el producto',
-                'vote_score'       => 28,
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 30,
+                'use_case'         => 'Gestionar situaciones difíciles con clientes como freelancer: scope creep, impagos, falta de respeto al horario y cómo terminar una relación profesionalmente cuando es necesario.',
+                'vote_score'       => 48,
                 'resource_type'    => 'prompt',
             ],
         ];

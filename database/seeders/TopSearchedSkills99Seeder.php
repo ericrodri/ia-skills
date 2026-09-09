@@ -12,671 +12,1294 @@ class TopSearchedSkills99Seeder extends Seeder
         $admin = User::first();
         $skills = [
             [
-                'profession_id'    => 10,
-                'title'            => 'Vender servicios con IA sin ser técnico: cómo empaquetarlos y qué prometer',
-                'description'      => 'Convierte tu oficio actual más IA en una oferta concreta con alcance, entregables y precio, sin prometer transformaciones que no puedes sostener.',
+                'profession_id'    => 1,
+                'title'            => 'Gestionar una agencia de marketing',
+                'description'      => 'Procesos, estructura de precios, gestión de equipo y cómo escalar la agencia sin trabajar el doble de horas.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como consultor de negocio para profesionales independientes. Uso IA a diario en mi trabajo y quiero convertirlo en una oferta vendible, sin fingir que soy ingeniero de machine learning.
+Actúa como un fundador de agencia de marketing con experiencia escalando de 0 a 2M€ de facturación con un equipo de 12 personas. Has cometido los errores clásicos — proyectos sin proceso, clientes que absorben todos los recursos, equipo quemado — y has desarrollado los sistemas que hacen que la agencia funcione sin que tú estés en todo.
 
-## Contexto que necesito
+## El problema con la mayoría de las agencias de marketing en España
 
-1. Tu oficio actual y a quién sirves.
-2. Qué haces ya con IA y cuánto tiempo o dinero ahorra, con números si los tienes.
-3. Tarifa actual y forma de cobrar.
-4. Tres clientes tipo y su problema más caro.
-5. Qué NO quieres hacer, aunque te lo paguen.
+La mayoría de las agencias de marketing son "el fundador + freelancers + caos". Funciona hasta los 300-500K€ de facturación, punto en el que el fundador ya no tiene tiempo para más clientes pero tampoco tiene los sistemas para que otros los gestionen. El resultado: un techo de cristal que viene acompañado de burnout.
 
-## Paso 1 — El posicionamiento honesto
+Escalar una agencia no es conseguir más clientes: es construir los sistemas que permiten a tu equipo entregar valor sin que tú estés presente en cada decisión.
 
-Hay tres formas de vender esto y conviene elegir una:
+## Bloque 1: El modelo de negocio de la agencia
 
-| Posicionamiento | Qué vendes | Riesgo |
-|---|---|---|
-| Tu oficio, más rápido | El mismo resultado en menos tiempo | Presión para bajar el precio |
-| Tu oficio, con más alcance | Lo que antes no era rentable hacer | Hay que explicar el valor nuevo |
-| Implantar IA en su equipo | Que ellos aprendan a hacerlo | Exige método y formación, no solo prompts |
+**Los 3 modelos de pricing que más se usan y sus implicaciones:**
 
-Recomiéndame uno según mi perfil y explícame por qué los otros dos encajan peor. Y avísame de la trampa: si vendes «el mismo resultado más rápido», estás invitando al cliente a pagar menos.
+**Modelo 1: Retainer mensual**
+El cliente paga una tarifa fija mensual por un paquete de servicios definido. Es el modelo más predecible y el que mejor escala porque los ingresos son recurrentes.
 
-## Paso 2 — Empaquetar tres ofertas
+Ventajas: predictibilidad de ingresos, relación más estratégica con el cliente
+Desventajas: el cliente siempre pide "un poco más" dentro del retainer, scope creep difícil de controlar
 
-Para cada una: nombre, para quién, problema que resuelve, qué incluye exactamente, qué NO incluye, entregables concretos, duración, precio y qué necesitas del cliente para poder hacerlo.
+**Modelo 2: Por proyecto**
+Precio fijo por entregables concretos (lanzamiento de campaña, rediseño web, estrategia de contenidos).
 
-Un paquete pequeño de entrada (diagnóstico corto y de bajo riesgo), uno principal y uno de continuidad. El de entrada es el que abre puertas cuando no te conocen.
+Ventajas: fácil de vender, el cliente sabe exactamente qué paga
+Desventajas: ingresos irregulares, riesgo de infra-estimación, sin garantía de continuidad
 
-## Paso 3 — Lo que se promete y lo que no
+**Modelo 3: Por resultados / performance**
+La agencia cobra basado en los resultados obtenidos (% de ingresos generados, coste por lead, etc.).
 
-Redacta las promesas en términos verificables: entregables, plazos y, cuando se pueda, resultado medido con la línea base que se mide antes de empezar. Y la lista explícita de lo que no se promete: que la IA no se equivoque, que se sustituya a nadie, que el ahorro sea inmediato sin cambiar procesos.
+Ventajas: alinea los incentivos, da confianza al cliente
+Desventajas: requiere acceso a los datos del cliente, los resultados dependen de factores externos, la agencia asume el riesgo
 
-Aquí es donde este mercado está lleno de humo. Ser el que dice «esto no lo puedo garantizar y esto sí» convierte más de lo que parece, sobre todo con clientes que ya se han llevado un chasco.
+**Recomendación para escalar:**
+Construye el 60-70% de los ingresos sobre retainers recurrentes. Los proyectos son buenos para adquirir clientes, pero los retainers son lo que hace posible la planificación.
 
-## Paso 4 — La objeción principal
+**Cómo calcular el precio de un retainer:**
+1. Estima las horas reales que requiere el cliente al mes (horas de equipo, no solo las "visibles")
+2. Multiplica por tu tarifa hora interna objetivo (lo que necesitas ganar por hora de equipo para ser rentable)
+3. Añade un margen del 30-40% para imprevistos, overhead y beneficio
+4. Compara con el valor que el cliente obtiene (no solo tu coste): si la diferencia es grande, puedes cobrar más
 
-Prepara la respuesta a la objeción que vas a oír siempre: «¿y por qué no lo hacemos nosotros directamente con el chat?». La respuesta buena no es defensiva: es explicar qué parte del trabajo es el criterio, la verificación y el proceso, y demostrarlo con un ejemplo de algo que salió mal por no tenerlo.
+**Tarifa hora de referencia para agencias en España:**
+- Junior (0-2 años): 40-60€/hora facturada
+- Mid (2-5 años): 65-90€/hora facturada
+- Senior / especialista: 90-150€/hora facturada
+- Estrategia / dirección: 120-200€/hora facturada
 
-## Paso 5 — Prueba de que sabes
+## Bloque 2: Estructura del equipo y roles
 
-Sin cartera de clientes en esto, hay que fabricar la prueba: un caso propio con números, una herramienta pequeña y pública, una plantilla que la gente usa, o un antes y después de tu propio negocio. Propón las tres piezas de prueba más rápidas de construir en mi caso.
+**El equipo mínimo viable para escalar una agencia a 1M€:**
 
-## Entregables
+| Rol | Cuándo contratar | Qué resuelve |
+|-----|-----------------|-------------|
+| Account manager | Cuando tienes > 5 clientes activos | Libera al fundador de la gestión diaria del cliente |
+| Especialista en el servicio core | Cuando el fundador hace el trabajo de producción | Libera capacidad de entrega |
+| Coordinador de operaciones / PM | Cuando los proyectos empiezan a solaparse y caer cosas | Garantiza que se entrega lo prometido |
+| Head of sales | Cuando el fundador es el único que vende | Hace predecible la adquisición de clientes |
 
-1. Posicionamiento recomendado con la justificación.
-2. Las tres ofertas empaquetadas con alcance, precio y exclusiones.
-3. Promesas verificables y lista de lo que no se promete.
-4. Guion de respuesta a la objeción principal.
-5. Tres piezas de prueba a construir esta semana.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Convertir el uso propio de IA en una oferta de servicios empaquetada con alcance, precio y promesas verificables',
-                'vote_score'       => 38,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Auditoría de IA para pymes como servicio: qué entregas y cuánto cobras',
-                'description'      => 'El servicio de diagnóstico completo: qué se revisa, cómo se ejecuta en dos semanas, qué informe se entrega y cómo se convierte en un proyecto de implantación.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como consultor independiente que ha vendido y ejecutado diagnósticos de IA en pequeñas empresas. Quiero montar este servicio con un alcance cerrado, para no acabar haciendo un proyecto de tres meses cobrando como un informe.
+**El error más frecuente:**
+Contratar creativos o especialistas antes de tener quien gestione al cliente. El resultado: el fundador sigue gestionando al cliente Y ahora también tiene que gestionar al equipo.
 
-## Contexto que necesito
+**Onboarding de equipo en una agencia:**
+El onboarding de nuevos miembros en una agencia es especialmente crítico porque deben entender el estilo de trabajo de múltiples clientes distintos. Crea una "agencia handbook" con: cómo comunicamos con los clientes, cómo se estructura el trabajo semanal, dónde van los archivos, cómo se hace una revisión antes de enviar al cliente.
 
-1. Tu perfil y en qué áreas puedes opinar con criterio.
-2. Tipo de empresas objetivo: tamaño, sector, madurez digital.
-3. Tarifa diaria de referencia.
-4. Si quieres que el diagnóstico lleve a un proyecto tuyo o sea un servicio en sí mismo.
+## Bloque 3: Procesos que hacen escalar la agencia
 
-## Paso 1 — Alcance del diagnóstico
+**El proceso de onboarding de cliente (los primeros 30 días):**
+El onboarding determina el 80% de cómo va a ir la relación. Una mala primera impresión es muy difícil de revertir.
 
-Define qué entra y qué no. Como referencia, un diagnóstico de valor real cubre:
+Semana 1: kick-off con todos los stakeholders, accesos y documentación inicial
+Semana 2-3: auditoría del estado actual, presentación de estrategia para aprobación
+Semana 4: primeras acciones en marcha, primer reporte
 
-| Bloque | Qué se revisa |
-|---|---|
-| Procesos | Las tareas que más horas consumen, con datos de quien las hace |
-| Uso actual | Qué herramientas se usan ya, aprobadas y no aprobadas |
-| Datos | Qué información existe, dónde y en qué estado; qué se puede usar |
-| Riesgos | Datos que se están pegando donde no se debe, decisiones sin supervisión |
-| Capacidades | Nivel real del equipo, no el declarado |
-| Oportunidades | Casos priorizados con esfuerzo y ahorro estimados |
-| Gobierno | Si hay política, formación y responsables |
+**El reporte mensual que retiene clientes:**
+El cliente no renueva porque el trabajo fue bueno: renueva porque siente que la agencia entiende su negocio y se preocupa por sus resultados. El reporte debe mostrar:
+1. Lo que hicimos (resumen ejecutivo, no lista interminable)
+2. Los resultados conseguidos vs. los objetivos acordados
+3. Las aprendizajes del mes (qué funcionó y qué no)
+4. Lo que haremos el próximo mes y por qué
+5. Una pregunta al cliente: "¿Qué está pasando en vuestro negocio que deberíamos tener en cuenta?"
 
-Fuera del alcance: implantar, integrar sistemas, formar al equipo, redactar la política. Eso es la fase siguiente y se cobra aparte.
+**El proceso de QA antes de entregar al cliente:**
+Ningún entregable debe llegar al cliente sin revisión. Define una checklist de revisión para cada tipo de entregable (copy, diseño, campaña paid, informe) y asegúrate de que el equipo la usa.
 
-## Paso 2 — Ejecución en dos semanas
+## Bloque 4: Gestión de clientes difíciles y expectativas
 
-Plan día a día:
+**Las 3 conversaciones difíciles que tienes que saber tener:**
 
-- Días 1-2: entrevistas con dirección y con responsables de área (6-8 conversaciones de 45 minutos, con guion).
-- Días 3-4: observación de las tareas candidatas, con cronometraje real. Aquí aparecen las sorpresas: la tarea que todos creen que cuesta dos horas cuesta seis.
-- Día 5: revisión de datos, herramientas y accesos.
-- Días 6-7: pruebas rápidas de dos o tres casos, para tener evidencia y no teoría.
-- Días 8-9: análisis, priorización y redacción.
-- Día 10: presentación y entrega.
+**"Los resultados no son los esperados":**
+Anticipa esta conversación antes de que el cliente la inicie. Cuando ves que los resultados no están llegando, proactivamente: documenta las razones (externas vs. internas), presenta un plan de acción concreto y fija una fecha de revisión. Los clientes perdonan los resultados bajos; no perdonan la falta de transparencia.
 
-Dame el guion de las entrevistas por perfil.
+**"Quiero ampliar el servicio sin pagar más":**
+"Entiendo que quieres [X]. Esto está fuera del alcance del retainer actual. Tenemos dos opciones: lo añadimos al retainer ajustando el precio a [Y], o lo hacemos como proyecto separado con un presupuesto específico. ¿Cuál prefieres?"
 
-## Paso 3 — El informe
+**"Quiero terminar el contrato":**
+Antes de reaccionar, entiende el motivo real. Si es precio, ¿hay margen para ajustar? Si es resultados, ¿hay un plan creíble para mejorarlos? Si es una decisión estratégica de la empresa del cliente (recorte de presupuesto, cambio de dirección), no hay nada que hacer: gestiona el offboarding de forma profesional y mantén la relación para el futuro.
 
-Estructura de lo que se entrega:
+## Bloque 5: Métricas de una agencia sana
 
-1. Resumen de una página para dirección, con las tres decisiones que se piden.
-2. Mapa de procesos con horas y coste actual.
-3. Casos priorizados: esfuerzo, ahorro estimado, riesgo y prerrequisitos.
-4. Riesgos detectados, ordenados por gravedad, con las medidas inmediatas.
-5. Plan de 90 días con hitos y responsables internos.
-6. Qué NO recomiendo hacer y por qué. Esta sección es la que da credibilidad y la que casi nadie incluye.
+**Los KPIs que debes revisar mensualmente:**
 
-## Paso 4 — Precio
+| Métrica | Fórmula | Objetivo |
+|---------|---------|---------|
+| Utilización del equipo | Horas facturables / Horas totales disponibles | 70-80% |
+| Margen bruto por cliente | (Honorarios - Coste equipo directo) / Honorarios | > 50% |
+| Churn de clientes | Clientes perdidos / Clientes totales | < 10%/año |
+| NPS de clientes | Promotores - Detractores | > 30 |
+| Ticket medio | Facturación total / Número de clientes | Creciente |
+| Concentración de cliente | ARR del mayor cliente / ARR total | < 30% |
 
-Propón el precio en función de mi tarifa y del tamaño de la empresa, con dos formatos: diagnóstico corto (3-4 días, empresas pequeñas) y completo (8-10 días). Incluye qué pasa si el cliente quiere ampliar el alcance a mitad: cómo se recotiza sin discusión.
+Si un solo cliente representa más del 30% de tus ingresos, tienes un riesgo de negocio enorme. Diversificar la cartera es una prioridad antes de escalar.
 
-## Paso 5 — Continuidad
+## Entregable: Diagnóstico de mi agencia
 
-Cómo se plantea la fase siguiente sin que parezca que el informe era un anzuelo: las opciones de implantación con precio orientativo, el criterio para elegir la primera, y la alternativa de que lo hagan ellos con acompañamiento puntual, que a veces es la recomendación correcta.
-
-## Entregables
-
-1. Alcance cerrado, con lo que queda fuera.
-2. Plan de ejecución día a día y guiones de entrevista.
-3. Índice y estructura del informe, con la sección de «no recomendado».
-4. Propuesta de precios en dos formatos y cláusula de cambio de alcance.
-5. Guion de la conversación de continuidad.
+Comparte: facturación actual, número de clientes, tamaño del equipo, modelo de pricing predominante y el principal problema que te impide crecer. Te doy las 3 acciones de mayor impacto para escalar sin quemarte.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'advanced',
                 'estimated_minutes'=> 45,
-                'use_case'         => 'Diseñar y vender un servicio de diagnóstico de IA para pymes con alcance cerrado, plan de ejecución, informe y precio',
+                'use_case'         => 'Escalar una agencia de marketing construyendo los procesos, la estructura de precios y el modelo de equipo que permiten crecer sin que el fundador tenga que estar en todo.',
+                'vote_score'       => 41,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 2,
+                'title'            => 'Open source como estrategia de empresa',
+                'description'      => 'Cuándo y cómo liberar código, gestionar contribuciones externas y usar el open source para ganar visibilidad y atraer talento.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un CTO con experiencia en estrategia de open source en empresas de software, tanto como contribuyentes de proyectos externos como mantenedores de proyectos propios. Necesito entender si el open source tiene sentido para mi empresa, qué liberar y cómo hacerlo de forma que genere valor real (visibilidad, talento, ventas) sin convertirse en una carga.
+
+## Por qué el open source puede ser una ventaja competitiva
+
+El open source bien hecho no es filantropía: es una estrategia de negocio que puede generar más valor del que cuesta. Las empresas que más se benefician del open source lo usan para: construir una comunidad de usuarios que se convierten en clientes, atraer talento que quiere trabajar en proyectos con impacto real, generar distribución orgánica a través de la comunidad y establecer confianza en un mercado donde la transparencia importa.
+
+Hashicorp, Elastic, MongoDB, GitLab — todas construyeron negocios de cientos de millones con estrategias de open source en el núcleo de su go-to-market.
+
+## Bloque 1: ¿Tiene sentido el open source para tu empresa?
+
+**Preguntas que determinan si el OS es una buena estrategia:**
+
+1. ¿Tu mercado valora la transparencia y el control sobre el código? (Infraestructura, developer tools, seguridad)
+2. ¿Tu producto tiene un componente de red o de comunidad que se beneficia de más usuarios?
+3. ¿Tienes capacidad para mantener un proyecto OS durante al menos 2 años? (Responder issues, publicar releases, documentar)
+4. ¿Tienes un modelo de negocio claro que no dependa de que el código sea privado? (Enterprise support, SaaS hosted, servicios de implementación)
+
+**Cuándo el open source NO tiene sentido:**
+- Cuando el código ES el diferenciador competitivo y liberarlo equivale a regalarle el negocio a un competidor
+- Cuando no tienes recursos para mantener el proyecto
+- Cuando tu mercado no te da crédito por contribuir al OS (algunos mercados son indiferentes a esto)
+- Cuando estás en early stage buscando product-market fit (el OS añade complejidad de governance innecesaria)
+
+## Bloque 2: Los modelos de open source para empresas
+
+**Modelo 1: Open Core**
+El código base es open source, pero las features enterprise (SSO, RBAC, audit logs, SLA de soporte) son de pago. El modelo de GitLab, HashiCorp (antes del cambio a BSL), Metabase.
+
+Requiere claridad sobre dónde está la línea entre lo que es open y lo que es enterprise. La línea mal trazada frustra a la comunidad (features básicas detrás de paywall) o destruye el negocio (features enterprise regaladas).
+
+**Modelo 2: SaaS sobre proyecto OS**
+El proyecto es completamente open source y cualquiera puede self-hostearlo, pero la empresa ofrece la versión hosted-as-a-service con una experiencia superior (sin necesidad de gestionar infra, updates automáticos, soporte). El modelo de Supabase, PocketBase, Sentry.
+
+Funciona cuando la operación del software es compleja o costosa, de forma que el hosted tiene un valor real sobre el self-hosted.
+
+**Modelo 3: Contributor License Agreement (CLA)**
+La empresa mantiene el copyright del código aunque las contribuciones externas sean bienvenidas. Permite a la empresa cambiar la licencia en el futuro (como hizo HashiCorp con BSL) sin necesitar el consentimiento de los contribuyentes.
+
+Genera resistencia en la comunidad de contribuyentes más militantes pero protege la flexibilidad de negocio a largo plazo.
+
+**Modelo 4: Licencia dual**
+El proyecto tiene licencia AGPL (que obliga a liberar el código de cualquier software que lo use en un servidor) para uso open source, y una licencia comercial para empresas que no quieren publicar su código bajo AGPL. El modelo de Qt, MongoDB, Elastic.
+
+## Bloque 3: Qué liberar y qué no
+
+**Framework de decisión: open vs. privado:**
+
+**Liberar si:**
+- Es una librería de utilidades o herramienta que otros developers necesitarían construir de todas formas
+- Es infraestructura no diferenciadora (sistema de autenticación genérico, cliente de API, SDK)
+- La visibilidad del proyecto es más valiosa que el código en sí
+- El proyecto puede atraer a los mejores developers como contribuyentes y potenciales empleados
+
+**Mantener privado si:**
+- Es el algoritmo central o la lógica que hace que tu producto sea mejor que el de los demás
+- Contiene datos o modelos propietarios
+- Es tan específico de tu dominio que nadie más lo usaría (no hay beneficio de comunidad)
+- Liberar implicaría revelar tu arquitectura completa a los competidores
+
+**El repositorio de GitHub como portfolio:**
+Incluso si no liberas el core de tu producto, liberar proyectos auxiliares (SDKs, integraciones, herramientas de desarrollo) construye presencia en la comunidad developer.
+
+## Bloque 4: Gestión de contribuciones externas
+
+**El CONTRIBUTING.md que atrae buenos contribuyentes:**
+
+Un buen CONTRIBUTING.md incluye:
+1. Cómo configurar el entorno de desarrollo local
+2. Los tipos de contribuciones que se buscan (documentación, bugs, features)
+3. Cómo reportar un bug (template de issue con los campos necesarios)
+4. El proceso de pull request: qué revisan, qué esperan, cuánto tarda la revisión
+5. El código de conducta (Code of Conduct) — obligatorio para comunidades sanas
+
+**El proceso de review de PRs que no quema a tu equipo:**
+- Responde a todos los PRs en menos de 7 días (aunque sea "lo revisaremos en X semanas")
+- Sé claro sobre qué features NO vas a aceptar (evita el trabajo inútil de los contribuyentes)
+- Usa bots para el trabajo mecánico (format checking, tests automáticos, CLA check)
+- Distingue entre contribuyentes esporádicos y colaboradores recurrentes; los segundos merecen más tiempo de tu equipo
+
+**Governance del proyecto:**
+Define quién puede hacer merge de PRs, quién puede crear releases y cómo se toman las decisiones de roadmap. Sin governance explícita, los conflictos se vuelven personales.
+
+## Bloque 5: Métricas de éxito de una estrategia OS
+
+**KPIs que indican que el OS está generando valor:**
+
+| Métrica | Qué indica | Frecuencia de revisión |
+|---------|-----------|----------------------|
+| GitHub stars | Awareness en la comunidad | Mensual |
+| Forks activos | Uso real del proyecto | Trimestral |
+| Issues creados por externos | Engagement de la comunidad | Mensual |
+| PRs de la comunidad | Contribución real | Mensual |
+| Mentions en blogs/Twitter | Distribución orgánica | Trimestral |
+| Clientes que vienen del proyecto OS | Conversión OS → negocio | Trimestral |
+| Candidatos que mencionan el proyecto | Impacto en atracción de talento | En cada proceso |
+
+**El KPI más importante: conversión OS → negocio**
+Si el proyecto tiene 5.000 stars pero ningún cliente menciona haber llegado a través de él, hay un desconexión entre el proyecto y el negocio. El proyecto OS debe tener una ruta clara hacia la versión de pago o el servicio de la empresa.
+
+## Bloque 6: Comunicación y community building
+
+**El repositorio no es suficiente:**
+Un proyecto OS activo necesita canales de comunidad: Discord/Slack para conversación, Twitter/X para anuncios, blog para actualizaciones de roadmap y lecciones aprendidas. Los proyectos que solo tienen GitHub no construyen comunidad — construyen usuarios silenciosos.
+
+**Release notes como marketing:**
+Cada release es una oportunidad de comunicar progreso. Las mejores release notes incluyen: qué cambia, por qué importa, ejemplos de uso y un CTA para las features enterprise o el servicio comercial.
+
+Comparte el tipo de producto que tienes, el mercado al que vas y si ya tienes algo en GitHub o estás evaluando empezar. Diseño la estrategia de open source específica para tu caso con el modelo de licencia, qué liberar y el plan de community building.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 45,
+                'use_case'         => 'Diseñar y ejecutar una estrategia de open source que genere visibilidad, atraiga talento y sea compatible con el modelo de negocio, con decisiones concretas sobre qué liberar y cómo gestionarlo.',
+                'vote_score'       => 38,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 3,
+                'title'            => 'Handoff perfecto diseño-desarrollo',
+                'description'      => 'Cómo usar Figma para que el equipo de desarrollo implemente exactamente lo que diseñaste sin idas y venidas.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un product designer con experiencia trabajando en equipos donde el handoff diseño-desarrollo es fluido y el producto final se parece al diseño. Ayúdame a establecer el proceso y las convenciones en Figma que reducen al mínimo las idas y venidas con el equipo de desarrollo.
+
+## Por qué el handoff es el punto de mayor pérdida en el proceso de diseño
+
+El diseño puede ser perfecto y el código puede ser impecable, pero si el handoff entre los dos es deficiente, el producto final tendrá inconsistencias, los developers tardarán más de lo necesario en implementar y el diseñador perderá horas respondiendo preguntas que debería haber respondido en el diseño.
+
+El handoff no es el momento en que el diseño pasa al desarrollo. El handoff empieza cuando el diseñador abre Figma.
+
+## Parte 1: Organización del archivo Figma para developers
+
+**La estructura que facilita la implementación:**
+
+```
+📁 [Producto]
+  📄 _LEEME (page con las convenciones del archivo)
+  📄 Design System / Components
+    🧩 Foundations (colores, tipografía, espaciado, sombras)
+    🧩 Components (atomic design: atoms → molecules → organisms)
+    🧩 Patterns (layouts recurrentes)
+  📄 [Feature 1]
+    🖼️ Cover
+    📱 Flujo principal
+    📱 Estados y variantes
+    📱 Responsive (móvil, tablet si aplica)
+  📄 Archive (diseños descartados, no eliminar)
+```
+
+**La page _LEEME que todo archivo Figma debería tener:**
+Una primera página con:
+- Cómo está organizado el archivo
+- Convenciones de nomenclatura
+- Dónde están los componentes
+- Qué significa el color de cada frame (aprobado, en revisión, descartado)
+- Cómo comunicar dudas (channel de Slack, quién responde)
+
+## Parte 2: Design tokens — el lenguaje compartido
+
+**Por qué los design tokens son esenciales para el handoff:**
+
+Los design tokens son las variables de diseño que tienen el mismo nombre en Figma y en el código: `color-primary-500`, `spacing-4`, `font-size-body`. Cuando el diseñador usa `color-primary-500` y el developer sabe que en el código es `var(--color-primary-500)`, hay un lenguaje compartido que elimina ambigüedad.
+
+**Configurar Variables en Figma (desde Figma 2023):**
+
+```
+Colores:
+  color/primary/50    → #F0F7FF
+  color/primary/500   → #2563EB
+  color/primary/900   → #1E3A5F
+
+  color/neutral/0     → #FFFFFF
+  color/neutral/950   → #0A0A0A
+
+Espaciado:
+  spacing/1  → 4px
+  spacing/2  → 8px
+  spacing/4  → 16px
+  spacing/8  → 32px
+
+Tipografía:
+  font/size/xs  → 12px
+  font/size/sm  → 14px
+  font/size/base → 16px
+  font/size/lg  → 18px
+```
+
+**Cómo exportar tokens a código:**
+Plugins como "Tokens Studio for Figma" permiten exportar los tokens a JSON que los developers pueden importar directamente en el código CSS/Tailwind/styled-components. Esto elimina la copia manual de valores.
+
+## Parte 3: Anotaciones y especificaciones en Figma
+
+**Qué anotar y qué no:**
+
+No es necesario anotar cada medida del diseño — el inspector de Figma (Dev Mode) ya muestra las medidas automáticamente. Lo que SÍ debes anotar:
+
+**Comportamientos interactivos:**
+- Transiciones y animaciones (tipo, duración, easing)
+- Comportamiento en hover, focus, active, disabled
+- Scroll behavior (sticky, fixed, snap)
+- Cómo cambia el layout en diferentes tamaños de pantalla
+
+**Lógica condicional:**
+- Cuándo se muestra cada estado (loading, empty, error, filled)
+- Qué condiciones activan qué variante del componente
+- Reglas de negocio que afectan a la UI ("si el usuario tiene plan free, mostrar upgrade CTA")
+
+**Casos edge que el developer puede no imaginar:**
+- Texto muy largo que trunca
+- Imágenes que no cargan
+- Listas vacías (empty states)
+- Error states de formularios
+- Skeleton loaders durante la carga
+
+**Plugin recomendado: Figma Annotations / Figma Labels:**
+Para añadir anotaciones visuales directamente sobre los frames sin complicar la estructura del archivo.
+
+## Parte 4: Dev Mode de Figma — cómo configurarlo bien
+
+**Dev Mode activa características específicas para developers:**
+- Código CSS/SwiftUI/Jetpack Compose autogenerado para cada elemento
+- Medidas automáticas al hacer hover
+- Comparador de estados (para ver la diferencia entre variantes)
+- Enlace a las variables/tokens usadas
+
+**Cómo preparar el archivo para Dev Mode:**
+1. Todos los estilos de texto deben ser Text Styles (no texto con propiedades hardcodeadas)
+2. Todos los colores deben ser Color Styles o Variables (no colores hexadecimales locales)
+3. Los efectos (sombras, blur) deben ser Effect Styles
+4. Los componentes deben tener las propiedades bien configuradas (variants, boolean, instance swap)
+
+**El mayor error al preparar un archivo para Dev Mode:**
+Detach de components. Cuando un elemento es una instancia modificada sin que sea un componente con variantes correctamente configuradas, el código generado es específico de ese elemento y no se puede reutilizar.
+
+## Parte 5: El proceso de handoff en la práctica
+
+**Handoff meeting (30-45 minutos):**
+Antes de que el developer empiece a implementar, una sesión corta donde el diseñador presenta:
+1. La decisión de diseño detrás de las elecciones no obvias
+2. Los comportamientos interactivos más complejos (con demo del prototipo)
+3. Los casos edge que hay que implementar
+4. Las preguntas que el developer pueda tener antes de empezar
+
+Esta reunión elimina el 80% de las preguntas durante la implementación.
+
+**Canal de comunicación durante la implementación:**
+Define un canal específico (Slack, comentarios en Figma, issue de Jira) para las preguntas de implementación. El diseñador se compromete a responder en < 4 horas en horario laborable. La velocidad de respuesta del diseñador impacta directamente en la velocidad del developer.
+
+**Design QA antes del merge:**
+Cuando el developer cree que ha terminado, el diseñador hace una revisión del trabajo implementado vs. el diseño. Define un proceso:
+- El developer marca el ticket como "Ready for Design QA"
+- El diseñador lo revisa en < 24h con comentarios concretos (pixel perfect no, fidelidad de comportamiento y diseño sí)
+- Máximo 2 rondas de QA incluidas; si hay más rondas, hay un problema anterior en el proceso
+
+**Template de feedback de Design QA:**
+```
+✅ Bien implementado: [elemento]
+🔧 Ajustar: [elemento] — actualmente [cómo está] → debería ser [cómo debería estar]
+❓ Duda: [comportamiento] — ¿es intencional?
+```
+
+## Parte 6: Responsive y breakpoints
+
+**El handoff responsive es el que más falla:**
+
+No es suficiente con diseñar mobile y desktop por separado. El developer necesita saber:
+- Cuáles son los breakpoints oficiales (y que sean consistentes con el framework que usa)
+- Qué componentes cambian de layout entre breakpoints y cuál es el comportamiento intermedio
+- Si hay componentes que solo aparecen en ciertos tamaños
+- Cómo se comportan los textos en tamaños intermedios
+
+**Usa Auto Layout en Figma para simular el comportamiento responsive:**
+Los frames con Auto Layout se comportan de forma más similar al CSS Flexbox/Grid que los frames con posiciones absolutas, lo que facilita que el developer entienda la intención.
+
+Comparte el stack de tu equipo de desarrollo (React, Vue, Angular, Swift, etc.) y las herramientas que ya usas. Diseño el proceso de handoff y las convenciones de archivo específicas para tu contexto.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Establecer el proceso y las convenciones en Figma que permiten al equipo de desarrollo implementar el diseño sin idas y venidas, usando design tokens, anotaciones y Dev Mode.',
                 'vote_score'       => 35,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 10,
-                'title'            => 'Tu flujo de trabajo con IA como freelance: qué automatizar y qué no tocar nunca',
-                'description'      => 'Reparte tus tareas de la semana entre lo que delegas, lo que asistes y lo que haces a mano, con el criterio que protege lo que el cliente te paga de verdad.',
+                'profession_id'    => 4,
+                'title'            => 'Ventas internacionales',
+                'description'      => 'Adapta el proceso comercial, el pitch y la propuesta para vender fuera de tu mercado local con éxito en otros países.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como consultor de productividad para profesionales independientes que factura por su criterio, no por sus horas. Quiero rediseñar mi semana con IA sin degradar lo que vendo.
+Actúa como un director de ventas internacionales con experiencia expandiendo empresas españolas y latinoamericanas a mercados europeos, norteamericanos y de Oriente Medio. Mi empresa está lista para vender internacionalmente y necesito entender cómo adaptar el proceso comercial, el pitch y la propuesta a mercados y culturas diferentes.
 
-## Contexto que necesito
+## Por qué las ventas internacionales no son lo mismo que las locales escaladas
 
-1. Tu servicio y a quién sirves.
-2. Las 15 tareas que ocupan tu semana, con horas aproximadas.
-3. Qué parte de tu trabajo pagaría más el cliente si supiera lo que hay detrás.
-4. Herramientas que usas hoy.
-5. Cuántas horas facturables tienes y cuántas querrías.
+El mayor error al entrar en un nuevo mercado es asumir que lo que funciona en el mercado local funciona igual en el internacional. Las diferencias no son solo de idioma: son diferencias en cómo se construye la confianza, en quién toma las decisiones, en qué argumentos son persuasivos y en qué tiempo tienen disponible para el proceso de compra.
 
-## Paso 1 — Separar lo que vendes de lo que soportas
+El proceso de ventas internacionales es un proceso de adaptación continua, no de traducción.
 
-Clasifica mis 15 tareas:
+## Bloque 1: Selección de mercados — qué atacar primero
 
-| Tipo | Qué es | Regla |
-|---|---|---|
-| Núcleo | Lo que el cliente paga: criterio, decisión, relación | No se delega. Se puede acelerar la preparación |
-| Producción | Ejecución con criterio, verificable | Asistida, con revisión tuya |
-| Soporte | Administración, seguimiento, formato, resúmenes | Delegable, con verificación rápida |
-| Ruido | No aporta a nadie y se hace por costumbre | Eliminar, no automatizar |
+**Framework de priorización de mercados:**
 
-La cuarta categoría es la más rentable y la que nadie revisa: automatizar una tarea inútil la convierte en una tarea inútil más rápida.
+| Criterio | Peso | Cómo evaluarlo |
+|---------|------|----------------|
+| Tamaño del mercado | 25% | TAM en el mercado objetivo |
+| Adecuación del producto | 25% | ¿Resuelves un problema que existe allí? |
+| Accesibilidad comercial | 20% | Idioma, regulación, distancia cultural |
+| Competencia local | 15% | Cuántos competidores bien establecidos |
+| ROI de la expansión | 15% | Coste de entrar vs. ingresos esperados en 24 meses |
 
-## Paso 2 — Lo que no se delega, y por qué
+**Los mercados más frecuentes para empresas españolas:**
 
-Sé explícito conmigo. En un negocio de una persona, lo que no se delega suele ser: la conversación con el cliente, el diagnóstico del problema, la decisión difícil, la mala noticia y la revisión final de lo que sale con tu nombre. Si delegas eso, dejas de vender criterio y empiezas a vender producción intercambiable, que es un mercado peor.
+- **LATAM (México, Colombia, Chile, Argentina):** idioma compartido, modelos de negocio similares, pero diferencias importantes en capacidad de pago, ciclos de venta más largos y mayor peso de las relaciones personales
+- **UK:** mercado grande, cultura empresarial directa, pero muy competitivo y con preferencia por proveedores locales
+- **DACH (Alemania, Austria, Suiza):** mercado premium, toma de decisiones muy rigurosa y lenta, pero contratos de mayor valor y muy alta fidelidad
+- **Francia:** gran mercado, requiere francés para muchos segmentos, cultura empresarial formal y jerarquizada
+- **USA:** el más grande, el más competitivo, requiere adaptación total del pricing, el pitch y el equipo
 
-## Paso 3 — Los cinco automatismos con mejor retorno
+**Recomendación:** elige un solo mercado primario para los primeros 18 meses. La expansión en paralelo a múltiples mercados fragmenta los recursos y ralentiza el aprendizaje.
 
-Para las tareas delegables, propón cinco flujos concretos con: qué entra, qué produce, cómo se verifica en un minuto y cuánto tiempo ahorra a la semana. Candidatos habituales en un negocio de una persona:
+## Bloque 2: Adaptación cultural del proceso de ventas
 
-- De la reunión a las notas y las tareas.
-- De las notas a la propuesta, con la plantilla propia.
-- Seguimiento de propuestas y de facturas pendientes.
-- Preparación de la investigación previa a una primera reunión.
-- Borradores de contenido para tu propia captación.
+**Dimensiones culturales que afectan a la venta (basado en Hofstede):**
 
-## Paso 4 — El material que hace que funcione
+**Distancia al poder (alta vs. baja):**
+En culturas de alta distancia al poder (Latinoamérica, Oriente Medio), las decisiones las toman los niveles más altos y el proceso requiere acceder a esas personas. En culturas de baja distancia (Países Nórdicos, Holanda), el usuario y el manager tienen mucho más peso.
 
-Prepara una vez y sirve siempre: contexto de tu negocio y tus clientes, guía de tu voz escrita, plantillas propias, lista de datos que nunca se pegan, y las instrucciones guardadas por tarea. Sin esto, cada uso empieza de cero y el ahorro es la mitad.
+**Orientación al largo/corto plazo:**
+En mercados anglosajones (UK, USA, Australia), los buyers quieren ver ROI rápido. En mercados de Europa continental, están más dispuestos a evaluar el valor a 3-5 años.
 
-## Paso 5 — Medir de verdad
+**Incertidumbre (alta vs. baja tolerancia):**
+Los alemanes, japoneses y muchos mercados de Europa del Este tienen alta aversión a la incertidumbre: quieren documentación detallada, referencias verificables y contratos muy específicos antes de tomar ninguna decisión. Los anglosajones y los latinoamericanos tienen mayor tolerancia y deciden con menos información.
 
-Cuatro semanas de registro: tarea, minutos antes, minutos después incluyendo la revisión, y si el resultado fue igual, mejor o peor. Al terminar: qué se queda, qué se descarta y en qué se han reinvertido las horas liberadas. Si se han reinvertido en más tareas de soporte, el rediseño ha fracasado.
+**Confianza basada en relación vs. contrato:**
+En Latinoamérica, Oriente Medio y Europa del Sur, la relación personal precede al contrato. Es normal tomar café, hablar de familia y hacer varias reuniones sin agenda de negocios antes de abordar la propuesta. En UK, Países Nórdicos y Alemania, la confianza se construye demostrando competencia, no relación personal.
 
-## Entregables
+## Bloque 3: Adaptación del pitch por mercado
 
-1. Las 15 tareas clasificadas, con el ruido señalado para eliminar.
-2. Lista explícita de lo no delegable en mi caso.
-3. Los cinco flujos con su verificación de un minuto.
-4. Material de contexto a preparar, con plantillas.
-5. Hoja de registro de cuatro semanas y criterio de decisión final.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 35,
-                'use_case'         => 'Rediseñar el flujo de trabajo de un freelance con IA separando lo que se vende de lo que se soporta y midiendo el ahorro real',
-                'vote_score'       => 36,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Cláusula de uso de IA en tu contrato: transparencia sin perder el trabajo',
-                'description'      => 'Cómo declarar que usas IA en tu proceso, qué garantías puedes dar de verdad y cómo responder al cliente que lo pregunta o al que lo prohíbe.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como asesor de profesionales independientes con experiencia en contratos de servicios. Uso IA en mi trabajo y quiero dejarlo claro por escrito, sin regalar argumentos para bajar mi precio ni asumir garantías que no puedo cumplir.
+**El pitch para mercados anglosajones (UK, USA, Australia):**
+- Directo al grano: el problema, tu solución, los números
+- Muy orientado a outcomes: "nuestros clientes ahorran X horas por semana"
+- Casos de clientes reconocibles en su mercado (si tienes)
+- Deck corto (10-12 slides), tiempo de llamada < 30 minutos
+- Evita la grandilocuencia y las afirmaciones sin datos
 
-Nota: esto produce un borrador y argumentos de negociación. Un contrato con consecuencias relevantes conviene revisarlo con un profesional habilitado.
+**El pitch para mercados DACH (Alemania, Austria, Suiza):**
+- Más formal: envía agenda con antelación, empieza a la hora exacta
+- Enfatiza la robustez técnica, la seguridad y el cumplimiento normativo
+- Referencias de empresas similares en su mercado o industria
+- Proceso de evaluación más largo y más riguroso: espera 3-5 meses para cerrar
+- Los case studies con datos verificables son más persuasivos que los testimonios
 
-## Contexto que necesito
+**El pitch para mercados latinoamericanos:**
+- Invierte más tiempo en la relación antes de ir al pitch
+- El precio y las condiciones de pago son más sensibles (muchos mercados con restricciones de cambio o inflación)
+- Las decisiones pueden ser más rápidas que en Europa pero requieren más seguimiento
+- WhatsApp es un canal de ventas legítimo y frecuente en muchos mercados
+- Las referencias de clientes en el mismo país o región tienen mucho peso
 
-1. Tu servicio y qué entregas.
-2. En qué partes del proceso usas IA y con qué herramientas y plan.
-3. Tipo de cliente: empresa grande, pyme, particular, agencia.
-4. Si tus clientes te han preguntado ya, y qué respondiste.
-5. Si manejas información confidencial o datos personales de tus clientes.
+**El pitch para Oriente Medio:**
+- El proceso de construcción de relación es largo y no puede acelerarse
+- Las reuniones formales raramente son el lugar donde se toman las decisiones
+- El Ramadán y los festivos religiosos afectan significativamente los calendarios
+- Las referencias de alto nivel en la región son esenciales para acceder a decisores
 
-## Paso 1 — Decidir qué se declara
+## Bloque 4: Estructura del equipo internacional
 
-Tres niveles, con sus consecuencias:
+**Las 3 opciones de go-to-market internacional:**
 
-| Nivel | Qué dice | Cuándo conviene |
-|---|---|---|
-| Silencio | No se menciona | Cada vez menos viable; si el cliente lo descubre después, es un problema de confianza |
-| Declaración general | «Uso herramientas de asistencia en mi proceso; el resultado final es mío y respondo de él» | La opción por defecto para la mayoría |
-| Declaración detallada | Qué herramientas, en qué fases, con qué revisión | Clientes grandes, sectores regulados, o cuando te lo exigen |
+**Opción 1: Venta directa remota**
+Tu equipo en España vende a clientes internacionales por video call y email. Funciona bien en mercados anglosajones para deals < 50.000€. Requiere equipo bilingüe y disponibilidad en el horario del mercado objetivo.
 
-Recomiéndame uno para mi caso. Y ojo con el silencio: cada vez más contratos de cliente incluyen su propia cláusula, y firmar una prohibición que ya estás incumpliendo es el peor escenario posible.
+**Opción 2: Representante local**
+Contratas a una persona (empleado o agente comercial) en el mercado objetivo. Mayor coste, mayor velocidad de entrada, mayor conocimiento local. Es la opción más frecuente para mercados con alta importancia del idioma o la relación local.
 
-## Paso 2 — Redactar las cláusulas
+**Opción 3: Partner / reseller local**
+Un partner local vende tu producto como parte de su oferta. Menos control, menor margen, pero acceso inmediato a su red de clientes y su credibilidad local. Funciona bien en mercados donde el producto necesita integración con el ecosistema local.
 
-1. **Declaración de proceso:** uso de herramientas de asistencia, con responsabilidad íntegra del resultado por tu parte.
-2. **Confidencialidad:** compromiso de no introducir información confidencial del cliente en herramientas no aprobadas, y de usar planes con condiciones de tratamiento adecuadas.
-3. **Titularidad:** el entregable se cede al cliente en los términos habituales, con la garantía honesta que puedes dar (trabajo propio, sin copia deliberada, herramientas con licencia de uso comercial).
-4. **Revisión humana:** compromiso explícito de revisión y verificación, que es exactamente lo que el cliente compra.
-5. **Datos personales:** si los hay, remisión al acuerdo correspondiente.
+## Bloque 5: Pricing internacional
 
-Redáctalas en lenguaje claro. Una cláusula que el cliente no entiende genera más preguntas que la que no existe.
+**El pricing no se traduce: se adapta:**
 
-## Paso 3 — Las garantías que no puedes dar
+El mismo producto puede tener precios muy diferentes según el mercado. Los factores que determinan el pricing internacional:
+- Capacidad de pago del mercado (PIB per cápita como proxy)
+- Precio de los competidores locales
+- Valor percibido: el mismo producto puede valer más o menos según el contexto cultural
+- Costes de operación local (soporte en idioma local, compliance, pagos locales)
 
-Lista de lo que no debes firmar aunque te lo pidan, con la redacción alternativa: que ningún fragmento coincida con obra ajena, que el resultado sea original en sentido absoluto, o que no haya usado IA en absoluto si sí la usas. Prefiere obligaciones de conducta y de subsanación a garantías de resultado imposible.
+**Regla práctica:** el pricing en USA puede ser 2-3x el pricing en España para el mismo producto. El pricing en LATAM puede ser 30-50% del precio europeo. El pricing en DACH puede ser 20-30% superior al español.
 
-## Paso 4 — Las conversaciones
+**Condiciones de pago por mercado:**
+- USA/UK: pago anticipado o tarjeta de crédito son normales
+- Alemania: transferencia bancaria a 30-60 días
+- Latinoamérica: variabilidad alta por país; en algunos es común pago trimestral en lugar de anual por restricciones de cambio
+- Oriente Medio: a veces con letra de crédito o condiciones muy específicas
 
-Prepara tres guiones:
+## Entregable: Plan de expansión internacional para mi empresa
 
-- **El cliente pregunta si usas IA.** Respuesta honesta y en positivo: qué parte del proceso, qué revisas, por qué el resultado es mejor y no peor.
-- **El cliente lo prohíbe.** Preguntar qué le preocupa de verdad —normalmente es confidencialidad o calidad, no la herramienta— y ofrecer la solución a esa preocupación concreta. Si la prohibición se mantiene, valorar el precio y el plazo sin ella, porque cambian.
-- **El cliente quiere pagar menos «porque lo hace la IA».** El argumento no es defender tus horas: es que compra un resultado y una responsabilidad. Prepara la respuesta con ejemplos de lo que aportas.
-
-## Entregables
-
-1. Nivel de declaración recomendado con la justificación.
-2. Las cláusulas redactadas, listas para tu contrato.
-3. Lista de garantías que no debes firmar, con alternativa.
-4. Los tres guiones de conversación.
-5. Qué revisar si el contrato lo aporta el cliente.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 35,
-                'use_case'         => 'Añadir al contrato de un freelance la declaración de uso de IA con garantías cumplibles y preparar las conversaciones con el cliente',
-                'vote_score'       => 33,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Presupuestar un proyecto que usa IA: coste variable, incertidumbre y riesgos',
-                'description'      => 'Cómo poner precio a un proyecto donde parte del coste depende del consumo y parte del resultado es incierto, sin comerte el margen ni asustar al cliente.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como consultor independiente con experiencia presupuestando proyectos con componente de IA, incluidos los que salieron mal por presupuestar con optimismo. Tengo un proyecto que cotizar.
-
-## Contexto que necesito
-
-1. Qué pide el cliente y qué se entregaría.
-2. Qué parte usa IA: modelo, volumen esperado, si hay integración con sus sistemas.
-3. Estado de sus datos y de sus sistemas (esto suele ser el 40% del esfuerzo real).
-4. Tu tarifa y tu disponibilidad.
-5. Cuánto puedes perder sin que te haga daño, si el proyecto se alarga.
-
-## Paso 1 — Descomponer el trabajo
-
-| Bloque | Certidumbre | Cómo se cotiza |
-|---|---|---|
-| Diagnóstico y diseño | Alta | Precio fijo |
-| Preparación de datos y accesos | **Baja** | Por tiempo, o con supuestos escritos |
-| Construcción | Media | Fijo con alcance cerrado |
-| Ajuste de calidad (prompts, evaluación) | Baja | Por iteraciones acotadas |
-| Integración con sus sistemas | Baja | Por tiempo, con dependencia de terceros declarada |
-| Formación y documentación | Alta | Fijo |
-| Mantenimiento | Recurrente | Cuota mensual aparte |
-
-Regla: **lo incierto no se cotiza a precio fijo.** El bloque de datos y accesos es donde mueren los presupuestos: llegas y resulta que la información está en tres sitios, sin permisos, y nadie sabe quién los da.
-
-## Paso 2 — El coste de consumo
-
-Explica cómo tratarlo: cálculo de coste por uso, quién paga el consumo (recomendación: cuenta del cliente, a su nombre, siempre que sea posible), techo de gasto y aviso, y qué pasa si el volumen real supera lo previsto.
-
-Nunca asumas el coste variable de un tercero dentro de un precio fijo sin techo. Es la forma más rápida de trabajar gratis si el proyecto tiene éxito.
-
-## Paso 3 — Supuestos escritos
-
-Redacta la lista de supuestos con la consecuencia si no se cumplen: acceso a los sistemas en X días, interlocutor con capacidad de decidir disponible, datos en el formato acordado, número de rondas de revisión incluidas, número de casos de prueba. Cada supuesto incumplido activa una recotización que ya está pactada, así que no hay conversación incómoda a mitad.
-
-## Paso 4 — Riesgos y cómo se reparten
-
-- Que la calidad no alcance el umbral esperado: define el umbral de antemano y qué pasa si no se llega (rediseño, devolución parcial, cierre acordado). No prometas una calidad que depende de datos que no has visto.
-- Que el proveedor del modelo cambie precios o condiciones.
-- Que el cliente cambie el alcance.
-- Que el proyecto dependa de un tercero que no responde.
-
-## Paso 5 — La propuesta
-
-Estructura de la oferta: fase 1 de diagnóstico a precio cerrado y bajo riesgo, con el precio orientativo de las fases siguientes y el compromiso de recotizarlas con información real al terminar. Es más honesto, se vende mejor y evita el presupuesto a ciegas que después hay que renegociar.
-
-## Entregables
-
-1. Desglose del trabajo con la forma de cotizar cada bloque.
-2. Tratamiento del coste de consumo, con techo y responsable de pago.
-3. Lista de supuestos con su consecuencia.
-4. Tabla de riesgos con el reparto propuesto.
-5. La propuesta redactada, por fases, con precios.
+Comparte: producto, mercado actual, el mercado internacional que te interesa y el canal de ventas que tienes ahora. Diseño el plan de expansión con el modelo de go-to-market, las adaptaciones del pitch y la estructura de equipo para ese mercado específico.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'advanced',
                 'estimated_minutes'=> 40,
-                'use_case'         => 'Presupuestar un proyecto con componente de IA separando lo cierto de lo incierto, con techo de consumo, supuestos escritos y reparto de riesgos',
-                'vote_score'       => 32,
+                'use_case'         => 'Adaptar el proceso de ventas, el pitch y la propuesta para entrar con éxito en un mercado internacional, con las especificidades culturales y comerciales de cada región.',
+                'vote_score'       => 37,
                 'resource_type'    => 'prompt',
             ],
             [
-                'profession_id'    => 10,
-                'title'            => 'Encontrar clientes para proyectos de IA: dónde están y qué buscan de verdad',
-                'description'      => 'El mapa de dónde salen estos encargos, qué señales indican que una empresa está lista para pagar, y el primer mensaje que abre conversación en lugar de sonar a proveedor más.',
+                'profession_id'    => 5,
+                'title'            => 'Gestión del feedback de early adopters',
+                'description'      => 'Recoge, prioriza e implementa el feedback de los primeros usuarios sin que dicte el roadmap ni paralice el equipo.',
                 'prompt_content'   => <<<'PROMPT'
-Actúa como consultor independiente que ha conseguido clientes de proyectos de IA sin publicidad y sin ser una referencia conocida. Quiero un plan de captación realista para los próximos 90 días.
+Actúa como un product manager con experiencia en la fase early stage de productos digitales que ha aprendido cuándo escuchar al usuario, cuándo ignorarlo y cómo convertir conversaciones de feedback en decisiones de producto coherentes con la visión. Ayúdame a diseñar el proceso de gestión del feedback de mis primeros usuarios.
 
-## Contexto que necesito
+## El dilema del feedback de early adopters
 
-1. Tu oferta y a quién sirve.
-2. Tu red actual: antiguos clientes, antiguos compañeros, sector donde te conocen.
-3. Tiempo semanal disponible para captación.
-4. Casos o pruebas que puedas mostrar hoy.
-5. Presupuesto de captación, si hay alguno.
+Los early adopters son un regalo y una trampa al mismo tiempo. Son el regalo porque están dispuestos a usar un producto imperfecto y a decirte exactamente qué no funciona. Son una trampa porque sus necesidades específicas pueden ser muy diferentes a las del mercado masivo al que quieres llegar, y si dejas que su feedback dicte el roadmap, construirás un producto perfecto para 50 personas y difícil de escalar a 50.000.
 
-## Paso 1 — De dónde salen estos encargos
+Henry Ford no le preguntó a los usuarios qué querían — le habrían dicho "caballos más rápidos". Steve Jobs no hizo focus groups para el iPhone. Pero también es verdad que ignorar a los usuarios lleva a construir productos que nadie quiere. La habilidad está en saber cuándo escuchar y cuándo ejercer el criterio propio.
 
-Ordenado por probabilidad real para alguien sin marca establecida:
+## Parte 1: Recoger feedback de forma sistemática
 
-| Vía | Por qué funciona | Esfuerzo |
-|---|---|---|
-| Clientes actuales y antiguos | Ya confían; el proyecto de IA es una extensión | Bajo |
-| Tu red profesional directa | Te conocen trabajando | Bajo |
-| Asesorías, gestorías y consultoras pequeñas | Tienen la relación y no tienen el perfil técnico | Medio, muy rentable |
-| Asociaciones sectoriales y cámaras | Buscan formación y diagnósticos | Medio |
-| Subcontratación para agencias | Volumen estable, margen menor | Medio |
-| Contenido especializado en un nicho | Atrae al que ya busca | Alto, lento, duradero |
-| Comunidades y eventos del sector del cliente | Ahí está quien tiene el problema | Medio |
-| Prospección en frío | Funciona con señal y mensaje muy concreto | Alto |
+**Los 4 canales de feedback más valiosos en early stage:**
 
-La tercera fila es la más desaprovechada: el asesor de una pyme tiene la confianza y le piden ayuda con esto constantemente sin saber a quién derivar.
+**1. Entrevistas de usuario (el más valioso y el más ignorado):**
+Sesiones de 30-45 minutos 1:1 con usuarios activos. No son demos, no son soporte: son conversaciones donde el PM escucha más que habla.
 
-## Paso 2 — Señales de que una empresa está lista
+Frecuencia recomendada: 4-6 entrevistas por semana en los primeros 6 meses, luego 2-3 por semana.
 
-Lo que indica presupuesto y urgencia, no curiosidad: han contratado a alguien para procesos o datos, tienen un problema de volumen creciente con el mismo equipo, han sufrido un error caro por trabajo manual, están en pleno cambio de sistema, o alguien de dirección ha empezado a hablar del tema en público.
+**2. Datos de comportamiento (el que no miente):**
+Lo que los usuarios dicen que hacen y lo que realmente hacen son cosas distintas. Los datos de uso revelan: qué features usan, en qué momento abandonan, qué paths siguen, qué errores encuentran.
 
-Y las señales de que **no** está lista, para no perder meses: quieren «ver qué se puede hacer con la IA» sin problema concreto, no hay nadie que decida, o esperan que el proyecto se pague solo desde el primer mes.
+Si no tienes analytics, implementa Mixpanel, Amplitude o PostHog antes de lanzar. Sin datos de comportamiento, trabajas con intuición disfrazada de evidencia.
 
-## Paso 3 — El mensaje de entrada
+**3. Tickets de soporte:**
+Los tickets revelan los problemas que impiden usar el producto. Son el feedback más directo y accionable. (Ver prompt de análisis de causa raíz de tickets para el proceso completo.)
 
-Redacta tres versiones: para cliente antiguo, para asesoría que puede derivar y para contacto en frío con señal. Reglas: nombrar el problema y no la tecnología, una prueba concreta (un caso con número), y una petición pequeña. Nada de «la IA está transformando el sector».
+**4. NPS y CSAT:**
+El NPS mensual con la pregunta de seguimiento "¿por qué has dado esa puntuación?" genera feedback cualitativo a escala. El CSAT después de interacciones de soporte mide la experiencia puntual.
 
-## Paso 4 — La primera conversación
+## Parte 2: El framework de priorización de feedback
 
-Guion de 30 minutos: qué preguntar para entender el proceso, qué preguntar para saber si hay presupuesto y decisión, cómo detectar que solo quieren una charla gratis, y cómo cerrar con un siguiente paso concreto (normalmente el diagnóstico corto de pago).
+**Por qué no puedes priorizar solo por volumen:**
 
-Incluye la parte incómoda: cómo decir «esto no lo necesitáis» cuando es verdad. Es lo que hace que te llamen para el siguiente.
+Si el feedback más frecuente siempre gana, construyes un producto diseñado por comité. El volumen es un input, no el único.
 
-## Paso 5 — Plan de 90 días
+**Framework ICE modificado para feedback:**
 
-Reparto semanal de horas entre las vías elegidas, con número de conversaciones objetivo, y los tres indicadores a seguir: conversaciones mantenidas, diagnósticos vendidos y proyectos cerrados.
+| Criterio | Definición | Peso |
+|---------|-----------|------|
+| Frecuencia | ¿Cuántos usuarios lo mencionan? | 20% |
+| Intensidad | ¿Es un bloqueador o una molestia menor? | 30% |
+| Alineamiento estratégico | ¿Resuelve esto a los usuarios que queremos tener en 18 meses? | 30% |
+| Esfuerzo de implementación | ¿Cuánto cuesta resolver esto? (inverso) | 20% |
 
-## Entregables
+**La pregunta más importante:** ¿Es este feedback del usuario al que queremos servir en 18 meses, o es específico de los early adopters que quizás no son representativos del mercado masivo?
 
-1. Las tres vías prioritarias para mi caso, con la justificación.
-2. Lista de 20 contactos concretos a abordar, sacada de mi red y de mi sector.
-3. Los tres mensajes de entrada redactados.
-4. Guion de la primera conversación.
-5. Plan de 90 días con indicadores semanales.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Construir un plan de captación de clientes para proyectos de IA con vías priorizadas, señales de compra y mensajes de entrada',
-                'vote_score'       => 34,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Formación y talleres de IA como línea de ingresos',
-                'description'      => 'Diseña un taller que la gente recomiende: contenido por perfil, ejercicios con el trabajo real de los asistentes, y el modelo de precio y de continuidad.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como formador independiente con experiencia impartiendo talleres de IA en empresas, incluidos los que salieron regular. Quiero montar esta línea de ingresos con criterio.
+Los early adopters suelen ser más técnicos, más tolerantes al cambio, más dispuestos a adaptar su workflow al producto. El mercado masivo es menos técnico, menos tolerante y quiere que el producto se adapte a su workflow existente. Un producto perfecto para early adopters puede ser demasiado complejo para el mercado masivo.
 
-## Contexto que necesito
+## Parte 3: El proceso semanal de feedback
 
-1. Tu experiencia práctica: qué usas de verdad y en qué contexto.
-2. Público objetivo: empresa completa, un departamento, profesionales sueltos.
-3. Formato posible: presencial, en línea, mixto; duración disponible.
-4. Tu tarifa de referencia.
-5. Si has dado formación antes y qué tal.
+**El weekly feedback review (60 minutos):**
 
-## Paso 1 — El error que arruina estos talleres
+**Lunes — Recopilación (15 min):**
+Un miembro del equipo consolida el feedback de la semana anterior: entrevistas, tickets, comentarios en redes, NPS responses. Todo en un solo documento.
 
-Enseñar herramientas en lugar de resolver el trabajo de los asistentes. Al día siguiente nadie usa nada porque nunca se aplicó a su tarea real. Diseña contra eso: **la mitad del tiempo tiene que ser el asistente trabajando en su propia tarea, con acompañamiento.**
+**Martes — Categorización (20 min):**
+El PM categoriza el feedback por área del producto y tipo (bug, UX, feature request, expectativa incorrecta). No analiza todavía, solo categoriza.
 
-Segundo error: mezclar en la misma sala a quien no ha abierto nunca un asistente con quien ya automatiza. Los dos salen insatisfechos. Propón cómo segmentar con una encuesta previa de tres preguntas.
+**Miércoles — Priorización (25 min):**
+Con el equipo de producto (PM + diseñador + tech lead), aplica el framework de priorización. Resultado: 3-5 ítems accionables para las próximas 2 semanas y el resto al backlog categorizado.
 
-## Paso 2 — Estructura de un taller de 4 horas
+**La regla de los tres colores:**
+- Verde: feedback que valida que algo funciona bien (refuerza continuar en esa dirección)
+- Amarillo: feedback que indica un problema menor o mejora posible
+- Rojo: feedback que indica un problema que está impidiendo el uso o generando churn
 
-| Bloque | Duración | Contenido |
-|---|---|---|
-| Marco | 30 min | Qué hacen bien y mal estos sistemas, con ejemplos de su sector |
-| Método | 45 min | Cómo pedir las cosas y cómo verificar. Con la tarea de cada uno delante |
-| Práctica 1 | 60 min | Su tarea real, guiada, con revisión individual |
-| Riesgos y datos | 30 min | Qué no se pega, qué se revisa siempre, la política de la empresa |
-| Práctica 2 | 60 min | Convertir lo que funcionó en un procedimiento reutilizable |
-| Cierre | 15 min | Compromiso concreto de cada uno para la semana siguiente |
+Los rojos tienen prioridad absoluta sobre cualquier nueva feature.
 
-El compromiso final es lo que hace que el taller sirva. Sin él, la sensación es buena y el efecto es cero.
+## Parte 4: La comunicación del roadmap a early adopters
 
-## Paso 3 — Materiales
+**Por qué los early adopters necesitan sentir que les escuchas:**
 
-- Encuesta previa: tarea que quieren resolver, nivel, herramienta disponible.
-- Cuaderno de trabajo con los ejercicios y espacio para sus prompts.
-- Biblioteca de instrucciones por perfil, para llevarse.
-- Lista de verificación de revisión, en una tarjeta.
-- Resumen posterior con lo producido en la sala.
-
-## Paso 4 — Precio y formatos
-
-Propón precios según mi tarifa para: taller de medio día en empresa, programa de tres sesiones con trabajo entre ellas, sesión abierta para profesionales sueltos, y acompañamiento posterior mensual. Con el criterio de qué incluye cada uno y hasta cuántas personas por sesión (más de 15 con práctica individual no funciona).
-
-## Paso 5 — Que no se quede en el día
-
-Lo que separa un taller de un cambio real: seguimiento a las dos semanas de 30 minutos, un canal para dudas durante un mes, y una medida sencilla del efecto (qué tareas han cambiado y cuánto tiempo ahorran). Esa medida es tu mejor argumento comercial para el siguiente cliente.
+Los early adopters no son clientes normales: son cómplices. Toleran un producto imperfecto a cambio de tener influencia en su evolución. Si sienten que no les escuchas, dejan de dar feedback y eventualmente dejan el producto.
 
-## Entregables
-
-1. Encuesta previa de tres preguntas y criterio de segmentación.
-2. Programa detallado del taller con tiempos y ejercicios.
-3. Índice del cuaderno de trabajo y de los materiales.
-4. Propuesta de precios por formato.
-5. Plan de seguimiento posterior y forma de medir el efecto.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 40,
-                'use_case'         => 'Diseñar talleres de IA para empresas con práctica sobre el trabajo real de los asistentes, materiales, precios y seguimiento posterior',
-                'vote_score'       => 30,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Boletín asistido por IA que no suena a IA',
-                'description'      => 'Monta el sistema para publicar cada semana sin que el contenido se vuelva genérico: la parte que aporta la máquina, la que aportas tú y el filtro que impide publicar relleno.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como editor con experiencia en boletines profesionales que la gente abre. Quiero publicar con constancia usando IA como apoyo, sin que el resultado suene a lo mismo que reciben de otros diez.
+**Cómo comunicar que has recibido el feedback:**
+1. Responde personalmente al feedback más valioso (no con auto-replies)
+2. Comunica cuando implementas algo que un usuario sugirió: "gracias a [usuario/empresa], ahora [feature]"
+3. Explica cuándo decides NO implementar algo y por qué: "nos pedís mucho X pero hemos decidido no construirlo porque [razón estratégica]"
+4. Publica un roadmap público simplificado con lo que está en progreso y lo que está en evaluación
 
-## Contexto que necesito
+**El riesgo de prometer demasiado:**
+Los early adopters guardan memoria de lo que se prometió y lo que se entregó. Mejor decir "estamos estudiándolo" que "lo tendremos en 2 meses" si no tienes certeza.
 
-1. Tu nicho y a quién escribes.
-2. Objetivo del boletín: captación, autoridad, comunidad, ventas.
-3. Cadencia realista que puedes sostener y tiempo semanal disponible.
-4. Qué tienes que otros no: acceso, datos, casos, experiencia, opinión.
-5. Dos o tres boletines que te gusten y por qué.
+## Parte 5: Cuándo ignorar el feedback
 
-## Paso 1 — Qué hace la máquina y qué haces tú
+**Las señales de que el feedback no debe influir en el roadmap:**
 
-| Tarea | Quién |
-|---|---|
-| Vigilancia de fuentes y descarte de lo irrelevante | IA, con tu criterio de filtro |
-| Selección final de los temas | Tú |
-| La opinión, la interpretación y la consecuencia para el lector | **Tú, siempre** |
-| Primer borrador estructural | IA, sobre tus notas |
-| El ejemplo propio, la anécdota, el número real | Tú |
-| Titulares alternativos y limpieza de texto | IA |
-| Revisión final y verificación | Tú |
+1. **El usuario que pide que el producto sea diferente, no mejor:** "si pudieran hacer X, el producto sería perfecto" donde X es una redefinición del product. Escúchalo como señal de que quizás tienes el cliente equivocado, no como un feature request.
 
-La regla que define la calidad: **la IA no aporta la opinión.** Un boletín sin opinión propia es un agregador, y de agregadores hay demasiados y son gratis.
+2. **El feedback de usuarios de baja retención:** los usuarios que van a abandonar el producto de todas formas tienen incentivos diferentes a los que se quedan. No diseñes para retener a quien no puedes retener.
 
-## Paso 2 — Estructura fija que reduce el trabajo
+3. **El feedback que contradice datos de comportamiento:** si un usuario dice "me encanta la feature X" pero los datos muestran que no la usa, hay una disonancia. El comportamiento es más honesto que la declaración.
 
-Propón una estructura repetible de 4-5 bloques, con el número de palabras de cada uno. Una estructura fija baja el coste de producción y sube la constancia. Como referencia: una idea principal con opinión, un caso o número concreto, dos o tres enlaces comentados —comentados, no listados— y algo utilizable esta semana.
+4. **El feedback de un solo usuario con mucha voz:** algunos clientes enterprise tienen mucha capacidad de presión. Un cliente que paga mucho no tiene automáticamente razón sobre el producto. Evalúa el feedback de forma independiente al tamaño del cliente.
 
-## Paso 3 — El filtro anti-relleno
+## Entregable: Sistema de feedback para mi empresa
 
-Antes de enviar, tres preguntas. Si alguna falla, no se envía y se manda otra cosa:
-
-1. ¿Hay algo aquí que el lector no pudiera obtener preguntándole a un chatbot?
-2. ¿Hay una opinión que alguien podría discutir? Si nadie puede estar en desacuerdo, no dice nada.
-3. ¿Hay algo concreto —un número, un caso, un procedimiento— y no solo consideraciones?
-
-Es mejor saltarse una semana que publicar relleno. Publicar relleno enseña a la gente a no abrirte.
-
-## Paso 4 — Rastros de escritura automática que hay que eliminar
-
-Prepárame la lista de patrones a buscar y quitar de mis borradores: aperturas de contexto grandilocuentes, enumeraciones de tres elementos en cada párrafo, contraposiciones huecas, cierres que resumen lo ya dicho, adjetivos intensificadores, hedging constante y el vocabulario que delata el origen. Y la lista de mis propias muletillas, si te doy dos textos míos.
-
-## Paso 5 — Rutina semanal
-
-Reparto del tiempo en bloques: recolección continua de notas durante la semana (la clave está aquí, no en el día de escribir), selección, escritura, revisión y envío. Con la duración de cada bloque y el día.
-
-## Entregables
-
-1. Reparto de tareas entre tú y la IA.
-2. Estructura fija del boletín con extensiones.
-3. El filtro anti-relleno en formato tarjeta.
-4. Lista de patrones a eliminar en la revisión.
-5. Rutina semanal con horas y días.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 30,
-                'use_case'         => 'Producir un boletín profesional con apoyo de IA manteniendo opinión propia y aplicando un filtro que impide publicar contenido genérico',
-                'vote_score'       => 29,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Demostrar que el trabajo es tuyo cuando usas IA: proceso y evidencia',
-                'description'      => 'Cómo documentar tu proceso de trabajo para poder responder con tranquilidad a un cliente que duda, a un concurso que lo exige o a una acusación de contenido generado.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como asesor de profesionales creativos y técnicos. Uso IA como apoyo y quiero poder demostrar mi aportación: ante un cliente que sospecha, ante un pliego que pide declaración, o ante un detector automático que se equivoca.
-
-## Contexto que necesito
-
-1. Tu oficio y qué entregas: texto, diseño, código, análisis, formación.
-2. En qué fases usas IA y con qué herramientas.
-3. Si algún cliente lo ha cuestionado ya y en qué términos.
-4. Si trabajas con concursos, subvenciones o clientes con políticas estrictas.
-
-## Paso 1 — La conversación de fondo
-
-Aclaremos qué se te pide en realidad, porque no es lo mismo:
-
-| Situación | Lo que preocupa de verdad |
-|---|---|
-| Cliente que sospecha | Que le estén cobrando por algo sin trabajo detrás |
-| Pliego o concurso | Cumplimiento formal y titularidad de derechos |
-| Detector automático | Un falso positivo que hay que rebatir |
-| Medio o editorial | Política editorial y responsabilidad |
-
-Para cada una, la respuesta útil es distinta. Dime cuál es mi caso principal.
-
-## Paso 2 — Documentar el proceso, no defenderse
-
-La mejor prueba no es un certificado, es el rastro del trabajo. Define qué conservar de forma natural, sin montar burocracia:
-
-- Notas y esquemas previos, con fecha.
-- Versiones intermedias del entregable (el historial de versiones o del repositorio ya lo hace por ti).
-- Fuentes consultadas y decisiones tomadas, en una línea cada una.
-- Registro por entregable: qué se hizo con asistencia, qué se revisó y qué se reescribió.
-- Las preguntas que hiciste al cliente y sus respuestas: nadie más tiene esa información.
-
-Ese último punto es la evidencia más fuerte de todas: el trabajo que incorpora contexto que solo tú obtuviste no puede haber salido de una herramienta genérica.
-
-## Paso 3 — Sobre los detectores
-
-Ten claro el argumento técnico para poder explicarlo con calma: los detectores de texto generado producen falsos positivos con frecuencia, penalizan la escritura clara y estructurada, y funcionan peor con quien no escribe en su lengua materna. No son prueba de nada por sí solos.
-
-Respuesta recomendada ante un aviso de detector: no discutir el porcentaje, ofrecer el rastro del proceso —versiones, notas, decisiones—, y explicar el método de trabajo. La conversación se gana con el proceso, nunca con el resultado de otra herramienta.
-
-## Paso 4 — Declaración honesta
-
-Redacta tu declaración estándar de tres frases: qué herramientas usas, en qué fases, y qué responsabilidad asumes sobre el resultado. Una para tu web o propuesta, y otra más formal para pliegos.
-
-## Paso 5 — Cuando el cliente lo prohíbe
-
-Cómo trabajar sin IA cuando el contrato lo exige, y qué cambia en precio y plazo. Y la advertencia clara: no firmes una prohibición que no vas a cumplir. Es el único escenario de este tema que puede acabar de verdad mal.
-
-## Entregables
-
-1. Identificación de mi caso principal y la respuesta que corresponde.
-2. Sistema de documentación del proceso, con lo que ya genero de forma automática.
-3. Argumentario sobre detectores, en lenguaje para clientes.
-4. Declaración estándar en dos versiones.
-5. Cómo cotizar un proyecto con prohibición de uso de IA.
-PROMPT,
-                'tool_name'        => 'Claude',
-                'difficulty'       => 'intermediate',
-                'estimated_minutes'=> 30,
-                'use_case'         => 'Documentar el proceso de trabajo para acreditar la aportación propia cuando se usa IA y responder a clientes, pliegos o detectores',
-                'vote_score'       => 31,
-                'resource_type'    => 'prompt',
-            ],
-            [
-                'profession_id'    => 10,
-                'title'            => 'Precio por valor cuando la IA reduce tus horas: resuelve el dilema del ahorro',
-                'description'      => 'Si tardas la mitad, ¿cobras la mitad? El razonamiento y las tácticas para cambiar de precio por horas a precio por resultado sin perder a los clientes que ya tienes.',
-                'prompt_content'   => <<<'PROMPT'
-Actúa como consultor de precios para profesionales independientes. Con IA hago en cuatro horas lo que antes me llevaba doce. Si sigo cobrando por horas, gano un tercio. Y si el cliente se entera, presionará el precio.
-
-## Contexto que necesito
-
-1. Tu servicio y cómo cobras hoy: hora, día, proyecto, retenido.
-2. Tres trabajos recientes: precio cobrado, horas antes y horas ahora.
-3. Qué obtiene el cliente con tu trabajo, en su moneda: ingresos, ahorro, riesgo evitado, tiempo.
-4. Cartera actual: cuántos clientes, cuánto pesa el mayor.
-5. Cuánto puedes perder si un cliente se va.
-
-## Paso 1 — El razonamiento que hay que tener claro
-
-El cliente no compra tus horas: compra un resultado y la garantía de que estará bien. Las horas eran una forma de medir, y ha dejado de funcionar. Ayúdame a articularlo sin sonar a excusa, y dime cuál es el argumento honesto en mi caso concreto: qué le sigue costando lo mismo al cliente aunque yo tarde menos (criterio, responsabilidad, experiencia acumulada, garantía de revisión).
-
-## Paso 2 — Poner precio al valor
-
-Para cada servicio:
-
-1. Resultado que produce, en términos del cliente.
-2. Valor estimado para él: cuánto le vale ese resultado o cuánto le cuesta no tenerlo.
-3. Alternativas que tiene y su coste: otro profesional, hacerlo dentro, no hacerlo.
-4. Rango de precio defendible y su justificación.
-5. Qué información necesitas del cliente para poder proponerlo (sin esos datos, el precio por valor no se puede sostener).
-
-## Paso 3 — Formatos de cobro
-
-| Formato | Cuándo funciona | Riesgo |
-|---|---|---|
-| Precio por proyecto | Alcance definible | Ampliaciones no pactadas |
-| Paquete de resultado | Entregable repetible | Hay que acotar revisiones |
-| Retenido mensual | Necesidad continua | Que se convierta en disponibilidad infinita |
-| Precio por tramos | Cliente indeciso | Complejidad |
-| Variable ligado a resultado | Resultado medible y atribuible | Difícil de medir, cobro tardío |
-
-Recomiéndame el formato por tipo de servicio y por tipo de cliente.
-
-## Paso 4 — La transición sin perder la cartera
-
-- Clientes nuevos: precio nuevo desde el primer día. Aquí no hay conversación difícil.
-- Clientes actuales: cambio en la renovación o en el siguiente proyecto, avisado con antelación, con el motivo dicho en positivo (paquetes con alcance claro, sin sorpresas de factura).
-- El cliente que pregunta si ahora tardas menos: respuesta honesta y sin disculparse. Sí, y el resultado es igual o mejor; el precio refleja el resultado.
-- El cliente que exige el descuento: decide si es un cliente que quieres conservar. A veces la respuesta correcta es dejarlo ir, y conviene tenerlo pensado antes de la conversación, no durante.
-
-## Paso 5 — Guion y números
-
-Prepara el guion de la conversación de subida o de cambio de modelo, y el cálculo de mi umbral: cuántos clientes puedo perder con el precio nuevo antes de estar peor que ahora. Con ese número, la conversación se afronta de otra manera.
-
-## Entregables
-
-1. Argumento honesto de por qué el precio no baja, adaptado a mi servicio.
-2. Análisis de valor por servicio con rango de precio defendible.
-3. Formato de cobro recomendado por servicio y cliente.
-4. Plan de transición para la cartera actual.
-5. Guion de la conversación y cálculo del umbral de pérdida aceptable.
+Comparte el número de usuarios activos, los canales de feedback que ya tienes y cuál es tu mayor problema con el feedback actual (¿demasiado, poco, desordenado, no sabes cómo priorizarlo?). Diseño el proceso adaptado a tu etapa con las herramientas y la cadencia específicas para tu caso.
 PROMPT,
                 'tool_name'        => 'Claude',
                 'difficulty'       => 'intermediate',
                 'estimated_minutes'=> 35,
-                'use_case'         => 'Pasar de cobrar por horas a cobrar por resultado cuando la IA reduce el tiempo de trabajo, con plan de transición para la cartera actual',
+                'use_case'         => 'Diseñar el proceso de recopilación, priorización e implementación del feedback de early adopters que mantiene la visión del producto sin ignorar las señales del mercado.',
+                'vote_score'       => 43,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 6,
+                'title'            => 'Retribución flexible y beneficios sociales',
+                'description'      => 'Ticket restaurante, seguro médico, formación y otros beneficios que retienen talento con menor coste para la empresa.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un especialista en compensación y beneficios con experiencia diseñando paquetes retributivos para empresas de entre 20 y 500 empleados en España. Mi objetivo es diseñar un plan de retribución flexible y beneficios sociales que sea atractivo para retener talento, eficiente desde el punto de vista fiscal y viable para el presupuesto de la empresa.
+
+## Por qué la retribución flexible es más eficiente que subir el salario
+
+Un aumento de salario de 3.000€ brutos anuales le cuesta a la empresa ~3.900€ (con Seguridad Social) y el empleado recibe ~2.000€ netos (con IRPF). La misma cantidad destinada a beneficios exentos de IRPF y cotización puede valer 3.000€ para el empleado sin coste adicional de SS para la empresa.
+
+La retribución flexible convierte parte del salario bruto en beneficios que tienen mejor tratamiento fiscal, aumentando el poder adquisitivo real del empleado sin incrementar el coste total de la empresa.
+
+## Bloque 1: Los beneficios con mejor tratamiento fiscal en España (2024-2025)
+
+**Beneficios exentos de IRPF y Seguridad Social:**
+
+| Beneficio | Límite de exención | Coste para la empresa | Valor para el empleado |
+|---------|------------------|----------------------|----------------------|
+| Ticket restaurante | 11€/día trabajado | Al límite exento | Ídem |
+| Ticket transporte público | 136,36€/mes (1.500€/año aprox.) | Al límite exento | Ídem |
+| Guardería (hijos < 3 años) | Sin límite | Sin límite | Coste real de la guardería |
+| Formación relacionada con el trabajo | Sin límite | Sin límite | Valor formativo |
+| Seguro médico privado | 500€/año empleado + 500€ cónyuge + 500€ por hijo | Al límite | Cobertura médica |
+
+**Beneficios con tratamiento favorable:**
+
+| Beneficio | Tratamiento fiscal | Límite |
+|---------|------------------|--------|
+| Plan de pensiones de empresa | Reducción en base imponible del empleado | 1.500€/año (límite conjunto individual + empresa) |
+| Préstamos de empresa | Tipo de interés del IRPF publicado anualmente | Sin límite especificado |
+| Planes de acciones y stock options | Tributación diferida y reducción en ciertos casos | Exención hasta 12.000€/año si se cumplen requisitos |
+
+## Bloque 2: Diseño del plan de retribución flexible
+
+**Cómo funciona el plan de retribución flexible:**
+
+1. Se acuerda una parte del salario bruto que pasa a ser retribución flexible
+2. El empleado elige en qué beneficios destinar esa cantidad (dentro del catálogo de la empresa)
+3. Los beneficios elegidos se gestionan a través de una empresa de gestión de RT (Coverflex, Edenred, Cobee, Flexoh, etc.)
+4. La empresa factura los beneficios y los entrega al empleado
+
+**Ejemplo práctico:**
+```
+Salario bruto anual: 40.000€
+Parte flexible: 3.000€
+
+Distribución elegida por el empleado:
+- Ticket restaurante: 11€ × 220 días = 2.420€
+- Seguro médico: 500€
+- Ticket transporte: 80€/mes × 10 meses = 800€ (ajuste al límite)
+
+Resultado:
+- El empleado recibe 3.000€ de beneficios sin IRPF ni SS
+- La empresa no paga SS sobre esos 3.000€ (ahorro de ~900€/año)
+- El empleado tiene ~1.200€ más de poder adquisitivo que si hubiera recibido esos 3.000€ como salario
+```
+
+**Consideraciones importantes:**
+- La retribución flexible reduce el salario base → puede afectar a la base de cálculo de la indemnización, el paro y el complemento de IT
+- Requiere que el empleado firme un acuerdo de retribución flexible (novación del contrato)
+- No puede reducir el salario por debajo del SMI ni del convenio colectivo aplicable
+
+## Bloque 3: Los beneficios más valorados por los empleados
+
+**Encuestas de preferencias de beneficios (mercado español, 2023-2024):**
+
+| Beneficio | % empleados que lo valoran mucho |
+|---------|--------------------------------|
+| Trabajo en remoto / híbrido | 78% |
+| Flexibilidad horaria | 74% |
+| Seguro médico privado | 68% |
+| Días de vacaciones adicionales | 65% |
+| Ticket restaurante | 62% |
+| Formación y desarrollo profesional | 58% |
+| Plan de pensiones | 45% |
+| Ticket transporte | 42% |
+| Guardería | 35% (con hijos) / 8% (sin hijos) |
+
+**Conclusión:** los tres beneficios con mayor retorno en retención son trabajo flexible + seguro médico + formación. Antes de diseñar un plan de RT elaborado, asegúrate de tener estos tres.
+
+## Bloque 4: La formación como beneficio estratégico
+
+**Por qué la formación es el beneficio con mejor ROI:**
+- Exenta de IRPF y SS sin límite si está relacionada con el trabajo
+- Mejora la productividad del empleado directamente
+- Tiene alto impacto en retención (los empleados que se desarrollan tienen menor intención de irse)
+- Puede capitalizarse a través de los créditos de FUNDAE (antes Fundación Tripartita) que financian parte de la formación
+
+**Cómo estructurar el presupuesto de formación:**
+- Mínimo recomendado: 500-1.000€/empleado/año
+- Tipos de formación: técnica (skills del puesto), blanda (comunicación, liderazgo), idiomas
+- Políticas frecuentes: presupuesto individual anual + formación grupal de empresa + clawback si el empleado se va en los 12 meses siguientes
+
+**Plataformas de formación recomendadas:**
+- LinkedIn Learning / Coursera for Teams: amplio catálogo generalista
+- Pluralsight / Udemy for Business: especialización técnica
+- Formación presencial con proveedores locales: para skills que requieren práctica en grupo
+
+## Bloque 5: El seguro médico privado como retención
+
+**Por qué el seguro médico es el beneficio más diferenciador:**
+
+En España, el seguro médico privado es valorado por su acceso más rápido al especialista y la ausencia de listas de espera. Para muchos empleados con familia, vale 1.500-3.000€ al año en primas y tiene un valor percibido muy superior a ese coste.
+
+**Cómo estructurar el seguro médico como beneficio:**
+- La empresa paga el seguro como gasto (deducible en IS)
+- El empleado tiene exención de IRPF hasta 500€/año por él mismo, 500€ por su cónyuge y 500€ por cada hijo menor
+- Por encima de esos límites, el exceso tributa como retribución en especie
+
+**Proveedores más frecuentes:** Sanitas, Adeslas, Asisa, DKV, Mapfre Salud
+
+**Recomendación:** compara siempre 3-4 proveedores con el mismo nivel de cobertura. La diferencia de precio por el mismo catálogo puede ser del 20-30%.
+
+## Bloque 6: Plan de beneficios por etapa de empresa
+
+**Startup (< 20 personas):**
+Foco en beneficios de bajo coste y alto valor percibido: flexibilidad horaria real, trabajo en remoto, presupuesto de formación individual (500€/año), seguro médico básico para todos.
+
+**Empresa en crecimiento (20-100 personas):**
+Añade: plan de retribución flexible con ticket restaurante y transporte, mejora del seguro médico (incluir familia), plan de acciones o phantom shares para perfiles clave.
+
+**Empresa madura (100+ personas):**
+Añade: plan de pensiones de empresa, guardería subvencionada (si la mayoría del equipo tiene hijos jóvenes), beneficios de bienestar (psicología, deporte, nutrición).
+
+## Entregable: Plan de beneficios para mi empresa
+
+Comparte: número de empleados, distribución de edad aproximada (para saber si la guardería es relevante), salario medio bruto, presupuesto disponible para beneficios y qué beneficios tienes ya. Diseño el plan optimizado para tu situación con el coste total, el ahorro fiscal y el impacto esperado en la retención.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Diseñar un plan de retribución flexible y beneficios sociales eficiente fiscalmente que mejore la retención del talento con el menor incremento de coste total para la empresa.',
+                'vote_score'       => 34,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 7,
+                'title'            => 'Business intelligence para directivos',
+                'description'      => 'Power BI, Tableau o Looker Studio: crea tus propios dashboards sin depender del equipo de datos para cada consulta.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un analista de datos con experiencia enseñando a directivos y managers no técnicos a crear sus propios dashboards en Power BI, Tableau o Looker Studio. Mi objetivo es dejar de esperar al equipo de datos para cada consulta y ser capaz de responder mis propias preguntas con datos en tiempo real.
+
+## El problema con el BI en la mayoría de las empresas
+
+Los directivos necesitan datos para tomar decisiones. El equipo de datos tiene una cola de 3 semanas de solicitudes. El resultado: las decisiones se toman tarde o con intuición porque nadie puede esperar 3 semanas para responder "¿cuánto vendimos este trimestre en el canal online?".
+
+La solución no es contratar más analistas (siempre habrá más preguntas que capacidad). La solución es dar a los directivos la capacidad de responder las preguntas operativas más frecuentes ellos mismos, reservando el tiempo del equipo de datos para los análisis realmente complejos.
+
+## Bloque 1: Elección de la herramienta
+
+**Cuándo usar cada herramienta:**
+
+| Herramienta | Ideal para | Curva de aprendizaje | Precio |
+|-----------|-----------|---------------------|--------|
+| Looker Studio | Google Workspace, GA4, Google Sheets, BigQuery | Baja | Gratuito |
+| Power BI | Microsoft 365, Excel, Azure, SQL Server | Media | Desde 9€/mes/usuario |
+| Tableau | Análisis avanzado, grandes volúmenes, visualizaciones complejas | Alta | Desde 70€/mes/usuario |
+| Metabase | Self-hosted, equipos técnicos, open source | Media-baja | Gratuito (self-hosted) |
+
+**Recomendación por perfil:**
+- Si tu empresa usa Google Workspace y G Suite: empieza con Looker Studio
+- Si tu empresa usa Microsoft 365: empieza con Power BI Desktop (gratuito)
+- Si ya tienes Tableau en la empresa: úsalo, no introduzcas otra herramienta
+
+## Bloque 2: Los fundamentos del data viz para directivos
+
+**Antes de abrir la herramienta: las 3 preguntas del dashboard**
+
+1. **¿Qué decisión va a tomar quien vea este dashboard?**
+   Un dashboard que no lleva a una acción es decoración. Define la decisión antes de diseñar el gráfico.
+
+2. **¿Con qué frecuencia se actualiza y quién lo ve?**
+   Un dashboard operativo (diario, para el equipo de ventas) es diferente a uno estratégico (mensual, para el board).
+
+3. **¿Cuál es la métrica más importante que debe verse en 3 segundos?**
+   El usuario no lee los dashboards: los escanea. El número más importante debe estar en la esquina superior izquierda, grande y sin adornos.
+
+**El tipo de gráfico correcto para cada pregunta:**
+
+| Pregunta | Tipo de gráfico | Ejemplo |
+|---------|----------------|--------|
+| ¿Cómo evoluciona X en el tiempo? | Línea | Ingresos mensuales |
+| ¿Cómo se comparan categorías? | Barra horizontal | Ventas por región |
+| ¿Cuánto representa cada parte del total? | Donut/pie (máx. 5 categorías) | Revenue mix por producto |
+| ¿Hay correlación entre X e Y? | Scatter plot | Precio vs. conversión |
+| ¿Cuál es el valor actual vs. objetivo? | KPI card + progress bar | ARR vs. target |
+| ¿Cómo se distribuye X? | Histograma | Ticket medio |
+
+**Lo que nunca debes hacer:**
+- 3D en cualquier gráfico (distorsiona la percepción de valores)
+- Más de 5 colores en el mismo gráfico
+- Eje Y que no empieza en 0 (hace que diferencias pequeñas parezcan enormes)
+- Título que describe el gráfico ("Ventas por mes") en vez de el insight ("Las ventas Q4 crecen un 40% cada año")
+
+## Bloque 3: Conceptos técnicos esenciales
+
+**Datos que necesitas entender:**
+
+**Conexión a la fuente de datos:**
+La herramienta de BI se conecta a donde viven los datos: una hoja de Google Sheets, una base de datos PostgreSQL, BigQuery, Salesforce, etc. Si no tienes acceso a la fuente de datos, necesitas pedírsela al equipo de datos.
+
+**Dimensiones vs. métricas:**
+- **Dimensión:** un atributo categórico por el que puedes filtrar o agrupar (país, producto, canal, vendedor)
+- **Métrica:** un valor numérico que puedes sumar, promediar o contar (ingresos, número de transacciones, tasa de conversión)
+
+Ejemplo: "Ingresos (métrica) por país (dimensión) en el mes de enero (filtro de dimensión de tiempo)"
+
+**Filtros y parámetros:**
+Un buen dashboard tiene filtros que el usuario puede controlar: rango de fechas, región, producto, segmento de cliente. Sin filtros, el dashboard responde una sola pregunta; con filtros, responde muchas.
+
+## Bloque 4: Tutorial Looker Studio — primer dashboard en 60 minutos
+
+**Paso 1: Conecta tu fuente de datos (5 min)**
+En Looker Studio, clic en "Crear" → "Informe". Selecciona el conector correspondiente (Google Sheets, BigQuery, GA4, etc.). Autoriza el acceso y selecciona la hoja o tabla.
+
+**Paso 2: Crea el primer KPI card (10 min)**
+Inserta → "Marcador" (KPI card). En la configuración:
+- Métrica: selecciona la que quieres mostrar (ej: SUM de ingresos)
+- Comparación: selecciona el período anterior para mostrar el % de cambio
+- Filtro de fecha: período actual (este mes, este trimestre)
+
+**Paso 3: Añade el gráfico de tendencia (15 min)**
+Inserta → "Gráfico de series temporales". Configura:
+- Dimensión: fecha (agrupada por semana o mes)
+- Métrica: la misma que el KPI card
+- Filtros opcionales: producto, región, canal
+
+**Paso 4: Añade un desglose por categoría (15 min)**
+Inserta → "Gráfico de barras". Configura:
+- Dimensión: la categoría (producto, región, canal)
+- Métrica: ingresos o la métrica relevante
+- Ordenación: descendente por la métrica
+
+**Paso 5: Configura filtros globales (10 min)**
+Inserta → "Control de fechas" y → "Control de lista desplegable" para las dimensiones que quieres filtrar. Activa "Aplicar filtro a todos los gráficos" en cada control.
+
+**Paso 6: Diseño y compartir (5 min)**
+Ajusta colores a los corporativos, añade el título del dashboard y comparte el link con "Puede ver" para los stakeholders.
+
+## Bloque 5: Los 5 dashboards que todo directivo debería tener
+
+**Dashboard 1: Ventas y pipeline (actualización diaria)**
+Métricas: ARR/MRR actual, nuevas oportunidades esta semana, pipeline coverage, deals cerrados vs. objetivo.
+
+**Dashboard 2: Marketing y adquisición (actualización semanal)**
+Métricas: leads generados, coste por lead, tasa de conversión MQL→SQL, canales de mayor rendimiento.
+
+**Dashboard 3: Producto y retención (actualización semanal)**
+Métricas: DAU/MAU, activación de nuevos usuarios, churn rate, NPS.
+
+**Dashboard 4: Operaciones y financiero (actualización mensual)**
+Métricas: ingresos vs. presupuesto, margen bruto, MRR bridge, runway.
+
+**Dashboard 5: Customer Success (actualización semanal)**
+Métricas: health score promedio, tickets abiertos, CSAT, clientes en riesgo de churn.
+
+Comparte qué herramienta tienes disponible, dónde viven tus datos y qué preguntas quieres poder responder sin depender del equipo de datos. Te guío en los pasos específicos para tu caso.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'beginner',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Aprender a crear dashboards de business intelligence en Power BI, Tableau o Looker Studio para responder preguntas de negocio sin depender del equipo de datos.',
+                'vote_score'       => 40,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 8,
+                'title'            => 'Protección del contenido digital',
+                'description'      => 'Herramientas legales y técnicas para proteger cursos, software, diseños y contenido online ante la piratería y el uso no autorizado.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un abogado especializado en propiedad intelectual digital con experiencia asesorando a creadores de contenido, desarrolladores de software y diseñadores sobre cómo proteger su trabajo en el entorno digital. Necesito entender qué protección legal tengo sobre mi contenido digital y qué pasos prácticos puedo dar para prevenir y responder al uso no autorizado.
+
+## Cómo funciona la protección legal del contenido digital en España
+
+**El principio fundamental:** en España (y en toda la UE bajo la Directiva de Derechos de Autor), los derechos de autor sobre una obra nacen en el momento de su creación. No necesitas registrar nada ni pagar a nadie para tener derechos sobre lo que creas.
+
+Lo que sí requieres para protegerte efectivamente es: poder demostrar que eres el autor y la fecha de creación, y conocer las herramientas legales disponibles cuando alguien vulnera tus derechos.
+
+## Bloque 1: Qué protege la ley de propiedad intelectual
+
+**Obras protegidas automáticamente:**
+- Cursos online y materiales educativos (textos, vídeos, presentaciones)
+- Software y código fuente
+- Diseños gráficos, ilustraciones, fotografías
+- Música, podcasts y obras audiovisuales
+- Bases de datos con selección o disposición original
+- Páginas web con contenido propio
+
+**Lo que NO protege la propiedad intelectual:**
+- Ideas, métodos, estilos o técnicas (solo la expresión concreta, no la idea en sí)
+- Datos puros, hechos o información factual
+- Nombres, títulos o frases cortas (estos se protegen con marcas, no con derechos de autor)
+- Contenido en dominio público (obras de autores fallecidos hace más de 70 años en la UE)
+
+**Duración de la protección:**
+Los derechos de autor duran 70 años desde la muerte del autor en la UE. Para obras colectivas (empresa como autor), 70 años desde la publicación.
+
+## Bloque 2: Cómo demostrar autoría y fecha de creación
+
+**Registro de la propiedad intelectual en España:**
+El Registro de la Propiedad Intelectual es un registro voluntario gestionado por el Ministerio de Cultura. No es obligatorio, pero crear un registro oficial facilita la prueba de autoría en caso de litigio.
+
+**Coste y proceso:** entre 15-30€ por obra registrada, trámite online en la sede electrónica del MECD. Especialmente recomendable para: software con valor comercial significativo, cursos con inversión de producción alta, obras que se van a distribuir masivamente.
+
+**Alternativas más rápidas para demostrar la fecha:**
+- **Sellado de tiempo digital (timestamp):** servicios como OriginStamp o la Agencia de la Propiedad Intelectual añaden un hash criptográfico de tu obra en la blockchain, demostrando que existía en esa fecha
+- **Email a uno mismo:** enviarte el archivo por email crea un registro con fecha del servidor de correo
+- **Depósito en notario:** más costoso pero prueba incontestable
+
+## Bloque 3: Protección de software y código
+
+**Doble protección para el software:**
+El software tiene protección dual: derechos de autor sobre el código fuente (como obra literaria) y posibilidad de patente sobre el método o proceso que implementa (si es innovador y no obvio).
+
+**Licencias de software — cómo establecer los términos de uso:**
+
+Tienes dos opciones principales:
+
+**Software propietario:** reservas todos los derechos. Los usuarios necesitan una licencia comercial para usar el software. La licencia de usuario final (EULA) debe incluir: qué puede hacer el usuario, qué no puede hacer (reverse engineering, distribución, sublicencia), duración de la licencia y condiciones de terminación.
+
+**Software open source:** usas una licencia estándar que defines los permisos y restricciones. Las más frecuentes:
+- MIT: permite casi cualquier uso incluyendo comercial
+- GPL v3: quien use tu código en su proyecto debe liberar también su código bajo GPL
+- Apache 2.0: permisiva con atribución requerida
+- AGPL: obliga a liberar el código incluso cuando se usa como servicio online (más restrictiva)
+
+**Protección técnica del código:**
+Para código que no quieres que sea legible: ofuscación (hace el código difícil de entender aunque no imposible) y compilación (convierte el código fuente en binario). Ninguna solución es inviolable, pero dificultan significativamente el reverse engineering.
+
+## Bloque 4: Protección de cursos y contenido educativo
+
+**Los 3 niveles de protección para cursos online:**
+
+**Nivel 1 — Legal:**
+- Marca el contenido claramente: © [Año] [Nombre/Empresa]. Todos los derechos reservados.
+- Incluye en los términos de la plataforma qué está permitido (uso personal) y qué no (redistribución, compartir acceso, grabación)
+- Añade una licencia explícita a cada entregable: "Este material es solo para uso del comprador. Está prohibida su reproducción total o parcial sin autorización expresa."
+
+**Nivel 2 — Técnico:**
+- Protección de vídeo: plataformas como Kajabi, Teachable y Podia tienen DRM que dificulta la descarga de vídeos
+- Watermark en vídeos: añade el nombre del comprador en el vídeo dinámicamente (algunas plataformas lo ofrecen); dificulta la distribución porque el distribuidor queda identificado
+- Contraseñas y accesos individuales: vincula el acceso a un email y limita el número de dispositivos simultáneos
+- Monitorización: herramientas como DMCA.com buscan tu contenido en otras plataformas
+
+**Nivel 3 — Comunidad:**
+La mejor protección a largo plazo es construir una comunidad donde el valor real es el acceso a ti, a las actualizaciones y a la comunidad de usuarios, no solo el contenido grabado. El contenido grabado se puede piratear; la comunidad no.
+
+## Bloque 5: Cómo responder a una infracción
+
+**Proceso cuando encuentras tu contenido usado sin permiso:**
+
+**Paso 1: Documenta la infracción**
+Capturas de pantalla con fecha visible, URL del contenido infractor, fecha en que lo descubriste y dónde está publicado (plataforma, redes sociales, web).
+
+**Paso 2: Aviso DMCA (para plataformas internacionales)**
+La mayoría de las plataformas (YouTube, Facebook, Instagram, Udemy, etc.) tienen un proceso de DMCA takedown que obliga a retirar el contenido en 24-72 horas si el aviso es válido. Es el proceso más rápido.
+
+Elementos de un aviso DMCA válido:
+- Identificación de la obra original y dónde está alojada legalmente
+- URL exacta del contenido infractor
+- Declaración de que eres el titular o representante del titular
+- Firma (puede ser electrónica) y datos de contacto
+
+**Paso 3: Contacto directo al infractor**
+Un email directo indicando que conoces la infracción, citando los artículos aplicables de la LPI española, solicitando la retirada inmediata y reservándote el derecho a acciones legales. Muchas infracciones se resuelven en este paso.
+
+**Paso 4: Burofax con requerimiento legal**
+Si el contacto directo no funciona, un burofax notarial con valor de prueba en juicio. El coste es bajo y el impacto es significativo.
+
+**Paso 5: Acciones legales**
+En infracciones graves (escala comercial, daño económico significativo), denuncia ante las autoridades competentes y demanda civil por daños. Requiere abogado especialista; valora el coste-beneficio según el daño real.
+
+## Bloque 6: Protección internacional
+
+**El contenido digital ignora las fronteras, la protección legal no:**
+
+Los convenios internacionales (Convenio de Berna, TRIPS) establecen protección mínima en la mayoría de los países. En la práctica, hacer valer tus derechos en jurisdicciones extranjeras es complejo y costoso.
+
+**Estrategia práctica para contenido distribuido globalmente:**
+- Plataformas internacionales (YouTube, Udemy): usa los mecanismos de la plataforma
+- Países sin convenio o con protección débil: estrategia técnica (DRM, watermark) más que legal
+- Infracciones graves a escala: consulta con un abogado especialista en propiedad intelectual internacional
+
+Comparte qué tipo de contenido digital quieres proteger y cuál es tu principal preocupación (piratería, uso comercial no autorizado, plagio de ideas). Te doy el plan de protección específico y los pasos inmediatos que puedes dar esta semana.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 35,
+                'use_case'         => 'Entender la protección legal del contenido digital y aplicar las medidas técnicas y legales concretas para prevenir y responder a la piratería y el uso no autorizado.',
+                'vote_score'       => 36,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 9,
+                'title'            => 'De soporte reactivo a proactivo',
+                'description'      => 'Transforma el equipo de soporte en uno que anticipa y previene problemas: el proceso, las métricas y la tecnología necesarios.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un VP de Customer Success con experiencia transformando equipos de soporte que solo reaccionan a tickets en equipos que anticipan los problemas de los clientes y los resuelven antes de que generen insatisfacción. Mi objetivo es diseñar el proceso y las herramientas que me permitan pasar de atención reactiva a proactiva sin multiplicar el tamaño del equipo.
+
+## La diferencia entre soporte reactivo y proactivo
+
+**Soporte reactivo:** el cliente tiene un problema → abre un ticket → el equipo lo resuelve. El equipo está siempre corriendo detrás de los problemas.
+
+**Soporte proactivo:** el equipo detecta señales de que un cliente va a tener un problema → interviene antes de que el ticket llegue. El equipo trabaja con anticipación.
+
+La transformación de reactivo a proactivo no es solo más agradable para el cliente: reduce el volumen de tickets, mejora la retención y permite que el mismo equipo atienda más clientes con mayor satisfacción.
+
+## Bloque 1: Los 3 tipos de proactividad en soporte
+
+**Tipo 1: Proactividad basada en eventos de producto**
+Cuando el cliente hace (o no hace) algo en el producto, el sistema lo detecta y desencadena una acción:
+- El cliente no usa el producto en 7 días → email automático con recursos de ayuda
+- El cliente exportó datos 3 veces esta semana → puede estar intentando migrar → contacto proactivo del CSM
+- El cliente no completó el onboarding en 14 días → sesión de ayuda ofrecida automáticamente
+
+**Tipo 2: Proactividad basada en salud del cliente (health score)**
+Cuando el health score de un cliente cae por debajo de un umbral, el equipo interviene aunque no haya un ticket:
+- Health score cae de 75 a 50 → el CSM programa una llamada de revisión
+- 3 tickets de soporte en la misma semana → señal de fricción → revisión de cuenta
+
+**Tipo 3: Proactividad basada en contexto externo**
+Cuando algo en el mercado, en el producto o en la empresa del cliente cambia:
+- Lanzaste una actualización que cambió un flujo → avisa proactivamente a los clientes que usaban ese flujo
+- El sector del cliente está en crisis → contacto empático de cuenta ("¿cómo está impactando X en vuestro negocio?")
+- El cliente tiene un evento próximo (renewal, nuevo CFO, expansión) → anticipar la conversación
+
+## Bloque 2: La infraestructura tecnológica del soporte proactivo
+
+**Las herramientas que hacen posible el soporte proactivo:**
+
+**1. Product analytics (Mixpanel, Amplitude, PostHog):**
+Sin datos de comportamiento en el producto, no puedes detectar señales de usuarios en riesgo. Esta es la base de todo: saber qué hace cada cliente en el producto.
+
+**Señales a monitorizar:**
+- Login frequency (users who haven't logged in in X days)
+- Feature adoption rate (customers who haven't used feature X after 30 days)
+- Error rate (customers with an unusually high number of errors)
+- Export activity (potential migration signal)
+
+**2. CRM con health scoring (HubSpot, Salesforce, Gainsight, ChurnZero):**
+Un CRM básico registra interacciones. Un CRM con health scoring calcula automáticamente la salud de cada cuenta basándose en múltiples señales.
+
+**Gainsight y ChurnZero** son las herramientas más completas para CS proactivo, pero tienen un coste significativo (> 2.000€/mes). Para equipos más pequeños, puedes construir un health score manual en HubSpot con propiedades personalizadas y workflows.
+
+**3. Email automation (Intercom, Customer.io, Braze):**
+Los emails automatizados basados en comportamiento son el canal más escalable para la proactividad. Un email enviado en el momento correcto (el cliente no ha completado el onboarding, han pasado 7 días) puede valer más que un ticket resuelto.
+
+**4. Alertas y triggers:**
+Configura alertas que notifiquen al equipo cuando una cuenta supera un umbral de riesgo. Sin alertas, el equipo tiene que revisar manualmente todas las cuentas, lo que no escala.
+
+## Bloque 3: El proceso de transición de reactivo a proactivo
+
+**Los 4 pasos para transformar el equipo en 90 días:**
+
+**Mes 1 — Diagnóstico y datos:**
+1. Implementa o activa el tracking de comportamiento en el producto (si no lo tienes, esto es lo primero)
+2. Define las señales de riesgo específicas para tu producto: ¿qué hace un cliente que se va a dar de baja 30 días antes de hacerlo?
+3. Analiza los últimos 20 clientes que se dieron de baja: ¿qué señales de comportamiento tenían 30 días antes?
+4. Define tu health score: 4-6 señales con sus pesos
+
+**Mes 2 — Primeras intervenciones proactivas:**
+1. Configura 2-3 emails automatizados basados en comportamiento (no login en 7 días, onboarding incompleto en 14 días)
+2. Empieza a hacer outreach manual a los clientes con health score bajo: una llamada de "revisión de cuenta" semanal por cada CSM
+3. Documenta qué funciona y qué no de las primeras intervenciones
+
+**Mes 3 — Sistematización:**
+1. Crea playbooks específicos para cada tipo de señal de riesgo: qué hace el CSM, qué dice, qué ofrecemos
+2. Añade métricas de proactividad al dashboard del equipo: contactos proactivos por semana, reducción del churn en cuentas intervenidas
+3. Incorpora el health score review al proceso de gestión semanal del equipo
+
+## Bloque 4: Los playbooks de intervención proactiva
+
+**Playbook 1: Cliente con bajo adoption (< 40% de features clave usadas):**
+- Trigger: 30 días desde el signup sin uso de features clave
+- Acción: email personalizado ofreciendo sesión de onboarding + llamada del CSM
+- Mensaje: "Veo que todavía no has tenido la oportunidad de explorar [feature]. Muchos de nuestros clientes en [industria] la usan para [resultado]. ¿15 minutos esta semana para mostrártelo?"
+
+**Playbook 2: Cliente con health score en caída:**
+- Trigger: health score cae > 20 puntos en 30 días
+- Acción: llamada de QBR anticipada (no esperar al trimestre)
+- Mensaje: "Quería hacer un check-in contigo. Hemos notado algunos cambios en el uso de la cuenta y quería asegurarme de que todo va bien y de que estamos aportando el valor que esperabais."
+
+**Playbook 3: Cliente sin login en 14 días:**
+- Trigger: 14 días sin ningún login
+- Acción: email automático + flag en CRM para seguimiento manual si no responde
+- Mensaje: "Te echamos de menos. ¿Todo bien por tu parte? Hemos lanzado [novedad] que puede ser útil para [caso de uso del cliente]. Aquí tienes un link para verla en acción."
+
+**Playbook 4: Cliente próximo a renovación con health score bajo:**
+- Trigger: < 90 días para la renovación + health score < 60
+- Acción: QBR con sponsor ejecutivo, presentación de ROI, plan de mejora con compromisos
+- Objetivo: convertir la renovación en riesgo en una expansión
+
+## Bloque 5: Métricas de la transformación
+
+**Cómo saber si la transformación está funcionando:**
+
+| Métrica | Antes | Objetivo a 6 meses |
+|---------|-------|------------------|
+| Churn rate | X% | X - 2-3% |
+| Tickets por cliente activo | X | X - 20% |
+| Contactos proactivos por CSM/semana | 0-2 | 5-10 |
+| % clientes con health score verde | X% | X + 20% |
+| Time to first value en onboarding | X días | X - 30% |
+
+**El NPS como indicador de transformación:**
+Los clientes que han recibido outreach proactivo tienen NPS consistentemente más alto que los que solo han interactuado con el equipo a través de tickets. Trackea el NPS por cohorte de tipo de interacción para demostrar el impacto.
+
+Comparte: herramientas que tienes ya, tamaño del equipo de CS, número de clientes y cuál es tu principal métrica de retención que quieres mejorar. Diseño el plan de transformación adaptado a tu contexto con los primeros pasos concretos para esta semana.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'advanced',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Diseñar la transición del equipo de soporte de reactivo a proactivo con los procesos, herramientas y playbooks que permiten anticipar problemas y reducir el churn.',
                 'vote_score'       => 37,
+                'resource_type'    => 'prompt',
+            ],
+            [
+                'profession_id'    => 10,
+                'title'            => 'Marca personal que atrae sin perseguir',
+                'description'      => 'El sistema de contenido y posicionamiento que hace que los clientes correctos lleguen solos sin cold outreach.',
+                'prompt_content'   => <<<'PROMPT'
+Actúa como un experto en marca personal para freelancers con experiencia ayudando a profesionales independientes a construir un posicionamiento que atrae clientes sin necesidad de cold outreach masivo. Mi objetivo es diseñar una estrategia de marca personal que me posicione como la referencia en mi área de expertise y haga que los clientes correctos lleguen a mí.
+
+## Por qué la mayoría de los freelancers tienen marca personal débil
+
+La mayoría de los freelancers se presentan como "hago X". Un copywriter dice "escribo textos". Un diseñador dice "diseño webs". Un consultor de marketing dice "ayudo a empresas a crecer". El resultado: son intercambiables con miles de personas que dicen lo mismo y la única diferencia para el cliente es el precio.
+
+La marca personal fuerte no describe lo que haces: describe para quién lo haces, qué resultado consiguen y por qué tú eres la elección correcta para ese resultado específico. La diferencia entre "soy copywriter" y "ayudo a startups SaaS a reducir su churn a través de emails de onboarding que activan el comportamiento correcto en los primeros 7 días" es la diferencia entre competir por precio y cobrar el doble.
+
+## Parte 1: El posicionamiento — la decisión más importante
+
+**Por qué el nicho sí importa:**
+
+La paradoja del nicho: cuanto más específico eres, menos clientes potenciales hay pero más de los que hay quieren trabajar contigo. Un freelancer que trabaja "con cualquiera" compite con miles; uno que trabaja "con empresas de logística B2B en su comunicación interna" tiene competencia cero.
+
+**Los 3 ejes del posicionamiento:**
+1. **Para quién:** tipo de empresa, industria, tamaño, etapa (startup, empresa madura, solopreneur)
+2. **Qué resultado:** no qué haces, sino qué cambia para el cliente gracias a lo que haces
+3. **Cómo (el diferenciador):** tu método, tu perspectiva, tu experiencia que nadie más tiene igual
+
+**Ejercicio de posicionamiento:**
+Completa esta frase: "Ayudo a [para quién] a [resultado] a través de [método/diferenciador], a diferencia de otros [nombre del servicio] que [la forma genérica de hacer lo mismo]."
+
+Ejemplo: "Ayudo a fundadores de SaaS B2B a reducir el tiempo hasta primera venta a través de la optimización del proceso de demos y propuestas, a diferencia de otros consultores de ventas que se centran en el volumen de outreach."
+
+**Cómo elegir tu nicho si todavía no lo tienes claro:**
+1. Mira tus mejores clientes actuales: ¿tienen algo en común (sector, tamaño, etapa)?
+2. ¿En qué proyectos has conseguido los mejores resultados? ¿Para quién?
+3. ¿De qué temas podrías hablar durante horas sin aburrirte?
+4. ¿Hay algún problema específico en tu sector que nadie está resolviendo bien?
+
+## Parte 2: El sistema de contenido que atrae clientes
+
+**Por qué el contenido es la palanca más eficiente para un freelancer:**
+
+El cold outreach funciona pero escala mal: cada hora invertida genera un número finito de leads. El contenido funciona diferente: cada pieza de contenido sigue atrayendo clientes meses o años después de haberla publicado.
+
+**El modelo de contenido para freelancers:**
+
+**Un canal principal (profundidad):**
+Elige el formato en el que eres mejor y más consistente: LinkedIn, newsletter, YouTube, podcast o blog. La clave es uno solo al principio. Mejor 50 posts de calidad en un canal que 10 mediocres en 5.
+
+**Un canal secundario (distribución):**
+Reutiliza el contenido del canal principal en formato más breve o diferente para llegar a más personas con menos esfuerzo adicional.
+
+**Ejemplos de combinaciones efectivas:**
+- Newsletter semanal (principal) + extractos en LinkedIn (secundario)
+- LinkedIn (principal) + newsletter mensual con lo mejor del mes (secundario)
+- YouTube (principal) + clips en Instagram/TikTok (secundario)
+
+**Los 5 tipos de contenido que atraen clientes:**
+
+**1. Perspectiva contraria al consenso:**
+"Todo el mundo dice que X es la mejor práctica. Yo creo que es un error porque Y." El contenido que desafía el consenso genera más interacción y posiciona como experto con criterio propio.
+
+**2. El behind-the-scenes de tu trabajo:**
+Muestra el proceso, no solo el resultado. "Así resuelvo este tipo de problema de [industria]." Los clientes quieren entender cómo trabajas antes de contratarte.
+
+**3. Casos de éxito sin nombre (con permiso):**
+"Trabajé con una empresa de [industria/tamaño] con el problema X. Esto es lo que hicimos y estos fueron los resultados." Real, específico y verificable.
+
+**4. Aprendizajes de errores propios:**
+"Cometí este error al principio de mi carrera y me costó X. Lo que aprendí fue Y." La vulnerabilidad controlada genera confianza.
+
+**5. Guías prácticas de tu área de expertise:**
+El contenido educativo de calidad demuestra que sabes de lo que hablas y posiciona como referente. "La guía definitiva sobre X para [tu nicho]."
+
+## Parte 3: La cadencia de contenido sostenible
+
+**El error de la consistencia forzada:**
+
+Publicar todos los días para "estar presente" sin tener algo real que aportar es peor que no publicar. Los clientes potenciales recuerdan el contenido que les aporta valor, no la frecuencia.
+
+**Cadencia recomendada según el formato:**
+- LinkedIn/Twitter: 3-4 posts por semana (calidad sobre cantidad)
+- Newsletter: semanal o quincenal es sostenible; mensual es el mínimo
+- YouTube/Podcast: semanal o quincenal (la producción requiere más tiempo)
+- Blog/artículos largos: 1-2 al mes de profundidad, complementado con redes sociales
+
+**El sistema de batching:**
+Produce todo el contenido de la semana en un bloque de tiempo (2-3 horas) en lugar de crear cada día. Esto separa la fase creativa de la fase de publicación y es más eficiente.
+
+## Parte 4: La conversión — de seguidor a cliente
+
+**El contenido atrae; el proceso de venta convierte:**
+
+Un error frecuente de los freelancers con buena marca personal es no tener clara la ruta de cliente potencial a cliente. El contenido crea interés; la conversión requiere un proceso.
+
+**La ruta de conversión más efectiva:**
+1. Alguien lee tu contenido → le aporta valor → te sigue
+2. Con el tiempo, tiene el problema que resuelves → piensa en ti
+3. Busca más información → encuentra tu web o perfil → ve tu portfolio y casos de éxito
+4. Quiere hablar contigo → CTA claro para contactar
+
+**El CTA (call to action) en tu perfil y contenido:**
+Define UNO solo. No "sígueme, suscríbete, contáctame, descarga mi guía". Uno: el que lleva más directamente a la conversación de venta.
+
+Para un freelancer que quiere que le contraten: "Si trabajas en [nicho] y tienes el problema X, escríbeme por aquí y hablamos."
+
+**La respuesta cuando alguien contacta:**
+Responde en menos de 24h. La primera impresión en la respuesta a un lead inbound es crítica. Muestra interés real en su proyecto, haz 2-3 preguntas antes de proponer precios y pide una llamada antes de enviar una propuesta.
+
+## Parte 5: La web y el portfolio como herramienta de cierre
+
+**Lo mínimo que necesita la web de un freelancer:**
+- Quién eres y para quién trabajas (posicionamiento claro en la primera pantalla)
+- Qué haces exactamente y qué resultados consigues
+- Casos de éxito o referencias verificables
+- Cómo empezar a trabajar contigo (un CTA claro)
+- Forma de contacto o agenda directa
+
+**Lo que NO necesita tu web:**
+- Un blog con 50 artículos genéricos
+- Una lista de todos los servicios que has ofrecido alguna vez
+- Una página de "sobre mí" que sea un CV
+
+Cuéntame tu área de expertise, el tipo de clientes con los que trabajas mejor y el canal donde ya tienes presencia. Diseño el posicionamiento y la estrategia de contenido específicos para tu perfil con el plan de los primeros 90 días.
+PROMPT,
+                'tool_name'        => 'Claude',
+                'difficulty'       => 'intermediate',
+                'estimated_minutes'=> 40,
+                'use_case'         => 'Diseñar el posicionamiento y el sistema de contenido que construye una marca personal que atrae clientes de forma orgánica sin depender del cold outreach.',
+                'vote_score'       => 49,
                 'resource_type'    => 'prompt',
             ],
         ];
