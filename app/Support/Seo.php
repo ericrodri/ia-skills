@@ -88,17 +88,22 @@ class Seo
      */
     public static function breadcrumbs(array $items): array
     {
+        // Ojo: aquí no vale una arrow function con un contador externo. `fn` captura
+        // por valor, así que cada invocación recibiría su propia copia del contador y
+        // todos los ListItem saldrían con position 1, que invalida el BreadcrumbList.
         $position = 0;
 
         return [
             '@context' => 'https://schema.org',
             '@type' => 'BreadcrumbList',
-            'itemListElement' => collect($items)->map(fn ($url, $name) => [
-                '@type' => 'ListItem',
-                'position' => ++$position,
-                'name' => $name,
-                'item' => $url,
-            ])->values()->all(),
+            'itemListElement' => collect($items)->map(function ($url, $name) use (&$position) {
+                return [
+                    '@type' => 'ListItem',
+                    'position' => ++$position,
+                    'name' => $name,
+                    'item' => $url,
+                ];
+            })->values()->all(),
         ];
     }
 

@@ -205,4 +205,38 @@ class SeoTest extends TestCase
             $this->get($url)->assertOk();
         }
     }
+
+    /**
+     * El BreadcrumbList exige `position` correlativo empezando en 1. Estuvo
+     * emitiendo `position: 1` en todos los ListItem de todo el sitio porque el
+     * contador vivía en una arrow function, que captura por valor: cada
+     * invocación recibía su propia copia del cero. Un breadcrumb con posiciones
+     * repetidas es estructuralmente inválido y Google no lo usa, así que el
+     * fallo no daba error en ninguna página y no se veía en el HTML a simple
+     * vista.
+     */
+    public function test_las_migas_numeran_las_posiciones_de_forma_correlativa(): void
+    {
+        $urls = [
+            route('guides.show', ['slug' => 'que-es-un-agente-de-ia']),
+            route('guides.index'),
+            route('professions.show', ['profession' => $this->profession->slug]),
+            route('skills.show', ['skill' => $this->skill->slug]),
+        ];
+
+        foreach ($urls as $url) {
+            $html = $this->get($url)->assertOk()->getContent();
+
+            $this->assertMatchesRegularExpression('/"@type":"BreadcrumbList"/', $html, $url);
+
+            preg_match('/\{"@context":"[^"]+","@type":"BreadcrumbList".+?\}<\/script>/', $html, $block);
+            $this->assertNotEmpty($block, "no se encontró el bloque BreadcrumbList en {$url}");
+
+            preg_match_all('/"position":(\d+)/', $block[0], $matches);
+            $positions = array_map('intval', $matches[1]);
+
+            $this->assertGreaterThanOrEqual(2, count($positions), $url);
+            $this->assertSame(range(1, count($positions)), $positions, "posiciones no correlativas en {$url}");
+        }
+    }
 }
