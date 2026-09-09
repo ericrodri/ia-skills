@@ -33,6 +33,7 @@ class Guides
         'claude-code-vs-cursor',
         'plugins-y-mcp-en-claude-code',
         'automatizar-tareas-con-ia-en-el-trabajo',
+        'automatizar-sin-programar-n8n-make-zapier',
         'ia-en-excel-y-google-sheets',
         'ia-para-reuniones-y-actas',
         'presentaciones-con-ia',
@@ -48,6 +49,8 @@ class Guides
         'politica-de-uso-de-ia-en-la-empresa',
         'ai-act-obligaciones-empresas',
         'usar-ia-sin-filtrar-datos-de-clientes',
+        'ia-local-privada-en-tu-ordenador',
+        'imagenes-con-ia-derechos-y-uso-comercial',
         'aparecer-en-chatgpt-y-perplexity-geo',
     ];
 

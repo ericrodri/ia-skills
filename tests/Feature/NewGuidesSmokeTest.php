@@ -30,6 +30,9 @@ class NewGuidesSmokeTest extends TestCase
         $this->assertContains('agentes-de-escritorio-cowork-chatgpt-work', $slugs);
         $this->assertContains('que-tareas-de-tu-profesion-automatiza-la-ia', $slugs);
         $this->assertContains('gemini-notebook-antes-notebooklm', $slugs);
+        $this->assertContains('ia-local-privada-en-tu-ordenador', $slugs);
+        $this->assertContains('imagenes-con-ia-derechos-y-uso-comercial', $slugs);
+        $this->assertContains('automatizar-sin-programar-n8n-make-zapier', $slugs);
 
         foreach (Guides::all() as $guide) {
             $response = $this->get(route('guides.show', ['slug' => $guide['slug']]));
@@ -76,7 +79,7 @@ class NewGuidesSmokeTest extends TestCase
         $sitemap = $this->get('/sitemap-guias.xml')->assertOk()->getContent();
         $llms = $this->get('/llms.txt')->assertOk()->getContent();
 
-        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm'] as $slug) {
+        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm', 'ia-local-privada-en-tu-ordenador', 'imagenes-con-ia-derechos-y-uso-comercial', 'automatizar-sin-programar-n8n-make-zapier'] as $slug) {
             $this->assertStringContainsString("/guias/{$slug}", $sitemap, $slug);
             $this->assertStringContainsString("/guias/{$slug}", $llms, $slug);
         }
