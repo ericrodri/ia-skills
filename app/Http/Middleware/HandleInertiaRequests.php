@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Support\SiteData;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -40,6 +41,10 @@ class HandleInertiaRequests extends Middleware
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
                 'error'   => fn () => $request->session()->get('error'),
+            ],
+            // Fuente única de la navegación, compartida con layouts/site.blade.php.
+            'nav' => [
+                'primary' => fn () => SiteData::primaryNav(),
             ],
         ];
     }

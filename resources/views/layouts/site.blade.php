@@ -36,14 +36,43 @@
                         <span class="text-brand-600 dark:text-brand-500 text-lg">⚡</span>
                         <span>ia-skills</span>
                     </a>
+                    {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
+                         fuente que alimenta AppLayout.vue. No los dupliques aquí. --}}
                     <div class="hidden md:flex items-center gap-1">
-                        <a href="{{ route('skills.index') }}" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors">Explorar</a>
-                        <a href="{{ route('professions.index') }}" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors">Profesiones</a>
-                        <a href="{{ route('guides.index') }}" class="px-3 py-1.5 text-sm font-semibold text-brand-700 dark:text-brand-400 rounded-lg transition-colors">Guías</a>
-                        <a href="{{ route('how-it-works') }}" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-lg transition-colors">Cómo funciona</a>
+                        @foreach($primaryNav as $item)
+                            <a
+                                href="{{ $item['href'] }}"
+                                @class([
+                                    'px-3 py-1.5 text-sm rounded-lg transition-colors',
+                                    'font-semibold text-brand-700 dark:text-brand-400' => request()->routeIs($item['active']),
+                                    'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
+                                ])
+                            >{{ $item['label'] }}</a>
+                        @endforeach
                     </div>
                 </div>
-                <a href="{{ route('skills.index') }}" class="btn-primary">Explorar skills</a>
+
+                <div class="flex items-center gap-2">
+                    <a href="{{ route('skills.index') }}" class="btn-primary">Explorar skills</a>
+
+                    {{-- Menú móvil con <details>: estas páginas no cargan Vue, así que
+                         el desplegable tiene que funcionar sin JavaScript. --}}
+                    <details class="md:hidden relative">
+                        <summary
+                            class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                            aria-label="Menú de navegación"
+                        >
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </summary>
+                        <div class="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl shadow-lg py-1 z-50">
+                            @foreach($primaryNav as $item)
+                                <a href="{{ $item['href'] }}" class="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">{{ $item['label'] }}</a>
+                            @endforeach
+                        </div>
+                    </details>
+                </div>
             </nav>
         </header>
 
@@ -64,6 +93,7 @@
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('professions.index') }}">Profesiones</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('guides.index') }}">Guías</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('how-it-works') }}">Cómo funciona</a></li>
+                        <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.saved') }}">Guardadas</a></li>
                     </ul>
                 </div>
                 <div>

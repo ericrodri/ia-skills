@@ -5,6 +5,12 @@ import { computed, ref } from 'vue'
 const page = usePage()
 const auth = computed(() => page.props.auth)
 const showUserMenu = ref(false)
+const showMobileNav = ref(false)
+
+// Fuente única: App\Support\SiteData::primaryNav(), compartida por
+// HandleInertiaRequests. El mismo array alimenta layouts/site.blade.php, así
+// que añadir un enlace aquí lo añade también en las guías.
+const primaryNav = computed(() => page.props.nav?.primary ?? [])
 
 function logout() {
     showUserMenu.value = false
@@ -23,26 +29,43 @@ function logout() {
                         <span>ia-skills</span>
                     </Link>
                     <div class="hidden md:flex items-center gap-1">
-                        <Link :href="route('skills.index')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
-                            Explorar
-                        </Link>
-                        <Link :href="route('professions.index')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
-                            Profesiones
-                        </Link>
-                        <!-- Las guías son páginas Blade (sin Inertia): enlace normal, no <Link> -->
-                        <a href="/guias" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
-                            Guías
-                        </a>
-                        <Link :href="route('how-it-works')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
-                            Cómo funciona
-                        </Link>
-                        <Link :href="route('skills.saved')" class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors">
-                            Guardadas
-                        </Link>
+                        <!--
+                            Los enlaces salen de SiteData::primaryNav(). Los que no
+                            son páginas Inertia (las guías) usan <a>: con <Link>,
+                            Inertia intentaría interpretar el HTML de Blade como
+                            una respuesta suya.
+                        -->
+                        <component
+                            v-for="item in primaryNav"
+                            :key="item.route"
+                            :is="item.inertia ? Link : 'a'"
+                            :href="item.href"
+                            class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+                        >
+                            {{ item.label }}
+                        </component>
                     </div>
                 </div>
 
                 <div class="flex items-center gap-3">
+                    <!-- Menú móvil: por debajo de md el nav principal está oculto -->
+                    <button
+                        @click="showMobileNav = !showMobileNav"
+                        class="md:hidden p-1.5 -ml-1 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                        :aria-expanded="showMobileNav"
+                        aria-controls="mobile-nav"
+                        aria-label="Menú de navegación"
+                    >
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                :d="showMobileNav ? 'M6 18L18 6M6 6l12 12' : 'M4 6h16M4 12h16M4 18h16'"
+                            />
+                        </svg>
+                    </button>
+
                     <template v-if="auth?.user">
                         <Link
                             v-if="auth.user.is_admin"
@@ -102,6 +125,24 @@ function logout() {
                     </template>
                 </div>
             </nav>
+
+            <!-- Panel del menú móvil: mismos enlaces que el nav de escritorio -->
+            <div
+                v-if="showMobileNav"
+                id="mobile-nav"
+                class="md:hidden border-t border-gray-100 dark:border-gray-800 px-4 sm:px-6 py-2"
+            >
+                <component
+                    v-for="item in primaryNav"
+                    :key="item.route"
+                    :is="item.inertia ? Link : 'a'"
+                    :href="item.href"
+                    @click="showMobileNav = false"
+                    class="block px-2 py-2.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                >
+                    {{ item.label }}
+                </component>
+            </div>
         </header>
 
         <!-- Flash messages -->

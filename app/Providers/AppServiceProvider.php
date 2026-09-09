@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Support\SiteData;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\Facades\Vite;
 use Illuminate\Support\ServiceProvider;
 
@@ -26,6 +28,12 @@ class AppServiceProvider extends ServiceProvider
         Vite::prefetch(concurrency: 3);
 
         $this->configureRateLimiting();
+
+        // La navegación de la cabecera se inyecta en el layout, no la pasa cada
+        // controlador: así ninguna página Blade nueva puede quedarse sin ella.
+        View::composer('layouts.site', function ($view) {
+            $view->with('primaryNav', SiteData::primaryNav());
+        });
     }
 
     /**

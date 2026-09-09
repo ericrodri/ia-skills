@@ -18,6 +18,46 @@ class SiteData
     private const TTL_MINUTES = 60;
 
     /**
+     * Navegación principal de la cabecera. Fuente única para los dos layouts:
+     * `AppLayout.vue` (Inertia) la recibe como prop compartida desde
+     * HandleInertiaRequests, y `layouts/site.blade.php` (guías, HTML plano) la
+     * lee directamente. Antes estaba duplicada a mano en ambos y se
+     * desincronizó: "Guardadas" existía solo en el layout de Inertia y
+     * desaparecía al entrar en /guias.
+     *
+     * `inertia => false` marca los destinos que NO son páginas Inertia: desde
+     * Vue tienen que enlazarse con <a>, no con <Link>, o Inertia intentará
+     * cargar HTML de Blade como si fuera una respuesta suya.
+     */
+    private const PRIMARY_NAV = [
+        ['label' => 'Explorar',      'route' => 'skills.index',      'inertia' => true,  'active' => 'skills.index'],
+        ['label' => 'Profesiones',   'route' => 'professions.index', 'inertia' => true,  'active' => 'professions.*'],
+        ['label' => 'Guías',         'route' => 'guides.index',      'inertia' => false, 'active' => 'guides.*'],
+        ['label' => 'Cómo funciona', 'route' => 'how-it-works',      'inertia' => true,  'active' => 'how-it-works'],
+        ['label' => 'Guardadas',     'route' => 'skills.saved',      'inertia' => true,  'active' => 'skills.saved'],
+    ];
+
+    /**
+     * Sin caché a propósito: `route()` resuelve URLs absolutas con el host y el
+     * esquema de la petición en curso, así que un valor cacheado podría fijar
+     * el dominio equivocado. Resolver cinco rutas no cuesta nada.
+     *
+     * @return array<int, array{label: string, route: string, href: string, inertia: bool, active: string}>
+     */
+    public static function primaryNav(): array
+    {
+        return array_map(fn (array $item) => [
+            'label'   => $item['label'],
+            'route'   => $item['route'],
+            'href'    => route($item['route']),
+            'inertia' => $item['inertia'],
+            // Patrón para `request()->routeIs()`: 'guides.*' mantiene "Guías"
+            // resaltado también en el detalle de cada guía.
+            'active'  => $item['active'],
+        ], self::PRIMARY_NAV);
+    }
+
+    /**
      * Número de skills publicadas, redondeado a la baja en centenas para poder
      * usarlo en títulos y descripciones sin reescribirlos cada semana.
      */
