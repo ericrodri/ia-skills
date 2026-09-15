@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1720,
     'about' => 'Automatización de actas y resúmenes de reuniones con IA',
-    'related' => ['resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
+    'related' => ['microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-esta-resuelto' => 'Lo que está resuelto y lo que no',
         'tipos' => 'Tres formas de grabar, con tres consecuencias distintas',

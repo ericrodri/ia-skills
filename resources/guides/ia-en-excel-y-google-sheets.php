@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1840,
     'about' => 'Uso de inteligencia artificial en hojas de cálculo',
-    'related' => ['presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'regla' => 'La regla que evita el 90 % de los errores',
         'tres-caminos' => 'Los tres caminos y cuál te toca',

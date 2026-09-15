@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2026,
     'about' => 'Plataformas de automatización sin código (n8n, Make, Zapier) con modelos de lenguaje integrados para automatizar procesos de trabajo',
-    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['ia-para-autonomos-y-pymes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-cambia' => 'Qué cambió cuando les metieron un modelo dentro',
         'tres-opciones' => 'Las tres opciones, sin empate',

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1788,
     'about' => 'Exposición ocupacional a la inteligencia artificial y automatización de tareas por profesión',
-    'related' => ['medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['va-la-ia-a-sustituir-mi-trabajo', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'exposicion-no-es-sustitucion' => 'Exposición no es sustitución, y la diferencia es enorme',
         'los-numeros' => 'Los números que hay sobre España',

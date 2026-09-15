@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 9,
     'words' => 1550,
     'about' => 'Generative Engine Optimization',
-    'related' => ['como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['escribir-contenido-seo-con-ia', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',

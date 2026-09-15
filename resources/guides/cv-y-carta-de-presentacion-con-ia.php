@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1850,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',

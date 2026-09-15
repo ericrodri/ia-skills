@@ -33,6 +33,11 @@ class NewGuidesSmokeTest extends TestCase
         $this->assertContains('ia-local-privada-en-tu-ordenador', $slugs);
         $this->assertContains('imagenes-con-ia-derechos-y-uso-comercial', $slugs);
         $this->assertContains('automatizar-sin-programar-n8n-make-zapier', $slugs);
+        $this->assertContains('va-la-ia-a-sustituir-mi-trabajo', $slugs);
+        $this->assertContains('microsoft-365-copilot-en-el-trabajo', $slugs);
+        $this->assertContains('escribir-contenido-seo-con-ia', $slugs);
+        $this->assertContains('entrevista-de-trabajo-con-ia', $slugs);
+        $this->assertContains('ia-para-autonomos-y-pymes', $slugs);
 
         foreach (Guides::all() as $guide) {
             $response = $this->get(route('guides.show', ['slug' => $guide['slug']]));
@@ -79,7 +84,7 @@ class NewGuidesSmokeTest extends TestCase
         $sitemap = $this->get('/sitemap-guias.xml')->assertOk()->getContent();
         $llms = $this->get('/llms.txt')->assertOk()->getContent();
 
-        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm', 'ia-local-privada-en-tu-ordenador', 'imagenes-con-ia-derechos-y-uso-comercial', 'automatizar-sin-programar-n8n-make-zapier'] as $slug) {
+        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm', 'ia-local-privada-en-tu-ordenador', 'imagenes-con-ia-derechos-y-uso-comercial', 'automatizar-sin-programar-n8n-make-zapier', 'va-la-ia-a-sustituir-mi-trabajo', 'microsoft-365-copilot-en-el-trabajo', 'escribir-contenido-seo-con-ia', 'entrevista-de-trabajo-con-ia', 'ia-para-autonomos-y-pymes'] as $slug) {
             $this->assertStringContainsString("/guias/{$slug}", $sitemap, $slug);
             $this->assertStringContainsString("/guias/{$slug}", $llms, $slug);
         }
