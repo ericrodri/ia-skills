@@ -38,6 +38,11 @@ class NewGuidesSmokeTest extends TestCase
         $this->assertContains('escribir-contenido-seo-con-ia', $slugs);
         $this->assertContains('entrevista-de-trabajo-con-ia', $slugs);
         $this->assertContains('ia-para-autonomos-y-pymes', $slugs);
+        $this->assertContains('crear-tu-herramienta-con-ia-sin-programar', $slugs);
+        $this->assertContains('estafas-con-ia-deepfakes-y-suplantacion', $slugs);
+        $this->assertContains('ventana-de-contexto-conversaciones-largas', $slugs);
+        $this->assertContains('aprender-ia-desde-cero-plan-de-30-dias', $slugs);
+        $this->assertContains('video-y-audio-con-ia-en-el-trabajo', $slugs);
 
         foreach (Guides::all() as $guide) {
             $response = $this->get(route('guides.show', ['slug' => $guide['slug']]));
@@ -79,12 +84,31 @@ class NewGuidesSmokeTest extends TestCase
         }
     }
 
+    /**
+     * El <title> se sirve con el sufijo de marca, así que lo que Google
+     * recorta es `seoTitle` + ' | ia-skills'. Seo::TITLE_MAX existía como
+     * constante sin que nada la comprobara, y 17 guías servían el title
+     * truncado en resultados.
+     */
+    public function test_ninguna_guia_sirve_el_title_por_encima_del_limite(): void
+    {
+        foreach (Guides::all() as $guide) {
+            $servido = Seo::normalize(['title' => $guide['seoTitle'] ?? $guide['title']])['title'];
+
+            $this->assertLessThanOrEqual(
+                Seo::TITLE_MAX,
+                mb_strlen($servido),
+                "el title de {$guide['slug']} ocupa ".mb_strlen($servido)." caracteres: «{$servido}»"
+            );
+        }
+    }
+
     public function test_new_guides_are_listed_in_the_sitemap_and_llms_txt(): void
     {
         $sitemap = $this->get('/sitemap-guias.xml')->assertOk()->getContent();
         $llms = $this->get('/llms.txt')->assertOk()->getContent();
 
-        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm', 'ia-local-privada-en-tu-ordenador', 'imagenes-con-ia-derechos-y-uso-comercial', 'automatizar-sin-programar-n8n-make-zapier', 'va-la-ia-a-sustituir-mi-trabajo', 'microsoft-365-copilot-en-el-trabajo', 'escribir-contenido-seo-con-ia', 'entrevista-de-trabajo-con-ia', 'ia-para-autonomos-y-pymes'] as $slug) {
+        foreach (['agent-skills-estandar-abierto', 'usar-ia-sin-filtrar-datos-de-clientes', 'medir-si-la-ia-ahorra-tiempo', 'ai-act-obligaciones-empresas', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'presentaciones-con-ia', 'resumir-documentos-largos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'cv-y-carta-de-presentacion-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'gemini-notebook-antes-notebooklm', 'ia-local-privada-en-tu-ordenador', 'imagenes-con-ia-derechos-y-uso-comercial', 'automatizar-sin-programar-n8n-make-zapier', 'va-la-ia-a-sustituir-mi-trabajo', 'microsoft-365-copilot-en-el-trabajo', 'escribir-contenido-seo-con-ia', 'entrevista-de-trabajo-con-ia', 'ia-para-autonomos-y-pymes', 'crear-tu-herramienta-con-ia-sin-programar', 'estafas-con-ia-deepfakes-y-suplantacion', 'ventana-de-contexto-conversaciones-largas', 'aprender-ia-desde-cero-plan-de-30-dias', 'video-y-audio-con-ia-en-el-trabajo'] as $slug) {
             $this->assertStringContainsString("/guias/{$slug}", $sitemap, $slug);
             $this->assertStringContainsString("/guias/{$slug}", $llms, $slug);
         }

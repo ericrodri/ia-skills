@@ -3,7 +3,7 @@
 return [
     'title' => 'Plugins y MCP en Claude Code: qué son y cuándo usar cada uno',
     'navTitle' => 'Plugins y MCP',
-    'seoTitle' => 'Plugins y MCP en Claude Code: qué son y cuándo usarlos',
+    'seoTitle' => 'Plugins y MCP en Claude Code: cuándo usar cada uno',
     'description' => 'Skill, plugin y servidor MCP resuelven problemas distintos. Qué hace cada pieza, cómo se instalan, cuándo merece la pena y qué revisar antes de dar permisos.',
     'excerpt' => 'Un skill enseña un procedimiento. Un plugin empaqueta varias piezas. Un MCP conecta con el mundo exterior. Confundirlos es la causa habitual de montajes que nadie mantiene.',
     'category' => 'Herramientas',

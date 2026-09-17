@@ -3,7 +3,7 @@
 return [
     'title' => 'CV y carta de presentación con IA: adaptar sí, redactar de cero no',
     'navTitle' => 'CV y carta con IA',
-    'seoTitle' => 'CV y carta de presentación con IA: método, ATS y prompts',
+    'seoTitle' => 'CV y carta de presentación con IA: método y ATS',
     'description' => 'Un CV generado de un tirón se descarta igual de rápido que el de siempre. Qué mira un ATS, qué parte conviene delegar y los prompts que hacen el trabajo.',
     'excerpt' => 'La IA no consigue entrevistas escribiendo un currículum bonito. Las consigue en el paso que casi nadie da: reescribir el mismo CV para cada oferta, en cinco minutos en lugar de en cuarenta.',
     'category' => 'Práctica',

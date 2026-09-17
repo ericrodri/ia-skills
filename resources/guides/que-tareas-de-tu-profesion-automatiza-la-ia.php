@@ -3,7 +3,7 @@
 return [
     'title' => 'Qué tareas de tu profesión automatiza la IA (y cuáles no)',
     'navTitle' => 'Qué tareas automatiza la IA',
-    'seoTitle' => 'Qué tareas de tu profesión automatiza la IA: datos 2026',
+    'seoTitle' => 'Qué tareas de tu profesión automatiza la IA',
     'description' => 'La IA no sustituye profesiones, sustituye tareas. Los datos de exposición en España, cómo inventariar las tuyas en una hora y qué queda fuera.',
     'excerpt' => 'La pregunta que casi todo el mundo se hace («¿me va a quitar el trabajo?») no tiene respuesta útil, porque la unidad que la IA sustituye no es el puesto: es la tarea. Y de las veinte tareas que haces en una semana, la automatizable rara vez es la que temes.',
     'category' => 'Fundamentos',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1788,
     'about' => 'Exposición ocupacional a la inteligencia artificial y automatización de tareas por profesión',
-    'related' => ['va-la-ia-a-sustituir-mi-trabajo', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'va-la-ia-a-sustituir-mi-trabajo', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'exposicion-no-es-sustitucion' => 'Exposición no es sustitución, y la diferencia es enorme',
         'los-numeros' => 'Los números que hay sobre España',

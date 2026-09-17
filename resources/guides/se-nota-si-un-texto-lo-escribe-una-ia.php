@@ -3,7 +3,7 @@
 return [
     'title' => '¿Se nota si un texto lo ha escrito una IA? Lo que detectan los detectores',
     'navTitle' => 'Detectores de IA',
-    'seoTitle' => 'Detectores de IA: qué miden en realidad y por qué fallan',
+    'seoTitle' => 'Detectores de IA: qué miden y por qué fallan',
     'description' => 'Un detector no lee el origen del texto: estima probabilidad. Qué tasa de falsos positivos tiene, a quién perjudica y qué sí delata un texto generado.',
     'excerpt' => 'La pregunta que casi todo el mundo hace es si le van a pillar. La pregunta útil es otra: qué mide exactamente la herramienta que dice haberte pillado, y cuánto se equivoca.',
     'category' => 'Fundamentos',

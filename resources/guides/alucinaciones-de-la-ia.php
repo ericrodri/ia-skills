@@ -3,7 +3,7 @@
 return [
     'title' => 'Alucinaciones de la IA: por qué inventa con tanto aplomo',
     'navTitle' => 'Alucinaciones de la IA',
-    'seoTitle' => 'Alucinaciones de la IA: por qué ocurren y cómo verificar',
+    'seoTitle' => 'Alucinaciones de la IA: por qué y cómo verificar',
     'description' => 'Un modelo no miente: rellena. Por qué el entrenamiento premia adivinar antes que callar, los cinco tipos de invención y el minuto que los caza.',
     'excerpt' => 'La respuesta inventada llega con el mismo tono seguro que la correcta, y ese es todo el problema: no hay ninguna señal en el texto que distinga una de otra. La señal hay que fabricarla desde fuera.',
     'category' => 'Fundamentos',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1840,
     'about' => 'Alucinaciones de los modelos de lenguaje y verificación de sus respuestas',
-    'related' => ['investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
+    'related' => ['ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'que-es' => 'Una alucinación no es una mentira: es un relleno',
         'por-que' => 'Por qué el entrenamiento premia adivinar antes que callar',

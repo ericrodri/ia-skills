@@ -3,7 +3,7 @@
 return [
     'title' => 'Agent Skills: el estándar abierto de skills para agentes de IA',
     'navTitle' => 'Agent Skills: el estándar abierto',
-    'seoTitle' => 'Agent Skills: qué es el estándar de SKILL.md y dónde funciona',
+    'seoTitle' => 'Agent Skills: el estándar de SKILL.md explicado',
     'description' => 'Un skill escrito una vez funciona en Claude Code, Cursor, Copilot y ChatGPT. Qué dice la especificación de Agent Skills y dónde lo busca cada herramienta.',
     'excerpt' => 'Escribir un SKILL.md dejó de ser cosa de una sola herramienta. Esto es lo que dice la especificación palabra por palabra, en qué carpeta lo busca cada agente y qué campos sobreviven al cambio de producto.',
     'category' => 'Fundamentos',

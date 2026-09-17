@@ -3,7 +3,7 @@
 return [
     'title' => 'Resumir documentos largos con IA: el problema no es el resumen, es lo que omite',
     'navTitle' => 'Resumir documentos con IA',
-    'seoTitle' => 'Resumir documentos largos con IA: método y verificación',
+    'seoTitle' => 'Resumir documentos largos con IA: método',
     'description' => 'Un resumen de IA casi nunca miente: omite. Cómo pedir citas con página, dónde falla el centro de un documento largo y qué verificar antes de decidir.',
     'excerpt' => 'Pedir el resumen de un PDF de doscientas páginas funciona a la primera y ahí está la trampa: no hay forma de ver lo que se quedó fuera. El método consiste en obligar al resumen a señalar de dónde sale cada frase.',
     'category' => 'Práctica',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1830,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',

@@ -3,7 +3,7 @@
 return [
     'title' => 'Los ocho errores que se repiten al usar IA en el trabajo',
     'navTitle' => 'Errores al usar IA',
-    'seoTitle' => 'Errores al usar IA en el trabajo: los ocho que se repiten',
+    'seoTitle' => 'Los ocho errores al usar IA en el trabajo',
     'description' => 'Los ocho fallos que se repiten al usar IA en el trabajo, por qué el modelo prefiere inventar antes que decir «no sé», y qué comprobar en treinta segundos.',
     'excerpt' => 'Ninguno de los ocho tiene que ver con saber escribir prompts. Tienen que ver con no distinguir las tareas donde un error se ve de las tareas donde un error se publica.',
     'category' => 'Práctica',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1760,
     'about' => 'Errores frecuentes en el uso profesional de la inteligencia artificial',
-    'related' => ['como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'resumir-documentos-largos-con-ia'],
+    'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'por-que-inventa' => 'Por qué un modelo prefiere inventar antes que decir «no sé»',
         'error-1' => '1. Delegar el criterio en vez de la tarea',

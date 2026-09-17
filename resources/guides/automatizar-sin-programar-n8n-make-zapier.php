@@ -3,7 +3,7 @@
 return [
     'title' => 'Automatizar sin programar: n8n, Make y Zapier con IA dentro',
     'navTitle' => 'n8n, Make y Zapier',
-    'seoTitle' => 'n8n vs Make vs Zapier: automatizar con IA sin programar',
+    'seoTitle' => 'n8n vs Make vs Zapier: automatizar con IA',
     'description' => 'Cuál de las tres elegir según lo que pagas y lo que sabes, el primer flujo que conviene montar y cuándo dejar decidir al modelo en vez de fijar las reglas.',
     'excerpt' => 'Estas herramientas llevan años moviendo datos de una aplicación a otra. Lo que cambió al meterles un modelo dentro es que ahora pueden automatizar tareas que exigen criterio, y ahí es donde empiezan a romperse de formas nuevas.',
     'category' => 'Herramientas',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2026,
     'about' => 'Plataformas de automatización sin código (n8n, Make, Zapier) con modelos de lenguaje integrados para automatizar procesos de trabajo',
-    'related' => ['ia-para-autonomos-y-pymes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['crear-tu-herramienta-con-ia-sin-programar', 'ia-para-autonomos-y-pymes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-cambia' => 'Qué cambió cuando les metieron un modelo dentro',
         'tres-opciones' => 'Las tres opciones, sin empate',

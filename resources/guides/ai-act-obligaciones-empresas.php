@@ -3,7 +3,7 @@
 return [
     'title' => 'AI Act: las obligaciones que ya afectan a tu empresa',
     'navTitle' => 'AI Act para empresas',
-    'seoTitle' => 'AI Act 2026: qué obliga a tu empresa (y qué se ha aplazado)',
+    'seoTitle' => 'AI Act 2026: qué obliga a tu empresa y qué no',
     'description' => 'El Reglamento Europeo de IA ya se sanciona. Qué obliga a cualquier empresa que use IA: formar al personal, avisar y marcar el contenido generado.',
     'excerpt' => 'No hace falta desarrollar IA para tener obligaciones: basta con usarla. Las tres que aplican a casi todo el mundo —formar al personal, avisar y marcar—, las que se han aplazado y un plan de 30 días para dejarlo cerrado.',
     'category' => 'Normativa',

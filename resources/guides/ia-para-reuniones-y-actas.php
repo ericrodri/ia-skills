@@ -3,7 +3,7 @@
 return [
     'title' => 'IA para reuniones: de la transcripción al acta que alguien lee',
     'navTitle' => 'IA para reuniones',
-    'seoTitle' => 'IA para reuniones: transcribir, resumir y sacar las tareas',
+    'seoTitle' => 'IA para reuniones: transcribir y resumir',
     'description' => 'Transcribir una reunión ya es un problema resuelto. Resumirla bien, no. Qué herramienta elegir, qué pedirle al resumen y qué hay que avisar antes de grabar.',
     'excerpt' => 'El resumen automático que llega a tu correo lo lee poca gente, porque cuenta lo que se dijo en vez de lo que se decidió. La diferencia está en lo que le pides después, y en avisar antes de grabar.',
     'category' => 'Práctica',

@@ -3,7 +3,7 @@
 return [
     'title' => 'Cómo escribir prompts efectivos: la estructura que funciona',
     'navTitle' => 'Escribir buenos prompts',
-    'seoTitle' => 'Cómo escribir prompts efectivos para IA (con ejemplos)',
+    'seoTitle' => 'Cómo escribir prompts efectivos para IA',
     'description' => 'Las cinco piezas de un prompt que funciona, con ejemplos. Cómo dar contexto sin escribir una novela y qué hacer cuando el resultado falla.',
     'excerpt' => 'La diferencia entre un resultado mediocre y uno que puedes usar tal cual casi nunca está en la herramienta. Está en cinco decisiones que tomas al escribir la petición.',
     'category' => 'Fundamentos',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1290,
     'about' => 'Prompt engineering',
-    'related' => ['prompts-de-ia-por-profesion', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
+    'related' => ['ventana-de-contexto-conversaciones-largas', 'prompts-de-ia-por-profesion', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'por-que-falla' => 'Por qué falla un prompt normal',
         'cinco-piezas' => 'Las cinco piezas',

@@ -3,7 +3,7 @@
 return [
     'title' => 'Cómo usar la IA en Excel y Google Sheets sin romper la hoja',
     'navTitle' => 'IA en Excel y Sheets',
-    'seoTitle' => 'Cómo usar la IA en Excel: fórmulas, limpieza y análisis',
+    'seoTitle' => 'Cómo usar la IA en Excel y Google Sheets',
     'description' => 'La IA escribe fórmulas mejor de lo que calcula. Cómo aprovecharlo en Excel y Google Sheets, con o sin Copilot, y qué comprobar antes de fiarte.',
     'excerpt' => 'Un modelo de lenguaje es buenísimo escribiendo la fórmula y bastante malo aplicándola. Toda la técnica consiste en repartir el trabajo así: la IA redacta, la hoja calcula. Con los prompts y las comprobaciones.',
     'category' => 'Práctica',

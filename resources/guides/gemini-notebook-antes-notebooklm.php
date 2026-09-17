@@ -3,7 +3,7 @@
 return [
     'title' => 'Gemini Notebook (antes NotebookLM): un cuaderno por expediente',
     'navTitle' => 'Gemini Notebook',
-    'seoTitle' => 'Gemini Notebook (antes NotebookLM): guía para trabajar',
+    'seoTitle' => 'Gemini Notebook (antes NotebookLM): guía',
     'description' => 'NotebookLM ahora es Gemini Notebook: responde solo con lo que subes y cita la fuente. Cómo montar un cuaderno por expediente y qué preguntarle.',
     'excerpt' => 'La diferencia entre esta herramienta y un chat cualquiera cabe en una frase: aquí el modelo no puede contarte nada que no esté en los documentos que tú has subido, y cada afirmación viene con el sitio exacto de donde salió.',
     'category' => 'Herramientas',

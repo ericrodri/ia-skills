@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2170,
     'about' => 'Gobernanza de la inteligencia artificial',
-    'related' => ['errores-al-usar-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['estafas-con-ia-deepfakes-y-suplantacion', 'errores-al-usar-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-que' => 'Por qué dos páginas evitan casi todos los problemas',
         'norma' => 'Qué exige la norma a día de hoy',

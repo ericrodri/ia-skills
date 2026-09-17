@@ -3,7 +3,7 @@
 return [
     'title' => 'Claude o ChatGPT para trabajar: cuál elegir según la tarea',
     'navTitle' => 'Claude vs ChatGPT',
-    'seoTitle' => 'Claude vs ChatGPT para trabajar: cuál elegir por tarea',
+    'seoTitle' => 'Claude vs ChatGPT para trabajar: cuál elegir',
     'description' => 'Cuál elegir según la tarea: redacción larga, análisis de documentos, código, hojas de cálculo e imágenes. Con criterios, no con benchmarks.',
     'excerpt' => 'La pregunta correcta no es cuál es mejor, sino cuál es mejor para lo que tú haces. Comparativa por tarea real y qué señales usar para decidir.',
     'category' => 'Herramientas',

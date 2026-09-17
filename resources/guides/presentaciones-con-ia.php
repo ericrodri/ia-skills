@@ -3,7 +3,7 @@
 return [
     'title' => 'Presentaciones con IA: hace las diapositivas, no la presentación',
     'navTitle' => 'Presentaciones con IA',
-    'seoTitle' => 'Cómo hacer presentaciones con IA: guion, diapositivas y export',
+    'seoTitle' => 'Cómo hacer presentaciones con IA paso a paso',
     'description' => 'La IA genera veinte diapositivas correctas que no convencen a nadie. El orden que sí funciona: guion en texto primero, titulares de acción y después diseño.',
     'excerpt' => 'Una presentación generada de una sola frase sale rápida, bonita y sin argumento. El trabajo que no se puede delegar es decidir qué frase va en cada diapositiva, y ese trabajo se hace en texto.',
     'category' => 'Práctica',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1770,
     'about' => 'Creación de presentaciones y diapositivas con inteligencia artificial',
-    'related' => ['ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
+    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'por-que-no-convence' => 'Por qué la presentación generada de un tirón no convence',
         'titulares' => 'El titular de acción: la técnica que hace el trabajo',

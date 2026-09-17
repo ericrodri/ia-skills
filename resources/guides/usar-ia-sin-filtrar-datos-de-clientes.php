@@ -3,7 +3,7 @@
 return [
     'title' => 'Cómo usar IA sin filtrar datos de clientes',
     'navTitle' => 'IA sin filtrar datos de clientes',
-    'seoTitle' => 'IA y datos de clientes: qué puedes poner en el prompt y qué no',
+    'seoTitle' => 'IA y datos de clientes: qué puedes poner y qué no',
     'description' => 'Qué datos de clientes puedes escribir en un chat de IA y cuáles no, con la Regla de 2 que marca la AEPD para los agentes y la lista de comprobación.',
     'excerpt' => 'La duda no es si la IA es legal, es qué escribes en la caja de texto. Los cuatro cajones en los que clasificar un dato antes de pegarlo, el umbral que marca la AEPD para los agentes y las medidas que caben en una empresa pequeña.',
     'category' => 'Cumplimiento',
@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2237,
     'about' => 'Protección de datos e inteligencia artificial',
-    'related' => ['resumir-documentos-largos-con-ia', 'politica-de-uso-de-ia-en-la-empresa', 'ai-act-obligaciones-empresas'],
+    'related' => ['estafas-con-ia-deepfakes-y-suplantacion', 'resumir-documentos-largos-con-ia', 'politica-de-uso-de-ia-en-la-empresa', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'la-pregunta' => 'La pregunta no es «¿es legal usar IA?»',
         'que-pasa' => 'Qué pasa con lo que escribes en el prompt',
