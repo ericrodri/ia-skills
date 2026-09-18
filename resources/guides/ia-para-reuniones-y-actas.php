@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-02',
     'updated' => '2026-09-02',
-    'readingMinutes' => 10,
-    'words' => 1720,
+    'readingMinutes' => 13,
+    'words' => 2213,
     'about' => 'Automatización de actas y resúmenes de reuniones con IA',
     'related' => ['microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
     'toc' => [

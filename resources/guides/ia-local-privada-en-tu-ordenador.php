@@ -9,8 +9,8 @@ return [
     'category' => 'Herramientas',
     'published' => '2026-09-09',
     'updated' => '2026-09-09',
-    'readingMinutes' => 14,
-    'words' => 2231,
+    'readingMinutes' => 18,
+    'words' => 2923,
     'about' => 'Ejecución local de modelos de lenguaje en el puesto de trabajo con Ollama y LM Studio, y sus implicaciones de privacidad y cumplimiento',
     'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [

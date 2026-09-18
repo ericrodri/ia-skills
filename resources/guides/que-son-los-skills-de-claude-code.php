@@ -10,7 +10,7 @@ return [
     'published' => '2026-08-20',
     'updated' => '2026-08-26',
     'readingMinutes' => 8,
-    'words' => 1310,
+    'words' => 1388,
     'about' => 'Claude Code',
     'related' => ['como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
     'toc' => [

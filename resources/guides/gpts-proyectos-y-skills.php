@@ -9,8 +9,8 @@ return [
     'category' => 'Método',
     'published' => '2026-09-05',
     'updated' => '2026-09-05',
-    'readingMinutes' => 11,
-    'words' => 1829,
+    'readingMinutes' => 14,
+    'words' => 2391,
     'about' => 'Reutilización de instrucciones en asistentes de IA mediante GPTs, proyectos y skills',
     'related' => ['que-son-los-skills-de-claude-code', 'como-escribir-prompts-efectivos', 'agent-skills-estandar-abierto'],
     'toc' => [

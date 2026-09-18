@@ -9,8 +9,8 @@ return [
     'category' => 'Método',
     'published' => '2026-09-05',
     'updated' => '2026-09-05',
-    'readingMinutes' => 11,
-    'words' => 1811,
+    'readingMinutes' => 14,
+    'words' => 2341,
     'about' => 'Investigación documental asistida por agentes de IA con búsqueda web',
     'related' => ['gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
     'toc' => [

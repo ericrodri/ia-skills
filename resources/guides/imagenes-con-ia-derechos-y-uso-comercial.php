@@ -9,8 +9,8 @@ return [
     'category' => 'Cumplimiento',
     'published' => '2026-09-09',
     'updated' => '2026-09-09',
-    'readingMinutes' => 11,
-    'words' => 1806,
+    'readingMinutes' => 15,
+    'words' => 2452,
     'about' => 'Propiedad intelectual, licencias de uso comercial y obligaciones de transparencia de las imágenes generadas con inteligencia artificial en España y la UE',
     'related' => ['video-y-audio-con-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [

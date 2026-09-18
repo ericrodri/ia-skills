@@ -9,10 +9,10 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-08-27',
     'updated' => '2026-09-08',
-    'readingMinutes' => 8,
-    'words' => 1420,
+    'readingMinutes' => 9,
+    'words' => 1523,
     'about' => 'Agentes de IA',
-    'related' => ['agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['chatbot-de-atencion-al-cliente-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'que-es' => 'Qué es un agente de IA',
         'chatbot-vs-agente' => 'Chatbot, asistente y agente: las diferencias',
@@ -32,7 +32,7 @@ return [
     'ctaTitle' => 'Dale a tu agente instrucciones que ya funcionan',
     'ctaBody' => 'Un agente vale lo que valen las instrucciones que le das. En el catálogo hay skills y prompts escritos y votados por quien los usa a diario: empieza por <a href="/profesiones/desarrollo">Desarrollo</a>, <a href="/profesiones/customer-support">Atención al cliente</a> o <a href="/profesiones/finanzas">Finanzas</a>, las tres áreas donde los agentes están dando resultados más claros.',
     'body' => <<<'HTML'
-<p>«Agente de IA» se ha convertido en la etiqueta que todo producto se pone encima desde que dejó de bastar con decir «con inteligencia artificial». Se la ponen chatbots de atención al cliente que llevan seis años funcionando igual, y se la ponen sistemas que de verdad hacen cosas. Conviene saber distinguirlos, porque el valor y el riesgo son completamente distintos.</p>
+<p>«Agente de IA» se ha convertido en la etiqueta que todo producto se pone encima desde que dejó de bastar con decir «con inteligencia artificial». Se la ponen chatbots de atención al cliente que llevan seis años funcionando igual, y se la ponen sistemas que de verdad hacen cosas. Conviene saber distinguirlos, porque el valor y el riesgo son completamente distintos. Si lo que tienes delante es justo esa decisión —un asistente que responde frente a uno que además ejecuta—, los números y el plan de implantación están en <a href="/guias/chatbot-de-atencion-al-cliente-con-ia">montar un chatbot de atención al cliente</a>.</p>
 
 <p>La diferencia no está en el modelo. Detrás de un chatbot decente y de un agente serio puede haber exactamente el mismo modelo de lenguaje. Está en otra cosa.</p>
 

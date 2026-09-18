@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-05',
     'updated' => '2026-09-05',
-    'readingMinutes' => 10,
-    'words' => 1977,
+    'readingMinutes' => 15,
+    'words' => 2533,
     'about' => 'Redacción de correo electrónico profesional asistida por modelos de lenguaje',
     'related' => ['como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
     'toc' => [

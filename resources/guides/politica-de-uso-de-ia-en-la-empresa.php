@@ -9,8 +9,8 @@ return [
     'category' => 'Método',
     'published' => '2026-08-31',
     'updated' => '2026-08-31',
-    'readingMinutes' => 13,
-    'words' => 2170,
+    'readingMinutes' => 14,
+    'words' => 2313,
     'about' => 'Gobernanza de la inteligencia artificial',
     'related' => ['estafas-con-ia-deepfakes-y-suplantacion', 'errores-al-usar-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [

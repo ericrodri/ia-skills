@@ -134,6 +134,8 @@ return [
     <li><strong>Profundizar en tu oficio.</strong> Los <a href="/guias/prompts-de-ia-por-profesion">prompts por profesión</a> y el catálogo cubren casos que ya no son genéricos.</li>
     <li><strong>Subir un escalón de herramienta.</strong> Agentes que trabajan sobre tus archivos, como <a href="/guias/empezar-con-claude-code">Claude Code</a>, o los <a href="/guias/agentes-de-escritorio-cowork-chatgpt-work">agentes de escritorio</a>.</li>
     <li><strong>Ocuparte del marco.</strong> Si en tu organización no hay reglas, <a href="/guias/politica-de-uso-de-ia-en-la-empresa">escribirlas</a> es más valioso que cualquier truco.</li>
+    <li><strong>Que te encuentren.</strong> Si parte de tu trabajo depende de que la gente llegue a tu web, el tablero ha cambiado: empieza por <a href="/guias/ai-overviews-caida-de-clics">por qué caen los clics</a>, sigue por <a href="/guias/keyword-research-con-ia">keyword research con IA</a> y monta la <a href="/guias/medir-el-trafico-de-ia">medición del tráfico de IA</a>.</li>
+    <li><strong>Atender sin estar.</strong> Si recibes las mismas preguntas todos los días, mira si compensa un <a href="/guias/chatbot-de-atencion-al-cliente-con-ia">chatbot de atención al cliente</a>.</li>
 </ul>
 
 <p>La trampa es coleccionar herramientas. Cada semana sale algo nuevo y probarlo todo da sensación de progreso sin producirlo. Quien saca partido de verdad usa dos o tres cosas muy bien, no quince regular.</p>

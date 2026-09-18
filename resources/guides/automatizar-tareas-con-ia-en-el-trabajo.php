@@ -9,8 +9,8 @@ return [
     'category' => 'Método',
     'published' => '2026-08-25',
     'updated' => '2026-09-08',
-    'readingMinutes' => 7,
-    'words' => 1210,
+    'readingMinutes' => 8,
+    'words' => 1362,
     'about' => 'Automatización con IA',
     'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
     'toc' => [

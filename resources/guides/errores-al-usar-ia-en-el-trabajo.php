@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-03',
     'updated' => '2026-09-03',
-    'readingMinutes' => 10,
-    'words' => 1760,
+    'readingMinutes' => 14,
+    'words' => 2291,
     'about' => 'Errores frecuentes en el uso profesional de la inteligencia artificial',
     'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'resumir-documentos-largos-con-ia'],
     'toc' => [

@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-02',
     'updated' => '2026-09-02',
-    'readingMinutes' => 11,
-    'words' => 1840,
+    'readingMinutes' => 14,
+    'words' => 2363,
     'about' => 'Uso de inteligencia artificial en hojas de cálculo',
     'related' => ['microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [

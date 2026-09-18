@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-03',
     'updated' => '2026-09-08',
-    'readingMinutes' => 11,
-    'words' => 1830,
+    'readingMinutes' => 14,
+    'words' => 2315,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
     'related' => ['ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [

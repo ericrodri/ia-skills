@@ -40,6 +40,7 @@ class Guides
         'automatizar-sin-programar-n8n-make-zapier',
         'crear-tu-herramienta-con-ia-sin-programar',
         'ia-para-autonomos-y-pymes',
+        'chatbot-de-atencion-al-cliente-con-ia',
         'ia-en-excel-y-google-sheets',
         'ia-para-reuniones-y-actas',
         'presentaciones-con-ia',
@@ -62,6 +63,10 @@ class Guides
         'imagenes-con-ia-derechos-y-uso-comercial',
         'escribir-contenido-seo-con-ia',
         'aparecer-en-chatgpt-y-perplexity-geo',
+        'ai-overviews-caida-de-clics',
+        'keyword-research-con-ia',
+        'medir-el-trafico-de-ia',
+        'auditoria-seo-tecnica',
     ];
 
     /** @var array<string, array<string, mixed>>|null */

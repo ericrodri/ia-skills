@@ -9,8 +9,8 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-09-08',
     'updated' => '2026-09-08',
-    'readingMinutes' => 11,
-    'words' => 1788,
+    'readingMinutes' => 15,
+    'words' => 2454,
     'about' => 'Exposición ocupacional a la inteligencia artificial y automatización de tareas por profesión',
     'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'va-la-ia-a-sustituir-mi-trabajo', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [

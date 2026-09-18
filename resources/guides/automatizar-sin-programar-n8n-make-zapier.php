@@ -9,10 +9,10 @@ return [
     'category' => 'Herramientas',
     'published' => '2026-09-09',
     'updated' => '2026-09-09',
-    'readingMinutes' => 12,
-    'words' => 2026,
+    'readingMinutes' => 17,
+    'words' => 2734,
     'about' => 'Plataformas de automatización sin código (n8n, Make, Zapier) con modelos de lenguaje integrados para automatizar procesos de trabajo',
-    'related' => ['crear-tu-herramienta-con-ia-sin-programar', 'ia-para-autonomos-y-pymes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['chatbot-de-atencion-al-cliente-con-ia', 'crear-tu-herramienta-con-ia-sin-programar', 'ia-para-autonomos-y-pymes', 'automatizar-tareas-con-ia-en-el-trabajo', 'que-es-un-agente-de-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-cambia' => 'Qué cambió cuando les metieron un modelo dentro',
         'tres-opciones' => 'Las tres opciones, sin empate',
@@ -44,7 +44,7 @@ return [
 
 <p>Antes, para que un flujo tomara una decisión, había que escribir la regla completa por adelantado: <em>si el asunto contiene «factura», entonces…</em>. Funciona hasta que alguien escribe «recibo», y en la práctica siempre alguien escribe «recibo».</p>
 
-<p>Con un modelo en medio, el paso pasa a ser: <em>lee este correo y dime si trata de facturación, de soporte o de ventas</em>. Eso desbloquea tres categorías de trabajo que antes no eran automatizables:</p>
+<p>Con un modelo en medio, el paso pasa a ser: <em>lee este correo y dime si trata de facturación, de soporte o de ventas</em>. Eso desbloquea tres categorías de trabajo que antes no eran automatizables, y de hecho es la vía más barata para montar un <a href="/guias/chatbot-de-atencion-al-cliente-con-ia">asistente de atención al cliente</a> sin pasar por un desarrollo a medida:</p>
 
 <ul>
     <li><strong>Clasificar por sentido</strong> en lugar de por palabras exactas.</li>

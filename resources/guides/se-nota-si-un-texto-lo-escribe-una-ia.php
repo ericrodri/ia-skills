@@ -9,8 +9,8 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
-    'readingMinutes' => 10,
-    'words' => 1790,
+    'readingMinutes' => 12,
+    'words' => 2060,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
     'related' => ['escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [

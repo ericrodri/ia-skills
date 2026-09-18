@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2059,
     'about' => 'SEO y contenido generado con inteligencia artificial',
-    'related' => ['aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
+    'related' => ['ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
     'toc' => [
         'que-dice-google' => 'Qué dice la política de Google, literalmente',
         'por-que-se-hunden' => 'Qué tienen en común los sitios que se hunden',
@@ -132,6 +132,8 @@ return [
 <p>Optimizar solo para los diez enlaces azules es planificar para un tablero que se está encogiendo. Una parte creciente de las consultas se resuelve dentro de la respuesta —en las vistas generales con IA de Google, en ChatGPT, en Perplexity— sin que nadie haga clic.</p>
 
 <p>Lo interesante es que <strong>lo que funciona ahí refuerza lo anterior en lugar de contradecirlo</strong>: respuestas directas en el primer párrafo, datos concretos y citables, estructura clara con encabezados que son preguntas reales, y fuentes identificables. Un sistema generativo cita lo que puede resumir sin equivocarse, y eso premia exactamente el contenido específico y verificable que también aguanta en la búsqueda clásica. La táctica concreta está en <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">cómo aparecer en ChatGPT y Perplexity</a>.</p>
+
+<p>Lo que sí contradice al tablero anterior es la aritmética: para una parte de las consultas informativas, el clic ya no llega aunque sigas el primero. Cuánto se pierde exactamente, en qué tipo de consulta y qué hacer con las páginas afectadas está en <a href="/guias/ai-overviews-caida-de-clics">AI Overviews y la caída de clics</a>. Y el trabajo previo —decidir qué temas merecen una página y cuáles no— se ha vuelto más selectivo por el mismo motivo: el método está en <a href="/guias/keyword-research-con-ia">keyword research con IA</a>.</p>
 
 <h2 id="checklist">Checklist antes de darle a publicar</h2>
 

@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
-    'readingMinutes' => 9,
-    'words' => 1550,
+    'readingMinutes' => 10,
+    'words' => 1630,
     'about' => 'Generative Engine Optimization',
-    'related' => ['escribir-contenido-seo-con-ia', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',
@@ -75,7 +75,7 @@ return [
 
 <h2 id="tecnico">La parte técnica: que puedan leerte</h2>
 
-<p>Antes de escribir una línea nueva, revisa esto. Es aburrido y es lo que más suele fallar.</p>
+<p>Antes de escribir una línea nueva, revisa esto. Es aburrido y es lo que más suele fallar. El repaso completo, en el orden en que conviene hacerlo, está en la <a href="/guias/auditoria-seo-tecnica">auditoría SEO técnica</a>.</p>
 
 <ul>
     <li><strong>El HTML inicial trae el contenido.</strong> Si trabajas con una aplicación de una sola página, comprueba lo que se sirve antes de ejecutar JavaScript. Muchos rastreadores de IA no renderizan. Si tu <code>&lt;h1&gt;</code>, tu descripción y tu texto principal solo aparecen tras el JavaScript, para esos bots tu página está vacía.</li>
@@ -112,6 +112,8 @@ return [
 </ul>
 
 <p>Las dos primeras se automatizan bien: lanzar quince preguntas, guardar respuestas y comparar con el mes anterior es justo el tipo de tarea repetitiva y verificable que conviene delegar, con el método de <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">automatizar tareas con IA</a>.</p>
+
+<p>Desde 2026 hay dos fuentes más que conviene montar: el canal propio para asistentes en la analítica y el informe de IA generativa de Search Console, que aísla las impresiones en las respuestas de Google. El montaje completo, con lo que cada fuente deja fuera, está en <a href="/guias/medir-el-trafico-de-ia">cómo medir el tráfico que te llega desde la IA</a>; y si lo que estás intentando explicar es por qué caen los clics aunque sigas posicionando, los datos están en <a href="/guias/ai-overviews-caida-de-clics">AI Overviews y la caída de clics</a>.</p>
 
 <h2 id="errores">Errores que se están pagando caros</h2>
 

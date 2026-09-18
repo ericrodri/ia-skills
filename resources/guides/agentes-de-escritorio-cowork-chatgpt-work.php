@@ -9,8 +9,8 @@ return [
     'category' => 'Herramientas',
     'published' => '2026-09-08',
     'updated' => '2026-09-08',
-    'readingMinutes' => 11,
-    'words' => 1992,
+    'readingMinutes' => 16,
+    'words' => 2616,
     'about' => 'Agentes de IA de escritorio que operan sobre ficheros y aplicaciones del usuario',
     'related' => ['que-es-un-agente-de-ia', 'automatizar-tareas-con-ia-en-el-trabajo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [

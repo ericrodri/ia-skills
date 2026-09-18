@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-03',
     'updated' => '2026-09-03',
-    'readingMinutes' => 10,
-    'words' => 1770,
+    'readingMinutes' => 13,
+    'words' => 2216,
     'about' => 'Creación de presentaciones y diapositivas con inteligencia artificial',
     'related' => ['video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [

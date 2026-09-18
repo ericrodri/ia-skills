@@ -10,7 +10,7 @@ return [
     'published' => '2026-08-22',
     'updated' => '2026-08-27',
     'readingMinutes' => 8,
-    'words' => 1290,
+    'words' => 1386,
     'about' => 'Prompt engineering',
     'related' => ['ventana-de-contexto-conversaciones-largas', 'prompts-de-ia-por-profesion', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [

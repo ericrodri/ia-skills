@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
-    'readingMinutes' => 11,
-    'words' => 1850,
+    'readingMinutes' => 14,
+    'words' => 2349,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
     'related' => ['entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [

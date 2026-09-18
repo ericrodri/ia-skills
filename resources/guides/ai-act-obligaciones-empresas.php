@@ -9,8 +9,8 @@ return [
     'category' => 'Normativa',
     'published' => '2026-09-02',
     'updated' => '2026-09-02',
-    'readingMinutes' => 13,
-    'words' => 2120,
+    'readingMinutes' => 15,
+    'words' => 2418,
     'about' => 'Reglamento Europeo de Inteligencia Artificial',
     'related' => ['politica-de-uso-de-ia-en-la-empresa', 'usar-ia-sin-filtrar-datos-de-clientes', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [

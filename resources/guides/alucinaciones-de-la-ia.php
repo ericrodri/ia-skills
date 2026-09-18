@@ -9,8 +9,8 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
-    'readingMinutes' => 11,
-    'words' => 1840,
+    'readingMinutes' => 13,
+    'words' => 2145,
     'about' => 'Alucinaciones de los modelos de lenguaje y verificación de sus respuestas',
     'related' => ['ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
     'toc' => [
