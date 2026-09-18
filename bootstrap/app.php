@@ -12,6 +12,12 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
+        // Antes que nada: si la petición llega por www, se redirige al host
+        // canónico sin llegar a renderizar nada.
+        $middleware->prepend([
+            \App\Http\Middleware\RedirectToCanonicalHost::class,
+        ]);
+
         $middleware->web(append: [
             \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
