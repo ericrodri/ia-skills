@@ -9,6 +9,7 @@ use App\Models\Skill;
 use App\Models\SkillVersion;
 use App\Support\Seo;
 use App\Support\SiteData;
+use App\Support\SkillSearch;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -44,46 +45,12 @@ class SkillController extends Controller
         }
 
         $sort = $request->get('sort', 'top');
-        $tsQuery = null;
-        $tsBindings = [];
 
-        if ($request->filled('q')) {
-            // La búsqueda full-text vive en una columna tsvector generada: es solo de PostgreSQL.
-            // En otros drivers (los tests usan SQLite) se degrada a un LIKE sobre título y descripción.
-            if (DB::connection()->getDriverName() !== 'pgsql') {
-                $like = '%'.trim($request->q).'%';
-                $query->where(fn ($q) => $q->where('title', 'like', $like)
-                    ->orWhere('description', 'like', $like));
-            } else {
-                $terms = array_values(array_filter(preg_split('/\s+/', trim($request->q))));
+        // El listado global también busca por nombre de profesión, para que
+        // escribir "marketing" encuentre sus skills aunque no lo digan.
+        $rankedByRelevance = SkillSearch::apply($query, $request->q, matchProfessionName: true);
 
-                if (!empty($terms)) {
-                    $lastTerm = array_pop($terms);
-                    $parts = [];
-
-                    foreach ($terms as $term) {
-                        $parts[] = "plainto_tsquery('simple', unaccent(?))";
-                        $tsBindings[] = $term;
-                    }
-                    $parts[] = "to_tsquery('simple', unaccent(?) || ':*')";
-                    $tsBindings[] = $lastTerm;
-
-                    $tsQuery = implode(' && ', $parts);
-                    $rawQ = '%' . trim($request->q) . '%';
-                    $query->where(function ($q) use ($tsQuery, $tsBindings, $rawQ) {
-                        $q->whereRaw("search_vector @@ ($tsQuery)", $tsBindings)
-                          ->orWhereHas('profession', fn ($pq) =>
-                              $pq->whereRaw("unaccent(name) ILIKE unaccent(?)", [$rawQ])
-                          );
-                    });
-                }
-            }
-        }
-
-        if ($tsQuery) {
-            $query->orderByRaw("ts_rank(search_vector, ($tsQuery)) DESC", $tsBindings)
-                  ->orderByDesc('vote_score');
-        } else {
+        if (! $rankedByRelevance) {
             match ($sort) {
                 'new'      => $query->orderByDesc('created_at'),
                 'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),

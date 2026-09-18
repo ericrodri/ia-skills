@@ -7,6 +7,8 @@ use App\Support\Guides;
 use App\Support\ProfessionContent;
 use App\Support\Seo;
 use App\Support\SiteData;
+use App\Support\SkillSearch;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -65,15 +67,23 @@ class ProfessionController extends Controller
         ]);
     }
 
-    public function show(Profession $profession): Response
+    public function show(Request $request, Profession $profession): Response
     {
         $profession->loadCount(['skills as skills_count' => fn ($q) => $q->where('status', 'published')]);
 
-        $skills = $profession->publishedSkills()
+        $search = trim((string) $request->query('q', ''));
+
+        $query = $profession->publishedSkills()
             ->with('author:id,name,username,avatar,is_verified_expert')
-            ->withCount('comments')
-            ->orderByDesc('vote_score')
-            ->paginate(20);
+            ->withCount('comments');
+
+        // La consulta ya está acotada a esta profesión, así que no se busca
+        // también por su nombre: coincidiría con todas las skills del listado.
+        if (! SkillSearch::apply($query, $search)) {
+            $query->orderByDesc('vote_score');
+        }
+
+        $skills = $query->paginate(20)->withQueryString();
 
         $content = ProfessionContent::for($profession->slug);
         $guides = $this->guidesFor($profession->slug);
@@ -81,17 +91,22 @@ class ProfessionController extends Controller
         $page = $skills->currentPage();
         $total = $profession->skills_count;
 
-        $title = $page > 1
-            ? "Prompts de IA para {$profession->name} · página {$page}"
-            : "Prompts de IA para {$profession->name}: {$total} skills probadas";
+        $title = match (true) {
+            $search !== '' => "«{$search}» en prompts de IA para {$profession->name}",
+            $page > 1      => "Prompts de IA para {$profession->name} · página {$page}",
+            default        => "Prompts de IA para {$profession->name}: {$total} skills probadas",
+        };
 
         Seo::share([
             'title' => $title,
             'description' => "{$total} prompts y skills de IA para {$profession->name}, ordenados por los votos de la comunidad. Copia, personaliza y ejecuta en Claude, ChatGPT o Gemini.",
-            'canonical' => $page > 1 ? $url.'?page='.$page : $url,
-            // Las páginas 2+ del listado no aportan contenido único indexable,
-            // pero sí enlazan a fichas: se rastrean, no se indexan.
-            'robots' => $page > 1 ? 'noindex, follow' : null,
+            // Una búsqueda es una vista filtrada de esta misma página, no una
+            // URL propia: su canónica apunta al listado limpio.
+            'canonical' => $search === '' && $page > 1 ? $url.'?page='.$page : $url,
+            // Las páginas 2+ del listado y los resultados de búsqueda no aportan
+            // contenido único indexable, pero sí enlazan a fichas: se rastrean,
+            // no se indexan.
+            'robots' => $search !== '' || $page > 1 ? 'noindex, follow' : null,
             'ogImage' => route('og.profession', ['profession' => $profession->slug]),
             'ogImageAlt' => "Prompts de IA para {$profession->name}",
             'prev' => $skills->currentPage() > 1 ? $skills->previousPageUrl() : null,
@@ -135,9 +150,11 @@ class ProfessionController extends Controller
                             ])->all(),
                     ],
                 ],
-                // El FAQPage solo se emite en la primera página, donde el bloque
-                // de preguntas es visible.
-                $page === 1 ? Seo::faq(ProfessionContent::faqPairs($profession->slug)) : null,
+                // El FAQPage solo se emite en la primera página del listado sin
+                // filtrar, que es la vista canónica de la profesión.
+                $page === 1 && $search === ''
+                    ? Seo::faq(ProfessionContent::faqPairs($profession->slug))
+                    : null,
             ]),
         ]);
 
@@ -146,6 +163,7 @@ class ProfessionController extends Controller
             'skills' => $skills,
             'content' => $content,
             'guides' => $guides,
+            'filters' => ['q' => $search],
         ]);
     }
 

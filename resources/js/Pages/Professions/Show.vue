@@ -1,16 +1,45 @@
 <script setup>
-import { Head, Link } from '@inertiajs/vue3'
+import { Head, Link, router } from '@inertiajs/vue3'
+import { ref, watch } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import SkillCard from '@/Components/SkillCard.vue'
 
 // El copy editorial y las FAQ llegan del servidor (App\Support\ProfessionContent)
 // para que el FAQPage de datos estructurados se emita en el HTML inicial.
-defineProps({
+const props = defineProps({
     profession: Object,
     skills: Object,
     content: { type: Object, default: null },
     guides: { type: Array, default: () => [] },
+    filters: { type: Object, default: () => ({}) },
 })
+
+const search = ref(props.filters?.q || '')
+const searching = ref(false)
+
+// Mismo comportamiento que el buscador de /skills: 300 ms de margen para no
+// disparar una petición por tecla.
+let searchTimeout = null
+watch(search, () => {
+    clearTimeout(searchTimeout)
+    searching.value = true
+    searchTimeout = setTimeout(() => applySearch(), 300)
+})
+
+function applySearch() {
+    router.get(route('professions.show', props.profession.slug), {
+        q: search.value || undefined,
+    }, {
+        preserveScroll: true,
+        preserveState: true,
+        replace: true,
+        onFinish: () => { searching.value = false },
+    })
+}
+
+function clearSearch() {
+    search.value = ''
+}
 </script>
 
 <template>
@@ -47,6 +76,35 @@ defineProps({
 
         <!-- Skills list -->
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+            <!-- Buscador dentro de la profesión -->
+            <div class="relative mb-6">
+                <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+                <input
+                    v-model="search"
+                    type="search"
+                    :placeholder="`Buscar en skills de ${profession.name}...`"
+                    :aria-label="`Buscar en skills de ${profession.name}`"
+                    class="w-full pl-10 pr-10 py-2.5 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/30 outline-none text-sm transition-colors"
+                />
+                <div class="absolute right-3 top-1/2 -translate-y-1/2 flex items-center">
+                    <svg v-if="searching" class="animate-spin w-4 h-4 text-brand-400" fill="none" viewBox="0 0 24 24">
+                        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
+                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                    </svg>
+                    <button v-else-if="search" @click="clearSearch" type="button" aria-label="Limpiar búsqueda" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <p v-if="filters?.q" class="mb-4 text-sm text-gray-500 dark:text-gray-400">
+                {{ skills.total }} {{ skills.total === 1 ? 'resultado' : 'resultados' }} para «{{ filters.q }}»
+            </p>
+
             <div v-if="skills.data.length" class="flex flex-col gap-3">
                 <SkillCard
                     v-for="skill in skills.data"
@@ -54,6 +112,20 @@ defineProps({
                     :skill="skill"
                 />
             </div>
+
+            <!-- Sin resultados de búsqueda: la profesión sí tiene skills -->
+            <div v-else-if="filters?.q" class="text-center py-16 text-gray-400 dark:text-gray-500">
+                <p class="text-lg font-medium">Ninguna skill de {{ profession.name }} coincide con «{{ filters.q }}».</p>
+                <div class="mt-4 flex flex-wrap items-center justify-center gap-4 text-sm">
+                    <button @click="clearSearch" class="text-brand-600 dark:text-brand-400 hover:underline">
+                        Ver todas las skills de {{ profession.name }}
+                    </button>
+                    <Link :href="route('skills.index', { q: filters.q })" class="text-brand-600 dark:text-brand-400 hover:underline">
+                        Buscar «{{ filters.q }}» en todas las profesiones →
+                    </Link>
+                </div>
+            </div>
+
             <div v-else class="text-center py-20 text-gray-400 dark:text-gray-500">
                 <p class="text-lg font-medium">Aún no hay skills para esta profesión.</p>
                 <Link :href="route('skills.create')" class="btn-primary mt-4">Sé el primero en compartir →</Link>
