@@ -67,6 +67,11 @@ class Guides
         'keyword-research-con-ia',
         'medir-el-trafico-de-ia',
         'auditoria-seo-tecnica',
+        'eeat-experiencia-contenido-con-ia',
+        'datos-estructurados-para-ia',
+        'seo-programatico-con-ia',
+        'seo-local-con-ia',
+        'llms-txt-sirve-para-algo',
     ];
 
     /** @var array<string, array<string, mixed>>|null */

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1761,
     'about' => 'Medición del tráfico procedente de asistentes de IA',
-    'related' => ['ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo', 'medir-si-la-ia-ahorra-tiempo', 'auditoria-seo-tecnica'],
+    'related' => ['seo-local-con-ia', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo', 'medir-si-la-ia-ahorra-tiempo', 'auditoria-seo-tecnica'],
     'toc' => [
         'por-que-no-lo-ves' => 'Por qué no lo estás viendo',
         'analitica' => 'Paso 1: el canal de asistentes en la analítica',

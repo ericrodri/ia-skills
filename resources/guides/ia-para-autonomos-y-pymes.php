@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 12,
-    'words' => 1965,
+    'words' => 2027,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -102,6 +102,8 @@ return [
 </ol>
 
 <p>Cumplidas las tres, la elección de herramienta y los costes reales están en <a href="/guias/automatizar-sin-programar-n8n-make-zapier">n8n vs Make vs Zapier</a>. Y antes de dar el salto, conviene tener el número: el método corto está en <a href="/guias/medir-si-la-ia-ahorra-tiempo">medir si la IA ahorra tiempo</a>.</p>
+
+<p>Y si tu negocio atiende en un sitio físico o en una zona concreta, hay una palanca que suele rendir más que cualquier automatización interna: que te encuentren quienes buscan cerca. Cómo preparar la ficha, las reseñas y la web para el mapa y también para lo que recomiendan los asistentes está en <a href="/guias/seo-local-con-ia">SEO local con IA</a>.</p>
 
 <p>Hay un caso que se sale de esta escala porque tiene sus propios números y sus propias trampas: atender consultas repetidas de clientes con un asistente. Cuándo compensa de verdad, cuánto cuesta entre plataforma y desarrollo, y qué hace que la gente lo acabe odiando, en <a href="/guias/chatbot-de-atencion-al-cliente-con-ia">montar un chatbot de atención al cliente</a>.</p>
 

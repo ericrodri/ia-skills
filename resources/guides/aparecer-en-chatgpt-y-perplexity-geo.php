@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
     'readingMinutes' => 10,
-    'words' => 1630,
+    'words' => 1661,
     'about' => 'Generative Engine Optimization',
-    'related' => ['medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',
@@ -24,7 +24,7 @@ return [
     ],
     'faq' => [
         '¿El GEO sustituye al SEO?' => 'No: se apoya en él. Los motores generativos se nutren en buena parte de páginas que ya están indexadas y bien posicionadas, así que una web que no rastrea ni indexa bien tampoco será citada. GEO es una capa encima —estructura, claridad, datos verificables— no un reemplazo.',
-        '¿Sirve de algo el archivo llms.txt?' => 'Sirve como mapa: un índice en Markdown que le dice a un modelo qué páginas tuyas importan y de qué van. Si tu web ya tiene datos estructurados y una arquitectura clara, aporta poco. Si partes de cero en ese terreno, es media hora de trabajo, no tiene riesgo y da un punto de entrada limpio. No es un estándar oficial ni garantiza nada.',
+        '¿Sirve de algo el archivo llms.txt?' => 'Poco, según los datos que hay a estas alturas: un análisis sobre 137.000 sitios que lo publicaban encontró que el 97 % de esos ficheros nunca recibe una petición, Google ha dicho que no lo usa y entre los dominios más citados por los asistentes casi ninguno lo tiene. Si puedes generarlo automáticamente, ponlo y olvídate, porque cuesta cero. Lo que no conviene es tratarlo como una estrategia de visibilidad, ni mantenerlo a mano.',
         '¿Cuánto se tarda en notar resultados?' => 'Para consultas de cola larga y muy específicas, entre uno y dos meses desde que la parte técnica está en orden. Para consultas competidas, de tres a seis. Los modelos se actualizan por ciclos y la mayoría de las citas vienen de búsquedas en vivo, así que lo que más acelera es tener contenido indexable y actualizado.',
         '¿Debo bloquear a los bots de IA en robots.txt?' => 'Es una decisión de negocio, no técnica. Si vives de la publicidad en tus páginas, cada respuesta generada es una visita que no recibes. Si vives de que te descubran —catálogos, software, servicios profesionales—, ser citado es un canal de captación nuevo y bloquearlos te deja fuera. No hay una respuesta única.',
         '¿Cómo sé si ChatGPT está enviándome visitas?' => 'Míralo por referrer en tu analítica: los dominios de los asistentes aparecen como origen. Es una medida a la baja, porque muchas citas se leen sin hacer clic. Complétala preguntando directamente a los asistentes por tu categoría, de forma periódica, y anotando si sales y con qué se te describe.',
@@ -82,7 +82,7 @@ return [
     <li><strong>Los bots de IA no están bloqueados.</strong> Revisa <code>robots.txt</code> y también las reglas de tu CDN o cortafuegos, que es donde se cae la mayoría sin enterarse. Los agentes a mirar hoy son <code>GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code> y <code>Bingbot</code>.</li>
     <li><strong>Datos estructurados donde toca.</strong> <code>Organization</code> en todo el sitio, <code>Article</code> con fecha de publicación y actualización en el contenido editorial, <code>FAQPage</code> donde de verdad haya preguntas, <code>BreadcrumbList</code> para dar jerarquía. No es magia: es decirle a la máquina qué es cada cosa en lugar de esperar a que lo deduzca.</li>
     <li><strong>Sitemap sano y fechas reales.</strong> Un <code>lastmod</code> que miente entrena a los rastreadores a ignorarlo.</li>
-    <li><strong>Un <code>llms.txt</code>, si quieres.</strong> Un índice en Markdown con tus páginas importantes y una línea de qué es cada una. No es estándar oficial ni garantiza nada, pero cuesta media hora y no rompe nada.</li>
+    <li><strong>Un <code>llms.txt</code>, si quieres.</strong> Un índice en Markdown con tus páginas importantes y una línea de qué es cada una. Cuesta media hora y no rompe nada, pero los datos de 2026 dicen que casi ningún bot lo pide: el detalle, las cifras y la decisión razonable están en <a href="/guias/llms-txt-sirve-para-algo">si el llms.txt sirve de algo</a>.</li>
 </ul>
 
 <h2 id="escribir">Cómo escribir para que te citen</h2>

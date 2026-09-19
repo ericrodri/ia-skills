@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
-    'readingMinutes' => 12,
-    'words' => 2059,
+    'readingMinutes' => 13,
+    'words' => 2111,
     'about' => 'SEO y contenido generado con inteligencia artificial',
-    'related' => ['ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
+    'related' => ['eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
     'toc' => [
         'que-dice-google' => 'Qué dice la política de Google, literalmente',
         'por-que-se-hunden' => 'Qué tienen en común los sitios que se hunden',
@@ -106,7 +106,7 @@ return [
 
 <ol>
     <li><strong>Datos propios.</strong> Lo que mides tú y no está publicado: precios reales de tu mercado, resultados de tus clientes, una encuesta a cien personas, los tiempos de un proceso que ejecutas. Es la fuente más fuerte y la menos usada porque da trabajo.</li>
-    <li><strong>Experiencia de primera mano.</strong> Haberlo hecho. Qué salió mal, qué se rompe a los tres meses, qué no cuenta la documentación. Es la primera «E» de E-E-A-T y es literalmente lo único que un modelo no tiene.</li>
+    <li><strong>Experiencia de primera mano.</strong> Haberlo hecho. Qué salió mal, qué se rompe a los tres meses, qué no cuenta la documentación. Es la primera «E» de E-E-A-T y es literalmente lo único que un modelo no tiene; cómo reunirla y cómo demostrarla está en la guía de <a href="/guias/eeat-experiencia-contenido-con-ia">E-E-A-T y contenido con IA</a>.</li>
     <li><strong>Criterio.</strong> Mojarse. «Esto no compensa por debajo de X», «esta herramienta sobra si ya tienes aquella». Un modelo por defecto no recomienda: enumera opciones equilibradas, que es la forma más elegante de no decir nada.</li>
     <li><strong>Formato que ahorra trabajo.</strong> La tabla comparativa que no existía, la calculadora, la plantilla descargable, el checklist. Convertir información dispersa en algo utilizable es valor aunque los datos sean públicos.</li>
 </ol>

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-18',
     'updated' => '2026-09-18',
     'readingMinutes' => 12,
-    'words' => 1971,
+    'words' => 1993,
     'about' => 'Auditoría SEO técnica',
-    'related' => ['medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
+    'related' => ['datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
     'toc' => [
         'orden' => 'El orden importa más que la herramienta',
         'indexacion' => 'Capa 1: que puedan llegar e indexarte',
@@ -105,7 +105,7 @@ return [
 
 <h2 id="estructurados">Capa 4: datos estructurados que no mienten</h2>
 
-<p>El marcado sirve para decirle a la máquina qué es cada cosa en lugar de esperar a que lo deduzca, y con respuestas generadas de por medio esa ayuda vale más que antes.</p>
+<p>El marcado sirve para decirle a la máquina qué es cada cosa en lugar de esperar a que lo deduzca. Conviene tener la expectativa calibrada —no compra citas en los asistentes, y hay un estudio que lo midió—, pero sigue decidiendo el aspecto de tu resultado: el detalle está en la guía de <a href="/guias/datos-estructurados-para-ia">datos estructurados</a>.</p>
 
 <ul>
     <li><strong><code>Organization</code></strong> en todo el sitio, con el nombre, el logotipo y los perfiles oficiales. Es lo que consolida quién eres como entidad.</li>

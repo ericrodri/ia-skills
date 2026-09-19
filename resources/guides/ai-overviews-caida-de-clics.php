@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1814,
     'about' => 'Google AI Overviews y CTR orgánico',
-    'related' => ['medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
+    'related' => ['eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la página de resultados',
         'los-datos' => 'Qué dicen los datos y qué no dicen',
