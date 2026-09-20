@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1814,
     'about' => 'Google AI Overviews y CTR orgánico',
-    'related' => ['eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
+    'related' => ['actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la página de resultados',
         'los-datos' => 'Qué dicen los datos y qué no dicen',
@@ -118,7 +118,7 @@ return [
 <h2 id="no-funciona">Lo que no funciona</h2>
 
 <ol>
-    <li><strong>Publicar más de lo mismo.</strong> Si el problema es que tu contenido es resumible, cincuenta artículos más igual de resumibles no lo arreglan. Además es el perfil exacto que persigue la política de abuso de contenido a escala, como cuenta la guía de <a href="/guias/escribir-contenido-seo-con-ia">contenido SEO con IA</a>.</li>
+    <li><strong>Publicar más de lo mismo.</strong> Si el problema es que tu contenido es resumible, cincuenta artículos más igual de resumibles no lo arreglan. Además es el perfil exacto que persigue la política de abuso de contenido a escala, como cuenta la guía de <a href="/guias/escribir-contenido-seo-con-ia">contenido SEO con IA</a>. Lo rentable casi siempre es lo contrario: trabajar lo que ya tienes publicado con el método de <a href="/guias/actualizar-contenido-antiguo-con-ia">actualizar contenido antiguo</a>.</li>
     <li><strong>Bloquear fragmentos para no aparecer.</strong> Te saca del bloque generado y también del fragmento destacado y de una parte del resultado normal. Cambias una pérdida por otra mayor.</li>
     <li><strong>Reescribir la misma página cada trimestre.</strong> Cambiar las palabras de sitio no cambia el motivo por el que no te hacen clic.</li>
     <li><strong>Mirar solo la posición media.</strong> Es el indicador que peor envejece: puede estar perfecta mientras el negocio se cae.</li>

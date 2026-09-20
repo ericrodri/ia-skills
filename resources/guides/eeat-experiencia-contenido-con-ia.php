@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 9,
     'words' => 1553,
     'about' => 'E-E-A-T y contenido asistido por inteligencia artificial',
-    'related' => ['escribir-contenido-seo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia', 'datos-estructurados-para-ia'],
+    'related' => ['menciones-de-marca-y-enlaces', 'escribir-contenido-seo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia', 'datos-estructurados-para-ia'],
     'toc' => [
         'que-es' => 'Qué mide realmente el E-E-A-T',
         'experiencia' => 'Por qué la experiencia es la letra que decide',
@@ -62,7 +62,7 @@ return [
 
 <p>Lo que sigue siendo escaso es lo que exige haber estado allí: la cifra de tu propio panel, la comparativa que hiciste con tus datos, el fallo que descubriste al tercer mes, la foto del montaje real. Eso es lo que un resumen automático no puede replicar y lo que hace que una página valga la pena entre veinte casi idénticas.</p>
 
-<p>Hay un efecto añadido que interesa a quien mira la visibilidad en asistentes. Los modelos citan aquello que no pueden generar por su cuenta: un dato original, una cifra atribuible, una comparativa hecha de verdad. La experiencia no es solo lo que te protege de caer; es lo que hace tu contenido citable, que es el argumento central de la <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">guía de GEO</a>.</p>
+<p>Hay un efecto añadido que interesa a quien mira la visibilidad en asistentes. Los modelos citan aquello que no pueden generar por su cuenta: un dato original, una cifra atribuible, una comparativa hecha de verdad. La experiencia no es solo lo que te protege de caer; es lo que hace tu contenido citable, que es el argumento central de la <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">guía de GEO</a>. Publicar un dato propio es además la forma más barata de generar menciones en otros sitios, que es la señal que mejor correlaciona con aparecer en esas respuestas: las cifras están en <a href="/guias/menciones-de-marca-y-enlaces">menciones de marca y enlaces</a>.</p>
 
 <h2 id="directrices">Qué dicen las directrices sobre el contenido con IA</h2>
 

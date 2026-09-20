@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1661,
     'about' => 'Generative Engine Optimization',
-    'related' => ['llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['menciones-de-marca-y-enlaces', 'llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',
@@ -113,7 +113,7 @@ return [
 
 <p>Las dos primeras se automatizan bien: lanzar quince preguntas, guardar respuestas y comparar con el mes anterior es justo el tipo de tarea repetitiva y verificable que conviene delegar, con el método de <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">automatizar tareas con IA</a>.</p>
 
-<p>Desde 2026 hay dos fuentes más que conviene montar: el canal propio para asistentes en la analítica y el informe de IA generativa de Search Console, que aísla las impresiones en las respuestas de Google. El montaje completo, con lo que cada fuente deja fuera, está en <a href="/guias/medir-el-trafico-de-ia">cómo medir el tráfico que te llega desde la IA</a>; y si lo que estás intentando explicar es por qué caen los clics aunque sigas posicionando, los datos están en <a href="/guias/ai-overviews-caida-de-clics">AI Overviews y la caída de clics</a>.</p>
+<p>Desde 2026 hay dos fuentes más que conviene montar: el canal propio para asistentes en la analítica y el informe de IA generativa de Search Console, que aísla las impresiones en las respuestas de Google. El montaje completo, con lo que cada fuente deja fuera, está en <a href="/guias/medir-el-trafico-de-ia">cómo medir el tráfico que te llega desde la IA</a>; y si lo que estás intentando explicar es por qué caen los clics aunque sigas posicionando, los datos están en <a href="/guias/ai-overviews-caida-de-clics">AI Overviews y la caída de clics</a>. Falta la mitad de fuera de casa: cuánto pesa que se hable de ti en otros sitios está medido en <a href="/guias/menciones-de-marca-y-enlaces">menciones de marca frente a enlaces</a>.</p>
 
 <h2 id="errores">Errores que se están pagando caros</h2>
 

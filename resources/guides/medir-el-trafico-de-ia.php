@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1761,
     'about' => 'Medición del tráfico procedente de asistentes de IA',
-    'related' => ['seo-local-con-ia', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo', 'medir-si-la-ia-ahorra-tiempo', 'auditoria-seo-tecnica'],
+    'related' => ['menciones-de-marca-y-enlaces', 'seo-local-con-ia', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo', 'medir-si-la-ia-ahorra-tiempo', 'auditoria-seo-tecnica'],
     'toc' => [
         'por-que-no-lo-ves' => 'Por qué no lo estás viendo',
         'analitica' => 'Paso 1: el canal de asistentes en la analítica',
@@ -101,7 +101,7 @@ return [
 
 <p>El procedimiento cabe en cinco líneas. Elige quince preguntas que un cliente tuyo haría de verdad —no consultas de dos palabras, preguntas completas con contexto—. Lánzalas una vez al mes en tres asistentes distintos, en sesión limpia y sin historial. Anota si sales, en qué lugar de la respuesta, con qué frase se te describe y a quién citan en tu lugar cuando no sales. Guarda la respuesta entera, no solo el veredicto. Compara con el mes anterior.</p>
 
-<p>Tres meses de ese registro valen más que cualquier panel comprado, por un motivo concreto: te da la lista real de con quién compites en ese tablero, que casi nunca coincide con la lista de quien te compite en el buscador. El trabajo de conseguir estar en esas respuestas es el de la <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">guía de GEO</a>.</p>
+<p>Tres meses de ese registro valen más que cualquier panel comprado, por un motivo concreto: te da la lista real de con quién compites en ese tablero, que casi nunca coincide con la lista de quien te compite en el buscador. El trabajo de conseguir estar en esas respuestas es el de la <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">guía de GEO</a>, y el indicador que lo anticipa —cuántas veces te nombran fuera de tu web— se sigue con el método de <a href="/guias/menciones-de-marca-y-enlaces">menciones de marca y enlaces</a>.</p>
 
 <p>Lanzar las quince preguntas, guardar respuestas y comparar es repetitivo y verificable, o sea, el perfil exacto de tarea que conviene delegar con el método de <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">automatizar tareas con IA</a>. La interpretación no: esa es la parte que justifica el informe.</p>
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1631,
     'about' => 'SEO programático y contenido a escala con inteligencia artificial',
-    'related' => ['escribir-contenido-seo-con-ia', 'keyword-research-con-ia', 'eeat-experiencia-contenido-con-ia', 'auditoria-seo-tecnica', 'datos-estructurados-para-ia'],
+    'related' => ['enlazado-interno-y-arquitectura-web', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia', 'eeat-experiencia-contenido-con-ia', 'auditoria-seo-tecnica', 'datos-estructurados-para-ia'],
     'toc' => [
         'que-es' => 'Qué es el SEO programático',
         'politica' => 'La línea que Google sí persigue',
@@ -116,7 +116,7 @@ return [
     <li><strong>Mira tres números:</strong> porcentaje indexado, páginas con al menos una impresión y páginas con al menos un clic. Si lo indexado no llega al 60 %, el problema es de calidad, no de rastreo.</li>
     <li><strong>Lee diez páginas al azar</strong> como si fueras un visitante. Este paso no se delega y detecta lo que ninguna métrica enseña.</li>
     <li><strong>Amplía por factor de tres,</strong> no de cien.</li>
-    <li><strong>Revisa la salud técnica al escalar:</strong> un sitemap roto o una redirección mal puesta convierte quinientas páginas en invisibles sin previo aviso. La <a href="/guias/auditoria-seo-tecnica">auditoría técnica</a> tiene la lista.</li>
+    <li><strong>Revisa la salud técnica al escalar:</strong> un sitemap roto o una redirección mal puesta convierte quinientas páginas en invisibles sin previo aviso. La <a href="/guias/auditoria-seo-tecnica">auditoría técnica</a> tiene la lista, y el reparto de enlaces entre las páginas generadas —que es lo que decide cuáles se rastrean— está en la guía de <a href="/guias/enlazado-interno-y-arquitectura-web">enlazado interno</a>.</li>
 </ol>
 
 <p>Merece la pena insistir en esto último con un caso propio: durante semanas nuestro sitemap devolvió un error de servidor por un problema de caché que nada tenía que ver con el contenido. Resultado, mil fichas perfectamente válidas sin descubrir. En un proyecto programático la parte técnica no es un detalle: es la mitad del trabajo.</p>

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 1993,
     'about' => 'Auditoría SEO técnica',
-    'related' => ['datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
+    'related' => ['enlazado-interno-y-arquitectura-web', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
     'toc' => [
         'orden' => 'El orden importa más que la herramienta',
         'indexacion' => 'Capa 1: que puedan llegar e indexarte',
@@ -124,7 +124,7 @@ return [
 <ol>
     <li><strong>Profundidad de clic.</strong> Cuántos clics hay desde la portada hasta cada página importante. Más de tres es una señal de que algo relevante está enterrado.</li>
     <li><strong>Páginas huérfanas.</strong> URL que están en el sitemap y no recibe ningún enlace interno. Se crean solas cada vez que alguien publica algo y no lo enlaza desde ninguna parte.</li>
-    <li><strong>Canibalización.</strong> Varias páginas compitiendo por la misma intención, que es un problema de contenido con síntomas técnicos. Se detecta cruzando consultas de Search Console con URL, y el método está en la guía de <a href="/guias/keyword-research-con-ia">keyword research con IA</a>.</li>
+    <li><strong>Canibalización.</strong> Varias páginas compitiendo por la misma intención, que es un problema de contenido con síntomas técnicos. Se detecta cruzando consultas de Search Console con URL, y el método está en la guía de <a href="/guias/keyword-research-con-ia">keyword research con IA</a>. Cuando la causa de fondo es el reparto de enlaces internos, se corrige antes en la <a href="/guias/enlazado-interno-y-arquitectura-web">arquitectura de enlazado</a> que reescribiendo el texto.</li>
 </ol>
 
 <h2 id="con-ia">Qué parte de esto se delega en un modelo</h2>

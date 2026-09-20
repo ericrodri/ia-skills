@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1813,
     'about' => 'Investigación de palabras clave asistida por IA',
-    'related' => ['seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
+    'related' => ['actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la investigación de palabras clave',
         'no-delegar' => 'Lo primero: lo que la IA no puede darte',
@@ -125,7 +125,7 @@ return [
 
 <ol>
     <li><strong>Aceptar volúmenes generados.</strong> Un informe con cifras inventadas es peor que no tener informe, porque orienta decisiones con aire de rigor.</li>
-    <li><strong>Una página por palabra clave.</strong> Produce decenas de páginas casi iguales que se quitan posiciones entre ellas y que encajan en la definición de contenido a escala sin valor, como explica la guía de <a href="/guias/escribir-contenido-seo-con-ia">contenido SEO con IA</a>. Si el plan pasa por generar cientos de páginas a partir de un conjunto de datos, la forma de hacerlo sin quemar el dominio está en <a href="/guias/seo-programatico-con-ia">SEO programático con IA</a>.</li>
+    <li><strong>Una página por palabra clave.</strong> Produce decenas de páginas casi iguales que se quitan posiciones entre ellas y que encajan en la definición de contenido a escala sin valor, como explica la guía de <a href="/guias/escribir-contenido-seo-con-ia">contenido SEO con IA</a>. Si el plan pasa por generar cientos de páginas a partir de un conjunto de datos, la forma de hacerlo sin quemar el dominio está en <a href="/guias/seo-programatico-con-ia">SEO programático con IA</a>. Y si el solapamiento ya existe porque lo publicaste hace tiempo, lo que toca es fusionar: el árbol de decisión está en <a href="/guias/actualizar-contenido-antiguo-con-ia">actualizar contenido antiguo</a>.</li>
     <li><strong>No auditar la clasificación.</strong> Un modelo clasifica mil consultas en dos minutos y se equivoca en unas cuantas. Revisar cincuenta al azar cuesta diez minutos y te dice si puedes fiarte del resto.</li>
     <li><strong>Priorizar por volumen.</strong> La consulta de mil búsquedas que no compra vale menos que la de treinta que sí. La cercanía al negocio no está en ninguna herramienta.</li>
     <li><strong>Quedarse en la lista.</strong> El entregable no es una hoja de cálculo: es un calendario con páginas asignadas y una promesa por página. Lo demás es trabajo que nadie ejecuta.</li>

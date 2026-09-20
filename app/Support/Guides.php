@@ -72,6 +72,9 @@ class Guides
         'seo-programatico-con-ia',
         'seo-local-con-ia',
         'llms-txt-sirve-para-algo',
+        'enlazado-interno-y-arquitectura-web',
+        'actualizar-contenido-antiguo-con-ia',
+        'menciones-de-marca-y-enlaces',
     ];
 
     /** @var array<string, array<string, mixed>>|null */
