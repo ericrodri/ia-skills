@@ -9,10 +9,10 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-08-27',
     'updated' => '2026-09-08',
-    'readingMinutes' => 9,
-    'words' => 1523,
+    'readingMinutes' => 10,
+    'words' => 1577,
     'about' => 'Agentes de IA',
-    'related' => ['chatbot-de-atencion-al-cliente-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['que-es-jev-modelo-system-one', 'chatbot-de-atencion-al-cliente-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'que-es' => 'Qué es un agente de IA',
         'chatbot-vs-agente' => 'Chatbot, asistente y agente: las diferencias',
@@ -134,5 +134,7 @@ return [
 <p>Desde 2026 hay además una vía que no exige montar nada: los <a href="/guias/agentes-de-escritorio-cowork-chatgpt-work">agentes de escritorio</a> —Claude Cowork, ChatGPT Work, Gemini Spark— que reciben un encargo sobre una carpeta o sobre tus aplicaciones y devuelven ficheros terminados. Es la forma más corta de comprobar si un agente te sirve antes de invertir en procedimientos.</p>
 
 <p>Y si el agente va a trabajar con datos de la empresa, la conversación pendiente no es técnica: es qué permisos tiene, con qué datos y quién responde de lo que haga. Eso se resuelve por escrito, con una <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA</a>.</p>
+
+<p>Un apunte de 2026 para quien vaya a construir uno: no todas las decisiones de un agente necesitan un modelo de texto. Las de alto volumen y salida cerrada —clasificar, enrutar, puntuar— empiezan a tener modelos propios, y el primero de esa categoría está explicado en <a href="/guias/que-es-jev-modelo-system-one">Jev</a>, el modelo System One de TypeSafe AI.</p>
 HTML,
 ];

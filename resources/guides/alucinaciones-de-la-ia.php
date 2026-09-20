@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
     'readingMinutes' => 13,
-    'words' => 2145,
+    'words' => 2195,
     'about' => 'Alucinaciones de los modelos de lenguaje y verificación de sus respuestas',
-    'related' => ['ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
+    'related' => ['que-es-jev-modelo-system-one', 'ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'que-es' => 'Una alucinación no es una mentira: es un relleno',
         'por-que' => 'Por qué el entrenamiento premia adivinar antes que callar',
@@ -133,6 +133,8 @@ documentado, [DUDOSO] si no estarías seguro. Prefiero tres
 datos marcados que diez sin marcar.</code></pre>
 
 <p>El segundo es el que más rinde en el día a día, porque produce una lista corta y concreta de lo que hay que mirar en lugar de dejarte revisando el texto entero. El patrón general de instrucciones que se comportan así está en la <a href="/guias/como-escribir-prompts-efectivos">guía de prompts efectivos</a>.</p>
+
+<p>Conviene desconfiar, eso sí, de quien venda esto como resuelto. En 2026 han aparecido modelos que garantizan la forma de la respuesta —no el contenido— y se anuncian con un «cero alucinaciones» que significa bastante menos de lo que parece: el caso concreto está desmontado en la guía sobre <a href="/guias/que-es-jev-modelo-system-one">Jev</a>.</p>
 
 <h2 id="verificar">El minuto de verificación</h2>
 

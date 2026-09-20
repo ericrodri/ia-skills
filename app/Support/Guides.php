@@ -75,6 +75,7 @@ class Guides
         'enlazado-interno-y-arquitectura-web',
         'actualizar-contenido-antiguo-con-ia',
         'menciones-de-marca-y-enlaces',
+        'que-es-jev-modelo-system-one',
     ];
 
     /** @var array<string, array<string, mixed>>|null */

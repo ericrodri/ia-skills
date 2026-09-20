@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-25',
     'updated' => '2026-09-08',
     'readingMinutes' => 8,
-    'words' => 1362,
+    'words' => 1402,
     'about' => 'Automatización con IA',
-    'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
+    'related' => ['que-es-jev-modelo-system-one', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -118,7 +118,7 @@ return [
 
 <p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro —con línea base y contando el tiempo de revisar, como se explica en <a href="/guias/medir-si-la-ia-ahorra-tiempo">cómo medir si la IA te está ahorrando tiempo de verdad</a>—, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
 
-<p>Y si la tarea que has elegido tiene demasiados pasos para resolverla con un prompt suelto, lo que necesitas es un agente que los encadene por su cuenta: cómo funcionan y hasta dónde conviene dejarlos solos está en <a href="/guias/que-es-un-agente-de-ia">qué es un agente de IA</a>.</p>
+<p>Y si la tarea que has elegido tiene demasiados pasos para resolverla con un prompt suelto, lo que necesitas es un agente que los encadene por su cuenta: cómo funcionan y hasta dónde conviene dejarlos solos está en <a href="/guias/que-es-un-agente-de-ia">qué es un agente de IA</a>. Y si lo que repites miles de veces es una decisión de una sola línea —esta solicitud va a este equipo, este documento pasa el filtro—, desde septiembre de 2026 hay modelos hechos solo para eso: <a href="/guias/que-es-jev-modelo-system-one">Jev</a> es el primero.</p>
 
 <p>Un último apunte si esto va a salir de tu portátil: en cuanto una automatización toca datos de clientes o envía algo al exterior, deja de ser una decisión personal. Lo que conviene tener escrito —qué datos, qué herramientas, quién aprueba— está en <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA en la empresa</a>.</p>
 HTML,
