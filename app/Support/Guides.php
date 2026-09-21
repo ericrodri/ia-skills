@@ -75,6 +75,9 @@ class Guides
         'enlazado-interno-y-arquitectura-web',
         'actualizar-contenido-antiguo-con-ia',
         'menciones-de-marca-y-enlaces',
+        'autoridad-tematica-y-clusters-de-contenido',
+        'canibalizacion-de-keywords',
+        'diagnosticar-caida-de-trafico-seo',
         'que-es-jev-modelo-system-one',
     ];
 

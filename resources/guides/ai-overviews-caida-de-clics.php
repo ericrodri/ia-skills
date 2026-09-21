@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-18',
     'updated' => '2026-09-18',
     'readingMinutes' => 11,
-    'words' => 1814,
+    'words' => 1876,
     'about' => 'Google AI Overviews y CTR orgánico',
-    'related' => ['actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
+    'related' => ['diagnosticar-caida-de-trafico-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la página de resultados',
         'los-datos' => 'Qué dicen los datos y qué no dicen',
@@ -89,7 +89,7 @@ return [
 
 <h2 id="diagnostico">Cómo saber si te está pasando a ti</h2>
 
-<p>Media hora de Search Console bien gastada vale más que cualquier estimación de sector:</p>
+<p>Primero, un descarte que ahorra diagnósticos equivocados: una bajada también puede venir de la medición, de un problema técnico o de un core update, y eso se comprueba en minutos siguiendo el orden de la <a href="/guias/diagnosticar-caida-de-trafico-seo">guía de diagnóstico de caídas</a>. Hecho eso, media hora de Search Console bien gastada vale más que cualquier estimación de sector:</p>
 
 <ol>
     <li><strong>Compara doce meses contra doce meses</strong>, no mes contra mes, para no confundir estacionalidad con tendencia estructural.</li>

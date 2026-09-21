@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-09-20',
     'updated' => '2026-09-20',
-    'readingMinutes' => 11,
-    'words' => 1831,
+    'readingMinutes' => 12,
+    'words' => 1916,
     'about' => 'El enlazado interno y la arquitectura de la información como palanca de posicionamiento',
-    'related' => ['actualizar-contenido-antiguo-con-ia', 'auditoria-seo-tecnica', 'seo-programatico-con-ia', 'escribir-contenido-seo-con-ia', 'datos-estructurados-para-ia'],
+    'related' => ['autoridad-tematica-y-clusters-de-contenido', 'canibalizacion-de-keywords', 'actualizar-contenido-antiguo-con-ia', 'auditoria-seo-tecnica', 'seo-programatico-con-ia', 'escribir-contenido-seo-con-ia', 'datos-estructurados-para-ia'],
     'toc' => [
         'importa' => 'Por qué decide más de lo que parece',
         'modelo' => 'El modelo mental: tres señales y una distancia',
@@ -135,8 +135,11 @@ return [
     <li><strong>Enlazar con JavaScript.</strong> Un <code>onclick</code> sobre un <code>&lt;div&gt;</code> no es un enlace para ningún rastreador. Si el sitio es una SPA, comprueba qué ve un cliente sin JavaScript antes de dar nada por hecho: la <a href="/guias/auditoria-seo-tecnica">auditoría técnica</a> explica cómo.</li>
     <li><strong>Dejar los enlaces de la versión antigua.</strong> Cuando fusionas o reescribes una página, los enlaces que apuntaban a la vieja siguen ahí, encadenando redirecciones. Actualiza el destino en origen, no solo la redirección.</li>
     <li><strong>Enlazar todo a la portada.</strong> La portada no necesita enlaces internos: los tiene todos. Los que hacen falta apuntan hacia abajo.</li>
+    <li><strong>Enlazar dos páginas que responden a lo mismo.</strong> Si dos destinos cubren la misma intención, el enlazado interno no lo arregla: reparte la señal entre los dos. Antes de enlazar, comprueba que no tengas una <a href="/guias/canibalizacion-de-keywords">canibalización</a>.</li>
     <li><strong>Añadir enlaces sin quitar ninguno.</strong> Una página con cuarenta enlaces en el cuerpo no tiene una arquitectura fuerte; tiene una lista de la compra.</li>
 </ul>
+
+<p>Hay un caso que no es un fallo de enlazado sino de la capa de debajo: si el sitio no tiene temas cerrados, no hay nada coherente que enlazar. Decidir qué páginas deben existir y cómo se agrupan es trabajo previo, y está en la <a href="/guias/autoridad-tematica-y-clusters-de-contenido">guía de autoridad temática</a>.</p>
 
 <h2 id="revision">La revisión trimestral en quince minutos</h2>
 

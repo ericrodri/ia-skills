@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-18',
     'updated' => '2026-09-18',
     'readingMinutes' => 12,
-    'words' => 1993,
+    'words' => 2056,
     'about' => 'Auditoría SEO técnica',
-    'related' => ['enlazado-interno-y-arquitectura-web', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
+    'related' => ['diagnosticar-caida-de-trafico-seo', 'enlazado-interno-y-arquitectura-web', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
     'toc' => [
         'orden' => 'El orden importa más que la herramienta',
         'indexacion' => 'Capa 1: que puedan llegar e indexarte',
@@ -55,6 +55,8 @@ return [
 </figure>
 
 <p>Optimizar el rendimiento de una página que está bloqueada por <code>robots.txt</code> es trabajo tirado. Ordenar la auditoría por esta escalera evita ese desperdicio y, de paso, produce un informe con prioridades defendibles.</p>
+
+<p>Esta misma escalera sirve de lista de descarte cuando el tráfico ya ha caído y hay que encontrar la causa; el orden completo, incluyendo las causas que no son técnicas, está en la <a href="/guias/diagnosticar-caida-de-trafico-seo">guía de diagnóstico de caídas de tráfico</a>.</p>
 
 <h2 id="indexacion">Capa 1: que puedan llegar e indexarte</h2>
 

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-18',
     'updated' => '2026-09-18',
     'readingMinutes' => 11,
-    'words' => 1813,
+    'words' => 1889,
     'about' => 'Investigación de palabras clave asistida por IA',
-    'related' => ['actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
+    'related' => ['autoridad-tematica-y-clusters-de-contenido', 'actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la investigación de palabras clave',
         'no-delegar' => 'Lo primero: lo que la IA no puede darte',
@@ -106,9 +106,11 @@ return [
 
 <ul>
     <li><strong>Crear</strong>: racimo sin cobertura y con demanda. Lo más caro y lo que más tarda.</li>
-    <li><strong>Consolidar</strong>: dos o tres páginas compitiendo por el mismo racimo. Lo más rentable a corto plazo y casi siempre lo que más se pospone.</li>
+    <li><strong>Consolidar</strong>: dos o tres páginas compitiendo por el mismo racimo, es decir, una <a href="/guias/canibalizacion-de-keywords">canibalización</a>. Lo más rentable a corto plazo y casi siempre lo que más se pospone.</li>
     <li><strong>Ampliar</strong>: página que cubre el racimo a medias. Añadir el apartado que falta suele mover más que un artículo nuevo.</li>
 </ul>
+
+<p>El mapa, además, sirve para algo más que para repartir trabajo: es la base sobre la que se construye la cobertura de un tema entero, que es lo que hoy sostiene las posiciones. Cómo se convierte en pillars y clusters está en la <a href="/guias/autoridad-tematica-y-clusters-de-contenido">guía de autoridad temática</a>.</p>
 
 <h2 id="validar">Cómo validar antes de escribir nada</h2>
 

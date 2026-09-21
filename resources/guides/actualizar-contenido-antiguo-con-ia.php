@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-20',
     'updated' => '2026-09-20',
     'readingMinutes' => 10,
-    'words' => 1655,
+    'words' => 1696,
     'about' => 'El mantenimiento del contenido publicado: content decay, actualización, fusión y poda',
-    'related' => ['enlazado-interno-y-arquitectura-web', 'escribir-contenido-seo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'medir-el-trafico-de-ia'],
+    'related' => ['canibalizacion-de-keywords', 'enlazado-interno-y-arquitectura-web', 'escribir-contenido-seo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'medir-el-trafico-de-ia'],
     'toc' => [
         'decae' => 'Por qué el contenido decae (y no siempre es culpa tuya)',
         'diagnostico' => 'El diagnóstico: cuatro números por página',
@@ -110,6 +110,8 @@ return [
     <li><strong>Actualiza los enlaces internos que apuntaban a las retiradas</strong> para que apunten directamente a la nueva. Dejarlos encadenando redirecciones es el paso que siempre se olvida.</li>
     <li>Si alguna tenía enlaces externos relevantes, avisa a quien enlazó si tienes relación. Si no, la redirección hace su trabajo.</li>
 </ol>
+
+<p>Este caso tiene nombre propio cuando las páginas no solo se parecen sino que responden a la misma intención de búsqueda: es una <a href="/guias/canibalizacion-de-keywords">canibalización de keywords</a>, y ahí está el criterio para decidir si toca fusionar, reenfocar o no tocar nada.</p>
 
 <p>Un aviso sobre la redirección: tiene que ir a la página equivalente, no a la portada ni a la categoría. Una redirección masiva a la home se trata como un error blando y no transfiere nada.</p>
 
