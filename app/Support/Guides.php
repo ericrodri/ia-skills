@@ -39,6 +39,7 @@ class Guides
         'automatizar-tareas-con-ia-en-el-trabajo',
         'automatizar-sin-programar-n8n-make-zapier',
         'crear-tu-herramienta-con-ia-sin-programar',
+        'conectar-claude-con-unity',
         'ia-para-autonomos-y-pymes',
         'chatbot-de-atencion-al-cliente-con-ia',
         'ia-en-excel-y-google-sheets',
