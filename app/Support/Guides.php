@@ -78,6 +78,9 @@ class Guides
         'autoridad-tematica-y-clusters-de-contenido',
         'canibalizacion-de-keywords',
         'diagnosticar-caida-de-trafico-seo',
+        'intencion-de-busqueda-en-seo',
+        'paginas-que-google-no-indexa',
+        'migracion-web-sin-perder-seo',
         'que-es-jev-modelo-system-one',
     ];
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1715,
     'about' => 'Diagnóstico de caídas de tráfico orgánico',
-    'related' => ['ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
+    'related' => ['paginas-que-google-no-indexa', 'migracion-web-sin-perder-seo', 'ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
     'toc' => [
         'antes' => 'Antes de mirar nada: dos preguntas',
         'medicion' => 'Paso 1: descartar que sea la medición',
@@ -95,9 +95,9 @@ return [
 <p>Si la caída es vertical, esto va antes que cualquier hipótesis de contenido. El orden por probabilidad:</p>
 
 <ol>
-    <li><strong>Indexación.</strong> Search Console → Páginas. Mira si crecen de golpe las excluidas y por qué motivo. Un <code>noindex</code> heredado de un entorno de pruebas es el clásico absoluto.</li>
+    <li><strong>Indexación.</strong> Search Console → Páginas. Mira si crecen de golpe las excluidas y por qué motivo. Un <code>noindex</code> heredado de un entorno de pruebas es el clásico absoluto. Qué significa cada motivo del informe está en la <a href="/guias/paginas-que-google-no-indexa">guía de páginas que Google no indexa</a>.</li>
     <li><strong>robots.txt.</strong> Compruébalo en vivo. Un <code>Disallow: /</code> desplegado desde staging tumba un sitio en 48 horas.</li>
-    <li><strong>Redirecciones.</strong> Tras una migración, busca cadenas y bucles. Una cadena de tres saltos diluye y una a la home se trata como soft 404.</li>
+    <li><strong>Redirecciones.</strong> Tras una migración, busca cadenas y bucles. Una cadena de tres saltos diluye y una a la home se trata como soft 404. Si la caída empieza justo el día del cambio, el repaso completo está en la <a href="/guias/migracion-web-sin-perder-seo">guía de migración web</a>.</li>
     <li><strong>Respuesta del servidor y rendimiento.</strong> Errores 5xx intermitentes durante el rastreo hacen caer páginas del índice sin aviso. El detalle de qué medir está en la <a href="/guias/auditoria-seo-tecnica">guía de auditoría técnica</a>.</li>
     <li><strong>Renderizado.</strong> Si el contenido depende de JavaScript, comprueba la versión renderizada, no el HTML que sirves. Un cambio de bundle puede dejar páginas vacías para un rastreador y perfectas para un humano.</li>
 </ol>

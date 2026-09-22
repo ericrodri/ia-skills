@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 1916,
     'about' => 'El enlazado interno y la arquitectura de la información como palanca de posicionamiento',
-    'related' => ['autoridad-tematica-y-clusters-de-contenido', 'canibalizacion-de-keywords', 'actualizar-contenido-antiguo-con-ia', 'auditoria-seo-tecnica', 'seo-programatico-con-ia', 'escribir-contenido-seo-con-ia', 'datos-estructurados-para-ia'],
+    'related' => ['paginas-que-google-no-indexa', 'autoridad-tematica-y-clusters-de-contenido', 'canibalizacion-de-keywords', 'actualizar-contenido-antiguo-con-ia', 'auditoria-seo-tecnica', 'seo-programatico-con-ia', 'escribir-contenido-seo-con-ia', 'datos-estructurados-para-ia'],
     'toc' => [
         'importa' => 'Por qué decide más de lo que parece',
         'modelo' => 'El modelo mental: tres señales y una distancia',
@@ -80,7 +80,7 @@ return [
 
 <h3>2. Cruza con el sitemap para encontrar huérfanas</h3>
 
-<p>Las URLs que están en el sitemap y no aparecen en el rastreo son huérfanas: existen, las declaras, y no hay forma de llegar a ellas navegando. Es el hallazgo más rentable de toda la auditoría porque se arregla con un enlace.</p>
+<p>Las URLs que están en el sitemap y no aparecen en el rastreo son huérfanas: existen, las declaras, y no hay forma de llegar a ellas navegando. Es el hallazgo más rentable de toda la auditoría porque se arregla con un enlace. También es la causa más frecuente de que una página se quede en «Descubierta: actualmente sin indexar», como se explica en la <a href="/guias/paginas-que-google-no-indexa">guía de páginas que Google no indexa</a>.</p>
 
 <pre><code>comm -13 &lt;(sort urls-rastreadas.txt) &lt;(sort urls-sitemap.txt)</code></pre>
 

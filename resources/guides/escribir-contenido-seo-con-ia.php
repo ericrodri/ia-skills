@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2111,
     'about' => 'SEO y contenido generado con inteligencia artificial',
-    'related' => ['actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
+    'related' => ['intencion-de-busqueda-en-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
     'toc' => [
         'que-dice-google' => 'Qué dice la política de Google, literalmente',
         'por-que-se-hunden' => 'Qué tienen en común los sitios que se hunden',
@@ -116,7 +116,7 @@ return [
 <h2 id="flujo">Un flujo de siete pasos que aguanta actualizaciones</h2>
 
 <ol>
-    <li><strong>Elige el hueco, no la palabra clave.</strong> Antes de nada: ¿qué puedo decir yo aquí que no esté ya en los resultados? Si no hay respuesta, ese artículo no se escribe. Este filtro solo ya elimina la mitad de los calendarios editoriales y mejora el otro medio.</li>
+    <li><strong>Elige el hueco, no la palabra clave.</strong> Antes de nada: ¿qué puedo decir yo aquí que no esté ya en los resultados? Si no hay respuesta, ese artículo no se escribe. Este filtro solo ya elimina la mitad de los calendarios editoriales y mejora el otro medio. Y antes de decidir el formato, comprueba la <a href="/guias/intencion-de-busqueda-en-seo">intención de búsqueda</a>: hay consultas donde ningún artículo compite.</li>
     <li><strong>Investiga con fuentes y guárdalas.</strong> Con búsqueda activada y anotando de dónde sale cada dato. El método, en <a href="/guias/investigar-con-ia-deep-research">investigar con IA y verificar fuentes</a>.</li>
     <li><strong>Aporta tu material.</strong> Tus datos, tu experiencia, tu postura, en notas sueltas. Diez minutos de dictado bastan y es el paso que separa esta guía de las demás.</li>
     <li><strong>Estructura con la IA y reordena tú.</strong> El esqueleto que propone es correcto y previsible; muévelo para que lo importante vaya primero.</li>

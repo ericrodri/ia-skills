@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2056,
     'about' => 'Auditoría SEO técnica',
-    'related' => ['diagnosticar-caida-de-trafico-seo', 'enlazado-interno-y-arquitectura-web', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
+    'related' => ['paginas-que-google-no-indexa', 'diagnosticar-caida-de-trafico-seo', 'enlazado-interno-y-arquitectura-web', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia'],
     'toc' => [
         'orden' => 'El orden importa más que la herramienta',
         'indexacion' => 'Capa 1: que puedan llegar e indexarte',
@@ -69,6 +69,8 @@ return [
     <li><strong>Sitemap sano.</strong> Solo URL indexables, con código 200, sin redirecciones, y con <code>lastmod</code> verdadero. Un <code>lastmod</code> que miente enseña a los rastreadores a ignorarlo, y recuperar esa confianza cuesta meses.</li>
     <li><strong>Códigos de estado y redirecciones.</strong> Cadenas de más de un salto, bucles, y sobre todo páginas que devuelven 200 diciendo «no encontrado» en el texto. Esas últimas son las peores porque ninguna herramienta las marca sola.</li>
 </ol>
+
+<p>Estas cinco comprobaciones resuelven los motivos técnicos del informe de indexación. Los dos que no son técnicos —«Descubierta» y «Rastreada: actualmente sin indexar»— no se arreglan aquí y tienen su propio diagnóstico en la <a href="/guias/paginas-que-google-no-indexa">guía de páginas que Google no indexa</a>.</p>
 
 <p>Contrasta el resultado con el informe de páginas de Search Console. Si tu rastreador ve 4.000 URL y Google tiene 900 indexadas, ahí está el diagnóstico antes de mirar ninguna otra capa.</p>
 

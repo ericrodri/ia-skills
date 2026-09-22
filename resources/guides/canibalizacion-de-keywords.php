@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1650,
     'about' => 'Canibalización de palabras clave en SEO',
-    'related' => ['enlazado-interno-y-arquitectura-web', 'autoridad-tematica-y-clusters-de-contenido', 'diagnosticar-caida-de-trafico-seo', 'actualizar-contenido-antiguo-con-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
+    'related' => ['intencion-de-busqueda-en-seo', 'enlazado-interno-y-arquitectura-web', 'autoridad-tematica-y-clusters-de-contenido', 'diagnosticar-caida-de-trafico-seo', 'actualizar-contenido-antiguo-con-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
     'toc' => [
         'que-es' => 'Qué es exactamente',
         'cuando-importa' => 'Cuándo es un problema y cuándo no',
@@ -36,7 +36,7 @@ return [
 
 <h2 id="que-es">Qué es exactamente</h2>
 
-<p>Ocurre cuando dos o más páginas de tu sitio responden a <strong>la misma intención de búsqueda</strong>. No a la misma palabra: a la misma intención. Esa distinción es toda la guía.</p>
+<p>Ocurre cuando dos o más páginas de tu sitio responden a <strong>la misma intención de búsqueda</strong>. No a la misma palabra: a la misma intención. Esa distinción es toda la guía, y si no tienes claro cómo se identifica una intención, empieza por la <a href="/guias/intencion-de-busqueda-en-seo">guía de intención de búsqueda</a>.</p>
 
 <p>Dos páginas pueden compartir la palabra «factura» y no competir en absoluto, porque una explica qué datos lleva una factura y la otra vende un programa para emitirlas. Son intenciones distintas y Google las trata como tales. En cambio, «cómo hacer una factura» y «guía para emitir facturas» son el mismo artículo escrito dos veces, aunque no compartan ni una palabra clave exacta.</p>
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1889,
     'about' => 'Investigación de palabras clave asistida por IA',
-    'related' => ['autoridad-tematica-y-clusters-de-contenido', 'actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
+    'related' => ['intencion-de-busqueda-en-seo', 'autoridad-tematica-y-clusters-de-contenido', 'actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la investigación de palabras clave',
         'no-delegar' => 'Lo primero: lo que la IA no puede darte',
@@ -99,6 +99,8 @@ return [
 <h2 id="clusters">De lista de palabras a mapa de contenidos</h2>
 
 <p>Un racimo no es una página hasta que responde a tres preguntas: quién lo busca, qué decide después de leerlo y qué tienes tú que no tenga el que ya está primero.</p>
+
+<p>Antes de convertir un racimo en un encargo, abre su consulta principal en el buscador y mira qué tipo de página devuelve. Ese análisis de la <a href="/guias/intencion-de-busqueda-en-seo">intención de búsqueda</a> descarta en cinco minutos las palabras con mucho volumen que en realidad piden una herramienta, un listado o una ficha de producto, y no el artículo que ibas a escribir.</p>
 
 <p>La tercera es la que separa un calendario editorial útil de una lista de deberes. Si la respuesta es «nada, pero lo explicaré mejor», esa página va a competir en el peor terreno posible: el del contenido resumible que la propia página de resultados sustituye. Si la respuesta es un dato propio, una comparativa hecha de verdad o una herramienta, tienes algo.</p>
 
