@@ -7,9 +7,12 @@ use App\Http\Requests\UpdateSkillRequest;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\SkillVersion;
+use App\Support\RelatedContent;
 use App\Support\Seo;
 use App\Support\SiteData;
+use App\Support\SkillMarkdown;
 use App\Support\SkillSearch;
+use App\Support\SkillTemplates;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -53,6 +56,7 @@ class SkillController extends Controller
         if (! $rankedByRelevance) {
             match ($sort) {
                 'new'      => $query->orderByDesc('created_at'),
+                'saved'    => $query->orderByDesc('saves_count')->orderByDesc('vote_score'),
                 'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),
                 default    => $query->orderByDesc('vote_score'),
             };
@@ -66,7 +70,9 @@ class SkillController extends Controller
             'skills' => $skills,
             'professions' => $this->activeProfessions(),
             'filters' => array_merge(['sort' => $sort], $request->only(['profession', 'tool', 'difficulty', 'type', 'q'])),
-            'tools' => self::TOOLS,
+            // Solo las herramientas con skills publicadas: ofrecer "Midjourney"
+            // como filtro para llegar a un listado vacío es un callejón sin salida.
+            'tools' => SiteData::tools(),
         ]);
     }
 
@@ -75,6 +81,7 @@ class SkillController extends Controller
         return Inertia::render('Skills/Create', [
             'professions' => $this->activeProfessions(),
             'tools' => self::TOOLS,
+            'templates' => SkillTemplates::all(),
         ]);
     }
 
@@ -177,7 +184,10 @@ class SkillController extends Controller
             'comments.replies.user:id,name,username,avatar',
         ]);
 
-        $this->shareShowSeo($skill);
+        $guides = RelatedContent::guidesForProfession($skill->profession?->slug, 2);
+        $neighbours = RelatedContent::neighbours($skill);
+
+        $this->shareShowSeo($skill, $guides, $neighbours);
 
         return Inertia::render('Skills/Show', [
             'skill'     => $skill,
@@ -185,6 +195,14 @@ class SkillController extends Controller
             'userVote'  => $user ? $user->hasVoted($skill) : null,
             'userSaved' => $user ? $user->hasSaved($skill) : false,
             'canEdit'   => $user ? $user->can('update', $skill) : false,
+            'install'   => [
+                'name'     => SkillMarkdown::name($skill),
+                'url'      => route('skills.markdown', ['skill' => $skill->slug]),
+                'command'  => SkillMarkdown::installCommand($skill),
+                'prompt'   => SkillMarkdown::installPrompt([$skill]),
+            ],
+            'guides'     => $guides,
+            'neighbours' => $neighbours,
         ]);
     }
 
@@ -283,7 +301,11 @@ class SkillController extends Controller
      * El JSON-LD se emite desde el servidor: es la única forma de que el prompt
      * completo y sus metadatos lleguen a un crawler que no ejecute JavaScript.
      */
-    private function shareShowSeo(Skill $skill): void
+    /**
+     * @param  array<int, array{title: string, url: string}>  $guides
+     * @param  array<int, array{slug: string, title: string}>  $neighbours
+     */
+    private function shareShowSeo(Skill $skill, array $guides = [], array $neighbours = []): void
     {
         $url = route('skills.show', ['skill' => $skill->slug]);
         $profession = $skill->profession?->name;
@@ -331,9 +353,12 @@ class SkillController extends Controller
                     $skill->tool_name ? 'Herramienta recomendada: '.$skill->tool_name : null,
                 ]),
                 'pre' => $skill->prompt_content,
-                'links' => $skill->profession ? [
+                'links' => collect($skill->profession ? [
                     'Más prompts de IA para '.$skill->profession->name => route('professions.show', ['profession' => $skill->profession->slug]),
-                ] : [],
+                ] : [])
+                    ->merge(collect($neighbours)->mapWithKeys(fn (array $n) => [$n['title'] => route('skills.show', ['skill' => $n['slug']])]))
+                    ->merge(collect($guides)->mapWithKeys(fn (array $g) => ['Guía: '.$g['title'] => $g['url']]))
+                    ->all(),
             ],
             'schema' => [
                 Seo::organization(),

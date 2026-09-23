@@ -24,9 +24,12 @@ class SkillObserver
     private function flush(Skill $skill): void
     {
         Cache::forget('sitemap.skills.rows');
+        Cache::forget('sitemap.authors.rows');
         Cache::forget('feed.items');
         Cache::forget('site.skills_count');
         Cache::forget('site.professions');
+        Cache::forget('site.tools');
+        Cache::forget('rankings.data');
 
         if ($skill->slug) {
             Cache::forget("og.skill.{$skill->slug}");

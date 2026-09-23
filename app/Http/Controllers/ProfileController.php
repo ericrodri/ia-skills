@@ -29,6 +29,14 @@ class ProfileController extends Controller
             // Solo llega en el redirect inmediato tras generarla: en la base de
             // datos únicamente vive su hash, así que no hay forma de mostrarla luego.
             'plainTextApiToken' => session('plainTextApiToken'),
+            // Campos del perfil público y preferencias de email: no viajan en
+            // auth.user (que se comparte en todas las páginas).
+            'profile' => [
+                'username' => $user->username,
+                'bio' => $user->bio,
+                'notify_by_email' => (bool) $user->notify_by_email,
+                'newsletter_opt_in' => (bool) $user->newsletter_opt_in,
+            ],
         ]);
     }
 

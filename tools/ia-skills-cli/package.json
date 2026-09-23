@@ -1,0 +1,28 @@
+{
+  "name": "ia-skills",
+  "version": "0.1.0",
+  "description": "Busca e instala skills de ia-skills.com en Claude Code desde la terminal o como servidor MCP.",
+  "type": "module",
+  "bin": {
+    "ia-skills": "bin/ia-skills.mjs"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "claude",
+    "claude-code",
+    "skills",
+    "mcp",
+    "prompts"
+  ],
+  "license": "MIT"
+}

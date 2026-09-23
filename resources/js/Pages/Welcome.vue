@@ -7,6 +7,7 @@ import SkillCard from '@/Components/SkillCard.vue'
 defineProps({
     professions: Array,
     topSkills: Array,
+    collections: { type: Array, default: () => [] },
 })
 
 const auth = usePage().props.auth
@@ -70,11 +71,28 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
         <section v-if="topSkills?.length" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
             <div class="flex items-baseline justify-between mb-6">
                 <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Skills más valoradas</h2>
-                <Link :href="route('skills.index')" class="text-sm text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Ver todas →</Link>
+                <Link :href="route('rankings.index')" class="text-sm text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Ver ranking →</Link>
             </div>
             <div class="flex flex-col gap-3">
                 <SkillCard v-for="skill in topSkills" :key="skill.id" :skill="skill" />
             </div>
+        </section>
+
+        <!-- Colecciones -->
+        <section v-if="collections?.length" class="max-w-6xl mx-auto px-4 sm:px-6 pb-16">
+            <div class="flex items-baseline justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Colecciones</h2>
+                <Link :href="route('collections.index')" class="text-sm text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Ver todas →</Link>
+            </div>
+            <ul class="grid gap-4 sm:grid-cols-3">
+                <li v-for="c in collections" :key="c.slug">
+                    <Link :href="c.url" class="block h-full rounded-2xl border border-gray-200 dark:border-gray-700 p-5 hover:border-brand-300 dark:hover:border-brand-500 transition-colors">
+                        <p class="text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">{{ c.profession }} · {{ c.count }} skills</p>
+                        <p class="mt-2 font-semibold text-gray-900 dark:text-gray-100">{{ c.title }}</p>
+                        <p class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{{ c.description }}</p>
+                    </Link>
+                </li>
+            </ul>
         </section>
 
         <!-- CTA banner -->

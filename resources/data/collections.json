@@ -1,0 +1,155 @@
+[
+  {
+    "slug": "kit-seo-con-ia",
+    "title": "Kit de SEO con IA",
+    "profession": "marketing",
+    "description": "Seis prompts para cubrir el SEO de principio a fin: auditoría técnica, investigación de keywords, contenido, metadatos y canibalización.",
+    "intro": "Un proyecto SEO no falla por falta de ideas, falla por hacer las cosas en el orden equivocado. Este kit sigue el orden que funciona: primero se arregla lo técnico, después se decide qué búsquedas atacar, luego se escribe y por último se limpia lo que compite entre sí. Cada prompt produce un entregable que alimenta al siguiente.",
+    "skills": [
+      "auditoria-seo-tecnica-completa-para-apps-y-webs-core-web-vitals-indexacion-js",
+      "seo-de-contenido-keyword-research-estructura-e-e-a-t-y-el-articulo-que-llega-al-top-3-de-google",
+      "calendario-de-contenido-seo-para-12-meses",
+      "generador-de-meta-descriptions-seo-en-masa",
+      "canibalizacion-de-keywords-detecta-las-urls-que-compiten-entre-si-y-consolidalas",
+      "seo-en-la-era-de-la-ia-generativa"
+    ]
+  },
+  {
+    "slug": "flujo-de-desarrollo-con-ia",
+    "title": "Flujo de desarrollo con IA: revisar, depurar y testear",
+    "profession": "desarrollo",
+    "description": "El ciclo diario de un developer con IA: code review, debugging por causa raíz, tests con edge cases y refactorización de código legacy.",
+    "intro": "La IA rinde más en desarrollo cuando se usa como revisor que como autor. Estos prompts cubren las cuatro tareas en las que un segundo par de ojos ahorra más horas: revisar un cambio antes de pedir review, encontrar la causa real de un bug, escribir los tests que nadie quiere escribir y desmontar código heredado sin romperlo.",
+    "skills": [
+      "code-review-profesional-con-checklist-completo",
+      "debugger-con-analisis-de-causa-raiz",
+      "debugging-sistematico-el-proceso-mental-para-resolver-bugs-complejos",
+      "generador-de-tests-unitarios-con-edge-cases",
+      "refactorizador-de-codigo-legacy-con-plan-de-migracion",
+      "refactoring-de-codigo-aplicando-principios-solid",
+      "patrones-de-workflow-agente-con-claude-code"
+    ]
+  },
+  {
+    "slug": "ventas-de-la-prospeccion-al-cierre",
+    "title": "Ventas: de la prospección al cierre",
+    "profession": "ventas",
+    "description": "Un pack para todo el embudo comercial: prospección B2B, cold email, objeciones, seguimiento después de la demo, propuesta y cierre.",
+    "intro": "Cada fase de la venta pide un tipo de texto distinto y casi todos los equipos improvisan alguno. Aquí están ordenados como avanza una oportunidad: encontrar a quién escribir, conseguir la primera reunión, responder a las objeciones, no perder el impulso después de la demo y cerrar con una propuesta que no obligue a negociar el precio.",
+    "skills": [
+      "prospeccion-b2b-inteligente-con-ia-de-lista-fria-a-reunion-agendada",
+      "cold-email-b2b-de-alta-conversion-el-sistema-de-prospeccion-que-genera-reuniones-sin-parecer-spam",
+      "playbook-de-objeciones-de-ventas-con-15-respuestas-listas",
+      "respuesta-perfecta-a-la-objecion-es-muy-caro",
+      "email-de-seguimiento-post-demo-que-mantiene-momentum",
+      "propuesta-comercial-ganadora-la-estructura-que-conecta-con-el-problema-real-y-cierra-sin-negociar-precio",
+      "tecnicas-de-cierre-de-ventas-enterprise-asistidas-por-ia"
+    ]
+  },
+  {
+    "slug": "contratos-y-proteccion-de-datos",
+    "title": "Contratos y protección de datos",
+    "profession": "legal",
+    "description": "Prompts para la primera revisión de contratos, la detección de cláusulas de riesgo y la documentación RGPD que toda web o empresa necesita.",
+    "intro": "Estos prompts no sustituyen la revisión de un abogado: la preparan. Sirven para llegar a ella con los riesgos ya señalados, las cláusulas problemáticas localizadas y una primera redacción alternativa, y para generar la documentación de protección de datos que después se valida.",
+    "skills": [
+      "revisor-de-contratos-comerciales-detecta-riesgos-y-propone-redacciones-alternativas",
+      "revisor-de-contratos-con-resumen-de-riesgos",
+      "revision-de-contrato-detecta-clausulas-de-riesgo",
+      "contrato-de-servicios-profesionales-b2b-clausulas-que-protegen-al-proveedor",
+      "redaccion-de-clausulas-de-proteccion-de-datos-rgpd",
+      "politica-de-privacidad-y-aviso-legal-conformes-con-el-rgpd-para-tu-web-o-app",
+      "lopd-y-rgpd-para-startups-cumple-la-normativa-de-proteccion-de-datos-sin-necesitar-un-dpo-a-tiempo-completo"
+    ]
+  },
+  {
+    "slug": "seleccion-y-onboarding",
+    "title": "Selección, onboarding y desempeño",
+    "profession": "rrhh",
+    "description": "El ciclo de vida del empleado en seis prompts: oferta de empleo, entrevistas por competencias, onboarding de 90 días, evaluación y entrevista de salida.",
+    "intro": "Recursos Humanos repite los mismos documentos con cada persona que entra y sale. Este pack cubre el recorrido completo, desde la oferta que atrae a los candidatos adecuados hasta el análisis de las entrevistas de salida que explica por qué se van.",
+    "skills": [
+      "copywriting-para-ofertas-de-trabajo-que-atraen-talento-de-calidad",
+      "generador-de-preguntas-de-entrevista-conductual-metodo-star",
+      "generador-de-preguntas-de-entrevista-por-competencias",
+      "disenador-de-proceso-de-onboarding-de-90-dias-para-nuevas-incorporaciones",
+      "redactor-de-evaluaciones-de-desempeno-performance-reviews",
+      "analisis-de-entrevistas-de-salida-detecta-patrones-de-fuga-de-talento"
+    ]
+  },
+  {
+    "slug": "tesoreria-y-forecast",
+    "title": "Tesorería, presupuesto y forecast",
+    "profession": "finanzas",
+    "description": "Para el día a día de finanzas: presupuesto de tesorería a 13 semanas, flujo de caja, cobros, forecast y el cuadro de mando para dirección.",
+    "intro": "La mayoría de sustos financieros se ven venir con semanas de antelación si alguien mira el flujo de caja con cuidado. Estos prompts ayudan a montar esa vigilancia: prever la tesorería, controlar los cobros, proyectar ingresos y presentarlo a dirección de forma que se entienda.",
+    "skills": [
+      "presupuesto-de-tesoreria-a-13-semanas",
+      "forecast-de-tesoreria-y-flujo-de-caja-con-ia",
+      "gestion-de-cobros-y-flujo-de-caja-operativo",
+      "presupuesto-y-planificacion-financiera-anual-con-ia",
+      "analisis-de-estados-financieros-y-forecasting-con-ia-para-equipos-de-finanzas",
+      "dashboard-financiero-ejecutivo-con-ia-y-forecast-automatizado"
+    ]
+  },
+  {
+    "slug": "soporte-que-fideliza",
+    "title": "Soporte que fideliza",
+    "profession": "customer-support",
+    "description": "Responder a clientes enfadados, gestionar quejas públicas, clasificar tickets automáticamente y convertir lo resuelto en una base de conocimiento.",
+    "intro": "Un buen equipo de soporte hace dos cosas a la vez: apaga fuegos y evita que vuelvan a encenderse. La primera mitad de este pack es para el fuego (clientes enfadados, quejas en redes); la segunda, para la prevención (triaje de tickets, análisis de sentimiento y FAQ generadas a partir de lo que ya se ha resuelto).",
+    "skills": [
+      "respuesta-empatica-a-cliente-enfadado-que-amenaza-con-irse",
+      "gestion-de-quejas-en-redes-sociales-protocolo-para-responder-criticas-publicas-sin-empeorar-la-situacion",
+      "gestion-de-quejas-y-reclamaciones-el-proceso-que-convierte-una-experiencia-negativa-en-un-cliente-fiel",
+      "clasificacion-y-triaje-automatico-de-tickets-de-soporte",
+      "analisis-de-sentimiento-en-tickets-de-soporte-con-ia",
+      "generador-de-faq-base-de-conocimiento-desde-tickets-resueltos"
+    ]
+  },
+  {
+    "slug": "freelance-conseguir-y-retener-clientes",
+    "title": "Freelance: conseguir clientes y cobrar lo que vales",
+    "profession": "freelancers",
+    "description": "Captación, propuestas que cierran, negociación de tarifas, onboarding de clientes nuevos y el email para subir precios sin perder a nadie.",
+    "intro": "Para un freelance, vender es la mitad del trabajo y casi nadie lo ha aprendido. Este pack reúne los momentos comerciales que más cuestan: fijar el precio, escribir la propuesta, responder al «¿puedes bajarlo?», arrancar bien con un cliente nuevo y subir tarifas a los que ya tienes.",
+    "skills": [
+      "sistema-de-captacion-de-clientes-para-freelancers-con-ia-y-automatizacion",
+      "fijar-el-precio-de-tus-servicios-freelance-metodologia-para-cobrar-lo-que-vales-sin-perder-clientes",
+      "propuesta-comercial-freelance-que-cierra-el-60-de-los-proyectos",
+      "negociacion-de-tarifas-responde-a-puedes-bajar-el-precio",
+      "cuestionario-de-onboarding-de-clientes-nuevos",
+      "email-para-subir-tarifas-a-clientes-actuales"
+    ]
+  },
+  {
+    "slug": "discovery-y-roadmap",
+    "title": "Product management: del discovery al roadmap",
+    "profession": "product-management",
+    "description": "Sintetizar entrevistas con usuarios, escribir PRDs con criterios de aceptación y priorizar el roadmap con RICE sin perder la alineación con dirección.",
+    "intro": "El trabajo de producto es convertir evidencia dispersa en decisiones defendibles. Estos prompts siguen ese camino: extraer conclusiones de las entrevistas, documentar lo que se va a construir con el detalle que ingeniería necesita y priorizar con un método que se pueda explicar al board.",
+    "skills": [
+      "sintesis-de-entrevistas-de-descubrimiento-valida-o-tumba-tu-hipotesis-con-evidencia",
+      "discovery-continuo-entrevistas-semanales-con-usuarios-integradas-en-el-ritmo-del-equipo",
+      "escritor-de-prds-completos-con-criterios-de-aceptacion-y-edge-cases",
+      "crea-un-prd-completo-desde-una-idea-de-feature",
+      "rice-scoring-para-priorizar-features-del-backlog",
+      "priorizacion-de-roadmap-con-rice-analisis-de-trade-offs-para-el-board"
+    ]
+  },
+  {
+    "slug": "diseno-marca-y-conversion",
+    "title": "Diseño: marca, UX y conversión",
+    "profession": "diseno",
+    "description": "Del brief creativo a la identidad visual, y de ahí a pantallas y landings que convierten: prompts para diseñar con criterio y justificar cada decisión.",
+    "intro": "El diseño que funciona empieza antes de abrir Figma, con un brief que responde a las preguntas correctas. Este pack acompaña el proceso completo: definir la marca, construir el sistema visual, revisar la UX de una pantalla concreta y rediseñar las landings para que vendan.",
+    "skills": [
+      "brief-creativo-completo-para-identidad-visual-de-marca",
+      "sistema-de-identidad-visual-y-paleta-de-marca-con-ia-para-disenadores",
+      "analisis-de-ux-y-sugerencias-de-mejora-para-una-pantalla",
+      "prototipado-acelerado-de-ux-con-ia-del-wireframe-al-test-en-horas",
+      "diseno-de-landing-pages-que-convierten-la-anatomia-de-la-pagina-que-vende-sin-vender",
+      "redisena-tu-landing-page-para-doblar-la-tasa-de-conversion-con-analisis-incluido"
+    ]
+  }
+]

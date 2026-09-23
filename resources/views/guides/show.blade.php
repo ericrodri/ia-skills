@@ -51,6 +51,25 @@
                 </section>
             @endif
 
+            @if(! empty($relatedSkills))
+                {{-- Puente hacia el catálogo: lo mapea App\Support\RelatedContent --}}
+                <section class="mt-14" aria-labelledby="skills-relacionadas">
+                    <h2 id="skills-relacionadas" class="text-xl font-bold text-gray-900 dark:text-white">Skills para ponerlo en práctica</h2>
+                    <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Prompts del catálogo relacionados con esta guía, listos para copiar.</p>
+                    <ul class="mt-4 grid gap-3 sm:grid-cols-2">
+                        @foreach($relatedSkills as $item)
+                            <li class="rounded-xl border border-gray-200 dark:border-gray-700 p-4 hover:border-brand-300 dark:hover:border-brand-500 transition-colors">
+                                <a href="{{ route('skills.show', ['skill' => $item['slug']]) }}" class="font-semibold text-gray-900 dark:text-white hover:text-brand-700 dark:hover:text-brand-400 line-clamp-2">{{ $item['title'] }}</a>
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400 line-clamp-2">{{ $item['description'] }}</p>
+                                @if($item['profession'])
+                                    <p class="mt-2 text-xs text-gray-400 dark:text-gray-500">{{ $item['profession'] }} · {{ $item['vote_score'] }} votos</p>
+                                @endif
+                            </li>
+                        @endforeach
+                    </ul>
+                </section>
+            @endif
+
             <section class="guide-callout mt-14">
                 <p class="font-semibold text-gray-900 dark:text-white">{{ $guide['ctaTitle'] ?? 'Pasa de la teoría al catálogo' }}</p>
                 <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $guide['ctaBody'] ?? 'Explora las skills que la comunidad ha votado como las más útiles y cópialas en un clic.' !!}</p>

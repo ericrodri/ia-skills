@@ -14,6 +14,7 @@ defineProps({
     apiTokenPrefix: { type: String, default: null },
     apiTokenLastUsedAt: { type: String, default: null },
     plainTextApiToken: { type: String, default: null },
+    profile: { type: Object, default: () => ({}) },
 });
 </script>
 
@@ -37,6 +38,7 @@ defineProps({
                     <UpdateProfileInformationForm
                         :must-verify-email="mustVerifyEmail"
                         :status="status"
+                        :profile="profile"
                         class="max-w-xl"
                     />
                 </div>

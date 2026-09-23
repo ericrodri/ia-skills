@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skill;
+use App\Notifications\SkillApproved;
+use App\Notifications\SkillRejected;
+use App\Support\Notify;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
@@ -49,6 +52,7 @@ class AdminController extends Controller
 
         if ($wasUnpublished) {
             $skill->profession->increment('skills_count');
+            Notify::send($skill->author, new SkillApproved($skill));
         }
 
         return back()->with('success', "Skill aprobada y publicada.");
@@ -72,6 +76,8 @@ class AdminController extends Controller
         if ($wasPublished) {
             $skill->profession->decrement('skills_count');
         }
+
+        Notify::send($skill->author, new SkillRejected($skill, $request->reason));
 
         return back()->with('success', "Skill rechazada.");
     }

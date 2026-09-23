@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Support\Guides;
+use App\Support\RelatedContent;
 use App\Support\Seo;
 use App\Support\SiteData;
 use Illuminate\Contracts\View\View;
@@ -104,6 +105,7 @@ class GuideController extends Controller
         return view('guides.show', [
             'guide' => $guide,
             'related' => Guides::related($guide),
+            'relatedSkills' => RelatedContent::skillsForGuide($slug),
             'skillsCount' => SiteData::skillsCountLabel(),
             'footerProfessions' => SiteData::professions(),
         ]);

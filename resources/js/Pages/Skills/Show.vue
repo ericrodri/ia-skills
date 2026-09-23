@@ -3,6 +3,7 @@ import { Head, Link, router, usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import axios from 'axios'
+import { lineDiff } from '@/utils/lineDiff'
 
 import { computed } from 'vue'
 
@@ -12,7 +13,54 @@ const props = defineProps({
     userVote: { type: Number, default: null },
     userSaved: { type: Boolean, default: false },
     canEdit: { type: Boolean, default: false },
+    // SKILL.md instalable: { name, url, command } (App\Support\SkillMarkdown)
+    install: { type: Object, default: null },
+    // Enlazado interno (App\Support\RelatedContent). Las guías son Blade:
+    // se enlazan con <a>, nunca con <Link>.
+    guides: { type: Array, default: () => [] },
+    neighbours: { type: Array, default: () => [] },
 })
+
+// Instalar como Skill de Claude Code
+const installCopied = ref('')
+
+// kind: 'prompt' (instrucción para Claude Code) o 'command' (terminal)
+function copyInstall(kind) {
+    navigator.clipboard.writeText(props.install[kind])
+    installCopied.value = kind
+    setTimeout(() => installCopied.value = '', 2000)
+}
+
+// Diff de versiones: el contenido se pide bajo demanda
+const diffOpen = ref(false)
+const diffLoading = ref(false)
+const diffData = ref(null)
+const diffError = ref('')
+
+const diffLines = computed(() => {
+    if (!diffData.value) return []
+    return lineDiff(diffData.value.previous?.prompt_content ?? '', diffData.value.prompt_content)
+})
+
+const diffStats = computed(() => ({
+    added: diffLines.value.filter(l => l.type === 'added').length,
+    removed: diffLines.value.filter(l => l.type === 'removed').length,
+}))
+
+async function openDiff(version) {
+    diffOpen.value = true
+    diffLoading.value = true
+    diffError.value = ''
+    diffData.value = null
+    try {
+        const { data } = await axios.get(route('skills.versions.show', { skill: props.skill.slug, version }))
+        diffData.value = data
+    } catch {
+        diffError.value = 'No se pudo cargar esta versión.'
+    } finally {
+        diffLoading.value = false
+    }
+}
 
 const page = usePage()
 const auth = page.props.auth
@@ -342,7 +390,7 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                                         <button @click="openInTool('chatgpt')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                             <span class="text-base">🟢</span>
                                             <span class="font-medium">ChatGPT</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">copia prompt</span>
+                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
                                         </button>
                                         <button @click="openInTool('gemini')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                             <span class="text-base">🔵</span>
@@ -352,12 +400,12 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                                         <button @click="openInTool('copilot')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                             <span class="text-base">🟣</span>
                                             <span class="font-medium">Copilot</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">copia prompt</span>
+                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
                                         </button>
                                         <button @click="openInTool('perplexity')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                             <span class="text-base">⚫</span>
                                             <span class="font-medium">Perplexity</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">copia prompt</span>
+                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
                                         </button>
 
                                         <div class="border-t border-gray-100 dark:border-gray-800 mt-1 pt-1">
@@ -392,6 +440,45 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                         <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono">{{ skill.prompt_content }}</pre>
                     </div>
 
+                    <!-- Usar como Skill de Claude Code: SKILL.md generado desde la ficha -->
+                    <div v-if="install && skill.resource_type === 'prompt'" class="mt-6 p-4 rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50/60 dark:bg-violet-900/10">
+                        <div class="flex flex-wrap items-start justify-between gap-3">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold text-violet-900 dark:text-violet-200">Úsalo como Skill de Claude Code</p>
+                                <p class="mt-0.5 text-xs text-violet-700 dark:text-violet-400">
+                                    Instálalo una vez y Claude lo aplicará solo cuando lo necesites, o llámalo con <code class="font-mono">/{{ install.name }}</code>.
+                                </p>
+                            </div>
+                            <div class="shrink-0 flex gap-2">
+                                <button
+                                    @click="copyInstall('prompt')"
+                                    class="px-3 py-1.5 rounded-lg text-xs font-semibold bg-violet-600 hover:bg-violet-700 text-white transition-colors"
+                                    title="Copia una instrucción para pegar en Claude Code"
+                                >{{ installCopied === 'prompt' ? 'Copiado: pégalo en Claude Code' : 'Pídeselo a Claude Code' }}</button>
+                                <a
+                                    :href="install.url + '?download=1'"
+                                    class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors"
+                                >
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+                                    SKILL.md
+                                </a>
+                            </div>
+                        </div>
+                        <details class="mt-3">
+                            <summary class="cursor-pointer list-none text-xs text-violet-700 dark:text-violet-400 hover:underline">Prefiero hacerlo desde la terminal</summary>
+                            <div class="mt-2 flex items-stretch gap-2">
+                                <pre class="flex-1 min-w-0 bg-gray-900 text-gray-100 rounded-lg px-3 py-2 text-xs font-mono overflow-x-auto whitespace-nowrap">{{ install.command }}</pre>
+                                <button
+                                    @click="copyInstall('command')"
+                                    class="shrink-0 px-3 rounded-lg text-xs font-medium border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors"
+                                >{{ installCopied === 'command' ? 'Copiado' : 'Copiar' }}</button>
+                            </div>
+                            <p class="mt-2 text-[11px] text-violet-700/80 dark:text-violet-400/80">
+                                macOS, Linux o WSL. En Windows sin WSL, descarga el archivo y guárdalo en <code class="font-mono">%USERPROFILE%\.claude\skills\{{ install.name }}\SKILL.md</code>.
+                            </p>
+                        </details>
+                    </div>
+
                     <!-- Historial de versiones -->
                     <details v-if="versions.length > 1" class="mt-6 group">
                         <summary class="cursor-pointer list-none flex items-center gap-2 text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
@@ -409,6 +496,11 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                                             : 'bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400'"
                                     >v{{ v.version }}</span>
                                     <span class="text-gray-700 dark:text-gray-300">{{ v.changelog || 'Sin descripción de cambios' }}</span>
+                                    <button
+                                        type="button"
+                                        @click="openDiff(v.version)"
+                                        class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline"
+                                    >{{ v.version === 1 ? 'Ver contenido' : 'Ver cambios' }}</button>
                                 </div>
                                 <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">
                                     {{ v.editor?.name ?? 'Autor desconocido' }} ·
@@ -425,15 +517,42 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                         </div>
                         <div>
                             <p class="text-sm font-medium text-gray-900 dark:text-gray-100">
-                                {{ skill.author.name }}
+                                <Link
+                                    v-if="skill.author.username"
+                                    :href="route('authors.show', skill.author.username)"
+                                    class="hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                                >{{ skill.author.name }}</Link>
+                                <template v-else>{{ skill.author.name }}</template>
                                 <span v-if="skill.author.is_verified_expert" class="ml-1 text-brand-500 text-xs" title="Experto verificado">✓ Experto</span>
                             </p>
                             <p class="text-xs text-gray-400 dark:text-gray-500">{{ skill.author.reputation }} puntos de reputación</p>
                         </div>
                     </div>
 
+                    <!-- Enlazado interno: vecinas de la profesión y guías (RelatedContent) -->
+                    <section v-if="neighbours.length || guides.length" class="mt-8 pb-8 border-b border-gray-100 dark:border-gray-800 grid gap-6 sm:grid-cols-2">
+                        <div v-if="neighbours.length">
+                            <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">Más prompts para {{ skill.profession.name }}</h2>
+                            <ul class="space-y-2.5">
+                                <li v-for="n in neighbours" :key="n.slug">
+                                    <Link :href="route('skills.show', n.slug)" class="text-sm text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 line-clamp-2 transition-colors">{{ n.title }}</Link>
+                                </li>
+                            </ul>
+                        </div>
+                        <div v-if="guides.length">
+                            <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100 mb-3">Guías relacionadas</h2>
+                            <ul class="space-y-3">
+                                <li v-for="g in guides" :key="g.url">
+                                    <!-- Guías = Blade: <a>, no <Link> -->
+                                    <a :href="g.url" class="text-sm font-medium text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">{{ g.title }}</a>
+                                    <p class="text-xs text-gray-400 dark:text-gray-500 line-clamp-2 mt-0.5">{{ g.excerpt }}</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+
                     <!-- Comments -->
-                    <section class="mt-8">
+                    <section id="comentarios" class="mt-8 scroll-mt-20">
                         <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-5">{{ skill.comments.length }} comentarios</h2>
 
                         <!-- Add comment -->
@@ -600,5 +719,46 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                 </div>
             </div>
         </Transition>
+
+        <!-- Diff de versiones -->
+        <div v-if="diffOpen" class="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 overflow-y-auto" @click.self="diffOpen = false">
+            <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="diffOpen = false" />
+            <div class="relative w-full max-w-3xl my-4 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700 flex flex-col" role="dialog" aria-modal="true" aria-labelledby="diff-title">
+                <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-800">
+                    <div>
+                        <h2 id="diff-title" class="text-base font-semibold text-gray-900 dark:text-gray-100">
+                            <template v-if="diffData">
+                                v{{ diffData.version }}<template v-if="diffData.previous"> frente a v{{ diffData.previous.version }}</template>
+                            </template>
+                            <template v-else>Historial de versiones</template>
+                        </h2>
+                        <p v-if="diffData" class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                            {{ diffData.changelog || 'Sin descripción de cambios' }}
+                            <template v-if="diffData.previous"> · <span class="text-green-600 dark:text-green-400">+{{ diffStats.added }}</span> <span class="text-red-500">−{{ diffStats.removed }}</span> líneas</template>
+                        </p>
+                    </div>
+                    <button @click="diffOpen = false" class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors" aria-label="Cerrar">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                    </button>
+                </div>
+                <div class="px-6 py-5 max-h-[70vh] overflow-y-auto">
+                    <p v-if="diffLoading" class="text-sm text-gray-400">Cargando…</p>
+                    <p v-else-if="diffError" class="text-sm text-red-500">{{ diffError }}</p>
+                    <pre v-else-if="diffData && !diffData.previous" class="bg-gray-900 text-gray-100 rounded-xl p-4 text-xs leading-relaxed whitespace-pre-wrap font-mono">{{ diffData.prompt_content }}</pre>
+                    <div v-else-if="diffData" class="rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 font-mono text-xs leading-relaxed">
+                        <div
+                            v-for="(line, i) in diffLines"
+                            :key="i"
+                            class="px-3 whitespace-pre-wrap break-words"
+                            :class="{
+                                'bg-green-50 dark:bg-green-900/20 text-green-800 dark:text-green-300': line.type === 'added',
+                                'bg-red-50 dark:bg-red-900/20 text-red-700 dark:text-red-300 line-through decoration-red-300/60': line.type === 'removed',
+                                'text-gray-600 dark:text-gray-400': line.type === 'same',
+                            }"
+                        ><span class="select-none inline-block w-4 text-gray-400" aria-hidden="true">{{ line.type === 'added' ? '+' : line.type === 'removed' ? '−' : ' ' }}</span>{{ line.text || ' ' }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </Teleport>
 </template>

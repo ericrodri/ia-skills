@@ -1,10 +1,13 @@
 <script setup>
 import { Head, useForm } from '@inertiajs/vue3'
+import { computed, ref } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 
 const props = defineProps({
     professions: Array,
     tools: Array,
+    // resources/data/skill-templates.json (App\Support\SkillTemplates)
+    templates: { type: Array, default: () => [] },
 })
 
 const form = useForm({
@@ -28,6 +31,51 @@ const resourceTypeOptions = [
 function submit() {
     form.post(route('skills.store'))
 }
+
+// Plantillas: rellenan el formulario con un ejemplo con la estructura que
+// funciona (situación, tarea, criterios, formato, límites).
+const selectedTemplate = ref('')
+
+function applyTemplate() {
+    const template = props.templates.find(t => t.key === selectedTemplate.value)
+    if (!template) return
+
+    const hasContent = form.title || form.description || form.prompt_content
+    if (hasContent && !window.confirm('La plantilla sustituirá el título, la descripción y el prompt que has escrito. ¿Continuar?')) {
+        selectedTemplate.value = ''
+        return
+    }
+
+    const profession = props.professions.find(p => p.slug === template.profession)
+    if (profession) form.profession_id = profession.id
+
+    form.title = template.title
+    form.description = template.description
+    form.use_case = template.use_case ?? ''
+    form.prompt_content = template.prompt_content
+    form.difficulty = template.difficulty ?? form.difficulty
+    form.estimated_minutes = template.estimated_minutes ?? ''
+    form.resource_type = 'prompt'
+}
+
+// Checklist de calidad en vivo: los mismos criterios con los que se revisa.
+const checklist = computed(() => {
+    const prompt = form.prompt_content ?? ''
+    const placeholders = prompt.match(/\[[^\]]{3,80}\]/g) ?? []
+    const unfilledTemplate = props.templates.some(t => t.prompt_content === prompt)
+
+    return [
+        { ok: form.title.trim().length >= 15 && form.title.trim().length <= 110, label: 'Título concreto (15-110 caracteres) que diga qué se obtiene' },
+        { ok: form.description.trim().length >= 60, label: 'Descripción de al menos 60 caracteres: qué entra y qué sale' },
+        { ok: prompt.trim().length >= 200, label: 'Prompt con suficiente contexto (200+ caracteres)' },
+        { ok: placeholders.length > 0, label: 'Campos variables marcados entre [corchetes]' },
+        { ok: /formato|tabla|lista|estructura|secciones|viñetas|palabras/i.test(prompt), label: 'Indica el formato de salida (tabla, lista, longitud…)' },
+        { ok: form.use_case.trim().length > 0, label: 'Caso de uso real rellenado' },
+        { ok: !unfilledTemplate, label: 'Adaptado: no es la plantilla tal cual' },
+    ]
+})
+
+const checklistScore = computed(() => checklist.value.filter(c => c.ok).length)
 
 const difficultyOptions = [
     { value: 'beginner', label: 'Principiante', desc: 'Fácil de implementar', icon: '🌱' },
@@ -54,6 +102,19 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Compartir una skill</h1>
                         <p class="text-sm text-gray-500 dark:text-gray-400">Ayuda a la comunidad compartiendo un workflow o prompt que te funciona.</p>
                     </div>
+                </div>
+            </div>
+
+            <!-- Plantillas -->
+            <div v-if="templates.length" class="mb-8 rounded-2xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-5">
+                <label for="template" class="block text-sm font-semibold text-gray-900 dark:text-gray-100">¿No sabes por dónde empezar? Parte de una plantilla</label>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Rellena el formulario con un ejemplo bien estructurado para tu profesión. Luego cámbialo por tu caso real.</p>
+                <div class="mt-3 flex gap-2">
+                    <select id="template" v-model="selectedTemplate" :class="inputClass">
+                        <option value="">Elige una plantilla…</option>
+                        <option v-for="t in templates" :key="t.key" :value="t.key">{{ t.label }}</option>
+                    </select>
+                    <button type="button" @click="applyTemplate" :disabled="!selectedTemplate" class="btn-primary shrink-0 disabled:opacity-50 disabled:cursor-not-allowed">Usar</button>
                 </div>
             </div>
 
@@ -227,6 +288,21 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                     </div>
                 </div>
 
+                <!-- Checklist de calidad -->
+                <div class="rounded-2xl border border-gray-100 dark:border-gray-700 p-5">
+                    <div class="flex items-center justify-between">
+                        <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Antes de enviar</h2>
+                        <span class="text-xs font-medium tabular-nums" :class="checklistScore === checklist.length ? 'text-green-600 dark:text-green-400' : 'text-gray-400'">{{ checklistScore }}/{{ checklist.length }}</span>
+                    </div>
+                    <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Son los criterios con los que revisamos cada skill. No son obligatorios, pero las que los cumplen se aprueban antes.</p>
+                    <ul class="mt-3 space-y-1.5 text-sm">
+                        <li v-for="item in checklist" :key="item.label" class="flex items-start gap-2" :class="item.ok ? 'text-gray-700 dark:text-gray-300' : 'text-gray-400 dark:text-gray-500'">
+                            <span class="mt-0.5 w-4 text-center" :class="item.ok ? 'text-green-500' : 'text-gray-300 dark:text-gray-600'" aria-hidden="true">{{ item.ok ? '✓' : '○' }}</span>
+                            <span>{{ item.label }}</span>
+                        </li>
+                    </ul>
+                </div>
+
                 <!-- Submit -->
                 <div class="flex items-center gap-4">
                     <button
@@ -241,9 +317,9 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             </svg>
                             Publicando…
                         </span>
-                        <span v-else>Publicar skill</span>
+                        <span v-else>Enviar skill</span>
                     </button>
-                    <p class="text-xs text-gray-400 dark:text-gray-500">Se publicará y será visible para la comunidad.</p>
+                    <p class="text-xs text-gray-400 dark:text-gray-500">La revisaremos antes de publicarla y te avisaremos por email.</p>
                 </div>
 
             </form>

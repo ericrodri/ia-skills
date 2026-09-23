@@ -4,7 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Profession;
 use App\Models\Skill;
+use App\Models\User;
+use App\Support\Collections;
 use App\Support\Guides;
+use App\Support\ProfessionTasks;
 use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -33,6 +36,7 @@ class SitemapController extends Controller
             ['loc' => route('sitemap.pages'), 'lastmod' => now()->toAtomString()],
             ['loc' => route('sitemap.professions'), 'lastmod' => $this->latest($professions)],
             ['loc' => route('sitemap.guides'), 'lastmod' => Guides::lastModified()],
+            ['loc' => route('sitemap.authors'), 'lastmod' => now()->toAtomString()],
         ];
 
         $pages = max(1, (int) ceil(count($skills) / self::CHUNK));
@@ -57,7 +61,45 @@ class SitemapController extends Controller
             ['loc' => route('professions.index'), 'changefreq' => 'weekly', 'priority' => '0.8'],
             ['loc' => route('guides.index'), 'changefreq' => 'weekly', 'priority' => '0.8'],
             ['loc' => route('how-it-works'), 'changefreq' => 'monthly', 'priority' => '0.6'],
+            ['loc' => route('rankings.index'), 'changefreq' => 'daily', 'priority' => '0.7'],
+            ['loc' => route('collections.index'), 'changefreq' => 'weekly', 'priority' => '0.7'],
         ];
+
+        foreach (Collections::all() as $collection) {
+            $urls[] = [
+                'loc' => route('collections.show', ['slug' => $collection['slug']]),
+                'changefreq' => 'weekly',
+                'priority' => '0.7',
+            ];
+        }
+
+        return $this->xml('sitemaps.urlset', compact('urls'));
+    }
+
+    /**
+     * Perfiles de autor con al menos una skill publicada: los vacíos son
+     * noindex, así que no se anuncian.
+     */
+    public function authors(): Response
+    {
+        $rows = Cache::remember('sitemap.authors.rows', now()->addHours(self::CACHE_TTL_HOURS), function () {
+            return User::query()
+                ->whereNotNull('username')
+                ->whereHas('skills', fn ($q) => $q->where('status', 'published'))
+                ->withMax(['skills as last_skill_at' => fn ($q) => $q->where('status', 'published')], 'updated_at')
+                ->get(['id', 'username'])
+                ->map(fn (User $user) => ['username' => $user->username, 'lastmod' => $this->atom($user->last_skill_at)])
+                ->all();
+        });
+
+        $urls = collect($rows)
+            ->map(fn (array $row) => [
+                'loc' => route('authors.show', ['user' => $row['username']]),
+                'lastmod' => $row['lastmod'],
+                'changefreq' => 'weekly',
+                'priority' => '0.5',
+            ])
+            ->all();
 
         return $this->xml('sitemaps.urlset', compact('urls'));
     }
@@ -65,11 +107,25 @@ class SitemapController extends Controller
     public function professions(): Response
     {
         $urls = collect($this->professionRows())
-            ->map(fn (array $row) => [
-                'loc' => route('professions.show', ['profession' => $row['slug']]),
-                'lastmod' => $row['lastmod'],
-                'changefreq' => 'weekly',
-                'priority' => '0.8',
+            ->flatMap(fn (array $row) => [
+                [
+                    'loc' => route('professions.show', ['profession' => $row['slug']]),
+                    'lastmod' => $row['lastmod'],
+                    'changefreq' => 'weekly',
+                    'priority' => '0.8',
+                ],
+                // Landings profesión × tarea, solo las que superan el umbral
+                // de contenido (las demás son noindex).
+                ...collect(ProfessionTasks::for($row['slug']))
+                    ->filter(fn (array $task) => ($row['tasks'][$task['slug']] ?? 0) >= ProfessionTasks::MIN_SKILLS)
+                    ->map(fn (array $task) => [
+                        'loc' => route('professions.task', ['profession' => $row['slug'], 'task' => $task['slug']]),
+                        'lastmod' => $row['lastmod'],
+                        'changefreq' => 'weekly',
+                        'priority' => '0.7',
+                    ])
+                    ->values()
+                    ->all(),
             ])
             ->all();
 
@@ -125,16 +181,19 @@ class SitemapController extends Controller
     }
 
     /**
-     * @return array<int, array{slug: string, lastmod: string}>
+     * @return array<int, array{slug: string, lastmod: string, tasks: array<string, int>}>
      */
     private function professionRows(): array
     {
         return Cache::remember('sitemap.professions.rows', now()->addHours(self::CACHE_TTL_HOURS), function () {
             return Profession::where('is_active', true)
                 ->orderBy('sort_order')
-                ->pluck('updated_at', 'slug')
-                ->map(fn ($date, $slug) => ['slug' => $slug, 'lastmod' => $this->atom($date)])
-                ->values()
+                ->get(['id', 'slug', 'updated_at'])
+                ->map(fn (Profession $p) => [
+                    'slug' => $p->slug,
+                    'lastmod' => $this->atom($p->updated_at),
+                    'tasks' => ProfessionTasks::counts($p->id, $p->slug),
+                ])
                 ->all();
         });
     }

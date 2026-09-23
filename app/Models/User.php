@@ -27,7 +27,12 @@ class User extends Authenticatable
         'reputation',
         'is_verified_expert',
         'is_admin',
+        'notify_by_email',
+        'newsletter_opt_in',
     ];
+
+    /** Usernames que chocarían con rutas o se prestarían a suplantación. */
+    public const RESERVED_USERNAMES = ['admin', 'administrador', 'ia-skills', 'soporte', 'api', 'equipo', 'moderador'];
 
     protected $hidden = ['password', 'remember_token', 'api_token'];
 
@@ -39,7 +44,41 @@ class User extends Authenticatable
             'is_verified_expert' => 'boolean',
             'is_admin' => 'boolean',
             'api_token_last_used_at' => 'datetime',
+            'notify_by_email' => 'boolean',
+            'newsletter_opt_in' => 'boolean',
         ];
+    }
+
+    /**
+     * El perfil público (/autores/{username}) necesita un username, pero el
+     * registro no lo pide: se deriva del nombre y el usuario puede cambiarlo
+     * desde su perfil.
+     */
+    protected static function booted(): void
+    {
+        static::creating(function (User $user) {
+            if (blank($user->username)) {
+                $user->username = static::uniqueUsername($user->name ?? '');
+            }
+        });
+    }
+
+    public static function uniqueUsername(string $name): string
+    {
+        $base = Str::limit(Str::slug($name) ?: 'usuario', 24, '');
+
+        if (in_array($base, self::RESERVED_USERNAMES, true)) {
+            $base .= '-1';
+        }
+
+        $username = $base;
+        $suffix = 1;
+
+        while (static::where('username', $username)->exists()) {
+            $username = $base.'-'.++$suffix;
+        }
+
+        return $username;
     }
 
     /**

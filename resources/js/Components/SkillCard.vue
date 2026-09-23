@@ -57,7 +57,13 @@ const resourceTypeClass = {
                     {{ skill.comments_count }}
                 </span>
                 <span v-if="skill.author" class="flex items-center gap-1">
-                    por <span class="font-medium text-gray-600 dark:text-gray-400 dark:text-gray-500">{{ skill.author.name }}</span>
+                    por
+                    <Link
+                        v-if="skill.author.username"
+                        :href="route('authors.show', skill.author.username)"
+                        class="font-medium text-gray-600 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors"
+                    >{{ skill.author.name }}</Link>
+                    <span v-else class="font-medium text-gray-600 dark:text-gray-400">{{ skill.author.name }}</span>
                     <span v-if="skill.author.is_verified_expert" class="text-brand-500" title="Experto verificado">✓</span>
                 </span>
             </div>

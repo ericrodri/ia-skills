@@ -32,6 +32,8 @@ class SiteData
     private const PRIMARY_NAV = [
         ['label' => 'Explorar',      'route' => 'skills.index',      'inertia' => true,  'active' => 'skills.index'],
         ['label' => 'Profesiones',   'route' => 'professions.index', 'inertia' => true,  'active' => 'professions.*'],
+        ['label' => 'Colecciones',   'route' => 'collections.index', 'inertia' => true,  'active' => 'collections.*'],
+        ['label' => 'Ranking',       'route' => 'rankings.index',    'inertia' => true,  'active' => 'rankings.index'],
         ['label' => 'Guías',         'route' => 'guides.index',      'inertia' => false, 'active' => 'guides.*'],
         ['label' => 'Cómo funciona', 'route' => 'how-it-works',      'inertia' => true,  'active' => 'how-it-works'],
         ['label' => 'Guardadas',     'route' => 'skills.saved',      'inertia' => true,  'active' => 'skills.saved'],
@@ -79,6 +81,26 @@ class SiteData
         }
 
         return '+'.number_format(intdiv($count, 100) * 100, 0, ',', '.');
+    }
+
+    /**
+     * Herramientas con al menos una skill publicada, de más a menos usada.
+     * Alimenta el filtro del listado: ofrecer una herramienta sin skills solo
+     * lleva a una página vacía.
+     *
+     * @return array<int, string>
+     */
+    public static function tools(): array
+    {
+        return Cache::remember('site.tools', now()->addMinutes(self::TTL_MINUTES), function () {
+            return Skill::published()
+                ->whereNotNull('tool_name')
+                ->selectRaw('tool_name, count(*) as total')
+                ->groupBy('tool_name')
+                ->orderByDesc('total')
+                ->pluck('tool_name')
+                ->all();
+        });
     }
 
     /**

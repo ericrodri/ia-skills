@@ -1,0 +1,123 @@
+[
+  {
+    "key": "generica",
+    "profession": null,
+    "label": "Plantilla general",
+    "title": "Convierte [tipo de documento] en [resultado que necesitas]",
+    "description": "Explica en dos frases qué problema resuelve el prompt y qué obtiene quien lo usa. Evita adjetivos: di qué entra y qué sale.",
+    "use_case": "Cuando tienes [situación concreta] y necesitas [resultado] en menos de [tiempo].",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Situación: soy [tu rol] en [tipo de empresa o proyecto]. [Una o dos frases sobre qué ha pasado antes y para quién es el resultado].\n\nTarea: [un verbo y un objeto: escribe, clasifica, revisa, compara...].\n\nMaterial de partida:\n[pega aquí el texto, los datos o la información]\n\nCriterios de calidad:\n- [qué hace bueno el resultado, según tu experiencia]\n- [qué debe priorizar si hay que elegir]\n\nFormato de salida:\n- [longitud, estructura, tono]\n- [dónde se va a pegar después: email, informe, tabla...]\n\nLímites:\n- No inventes datos que no estén en el material de partida; si falta algo, pregúntamelo.\n- [qué más no debe hacer]"
+  },
+  {
+    "key": "marketing-calendario",
+    "profession": "marketing",
+    "label": "Marketing · Calendario de contenidos",
+    "title": "Calendario de contenidos de un mes para [canal] a partir de tus objetivos",
+    "description": "Genera un calendario editorial de cuatro semanas con temas, formato, objetivo de cada pieza y el copy base, alineado con un objetivo de negocio medible.",
+    "use_case": "Al empezar el mes, cuando tienes el objetivo de campaña pero no el plan de publicaciones.",
+    "difficulty": "intermediate",
+    "estimated_minutes": 20,
+    "prompt_content": "Situación: llevo el marketing de [empresa], que vende [producto o servicio] a [público objetivo]. Este mes el objetivo es [objetivo medible, p. ej. 200 leads cualificados].\n\nTarea: crea un calendario de contenidos de 4 semanas para [canal].\n\nContexto adicional:\n- Frecuencia posible: [nº de publicaciones por semana]\n- Temas que ya han funcionado: [temas]\n- Fechas clave del mes: [lanzamientos, eventos, festivos]\n\nCriterios:\n- Cada pieza debe tener un objetivo claro (alcance, consideración o conversión).\n- Mezcla formatos y no repitas el mismo ángulo dos veces seguidas.\n\nFormato de salida: tabla con columnas Semana | Día | Tema | Formato | Objetivo | Copy base (máx. 40 palabras) | CTA.\n\nLímites: no propongas acciones de pago ni cifras de resultados que no puedas justificar."
+  },
+  {
+    "key": "desarrollo-code-review",
+    "profession": "desarrollo",
+    "label": "Desarrollo · Code review",
+    "title": "Code review de un pull request en [lenguaje] con foco en bugs y seguridad",
+    "description": "Revisa un diff como lo haría un senior: primero errores que rompen en producción, luego seguridad y rendimiento, y deja el estilo para el final.",
+    "use_case": "Antes de pedir revisión a un compañero, para llegar con los problemas obvios ya resueltos.",
+    "difficulty": "intermediate",
+    "estimated_minutes": 15,
+    "prompt_content": "Situación: trabajo en [tipo de aplicación] con [lenguaje y framework]. Este cambio sirve para [objetivo del PR].\n\nTarea: revisa el siguiente diff.\n\n[pega aquí el diff]\n\nCriterios, en este orden de prioridad:\n1. Errores de lógica o casos límite que fallarían en producción.\n2. Problemas de seguridad (inyección, permisos, datos sensibles).\n3. Rendimiento (consultas N+1, bucles innecesarios).\n4. Legibilidad, solo si afecta al mantenimiento.\n\nFormato de salida: lista de hallazgos, cada uno con Severidad (alta/media/baja) | Línea | Problema | Propuesta de corrección con código.\n\nLímites: no reescribas el código entero ni comentes preferencias de estilo que el linter ya cubre. Si algo depende de contexto que no ves, dilo en lugar de suponer."
+  },
+  {
+    "key": "diseno-brief",
+    "profession": "diseno",
+    "label": "Diseño · Brief creativo",
+    "title": "Convierte una petición vaga en un brief de diseño accionable para [pieza]",
+    "description": "Transforma un encargo difuso del cliente en un brief con objetivo, público, restricciones, entregables y las preguntas que faltan por hacer.",
+    "use_case": "Cuando el cliente te dice «algo moderno y que llame la atención» y necesitas saber qué diseñar de verdad.",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Situación: soy diseñador/a y me han pedido [pieza: logo, landing, cartel...] para [cliente y sector].\n\nPetición original del cliente:\n[pega aquí el email o las notas]\n\nTarea: redacta un brief de diseño a partir de esa petición.\n\nCriterios:\n- Separa lo que el cliente ha dicho de lo que estás infiriendo.\n- Traduce los adjetivos vagos («moderno», «limpio») en decisiones visuales concretas.\n\nFormato de salida:\n1. Objetivo de la pieza (una frase)\n2. Público y contexto de uso\n3. Restricciones (marca, formatos, plazos)\n4. Entregables\n5. Preguntas que debo hacer al cliente antes de empezar (máx. 5)\n\nLímites: no propongas diseños todavía; el objetivo es entender el encargo."
+  },
+  {
+    "key": "ventas-seguimiento",
+    "profession": "ventas",
+    "label": "Ventas · Email de seguimiento",
+    "title": "Email de seguimiento para [tipo de cliente] que no responde tras [momento del proceso]",
+    "description": "Redacta un seguimiento breve que aporta algo nuevo en lugar de preguntar «¿has podido verlo?», adaptado a la fase de la venta y a la relación con el cliente.",
+    "use_case": "Cuando una oportunidad lleva días parada y no quieres sonar insistente ni perderla.",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Situación: vendo [producto o servicio] a [tipo de cliente]. Envié [propuesta, demo, presupuesto] a [cargo del contacto] hace [tiempo] y no ha respondido. Hemos tenido [nº] conversaciones y el trato es de [tú/usted].\n\nTarea: escribe un email de seguimiento.\n\nCriterios:\n- Aporta algo nuevo: [dato, caso de éxito, respuesta a una objeción que mencionó].\n- Una sola petición clara y fácil de contestar.\n\nFormato de salida: asunto (máx. 6 palabras) y cuerpo de menos de 90 palabras. Dame dos versiones: una directa y otra más cercana.\n\nLímites: nada de urgencias falsas, descuentos no autorizados ni frases como «solo quería hacer seguimiento»."
+  },
+  {
+    "key": "pm-prd",
+    "profession": "product-management",
+    "label": "Product · PRD de una funcionalidad",
+    "title": "PRD de una página para [funcionalidad] a partir de notas de discovery",
+    "description": "Ordena notas sueltas de entrevistas y reuniones en un PRD breve con problema, métricas de éxito, alcance, fuera de alcance y riesgos.",
+    "use_case": "Tras el discovery, cuando tienes mucha información dispersa y necesitas alinear a diseño e ingeniería.",
+    "difficulty": "intermediate",
+    "estimated_minutes": 20,
+    "prompt_content": "Situación: soy PM de [producto] para [tipo de usuario]. Estamos valorando [funcionalidad].\n\nNotas de discovery:\n[pega aquí notas de entrevistas, tickets, métricas]\n\nTarea: redacta un PRD de una página.\n\nCriterios:\n- El problema se describe desde el usuario, con evidencias de las notas.\n- Las métricas de éxito son medibles y tienen un valor objetivo.\n\nFormato de salida: Problema | Evidencias | Objetivo y métricas | Alcance (MVP) | Fuera de alcance | Riesgos y preguntas abiertas.\n\nLímites: no inventes datos de usuarios; si una sección no tiene evidencia suficiente, márcala como «hipótesis»."
+  },
+  {
+    "key": "rrhh-oferta",
+    "profession": "rrhh",
+    "label": "RRHH · Oferta de empleo",
+    "title": "Oferta de empleo para [puesto] que atrae candidatos y filtra a los que no encajan",
+    "description": "Redacta una oferta clara con responsabilidades reales, requisitos imprescindibles separados de los deseables, condiciones y proceso de selección.",
+    "use_case": "Al abrir una vacante, para no publicar una lista genérica de requisitos que espanta a buenos perfiles.",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Situación: trabajo en RRHH de [empresa, sector y tamaño]. Abrimos una vacante de [puesto] en el equipo de [equipo].\n\nInformación del puesto:\n- Qué hará en su día a día: [tareas]\n- Imprescindible: [requisitos]\n- Deseable: [requisitos]\n- Condiciones: [salario, modalidad, horario]\n- Proceso: [fases]\n\nTarea: redacta la oferta de empleo.\n\nCriterios:\n- Lenguaje inclusivo y sin jerga interna.\n- Separa con claridad imprescindible de deseable.\n\nFormato de salida: título del puesto, párrafo de presentación (máx. 60 palabras), secciones con viñetas y un cierre con los pasos del proceso.\n\nLímites: no añadas requisitos ni beneficios que no aparezcan arriba."
+  },
+  {
+    "key": "finanzas-variaciones",
+    "profession": "finanzas",
+    "label": "Finanzas · Análisis de variaciones",
+    "title": "Explica las variaciones entre [presupuesto] y [real] para dirección",
+    "description": "Analiza las desviaciones entre presupuesto y real, las prioriza por impacto y las explica en lenguaje de negocio para un comité que no es financiero.",
+    "use_case": "En el cierre mensual, cuando tienes que presentar por qué los números no cuadran con lo previsto.",
+    "difficulty": "advanced",
+    "estimated_minutes": 25,
+    "prompt_content": "Situación: soy [cargo] en [empresa y sector]. Presento el cierre de [periodo] al comité de dirección.\n\nDatos (presupuesto vs real por partida):\n[pega aquí la tabla]\n\nContexto conocido: [eventos del periodo que expliquen desviaciones]\n\nTarea: analiza las variaciones.\n\nCriterios:\n- Prioriza por impacto absoluto en el resultado, no por porcentaje.\n- Distingue desviaciones puntuales de tendencias.\n\nFormato de salida: 1) resumen ejecutivo de 3 líneas, 2) tabla Partida | Desviación € | Desviación % | Causa probable | Acción propuesta, 3) riesgos para el próximo periodo.\n\nLímites: si una causa no se puede deducir de los datos o del contexto, escribe «a confirmar» en lugar de inventarla."
+  },
+  {
+    "key": "legal-clausulas",
+    "profession": "legal",
+    "label": "Legal · Revisión de cláusulas",
+    "title": "Detecta cláusulas de riesgo en un [tipo de contrato] desde el punto de vista de [parte]",
+    "description": "Revisa un contrato y señala las cláusulas desfavorables, ambiguas o ausentes para la parte que representas, con una propuesta de redacción alternativa.",
+    "use_case": "En una primera lectura de un contrato de la otra parte, antes de la revisión jurídica completa.",
+    "difficulty": "advanced",
+    "estimated_minutes": 30,
+    "prompt_content": "Situación: reviso un [tipo de contrato] entre [parte A] y [parte B]. Represento a [parte]. Jurisdicción: [país].\n\nContrato:\n[pega aquí el texto, sin datos personales innecesarios]\n\nTarea: identifica las cláusulas que suponen un riesgo para mi parte.\n\nCriterios:\n- Prioriza responsabilidad, penalizaciones, duración y resolución, propiedad intelectual y confidencialidad.\n- Señala también las cláusulas habituales que faltan.\n\nFormato de salida: tabla Cláusula | Riesgo (alto/medio/bajo) | Por qué | Redacción alternativa propuesta.\n\nLímites: esto es una primera revisión, no asesoramiento jurídico. No cites artículos de ley si no estás seguro de su vigencia; indica que deben verificarse."
+  },
+  {
+    "key": "soporte-respuesta",
+    "profession": "customer-support",
+    "label": "Soporte · Respuesta a cliente molesto",
+    "title": "Respuesta a un cliente molesto por [problema] que resuelve y conserva la relación",
+    "description": "Redacta una respuesta empática pero concreta que reconoce el problema, explica qué ha pasado, ofrece una solución y fija el siguiente paso.",
+    "use_case": "Ante una queja escalada o una reseña negativa en la que el tono importa tanto como la solución.",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Situación: trabajo en atención al cliente de [empresa y producto]. Un cliente escribe molesto por [problema].\n\nMensaje del cliente:\n[pega aquí el mensaje]\n\nLo que sabemos: [causa del problema, si se conoce]\nLo que podemos ofrecer: [solución, compensación autorizada, plazos]\n\nTarea: redacta la respuesta.\n\nCriterios:\n- Reconoce el problema concreto en la primera frase, sin disculpas genéricas.\n- Una solución clara con fecha o siguiente paso.\n\nFormato de salida: respuesta de menos de 120 palabras, con tono [cercano/formal], firmada como [nombre y equipo].\n\nLímites: no prometas nada que no esté en «lo que podemos ofrecer» ni culpes al cliente."
+  },
+  {
+    "key": "freelancers-propuesta",
+    "profession": "freelancers",
+    "label": "Freelance · Propuesta de proyecto",
+    "title": "Propuesta de proyecto para [tipo de cliente] con alcance, precio y plazos claros",
+    "description": "Convierte una llamada con un cliente potencial en una propuesta que deja claro qué incluye, qué no, cuánto cuesta y cómo se trabaja, para evitar malentendidos.",
+    "use_case": "Después de la primera reunión con un cliente, cuando toca enviar la propuesta y cerrar el encargo.",
+    "difficulty": "intermediate",
+    "estimated_minutes": 15,
+    "prompt_content": "Situación: soy freelance de [especialidad]. He hablado con [tipo de cliente] que necesita [proyecto].\n\nNotas de la reunión:\n[pega aquí tus notas]\n\nMis condiciones: [tarifa o precio cerrado, forma de pago, nº de revisiones incluidas]\n\nTarea: redacta la propuesta.\n\nCriterios:\n- El problema del cliente se explica con sus palabras.\n- El alcance es verificable: cada entregable se puede marcar como hecho.\n\nFormato de salida: 1) Entendimiento del problema, 2) Propuesta y entregables, 3) Fuera de alcance, 4) Plazos por fases, 5) Inversión y condiciones, 6) Siguiente paso.\n\nLímites: no añadas servicios que no se hayan hablado ni rebajes el precio indicado."
+  }
+]

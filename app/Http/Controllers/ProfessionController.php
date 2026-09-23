@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Profession;
-use App\Support\Guides;
+use App\Support\Collections;
 use App\Support\ProfessionContent;
+use App\Support\ProfessionTasks;
+use App\Support\RelatedContent;
 use App\Support\Seo;
 use App\Support\SiteData;
 use App\Support\SkillSearch;
@@ -87,6 +89,7 @@ class ProfessionController extends Controller
 
         $content = ProfessionContent::for($profession->slug);
         $guides = $this->guidesFor($profession->slug);
+        $tasks = $this->indexableTasks($profession);
         $url = route('professions.show', ['profession' => $profession->slug]);
         $page = $skills->currentPage();
         $total = $profession->skills_count;
@@ -122,6 +125,7 @@ class ProfessionController extends Controller
                         $skill->title => route('skills.show', ['skill' => $skill->slug]),
                     ])
                     ->merge(collect($guides)->mapWithKeys(fn (array $g) => [$g['title'] => $g['url']]))
+                    ->merge(collect($tasks)->mapWithKeys(fn (array $t) => [ucfirst($t['name']).' con IA para '.$profession->name => $t['url']]))
                     ->all(),
             ],
             'schema' => array_filter([
@@ -164,32 +168,136 @@ class ProfessionController extends Controller
             'content' => $content,
             'guides' => $guides,
             'filters' => ['q' => $search],
+            'tasks' => $tasks,
+            'collections' => collect(Collections::forProfession($profession->slug))
+                ->map(fn (array $c) => [
+                    'title' => $c['title'],
+                    'description' => $c['description'],
+                    'url' => route('collections.show', ['slug' => $c['slug']]),
+                ])
+                ->all(),
         ]);
+    }
+
+    /**
+     * Landing "profesión × tarea": /profesiones/{profesion}/{tarea}.
+     *
+     * El copy sale de resources/data/profession-tasks.json y el listado, de
+     * las skills que mencionan la tarea (ver App\Support\ProfessionTasks).
+     */
+    public function task(Request $request, Profession $profession, string $task): Response
+    {
+        $definition = ProfessionTasks::find($profession->slug, $task);
+
+        abort_if($definition === null, 404);
+
+        $query = $profession->publishedSkills()
+            ->with('author:id,name,username,avatar,is_verified_expert')
+            ->withCount('comments');
+
+        ProfessionTasks::apply($query, $definition);
+
+        $skills = $query->orderByDesc('vote_score')->paginate(20)->withQueryString();
+
+        $url = route('professions.task', ['profession' => $profession->slug, 'task' => $task]);
+        $page = $skills->currentPage();
+        $total = $skills->total();
+        $thin = $total < ProfessionTasks::MIN_SKILLS;
+
+        $title = $page > 1
+            ? "{$definition['heading']} ({$profession->name}) · página {$page}"
+            : "{$definition['heading']}: {$total} skills para {$profession->name}";
+
+        Seo::share([
+            'title' => $title,
+            'description' => $definition['intro'],
+            'canonical' => $page > 1 ? $url.'?page='.$page : $url,
+            'robots' => $thin || $page > 1 ? 'noindex, follow' : null,
+            'ogImage' => route('og.profession', ['profession' => $profession->slug]),
+            'ogImageAlt' => $definition['heading'],
+            'prev' => $page > 1 ? $skills->previousPageUrl() : null,
+            'next' => $skills->hasMorePages() ? $skills->nextPageUrl() : null,
+            'fallback' => [
+                'heading' => $definition['heading'],
+                'paragraphs' => [$definition['intro']],
+                'links' => collect($skills->items())
+                    ->mapWithKeys(fn ($skill) => [$skill->title => route('skills.show', ['skill' => $skill->slug])])
+                    ->merge(["Todos los prompts de IA para {$profession->name}" => route('professions.show', ['profession' => $profession->slug])])
+                    ->all(),
+            ],
+            'schema' => [
+                Seo::organization(),
+                Seo::breadcrumbs([
+                    'Inicio' => route('home'),
+                    'Profesiones' => route('professions.index'),
+                    $profession->name => route('professions.show', ['profession' => $profession->slug]),
+                    ucfirst($definition['name']) => $url,
+                ]),
+                [
+                    '@context' => 'https://schema.org',
+                    '@type' => 'CollectionPage',
+                    'name' => $definition['heading'],
+                    'description' => $definition['intro'],
+                    'url' => $url,
+                    'inLanguage' => 'es',
+                    'mainEntity' => [
+                        '@type' => 'ItemList',
+                        'numberOfItems' => $total,
+                        'itemListElement' => collect($skills->items())->values()
+                            ->map(fn ($skill, int $i) => [
+                                '@type' => 'ListItem',
+                                'position' => $skills->firstItem() + $i,
+                                'name' => $skill->title,
+                                'url' => route('skills.show', ['skill' => $skill->slug]),
+                            ])->all(),
+                    ],
+                ],
+            ],
+        ]);
+
+        return Inertia::render('Professions/Task', [
+            'profession' => $profession->only(['id', 'name', 'slug']),
+            'task' => collect($definition)->only(['slug', 'name', 'heading', 'intro'])->all(),
+            'skills' => $skills,
+            'siblings' => collect($this->indexableTasks($profession))
+                ->reject(fn (array $t) => $t['slug'] === $task)
+                ->values()
+                ->all(),
+            'guides' => RelatedContent::guidesForProfession($profession->slug, 2),
+        ]);
+    }
+
+    /**
+     * Tareas de la profesión con suficientes skills para tener landing propia.
+     *
+     * @return array<int, array{slug: string, name: string, url: string, count: int}>
+     */
+    private function indexableTasks(Profession $profession): array
+    {
+        $counts = ProfessionTasks::counts($profession->id, $profession->slug);
+
+        return collect(ProfessionTasks::for($profession->slug))
+            ->filter(fn (array $t) => ($counts[$t['slug']] ?? 0) >= ProfessionTasks::MIN_SKILLS)
+            ->map(fn (array $t) => [
+                'slug' => $t['slug'],
+                'name' => $t['name'],
+                'url' => route('professions.task', ['profession' => $profession->slug, 'task' => $t['slug']]),
+                'count' => $counts[$t['slug']],
+            ])
+            ->values()
+            ->all();
     }
 
     /**
      * Guías relevantes para la profesión: reparte autoridad hacia el contenido
      * informativo y da una salida a quien llega al listado sin saber qué es un
-     * skill. Los perfiles técnicos ven las guías de Claude Code; el resto, las
-     * de prompts y automatización.
+     * skill. El mapa guía ↔ profesión vive en RelatedContent, que es también
+     * el que decide qué guías salen en cada ficha.
      *
-     * @return array<int, array{title: string, url: string, excerpt: string}>
+     * @return array<int, array{slug: string, title: string, url: string, excerpt: string}>
      */
     private function guidesFor(string $slug): array
     {
-        $selection = $slug === 'desarrollo'
-            ? ['que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'plugins-y-mcp-en-claude-code']
-            : ['como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'claude-vs-chatgpt-para-trabajar'];
-
-        return collect($selection)
-            ->map(fn (string $guideSlug) => Guides::find($guideSlug))
-            ->filter()
-            ->map(fn (array $guide) => [
-                'title' => $guide['title'],
-                'excerpt' => $guide['excerpt'],
-                'url' => route('guides.show', ['slug' => $guide['slug']]),
-            ])
-            ->values()
-            ->all();
+        return RelatedContent::guidesForProfession($slug);
     }
 }

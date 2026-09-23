@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Profession;
 use App\Models\Skill;
+use App\Support\Collections;
 use App\Support\Seo;
 use App\Support\SiteData;
 use Inertia\Inertia;
@@ -81,9 +82,23 @@ class HomeController extends Controller
             ],
         ]);
 
+        $professionNames = $professions->pluck('name', 'slug');
+
         return Inertia::render('Welcome', [
             'professions' => $professions,
             'topSkills' => $topSkills,
+            'collections' => collect(Collections::all())
+                ->take(3)
+                ->map(fn (array $c) => [
+                    'slug' => $c['slug'],
+                    'title' => $c['title'],
+                    'description' => $c['description'],
+                    'url' => route('collections.show', ['slug' => $c['slug']]),
+                    'count' => count($c['skills'] ?? []),
+                    'profession' => $professionNames[$c['profession'] ?? ''] ?? null,
+                ])
+                ->values()
+                ->all(),
         ]);
     }
 }

@@ -1,21 +1,27 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthorController;
+use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LlmsTxtController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\RankingController;
 use App\Http\Controllers\SavedSkillController;
 use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SkillController;
+use App\Http\Controllers\SkillMarkdownController;
+use App\Http\Controllers\SkillVersionController;
 use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
-use Inertia\Inertia;
 
 // Sin closures en las rutas públicas: así `php artisan route:cache` funciona.
 Route::get('/', HomeController::class)->name('home');
@@ -25,6 +31,7 @@ Route::get('/sitemap.xml', [SitemapController::class, 'index'])->name('sitemap')
 Route::get('/sitemap-paginas.xml', [SitemapController::class, 'pages'])->name('sitemap.pages');
 Route::get('/sitemap-profesiones.xml', [SitemapController::class, 'professions'])->name('sitemap.professions');
 Route::get('/sitemap-guias.xml', [SitemapController::class, 'guides'])->name('sitemap.guides');
+Route::get('/sitemap-autores.xml', [SitemapController::class, 'authors'])->name('sitemap.authors');
 Route::get('/sitemap-skills-{page}.xml', [SitemapController::class, 'skills'])->whereNumber('page')->name('sitemap.skills');
 
 // Índice en Markdown para motores generativos (ChatGPT, Claude, Perplexity)
@@ -41,6 +48,24 @@ Route::get('/og/profession/{profession:slug}', [OgImageController::class, 'profe
 // Professions
 Route::get('/profesiones', [ProfessionController::class, 'index'])->name('professions.index');
 Route::get('/profesiones/{profession:slug}', [ProfessionController::class, 'show'])->name('professions.show');
+// Landings profesión × tarea (copy en resources/data/profession-tasks.json)
+Route::get('/profesiones/{profession:slug}/{task}', [ProfessionController::class, 'task'])
+    ->where('task', '[a-z0-9-]+')
+    ->name('professions.task');
+
+// Colecciones curadas (resources/data/collections.json)
+Route::get('/colecciones', [CollectionController::class, 'index'])->name('collections.index');
+Route::get('/colecciones/{slug}', [CollectionController::class, 'show'])->where('slug', '[a-z0-9-]+')->name('collections.show');
+
+// Ranking y perfiles públicos de autor
+Route::get('/ranking', [RankingController::class, 'index'])->name('rankings.index');
+Route::get('/autores/{user:username}', [AuthorController::class, 'show'])->name('authors.show');
+
+// Baja del resumen semanal desde el enlace firmado del email
+Route::middleware('signed')->group(function () {
+    Route::get('/newsletter/baja/{user}', [NewsletterController::class, 'confirm'])->name('newsletter.unsubscribe');
+    Route::post('/newsletter/baja/{user}', [NewsletterController::class, 'unsubscribe'])->name('newsletter.unsubscribe.confirm');
+});
 
 // Guías (HTML renderizado en servidor, sin Inertia)
 Route::get('/guias', [GuideController::class, 'index'])->name('guides.index');
@@ -65,9 +90,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/skills/{skill:slug}/comentarios', [CommentController::class, 'store'])->middleware('throttle:comments')->name('comments.store');
     Route::delete('/comentarios/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');
 
-    Route::get('/dashboard', function () {
-        return Inertia::render('Dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', DashboardController::class)->name('dashboard');
 
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
@@ -79,6 +102,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/guardadas', [SavedSkillController::class, 'index'])->name('skills.saved');
 
 Route::get('/skills/{skill:slug}', [SkillController::class, 'show'])->name('skills.show');
+// La ficha como SKILL.md instalable (curl -o ~/.claude/skills/x/SKILL.md)
+Route::get('/skills/{skill:slug}/skill.md', SkillMarkdownController::class)->name('skills.markdown');
+// Contenido de una versión y la anterior, para el diff del historial
+Route::get('/skills/{skill:slug}/versiones/{version}', [SkillVersionController::class, 'show'])
+    ->whereNumber('version')
+    ->name('skills.versions.show');
 
 // Admin routes
 Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(function () {

@@ -23,10 +23,22 @@ return Application::configure(basePath: dirname(__DIR__))
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,
         ]);
 
+        // La baja del newsletter la puede enviar el propio cliente de correo
+        // (List-Unsubscribe-Post, RFC 8058) sin token CSRF. La protege la
+        // firma de la URL (middleware `signed`).
+        $middleware->validateCsrfTokens(except: [
+            'newsletter/baja/*',
+        ]);
+
         $middleware->alias([
             'admin' => \App\Http\Middleware\EnsureUserIsAdmin::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
-        //
+        // La API pública se consume con curl y desde el CLI, que no envían
+        // `Accept: application/json`: sin esto, un error de validación
+        // respondería con una redirección HTML.
+        $exceptions->shouldRenderJsonWhen(
+            fn ($request) => $request->is('api/*') || $request->expectsJson()
+        );
     })->create();

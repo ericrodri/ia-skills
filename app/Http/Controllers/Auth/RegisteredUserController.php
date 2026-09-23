@@ -35,12 +35,15 @@ class RegisteredUserController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255|unique:' . User::class,
             'password' => ['required', 'confirmed', Rules\Password::defaults()],
+            'newsletter_opt_in' => ['nullable', 'boolean'],
         ]);
 
         $user = User::create([
             'name' => $request->name,
             'email' => $request->email,
             'password' => Hash::make($request->password),
+            // Opt-in explícito: la casilla del formulario sale desmarcada.
+            'newsletter_opt_in' => $request->boolean('newsletter_opt_in'),
         ]);
 
         event(new Registered($user));

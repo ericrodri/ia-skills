@@ -8,6 +8,7 @@ const form = useForm({
     email: '',
     password: '',
     password_confirmation: '',
+    newsletter_opt_in: false,
 })
 
 const submit = () => {
@@ -100,6 +101,16 @@ const submit = () => {
                 />
                 <InputError :message="form.errors.password_confirmation" class="mt-1.5" />
             </div>
+
+            <!-- Newsletter: opt-in explícito, desmarcado por defecto -->
+            <label class="flex items-start gap-2.5 text-sm text-gray-600 dark:text-gray-400 cursor-pointer">
+                <input
+                    v-model="form.newsletter_opt_in"
+                    type="checkbox"
+                    class="mt-0.5 rounded border-gray-300 dark:border-gray-600 text-brand-600 focus:ring-brand-500"
+                />
+                <span>Quiero recibir el resumen semanal con las skills y guías nuevas (un email los lunes, baja con un clic).</span>
+            </label>
 
             <!-- Submit -->
             <button

@@ -38,7 +38,7 @@
                     </a>
                     {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
                          fuente que alimenta AppLayout.vue. No los dupliques aquí. --}}
-                    <div class="hidden md:flex items-center gap-1">
+                    <div class="hidden lg:flex items-center gap-1">
                         @foreach($primaryNav as $item)
                             <a
                                 href="{{ $item['href'] }}"
@@ -57,7 +57,7 @@
 
                     {{-- Menú móvil con <details>: estas páginas no cargan Vue, así que
                          el desplegable tiene que funcionar sin JavaScript. --}}
-                    <details class="md:hidden relative">
+                    <details class="lg:hidden relative">
                         <summary
                             class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                             aria-label="Menú de navegación"
@@ -91,6 +91,8 @@
                     <ul class="mt-3 space-y-2 text-gray-500 dark:text-gray-400">
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.index') }}">Todas las skills</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('professions.index') }}">Profesiones</a></li>
+                        <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('collections.index') }}">Colecciones</a></li>
+                        <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('rankings.index') }}">Ranking</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('guides.index') }}">Guías</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('how-it-works') }}">Cómo funciona</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.saved') }}">Guardadas</a></li>

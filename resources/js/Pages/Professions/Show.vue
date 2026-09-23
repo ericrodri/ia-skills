@@ -12,6 +12,9 @@ const props = defineProps({
     content: { type: Object, default: null },
     guides: { type: Array, default: () => [] },
     filters: { type: Object, default: () => ({}) },
+    // Landings profesión × tarea con contenido suficiente (App\Support\ProfessionTasks)
+    tasks: { type: Array, default: () => [] },
+    collections: { type: Array, default: () => [] },
 })
 
 const search = ref(props.filters?.q || '')
@@ -76,6 +79,31 @@ function clearSearch() {
 
         <!-- Skills list -->
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+            <!-- Tareas y colecciones de la profesión -->
+            <div v-if="tasks.length || collections.length" class="mb-8 space-y-4">
+                <div v-if="tasks.length" class="flex flex-wrap items-center gap-2">
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-400 dark:text-gray-500 mr-1">Por tarea</span>
+                    <Link
+                        v-for="task in tasks"
+                        :key="task.slug"
+                        :href="task.url"
+                        class="px-3 py-1.5 rounded-lg text-sm border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-brand-300 hover:text-brand-700 dark:hover:text-brand-400 transition-colors"
+                    >{{ task.name }} <span class="text-xs text-gray-400">{{ task.count }}</span></Link>
+                </div>
+                <Link
+                    v-for="c in collections"
+                    :key="c.url"
+                    :href="c.url"
+                    class="flex items-center justify-between gap-4 rounded-xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 px-4 py-3 hover:border-brand-300 transition-colors"
+                >
+                    <span>
+                        <span class="text-xs font-semibold uppercase tracking-wide text-brand-600 dark:text-brand-400">Colección</span>
+                        <span class="block text-sm font-medium text-gray-900 dark:text-gray-100">{{ c.title }}</span>
+                    </span>
+                    <span class="text-brand-600 dark:text-brand-400" aria-hidden="true">→</span>
+                </Link>
+            </div>
+
             <!-- Buscador dentro de la profesión -->
             <div class="relative mb-6">
                 <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400 dark:text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

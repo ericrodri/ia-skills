@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, router } from '@inertiajs/vue3'
-import { ref, watch } from 'vue'
+import { computed, ref, watch } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import SkillCard from '@/Components/SkillCard.vue'
 
@@ -60,9 +60,39 @@ const difficultyOptions = [
 ]
 const sortOptions = [
     { value: 'top', label: 'Más valoradas' },
+    { value: 'saved', label: 'Más guardadas' },
     { value: 'new', label: 'Más recientes' },
     { value: 'trending', label: 'Trending' },
 ]
+
+const typeLabels = { prompt: 'Prompt', claude_skill: 'Skill', claude_plugin: 'Plugin' }
+
+// Filtros activos como chips que se pueden quitar de uno en uno: con cinco
+// facetas combinables, sin esto no se ve de un vistazo por qué salen pocos resultados.
+const activeFilters = computed(() => [
+    search.value && { key: 'q', label: `«${search.value}»`, clear: () => { search.value = '' } },
+    selectedProfession.value && {
+        key: 'profession',
+        label: props.professions.find(p => p.slug === selectedProfession.value)?.name ?? selectedProfession.value,
+        clear: () => { selectedProfession.value = ''; applyFilters() },
+    },
+    selectedType.value && { key: 'type', label: typeLabels[selectedType.value] ?? selectedType.value, clear: () => { selectedType.value = ''; applyFilters() } },
+    selectedTool.value && { key: 'tool', label: selectedTool.value, clear: () => { selectedTool.value = ''; applyFilters() } },
+    selectedDifficulty.value && {
+        key: 'difficulty',
+        label: difficultyOptions.find(o => o.value === selectedDifficulty.value)?.label,
+        clear: () => { selectedDifficulty.value = ''; applyFilters() },
+    },
+].filter(Boolean))
+
+function clearAll() {
+    selectedProfession.value = ''
+    selectedTool.value = ''
+    selectedDifficulty.value = ''
+    selectedType.value = ''
+    // Cambiar `search` ya dispara applyFilters() desde su watcher.
+    if (search.value) { search.value = '' } else { applyFilters() }
+}
 
 </script>
 
@@ -178,12 +208,27 @@ const sortOptions = [
                         <Link :href="route('skills.create')" class="btn-primary text-xs">+ Compartir skill</Link>
                     </div>
 
+                    <div v-if="activeFilters.length" class="mb-4 flex flex-wrap items-center gap-2">
+                        <button
+                            v-for="f in activeFilters"
+                            :key="f.key"
+                            type="button"
+                            @click="f.clear()"
+                            class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-medium bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-300 border border-brand-200 dark:border-brand-800 hover:bg-brand-100 dark:hover:bg-brand-900/50 transition-colors"
+                            :aria-label="`Quitar filtro ${f.label}`"
+                        >
+                            {{ f.label }}
+                            <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"/></svg>
+                        </button>
+                        <button v-if="activeFilters.length > 1" type="button" @click="clearAll" class="text-xs text-gray-500 dark:text-gray-400 hover:text-brand-600 underline">Quitar todos</button>
+                    </div>
+
                     <div v-if="skills.data.length" class="flex flex-col gap-3">
                         <SkillCard v-for="skill in skills.data" :key="skill.id" :skill="skill" />
                     </div>
                     <div v-else class="text-center py-20 text-gray-400 dark:text-gray-500">
                         <p class="text-lg">No hay skills con esos filtros.</p>
-                        <button @click="search=''; selectedProfession=''; selectedTool=''; selectedDifficulty=''; selectedType=''; applyFilters()" class="mt-4 text-sm text-brand-600 hover:underline">
+                        <button @click="clearAll" class="mt-4 text-sm text-brand-600 hover:underline">
                             Limpiar filtros
                         </button>
                     </div>

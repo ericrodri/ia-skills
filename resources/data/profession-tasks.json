@@ -1,0 +1,232 @@
+{
+  "marketing": [
+    {
+      "slug": "seo",
+      "name": "SEO",
+      "heading": "Prompts de IA para SEO",
+      "intro": "Auditorías técnicas, investigación de palabras clave, briefs de contenido, metadatos en masa y detección de canibalización. Prompts para que el trabajo repetitivo del SEO lo haga la IA y tú dediques el tiempo a decidir qué búsquedas merece la pena atacar.",
+      "terms": ["seo", "keyword", "palabras clave", "meta description", "posicionamiento en google"]
+    },
+    {
+      "slug": "email-marketing",
+      "name": "email marketing",
+      "heading": "Prompts de IA para email marketing",
+      "intro": "Secuencias de bienvenida, newsletters, asuntos que se abren y campañas de reactivación. Prompts para escribir emails que parecen escritos por una persona y para planificar automatizaciones sin empezar cada una desde cero.",
+      "terms": ["email", "newsletter", "correo", "mailchimp", "secuencia"]
+    },
+    {
+      "slug": "redes-sociales",
+      "name": "redes sociales",
+      "heading": "Prompts de IA para redes sociales",
+      "intro": "Calendarios de publicación, copies para LinkedIn, Instagram o TikTok, guiones para vídeo corto y respuestas a comentarios. Prompts para mantener el ritmo de publicación sin que todo suene igual.",
+      "terms": ["redes sociales", "linkedin", "instagram", "tiktok", "social media"]
+    }
+  ],
+  "desarrollo": [
+    {
+      "slug": "code-review",
+      "name": "code review",
+      "heading": "Prompts de IA para code review",
+      "intro": "Revisiones de pull requests con foco en bugs, seguridad y rendimiento, checklists por lenguaje y feedback constructivo para el equipo. Prompts para llegar a la revisión humana con lo obvio ya resuelto.",
+      "terms": ["code review", "revisión de código", "revision de codigo", "pull request"]
+    },
+    {
+      "slug": "debugging",
+      "name": "debugging",
+      "heading": "Prompts de IA para depurar bugs",
+      "intro": "Análisis de causa raíz, lectura de stack traces, bugs intermitentes y errores en producción. Prompts que obligan a la IA a razonar sobre el problema antes de proponer un parche.",
+      "terms": ["debug", "bug", "causa raíz", "stack trace", "error en producción"]
+    },
+    {
+      "slug": "tests",
+      "name": "tests",
+      "heading": "Prompts de IA para escribir tests",
+      "intro": "Tests unitarios con casos límite, tests de integración, estrategia de testing y mocks. Prompts para cubrir el código que nadie quiere testear y para detectar los casos que se te habrían escapado.",
+      "terms": ["test", "testing", "tdd", "cobertura"]
+    }
+  ],
+  "diseno": [
+    {
+      "slug": "branding",
+      "name": "branding",
+      "heading": "Prompts de IA para branding e identidad visual",
+      "intro": "Briefs creativos, sistemas de identidad, paletas, tono de marca y naming. Prompts para aterrizar lo que un cliente quiere decir con «moderno y cercano» antes de abrir la herramienta de diseño.",
+      "terms": ["marca", "brand", "identidad visual", "branding", "naming"]
+    },
+    {
+      "slug": "ux",
+      "name": "UX",
+      "heading": "Prompts de IA para UX",
+      "intro": "Análisis heurístico de pantallas, flujos de usuario, wireframes, tests de usabilidad y microcopy. Prompts para revisar una interfaz con criterio y justificar cada cambio con algo más que el gusto personal.",
+      "terms": ["ux", "usabilidad", "wireframe", "experiencia de usuario", "prototip"]
+    },
+    {
+      "slug": "landing-pages",
+      "name": "landing pages",
+      "heading": "Prompts de IA para diseñar landing pages",
+      "intro": "Estructura de una landing que convierte, jerarquía visual, copy de cabecera, pruebas A/B y rediseños basados en datos. Prompts para diseñar páginas que venden sin parecer un anuncio.",
+      "terms": ["landing", "conversión", "página de ventas"]
+    }
+  ],
+  "ventas": [
+    {
+      "slug": "prospeccion",
+      "name": "prospección",
+      "heading": "Prompts de IA para prospección comercial",
+      "intro": "Listas de cuentas objetivo, cold emails, mensajes de LinkedIn y secuencias de outreach. Prompts para conseguir la primera reunión sin sonar a plantilla masiva.",
+      "terms": ["prospec", "cold email", "outreach", "lead", "captación"]
+    },
+    {
+      "slug": "objeciones",
+      "name": "objeciones",
+      "heading": "Prompts de IA para responder objeciones de venta",
+      "intro": "«Es muy caro», «ahora no es buen momento», «ya trabajamos con otro». Prompts para preparar respuestas a las objeciones reales de tus clientes y practicarlas antes de la llamada.",
+      "terms": ["objecion", "objeción", "negociación", "negociacion"]
+    },
+    {
+      "slug": "propuestas-comerciales",
+      "name": "propuestas comerciales",
+      "heading": "Prompts de IA para propuestas comerciales",
+      "intro": "Propuestas que conectan con el problema del cliente, presentación del precio, seguimiento después de la demo y cierre. Prompts para que la propuesta haga parte del trabajo de venta por ti.",
+      "terms": ["propuesta", "cierre", "seguimiento post-demo", "presupuesto"]
+    }
+  ],
+  "product-management": [
+    {
+      "slug": "prd",
+      "name": "PRDs",
+      "heading": "Prompts de IA para escribir PRDs",
+      "intro": "PRDs con criterios de aceptación, historias de usuario, especificaciones y casos límite. Prompts para convertir una idea de funcionalidad en un documento que ingeniería y diseño puedan usar.",
+      "terms": ["prd", "historias de usuario", "user stories", "criterios de aceptación", "especificación"]
+    },
+    {
+      "slug": "roadmap",
+      "name": "roadmap y priorización",
+      "heading": "Prompts de IA para roadmap y priorización",
+      "intro": "RICE, análisis de trade-offs, roadmaps por objetivos y comunicación con stakeholders. Prompts para priorizar con un método que se pueda defender delante de dirección.",
+      "terms": ["roadmap", "prioriza", "rice", "backlog", "okr"]
+    },
+    {
+      "slug": "discovery",
+      "name": "discovery",
+      "heading": "Prompts de IA para product discovery",
+      "intro": "Guiones de entrevistas con usuarios, síntesis de hallazgos, validación de hipótesis y análisis de feedback. Prompts para decidir qué construir a partir de evidencia y no de opiniones.",
+      "terms": ["discovery", "entrevista", "hipótesis", "investigación de usuarios", "feedback de usuarios"]
+    }
+  ],
+  "rrhh": [
+    {
+      "slug": "entrevistas",
+      "name": "entrevistas de selección",
+      "heading": "Prompts de IA para entrevistas de selección",
+      "intro": "Preguntas por competencias, método STAR, guías de evaluación de candidatos y entrevistas de salida. Prompts para entrevistar de forma estructurada y comparar candidatos con criterios homogéneos.",
+      "terms": ["entrevista", "candidat", "selección", "reclutamiento"]
+    },
+    {
+      "slug": "onboarding",
+      "name": "onboarding",
+      "heading": "Prompts de IA para onboarding de empleados",
+      "intro": "Planes de 30/60/90 días, primeras semanas, documentación de bienvenida y seguimiento de nuevas incorporaciones. Prompts para que cada persona que entra tenga el mismo buen comienzo.",
+      "terms": ["onboarding", "incorporación", "bienvenida"]
+    },
+    {
+      "slug": "desempeno",
+      "name": "evaluación del desempeño",
+      "heading": "Prompts de IA para evaluaciones de desempeño",
+      "intro": "Performance reviews, feedback continuo, planes de mejora y objetivos individuales. Prompts para redactar evaluaciones justas y concretas, sin frases vacías.",
+      "terms": ["desempeño", "performance", "feedback", "evaluación"]
+    }
+  ],
+  "finanzas": [
+    {
+      "slug": "tesoreria",
+      "name": "tesorería y flujo de caja",
+      "heading": "Prompts de IA para tesorería y flujo de caja",
+      "intro": "Presupuestos de tesorería a 13 semanas, previsión de cobros y pagos, gestión del circulante y alertas de liquidez. Prompts para ver venir los problemas de caja con semanas de margen.",
+      "terms": ["tesorería", "flujo de caja", "cash flow", "cobros", "liquidez"]
+    },
+    {
+      "slug": "presupuestos-y-forecast",
+      "name": "presupuestos y forecast",
+      "heading": "Prompts de IA para presupuestos y forecast",
+      "intro": "Presupuesto anual, forecast de ingresos, escenarios y análisis de variaciones frente a lo previsto. Prompts para planificar con números y explicar las desviaciones a quien no es financiero.",
+      "terms": ["presupuesto", "forecast", "previsión", "escenarios", "variaci"]
+    },
+    {
+      "slug": "analisis-financiero",
+      "name": "análisis financiero",
+      "heading": "Prompts de IA para análisis financiero",
+      "intro": "Estados financieros, ratios, rentabilidad, valoración y cuadros de mando para dirección. Prompts para pasar de la hoja de cálculo a conclusiones que se puedan presentar.",
+      "terms": ["estados financieros", "ratio", "rentabilidad", "balance", "valoración", "dashboard financiero"]
+    }
+  ],
+  "legal": [
+    {
+      "slug": "contratos",
+      "name": "contratos",
+      "heading": "Prompts de IA para revisar y redactar contratos",
+      "intro": "Revisión de cláusulas de riesgo, redacciones alternativas, contratos de servicios, NDAs y resúmenes para cliente. Prompts para la primera lectura de un contrato, antes de la revisión jurídica completa.",
+      "terms": ["contrato", "cláusula", "clausula", "acuerdo de confidencialidad"]
+    },
+    {
+      "slug": "proteccion-de-datos",
+      "name": "protección de datos",
+      "heading": "Prompts de IA para RGPD y protección de datos",
+      "intro": "Políticas de privacidad, avisos legales, cláusulas de protección de datos, registros de actividades y evaluaciones de impacto. Prompts para preparar la documentación que después valida un profesional.",
+      "terms": ["rgpd", "protección de datos", "privacidad", "lopd", "cookies"]
+    },
+    {
+      "slug": "compliance",
+      "name": "compliance",
+      "heading": "Prompts de IA para compliance y cumplimiento normativo",
+      "intro": "Mapas de riesgos legales, políticas internas, canales de denuncia y seguimiento regulatorio por sector. Prompts para ordenar el cumplimiento normativo sin perderse en la letra pequeña.",
+      "terms": ["cumplimiento", "compliance", "normativ", "regulaci"]
+    }
+  ],
+  "customer-support": [
+    {
+      "slug": "quejas",
+      "name": "quejas y reclamaciones",
+      "heading": "Prompts de IA para gestionar quejas de clientes",
+      "intro": "Respuestas a clientes enfadados, reclamaciones formales, críticas en redes sociales y reseñas negativas. Prompts para responder con empatía y con una solución concreta, sin disculpas genéricas.",
+      "terms": ["queja", "reclamaci", "enfadado", "reseña", "crisis"]
+    },
+    {
+      "slug": "tickets",
+      "name": "tickets de soporte",
+      "heading": "Prompts de IA para tickets de soporte",
+      "intro": "Triaje y clasificación de tickets, respuestas tipo, análisis de sentimiento y escalados. Prompts para reducir el tiempo de primera respuesta sin perder calidad.",
+      "terms": ["ticket", "triaje", "escalad", "tiempo de respuesta"]
+    },
+    {
+      "slug": "base-de-conocimiento",
+      "name": "base de conocimiento",
+      "heading": "Prompts de IA para crear una base de conocimiento",
+      "intro": "FAQ a partir de tickets resueltos, artículos de ayuda, macros y documentación para clientes. Prompts para que las preguntas repetidas se respondan solas.",
+      "terms": ["faq", "base de conocimiento", "artículo de ayuda", "documentación", "autoservicio"]
+    }
+  ],
+  "freelancers": [
+    {
+      "slug": "tarifas",
+      "name": "tarifas y precios",
+      "heading": "Prompts de IA para fijar y defender tus tarifas",
+      "intro": "Cálculo de tarifa, presentación de honorarios, negociación y subida de precios a clientes actuales. Prompts para cobrar lo que vale tu trabajo sin perder a los clientes buenos.",
+      "terms": ["tarifa", "precio", "honorarios", "cobrar"]
+    },
+    {
+      "slug": "propuestas",
+      "name": "propuestas y presupuestos",
+      "heading": "Prompts de IA para propuestas freelance",
+      "intro": "Propuestas de proyecto, presupuestos con alcance cerrado, fases y condiciones. Prompts para que el cliente entienda qué incluye tu trabajo, qué no y cuánto cuesta antes de firmar.",
+      "terms": ["propuesta", "presupuesto", "alcance"]
+    },
+    {
+      "slug": "captar-clientes",
+      "name": "captación de clientes",
+      "heading": "Prompts de IA para conseguir clientes como freelance",
+      "intro": "Marca personal, portfolio, prospección, mensajes en frío y onboarding de clientes nuevos. Prompts para tener trabajo entrante sin depender de una sola plataforma.",
+      "terms": ["captación", "captar clientes", "conseguir clientes", "marca personal", "portfolio", "prospec"]
+    }
+  ]
+}
