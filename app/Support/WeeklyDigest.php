@@ -17,7 +17,14 @@ class WeeklyDigest
     public const MAX_SKILLS = 8;
 
     /**
-     * @return array{since: string, skills: array<int, array<string, mixed>>, guides: array<int, array<string, mixed>>, total_new: int}
+     * En semanas de mucha publicación (la del lanzamiento tuvo 35 guías) el
+     * email se volvía interminable: se muestran las más recientes y un enlace
+     * al índice con el resto.
+     */
+    public const MAX_GUIDES = 5;
+
+    /**
+     * @return array{since: string, skills: array<int, array<string, mixed>>, guides: array<int, array<string, mixed>>, more_guides: int, total_new: int}
      */
     public static function build(?Carbon $since = null): array
     {
@@ -45,21 +52,27 @@ class WeeklyDigest
             ])
             ->all();
 
-        $guides = collect(Guides::all())
+        $recentGuides = collect(Guides::all())
             ->filter(fn (array $guide) => Carbon::parse($guide['updated'])->gte($since->copy()->startOfDay()))
+            // Lo más reciente primero, no el orden editorial de Guides.
+            ->sortByDesc(fn (array $guide) => $guide['updated'])
+            ->values();
+
+        $guides = $recentGuides
+            ->take(self::MAX_GUIDES)
             ->map(fn (array $guide) => [
                 'title' => $guide['title'],
                 'excerpt' => $guide['excerpt'],
                 'is_new' => Carbon::parse($guide['published'] ?? $guide['updated'])->gte($since->copy()->startOfDay()),
                 'url' => route('guides.show', ['slug' => $guide['slug']]),
             ])
-            ->values()
             ->all();
 
         return [
             'since' => $since->toDateString(),
             'skills' => $skills,
             'guides' => $guides,
+            'more_guides' => max(0, $recentGuides->count() - self::MAX_GUIDES),
             'total_new' => $totalNew,
         ];
     }

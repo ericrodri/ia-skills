@@ -44,7 +44,8 @@ class SendWeeklyDigestCommand extends Command
         ));
 
         if ($to = $this->option('to')) {
-            $user = User::where('email', $to)->first() ?? new User(['name' => 'Prueba', 'email' => $to]);
+            // Si el email no es de ningún usuario, el saludo queda en "Hola,".
+            $user = User::where('email', $to)->first() ?? new User(['name' => '', 'email' => $to]);
             // Sin id no se puede firmar el enlace de baja: se usa uno ficticio.
             $user->id ??= 0;
 

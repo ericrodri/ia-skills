@@ -1,8 +1,8 @@
 <x-mail::message>
-# Hola, {{ $user->name }}
+# Hola{{ $user->name ? ', '.$user->name : '' }}
 
 @if($digest['total_new'] > 0)
-Esta semana se han publicado **{{ $digest['total_new'] }} skills nuevas** en ia-skills. Estas son las más votadas:
+Esta semana se han publicado **{{ number_format($digest['total_new'], 0, ',', '.') }} skills nuevas** en ia-skills. Estas son las más votadas:
 @else
 Esto es lo nuevo de la semana en ia-skills.
 @endif
@@ -20,6 +20,10 @@ Esto es lo nuevo de la semana en ia-skills.
 {{ \Illuminate\Support\Str::limit($guide['excerpt'], 160) }}
 
 @endforeach
+@if(($digest['more_guides'] ?? 0) > 0)
+[Y {{ $digest['more_guides'] }} {{ $digest['more_guides'] === 1 ? 'guía más' : 'guías más' }} esta semana →]({{ route('guides.index') }})
+
+@endif
 @endif
 
 <x-mail::button :url="route('rankings.index')">

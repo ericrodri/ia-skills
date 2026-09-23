@@ -5,8 +5,10 @@ namespace Tests\Feature;
 use App\Mail\WeeklyDigestMail;
 use App\Models\Skill;
 use App\Models\User;
+use App\Support\Guides;
 use App\Support\WeeklyDigest;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\URL;
 use Tests\TestCase;
@@ -56,6 +58,29 @@ class NewsletterTest extends TestCase
         $this->artisan('newsletter:weekly')->expectsOutputToContain('No hay contenido nuevo')->assertSuccessful();
 
         Mail::assertNothingSent();
+    }
+
+    public function test_guides_are_capped_and_newest_first(): void
+    {
+        // La semana del lanzamiento tuvo decenas de guías: el email las listaba todas.
+        $this->travelTo(Carbon::parse('2026-09-24 08:00'));
+        $since = now()->subDays(7)->startOfDay();
+        $recent = collect(Guides::all())
+            ->filter(fn ($g) => Carbon::parse($g['updated'])->gte($since));
+
+        $this->assertGreaterThan(WeeklyDigest::MAX_GUIDES, $recent->count(), 'El caso de prueba necesita más guías recientes que el límite.');
+
+        $digest = WeeklyDigest::build();
+
+        $this->assertCount(WeeklyDigest::MAX_GUIDES, $digest['guides']);
+        $this->assertSame($recent->count() - WeeklyDigest::MAX_GUIDES, $digest['more_guides']);
+        $this->assertSame(
+            $recent->sortByDesc('updated')->first()['title'],
+            $digest['guides'][0]['title'],
+        );
+
+        $mail = new WeeklyDigestMail(User::factory()->create(), $digest);
+        $mail->assertSeeInHtml("Y {$digest['more_guides']} guías más esta semana");
     }
 
     public function test_the_email_renders_with_a_one_click_unsubscribe_header(): void

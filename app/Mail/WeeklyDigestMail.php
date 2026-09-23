@@ -25,7 +25,7 @@ class WeeklyDigestMail extends Mailable
 
         return new Envelope(
             subject: $count > 0
-                ? "{$count} skills de IA nuevas esta semana"
+                ? number_format($count, 0, ',', '.').' skills de IA nuevas esta semana'
                 : 'Lo nuevo de esta semana en ia-skills',
         );
     }
