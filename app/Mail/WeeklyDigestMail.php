@@ -2,6 +2,7 @@
 
 namespace App\Mail;
 
+use App\Models\NewsletterSubscriber;
 use App\Models\User;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
@@ -10,14 +11,19 @@ use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Mail\Mailables\Headers;
 use Illuminate\Support\Facades\URL;
 
+/**
+ * Resumen semanal. El destinatario puede ser un usuario registrado
+ * (users.newsletter_opt_in) o un suscriptor que se apuntó solo con su email
+ * (newsletter_subscribers): cambia el saludo y el enlace de baja.
+ */
 class WeeklyDigestMail extends Mailable
 {
     use Queueable;
 
     /**
-     * @param  array{since: string, skills: array<int, array<string, mixed>>, guides: array<int, array<string, mixed>>, total_new: int}  $digest
+     * @param  array{since: string, skills: array<int, array<string, mixed>>, guides: array<int, array<string, mixed>>, more_guides: int, total_new: int}  $digest
      */
-    public function __construct(public User $user, public array $digest) {}
+    public function __construct(public User|NewsletterSubscriber $recipient, public array $digest) {}
 
     public function envelope(): Envelope
     {
@@ -47,15 +53,19 @@ class WeeklyDigestMail extends Mailable
         return new Content(
             markdown: 'mail.weekly-digest',
             with: [
-                'user' => $this->user,
+                'name' => $this->recipient instanceof User ? $this->recipient->name : null,
                 'digest' => $this->digest,
                 'unsubscribeUrl' => $this->unsubscribeUrl(),
+                // Los suscriptores sin cuenta no tienen perfil que gestionar.
+                'preferencesUrl' => $this->recipient instanceof User ? route('profile.edit') : null,
             ],
         );
     }
 
     private function unsubscribeUrl(): string
     {
-        return URL::signedRoute('newsletter.unsubscribe', ['user' => $this->user->id]);
+        return $this->recipient instanceof User
+            ? URL::signedRoute('newsletter.unsubscribe', ['user' => $this->recipient->id])
+            : URL::signedRoute('newsletter.subscriber.unsubscribe', ['subscriber' => $this->recipient->id]);
     }
 }

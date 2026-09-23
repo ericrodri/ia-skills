@@ -52,5 +52,9 @@
                 @endforeach
             </ul>
         </div>
+
+        <div class="mt-12">
+            @include('partials.newsletter-form', ['source' => 'guias'])
+        </div>
     </section>
 @endsection

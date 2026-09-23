@@ -79,6 +79,10 @@
                 </div>
             </section>
 
+            <div class="mt-14">
+                @include('partials.newsletter-form', ['source' => 'guia:'.$guide['slug']])
+            </div>
+
             @if(! empty($related))
                 <section class="mt-14">
                     <h2 class="text-xl font-bold text-gray-900 dark:text-white">Sigue leyendo</h2>

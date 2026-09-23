@@ -53,6 +53,13 @@ class AppServiceProvider extends ServiceProvider
         RateLimiter::for('skill-writes', fn (Request $request) => Limit::perHour(20)
             ->by($request->user()?->id ?: $request->ip()));
 
+        // Alta en la newsletter sin cuenta: cada envío manda un email de
+        // confirmación, así que se limita por IP para que no sirva de cañón de spam.
+        RateLimiter::for('newsletter', fn (Request $request) => [
+            Limit::perMinute(3)->by('newsletter-min:'.$request->ip()),
+            Limit::perDay(20)->by('newsletter-day:'.$request->ip()),
+        ]);
+
         // La API es pública y sin sesión: se limita por token, o por IP si no lo hay.
         RateLimiter::for('api', fn (Request $request) => Limit::perMinute(60)
             ->by($request->query('api_key') ?? $request->bearerToken() ?? $request->ip()));

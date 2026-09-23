@@ -61,10 +61,20 @@ Route::get('/colecciones/{slug}', [CollectionController::class, 'show'])->where(
 Route::get('/ranking', [RankingController::class, 'index'])->name('rankings.index');
 Route::get('/autores/{user:username}', [AuthorController::class, 'show'])->name('authors.show');
 
-// Baja del resumen semanal desde el enlace firmado del email
+// Resumen semanal: alta sin cuenta (doble opt-in) y bajas desde los enlaces firmados del email
+Route::post('/newsletter/suscribir', [NewsletterController::class, 'subscribe'])
+    ->middleware('throttle:newsletter')
+    ->name('newsletter.subscribe');
+
 Route::middleware('signed')->group(function () {
+    Route::get('/newsletter/confirmar/{subscriber}', [NewsletterController::class, 'confirmSubscription'])->name('newsletter.confirm');
+    Route::post('/newsletter/confirmar/{subscriber}', [NewsletterController::class, 'storeConfirmation'])->name('newsletter.confirm.store');
+
     Route::get('/newsletter/baja/{user}', [NewsletterController::class, 'confirm'])->name('newsletter.unsubscribe');
     Route::post('/newsletter/baja/{user}', [NewsletterController::class, 'unsubscribe'])->name('newsletter.unsubscribe.confirm');
+
+    Route::get('/newsletter/baja/s/{subscriber}', [NewsletterController::class, 'confirmSubscriberUnsubscribe'])->name('newsletter.subscriber.unsubscribe');
+    Route::post('/newsletter/baja/s/{subscriber}', [NewsletterController::class, 'subscriberUnsubscribe'])->name('newsletter.subscriber.unsubscribe.confirm');
 });
 
 // Guías (HTML renderizado en servidor, sin Inertia)

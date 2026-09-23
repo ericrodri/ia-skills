@@ -1,5 +1,5 @@
 <x-mail::message>
-# Hola{{ $user->name ? ', '.$user->name : '' }}
+# Hola{{ $name ? ', '.$name : '' }}
 
 @if($digest['total_new'] > 0)
 Esta semana se han publicado **{{ number_format($digest['total_new'], 0, ',', '.') }} skills nuevas** en ia-skills. Estas son las más votadas:
@@ -34,6 +34,6 @@ Un saludo,<br>
 El equipo de ia-skills
 
 <x-mail::subcopy>
-Recibes este email porque te suscribiste al resumen semanal. [Darte de baja con un clic]({{ $unsubscribeUrl }}) · [Gestionar preferencias]({{ route('profile.edit') }})
+Recibes este email porque te suscribiste al resumen semanal. [Darte de baja con un clic]({{ $unsubscribeUrl }})@if($preferencesUrl) · [Gestionar preferencias]({{ $preferencesUrl }})@endif
 </x-mail::subcopy>
 </x-mail::message>

@@ -1,5 +1,5 @@
 <script setup>
-import { Link, router, usePage } from '@inertiajs/vue3'
+import { Link, router, useForm, usePage } from '@inertiajs/vue3'
 import { computed, ref } from 'vue'
 
 const page = usePage()
@@ -11,6 +11,21 @@ const showMobileNav = ref(false)
 // HandleInertiaRequests. El mismo array alimenta layouts/site.blade.php, así
 // que añadir un enlace aquí lo añade también en las guías.
 const primaryNav = computed(() => page.props.nav?.primary ?? [])
+
+// Alta en el resumen semanal sin cuenta (NewsletterController::subscribe).
+// Los usuarios registrados se suscriben desde su perfil.
+const newsletter = useForm({ email: '', website: '', source: 'footer' })
+const newsletterSent = ref(false)
+
+function subscribe() {
+    newsletter.post(route('newsletter.subscribe'), {
+        preserveScroll: true,
+        onSuccess: () => {
+            newsletterSent.value = !page.props.flash?.error
+            if (newsletterSent.value) newsletter.reset('email')
+        },
+    })
+}
 
 function logout() {
     showUserMenu.value = false
@@ -194,6 +209,35 @@ function logout() {
                         <Link v-if="!auth?.user" :href="route('register')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Registrarse</Link>
                     </nav>
                 </div>
+                <div v-if="!auth?.user" id="newsletter" class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 sm:flex sm:items-center sm:justify-between gap-6">
+                    <div>
+                        <p class="text-sm font-semibold text-gray-900 dark:text-white">Las mejores skills, cada lunes</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Un email a la semana con lo más votado y las guías nuevas. Baja con un clic.</p>
+                    </div>
+                    <p v-if="newsletterSent" class="mt-3 sm:mt-0 text-sm font-medium text-green-700 dark:text-green-400" role="status">
+                        Revisa tu email para confirmar la suscripción.
+                    </p>
+                    <form v-else @submit.prevent="subscribe" class="mt-3 sm:mt-0 flex flex-col gap-1 sm:w-96">
+                        <div class="flex gap-2">
+                            <label for="footer-newsletter-email" class="sr-only">Tu email</label>
+                            <input
+                                id="footer-newsletter-email"
+                                v-model="newsletter.email"
+                                type="email"
+                                required
+                                autocomplete="email"
+                                placeholder="tu@email.com"
+                                class="flex-1 min-w-0 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 outline-none"
+                            />
+                            <!-- Honeypot: invisible para personas, los bots lo rellenan -->
+                            <input v-model="newsletter.website" type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
+                            <button type="submit" :disabled="newsletter.processing" class="btn-primary shrink-0 disabled:opacity-50">Suscribirme</button>
+                        </div>
+                        <p v-if="newsletter.errors.email" class="text-xs text-red-500">{{ newsletter.errors.email }}</p>
+                        <p v-else-if="$page.props.flash?.error" class="text-xs text-red-500">{{ $page.props.flash.error }}</p>
+                    </form>
+                </div>
+
                 <p class="mt-8 text-xs text-gray-400 dark:text-gray-500">© {{ new Date().getFullYear() }} ia-skills.com</p>
             </div>
         </footer>

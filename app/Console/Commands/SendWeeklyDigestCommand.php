@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use App\Mail\WeeklyDigestMail;
+use App\Models\NewsletterSubscriber;
 use App\Models\User;
 use App\Support\WeeklyDigest;
 use Illuminate\Console\Command;
@@ -10,7 +11,8 @@ use Illuminate\Support\Facades\Mail;
 use Throwable;
 
 /**
- * Resumen semanal para los usuarios suscritos (newsletter_opt_in).
+ * Resumen semanal para los usuarios suscritos (newsletter_opt_in) y para los
+ * suscriptores sin cuenta que han confirmado su email (newsletter_subscribers).
  *
  *   php artisan newsletter:weekly --dry-run        cuenta destinatarios y contenido, no envía
  *   php artisan newsletter:weekly --to=tu@email    envía solo a esa dirección (prueba)
@@ -55,14 +57,22 @@ class SendWeeklyDigestCommand extends Command
             return self::SUCCESS;
         }
 
-        $recipients = User::query()
+        $users = User::query()
             ->where('newsletter_opt_in', true)
             ->whereNotNull('email_verified_at');
 
-        $total = (clone $recipients)->count();
+        // Suscriptores sin cuenta (doble opt-in confirmado). Si su email ya es
+        // de un usuario suscrito, le llega por la vía del usuario: nunca dos veces.
+        $subscribers = NewsletterSubscriber::query()
+            ->active()
+            ->whereNotIn('email', (clone $users)->select('email'));
+
+        $totalUsers = (clone $users)->count();
+        $totalSubscribers = (clone $subscribers)->count();
 
         if ($this->option('dry-run')) {
-            $this->info("Dry run: se enviaría a {$total} suscriptores.");
+            $total = $totalUsers + $totalSubscribers;
+            $this->info("Dry run: se enviaría a {$total} suscriptores ({$totalUsers} usuarios y {$totalSubscribers} sin cuenta).");
 
             return self::SUCCESS;
         }
@@ -70,10 +80,10 @@ class SendWeeklyDigestCommand extends Command
         $sent = 0;
         $failed = 0;
 
-        $recipients->orderBy('id')->chunkById(200, function ($users) use ($digest, &$sent, &$failed) {
-            foreach ($users as $user) {
+        $send = function ($recipients) use ($digest, &$sent, &$failed) {
+            foreach ($recipients as $recipient) {
                 try {
-                    Mail::to($user)->send(new WeeklyDigestMail($user, $digest));
+                    Mail::to($recipient->email)->send(new WeeklyDigestMail($recipient, $digest));
                     $sent++;
                 } catch (Throwable $e) {
                     // Un buzón que rebota no debe cortar el envío al resto.
@@ -81,7 +91,10 @@ class SendWeeklyDigestCommand extends Command
                     $failed++;
                 }
             }
-        });
+        };
+
+        $users->chunkById(200, $send);
+        $subscribers->chunkById(200, $send);
 
         $this->info("Enviados: {$sent}. Fallidos: {$failed}.");
 
