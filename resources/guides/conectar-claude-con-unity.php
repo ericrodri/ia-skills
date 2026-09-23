@@ -1,36 +1,36 @@
 <?php
 
 return [
-    'title'          => 'Conectar Claude con Unity vía MCP',
-    'navTitle'       => 'Claude + Unity MCP',
-    'seoTitle'       => 'Cómo conectar Claude con Unity por MCP: guía paso a paso',
-    'description'    => 'Configura Unity MCP para que Claude controle el editor: crea objetos, escribe scripts y modifica escenas desde el chat. Funciona con Claude Desktop y Claude Code.',
-    'excerpt'        => 'Con Unity MCP le dices a Claude "crea un cubo rojo que gire" y lo hace directamente en tu escena. Sin copiar y pegar código. Sin cambiar de ventana.',
-    'category'       => 'Tutorial',
-    'published'      => '2026-09-23',
-    'updated'        => '2026-09-23',
+    'title' => 'Conectar Claude con Unity vía MCP',
+    'navTitle' => 'Claude + Unity MCP',
+    'seoTitle' => 'Conectar Claude con Unity por MCP: paso a paso',
+    'description' => 'Configura Unity MCP para que Claude controle el editor: crea objetos, escribe scripts y cambia escenas desde el chat, con Claude Desktop o Claude Code.',
+    'excerpt' => 'Con Unity MCP le dices a Claude "crea un cubo rojo que gire" y lo hace directamente en tu escena. Sin copiar y pegar código. Sin cambiar de ventana.',
+    'category' => 'Tutorial',
+    'published' => '2026-09-23',
+    'updated' => '2026-09-23',
     'readingMinutes' => 5,
-    'words'          => 850,
-    'about'          => 'Claude',
-    'related'        => ['empezar-con-claude-code', 'plugins-y-mcp-en-claude-code', 'que-es-un-agente-de-ia'],
-    'toc'            => [
-        'que-es'      => 'Qué es Unity MCP y para qué sirve',
-        'requisitos'  => 'Requisitos',
-        'instalar'    => 'Activar Unity MCP en el editor',
-        'configurar'  => 'Conectar Claude Desktop o Claude Code',
-        'usar'        => 'Cómo usarlo',
-        'limites'     => 'Lo que puede y lo que no puede hacer',
+    'words' => 830,
+    'about' => 'Claude',
+    'related' => ['empezar-con-claude-code', 'plugins-y-mcp-en-claude-code', 'que-es-un-agente-de-ia'],
+    'toc' => [
+        'que-es' => 'Qué es Unity MCP y para qué sirve',
+        'requisitos' => 'Requisitos',
+        'instalar' => 'Activar Unity MCP en el editor',
+        'configurar' => 'Conectar Claude Desktop o Claude Code',
+        'usar' => 'Cómo usarlo',
+        'limites' => 'Lo que puede y lo que no puede hacer',
     ],
-    'faq'            => [
+    'faq' => [
         '¿Funciona con versiones de Unity anteriores a la 6?' => 'El paquete oficial de Unity MCP solo está disponible a partir de Unity 6000.0.42f1. En versiones anteriores, la pestaña Window > Unity MCP no aparece. Existe algún paquete de terceros que backportea la funcionalidad, pero no está mantenido oficialmente.',
         '¿Puedo usar Claude Code en lugar de Claude Desktop?' => 'Sí. En Claude Code, añade el servidor MCP con el mismo comando que usarías en Claude Desktop pero mediante `claude mcp add` o editando directamente el archivo de configuración del proyecto.',
         '¿Es gratuito?' => 'El paquete Unity MCP es gratuito. Lo que tiene coste es el uso de la API de Claude: necesitas una suscripción de Claude Pro, Max o Team, o crédito de API en la consola de Anthropic.',
         '¿Puede escribir código en mi proyecto automáticamente?' => 'Sí. Claude puede crear scripts de C#, añadirlos a GameObjects y modificar sus valores. Revisa siempre el código antes de ejecutarlo en el editor, especialmente si el script toca archivos o hace llamadas de red.',
         '¿Funciona en Mac?' => 'Sí, tanto Claude Desktop como Unity 6 funcionan en macOS. La ruta del archivo de configuración de Claude Desktop cambia: en Mac está en ~/Library/Application Support/Claude/claude_desktop_config.json.',
     ],
-    'ctaTitle'       => 'Aprende a sacarle más partido a Claude Code',
-    'ctaBody'        => 'Unity MCP es un caso de uso de los servidores MCP de Claude Code. Si quieres entender cómo funcionan los MCP en general y qué otros servidores puedes conectar, lee <a href="/guias/plugins-y-mcp-en-claude-code">Plugins y MCP en Claude Code</a>.',
-    'body'           => <<<'HTML'
+    'ctaTitle' => 'Aprende a sacarle más partido a Claude Code',
+    'ctaBody' => 'Unity MCP es un caso de uso de los servidores MCP de Claude Code. Si quieres entender cómo funcionan los MCP en general y qué otros servidores puedes conectar, lee <a href="/guias/plugins-y-mcp-en-claude-code">Plugins y MCP en Claude Code</a>.',
+    'body' => <<<'HTML'
 <p>MCP (Model Context Protocol) es un estándar abierto que permite a Claude conectarse con herramientas externas: bases de datos, editores de código, aplicaciones de diseño. Unity 6 incluye un servidor MCP oficial que le da a Claude acceso directo al editor: puede crear GameObjects, escribir scripts, modificar materiales y consultar el estado de la escena sin que tú tengas que copiar y pegar nada.</p>
 
 <h2 id="que-es">Qué es Unity MCP y para qué sirve</h2>

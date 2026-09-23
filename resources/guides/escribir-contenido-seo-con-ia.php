@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 13,
-    'words' => 2111,
+    'words' => 2161,
     'about' => 'SEO y contenido generado con inteligencia artificial',
-    'related' => ['intencion-de-busqueda-en-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
+    'related' => ['titulos-y-meta-descriptions-que-consiguen-clics', 'intencion-de-busqueda-en-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'ai-overviews-caida-de-clics', 'keyword-research-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'se-nota-si-un-texto-lo-escribe-una-ia', 'investigar-con-ia-deep-research'],
     'toc' => [
         'que-dice-google' => 'Qué dice la política de Google, literalmente',
         'por-que-se-hunden' => 'Qué tienen en común los sitios que se hunden',
@@ -89,7 +89,7 @@ return [
         <tr><td>Volúmenes de búsqueda y dificultad</td><td>Nunca</td><td>Se los inventa con total naturalidad. Salen de herramientas con datos reales</td></tr>
         <tr><td>Esqueleto y brief del artículo</td><td>Sí, con revisión</td><td>Tiende al orden previsible: reordena tú según lo que quieras defender</td></tr>
         <tr><td>Primer borrador</td><td>Con cuidado</td><td>Útil como material en bruto; peligroso como entregable</td></tr>
-        <tr><td>Título, meta descripción y variantes</td><td>Sí</td><td>Diez opciones en treinta segundos, eliges tú</td></tr>
+        <tr><td>Título, meta descripción y variantes</td><td>Sí</td><td>Diez opciones en treinta segundos, eliges tú con el criterio de la <a href="/guias/titulos-y-meta-descriptions-que-consiguen-clics">guía de title y meta description</a></td></tr>
         <tr><td>Datos estructurados JSON-LD</td><td>Sí</td><td>Ahorra mucho tiempo y valídalo siempre con la herramienta oficial</td></tr>
         <tr><td>Enlazado interno</td><td>Sí</td><td>Con el mapa de contenidos delante propone enlaces que un humano no ve</td></tr>
         <tr><td>Traducción y adaptación a otros mercados</td><td>Sí, con revisor nativo</td><td>La calidad base es alta; los matices comerciales no</td></tr>

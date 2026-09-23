@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-09-18',
     'updated' => '2026-09-18',
-    'readingMinutes' => 11,
-    'words' => 1876,
+    'readingMinutes' => 12,
+    'words' => 1952,
     'about' => 'Google AI Overviews y CTR orgánico',
-    'related' => ['diagnosticar-caida-de-trafico-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
+    'related' => ['modo-ia-de-google', 'titulos-y-meta-descriptions-que-consiguen-clics', 'diagnosticar-caida-de-trafico-seo', 'actualizar-contenido-antiguo-con-ia', 'eeat-experiencia-contenido-con-ia', 'medir-el-trafico-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'escribir-contenido-seo-con-ia', 'keyword-research-con-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la página de resultados',
         'los-datos' => 'Qué dicen los datos y qué no dicen',
@@ -41,6 +41,8 @@ return [
 <p>Durante veinte años el trato fue implícito: Google formulaba la pregunta y tú ponías la respuesta, a cambio de la visita. Los AI Overviews rompen ese trato en una parte del inventario. El buscador compone la respuesta a partir de varias fuentes, la muestra arriba del todo y cita a unas pocas con un enlace pequeño.</p>
 
 <p>La consecuencia aritmética es inmediata: para las consultas donde aparece ese bloque, el número de usuarios que llega a mirar los resultados azules baja. No porque tu resultado sea peor, sino porque la pregunta ya está contestada antes de llegar a él. A principios de 2026 se estimaba que en torno al 68 % de las búsquedas en Estados Unidos terminaban sin ningún clic.</p>
+
+<p>No hay que confundirlos con el Modo IA, la pestaña conversacional que Google abrió en España en octubre de 2025: afecta a otro tipo de búsquedas, más largas y complejas, y se mide de otra forma. Las diferencias están en la guía del <a href="/guias/modo-ia-de-google">Modo IA de Google</a>.</p>
 
 <h2 id="los-datos">Qué dicen los datos y qué no dicen</h2>
 
@@ -94,7 +96,7 @@ return [
 <ol>
     <li><strong>Compara doce meses contra doce meses</strong>, no mes contra mes, para no confundir estacionalidad con tendencia estructural.</li>
     <li><strong>Ordena por pérdida de clics</strong> y quédate con las cincuenta consultas que más han caído.</li>
-    <li><strong>Marca las que mantienen impresiones y posición.</strong> Ese es el patrón: si pierdes clics con impresiones estables y posición estable, no es un problema de posicionamiento.</li>
+    <li><strong>Marca las que mantienen impresiones y posición.</strong> Ese es el patrón: si pierdes clics con impresiones estables y posición estable, no es un problema de posicionamiento. Si la consulta no tiene AI Overview y el CTR sigue bajo, el problema está en tu resultado, y se trata con la guía de <a href="/guias/titulos-y-meta-descriptions-que-consiguen-clics">title y meta description</a>.</li>
     <li><strong>Clasifícalas por intención</strong> con los tipos del apartado anterior. Vas a ver que casi todas las pérdidas se concentran en el grupo informativo.</li>
     <li><strong>Añade el informe de IA generativa</strong> que Search Console abrió a todos los sitios en 2026: te dice en qué páginas apareces dentro de las respuestas generadas, aunque todavía no te dé clics ni consultas. Cómo leerlo está en la <a href="/guias/medir-el-trafico-de-ia">guía de medición del tráfico de IA</a>.</li>
 </ol>

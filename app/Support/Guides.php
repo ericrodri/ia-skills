@@ -82,6 +82,9 @@ class Guides
         'intencion-de-busqueda-en-seo',
         'paginas-que-google-no-indexa',
         'migracion-web-sin-perder-seo',
+        'google-search-console-guia',
+        'modo-ia-de-google',
+        'titulos-y-meta-descriptions-que-consiguen-clics',
         'que-es-jev-modelo-system-one',
     ];
 

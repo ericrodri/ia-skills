@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-09-21',
     'updated' => '2026-09-21',
-    'readingMinutes' => 10,
-    'words' => 1715,
+    'readingMinutes' => 11,
+    'words' => 1763,
     'about' => 'Diagnóstico de caídas de tráfico orgánico',
-    'related' => ['paginas-que-google-no-indexa', 'migracion-web-sin-perder-seo', 'ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
+    'related' => ['google-search-console-guia', 'paginas-que-google-no-indexa', 'migracion-web-sin-perder-seo', 'ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
     'toc' => [
         'antes' => 'Antes de mirar nada: dos preguntas',
         'medicion' => 'Paso 1: descartar que sea la medición',
@@ -57,7 +57,7 @@ return [
 
 <h2 id="forma">Paso 2: la forma de la caída dice la causa</h2>
 
-<p>La curva es el mejor indicio que hay. Con el rango de 16 meses en Search Console:</p>
+<p>La curva es el mejor indicio que hay. Con el rango de 16 meses en Search Console (si no la tienes configurada, empieza por la <a href="/guias/google-search-console-guia">guía de Google Search Console</a>):</p>
 
 <figure>
 <table>

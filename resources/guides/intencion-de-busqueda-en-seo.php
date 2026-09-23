@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-22',
     'updated' => '2026-09-22',
     'readingMinutes' => 10,
-    'words' => 1685,
+    'words' => 1703,
     'about' => 'Intención de búsqueda en SEO',
-    'related' => ['keyword-research-con-ia', 'canibalizacion-de-keywords', 'escribir-contenido-seo-con-ia', 'autoridad-tematica-y-clusters-de-contenido', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo'],
+    'related' => ['titulos-y-meta-descriptions-que-consiguen-clics', 'keyword-research-con-ia', 'canibalizacion-de-keywords', 'escribir-contenido-seo-con-ia', 'autoridad-tematica-y-clusters-de-contenido', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo'],
     'toc' => [
         'que-es' => 'Qué es y por qué decide el resto',
         'tipos' => 'Los cuatro tipos y dónde se quedan cortos',
@@ -72,7 +72,7 @@ return [
     <li><strong>Busca en incógnito y sin personalización.</strong> Con la sesión abierta ves tu historial, no el consenso.</li>
     <li><strong>Clasifica los diez primeros por tipo de página.</strong> Artículo, ficha, listado, herramienta, foro, vídeo. Si nueve de diez son del mismo tipo, la intención está cerrada: o entras con ese formato o no entras.</li>
     <li><strong>Mira qué bloques hay además de los enlaces.</strong> Respuesta generada, «Otras preguntas», vídeos, imágenes, resultados locales, fichas de producto. Cada bloque te dice qué espera el usuario y cuánto espacio queda para un clic orgánico.</li>
-    <li><strong>Lee los títulos, no los artículos.</strong> Las palabras que se repiten en los diez títulos son las que Google asocia a la intención: «gratis», «2026», «paso a paso», «para empresas». Si tu título no comparte ninguna, probablemente estés respondiendo a otra cosa.</li>
+    <li><strong>Lee los títulos, no los artículos.</strong> Las palabras que se repiten en los diez títulos son las que Google asocia a la intención: «gratis», «2026», «paso a paso», «para empresas». Si tu título no comparte ninguna, probablemente estés respondiendo a otra cosa. Cómo convertir eso en un título que consiga clics está en la <a href="/guias/titulos-y-meta-descriptions-que-consiguen-clics">guía de title y meta description</a>.</li>
     <li><strong>Abre los tres primeros y cronometra cuánto tardas en ver la respuesta.</strong> Si en los tres está en la primera pantalla, la intención exige respuesta inmediata y tu introducción de 400 palabras sobra.</li>
 </ol>
 

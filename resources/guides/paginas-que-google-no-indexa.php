@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-22',
     'updated' => '2026-09-22',
     'readingMinutes' => 10,
-    'words' => 1578,
+    'words' => 1605,
     'about' => 'Indexación en Google y diagnóstico de páginas no indexadas',
-    'related' => ['auditoria-seo-tecnica', 'diagnosticar-caida-de-trafico-seo', 'enlazado-interno-y-arquitectura-web', 'migracion-web-sin-perder-seo', 'seo-programatico-con-ia', 'canibalizacion-de-keywords'],
+    'related' => ['google-search-console-guia', 'auditoria-seo-tecnica', 'diagnosticar-caida-de-trafico-seo', 'enlazado-interno-y-arquitectura-web', 'migracion-web-sin-perder-seo', 'seo-programatico-con-ia', 'canibalizacion-de-keywords'],
     'toc' => [
         'confirmar' => 'Primero: confirma que no está indexada',
         'informe' => 'Dónde mirar: el informe de indexación',
@@ -42,6 +42,8 @@ return [
     <li><strong>Busca la URL exacta</strong> con <code>site:tudominio.com/la-ruta</code>. Si aparece, está indexada y lo que tienes es un problema de posicionamiento, no de indexación.</li>
     <li><strong>Inspecciona la URL en Search Console.</strong> Pega la dirección en la barra superior. Te dirá si está en el índice, cuándo se rastreó por última vez, qué URL considera Google canónica y qué vio al renderizar. Ese último dato es el que más veces resuelve el caso de golpe.</li>
 </ol>
+
+<p>Si es la primera vez que abres la herramienta, cómo darla de alta y qué informes merecen tu tiempo está en la <a href="/guias/google-search-console-guia">guía de Google Search Console</a>.</p>
 
 <p>Si la inspección dice que la canónica elegida por Google es otra URL distinta de la tuya, no tienes una página sin indexar: tienes una duplicidad, y se trata como tal.</p>
 

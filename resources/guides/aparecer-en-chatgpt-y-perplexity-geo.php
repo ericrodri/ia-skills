@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-27',
     'updated' => '2026-08-27',
     'readingMinutes' => 10,
-    'words' => 1661,
+    'words' => 1687,
     'about' => 'Generative Engine Optimization',
-    'related' => ['menciones-de-marca-y-enlaces', 'llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['modo-ia-de-google', 'menciones-de-marca-y-enlaces', 'llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',
