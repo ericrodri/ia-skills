@@ -38,6 +38,9 @@
         @error('email')
             <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>
         @enderror
-        <p class="mt-2 text-xs text-gray-400 dark:text-gray-500">Te enviaremos un email para confirmar. Solo lo usamos para este resumen.</p>
+        <p class="mt-2 text-xs text-gray-400 dark:text-gray-500">
+            Te enviaremos un email para confirmar. Solo lo usamos para este resumen.
+            <a href="{{ route('legal.privacy') }}#finalidades" class="underline hover:text-brand-600">Política de privacidad</a>
+        </p>
     @endif
 </section>

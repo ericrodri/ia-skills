@@ -207,12 +207,17 @@ function logout() {
                         <Link :href="route('how-it-works')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Cómo funciona</Link>
                         <Link :href="route('skills.saved')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guardadas</Link>
                         <Link v-if="!auth?.user" :href="route('register')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Registrarse</Link>
+                        <a :href="route('legal.privacy')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Privacidad</a>
                     </nav>
                 </div>
                 <div v-if="!auth?.user" id="newsletter" class="mt-8 pt-8 border-t border-gray-100 dark:border-gray-800 sm:flex sm:items-center sm:justify-between gap-6">
                     <div>
                         <p class="text-sm font-semibold text-gray-900 dark:text-white">Las mejores skills, cada lunes</p>
-                        <p class="text-xs text-gray-500 dark:text-gray-400">Un email a la semana con lo más votado y las guías nuevas. Baja con un clic.</p>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">
+                            Un email a la semana con lo más votado y las guías nuevas. Baja con un clic.
+                            <!-- Página Blade: <a>, no <Link> -->
+                            <a :href="route('legal.privacy') + '#finalidades'" class="underline hover:text-gray-900 dark:hover:text-white">Privacidad</a>
+                        </p>
                     </div>
                     <p v-if="newsletterSent" class="mt-3 sm:mt-0 text-sm font-medium text-green-700 dark:text-green-400" role="status">
                         Revisa tu email para confirmar la suscripción.

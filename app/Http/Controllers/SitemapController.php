@@ -63,6 +63,7 @@ class SitemapController extends Controller
             ['loc' => route('how-it-works'), 'changefreq' => 'monthly', 'priority' => '0.6'],
             ['loc' => route('rankings.index'), 'changefreq' => 'daily', 'priority' => '0.7'],
             ['loc' => route('collections.index'), 'changefreq' => 'weekly', 'priority' => '0.7'],
+            ['loc' => route('legal.privacy'), 'changefreq' => 'yearly', 'priority' => '0.2'],
         ];
 
         foreach (Collections::all() as $collection) {

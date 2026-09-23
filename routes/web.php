@@ -8,6 +8,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FeedController;
 use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LegalController;
 use App\Http\Controllers\LlmsTxtController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\OgImageController;
@@ -84,6 +85,7 @@ Route::get('/guias/{slug}', [GuideController::class, 'show'])->name('guides.show
 // Skills
 Route::get('/skills', [SkillController::class, 'index'])->name('skills.index');
 Route::get('/como-funciona', [PageController::class, 'howItWorks'])->name('how-it-works');
+Route::get('/privacidad', [LegalController::class, 'privacy'])->name('legal.privacy');
 
 
 // Auth-protected routes

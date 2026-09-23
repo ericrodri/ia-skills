@@ -126,6 +126,8 @@ const submit = () => {
             <!-- Terms note -->
             <p class="text-center text-xs text-gray-400 dark:text-gray-500">
                 Al registrarte aceptas compartir skills con la comunidad de forma constructiva.
+                Tratamos tus datos como se explica en la
+                <a :href="route('legal.privacy')" class="underline hover:text-brand-600">política de privacidad</a>.
             </p>
         </form>
 
