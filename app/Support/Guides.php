@@ -85,6 +85,9 @@ class Guides
         'google-search-console-guia',
         'modo-ia-de-google',
         'titulos-y-meta-descriptions-que-consiguen-clics',
+        'google-discover-como-aparecer',
+        'seo-para-tiendas-online',
+        'posicionar-una-web-nueva-en-google',
         'que-es-jev-modelo-system-one',
     ];
 

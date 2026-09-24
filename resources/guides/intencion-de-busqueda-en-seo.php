@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-22',
     'updated' => '2026-09-22',
     'readingMinutes' => 10,
-    'words' => 1703,
+    'words' => 1724,
     'about' => 'Intención de búsqueda en SEO',
-    'related' => ['titulos-y-meta-descriptions-que-consiguen-clics', 'keyword-research-con-ia', 'canibalizacion-de-keywords', 'escribir-contenido-seo-con-ia', 'autoridad-tematica-y-clusters-de-contenido', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo'],
+    'related' => ['seo-para-tiendas-online', 'titulos-y-meta-descriptions-que-consiguen-clics', 'keyword-research-con-ia', 'canibalizacion-de-keywords', 'escribir-contenido-seo-con-ia', 'autoridad-tematica-y-clusters-de-contenido', 'ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo'],
     'toc' => [
         'que-es' => 'Qué es y por qué decide el resto',
         'tipos' => 'Los cuatro tipos y dónde se quedan cortos',
@@ -85,7 +85,7 @@ return [
 <ul>
     <li><strong>Informativa:</strong> la respuesta en las primeras cien palabras, subtítulos que se puedan escanear y ejemplos. Nada de recorrido histórico antes de responder.</li>
     <li><strong>Comercial:</strong> una tabla de comparación real, con criterios que distingan, y una recomendación. Un listado de doce opciones sin criterio no resuelve la decisión, que es a lo que vino el usuario.</li>
-    <li><strong>Transaccional:</strong> precio visible, condiciones y un botón. Si la consulta lleva «precio» y tu página no lo dice, el rebote es inmediato.</li>
+    <li><strong>Transaccional:</strong> precio visible, condiciones y un botón. Si la consulta lleva «precio» y tu página no lo dice, el rebote es inmediato. En una tienda, qué búsquedas gana la categoría y cuáles la ficha está en la guía de <a href="/guias/seo-para-tiendas-online">SEO para tiendas online</a>.</li>
     <li><strong>De hacer:</strong> la herramienta arriba y la explicación debajo. El orden inverso es el error más caro de esta categoría.</li>
 </ul>
 

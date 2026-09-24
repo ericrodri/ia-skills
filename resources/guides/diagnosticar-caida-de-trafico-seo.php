@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1763,
     'about' => 'Diagnóstico de caídas de tráfico orgánico',
-    'related' => ['google-search-console-guia', 'paginas-que-google-no-indexa', 'migracion-web-sin-perder-seo', 'ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
+    'related' => ['google-discover-como-aparecer', 'google-search-console-guia', 'paginas-que-google-no-indexa', 'migracion-web-sin-perder-seo', 'ai-overviews-caida-de-clics', 'canibalizacion-de-keywords', 'auditoria-seo-tecnica', 'actualizar-contenido-antiguo-con-ia', 'medir-el-trafico-de-ia', 'autoridad-tematica-y-clusters-de-contenido'],
     'toc' => [
         'antes' => 'Antes de mirar nada: dos preguntas',
         'medicion' => 'Paso 1: descartar que sea la medición',
@@ -104,7 +104,7 @@ return [
 
 <h2 id="update">Paso 5: si fue un core update</h2>
 
-<p>Pon las fechas de los updates sobre tu curva. Si el escalón empieza dentro de la ventana de despliegue, ahí está la causa. En 2026 han ido cuatro: uno específico de Discover en febrero, un update de spam y un core update en marzo, y otro core update en mayo.</p>
+<p>Pon las fechas de los updates sobre tu curva. Si el escalón empieza dentro de la ventana de despliegue, ahí está la causa. En 2026 han ido cuatro: uno específico de <a href="/guias/google-discover-como-aparecer">Discover</a> en febrero, un update de spam y un core update en marzo, y otro core update en mayo.</p>
 
 <p>El de marzo de 2026 fue el más volátil registrado: según SE Ranking, el 79,5 % de los resultados del top 3 cambió de posición y cerca de una de cada cuatro páginas del top 10 desapareció del top 100. Con esa volatilidad, una caída fuerte en esas fechas no dice nada sobre la calidad de tu sitio en particular; dice que se recolocó el sector entero.</p>
 

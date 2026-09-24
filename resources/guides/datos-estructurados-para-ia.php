@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-19',
     'updated' => '2026-09-19',
     'readingMinutes' => 10,
-    'words' => 1651,
+    'words' => 1667,
     'about' => 'Datos estructurados Schema.org y búsqueda con IA',
-    'related' => ['auditoria-seo-tecnica', 'aparecer-en-chatgpt-y-perplexity-geo', 'llms-txt-sirve-para-algo', 'seo-local-con-ia', 'ai-overviews-caida-de-clics'],
+    'related' => ['seo-para-tiendas-online', 'auditoria-seo-tecnica', 'aparecer-en-chatgpt-y-perplexity-geo', 'llms-txt-sirve-para-algo', 'seo-local-con-ia', 'ai-overviews-caida-de-clics'],
     'toc' => [
         'para-que' => 'Para qué sirve el marcado hoy',
         'estudio' => 'Lo que midió el estudio de 1.885 páginas',
@@ -75,7 +75,7 @@ return [
 <ol>
     <li><strong><code>Organization</code> en todo el sitio.</strong> Nombre, logo, URL, perfiles oficiales. Una vez, en la plantilla base, y con un <code>@id</code> estable al que puedan apuntar los demás bloques.</li>
     <li><strong><code>BreadcrumbList</code> en cada página interior.</strong> Barato, sale en resultados y describe tu arquitectura mejor que ninguna otra señal.</li>
-    <li><strong>El tipo principal de tu contenido.</strong> <code>Product</code> con <code>offers</code> si vendes; <code>Article</code> con autor y fechas si publicas; <code>LocalBusiness</code> con horario y dirección si atiendes en un local —lo que además alimenta las recomendaciones de los asistentes, como cuenta la guía de <a href="/guias/seo-local-con-ia">SEO local con IA</a>—; <code>JobPosting</code>, <code>Event</code> o <code>Recipe</code> si es lo tuyo.</li>
+    <li><strong>El tipo principal de tu contenido.</strong> <code>Product</code> con <code>offers</code> si vendes (el resto del trabajo de una tienda está en la guía de <a href="/guias/seo-para-tiendas-online">SEO para tiendas online</a>); <code>Article</code> con autor y fechas si publicas; <code>LocalBusiness</code> con horario y dirección si atiendes en un local —lo que además alimenta las recomendaciones de los asistentes, como cuenta la guía de <a href="/guias/seo-local-con-ia">SEO local con IA</a>—; <code>JobPosting</code>, <code>Event</code> o <code>Recipe</code> si es lo tuyo.</li>
     <li><strong><code>ItemList</code> en los listados.</strong> Categorías, colecciones, índices. Describe el conjunto en vez de dejar que se infiera de un montón de enlaces.</li>
     <li><strong><code>FAQPage</code>, con expectativas bajas.</strong> Ya casi no genera desplegable en resultados, pero cuesta cero si ya tienes las preguntas escritas.</li>
 </ol>

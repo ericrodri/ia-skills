@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1807,
     'about' => 'Autoridad temática y arquitectura de contenido en clusters',
-    'related' => ['enlazado-interno-y-arquitectura-web', 'canibalizacion-de-keywords', 'keyword-research-con-ia', 'eeat-experiencia-contenido-con-ia', 'seo-programatico-con-ia', 'actualizar-contenido-antiguo-con-ia'],
+    'related' => ['posicionar-una-web-nueva-en-google', 'enlazado-interno-y-arquitectura-web', 'canibalizacion-de-keywords', 'keyword-research-con-ia', 'eeat-experiencia-contenido-con-ia', 'seo-programatico-con-ia', 'actualizar-contenido-antiguo-con-ia'],
     'toc' => [
         'que-es' => 'Qué es y qué no es',
         'por-que' => 'Por qué pesa más que antes',

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-23',
     'updated' => '2026-09-23',
     'readingMinutes' => 10,
-    'words' => 1701,
+    'words' => 1732,
     'about' => 'Google Search Console',
-    'related' => ['paginas-que-google-no-indexa', 'diagnosticar-caida-de-trafico-seo', 'titulos-y-meta-descriptions-que-consiguen-clics', 'medir-el-trafico-de-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
+    'related' => ['posicionar-una-web-nueva-en-google', 'paginas-que-google-no-indexa', 'diagnosticar-caida-de-trafico-seo', 'titulos-y-meta-descriptions-que-consiguen-clics', 'medir-el-trafico-de-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
     'toc' => [
         'que-es' => 'Qué es y qué no es',
         'alta' => 'Darla de alta: dominio o prefijo de URL',
@@ -101,6 +101,7 @@ return [
     <li><strong>Experiencia → Core Web Vitals.</strong> Agrupa URLs parecidas y te dice si pasan los umbrales de carga, respuesta y estabilidad con datos de usuarios reales. Útil para priorizar plantillas, no para perseguir cada décima.</li>
     <li><strong>Mejoras.</strong> Errores de datos estructurados por tipo. Si usas marcado, revísalo tras cada cambio de plantilla.</li>
     <li><strong>Enlaces.</strong> Enlaces externos e internos por página. Sirve para detectar páginas importantes con pocos enlaces internos.</li>
+    <li><strong>Discover.</strong> Clics e impresiones en el feed de Google, separados de la búsqueda. Solo aparece a partir de cierto volumen; qué contenido entra ahí está en la guía de <a href="/guias/google-discover-como-aparecer">Google Discover</a>.</li>
     <li><strong>Acciones manuales y Seguridad.</strong> Deberían estar vacíos. Si no lo están, es lo primero.</li>
     <li><strong>IA generativa.</strong> Impresiones en AI Overviews, Modo IA y Discover, por página. Cómo interpretarlo está en la guía de <a href="/guias/medir-el-trafico-de-ia">medir el tráfico de IA</a>.</li>
 </ul>

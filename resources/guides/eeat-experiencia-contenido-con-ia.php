@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 9,
     'words' => 1553,
     'about' => 'E-E-A-T y contenido asistido por inteligencia artificial',
-    'related' => ['menciones-de-marca-y-enlaces', 'escribir-contenido-seo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia', 'datos-estructurados-para-ia'],
+    'related' => ['google-discover-como-aparecer', 'menciones-de-marca-y-enlaces', 'escribir-contenido-seo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia', 'datos-estructurados-para-ia'],
     'toc' => [
         'que-es' => 'Qué mide realmente el E-E-A-T',
         'experiencia' => 'Por qué la experiencia es la letra que decide',

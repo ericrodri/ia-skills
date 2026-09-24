@@ -93,6 +93,9 @@ class RelatedContent
         'google-search-console-guia' => [['marketing', 'analisis-de-datos'], 'seo'],
         'modo-ia-de-google' => [['marketing'], 'seo'],
         'titulos-y-meta-descriptions-que-consiguen-clics' => [['marketing'], 'seo'],
+        'google-discover-como-aparecer' => [['marketing'], 'contenido'],
+        'seo-para-tiendas-online' => [['marketing'], 'seo'],
+        'posicionar-una-web-nueva-en-google' => [['marketing', 'freelancers'], 'seo'],
         'que-es-jev-modelo-system-one' => [['desarrollo'], 'agente'],
         'conectar-claude-con-unity' => [['desarrollo'], 'mcp'],
     ];
