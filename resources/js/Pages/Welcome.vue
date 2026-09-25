@@ -8,6 +8,7 @@ defineProps({
     professions: Array,
     topSkills: Array,
     collections: { type: Array, default: () => [] },
+    whatIsASkill: { type: Array, default: () => [] },
 })
 
 const auth = usePage().props.auth
@@ -16,7 +17,7 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
 
 <template>
     <Head>
-        <title>Prompts y skills de IA para profesionales — ia-skills</title>
+        <title>ia-skills: skills y prompts de IA para profesionales</title>
     </Head>
 
     <AppLayout>
@@ -27,8 +28,8 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
                     Únete a la comunidad
                 </div>
                 <h1 class="text-4xl sm:text-5xl font-extrabold text-gray-900 dark:text-white leading-tight tracking-tight">
-                    Descubre cómo los mejores<br class="hidden sm:block" />
-                    <span class="text-brand-600 dark:text-brand-500">profesionales usan IA</span>
+                    Skills de IA y prompts<br class="hidden sm:block" />
+                    <span class="text-brand-600 dark:text-brand-500">que usan los mejores profesionales</span>
                 </h1>
                 <p class="mt-5 text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
                     Skills reales, workflows y prompts validados por la comunidad. Organizados por profesión, listos para usar.
@@ -76,6 +77,17 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
             <div class="flex flex-col gap-3">
                 <SkillCard v-for="skill in topSkills" :key="skill.id" :skill="skill" />
             </div>
+        </section>
+
+        <!-- Qué es una skill de IA -->
+        <section v-if="whatIsASkill?.length" class="max-w-3xl mx-auto px-4 sm:px-6 pb-16">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white">¿Qué es una skill de IA?</h2>
+            <p v-for="(paragraph, i) in whatIsASkill" :key="i" class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">{{ paragraph }}</p>
+            <p class="mt-4 text-sm">
+                <a href="/guias/que-son-los-skills-de-claude-code" class="text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Qué son los skills de Claude Code →</a>
+                <span class="mx-2 text-gray-300 dark:text-gray-600">·</span>
+                <a href="/guias/prompts-de-ia-por-profesion" class="text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Prompts de IA por profesión →</a>
+            </p>
         </section>
 
         <!-- Colecciones -->

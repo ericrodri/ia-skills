@@ -25,7 +25,7 @@ class ProfessionTasks
     private static ?array $cache = null;
 
     /**
-     * @return array<int, array{slug: string, name: string, heading: string, intro: string, terms: array<int, string>}>
+     * @return array<int, array{slug: string, name: string, heading: string, intro: string, terms: array<int, string>, seoTitle?: string, description?: string}>
      */
     public static function for(string $professionSlug): array
     {
@@ -33,7 +33,7 @@ class ProfessionTasks
     }
 
     /**
-     * @return array{slug: string, name: string, heading: string, intro: string, terms: array<int, string>}|null
+     * @return array{slug: string, name: string, heading: string, intro: string, terms: array<int, string>, seoTitle?: string, description?: string}|null
      */
     public static function find(string $professionSlug, string $taskSlug): ?array
     {

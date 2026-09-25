@@ -143,6 +143,7 @@ class Seo
             '@type' => 'Organization',
             '@id' => url('/').'#organization',
             'name' => self::SITE_NAME,
+            'alternateName' => ['IA Skills', 'iaskills'],
             'url' => url('/'),
             'logo' => [
                 '@type' => 'ImageObject',

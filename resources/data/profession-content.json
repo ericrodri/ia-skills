@@ -50,9 +50,13 @@
   "diseno": {
     "intro": [
       "El diseño asistido por IA no reemplaza el criterio del diseñador — lo amplifica. Puedes generar briefs de diseño completos, evaluar la usabilidad de una interfaz contra los heurísticos de Nielsen, estructurar un sistema de diseño escalable o preparar el handoff a desarrollo en una fracción del tiempo habitual.",
-      "Estos prompts están construidos para diseñadores UX/UI, product designers y brand designers que trabajan con Figma, quieren producir entregables de calidad profesional y necesitan una herramienta que entienda la diferencia entre diseño centrado en el usuario y diseño bonito. Cada prompt produce un output estructurado, accionable y listo para usar con tu equipo."
+      "Estos prompts están construidos para diseñadores gráficos, diseñadores UX/UI, product designers y brand designers que trabajan con Figma, Illustrator o Canva, quieren producir entregables de calidad profesional y necesitan una herramienta que entienda la diferencia entre diseño centrado en el usuario y diseño bonito. Cada prompt produce un output estructurado, accionable y listo para usar con tu equipo."
     ],
     "faq": [
+      {
+        "q": "¿Hay prompts de IA para diseño gráfico?",
+        "a": "Sí. Hay prompts para ChatGPT, Claude y Midjourney pensados para diseño gráfico: briefs de logo, propuestas de paleta y pareja tipográfica, conceptos para carteles, packaging e infografías, y crítica de una pieza a partir de una captura. Están reunidos en la sección de diseño gráfico de esta página. La IA acelera la exploración y la justificación; la dirección visual y el arte final siguen siendo tuyos."
+      },
       {
         "q": "¿Estos prompts sirven para UX research además de diseño visual?",
         "a": "Sí. Hay prompts específicos para investigación con usuarios, síntesis de insights, mapeo del customer journey y diseño de tests de usabilidad."

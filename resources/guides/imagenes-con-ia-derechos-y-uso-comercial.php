@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 15,
     'words' => 2452,
     'about' => 'Propiedad intelectual, licencias de uso comercial y obligaciones de transparencia de las imágenes generadas con inteligencia artificial en España y la UE',
-    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['prompts-para-diseno-grafico', 'video-y-audio-con-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'pregunta' => 'La pregunta está mal formulada',
         'dos-planos' => 'Dos planos que no se tocan: licencia y autoría',

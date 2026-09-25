@@ -204,13 +204,18 @@ class ProfessionController extends Controller
         $total = $skills->total();
         $thin = $total < ProfessionTasks::MIN_SKILLS;
 
-        $title = $page > 1
-            ? "{$definition['heading']} ({$profession->name}) · página {$page}"
-            : "{$definition['heading']}: {$total} skills para {$profession->name}";
+        // `seoTitle` y `description` son opcionales: permiten ajustar el
+        // snippet a la consulta real de Search Console («prompts para diseño
+        // gráfico») sin cambiar el H1 ni el texto visible de la landing.
+        $title = match (true) {
+            $page > 1 => "{$definition['heading']} ({$profession->name}) · página {$page}",
+            isset($definition['seoTitle']) => str_replace(':total', (string) $total, $definition['seoTitle']),
+            default => "{$definition['heading']}: {$total} skills para {$profession->name}",
+        };
 
         Seo::share([
             'title' => $title,
-            'description' => $definition['intro'],
+            'description' => $definition['description'] ?? $definition['intro'],
             'canonical' => $page > 1 ? $url.'?page='.$page : $url,
             'robots' => $thin || $page > 1 ? 'noindex, follow' : null,
             'ogImage' => route('og.profession', ['profession' => $profession->slug]),

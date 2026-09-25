@@ -12,6 +12,16 @@ use Inertia\Response;
 
 class HomeController extends Controller
 {
+    /**
+     * Bloque «¿Qué es una skill de IA?»: responde a la intención informativa
+     * de «skill ia» sin crear una página aparte que compita con la home. Se
+     * pasa como prop para que el texto visible y el del fallback sean el mismo.
+     */
+    private const WHAT_IS_A_SKILL = [
+        'Una skill de IA es un procedimiento reutilizable que le explica a un asistente como Claude, ChatGPT o Gemini cómo hacer una tarea concreta de tu trabajo: qué contexto necesita, qué pasos seguir y qué formato debe tener el resultado. Un prompt resuelve una petición; una skill convierte esa petición en un método que puedes repetir cada semana con el mismo nivel de calidad.',
+        'En ia-skills reunimos skills y prompts escritos por profesionales de marketing, desarrollo, diseño, ventas, RRHH, finanzas o legal. La comunidad los vota, así que los más útiles suben arriba. Puedes copiarlos gratis y sin registro, o descargarlos como SKILL.md para usarlos en Claude Code.',
+    ];
+
     public function __invoke(): Response
     {
         $professions = Profession::where('is_active', true)
@@ -28,22 +38,32 @@ class HomeController extends Controller
 
         $count = SiteData::skillsCountLabel();
 
+        // La home es la que recibe las búsquedas de marca y sus variantes
+        // («ia skills», «skills ia», «skill ia», «skills de ia»): el title y
+        // el H1 empiezan por el término exacto, y el title lleva el nombre del
+        // sitio para que Seo::normalize no le añada el sufijo por duplicado.
         Seo::share([
-            'title' => 'Prompts y skills de IA para profesionales',
-            'description' => "{$count} prompts y skills de IA validados por la comunidad y organizados por profesión. Cópialos y úsalos en Claude, ChatGPT o Gemini. Gratis y sin registro.",
+            'title' => 'ia-skills: skills y prompts de IA para profesionales',
+            'description' => "IA Skills: {$count} skills de IA y prompts gratis, organizados por profesión y votados por la comunidad. Úsalos en Claude, ChatGPT o Gemini sin registrarte.",
             'canonical' => route('home'),
             'fallback' => [
-                'heading' => 'Descubre cómo los mejores profesionales usan IA',
+                'heading' => 'Skills de IA y prompts que usan los mejores profesionales',
                 'paragraphs' => [
                     'Skills reales, workflows y prompts validados por la comunidad. Organizados por profesión, listos para usar.',
+                    ...self::WHAT_IS_A_SKILL,
                 ],
-                'links' => $professions->mapWithKeys(fn (Profession $p) => [
+                // toBase(): merge() de una colección Eloquent espera modelos y
+                // falla con los pares [texto => url].
+                'links' => $professions->toBase()->mapWithKeys(fn (Profession $p) => [
                     "Prompts de IA para {$p->name}" => route('professions.show', ['profession' => $p->slug]),
                 ])->merge(
                     $topSkills->mapWithKeys(fn (Skill $skill) => [
                         $skill->title => route('skills.show', ['skill' => $skill->slug]),
                     ])
-                )->all(),
+                )->merge([
+                    'Qué son los skills de Claude Code' => route('guides.show', ['slug' => 'que-son-los-skills-de-claude-code']),
+                    'Prompts de IA por profesión' => route('guides.show', ['slug' => 'prompts-de-ia-por-profesion']),
+                ])->all(),
             ],
             'schema' => [
                 Seo::organization(),
@@ -52,7 +72,9 @@ class HomeController extends Controller
                     '@type' => 'WebSite',
                     '@id' => url('/').'#website',
                     'name' => Seo::SITE_NAME,
-                    'alternateName' => 'ia-skills.com',
+                    // Variantes con las que la gente busca la marca: ayudan a
+                    // Google a asociarlas con el nombre del sitio en la SERP.
+                    'alternateName' => ['IA Skills', 'iaskills', 'ia-skills.com'],
                     'url' => url('/'),
                     'inLanguage' => 'es',
                     'description' => 'Biblioteca colaborativa de prompts y skills de IA para profesionales, organizada por profesión.',
@@ -87,6 +109,7 @@ class HomeController extends Controller
         return Inertia::render('Welcome', [
             'professions' => $professions,
             'topSkills' => $topSkills,
+            'whatIsASkill' => self::WHAT_IS_A_SKILL,
             'collections' => collect(Collections::all())
                 ->take(3)
                 ->map(fn (array $c) => [

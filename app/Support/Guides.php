@@ -27,6 +27,7 @@ class Guides
         'como-escribir-prompts-efectivos',
         'ventana-de-contexto-conversaciones-largas',
         'prompts-de-ia-por-profesion',
+        'prompts-para-diseno-grafico',
         'gpts-proyectos-y-skills',
         'que-es-un-agente-de-ia',
         'que-tareas-de-tu-profesion-automatiza-la-ia',

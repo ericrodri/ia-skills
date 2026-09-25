@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1380,
     'about' => 'Prompts de IA',
-    'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'como-escribir-prompts-efectivos', 'que-son-los-skills-de-claude-code'],
+    'related' => ['prompts-para-diseno-grafico', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'como-escribir-prompts-efectivos', 'que-son-los-skills-de-claude-code'],
     'toc' => [
         'por-que-profesion' => 'Por qué los prompts genéricos fallan',
         'marketing' => 'Marketing y contenido',
@@ -127,7 +127,7 @@ return [
     <tbody>
         <tr>
             <td><a href="/profesiones/diseno">Diseño</a></td>
-            <td>Briefs a partir de una conversación, crítica estructurada de una pantalla, variantes de microcopy</td>
+            <td>Briefs a partir de una conversación, crítica estructurada de una pantalla, variantes de microcopy (ver <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>)</td>
             <td>La dirección visual y la decisión final</td>
         </tr>
         <tr>

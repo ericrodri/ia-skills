@@ -36,6 +36,7 @@ class RelatedContent
         'como-escribir-prompts-efectivos' => [['marketing', 'ventas', 'freelancers'], null],
         'ventana-de-contexto-conversaciones-largas' => [['desarrollo', 'product-management'], 'document'],
         'prompts-de-ia-por-profesion' => [[], null],
+        'prompts-para-diseno-grafico' => [['diseno'], 'gráfic'],
         'gpts-proyectos-y-skills' => [['desarrollo', 'freelancers'], 'asistente'],
         'que-es-un-agente-de-ia' => [['desarrollo', 'product-management'], 'agente'],
         'que-tareas-de-tu-profesion-automatiza-la-ia' => [['freelancers', 'rrhh'], 'automatiz'],

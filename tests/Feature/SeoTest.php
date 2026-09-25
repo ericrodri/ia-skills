@@ -51,7 +51,15 @@ class SeoTest extends TestCase
             ->assertSee('<html lang="es"', false)
             ->assertSee('<meta name="description"', false)
             ->assertSee('rel="canonical" href="'.route('home').'"', false)
-            ->assertSee('Prompts y skills de IA para profesionales', false);
+            ->assertSee('<title inertia>ia-skills: skills y prompts de IA para profesionales</title>', false)
+            ->assertSee('Una skill de IA es un procedimiento reutilizable', false);
+    }
+
+    public function test_la_portada_declara_las_variantes_de_la_marca(): void
+    {
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('"alternateName":["IA Skills","iaskills","ia-skills.com"]', false);
     }
 
     public function test_la_ficha_de_skill_emite_su_propio_titulo_y_el_prompt_en_json_ld(): void

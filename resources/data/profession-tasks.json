@@ -47,6 +47,15 @@
   ],
   "diseno": [
     {
+      "slug": "diseno-grafico",
+      "name": "diseño gráfico",
+      "heading": "Prompts de IA para diseño gráfico",
+      "seoTitle": "Prompts de IA para diseño gráfico: :total skills",
+      "description": "Prompts para diseño gráfico con ChatGPT, Claude o Midjourney: logos, carteles, paletas, tipografía, packaging y piezas para redes. Votados por diseñadores.",
+      "intro": "Logos, carteles, paletas de color, tipografía, packaging, infografías y creatividades para redes sociales. Prompts para ChatGPT, Claude o Midjourney que te ayudan a aterrizar el brief, explorar conceptos y justificar cada decisión visual antes de abrir Illustrator o Figma.",
+      "terms": ["diseño gráfico", "gráfic", "logo", "tipograf", "paleta", "cartel", "packaging", "infograf", "moodboard", "creatividades", "portada", "ilustraci", "midjourney"]
+    },
+    {
       "slug": "branding",
       "name": "branding",
       "heading": "Prompts de IA para branding e identidad visual",
