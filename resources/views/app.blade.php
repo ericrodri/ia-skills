@@ -8,7 +8,7 @@
     {{-- SEO renderizado en servidor (ver App\Support\Seo) --}}
     @include('partials.seo')
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    @include('partials.favicons')
     <link rel="alternate" type="application/rss+xml" title="ia-skills — últimas skills de IA" href="{{ route('feed') }}">
 
     {{-- Fuentes: sin @import en CSS (bloquea el render en cascada) --}}

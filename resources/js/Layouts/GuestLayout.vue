@@ -7,7 +7,7 @@ import { Link } from '@inertiajs/vue3'
 
         <!-- Logo -->
         <Link :href="route('home')" class="flex items-center gap-2 mb-8 group">
-            <span class="text-2xl">⚡</span>
+            <img src="/logo.png?v=2" alt="" width="36" height="36" class="w-9 h-9">
             <span class="text-xl font-bold text-gray-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                 ia-skills
             </span>

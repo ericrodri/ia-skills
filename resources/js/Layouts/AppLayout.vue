@@ -40,7 +40,7 @@ function logout() {
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                 <div class="flex items-center gap-8">
                     <Link :href="route('home')" class="flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                        <span class="text-brand-600 dark:text-brand-500 text-lg">⚡</span>
+                        <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
                     </Link>
                     <div class="hidden lg:flex items-center gap-1">
@@ -193,7 +193,7 @@ function logout() {
                 <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
                     <div>
                         <div class="flex items-center gap-2 font-bold text-gray-900 dark:text-white mb-1">
-                            <span class="text-brand-600 dark:text-brand-500">⚡</span> ia-skills
+                            <img src="/logo.png?v=2" alt="" width="24" height="24" class="w-6 h-6" loading="lazy"> ia-skills
                         </div>
                         <p class="text-sm text-gray-500 dark:text-gray-400">La biblioteca colaborativa de workflows de IA para profesionales.</p>
                     </div>

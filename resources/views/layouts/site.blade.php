@@ -7,7 +7,7 @@
 
     @include('partials.seo')
 
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    @include('partials.favicons')
     <link rel="alternate" type="application/rss+xml" title="ia-skills — últimas skills de IA" href="{{ route('feed') }}">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,7 +33,7 @@
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
                 <div class="flex items-center gap-8">
                     <a href="{{ route('home') }}" class="flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                        <span class="text-brand-600 dark:text-brand-500 text-lg">⚡</span>
+                        <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
                     </a>
                     {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
@@ -83,7 +83,7 @@
         <footer class="border-t border-gray-100 dark:border-gray-800 mt-16">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4 text-sm">
                 <div>
-                    <p class="font-bold text-gray-900 dark:text-white flex items-center gap-2"><span class="text-brand-600 dark:text-brand-500">⚡</span> ia-skills</p>
+                    <p class="font-bold text-gray-900 dark:text-white flex items-center gap-2"><img src="/logo.png?v=2" alt="" width="24" height="24" class="w-6 h-6" loading="lazy"> ia-skills</p>
                     <p class="mt-3 text-gray-500 dark:text-gray-400">La biblioteca colaborativa de prompts y skills de IA para profesionales, organizada por profesión.</p>
                 </div>
                 <div>
