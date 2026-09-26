@@ -97,6 +97,9 @@ class RelatedContent
         'google-discover-como-aparecer' => [['marketing'], 'contenido'],
         'seo-para-tiendas-online' => [['marketing'], 'seo'],
         'posicionar-una-web-nueva-en-google' => [['marketing', 'freelancers'], 'seo'],
+        'robots-txt-y-bots-de-ia' => [['marketing', 'desarrollo'], 'seo'],
+        'herramientas-seo-gratis' => [['marketing', 'freelancers'], 'seo'],
+        'analisis-de-competencia-seo' => [['marketing'], 'competencia'],
         'que-es-jev-modelo-system-one' => [['desarrollo'], 'agente'],
         'conectar-claude-con-unity' => [['desarrollo'], 'mcp'],
     ];

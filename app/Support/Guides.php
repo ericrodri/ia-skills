@@ -89,6 +89,9 @@ class Guides
         'google-discover-como-aparecer',
         'seo-para-tiendas-online',
         'posicionar-una-web-nueva-en-google',
+        'robots-txt-y-bots-de-ia',
+        'herramientas-seo-gratis',
+        'analisis-de-competencia-seo',
         'que-es-jev-modelo-system-one',
     ];
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1206,
     'about' => 'Posicionamiento de una web nueva en Google',
-    'related' => ['keyword-research-con-ia', 'google-search-console-guia', 'autoridad-tematica-y-clusters-de-contenido', 'intencion-de-busqueda-en-seo', 'menciones-de-marca-y-enlaces', 'paginas-que-google-no-indexa'],
+    'related' => ['analisis-de-competencia-seo', 'keyword-research-con-ia', 'google-search-console-guia', 'autoridad-tematica-y-clusters-de-contenido', 'intencion-de-busqueda-en-seo', 'menciones-de-marca-y-enlaces', 'paginas-que-google-no-indexa'],
     'toc' => [
         'expectativas' => 'Cuánto tarda de verdad',
         'antes' => 'Antes de publicar',
@@ -60,7 +60,7 @@ return [
 
 <ol>
     <li><strong>Un tema, no varios.</strong> Una web nueva tiene que ser la mejor en algo pequeño antes de aspirar a algo grande. «Recetas» es inabarcable; «recetas para freidora de aire» se puede cubrir entero en unos meses.</li>
-    <li><strong>Una lista de búsquedas pequeñas.</strong> Busca preguntas concretas, de cola larga, donde los resultados actuales son foros, páginas viejas o respuestas incompletas. Ahí una web nueva puede ganar. El método está en la guía de <a href="/guias/keyword-research-con-ia">keyword research con IA</a>.</li>
+    <li><strong>Una lista de búsquedas pequeñas.</strong> Busca preguntas concretas, de cola larga, donde los resultados actuales son foros, páginas viejas o respuestas incompletas. Ahí una web nueva puede ganar. El método está en la guía de <a href="/guias/keyword-research-con-ia">keyword research con IA</a>, y cómo detectar dónde flojean los resultados actuales, en la de <a href="/guias/analisis-de-competencia-seo">análisis de la competencia SEO</a>.</li>
     <li><strong>Una estructura de URLs que aguante.</strong> Categorías claras y URLs cortas y descriptivas. Cambiarlas más adelante obliga a hacer una <a href="/guias/migracion-web-sin-perder-seo">migración</a>, aunque sea pequeña.</li>
 </ol>
 

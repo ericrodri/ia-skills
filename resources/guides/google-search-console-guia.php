@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1732,
     'about' => 'Google Search Console',
-    'related' => ['posicionar-una-web-nueva-en-google', 'paginas-que-google-no-indexa', 'diagnosticar-caida-de-trafico-seo', 'titulos-y-meta-descriptions-que-consiguen-clics', 'medir-el-trafico-de-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
+    'related' => ['herramientas-seo-gratis', 'posicionar-una-web-nueva-en-google', 'paginas-que-google-no-indexa', 'diagnosticar-caida-de-trafico-seo', 'titulos-y-meta-descriptions-que-consiguen-clics', 'medir-el-trafico-de-ia', 'keyword-research-con-ia', 'auditoria-seo-tecnica'],
     'toc' => [
         'que-es' => 'Qué es y qué no es',
         'alta' => 'Darla de alta: dominio o prefijo de URL',

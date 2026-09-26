@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 1981,
     'about' => 'Investigación de palabras clave asistida por IA',
-    'related' => ['posicionar-una-web-nueva-en-google', 'intencion-de-busqueda-en-seo', 'autoridad-tematica-y-clusters-de-contenido', 'actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
+    'related' => ['analisis-de-competencia-seo', 'herramientas-seo-gratis', 'posicionar-una-web-nueva-en-google', 'intencion-de-busqueda-en-seo', 'autoridad-tematica-y-clusters-de-contenido', 'actualizar-contenido-antiguo-con-ia', 'seo-programatico-con-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado en la investigación de palabras clave',
         'no-delegar' => 'Lo primero: lo que la IA no puede darte',
@@ -74,7 +74,7 @@ return [
 <h2 id="flujo">El flujo de seis pasos</h2>
 
 <ol>
-    <li><strong>Reúne la materia prima.</strong> Si la web es nueva y aún no hay datos propios, empieza por las preguntas pequeñas que nadie resuelve bien, como explica la guía de <a href="/guias/posicionar-una-web-nueva-en-google">posicionar una web nueva</a>. Si ya tienes historial, exporta las consultas de Search Console de los últimos doce meses, las de tu buscador interno si lo tienes, las del planificador de palabras clave y, si trabajas con una herramienta de pago, las de tu competidor más parecido. Con eso ya tienes datos reales; todo lo que venga después es ordenarlos.</li>
+    <li><strong>Reúne la materia prima.</strong> Si la web es nueva y aún no hay datos propios, empieza por las preguntas pequeñas que nadie resuelve bien, como explica la guía de <a href="/guias/posicionar-una-web-nueva-en-google">posicionar una web nueva</a>. Si ya tienes historial, exporta las consultas de Search Console de los últimos doce meses, las de tu buscador interno si lo tienes, las del planificador de palabras clave y, si trabajas con una herramienta de pago, las de tu competidor más parecido (cómo elegirlo está en la guía de <a href="/guias/analisis-de-competencia-seo">análisis de la competencia SEO</a>). Si no sabes con qué herramientas sacar todo eso sin pagar, mira las <a href="/guias/herramientas-seo-gratis">herramientas SEO gratis</a>. Con eso ya tienes datos reales; todo lo que venga después es ordenarlos.</li>
     <li><strong>Limpia y normaliza.</strong> Fuera marca propia, fuera duplicados, fuera consultas de una sola impresión. Este paso lo hace un modelo en un minuto sobre el CSV pegado y a mano cuesta una hora.</li>
     <li><strong>Clasifica por intención.</strong> Cuatro casillas: descubrir, comparar, decidir y resolver un problema concreto de quien ya es cliente. Pide la clasificación con una columna extra de justificación en cinco palabras, que es lo que te permite auditar el resultado sin releerlo entero.</li>
     <li><strong>Agrupa en racimos.</strong> Que el modelo proponga grupos temáticos y les ponga nombre. Un racimo bien formado es una página; dos racimos que se solapan al 80 % son una página, no dos.</li>

@@ -88,7 +88,7 @@ return [
 <p>En los registros de acceso de tu servidor o de tu CDN, filtra por los agentes de los rastreadores de IA y cuenta peticiones por día y por sección. Tres lecturas inmediatas:</p>
 
 <ul>
-    <li><strong>Si no aparecen</strong>, tienes un problema técnico —bloqueo en <code>robots.txt</code>, regla de cortafuegos, limitación de tasa del CDN— y ninguna cantidad de contenido nuevo lo va a arreglar.</li>
+    <li><strong>Si no aparecen</strong>, tienes un problema técnico —bloqueo en <code>robots.txt</code>, regla de cortafuegos, limitación de tasa del CDN— y ninguna cantidad de contenido nuevo lo va a arreglar. Cómo revisarlo está en la guía de <a href="/guias/robots-txt-y-bots-de-ia">robots.txt y bots de IA</a>.</li>
     <li><strong>Si aparecen pero solo pasan por la portada</strong>, tu enlazado interno o tu sitemap no les está dando camino hacia dentro.</li>
     <li><strong>Si pasan mucho por secciones que no te interesan</strong>, estás gastando presupuesto de rastreo en páginas que no quieres que representen a tu marca.</li>
 </ul>

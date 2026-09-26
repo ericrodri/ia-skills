@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1687,
     'about' => 'Generative Engine Optimization',
-    'related' => ['modo-ia-de-google', 'menciones-de-marca-y-enlaces', 'llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
+    'related' => ['robots-txt-y-bots-de-ia', 'modo-ia-de-google', 'menciones-de-marca-y-enlaces', 'llms-txt-sirve-para-algo', 'medir-el-trafico-de-ia', 'ai-overviews-caida-de-clics', 'escribir-contenido-seo-con-ia', 'auditoria-seo-tecnica', 'como-escribir-prompts-efectivos', 'automatizar-tareas-con-ia-en-el-trabajo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-es' => 'Qué es GEO y por qué aparece ahora',
         'diferencias' => 'En qué se diferencia del SEO de siempre',
@@ -79,7 +79,7 @@ return [
 
 <ul>
     <li><strong>El HTML inicial trae el contenido.</strong> Si trabajas con una aplicación de una sola página, comprueba lo que se sirve antes de ejecutar JavaScript. Muchos rastreadores de IA no renderizan. Si tu <code>&lt;h1&gt;</code>, tu descripción y tu texto principal solo aparecen tras el JavaScript, para esos bots tu página está vacía.</li>
-    <li><strong>Los bots de IA no están bloqueados.</strong> Revisa <code>robots.txt</code> y también las reglas de tu CDN o cortafuegos, que es donde se cae la mayoría sin enterarse. Los agentes a mirar hoy son <code>GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code> y <code>Bingbot</code>.</li>
+    <li><strong>Los bots de IA no están bloqueados.</strong> Revisa <code>robots.txt</code> y también las reglas de tu CDN o cortafuegos, que es donde se cae la mayoría sin enterarse. Los agentes a mirar hoy son <code>GPTBot</code>, <code>ClaudeBot</code>, <code>PerplexityBot</code>, <code>Google-Extended</code> y <code>Bingbot</code>. Qué hace cada uno y cuáles conviene dejar pasar está en la guía de <a href="/guias/robots-txt-y-bots-de-ia">robots.txt y bots de IA</a>.</li>
     <li><strong>Datos estructurados donde toca.</strong> <code>Organization</code> en todo el sitio, <code>Article</code> con fecha de publicación y actualización en el contenido editorial, <code>FAQPage</code> donde de verdad haya preguntas, <code>BreadcrumbList</code> para dar jerarquía. No es magia: es decirle a la máquina qué es cada cosa en lugar de esperar a que lo deduzca.</li>
     <li><strong>Sitemap sano y fechas reales.</strong> Un <code>lastmod</code> que miente entrena a los rastreadores a ignorarlo.</li>
     <li><strong>Un <code>llms.txt</code>, si quieres.</strong> Un índice en Markdown con tus páginas importantes y una línea de qué es cada una. Cuesta media hora y no rompe nada, pero los datos de 2026 dicen que casi ningún bot lo pide: el detalle, las cifras y la decisión razonable están en <a href="/guias/llms-txt-sirve-para-algo">si el llms.txt sirve de algo</a>.</li>

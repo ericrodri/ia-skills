@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1588,
     'about' => 'El fichero llms.txt y su utilidad real para la visibilidad en IA',
-    'related' => ['aparecer-en-chatgpt-y-perplexity-geo', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'auditoria-seo-tecnica', 'ai-overviews-caida-de-clics'],
+    'related' => ['robots-txt-y-bots-de-ia', 'aparecer-en-chatgpt-y-perplexity-geo', 'datos-estructurados-para-ia', 'medir-el-trafico-de-ia', 'auditoria-seo-tecnica', 'ai-overviews-caida-de-clics'],
     'toc' => [
         'que-es' => 'Qué es exactamente un llms.txt',
         'datos' => 'Lo que dicen los datos de 2026',
@@ -118,7 +118,7 @@ return [
 
 <ol>
     <li><strong>Que tu HTML se entienda sin ejecutar JavaScript.</strong> Muchos rastreadores de IA no renderizan. Si tu contenido aparece después de cargar el bundle, para ellos tu página está vacía. Cómo comprobarlo está en la <a href="/guias/auditoria-seo-tecnica">auditoría SEO técnica</a>.</li>
-    <li><strong>Que no los estés bloqueando sin saberlo.</strong> Revisa el <code>robots.txt</code> y las reglas del cortafuegos: es sorprendentemente común bloquear a GPTBot o ClaudeBot por defecto y luego preguntarse por qué no aparece nadie.</li>
+    <li><strong>Que no los estés bloqueando sin saberlo.</strong> Revisa el <code>robots.txt</code> y las reglas del cortafuegos: es sorprendentemente común bloquear a GPTBot o ClaudeBot por defecto y luego preguntarse por qué no aparece nadie. La lista de bots y tres configuraciones de ejemplo están en la guía de <a href="/guias/robots-txt-y-bots-de-ia">robots.txt y bots de IA</a>.</li>
     <li><strong>Responder la pregunta en la primera frase</strong> de cada apartado, con encabezados que sean la pregunta literal. Es lo que convierte un párrafo en un fragmento citable, y es el núcleo de la <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">guía de GEO</a>.</li>
     <li><strong>Tener datos, cifras y ejemplos propios.</strong> Un modelo cita lo que no puede generar por su cuenta.</li>
     <li><strong>Que te mencionen en otros sitios.</strong> Las menciones de marca pesan más que cualquier fichero que publiques tú mismo.</li>
