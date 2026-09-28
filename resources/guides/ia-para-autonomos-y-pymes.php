@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2027,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -89,7 +89,7 @@ return [
 </table>
 </figure>
 
-<p>La pieza que más rendimiento da y menos se usa es la segunda, que además es gratis: <strong>guardar en las instrucciones personalizadas qué haces, para quién, con qué tono y qué no debe inventarse nunca</strong>. Diez minutos de configuración que mejoran todas las respuestas del año. Sin eso, cada conversación empieza explicando tu negocio desde cero y los resultados salen genéricos.</p>
+<p>La pieza que más rendimiento da y menos se usa es la segunda, que además es gratis: <strong>guardar en las instrucciones personalizadas qué haces, para quién, con qué tono y qué no debe inventarse nunca</strong>. Diez minutos de configuración que mejoran todas las respuestas del año (y funciona igual en las <a href="/guias/herramientas-de-ia-gratis">versiones gratuitas</a>). Sin eso, cada conversación empieza explicando tu negocio desde cero y los resultados salen genéricos.</p>
 
 <h2 id="chat-o-automatizacion">Cuándo pasar del chat a la automatización</h2>
 

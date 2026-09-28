@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1735,
     'about' => 'Prompts para diseño gráfico',
-    'related' => ['como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
+    'related' => ['crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA en diseño gráfico',
         'estructura' => 'La estructura de un buen prompt de diseño',
@@ -36,7 +36,7 @@ return [
     'body' => <<<'HTML'
 <p>La mayoría de las listas de «prompts para diseño gráfico» son en realidad prompts para generar imágenes bonitas. Sirven para una captura en redes, pero no para el trabajo de un diseñador, que casi nunca empieza por la imagen: empieza por entender qué necesita el cliente, qué no ha dicho y qué va a rechazar.</p>
 
-<p>Esta guía reúne diez prompts para ChatGPT, Claude o Gemini pensados para ese trabajo real, y explica la estructura que los hace funcionar para que puedas escribir los tuyos.</p>
+<p>Esta guía reúne diez prompts para ChatGPT, Claude o Gemini pensados para ese trabajo real, y explica la estructura que los hace funcionar para que puedas escribir los tuyos. Si lo que buscas es generar la imagen en sí, la guía para <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a> cubre herramientas, estructura del prompt y edición.</p>
 
 <h2 id="que-hace-bien">Qué hace bien la IA en diseño gráfico</h2>
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 15,
     'words' => 2452,
     'about' => 'Propiedad intelectual, licencias de uso comercial y obligaciones de transparencia de las imágenes generadas con inteligencia artificial en España y la UE',
-    'related' => ['prompts-para-diseno-grafico', 'video-y-audio-con-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['crear-imagenes-con-ia', 'prompts-para-diseno-grafico', 'video-y-audio-con-ia-en-el-trabajo', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'pregunta' => 'La pregunta está mal formulada',
         'dos-planos' => 'Dos planos que no se tocan: licencia y autoría',
@@ -37,7 +37,7 @@ return [
     'body' => <<<'HTML'
 <p>Casi todo el mundo hace la pregunta equivocada. <strong>«¿Es mía esta imagen?» y «¿puedo usarla en la campaña?» son dos preguntas distintas</strong>, con respuestas distintas y basadas en normas distintas. La primera se responde con la ley de propiedad intelectual y la respuesta es no. La segunda se responde leyendo un contrato y la respuesta suele ser sí.</p>
 
-<p>Confundirlas produce las dos reacciones desmedidas que se ven en las empresas: la que prohíbe la generación de imágenes por miedo a un problema legal inexistente, y la que la usa a discreción ignorando los tres problemas que sí existen.</p>
+<p>Confundirlas produce las dos reacciones desmedidas que se ven en las empresas: la que prohíbe la generación de imágenes por miedo a un problema legal inexistente, y la que la usa a discreción ignorando los tres problemas que sí existen. (Si todavía estás en el paso anterior, cómo generarlas bien, empieza por la guía para <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>.)</p>
 
 <h2 id="pregunta">La pregunta está mal formulada</h2>
 
