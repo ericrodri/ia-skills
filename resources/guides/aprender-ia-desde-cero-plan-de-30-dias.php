@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1760,
     'about' => 'Formación y alfabetización en inteligencia artificial para profesionales',
-    'related' => ['como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['estudiar-con-ia', 'como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-aprender' => 'Qué hay que aprender en realidad',
         'requisitos' => 'Lo que no necesitas',

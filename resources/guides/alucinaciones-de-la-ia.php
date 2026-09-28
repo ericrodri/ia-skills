@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2195,
     'about' => 'Alucinaciones de los modelos de lenguaje y verificación de sus respuestas',
-    'related' => ['que-es-jev-modelo-system-one', 'ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
+    'related' => ['tfg-con-ia', 'que-es-jev-modelo-system-one', 'ventana-de-contexto-conversaciones-largas', 'investigar-con-ia-deep-research', 'errores-al-usar-ia-en-el-trabajo', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'que-es' => 'Una alucinación no es una mentira: es un relleno',
         'por-que' => 'Por qué el entrenamiento premia adivinar antes que callar',
@@ -141,7 +141,7 @@ datos marcados que diez sin marcar.</code></pre>
 <p>No hace falta auditar la respuesta completa. Hace falta mirar lo que, si está mal, te cuesta caro:</p>
 
 <ul>
-    <li><strong>Cada cita, entre comillas, en un buscador.</strong> Si no aparece literalmente en ningún sitio, no existe. Es la comprobación más rápida y la que más caza.</li>
+    <li><strong>Cada cita, entre comillas, en un buscador.</strong> Si no aparece literalmente en ningún sitio, no existe. Es la comprobación más rápida y la que más caza. En un trabajo académico es además el error que más caro sale, como explica la guía del <a href="/guias/tfg-con-ia">TFG con IA</a>.</li>
     <li><strong>Cada enlace, abierto.</strong> No leído: abierto. Un 404 o una portada genérica delatan la referencia inventada.</li>
     <li><strong>Cada cuenta, rehecha.</strong> A mano o en una hoja. Los fallos aritméticos aparecen en operaciones que parecen demasiado simples para fallar.</li>
     <li><strong>Cada norma, contra el boletín oficial.</strong> Nunca contra otra respuesta del modelo.</li>

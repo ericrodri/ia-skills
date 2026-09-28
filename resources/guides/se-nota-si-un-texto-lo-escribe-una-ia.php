@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2060,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
-    'related' => ['escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'que-miden' => 'Qué mide un detector, que no es lo que parece',
         'falsos-positivos' => 'Falsos positivos: quién paga el error',
@@ -74,7 +74,7 @@ return [
     <li>Personas neurodivergentes con un estilo de escritura muy estructurado.</li>
 </ul>
 
-<p>Varias universidades han acabado desactivando estos detectores en sus plataformas por este motivo. No porque no acierten nunca, sino porque el coste de acusar a quien no lo merece es asimétrico y no hay forma de defenderse: es imposible demostrar que un texto propio es propio.</p>
+<p>Varias universidades han acabado desactivando estos detectores en sus plataformas por este motivo. No porque no acierten nunca, sino porque el coste de acusar a quien no lo merece es asimétrico y no hay forma de defenderse: es imposible demostrar que un texto propio es propio. Qué pueden hacer los docentes en su lugar está en la guía de <a href="/guias/ia-para-profesores">IA para profesores</a>.</p>
 
 <h2 id="porcentaje">Cómo leer un «92 % generado por IA»</h2>
 
