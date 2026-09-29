@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1161,
     'about' => 'Generación de imágenes con inteligencia artificial',
-    'related' => ['prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'herramientas' => 'Qué herramienta usar',
         'prompt' => 'La estructura de un buen prompt',
@@ -62,7 +62,7 @@ return [
     <li><strong>Estilo</strong>: fotografía, ilustración plana, acuarela, render 3D.</li>
     <li><strong>Encuadre</strong>: plano general, primer plano, vista cenital.</li>
     <li><strong>Luz y color</strong>: luz natural de mañana, tonos fríos, colores de marca.</li>
-    <li><strong>Formato</strong>: horizontal 16:9 para web, vertical 9:16 para historias, cuadrado para redes.</li>
+    <li><strong>Formato</strong>: horizontal 16:9 para web, vertical 9:16 para historias, cuadrado para <a href="/guias/ia-para-redes-sociales">redes sociales</a>.</li>
 </ol>
 
 <p>Compara el resultado de estas dos peticiones:</p>

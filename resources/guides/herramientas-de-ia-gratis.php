@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1093,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -45,7 +45,7 @@ return [
     </thead>
     <tbody>
         <tr><td>ChatGPT</td><td>Chat, búsqueda web, imágenes, análisis de archivos, voz</td><td>Versatilidad, el más completo en gratuito</td></tr>
-        <tr><td>Gemini</td><td>Chat, búsqueda, imágenes, integración con Gmail y Drive</td><td>Si trabajas con Google Workspace</td></tr>
+        <tr><td><a href="/guias/como-usar-gemini">Gemini</a></td><td>Chat, búsqueda, imágenes, integración con Gmail y Drive</td><td>Si trabajas con Google Workspace</td></tr>
         <tr><td>Claude</td><td>Chat, análisis de documentos largos, búsqueda web</td><td>Redacción cuidada, textos largos, razonamiento</td></tr>
         <tr><td>Microsoft Copilot</td><td>Chat, búsqueda con Bing, imágenes</td><td>Si trabajas con Windows y Edge</td></tr>
         <tr><td>Perplexity</td><td>Búsqueda con fuentes citadas</td><td>Investigar y comprobar datos</td></tr>

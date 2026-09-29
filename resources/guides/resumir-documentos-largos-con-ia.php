@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2315,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',

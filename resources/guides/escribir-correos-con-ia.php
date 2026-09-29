@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-05',
     'updated' => '2026-09-05',
     'readingMinutes' => 15,
-    'words' => 2533,
+    'words' => 2568,
     'about' => 'Redacción de correo electrónico profesional asistida por modelos de lenguaje',
-    'related' => ['como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
+    'related' => ['traducir-con-ia', 'como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'por-que-se-nota' => 'Por qué se nota, y no es por las palabras',
         'contexto' => 'Las cuatro cosas que el modelo no puede adivinar',
@@ -87,6 +87,8 @@ return [
 </ol>
 
 <p>Esta estructura es además la que sobrevive a la lectura en móvil, que es donde se leen la mayoría de los correos de trabajo por primera vez. Todo lo que quede por debajo de la primera pantalla se lee en diagonal o no se lee.</p>
+
+<p>Si el destinatario escribe en otro idioma, la estructura no cambia: redacta en español y pide después la versión en su idioma. Cómo pedirla y revisarla sin dominar ese idioma está en <a href="/guias/traducir-con-ia">traducir con IA</a>.</p>
 
 <p>Merece la pena decirlo en el prompt de forma explícita, porque es una instrucción que el modelo cumple bien: «estructura en tres movimientos: qué pasa, qué necesito que sepa, qué le pido y para cuándo».</p>
 

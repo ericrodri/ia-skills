@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2103,
     'about' => 'Gemini Notebook (anteriormente NotebookLM) como herramienta de trabajo documental anclada en fuentes',
-    'related' => ['resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research'],
+    'related' => ['como-usar-gemini', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research'],
     'toc' => [
         'que-es' => 'Qué es, en una frase',
         'cambio-de-nombre' => 'El cambio de nombre: qué cambia y qué no',

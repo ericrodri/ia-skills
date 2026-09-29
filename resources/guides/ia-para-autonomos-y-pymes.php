@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 12,
-    'words' => 2027,
+    'words' => 2046,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -124,7 +124,7 @@ return [
     <li><strong>Día 3.</strong> Contrata <em>una</em> suscripción de pago y configura las instrucciones personalizadas: a qué te dedicas, quién es tu cliente, cómo escribes, qué no debe inventar jamás.</li>
     <li><strong>Días 4 a 10.</strong> Una sola tarea, la más pesada de la lista, normalmente propuestas. Hazla con IA todas las veces que toque. Guarda el prompt que funcione en un archivo de texto: ese archivo es tu activo, no la herramienta.</li>
     <li><strong>Días 11 a 20.</strong> Añade la segunda tarea, casi siempre correo y seguimiento. Sigue anotando minutos.</li>
-    <li><strong>Días 21 a 25.</strong> Contenido: convierte lo que ya sabes —las preguntas que te hacen los clientes— en fichas y publicaciones. Es el trabajo que rinde dentro de tres meses.</li>
+    <li><strong>Días 21 a 25.</strong> Contenido: convierte lo que ya sabes —las preguntas que te hacen los clientes— en fichas y publicaciones. Es el trabajo que rinde dentro de tres meses; cómo hacerlo sin sonar a plantilla está en <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a>.</li>
     <li><strong>Días 26 a 30.</strong> Balance. Compara las horas del día 1 con las de ahora. Decide qué se queda, qué merece automatizarse y qué has descubierto que no compensaba.</li>
 </ol>
 

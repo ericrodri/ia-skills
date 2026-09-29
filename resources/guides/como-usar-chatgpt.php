@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 6,
     'words' => 1041,
     'about' => 'Uso práctico de ChatGPT en el entorno profesional',
-    'related' => ['herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
+    'related' => ['como-usar-gemini', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'empezar' => 'Empezar: cuenta y configuración',
         'pedir' => 'Cómo pedirle las cosas',
@@ -30,7 +30,7 @@ return [
     'ctaTitle' => 'Prompts de ChatGPT listos para tu profesión',
     'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay cientos de instrucciones probadas que puedes pegar en ChatGPT o convertir en un GPT. Empieza por tu <a href="/profesiones">profesión</a>.',
     'body' => <<<'HTML'
-<p>ChatGPT se puede usar en dos minutos y se tarda semanas en usarlo bien. La mayoría de gente se queda en la primera fase: pregunta algo, recibe una respuesta genérica y concluye que «está bien, pero no es para tanto». Esta guía recoge lo que marca la diferencia en el uso profesional. Casi todo sirve igual para Claude, Gemini o Copilot.</p>
+<p>ChatGPT se puede usar en dos minutos y se tarda semanas en usarlo bien. La mayoría de gente se queda en la primera fase: pregunta algo, recibe una respuesta genérica y concluye que «está bien, pero no es para tanto». Esta guía recoge lo que marca la diferencia en el uso profesional. Casi todo sirve igual para Claude, <a href="/guias/como-usar-gemini">Gemini</a> o Copilot.</p>
 
 <h2 id="empezar">Empezar: cuenta y configuración</h2>
 
