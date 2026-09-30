@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-23',
     'updated' => '2026-08-27',
     'readingMinutes' => 7,
-    'words' => 1180,
+    'words' => 1221,
     'about' => 'Asistentes de IA',
-    'related' => ['como-usar-chatgpt', 'herramientas-de-ia-gratis', 'prompts-de-ia-por-profesion', 'como-escribir-prompts-efectivos', 'claude-code-vs-cursor'],
+    'related' => ['como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'prompts-de-ia-por-profesion', 'como-escribir-prompts-efectivos', 'claude-code-vs-cursor'],
     'toc' => [
         'la-pregunta' => 'La pregunta mal planteada',
         'por-tarea' => 'Qué elegir según la tarea',
@@ -95,6 +95,8 @@ return [
 <p>El salto real de los últimos meses no es que los modelos escriban mejor, es que pueden ejecutar tareas de varios pasos con acceso a herramientas: leer tu calendario, consultar una base de datos, abrir un ticket.</p>
 
 <p>Esto se articula con conectores y servidores MCP, y es donde conviene ir despacio: cada permiso que concedes es una superficie nueva. Lo tratamos en <a href="/guias/plugins-y-mcp-en-claude-code">plugins y MCP</a> y en <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">automatizar tareas con IA</a>.</p>
+
+<p>Si ya te has decidido por Claude, la guía de <a href="/guias/como-usar-claude">cómo usar Claude</a> explica por dónde empezar.</p>
 
 <h2 id="decidir">Cómo decidir en tu caso</h2>
 

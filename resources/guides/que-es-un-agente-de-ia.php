@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 10,
     'words' => 1577,
     'about' => 'Agentes de IA',
-    'related' => ['que-es-jev-modelo-system-one', 'chatbot-de-atencion-al-cliente-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['que-es-la-inteligencia-artificial', 'que-es-jev-modelo-system-one', 'chatbot-de-atencion-al-cliente-con-ia', 'agentes-de-escritorio-cowork-chatgpt-work', 'investigar-con-ia-deep-research', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'que-es' => 'Qué es un agente de IA',
         'chatbot-vs-agente' => 'Chatbot, asistente y agente: las diferencias',

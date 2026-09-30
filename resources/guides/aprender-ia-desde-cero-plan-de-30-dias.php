@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1760,
+    'words' => 1840,
     'about' => 'Formación y alfabetización en inteligencia artificial para profesionales',
-    'related' => ['como-usar-chatgpt', 'estudiar-con-ia', 'como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['que-es-la-inteligencia-artificial', 'como-usar-chatgpt', 'estudiar-con-ia', 'como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-aprender' => 'Qué hay que aprender en realidad',
         'requisitos' => 'Lo que no necesitas',
@@ -34,7 +34,7 @@ return [
     'ctaTitle' => 'El atajo de la semana 1',
     'ctaBody' => 'No hace falta que inventes el prompt de cada tarea: parte de uno que ya funciona y adáptalo. Busca tu oficio en <a href="/profesiones">el catálogo por profesión</a> y empieza por ahí.',
     'body' => <<<'HTML'
-<p>Escribe «aprender inteligencia artificial desde cero» en cualquier buscador y saldrán cientos de cursos que empiezan explicando qué es una red neuronal. Está bien saberlo, del mismo modo que está bien saber cómo funciona un motor de combustión. No es lo que necesitas para conducir mañana.</p>
+<p>Escribe «aprender inteligencia artificial desde cero» en cualquier buscador y saldrán cientos de cursos que empiezan explicando qué es una red neuronal. Está bien saberlo, del mismo modo que está bien saber cómo funciona un motor de combustión. No es lo que necesitas para conducir mañana (si aun así quieres una idea general sin tecnicismos, está en <a href="/guias/que-es-la-inteligencia-artificial">qué es la inteligencia artificial</a>).</p>
 
 <p>Este plan parte de la premisa contraria: <strong>lo que hay que aprender no es cómo funciona la IA por dentro, sino cómo encargar trabajo y cómo comprobarlo</strong>. Cuatro semanas, veinte minutos al día, sobre tus propias tareas.</p>
 

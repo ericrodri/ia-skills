@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2341,
     'about' => 'Investigación documental asistida por agentes de IA con búsqueda web',
-    'related' => ['gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
+    'related' => ['como-usar-perplexity', 'gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
     'toc' => [
         'que-es' => 'Qué hace un modo de investigación profunda',
         'no-es' => 'El fallo no es inventar: es seleccionar',

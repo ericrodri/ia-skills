@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1093,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -53,7 +53,7 @@ return [
 </table>
 </figure>
 
-<p>No hace falta elegir solo uno. Un reparto habitual es un asistente principal para el día a día y Perplexity para búsquedas en las que necesitas ver la fuente. Si dudas entre los dos más usados, la comparativa <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a> los enfrenta tarea por tarea. Y si nunca has usado uno a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: lo que explica sirve para cualquiera de ellos.</p>
+<p>No hace falta elegir solo uno. Un reparto habitual es un asistente principal para el día a día y <a href="/guias/como-usar-perplexity">Perplexity</a> para búsquedas en las que necesitas ver la fuente. Si dudas entre los dos más usados, la comparativa <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a> los enfrenta tarea por tarea. Y si nunca has usado uno a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: lo que explica sirve para cualquiera de ellos.</p>
 
 <h2 id="especificas">Herramientas para tareas concretas</h2>
 
