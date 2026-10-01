@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 6,
     'words' => 1041,
     'about' => 'Uso práctico de ChatGPT en el entorno profesional',
-    'related' => ['como-usar-claude', 'como-usar-gemini', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
+    'related' => ['como-usar-claude', 'como-usar-gemini', 'como-usar-deepseek', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'empezar' => 'Empezar: cuenta y configuración',
         'pedir' => 'Cómo pedirle las cosas',

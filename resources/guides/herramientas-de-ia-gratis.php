@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1093,
+    'words' => 1115,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -49,6 +49,7 @@ return [
         <tr><td>Claude</td><td>Chat, análisis de documentos largos, búsqueda web</td><td>Redacción cuidada, textos largos, razonamiento</td></tr>
         <tr><td>Microsoft Copilot</td><td>Chat, búsqueda con Bing, imágenes</td><td>Si trabajas con Windows y Edge</td></tr>
         <tr><td>Perplexity</td><td>Búsqueda con fuentes citadas</td><td>Investigar y comprobar datos</td></tr>
+        <tr><td><a href="/guias/como-usar-deepseek">DeepSeek</a></td><td>Chat, modo de razonamiento, búsqueda web</td><td>Lógica y código; ojo con los datos que le das</td></tr>
     </tbody>
 </table>
 </figure>
@@ -63,7 +64,7 @@ return [
     <li><strong>Transcripción de reuniones:</strong> los asistentes de reuniones como Otter o tl;dv tienen planes gratuitos con minutos limitados, y Teams y Meet incluyen transcripción en muchas licencias. Más en la guía de <a href="/guias/ia-para-reuniones-y-actas">reuniones y actas con IA</a>.</li>
     <li><strong>Presentaciones:</strong> Gamma y Canva generan diapositivas a partir de un texto con créditos gratuitos.</li>
     <li><strong>Automatización:</strong> n8n se puede instalar gratis en tu servidor, y Make y Zapier tienen planes gratuitos con pocas ejecuciones al mes.</li>
-    <li><strong>Programación:</strong> GitHub Copilot tiene un plan gratuito con un cupo mensual, y los asistentes generales escriben y explican código sin problema.</li>
+    <li><strong>Programación:</strong> GitHub Copilot tiene un plan gratuito con un cupo mensual, y los asistentes generales escriben y explican código sin problema. Cómo combinarlos está en <a href="/guias/ia-para-programar">IA para programar</a>.</li>
 </ul>
 
 <h2 id="limites">Qué limita la versión gratuita</h2>

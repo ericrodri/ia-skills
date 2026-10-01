@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-09',
     'updated' => '2026-09-09',
     'readingMinutes' => 18,
-    'words' => 2923,
+    'words' => 2924,
     'about' => 'Ejecución local de modelos de lenguaje en el puesto de trabajo con Ollama y LM Studio, y sus implicaciones de privacidad y cumplimiento',
-    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa'],
+    'related' => ['como-usar-deepseek', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas', 'politica-de-uso-de-ia-en-la-empresa'],
     'toc' => [
         'que-es' => 'Qué es exactamente ejecutar IA en local',
         'cuando-merece' => 'Cuándo merece la pena y cuándo es capricho',
@@ -132,7 +132,7 @@ return [
     <li><strong>¿Es una tarea general o de código?</strong> Los modelos especializados en código rinden claramente mejor en su terreno y claramente peor fuera de él.</li>
 </ol>
 
-<p>Con eso, la regla práctica: <strong>el modelo más grande que quepa holgadamente, de una familia reciente y con la cuantización Q4</strong>. Familias como Qwen, Gemma, Mistral o los modelos abiertos de OpenAI cubren el espectro entero, y dentro de cada una la elección es de talla, no de fe.</p>
+<p>Con eso, la regla práctica: <strong>el modelo más grande que quepa holgadamente, de una familia reciente y con la cuantización Q4</strong>. Familias como Qwen, Gemma, Mistral, <a href="/guias/como-usar-deepseek">DeepSeek</a> o los modelos abiertos de OpenAI cubren el espectro entero, y dentro de cada una la elección es de talla, no de fe.</p>
 
 <p>Una advertencia sobre las comparativas: los rankings de modelos abiertos miden razonamiento y programación, que es lo que sabe medir un benchmark. Casi ninguno mide lo que a ti te va a importar, que es si escribe un español natural o si obedece instrucciones de formato sin desviarse. Pruébalo con tres tareas tuyas —de las que ya sabes la respuesta correcta— antes de adoptarlo.</p>
 

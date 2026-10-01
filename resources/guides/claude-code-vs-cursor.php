@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-31',
     'updated' => '2026-08-31',
     'readingMinutes' => 10,
-    'words' => 1660,
+    'words' => 1700,
     'about' => 'Herramientas de programación con IA',
-    'related' => ['agent-skills-estandar-abierto', 'empezar-con-claude-code', 'claude-vs-chatgpt-para-trabajar'],
+    'related' => ['ia-para-programar', 'agent-skills-estandar-abierto', 'empezar-con-claude-code', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
         'dos-filosofias' => 'Dos filosofías, no dos versiones de lo mismo',
         'tabla' => 'La comparativa, fila a fila',
@@ -44,7 +44,7 @@ return [
 
 <p>En Claude Code el centro es la tarea. Le describes el objetivo, el agente decide qué archivos leer, ejecuta comandos, lanza los tests y vuelve con un resultado. No ves el proceso archivo a archivo: ves el plan y el diff.</p>
 
-<p>Esa diferencia explica por qué cada uno se siente incómodo en el terreno del otro. Pedirle a un editor que haga una migración de veinte ficheros es un ejercicio de paciencia; pedirle a un agente autónomo que te ayude a ajustar tres líneas de CSS es dar un rodeo enorme para algo que hacías tú antes.</p>
+<p>Si todavía no tienes claro qué forma de programar con IA te encaja (chat, editor o agente), empieza por <a href="/guias/ia-para-programar">IA para programar</a>. Esa diferencia explica por qué cada uno se siente incómodo en el terreno del otro. Pedirle a un editor que haga una migración de veinte ficheros es un ejercicio de paciencia; pedirle a un agente autónomo que te ayude a ajustar tres líneas de CSS es dar un rodeo enorme para algo que hacías tú antes.</p>
 
 <h2 id="tabla">La comparativa, fila a fila</h2>
 

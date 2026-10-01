@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1840,
+    'words' => 1851,
     'about' => 'Formación y alfabetización en inteligencia artificial para profesionales',
-    'related' => ['que-es-la-inteligencia-artificial', 'como-usar-chatgpt', 'estudiar-con-ia', 'como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
+    'related' => ['cursos-de-inteligencia-artificial', 'que-es-la-inteligencia-artificial', 'como-usar-chatgpt', 'estudiar-con-ia', 'como-escribir-prompts-efectivos', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo'],
     'toc' => [
         'que-aprender' => 'Qué hay que aprender en realidad',
         'requisitos' => 'Lo que no necesitas',
@@ -65,7 +65,7 @@ return [
     <li><strong>Programar.</strong> Para nada de este plan. Lo dice incluso quien construye sistemas: el cuello de botella es el criterio sobre el oficio.</li>
     <li><strong>Matemáticas ni estadística.</strong> Útiles para entender por qué falla; innecesarias para detectar que ha fallado.</li>
     <li><strong>Un ordenador potente.</strong> Todo esto va en el navegador. La <a href="/guias/ia-local-privada-en-tu-ordenador">IA local</a> es un tema aparte, para cuando los datos no pueden salir.</li>
-    <li><strong>Un curso de pago.</strong> Más adelante quizá; ahora no. Hay material gratuito de sobra y ninguno enseña lo que solo se aprende usándolo.</li>
+    <li><strong>Un curso de pago.</strong> Más adelante quizá; ahora no. Hay material gratuito de sobra y ninguno enseña lo que solo se aprende usándolo. Cuando llegue el momento, mira <a href="/guias/cursos-de-inteligencia-artificial">cómo elegir un curso de IA</a>.</li>
     <li><strong>Tres suscripciones.</strong> Una, de pago, durante un mes. Comparar viene después.</li>
 </ul>
 

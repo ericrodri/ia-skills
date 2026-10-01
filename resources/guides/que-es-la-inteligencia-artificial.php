@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-30',
     'updated' => '2026-09-30',
     'readingMinutes' => 7,
-    'words' => 1192,
+    'words' => 1210,
     'about' => 'Inteligencia artificial: definición, funcionamiento y usos prácticos',
     'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'que-es-un-agente-de-ia', 'alucinaciones-de-la-ia', 'como-usar-chatgpt', 'va-la-ia-a-sustituir-mi-trabajo', 'herramientas-de-ia-gratis'],
     'toc' => [
@@ -97,7 +97,7 @@ return [
 
 <h2 id="empezar">Cómo empezar</h2>
 
-<p>No hace falta saber programar ni entender las matemáticas. Elige un asistente gratuito, por ejemplo con la guía de <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>, y pruébalo con una tarea que hagas cada semana. Si prefieres un camino ordenado, sigue el <a href="/guias/aprender-ia-desde-cero-plan-de-30-dias">plan de 30 días para aprender IA desde cero</a>.</p>
+<p>No hace falta saber programar ni entender las matemáticas. Elige un asistente gratuito, por ejemplo con la guía de <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>, y pruébalo con una tarea que hagas cada semana. Si prefieres un camino ordenado, sigue el <a href="/guias/aprender-ia-desde-cero-plan-de-30-dias">plan de 30 días para aprender IA desde cero</a>, y si estás pensando en apuntarte a una formación, lee antes <a href="/guias/cursos-de-inteligencia-artificial">cómo elegir un curso de inteligencia artificial</a>.</p>
 
 <p>Si solo te quedas con una idea: la inteligencia artificial no piensa, predice. Es una herramienta extraordinaria para producir borradores y ordenar información, y necesita a alguien con criterio que revise lo que entrega.</p>
 HTML,
