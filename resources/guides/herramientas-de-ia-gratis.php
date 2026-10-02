@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1115,
+    'words' => 1131,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -50,11 +50,12 @@ return [
         <tr><td>Microsoft Copilot</td><td>Chat, búsqueda con Bing, imágenes</td><td>Si trabajas con Windows y Edge</td></tr>
         <tr><td>Perplexity</td><td>Búsqueda con fuentes citadas</td><td>Investigar y comprobar datos</td></tr>
         <tr><td><a href="/guias/como-usar-deepseek">DeepSeek</a></td><td>Chat, modo de razonamiento, búsqueda web</td><td>Lógica y código; ojo con los datos que le das</td></tr>
+        <tr><td><a href="/guias/como-usar-grok">Grok</a></td><td>Chat, actualidad de X, imágenes</td><td>Seguir lo que se comenta ahora; revisa la privacidad</td></tr>
     </tbody>
 </table>
 </figure>
 
-<p>No hace falta elegir solo uno. Un reparto habitual es un asistente principal para el día a día y <a href="/guias/como-usar-perplexity">Perplexity</a> para búsquedas en las que necesitas ver la fuente. Si dudas entre los dos más usados, la comparativa <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a> los enfrenta tarea por tarea. Y si nunca has usado uno a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: lo que explica sirve para cualquiera de ellos.</p>
+<p>No hace falta elegir solo uno. Un reparto habitual es un asistente principal para el día a día y <a href="/guias/como-usar-perplexity">Perplexity</a> para búsquedas en las que necesitas ver la fuente. Si dudas entre los más usados, las comparativas <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a> y <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a> los enfrentan tarea por tarea. Y si nunca has usado uno a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: lo que explica sirve para cualquiera de ellos.</p>
 
 <h2 id="especificas">Herramientas para tareas concretas</h2>
 

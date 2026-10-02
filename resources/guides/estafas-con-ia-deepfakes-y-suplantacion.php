@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1800,
     'about' => 'Fraude mediante suplantación de identidad con inteligencia artificial generativa',
-    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-cambio' => 'Qué cambió exactamente',
         'anatomia' => 'Anatomía de un fraude del CEO moderno',

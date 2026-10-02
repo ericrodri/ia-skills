@@ -9,10 +9,10 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
-    'readingMinutes' => 7,
-    'words' => 1231,
+    'readingMinutes' => 8,
+    'words' => 1241,
     'about' => 'Uso práctico de Google Gemini en el entorno profesional',
-    'related' => ['como-usar-chatgpt', 'herramientas-de-ia-gratis', 'gemini-notebook-antes-notebooklm', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'claude-vs-chatgpt-para-trabajar'],
+    'related' => ['chatgpt-vs-gemini', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'gemini-notebook-antes-notebooklm', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
         'empezar' => 'Empezar: cuenta y ajustes',
         'pedir' => 'Cómo pedirle las cosas',
@@ -91,7 +91,7 @@ problemas, ordenada por gravedad.</code></pre>
 <ul>
     <li><strong>Gemini</strong>, si tu trabajo vive en Gmail, Docs y Drive, o si usas un móvil Android.</li>
     <li><strong>Copilot</strong>, si tu empresa trabaja con Outlook, Word y Teams; lo explicamos en <a href="/guias/microsoft-365-copilot-en-el-trabajo">Microsoft 365 Copilot</a>.</li>
-    <li><strong>ChatGPT o Claude</strong>, para trabajo fuera de un paquete de oficina concreto. Hay una guía de <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> y una comparativa de <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude y ChatGPT</a>.</li>
+    <li><strong>ChatGPT o Claude</strong>, para trabajo fuera de un paquete de oficina concreto. Hay una guía de <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> y una comparativa de <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude y ChatGPT</a>. Si dudas entre Gemini y ChatGPT, mira <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a>.</li>
 </ul>
 
 <p>Lo más fiable es hacer tu tarea más habitual en dos asistentes durante una semana y quedarte con el que menos tengas que corregir.</p>

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1850,
+    'words' => 1859,
     'about' => 'Generación de vídeo y audio sintético con inteligencia artificial en entornos profesionales',
-    'related' => ['imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
+    'related' => ['crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-hay' => 'Qué hay: cuatro cosas distintas que se llaman igual',
         'que-rinde' => 'Qué rinde y qué no',
@@ -140,7 +140,7 @@ return [
     <li><strong>La marca legible por máquina no es cosa tuya, pero elegir proveedor sí.</strong> Si tu herramienta no incorpora esas marcas de procedencia, el problema acaba siendo tuyo el día que tengas que demostrar el origen de una pieza. Pregúntalo antes de contratar.</li>
 </ul>
 
-<p>Las sanciones de este bloque llegan hasta 15 millones de euros o el 3 % del volumen de negocio mundial. Para pymes se aplica la menor de las dos cifras. El calendario completo y el resto de obligaciones están en <a href="/guias/ai-act-obligaciones-empresas">la guía del AI Act</a>, y la parte de derechos de uso comercial se solapa bastante con <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">la de imágenes con IA</a>.</p>
+<p>Las sanciones de este bloque llegan hasta 15 millones de euros o el 3 % del volumen de negocio mundial. Para pymes se aplica la menor de las dos cifras. El calendario completo y el resto de obligaciones están en <a href="/guias/ai-act-obligaciones-empresas">la guía del AI Act</a>, y la parte de derechos de uso comercial se solapa bastante con <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">la de imágenes con IA</a>. Si lo que necesitas es una canción o una sintonía, está en <a href="/guias/crear-musica-con-ia">crear música con IA</a>.</p>
 
 <h2 id="flujo">Un flujo de trabajo sensato</h2>
 

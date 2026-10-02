@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-23',
     'updated' => '2026-08-27',
     'readingMinutes' => 7,
-    'words' => 1221,
+    'words' => 1233,
     'about' => 'Asistentes de IA',
-    'related' => ['como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'prompts-de-ia-por-profesion', 'como-escribir-prompts-efectivos', 'claude-code-vs-cursor'],
+    'related' => ['chatgpt-vs-gemini', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'prompts-de-ia-por-profesion', 'como-escribir-prompts-efectivos', 'claude-code-vs-cursor'],
     'toc' => [
         'la-pregunta' => 'La pregunta mal planteada',
         'por-tarea' => 'Qué elegir según la tarea',
@@ -34,7 +34,7 @@ return [
     'body' => <<<'HTML'
 <p>Es la pregunta que más se repite en cualquier equipo que empieza a usar IA en serio, y casi siempre se responde mal: con capturas de benchmarks, con la última nota de prensa o con la opinión de alguien que solo ha probado una de las dos.</p>
 
-<p>Esta guía la responde de otra manera: por tarea. Porque la diferencia de rendimiento entre herramientas es pequeña comparada con la diferencia entre usar una bien y usarla mal. Si todavía no has usado ninguna a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: casi todo lo que explica sirve también para Claude.</p>
+<p>Esta guía la responde de otra manera: por tarea. Porque la diferencia de rendimiento entre herramientas es pequeña comparada con la diferencia entre usar una bien y usarla mal. Si todavía no has usado ninguna a fondo, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>: casi todo lo que explica sirve también para Claude. Si tu otra opción es Gemini, la comparativa es <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a>.</p>
 
 <h2 id="la-pregunta">La pregunta mal planteada</h2>
 

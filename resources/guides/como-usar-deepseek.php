@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1140,
     'about' => 'Uso práctico del asistente de inteligencia artificial DeepSeek y sus riesgos de privacidad',
-    'related' => ['ia-local-privada-en-tu-ordenador', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'ia-para-programar', 'como-usar-claude'],
+    'related' => ['ia-local-privada-en-tu-ordenador', 'como-usar-grok', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'ia-para-programar', 'como-usar-claude'],
     'toc' => [
         'que-es' => 'Qué es DeepSeek',
         'empezar' => 'Empezar: web, aplicación y primera conversación',
