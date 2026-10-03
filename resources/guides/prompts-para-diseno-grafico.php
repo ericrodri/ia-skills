@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1735,
     'about' => 'Prompts para diseño gráfico',
-    'related' => ['crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
+    'related' => ['editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA en diseño gráfico',
         'estructura' => 'La estructura de un buen prompt de diseño',
@@ -195,7 +195,7 @@ mejorarían la pieza, ordenados por impacto.</code></pre>
 
 <h2 id="imagenes">Cuando lo que quieres es una imagen</h2>
 
-<p>ChatGPT y Gemini generan imágenes dentro de la conversación, y Midjourney sigue siendo la referencia para explorar estilos. Para moodboards, bocetos de concepto o maquetas de presentación son muy útiles. Un prompt de imagen que funciona describe, por este orden:</p>
+<p>ChatGPT y Gemini generan imágenes dentro de la conversación, y Midjourney sigue siendo la referencia para explorar estilos. Para moodboards, bocetos de concepto o maquetas de presentación son muy útiles, y también para retocar fotos existentes (lo vemos en <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>). Un prompt de imagen que funciona describe, por este orden:</p>
 
 <ul>
     <li><strong>Sujeto:</strong> qué aparece y qué está haciendo.</li>

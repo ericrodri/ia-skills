@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2237,
     'about' => 'Protección de datos e inteligencia artificial',
-    'related' => ['estafas-con-ia-deepfakes-y-suplantacion', 'resumir-documentos-largos-con-ia', 'politica-de-uso-de-ia-en-la-empresa', 'ai-act-obligaciones-empresas'],
+    'related' => ['meta-ai-en-whatsapp', 'estafas-con-ia-deepfakes-y-suplantacion', 'resumir-documentos-largos-con-ia', 'politica-de-uso-de-ia-en-la-empresa', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'la-pregunta' => 'La pregunta no es «¿es legal usar IA?»',
         'que-pasa' => 'Qué pasa con lo que escribes en el prompt',
@@ -152,7 +152,7 @@ como marcadores para rellenar.</code></pre>
 
 <p>Cuando estas cinco están escritas y todo el mundo las conoce, la conversación deja de ser «la IA es peligrosa» y pasa a ser un procedimiento más. Que es exactamente lo que debería haber sido desde el principio.</p>
 
-<p>La vía por la que esto se rompe más veces no es el prompt escrito a mano, sino el archivo que se sube sin pensarlo: un expediente de personal, la documentación de un cliente que no autorizó ese tratamiento, una propuesta ajena bajo confidencialidad. Qué comprobar antes de subir un documento —y qué exigirle al resumen— está en la guía sobre <a href="/guias/resumir-documentos-largos-con-ia">resumir documentos largos con IA</a>.</p>
+<p>La vía por la que esto se rompe más veces no es el prompt escrito a mano, sino el archivo que se sube sin pensarlo: un expediente de personal, la documentación de un cliente que no autorizó ese tratamiento, una propuesta ajena bajo confidencialidad. Qué comprobar antes de subir un documento —y qué exigirle al resumen— está en la guía sobre <a href="/guias/resumir-documentos-largos-con-ia">resumir documentos largos con IA</a>. El mismo riesgo aparece en el WhatsApp de atención al cliente cuando alguien reenvía mensajes al asistente integrado; lo tratamos en <a href="/guias/meta-ai-en-whatsapp">Meta AI en WhatsApp</a>.</p>
 
 <p>El paso siguiente es ponerlo por escrito para el equipo: en <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA en la empresa</a> está la plantilla y lo que exige la norma europea. Y si lo que tienes delante no es un chat sino algo que actúa por su cuenta, conviene entender antes <a href="/guias/que-es-un-agente-de-ia">qué es exactamente un agente de IA</a>.</p>
 

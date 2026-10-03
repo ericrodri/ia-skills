@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1140,
     'about' => 'Traducción de textos profesionales con inteligencia artificial',
-    'related' => ['escribir-correos-con-ia', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-escribir-prompts-efectivos', 'como-usar-chatgpt'],
+    'related' => ['aprender-ingles-con-ia', 'escribir-correos-con-ia', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-escribir-prompts-efectivos', 'como-usar-chatgpt'],
     'toc' => [
         'herramienta' => 'Traductor automático o asistente de IA',
         'pedir' => 'Cómo pedir una buena traducción',
@@ -115,6 +115,6 @@ plazo de entrega = délai de livraison
     <li><strong>Fichas de producto</strong> para vender en otros países, con glosario y revisión de una muestra.</li>
 </ul>
 
-<p>La idea de fondo es sencilla: la IA traduce rápido y bien casi siempre. Tu trabajo es saber cuándo ese «casi» importa y dedicarle la revisión que merece.</p>
+<p>La idea de fondo es sencilla: la IA traduce rápido y bien casi siempre. Tu trabajo es saber cuándo ese «casi» importa y dedicarle la revisión que merece. Y si lo que quieres es dejar de depender del traductor, la guía de <a href="/guias/aprender-ingles-con-ia">aprender inglés con IA</a> explica cómo usar el mismo asistente para practicar.</p>
 HTML,
 ];

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1192,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -127,6 +127,6 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
     <li><strong>Repite el paso anterior</strong> unos días después, centrándote en lo que fallaste.</li>
 </ol>
 
-<p>Es más lento que pedirle un resumen y leerlo. También es la única de las dos formas que funciona el día del examen.</p>
+<p>Es más lento que pedirle un resumen y leerlo. También es la única de las dos formas que funciona el día del examen. Con los idiomas pasa lo mismo, y ahí el modo de voz cambia las reglas: tienes un método completo en <a href="/guias/aprender-ingles-con-ia">aprender inglés con IA</a>.</p>
 HTML,
 ];

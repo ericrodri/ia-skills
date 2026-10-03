@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1107,
     'about' => 'Uso práctico del asistente de inteligencia artificial Grok de xAI y sus ajustes de privacidad',
-    'related' => ['como-usar-chatgpt', 'como-usar-perplexity', 'usar-ia-sin-filtrar-datos-de-clientes', 'herramientas-de-ia-gratis', 'como-usar-deepseek', 'alucinaciones-de-la-ia'],
+    'related' => ['meta-ai-en-whatsapp', 'como-usar-chatgpt', 'como-usar-perplexity', 'usar-ia-sin-filtrar-datos-de-clientes', 'herramientas-de-ia-gratis', 'como-usar-deepseek', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-es' => 'Qué es Grok',
         'empezar' => 'Dónde está y cómo empezar',
@@ -91,6 +91,6 @@ return [
     <li>Su tono «sin filtros» es un riesgo si el texto acaba en manos de un cliente.</li>
 </ul>
 
-<p>Si en tu equipo se está usando, lo sensato es que figure en vuestra <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA</a>, con la misma regla que para cualquier asistente gratuito: nada de datos de clientes ni información interna. El detalle de esa regla está en <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar la IA sin filtrar datos de clientes</a>. Y para elegir el asistente principal, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> o la comparativa <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a>.</p>
+<p>Si en tu equipo se está usando, lo sensato es que figure en vuestra <a href="/guias/politica-de-uso-de-ia-en-la-empresa">política de uso de IA</a>, con la misma regla que para cualquier asistente gratuito: nada de datos de clientes ni información interna. El detalle de esa regla está en <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar la IA sin filtrar datos de clientes</a>. Y para elegir el asistente principal, empieza por <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> o la comparativa <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a>. Si la duda es el otro asistente que llega sin pedirlo, el círculo azul de WhatsApp, lo explicamos en <a href="/guias/meta-ai-en-whatsapp">Meta AI en WhatsApp</a>.</p>
 HTML,
 ];
