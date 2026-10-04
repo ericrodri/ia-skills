@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 12,
-    'words' => 2046,
+    'words' => 2070,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -137,6 +137,8 @@ return [
 <p><strong>No guardar los prompts.</strong> Es el error más caro y el más silencioso. Reescribir cada vez la misma instrucción tira por la borda el aprendizaje acumulado. Un documento con tus diez prompts buenos es el activo que te llevas si mañana cambias de herramienta.</p>
 
 <p><strong>Publicar sin leer.</strong> Un dato inventado en un presupuesto o en una ficha de producto cuesta un cliente, y a veces algo peor. La velocidad no es excusa: ahorrar cuarenta minutos y perder una cuenta no es un ahorro.</p>
+
+<p><strong>No tener web, o tener una que nadie actualiza.</strong> Hoy se monta en una tarde; lo explicamos en <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a>.</p>
 
 <p><strong>Esperar a tenerlo todo claro.</strong> El coste de empezar es una suscripción de veinte euros y una tarde. El coste de esperar un año, mientras tu competencia responde presupuestos el mismo día, es bastante más difícil de calcular y bastante más alto.</p>
 HTML,

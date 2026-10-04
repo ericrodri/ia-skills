@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 12,
-    'words' => 2050,
+    'words' => 2065,
     'about' => 'Desarrollo de software asistido por IA para personas sin perfil técnico',
-    'related' => ['automatizar-sin-programar-n8n-make-zapier', 'claude-code-vs-cursor', 'empezar-con-claude-code'],
+    'related' => ['crear-una-pagina-web-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'claude-code-vs-cursor', 'empezar-con-claude-code'],
     'toc' => [
         'que-es' => 'Qué es y de dónde sale el nombre',
         'que-sale-bien' => 'Qué sale bien y qué no, por tipo de herramienta',
@@ -152,6 +152,6 @@ return [
     <li><strong>Alguien más va a depender de ello dentro de seis meses.</strong> Todo lo que un equipo usa a diario necesita alguien que lo arregle cuando se rompa. Si ese alguien eres tú y no lees el código, acabas de crearte un trabajo que no querías.</li>
 </ul>
 
-<p>Dicho todo lo anterior: la mayoría de lo que la gente necesita en su día a día son scripts pequeños y calculadoras internas que no llegan a ninguna de estas cuatro líneas. Ahí el vibe coding no es un experimento, es la forma más rápida de resolverlo. Y si quieres saber si de verdad te está ahorrando tiempo, <a href="/guias/medir-si-la-ia-ahorra-tiempo">mídelo</a> antes de contarlo como victoria.</p>
+<p>Dicho todo lo anterior: la mayoría de lo que la gente necesita en su día a día son scripts pequeños y calculadoras internas que no llegan a ninguna de estas cuatro líneas. Ahí el vibe coding no es un experimento, es la forma más rápida de resolverlo. Y si quieres saber si de verdad te está ahorrando tiempo, <a href="/guias/medir-si-la-ia-ahorra-tiempo">mídelo</a> antes de contarlo como victoria. Si lo que necesitas es una web para tu negocio y no una herramienta, sigue con <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a>.</p>
 HTML,
 ];

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-24',
     'updated' => '2026-09-24',
     'readingMinutes' => 7,
-    'words' => 1206,
+    'words' => 1241,
     'about' => 'Posicionamiento de una web nueva en Google',
-    'related' => ['analisis-de-competencia-seo', 'keyword-research-con-ia', 'google-search-console-guia', 'autoridad-tematica-y-clusters-de-contenido', 'intencion-de-busqueda-en-seo', 'menciones-de-marca-y-enlaces', 'paginas-que-google-no-indexa'],
+    'related' => ['crear-una-pagina-web-con-ia', 'analisis-de-competencia-seo', 'keyword-research-con-ia', 'google-search-console-guia', 'autoridad-tematica-y-clusters-de-contenido', 'intencion-de-busqueda-en-seo', 'menciones-de-marca-y-enlaces', 'paginas-que-google-no-indexa'],
     'toc' => [
         'expectativas' => 'Cuánto tarda de verdad',
         'antes' => 'Antes de publicar',
@@ -115,6 +115,6 @@ return [
     <li><strong>Comprar enlaces.</strong> Es la tentación típica cuando el tráfico no llega, y en una web sin historial el riesgo de acción manual es mayor que el beneficio.</li>
 </ul>
 
-<p>Resumido: una web nueva gana empezando pequeño. Un tema acotado, búsquedas concretas que nadie resuelve bien, veinte o treinta páginas bien enlazadas y paciencia para llegar al sexto mes publicando con constancia.</p>
+<p>Resumido: una web nueva gana empezando pequeño. Un tema acotado, búsquedas concretas que nadie resuelve bien, veinte o treinta páginas bien enlazadas y paciencia para llegar al sexto mes publicando con constancia. Si aún no tienes la web, empieza por <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a> con estos criterios en mente.</p>
 HTML,
 ];

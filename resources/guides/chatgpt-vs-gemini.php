@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-02',
     'updated' => '2026-10-02',
     'readingMinutes' => 7,
-    'words' => 1087,
+    'words' => 1106,
     'about' => 'Comparativa práctica entre los asistentes de inteligencia artificial ChatGPT y Gemini',
-    'related' => ['como-usar-chatgpt', 'como-usar-gemini', 'claude-vs-chatgpt-para-trabajar', 'herramientas-de-ia-gratis', 'microsoft-365-copilot-en-el-trabajo', 'como-usar-grok'],
+    'related' => ['cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'como-usar-chatgpt', 'como-usar-gemini', 'claude-vs-chatgpt-para-trabajar', 'herramientas-de-ia-gratis', 'microsoft-365-copilot-en-el-trabajo', 'como-usar-grok'],
     'toc' => [
         'resumen' => 'La respuesta corta',
         'ecosistema' => 'Lo que de verdad decide: dónde trabajas',
@@ -82,6 +82,6 @@ return [
     <li>Suma. Si la diferencia es pequeña, quédate con el que esté más cerca de tus herramientas.</li>
 </ol>
 
-<p>Si quieres medirlo con más rigor, en <a href="/guias/medir-si-la-ia-ahorra-tiempo">medir si la IA ahorra tiempo</a> tienes una plantilla. Y para sacarle partido al que elijas, sigue con <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> o <a href="/guias/como-usar-gemini">cómo usar Gemini</a>.</p>
+<p>Si quieres medirlo con más rigor, en <a href="/guias/medir-si-la-ia-ahorra-tiempo">medir si la IA ahorra tiempo</a> tienes una plantilla. Y para sacarle partido al que elijas, sigue con <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a> o <a href="/guias/como-usar-gemini">cómo usar Gemini</a>. Si dudas entre más opciones, como Claude, Copilot o Perplexity, mira <a href="/guias/cual-es-la-mejor-ia">cuál es la mejor IA según la tarea</a>.</p>
 HTML,
 ];

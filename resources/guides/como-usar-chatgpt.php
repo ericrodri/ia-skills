@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 6,
-    'words' => 1053,
+    'words' => 1076,
     'about' => 'Uso práctico de ChatGPT en el entorno profesional',
-    'related' => ['chatgpt-vs-gemini', 'como-usar-claude', 'como-usar-gemini', 'como-usar-deepseek', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
+    'related' => ['vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-claude', 'como-usar-gemini', 'como-usar-deepseek', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
     'toc' => [
         'empezar' => 'Empezar: cuenta y configuración',
         'pedir' => 'Cómo pedirle las cosas',
@@ -92,7 +92,7 @@ correo: [pega el correo]</code></pre>
     <li><strong>Hacer de abogado del diablo</strong>: «Estas son mis razones para lanzar este producto. Dame los cinco mejores argumentos en contra».</li>
 </ol>
 
-<p>Si quieres un plan más ordenado, el <a href="/guias/aprender-ia-desde-cero-plan-de-30-dias">plan de 30 días para aprender IA desde cero</a> va de lo básico a lo avanzado con un ejercicio al día.</p>
+<p>Si quieres un plan más ordenado, el <a href="/guias/aprender-ia-desde-cero-plan-de-30-dias">plan de 30 días para aprender IA desde cero</a> va de lo básico a lo avanzado con un ejercicio al día. Y si te topas a menudo con el límite del plan gratuito, en <a href="/guias/vale-la-pena-pagar-chatgpt-plus">¿vale la pena pagar ChatGPT Plus?</a> te ayudamos a decidir.</p>
 
 <h2 id="errores">Errores de principiante</h2>
 
