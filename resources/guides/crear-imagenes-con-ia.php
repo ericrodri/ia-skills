@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1161,
+    'words' => 1198,
     'about' => 'Generación de imágenes con inteligencia artificial',
-    'related' => ['editar-fotos-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['editar-fotos-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'herramientas' => 'Qué herramienta usar',
         'prompt' => 'La estructura de un buen prompt',
@@ -136,6 +136,6 @@ izquierda a color azul marino y quita la taza de la mesa.</code></pre>
     <li><strong>¿Tiene el tamaño y formato correctos?</strong> Muchas herramientas generan a baja resolución; si va a imprimirse, amplíala con una herramienta de escalado antes.</li>
 </ol>
 
-<p>Con eso cubierto, la IA se convierte en lo que mejor sabe ser: una forma rápida de pasar de «algo así» a una imagen concreta que puedes enseñar, corregir y usar. Si partes de una foto real que quieres retocar, quitar el fondo o limpiar, sigue con <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>.</p>
+<p>Con eso cubierto, la IA se convierte en lo que mejor sabe ser: una forma rápida de pasar de «algo así» a una imagen concreta que puedes enseñar, corregir y usar. Si partes de una foto real que quieres retocar, quitar el fondo o limpiar, sigue con <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>; si lo que necesitas es la imagen de tu marca, con <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a>.</p>
 HTML,
 ];

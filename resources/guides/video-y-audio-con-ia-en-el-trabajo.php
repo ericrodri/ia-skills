@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1859,
+    'words' => 1881,
     'about' => 'Generación de vídeo y audio sintético con inteligencia artificial en entornos profesionales',
-    'related' => ['crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
+    'related' => ['crear-videos-con-ia', 'crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-hay' => 'Qué hay: cuatro cosas distintas que se llaman igual',
         'que-rinde' => 'Qué rinde y qué no',
@@ -153,6 +153,6 @@ return [
     <li><strong>Guarda el guion y los ajustes.</strong> Cuando cambie el procedimiento dentro de seis meses, actualizar será un rato en lugar de empezar de cero, que es justo el motivo por el que compensaba usar IA.</li>
 </ol>
 
-<p>El resumen honesto: la IA ha abaratado la producción, no la comunicación. El cuello de botella sigue estando donde estaba, en tener algo que decir y saber a quién. Lo mismo que pasa <a href="/guias/presentaciones-con-ia">con las presentaciones</a>, que la IA hace en cinco minutos y sigue sin poder defender por ti.</p>
+<p>El resumen honesto: la IA ha abaratado la producción, no la comunicación. El cuello de botella sigue estando donde estaba, en tener algo que decir y saber a quién. Lo mismo que pasa <a href="/guias/presentaciones-con-ia">con las presentaciones</a>, que la IA hace en cinco minutos y sigue sin poder defender por ti. Si lo que buscas es el paso a paso para generar y montar tus propias tomas, está en <a href="/guias/crear-videos-con-ia">crear vídeos con IA</a>.</p>
 HTML,
 ];

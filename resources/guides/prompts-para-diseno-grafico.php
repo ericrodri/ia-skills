@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-25',
     'updated' => '2026-09-25',
     'readingMinutes' => 11,
-    'words' => 1735,
+    'words' => 1799,
     'about' => 'Prompts para diseño gráfico',
-    'related' => ['editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
+    'related' => ['crear-un-logo-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA en diseño gráfico',
         'estructura' => 'La estructura de un buen prompt de diseño',
@@ -217,6 +217,6 @@ mejorarían la pieza, ordenados por impacto.</code></pre>
     <li><strong>Repetir el mismo contexto cada vez.</strong> Si trabajas siempre con la misma marca, guarda el contexto como proyecto o como <a href="/guias/que-son-los-skills-de-claude-code">skill</a> y deja de pegarlo.</li>
 </ul>
 
-<p>El patrón que mejor funciona es sencillo: la IA abre opciones y pone argumentos encima de la mesa, y tú decides. Así se gana tiempo sin que todas tus piezas acaben pareciendo hechas por la misma máquina.</p>
+<p>El patrón que mejor funciona es sencillo: la IA abre opciones y pone argumentos encima de la mesa, y tú decides. Así se gana tiempo sin que todas tus piezas acaben pareciendo hechas por la misma máquina. Si el encargo es una identidad desde cero, el recorrido completo, de la primera propuesta al vector y al registro, está en <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a>.</p>
 HTML,
 ];

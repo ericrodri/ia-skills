@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-02',
     'updated' => '2026-09-02',
     'readingMinutes' => 13,
-    'words' => 2213,
+    'words' => 2244,
     'about' => 'Automatización de actas y resúmenes de reuniones con IA',
-    'related' => ['microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
+    'related' => ['pasar-audio-a-texto-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-esta-resuelto' => 'Lo que está resuelto y lo que no',
         'tipos' => 'Tres formas de grabar, con tres consecuencias distintas',
@@ -157,6 +157,6 @@ Cita la parte de la transcripción en cada caso.</code></pre>
 
 <p>La rutina que funciona cabe en tres pasos: alguien que estuvo en la reunión repasa los bloques de decisiones y tareas —dos minutos, con las citas es rápido—, corrige lo que haga falta, y lo envía él. El acta la manda una persona, no un bot. Eso es lo que hace que la gente la lea y que las correcciones lleguen.</p>
 
-<p>Bien montado, el ahorro es de los más claros que hay con IA: quince o veinte minutos por reunión de redacción que desaparecen casi enteros, sobre una tarea que se repite varias veces por semana. Es justo el perfil de tarea que merece la pena medir en serio, con línea base y todo, como está explicado en la <a href="/guias/medir-si-la-ia-ahorra-tiempo">guía para medir si la IA ahorra tiempo</a>.</p>
+<p>Bien montado, el ahorro es de los más claros que hay con IA: quince o veinte minutos por reunión de redacción que desaparecen casi enteros, sobre una tarea que se repite varias veces por semana. Es justo el perfil de tarea que merece la pena medir en serio, con línea base y todo, como está explicado en la <a href="/guias/medir-si-la-ia-ahorra-tiempo">guía para medir si la IA ahorra tiempo</a>. Y para grabaciones que no vienen de una videollamada —una entrevista, una clase, una nota de voz—, la guía de <a href="/guias/pasar-audio-a-texto-con-ia">pasar audio a texto con IA</a> cubre el resto de casos.</p>
 HTML,
 ];

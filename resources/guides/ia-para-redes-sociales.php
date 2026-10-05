@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
     'readingMinutes' => 7,
-    'words' => 1145,
+    'words' => 1161,
     'about' => 'Uso de la inteligencia artificial para crear y gestionar contenido en redes sociales',
-    'related' => ['crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
+    'related' => ['crear-videos-con-ia', 'crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'donde' => 'Dónde ayuda y dónde no',
         'voz' => 'Enséñale tu voz primero',
@@ -101,6 +101,6 @@ más de una publicación promocional de cada cuatro.</code></pre>
     <li><strong>Mide.</strong> Compara durante un mes la interacción de lo que publicabas antes con lo que publicas ahora. Si baja, estás delegando demasiado.</li>
 </ol>
 
-<p>Si llevas tus redes tú solo junto al resto del negocio, la guía de <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a> recoge otros usos que liberan tiempo para lo que de verdad importa: hablar con tus clientes.</p>
+<p>Si llevas tus redes tú solo junto al resto del negocio, la guía de <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a> recoge otros usos que liberan tiempo para lo que de verdad importa: hablar con tus clientes. Y si tus redes viven de Reels, TikTok o Shorts, sigue con <a href="/guias/crear-videos-con-ia">crear vídeos con IA</a>.</p>
 HTML,
 ];
