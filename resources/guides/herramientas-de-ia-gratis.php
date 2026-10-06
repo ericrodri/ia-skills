@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1159,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['como-usar-copilot', 'cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -47,7 +47,7 @@ return [
         <tr><td>ChatGPT</td><td>Chat, búsqueda web, imágenes, análisis de archivos, voz</td><td>Versatilidad, el más completo en gratuito</td></tr>
         <tr><td><a href="/guias/como-usar-gemini">Gemini</a></td><td>Chat, búsqueda, imágenes, integración con Gmail y Drive</td><td>Si trabajas con Google Workspace</td></tr>
         <tr><td>Claude</td><td>Chat, análisis de documentos largos, búsqueda web</td><td>Redacción cuidada, textos largos, razonamiento</td></tr>
-        <tr><td>Microsoft Copilot</td><td>Chat, búsqueda con Bing, imágenes</td><td>Si trabajas con Windows y Edge</td></tr>
+        <tr><td><a href="/guias/como-usar-copilot">Microsoft Copilot</a></td><td>Chat, búsqueda con Bing, imágenes</td><td>Si trabajas con Windows y Edge</td></tr>
         <tr><td>Perplexity</td><td>Búsqueda con fuentes citadas</td><td>Investigar y comprobar datos</td></tr>
         <tr><td><a href="/guias/como-usar-deepseek">DeepSeek</a></td><td>Chat, modo de razonamiento, búsqueda web</td><td>Lógica y código; ojo con los datos que le das</td></tr>
         <tr><td><a href="/guias/como-usar-grok">Grok</a></td><td>Chat, actualidad de X, imágenes</td><td>Seguir lo que se comenta ahora; revisa la privacidad</td></tr>

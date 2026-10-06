@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
     'readingMinutes' => 14,
-    'words' => 2349,
+    'words' => 2388,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',
@@ -147,6 +147,8 @@ dudar. Sé duro, no me animes.</code></pre>
     <li><strong>El extracto en primera persona.</strong> Es el único sitio del proceso donde se te permite sonar a persona. Pídele al modelo tres versiones a partir de tus notas y quédate con frases de las tres.</li>
     <li><strong>Las habilidades, las de la oferta.</strong> Los buscadores internos de quien recluta filtran por ese campo antes que por ningún otro.</li>
 </ul>
+
+<p>Y la foto, que es lo primero que se ve. Si no tienes una buena, la guía de <a href="/guias/foto-de-perfil-profesional-con-ia">foto de perfil profesional con IA</a> explica cómo conseguirla a partir de un selfi sin que deje de parecerse a ti.</p>
 
 <h2 id="entrevista">Preparar la entrevista con la oferta delante</h2>
 

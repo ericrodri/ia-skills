@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 12,
-    'words' => 2070,
+    'words' => 2095,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['plan-de-negocio-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -35,7 +35,7 @@ return [
     'body' => <<<'HTML'
 <p>Casi todo lo que se publica sobre adoptar IA en una empresa está escrito para organizaciones con departamento de sistemas, comité de gobernanza y presupuesto de proyecto. Cuando eso se «adapta» a una pyme, el resultado es el mismo plan dividido por diez: un piloto de seis meses que nadie tiene tiempo de ejecutar.</p>
 
-<p>Un negocio pequeño juega con otras reglas. No tiene equipo de IT, pero tampoco tiene que pedir permiso a nadie. No tiene presupuesto, pero puede cambiar un proceso el martes por la mañana. Esta guía está escrita con esas dos cosas en mente.</p>
+<p>Un negocio pequeño juega con otras reglas. No tiene equipo de IT, pero tampoco tiene que pedir permiso a nadie. No tiene presupuesto, pero puede cambiar un proceso el martes por la mañana. Esta guía está escrita con esas dos cosas en mente. Si todavía estás en la fase anterior, la de decidir si el negocio sale a cuenta, empieza por <a href="/guias/plan-de-negocio-con-ia">hacer un plan de negocio con IA</a>.</p>
 
 <h2 id="por-donde-no">Por dónde no empezar</h2>
 

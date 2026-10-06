@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-03',
     'updated' => '2026-10-03',
     'readingMinutes' => 7,
-    'words' => 1080,
+    'words' => 1101,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -37,7 +37,7 @@ return [
 
 <p>Las herramientas clásicas te obligaban a seleccionar, enmascarar y retocar a mano. Las nuevas entienden instrucciones en lenguaje natural: «quita el cable de la esquina», «haz que parezca que está atardeciendo», «cambia la camiseta a azul marino». El modelo modifica solo esa parte y conserva el resto, incluida la luz y la cara de las personas, algo que hasta hace poco fallaba mucho.</p>
 
-<p>Editar una foto existente y crear una imagen desde cero son tareas distintas, aunque las hagan las mismas herramientas. Si lo que quieres es generar una imagen nueva, tienes la guía de <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>.</p>
+<p>Editar una foto existente y crear una imagen desde cero son tareas distintas, aunque las hagan las mismas herramientas. Si lo que quieres es generar una imagen nueva, tienes la guía de <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>. Y si lo que buscas es un retrato para LinkedIn o el currículum, está en <a href="/guias/foto-de-perfil-profesional-con-ia">foto de perfil profesional con IA</a>.</p>
 
 <h2 id="herramientas">Qué herramienta usar para cada cosa</h2>
 

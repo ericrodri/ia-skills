@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 13,
-    'words' => 2224,
+    'words' => 2197,
     'about' => 'Microsoft 365 Copilot',
-    'related' => ['ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'claude-vs-chatgpt-para-trabajar'],
+    'related' => ['como-usar-copilot', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
         'que-copilot' => 'Primero: qué Copilot tienes',
         'como-funciona' => 'De dónde saca lo que sabe de tu empresa',
@@ -56,7 +56,7 @@ return [
 </table>
 </figure>
 
-<p>La frontera que importa es la tercera fila. Todo lo demás son variantes de «un chat»; <strong>Microsoft 365 Copilot es lo único que compra contexto</strong>, y el contexto es lo único que un chat generalista no puede darte sin que alguien copie y pegue durante media hora.</p>
+<p>La frontera que importa es la tercera fila. Todo lo demás son variantes de «un chat»; <strong>Microsoft 365 Copilot es lo único que compra contexto</strong>, y el contexto es lo único que un chat generalista no puede darte sin que alguien copie y pegue durante media hora. Si lo que tienes es el Copilot gratuito de la primera fila, la guía de <a href="/guias/como-usar-copilot">cómo usar Copilot</a> explica qué sacarle y qué ajustes de privacidad cambiar.</p>
 
 <p>Regla rápida para saber cuál tienes: si le preguntas «¿qué correos importantes he recibido esta semana?» y te contesta con correos reales, tienes la licencia de pago. Si te explica cómo revisar tu bandeja, no.</p>
 
