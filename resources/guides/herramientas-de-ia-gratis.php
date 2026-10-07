@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1159,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-copilot', 'cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['como-usar-copilot', 'planificar-un-viaje-con-ia', 'cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',

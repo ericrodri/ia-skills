@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-05',
     'updated' => '2026-10-05',
     'readingMinutes' => 6,
-    'words' => 1029,
+    'words' => 1043,
     'about' => 'Transcripción automática de audio y vídeo a texto con inteligencia artificial',
-    'related' => ['ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
+    'related' => ['resumir-videos-de-youtube-con-ia', 'ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
     'toc' => [
         'como-funciona' => 'Qué hace la IA al transcribir',
         'segun-el-audio' => 'Qué herramienta usar según el audio',
@@ -49,7 +49,7 @@ return [
         <tr><td>Notas de voz propias</td><td>La grabadora del móvil (Android) o Notas de voz (iPhone), que transcriben al grabar</td></tr>
         <tr><td>Entrevista o clase grabada</td><td>Word para la web (Transcribir), Gemini o ChatGPT subiendo el archivo, o servicios como Otter o Turboscribe</td></tr>
         <tr><td>Reuniones en Teams, Meet o Zoom</td><td>La transcripción de la propia plataforma; lo explicamos en <a href="/guias/ia-para-reuniones-y-actas">reuniones y actas con IA</a></td></tr>
-        <tr><td>Vídeo de YouTube</td><td>La opción Mostrar transcripción del propio vídeo, o pegar el enlace en Gemini</td></tr>
+        <tr><td>Vídeo de YouTube</td><td>La opción Mostrar transcripción del propio vídeo, o pegar el enlace en Gemini; si lo que quieres es el resumen, mira <a href="/guias/resumir-videos-de-youtube-con-ia">resumir vídeos de YouTube con IA</a></td></tr>
         <tr><td>Audio confidencial o muy largo</td><td>Whisper en tu ordenador, sin enviar nada a internet</td></tr>
     </tbody>
 </table>

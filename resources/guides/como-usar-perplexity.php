@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-30',
     'updated' => '2026-09-30',
     'readingMinutes' => 7,
-    'words' => 1131,
+    'words' => 1157,
     'about' => 'Uso práctico de Perplexity como buscador con inteligencia artificial',
-    'related' => ['investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
+    'related' => ['planificar-un-viaje-con-ia', 'investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
     'toc' => [
         'que-es' => 'Qué es y en qué se diferencia de un chat',
         'empezar' => 'Empezar: cuenta y primera búsqueda',
@@ -39,7 +39,7 @@ return [
 
 <ul>
     <li><strong>Actualidad</strong>: cambios normativos, noticias del sector, lanzamientos de la competencia.</li>
-    <li><strong>Datos verificables</strong>: precios, fechas, cifras de mercado, requisitos de un trámite.</li>
+    <li><strong>Datos verificables</strong>: precios, fechas, cifras de mercado, requisitos de un trámite. También los de un viaje, como horarios o requisitos de entrada; cómo combinarlo con un chat para el itinerario está en <a href="/guias/planificar-un-viaje-con-ia">planificar un viaje con IA</a>.</li>
     <li><strong>Panorámicas rápidas</strong>: «qué opciones hay para…», «qué dicen las fuentes sobre…».</li>
 </ul>
 
