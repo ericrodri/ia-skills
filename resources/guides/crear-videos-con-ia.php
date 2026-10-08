@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1187,
     'about' => 'Generación y montaje de vídeos con herramientas de inteligencia artificial',
-    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'tipos' => 'Tres formas de hacer un vídeo con IA',
         'herramientas' => 'Qué herramienta usar',

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1359,
     'about' => 'Uso de la inteligencia artificial por el profesorado',
-    'related' => ['estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
+    'related' => ['resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
     'toc' => [
         'donde-ahorra' => 'Dónde ahorra tiempo de verdad',
         'que-no' => 'Lo que no conviene delegar',

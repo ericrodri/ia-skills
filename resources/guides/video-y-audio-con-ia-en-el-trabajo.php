@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1881,
+    'words' => 1900,
     'about' => 'Generación de vídeo y audio sintético con inteligencia artificial en entornos profesionales',
-    'related' => ['crear-videos-con-ia', 'crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
+    'related' => ['convertir-texto-a-voz-con-ia', 'crear-videos-con-ia', 'crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-hay' => 'Qué hay: cuatro cosas distintas que se llaman igual',
         'que-rinde' => 'Qué rinde y qué no',
@@ -55,7 +55,7 @@ return [
 </table>
 </figure>
 
-<p>La que sale en las noticias es la primera. La que paga facturas es la cuarta.</p>
+<p>La que sale en las noticias es la primera. La que paga facturas es la cuarta. Para la segunda, cómo preparar el texto y elegir la voz está en <a href="/guias/convertir-texto-a-voz-con-ia">convertir texto a voz con IA</a>.</p>
 
 <h2 id="que-rinde">Qué rinde y qué no</h2>
 

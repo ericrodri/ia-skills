@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 6,
     'words' => 1043,
     'about' => 'Transcripción automática de audio y vídeo a texto con inteligencia artificial',
-    'related' => ['resumir-videos-de-youtube-con-ia', 'ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
+    'related' => ['convertir-texto-a-voz-con-ia', 'resumir-videos-de-youtube-con-ia', 'ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
     'toc' => [
         'como-funciona' => 'Qué hace la IA al transcribir',
         'segun-el-audio' => 'Qué herramienta usar según el audio',

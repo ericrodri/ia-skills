@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1231,
     'about' => 'Planificación de viajes, itinerarios y presupuestos con asistentes de inteligencia artificial',
-    'related' => ['como-usar-perplexity', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'traducir-con-ia', 'aprender-ingles-con-ia'],
+    'related' => ['menu-semanal-con-ia', 'como-usar-perplexity', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'traducir-con-ia', 'aprender-ingles-con-ia'],
     'toc' => [
         'para-que-sirve' => 'Para qué sirve y para qué no',
         'que-herramienta' => 'Qué herramienta usar',

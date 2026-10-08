@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1159,
+    'words' => 1218,
     'about' => 'Herramientas gratuitas de inteligencia artificial para uso profesional',
-    'related' => ['como-usar-copilot', 'planificar-un-viaje-con-ia', 'cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
+    'related' => ['convertir-texto-a-voz-con-ia', 'como-usar-copilot', 'planificar-un-viaje-con-ia', 'cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-deepseek', 'como-usar-claude', 'como-usar-perplexity', 'como-usar-gemini', 'como-usar-chatgpt', 'crear-imagenes-con-ia', 'claude-vs-chatgpt-para-trabajar', 'usar-ia-sin-filtrar-datos-de-clientes', 'ia-local-privada-en-tu-ordenador', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'asistentes' => 'Asistentes de uso general',
         'especificas' => 'Herramientas para tareas concretas',
@@ -63,6 +63,8 @@ return [
     <li><strong>Imágenes:</strong> los asistentes anteriores generan imágenes gratis; Canva y Adobe Firefly añaden plantillas y edición. Cómo sacarles partido está en la guía para <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>.</li>
     <li><strong>Documentos y estudio:</strong> NotebookLM, ahora integrado en Gemini, responde solo a partir de los documentos que subes, lo que reduce las invenciones. Lo explica la guía de <a href="/guias/gemini-notebook-antes-notebooklm">Gemini Notebook</a>.</li>
     <li><strong>Transcripción de reuniones:</strong> los asistentes de reuniones como Otter o tl;dv tienen planes gratuitos con minutos limitados, y Teams y Meet incluyen transcripción en muchas licencias. Más en la guía de <a href="/guias/ia-para-reuniones-y-actas">reuniones y actas con IA</a>.</li>
+    <li><strong>Voz:</strong> la lectura en voz alta de Edge y las voces del móvil son gratis, y servicios como ElevenLabs tienen un plan gratuito con caracteres limitados. Lo explicamos en <a href="/guias/convertir-texto-a-voz-con-ia">convertir texto a voz con IA</a>.</li>
+    <li><strong>Casa y día a día:</strong> cualquier asistente gratuito prepara el <a href="/guias/menu-semanal-con-ia">menú semanal y la lista de la compra</a> o el itinerario de un viaje.</li>
     <li><strong>Presentaciones:</strong> Gamma y Canva generan diapositivas a partir de un texto con créditos gratuitos.</li>
     <li><strong>Automatización:</strong> n8n se puede instalar gratis en tu servidor, y Make y Zapier tienen planes gratuitos con pocas ejecuciones al mes.</li>
     <li><strong>Programación:</strong> GitHub Copilot tiene un plan gratuito con un cupo mensual, y los asistentes generales escriben y explican código sin problema. Cómo combinarlos está en <a href="/guias/ia-para-programar">IA para programar</a>.</li>

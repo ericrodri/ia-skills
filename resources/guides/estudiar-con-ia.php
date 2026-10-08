@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1192,
+    'words' => 1226,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -97,7 +97,7 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
 
 <ul>
     <li><strong>Datos concretos</strong>: fechas, nombres, cifras, citas. Los modelos los inventan con total seguridad. La guía sobre <a href="/guias/alucinaciones-de-la-ia">alucinaciones</a> explica por qué pasa.</li>
-    <li><strong>Cálculos largos</strong>: pueden fallar en una operación intermedia y llegar a un resultado incorrecto muy bien explicado.</li>
+    <li><strong>Cálculos largos</strong>: pueden fallar en una operación intermedia y llegar a un resultado incorrecto muy bien explicado. Cómo comprobarlos está en <a href="/guias/resolver-problemas-de-matematicas-con-ia">resolver problemas de matemáticas con IA</a>.</li>
     <li><strong>Legislación y normas</strong>: mezclan versiones y citan artículos que no existen.</li>
     <li><strong>Lo que dijo tu profesor</strong>: la IA no estuvo en clase. Si el profesor enfoca un tema de una forma concreta, manda lo que dijo él.</li>
 </ul>
