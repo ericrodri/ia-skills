@@ -6,11 +6,15 @@ use Database\Factories\UserFactory;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Str;
 
-class User extends Authenticatable
+// Sin MustVerifyEmail el middleware 'verified' deja pasar a todo el mundo y
+// nunca se envÃ­a el correo de verificaciÃ³n: cualquier alta de bot podÃ­a
+// comentar, votar y editar las skills que tuviera a su nombre.
+class User extends Authenticatable implements MustVerifyEmail
 {
     /** @use HasFactory<UserFactory> */
     use HasFactory, Notifiable;
@@ -31,7 +35,7 @@ class User extends Authenticatable
         'newsletter_opt_in',
     ];
 
-    /** Usernames que chocarían con rutas o se prestarían a suplantación. */
+    /** Usernames que chocarï¿½an con rutas o se prestarï¿½an a suplantaciï¿½n. */
     public const RESERVED_USERNAMES = ['admin', 'administrador', 'ia-skills', 'soporte', 'api', 'equipo', 'moderador'];
 
     protected $hidden = ['password', 'remember_token', 'api_token'];
@@ -50,7 +54,7 @@ class User extends Authenticatable
     }
 
     /**
-     * El perfil público (/autores/{username}) necesita un username, pero el
+     * El perfil pï¿½blico (/autores/{username}) necesita un username, pero el
      * registro no lo pide: se deriva del nombre y el usuario puede cambiarlo
      * desde su perfil.
      */
