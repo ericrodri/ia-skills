@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
     'readingMinutes' => 12,
-    'words' => 2060,
+    'words' => 2098,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
-    'related' => ['ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['escribir-un-libro-con-ia', 'ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'que-miden' => 'Qué mide un detector, que no es lo que parece',
         'falsos-positivos' => 'Falsos positivos: quién paga el error',
@@ -152,6 +152,6 @@ return [
     <li><strong>Quita una de cada tres estructuras simétricas.</strong> El ritmo de tres bloques iguales es el tic más reconocible.</li>
 </ul>
 
-<p>Hecho así, la pregunta de si se nota deja de tener interés: el texto dice algo concreto que nadie más podría haber escrito, y eso es indistinguible de haberlo escrito tú porque en lo que importa lo has escrito tú. La herramienta se ha ocupado de la redacción, no del contenido, que es el reparto que funciona en <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">casi cualquier tarea delegada a una IA</a>.</p>
+<p>Hecho así, la pregunta de si se nota deja de tener interés: el texto dice algo concreto que nadie más podría haber escrito, y eso es indistinguible de haberlo escrito tú porque en lo que importa lo has escrito tú. La herramienta se ha ocupado de la redacción, no del contenido, que es el reparto que funciona en <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">casi cualquier tarea delegada a una IA</a>. Vale igual para un texto de trescientas páginas: así se plantea <a href="/guias/escribir-un-libro-con-ia">escribir un libro con IA</a> sin que deje de ser tuyo.</p>
 HTML,
 ];

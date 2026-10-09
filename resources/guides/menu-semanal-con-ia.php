@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-08',
     'updated' => '2026-10-08',
     'readingMinutes' => 7,
-    'words' => 1190,
+    'words' => 1211,
     'about' => 'Planificación de menús semanales, recetas y lista de la compra con asistentes de inteligencia artificial',
-    'related' => ['planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
+    'related' => ['plan-de-entrenamiento-con-ia', 'planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien y qué no',
         'los-datos' => 'Los datos que necesita',
@@ -96,7 +96,7 @@ return [
 <ul>
     <li><strong>Alergias</strong>: aunque se lo digas, puede proponer una salsa o un embutido con el alérgeno escondido. Revisa cada receta y lee la etiqueta de lo que compras.</li>
     <li><strong>Enfermedades y medicación</strong>: diabetes, enfermedad renal, hipertensión o interacciones con medicamentos. Ahí el plan lo marca tu médico o un dietista-nutricionista.</li>
-    <li><strong>Perder mucho peso, embarazo, niños pequeños o deportistas</strong>: las necesidades cambian y la IA no calcula bien las cantidades para tu caso.</li>
+    <li><strong>Perder mucho peso, embarazo, niños pequeños o deportistas</strong>: las necesidades cambian y la IA no calcula bien las cantidades para tu caso. Si entrenas, puedes pedir que el menú tenga en cuenta tu <a href="/guias/plan-de-entrenamiento-con-ia">plan de entrenamiento</a>, pero las cantidades las ajusta un profesional.</li>
 </ul>
 
 <p>En esos casos, la IA sigue siendo útil para la parte aburrida: convertir el plan que te ha dado el profesional en un menú semanal variado y en una lista de la compra. Pásale sus pautas y pídele que las respete al pie de la letra.</p>

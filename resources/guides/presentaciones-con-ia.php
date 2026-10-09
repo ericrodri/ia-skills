@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-03',
     'updated' => '2026-09-03',
     'readingMinutes' => 13,
-    'words' => 2216,
+    'words' => 2233,
     'about' => 'Creación de presentaciones y diapositivas con inteligencia artificial',
-    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
+    'related' => ['escribir-un-discurso-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'por-que-no-convence' => 'Por qué la presentación generada de un tirón no convence',
         'titulares' => 'El titular de acción: la técnica que hace el trabajo',
@@ -191,7 +191,7 @@ esperarías la respuesta. No respondas por mí.</code></pre>
 
 <ol>
     <li><strong>La última diapositiva.</strong> Qué pides exactamente: una decisión, un presupuesto, una firma, un sí. Los generadores ponen «Gracias» o «Preguntas», que es renunciar al motivo de la reunión.</li>
-    <li><strong>El ensayo en voz alta.</strong> Diez minutos. Es donde se descubre que la diapositiva 7 no se puede contar sin la 9, y donde se cae la mitad del texto que sobraba.</li>
+    <li><strong>El ensayo en voz alta.</strong> Diez minutos. Es donde se descubre que la diapositiva 7 no se puede contar sin la 9, y donde se cae la mitad del texto que sobraba. Cómo escribir para el oído y ensayar con el asistente está en <a href="/guias/escribir-un-discurso-con-ia">escribir un discurso con IA</a>.</li>
     <li><strong>Las cifras contra la fuente.</strong> Cada número de cada diapositiva, comprobado en la hoja de origen. Es el chequeo que evita el error que se recuerda meses.</li>
 </ol>
 
