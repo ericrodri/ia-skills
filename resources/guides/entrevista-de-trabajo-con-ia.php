@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1904,
     'about' => 'Preparación de entrevistas de trabajo con inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'ai-act-obligaciones-empresas', 'va-la-ia-a-sustituir-mi-trabajo'],
+    'related' => ['cv-y-carta-de-presentacion-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'ai-act-obligaciones-empresas', 'va-la-ia-a-sustituir-mi-trabajo'],
     'toc' => [
         'el-otro-lado' => 'Qué hace la IA al otro lado de la mesa',
         'derechos' => 'Lo que puedes exigir cuando decide una máquina',

@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
     'readingMinutes' => 7,
-    'words' => 1161,
+    'words' => 1192,
     'about' => 'Uso de la inteligencia artificial para crear y gestionar contenido en redes sociales',
     'related' => ['crear-videos-con-ia', 'crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
     'toc' => [
@@ -72,7 +72,7 @@ más de una publicación promocional de cada cuatro.</code></pre>
 
 <p>Cada red premia un formato distinto. Escribe una pieza base (un artículo, una newsletter, la transcripción de un vídeo) y pídele las versiones:</p>
 <ul>
-    <li><strong>LinkedIn:</strong> texto en primera persona, primera línea que invite a seguir leyendo, sin enlaces en el cuerpo si quieres alcance.</li>
+    <li><strong>LinkedIn:</strong> texto en primera persona, primera línea que invite a seguir leyendo, sin enlaces en el cuerpo si quieres alcance. Antes de publicar, revisa el titular y el extracto del perfil, que es lo que mira quien llega desde el post (lo explicamos en <a href="/guias/mejorar-perfil-de-linkedin-con-ia">mejorar tu perfil de LinkedIn con IA</a>).</li>
     <li><strong>Instagram:</strong> guion de carrusel diapositiva a diapositiva, o guion de reel de 30 segundos con el texto en pantalla.</li>
     <li><strong>X o Threads:</strong> hilo corto, una idea por mensaje.</li>
     <li><strong>TikTok o Shorts:</strong> guion hablado con gancho en los primeros tres segundos.</li>

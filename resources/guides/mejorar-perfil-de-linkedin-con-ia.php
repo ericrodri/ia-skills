@@ -9,8 +9,8 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-10',
     'updated' => '2026-10-10',
-    'readingMinutes' => 9,
-    'words' => 1650,
+    'readingMinutes' => 10,
+    'words' => 1583,
     'about' => 'Redacción y optimización de perfiles profesionales de LinkedIn con asistentes de inteligencia artificial',
     'related' => ['cv-y-carta-de-presentacion-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-redes-sociales', 'prompts-de-ia-por-profesion'],
     'toc' => [
