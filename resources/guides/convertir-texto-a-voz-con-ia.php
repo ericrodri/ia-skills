@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-08',
     'updated' => '2026-10-08',
     'readingMinutes' => 8,
-    'words' => 1247,
+    'words' => 1277,
     'about' => 'Síntesis de voz (texto a voz) con inteligencia artificial para narraciones, vídeos y accesibilidad',
-    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'crear-videos-con-ia', 'pasar-audio-a-texto-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'traducir-con-ia', 'herramientas-de-ia-gratis'],
+    'related' => ['crear-un-podcast-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-videos-con-ia', 'pasar-audio-a-texto-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'traducir-con-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'para-que' => 'Para qué se usa',
         'herramientas' => 'Qué herramienta usar',
@@ -37,6 +37,7 @@ return [
 
 <ul>
     <li><strong>Narrar vídeos</strong>: tutoriales, vídeos cortos para redes, presentaciones de producto. Es el uso más común y el que más se nota cuando sale mal.</li>
+    <li><strong>Podcasts</strong>: corregir una frase sin volver a grabar o publicar el episodio en otro idioma. El proceso completo, del guion a la publicación, está en <a href="/guias/crear-un-podcast-con-ia">crear un podcast con IA</a>.</li>
     <li><strong>Escuchar en lugar de leer</strong>: informes, apuntes, artículos largos o un libro en PDF, mientras haces otra cosa.</li>
     <li><strong>Accesibilidad</strong>: ofrecer versión en audio de un texto para quien tiene dificultades de lectura o visión.</li>
     <li><strong>Versiones en otros idiomas</strong>: traducir el guion y locutarlo en otro idioma sin contratar a un locutor por cada uno. Cómo traducir bien antes de locutar está en <a href="/guias/traducir-con-ia">traducir con IA</a>.</li>

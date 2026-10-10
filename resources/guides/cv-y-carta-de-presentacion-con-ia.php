@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-09-04',
     'readingMinutes' => 14,
-    'words' => 2388,
+    'words' => 2402,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',
@@ -143,7 +143,7 @@ dudar. Sé duro, no me animes.</code></pre>
 <p>El CV lo lee primero un sistema y después una persona con prisa. El perfil de LinkedIn lo lee alguien que ya te está buscando o que acaba de recibir tu candidatura y quiere comprobar si encajas. Tres ajustes que rinden:</p>
 
 <ul>
-    <li><strong>El titular no es tu cargo.</strong> «Analista de datos» describe la nómina. «Analista de datos | logística y previsión de demanda | SQL, Python» describe lo que sabes hacer, y es lo que se busca.</li>
+    <li><strong>El titular no es tu cargo.</strong> «Analista de datos» describe la nómina. «Analista de datos | logística y previsión de demanda | SQL, Python» describe lo que sabes hacer, y es lo que se busca. El repaso sección por sección está en <a href="/guias/mejorar-perfil-de-linkedin-con-ia">mejorar tu perfil de LinkedIn con IA</a>.</li>
     <li><strong>El extracto en primera persona.</strong> Es el único sitio del proceso donde se te permite sonar a persona. Pídele al modelo tres versiones a partir de tus notas y quédate con frases de las tres.</li>
     <li><strong>Las habilidades, las de la oferta.</strong> Los buscadores internos de quien recluta filtran por ese campo antes que por ningún otro.</li>
 </ul>

@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-09',
     'updated' => '2026-10-09',
     'readingMinutes' => 8,
-    'words' => 1304,
+    'words' => 1331,
     'about' => 'Escritura de libros de ficción y no ficción con ayuda de asistentes de inteligencia artificial, autoría y publicación',
-    'related' => ['se-nota-si-un-texto-lo-escribe-una-ia', 'ventana-de-contexto-conversaciones-largas', 'imagenes-con-ia-derechos-y-uso-comercial', 'gpts-proyectos-y-skills', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia'],
+    'related' => ['crear-un-cuento-infantil-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ventana-de-contexto-conversaciones-largas', 'imagenes-con-ia-derechos-y-uso-comercial', 'gpts-proyectos-y-skills', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia'],
     'toc' => [
         'el-reparto' => 'Qué hace la IA y qué haces tú',
         'idea-e-indice' => 'De la idea al índice',
@@ -103,6 +103,7 @@ return [
     <li><strong>Autopublicación</strong>: Amazon KDP pide declarar si el texto, las imágenes o la traducción se han generado con IA. Usarla para corregir o para tener ideas no hay que declararlo. Lee las condiciones vigentes antes de subir el libro.</li>
     <li><strong>Editoriales y concursos</strong>: muchos piden en sus bases que el texto sea original y escrito por el autor. Pregunta antes de enviar si has usado IA en algo más que la revisión.</li>
     <li><strong>La portada</strong>: si la haces con un generador de imágenes, revisa lo que permite cada herramienta para uso comercial; está en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>.</li>
+    <li><strong>Libros infantiles</strong>: la extensión, las ilustraciones y mantener el mismo personaje en cada página tienen sus propios trucos; los contamos en <a href="/guias/crear-un-cuento-infantil-con-ia">crear un cuento infantil con IA</a>.</li>
 </ul>
 
 <p>La pregunta útil no es cuánto ha escrito la IA, sino si podrías defender cada página como tuya. Si la respuesta es sí, el libro es tuyo.</p>

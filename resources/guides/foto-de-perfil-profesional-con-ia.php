@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1089,
     'about' => 'Creación de retratos y fotos de perfil profesionales para LinkedIn y currículum con inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'entrevista-de-trabajo-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'crear-imagenes-con-ia'],
+    'related' => ['mejorar-perfil-de-linkedin-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'entrevista-de-trabajo-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'crear-imagenes-con-ia'],
     'toc' => [
         'por-que' => 'Por qué importa la foto',
         'opciones' => 'Tres formas de hacerla',

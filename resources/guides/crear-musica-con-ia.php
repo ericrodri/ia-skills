@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1308,
     'about' => 'Generación de música y canciones con inteligencia artificial y sus condiciones de uso comercial',
-    'related' => ['imagenes-con-ia-derechos-y-uso-comercial', 'video-y-audio-con-ia-en-el-trabajo', 'ia-para-redes-sociales', 'crear-imagenes-con-ia', 'herramientas-de-ia-gratis'],
+    'related' => ['crear-un-podcast-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'video-y-audio-con-ia-en-el-trabajo', 'ia-para-redes-sociales', 'crear-imagenes-con-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-hay' => 'Qué se puede hacer hoy',
         'herramientas' => 'Las herramientas y en qué se diferencian',
