@@ -23,6 +23,7 @@ class Guides
         'agent-skills-estandar-abierto',
         'empezar-con-claude-code',
         'como-crear-un-skill-para-claude-code',
+        'skills-de-ia-mas-virales',
         'que-es-la-inteligencia-artificial',
         'aprender-ia-desde-cero-plan-de-30-dias',
         'cursos-de-inteligencia-artificial',

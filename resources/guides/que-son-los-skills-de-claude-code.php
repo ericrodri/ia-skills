@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Un prompt se escribe una vez y se olvida. Un skill se instala una vez y se usa siempre. Esta es la diferencia y por qué importa cuando trabajas con IA todos los días.',
     'category' => 'Fundamentos',
     'published' => '2026-08-20',
-    'updated' => '2026-08-26',
-    'readingMinutes' => 8,
-    'words' => 1388,
+    'updated' => '2026-10-10',
+    'readingMinutes' => 9,
+    'words' => 1422,
     'about' => 'Claude Code',
-    'related' => ['como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
+    'related' => ['skills-de-ia-mas-virales', 'como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
     'toc' => [
         'que-es' => 'Qué es exactamente un skill',
         'prompt-vs-skill' => 'Prompt, skill y plugin: las diferencias',
@@ -123,6 +123,8 @@ Si no hay nada, dilo en una línea y termina.</code></pre>
     <li><strong>Tiene criterio, no solo formato.</strong> «Ponlo en tabla» no necesita un skill. «Prioriza por impacto en ingresos y descarta lo que no se pueda medir en un trimestre» sí: es una decisión que quieres que se tome siempre igual.</li>
     <li><strong>Otra persona debería poder hacerlo igual que tú.</strong> El skill es la forma más barata de documentar cómo se hace algo bien.</li>
 </ol>
+
+<p>Si prefieres partir de algo probado antes que escribir el tuyo, en <a href="/guias/skills-de-ia-mas-virales">los skills de IA más virales de 2026</a> repasamos los que más se han extendido este año y qué hace cada uno.</p>
 
 <h2 id="errores">Los cinco errores que más se repiten</h2>
 

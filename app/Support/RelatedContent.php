@@ -144,6 +144,7 @@ class RelatedContent
         'analisis-de-competencia-seo' => [['marketing'], 'competencia'],
         'que-es-jev-modelo-system-one' => [['desarrollo'], 'agente'],
         'conectar-claude-con-unity' => [['desarrollo'], 'mcp'],
+        'skills-de-ia-mas-virales' => [['desarrollo', 'diseno', 'marketing'], null],
     ];
 
     /** Guías genéricas para profesiones que ninguna guía declara todavía. */
