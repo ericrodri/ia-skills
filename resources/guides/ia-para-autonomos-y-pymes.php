@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 12,
-    'words' => 2095,
+    'words' => 2127,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['plan-de-negocio-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['ganar-dinero-con-ia', 'plan-de-negocio-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -128,7 +128,7 @@ return [
     <li><strong>Días 26 a 30.</strong> Balance. Compara las horas del día 1 con las de ahora. Decide qué se queda, qué merece automatizarse y qué has descubierto que no compensaba.</li>
 </ol>
 
-<p>Al final del mes tienes dos cosas que no tenías: un puñado de prompts que funcionan en tu negocio concreto y una cifra de horas propia. Las dos valen más que cualquier curso.</p>
+<p>Al final del mes tienes dos cosas que no tenías: un puñado de prompts que funcionan en tu negocio concreto y una cifra de horas propia. Las dos valen más que cualquier curso. Si lo que buscas es convertir la IA en una fuente de ingresos nueva, y no solo en ahorro, separamos lo que funciona de las promesas vacías en <a href="/guias/ganar-dinero-con-ia">ganar dinero con IA</a>.</p>
 
 <h2 id="errores">Cuatro errores caros que se repiten</h2>
 

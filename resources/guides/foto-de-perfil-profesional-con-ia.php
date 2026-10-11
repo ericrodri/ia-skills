@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-06',
     'updated' => '2026-10-06',
     'readingMinutes' => 7,
-    'words' => 1089,
+    'words' => 1108,
     'about' => 'Creación de retratos y fotos de perfil profesionales para LinkedIn y currículum con inteligencia artificial',
-    'related' => ['mejorar-perfil-de-linkedin-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'entrevista-de-trabajo-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'crear-imagenes-con-ia'],
+    'related' => ['crear-un-avatar-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'entrevista-de-trabajo-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'crear-imagenes-con-ia'],
     'toc' => [
         'por-que' => 'Por qué importa la foto',
         'opciones' => 'Tres formas de hacerla',
@@ -50,7 +50,7 @@ return [
     </tbody>
 </table>
 
-<p>Para la mayoría de la gente, la primera opción es suficiente y la que menos datos tuyos reparte.</p>
+<p>Para la mayoría de la gente, la primera opción es suficiente y la que menos datos tuyos reparte. Si prefieres una ilustración o un personaje en lugar de una foto realista, ver <a href="/guias/crear-un-avatar-con-ia">crear un avatar con IA</a>.</p>
 
 <h2 id="fotos-de-partida">Las fotos de partida</h2>
 

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-03',
     'updated' => '2026-09-08',
     'readingMinutes' => 14,
-    'words' => 2335,
+    'words' => 2355,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',
@@ -99,7 +99,7 @@ return [
 
 <h2 id="prompts">Tres prompts: el mapa, el resumen y la pregunta directa</h2>
 
-<p>El orden importa. El error habitual es empezar por el resumen; el mapa primero da mucho mejor resultado, porque te dice qué preguntar.</p>
+<p>El orden importa. El error habitual es empezar por el resumen; el mapa primero da mucho mejor resultado, porque te dice qué preguntar. Si ese mapa lo quieres como diagrama para estudiar o presentar, está explicado en <a href="/guias/mapas-mentales-y-esquemas-con-ia">mapas mentales y esquemas con IA</a>.</p>
 
 <pre><code>1. MAPA (siempre el primero)
 Antes de resumir nada, dame el índice real de este documento:

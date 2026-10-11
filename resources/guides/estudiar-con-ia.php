@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1226,
+    'words' => 1244,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -56,7 +56,7 @@ return [
 </table>
 </figure>
 
-<p>Las cuatro tienen algo en común: eres tú quien produce. La IA pregunta, corrige y propone; no te da el resultado hecho.</p>
+<p>Las cuatro tienen algo en común: eres tú quien produce. La IA pregunta, corrige y propone; no te da el resultado hecho. Para esquemas y mapas mentales, el método paso a paso está en <a href="/guias/mapas-mentales-y-esquemas-con-ia">mapas mentales y esquemas con IA</a>.</p>
 
 <h2 id="prompts">Prompts para cada momento</h2>
 

@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-05',
     'updated' => '2026-10-05',
     'readingMinutes' => 7,
-    'words' => 1187,
+    'words' => 1203,
     'about' => 'Generación y montaje de vídeos con herramientas de inteligencia artificial',
-    'related' => ['convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['crear-un-avatar-con-ia', 'convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'tipos' => 'Tres formas de hacer un vídeo con IA',
         'herramientas' => 'Qué herramienta usar',
@@ -43,7 +43,7 @@ return [
     <li><strong>Montar con ayuda de la IA.</strong> Grabas tú (o reúnes clips) y la herramienta corta silencios, añade subtítulos, propone música y adapta el formato a vertical. Es lo que más tiempo ahorra a quien publica a menudo.</li>
 </ul>
 
-<p>Hay una cuarta, los avatares que leen un guion, más propia de la formación interna y la comunicación de empresa. Esos usos, y lo que conviene vigilar con ellos, están en <a href="/guias/video-y-audio-con-ia-en-el-trabajo">vídeo y audio con IA en el trabajo</a>.</p>
+<p>Hay una cuarta, los avatares que leen un guion, más propia de la formación interna y la comunicación de empresa. Esos usos, y lo que conviene vigilar con ellos, están en <a href="/guias/video-y-audio-con-ia-en-el-trabajo">vídeo y audio con IA en el trabajo</a>. Cómo crear tu propio avatar, ilustrado o de vídeo, está en <a href="/guias/crear-un-avatar-con-ia">crear un avatar con IA</a>.</p>
 
 <h2 id="herramientas">Qué herramienta usar</h2>
 
