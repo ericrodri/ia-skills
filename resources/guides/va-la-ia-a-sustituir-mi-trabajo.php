@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 13,
-    'words' => 2142,
+    'words' => 2135,
     'about' => 'Impacto de la inteligencia artificial en el empleo',
-    'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion'],
+    'related' => ['que-tareas-de-tu-profesion-automatiza-la-ia', 'trabajar-en-inteligencia-artificial', 'medir-si-la-ia-ahorra-tiempo', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'los-numeros' => 'Los números que hay sobre la mesa',
         'exposicion' => 'Exposición no es sustitución',
@@ -144,6 +144,6 @@ return [
 
 <p><strong>Usarla a escondidas.</strong> Es la más extendida y la más cara. Quien la usa en secreto no puede pedir formación, no puede proponer que se cambie el proceso y no puede apuntarse el resultado. Encima acumula el riesgo de meter datos donde no debe, que es un problema distinto y muy real: <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">qué puedes poner en el prompt y qué no</a>. Si en tu empresa no hay reglas, la manera rápida de que las haya es <a href="/guias/politica-de-uso-de-ia-en-la-empresa">proponer una política de uso</a>.</p>
 
-<p>El resumen, sin adornos: la probabilidad de que tu puesto desaparezca entero es baja; la de que cambie de contenido es alta; y la diferencia entre salir reforzado o desplazado depende sobre todo de si te mueves antes o después de que lo decida otro.</p>
+<p>El resumen, sin adornos: la probabilidad de que tu puesto desaparezca entero es baja; la de que cambie de contenido es alta; y la diferencia entre salir reforzado o desplazado depende sobre todo de si te mueves antes o después de que lo decida otro. Y si prefieres convertir la IA en tu oficio, en <a href="/guias/trabajar-en-inteligencia-artificial">trabajar en inteligencia artificial</a> repasamos qué empleos hay y cómo llegar a ellos.</p>
 HTML,
 ];

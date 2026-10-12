@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-01',
     'updated' => '2026-10-01',
     'readingMinutes' => 7,
-    'words' => 1156,
+    'words' => 1174,
     'about' => 'Criterios para elegir formación en inteligencia artificial para el trabajo',
-    'related' => ['aprender-ia-desde-cero-plan-de-30-dias', 'que-es-la-inteligencia-artificial', 'va-la-ia-a-sustituir-mi-trabajo', 'como-escribir-prompts-efectivos', 'cv-y-carta-de-presentacion-con-ia', 'que-tareas-de-tu-profesion-automatiza-la-ia'],
+    'related' => ['trabajar-en-inteligencia-artificial', 'aprender-ia-desde-cero-plan-de-30-dias', 'que-es-la-inteligencia-artificial', 'va-la-ia-a-sustituir-mi-trabajo', 'como-escribir-prompts-efectivos', 'cv-y-carta-de-presentacion-con-ia', 'que-tareas-de-tu-profesion-automatiza-la-ia'],
     'toc' => [
         'antes' => 'Antes de buscar: qué quieres aprender',
         'tipos' => 'Los tres tipos de curso de IA',
@@ -104,6 +104,6 @@ return [
 
 <p>Y si lo que te mueve es el miedo a quedarte atrás, lee primero <a href="/guias/va-la-ia-a-sustituir-mi-trabajo">¿va la IA a sustituir mi trabajo?</a>: te ayudará a saber qué aprender en lugar de aprenderlo todo.</p>
 
-<p>Si solo te quedas con una idea: el mejor curso de IA es el que te obliga a usarla en tu trabajo real. Empieza por lo gratuito, practica unas semanas y paga solo cuando sepas exactamente qué te falta.</p>
+<p>Si solo te quedas con una idea: el mejor curso de IA es el que te obliga a usarla en tu trabajo real. Empieza por lo gratuito, practica unas semanas y paga solo cuando sepas exactamente qué te falta. Si tu objetivo es cambiar de empleo, mira antes qué piden las ofertas en <a href="/guias/trabajar-en-inteligencia-artificial">trabajar en inteligencia artificial</a>.</p>
 HTML,
 ];

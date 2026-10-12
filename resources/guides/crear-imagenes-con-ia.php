@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1198,
+    'words' => 1224,
     'about' => 'Generación de imágenes con inteligencia artificial',
-    'related' => ['editar-fotos-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'herramientas' => 'Qué herramienta usar',
         'prompt' => 'La estructura de un buen prompt',
@@ -100,7 +100,7 @@ de bloques de madera que sube hacia la derecha, con una pequeña planta
 en el último bloque. Estilo fotográfico minimalista, mucho espacio
 vacío a la izquierda para poner texto. Formato 16:9.</code></pre>
 
-<p>Para piezas más elaboradas de diseño (logotipos, carteles, identidad visual) hay diez ejemplos más en la guía de <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>.</p>
+<p>Para piezas más elaboradas de diseño (logotipos, carteles, identidad visual) hay diez ejemplos más en la guía de <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>. Y si lo que buscas es una idea para la piel, en <a href="/guias/disenar-un-tatuaje-con-ia">diseñar un tatuaje con IA</a> explicamos cómo pedir un diseño que se pueda tatuar.</p>
 
 <h2 id="editar">Editar en vez de regenerar</h2>
 

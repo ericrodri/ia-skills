@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-03',
     'updated' => '2026-10-03',
     'readingMinutes' => 7,
-    'words' => 1123,
+    'words' => 1133,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -59,7 +59,7 @@ return [
     <li><strong>Arreglar la luz</strong>: fotos oscuras, contraluces, tonos amarillentos de interior.</li>
     <li><strong>Redecorar una habitación</strong>: ver tu salón con otro estilo o color antes de comprar; lo explicamos en <a href="/guias/decorar-tu-casa-con-ia">decorar tu casa con IA</a>.</li>
     <li><strong>Ampliar el encuadre</strong> para adaptar una foto vertical a formato horizontal, o al revés, sin recortar al protagonista.</li>
-    <li><strong>Restaurar fotos antiguas</strong>: quitar arañazos, mejorar la nitidez o colorear. Ten en cuenta que la IA «inventa» detalles para rellenar; el resultado es una interpretación, no la foto original recuperada.</li>
+    <li><strong>Restaurar fotos antiguas</strong>: quitar arañazos, mejorar la nitidez o colorear. Ten en cuenta que la IA «inventa» detalles para rellenar; el resultado es una interpretación, no la foto original recuperada. El proceso completo está en <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar fotos antiguas con IA</a>.</li>
 </ol>
 
 <h2 id="instrucciones">Cómo pedirlo para que salga bien</h2>
