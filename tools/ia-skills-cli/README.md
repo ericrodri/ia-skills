@@ -38,9 +38,9 @@ Ambos usan la API pública de solo lectura, que no requiere clave:
 
 Para apuntar a otra instancia (por ejemplo, tu entorno local), usa `IA_SKILLS_URL=http://localhost:8001`.
 
-## Publicación
+## Desarrollo
 
-El paquete todavía no está publicado en npm. Mientras tanto se puede usar en local:
+Para probar los cambios en local sin publicar:
 
 ```bash
 cd tools/ia-skills-cli
@@ -48,4 +48,7 @@ npm link
 ia-skills search "cold email"
 ```
 
-Tests: `npm test` (usa el runner nativo de Node).
+Apunta a otra instancia con `IA_SKILLS_URL=http://localhost:8001`.
+
+Tests: `npm test` (runner nativo de Node, sin dependencias). Se ejecutan solos
+antes de cada `npm publish`.
