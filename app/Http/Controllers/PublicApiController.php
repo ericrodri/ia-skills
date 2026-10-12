@@ -109,6 +109,8 @@ class PublicApiController extends Controller
             'difficulty' => $skill->difficulty,
             'votes' => (int) $skill->vote_score,
             'saves' => (int) $skill->saves_count,
+            // Descargas reales del SKILL.md: la unica metrica sin sembrar.
+            'installs' => (int) $skill->installs_count,
             'url' => route('skills.show', ['skill' => $skill->slug]),
             'skill_md_url' => route('skills.markdown', ['skill' => $skill->slug]),
             'updated_at' => $skill->updated_at?->toIso8601String(),

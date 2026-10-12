@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Skill;
+use App\Support\InstallCounter;
 use App\Support\SkillMarkdown;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -23,12 +24,20 @@ class SkillMarkdownController extends Controller
         $name = SkillMarkdown::name($skill);
         $disposition = $request->boolean('download') ? 'attachment' : 'inline';
 
+        // Llevarse el SKILL.md es la señal de uso real del catálogo: aquí es
+        // donde se cuenta, venga de la web, del CLI o del servidor MCP.
+        if ($skill->status === 'published') {
+            InstallCounter::record($skill, $request);
+        }
+
         return response(SkillMarkdown::render($skill), 200, [
             'Content-Type' => 'text/markdown; charset=utf-8',
             'Content-Disposition' => "{$disposition}; filename=\"{$name}-SKILL.md\"",
             'X-Robots-Tag' => 'noindex, follow',
             // Un borrador solo lo ve su autor: no puede quedarse en una caché compartida.
-            'Cache-Control' => $skill->status === 'published' ? 'public, max-age=3600' : 'private, no-store',
+            // En las publicadas la caché es corta: una respuesta servida desde
+            // caché no vuelve a pasar por aquí y no se contaría.
+            'Cache-Control' => $skill->status === 'published' ? 'public, max-age=300' : 'private, no-store',
         ]);
     }
 }

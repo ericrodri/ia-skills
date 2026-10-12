@@ -200,6 +200,7 @@ class SkillController extends Controller
                 'url'      => route('skills.markdown', ['skill' => $skill->slug]),
                 'command'  => SkillMarkdown::installCommand($skill),
                 'prompt'   => SkillMarkdown::installPrompt([$skill]),
+                'mcp'      => SkillMarkdown::mcpCommand(),
             ],
             'guides'     => $guides,
             'neighbours' => $neighbours,

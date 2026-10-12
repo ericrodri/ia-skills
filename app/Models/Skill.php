@@ -30,6 +30,7 @@ class Skill extends Model
         'vote_score',
         'views_count',
         'saves_count',
+        'installs_count',
         'version',
         'resource_type',
     ];
@@ -48,6 +49,7 @@ class Skill extends Model
         'vote_score' => 'integer',
         'views_count' => 'integer',
         'saves_count' => 'integer',
+        'installs_count' => 'integer',
         'version' => 'integer',
     ];
 

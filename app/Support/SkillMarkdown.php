@@ -106,6 +106,18 @@ class SkillMarkdown
     }
 
     /**
+     * Comando que registra el catálogo como servidor MCP en Claude Code.
+     *
+     * Una vez puesto, Claude busca e instala skills por su cuenta durante la
+     * conversación, sin que nadie vuelva a pasar por la web. Es el mismo
+     * paquete que el CLI: tools/ia-skills-cli.
+     */
+    public static function mcpCommand(): string
+    {
+        return 'claude mcp add ia-skills -- npx -y ia-skills mcp';
+    }
+
+    /**
      * Instrucción para pegar en Claude Code y que sea él quien instale.
      *
      * Es la opción principal en la web: quien ya usa Claude Code prefiere
