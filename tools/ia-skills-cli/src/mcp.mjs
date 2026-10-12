@@ -14,7 +14,7 @@ const DEFAULT_PROTOCOL = '2025-06-18'
 const TOOLS = [
     {
         name: 'search_skills',
-        description: 'Busca prompts y skills de IA en español en el catálogo de ia-skills.com, ordenados por votos de la comunidad. Úsala cuando el usuario quiera un prompt o skill para una tarea profesional (marketing, desarrollo, legal, ventas, RRHH, finanzas...).',
+        description: 'Busca prompts y skills de IA en español en el catálogo de ia-skills.com, ordenados por popularidad. Úsala cuando el usuario quiera un prompt o skill para una tarea profesional (marketing, desarrollo, legal, ventas, RRHH, finanzas...).',
         inputSchema: {
             type: 'object',
             properties: {
@@ -60,7 +60,7 @@ async function callTool(name, args = {}) {
             const { skills, total } = await searchSkills({ ...args, limit: args.limit ?? 8 })
             if (!skills.length) return `Sin resultados para «${args.query}».`
             const lines = skills.map((s, i) =>
-                `${i + 1}. ${s.title} (slug: ${s.slug}, ${s.profession}, ${s.votes} votos)\n   ${s.description}\n   ${s.url}`)
+                `${i + 1}. ${s.title} (slug: ${s.slug}, ${s.profession}, ${s.votes} puntos)\n   ${s.description}\n   ${s.url}`)
             return `${total} resultados. Los ${skills.length} más relevantes:\n\n${lines.join('\n\n')}`
         }
         case 'get_skill': {

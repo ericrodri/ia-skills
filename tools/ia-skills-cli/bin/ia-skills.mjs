@@ -43,7 +43,7 @@ async function main() {
             console.log(`${total} resultados:\n`)
             for (const s of skills) {
                 console.log(`  ${s.title}`)
-                console.log(`  \x1b[2m${s.slug} · ${s.profession} · ${s.votes} votos\x1b[0m\n`)
+                console.log(`  \x1b[2m${s.slug} · ${s.profession} · ${s.votes} puntos\x1b[0m\n`)
             }
             console.log('Instala una con: ia-skills install <slug>')
             return
