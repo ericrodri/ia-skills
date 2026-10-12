@@ -70,6 +70,16 @@ jobs:
           node-version: '22'
           cache: npm
 
+      # El build necesita vendor/: resources/js/app.js importa Ziggy desde
+      # ../../vendor/tightenco/ziggy, que lo instala Composer. Sin este paso el
+      # build falla con UNRESOLVED_IMPORT aunque npm ci haya ido bien.
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          coverage: none
+
+      - run: composer install --no-dev --prefer-dist --no-interaction --no-progress
+
       - run: npm ci
 
       # El despliegue compila en el servidor y public/build está en .gitignore:
