@@ -115,13 +115,35 @@ class InstallCounterTest extends TestCase
             ->assertJsonPath('data.installs', 1);
     }
 
-    public function test_the_skill_page_offers_the_mcp_command(): void
+    public function test_the_mcp_command_is_hidden_until_the_package_is_published(): void
     {
-        $skill = $this->skill();
+        // Por defecto el paquete no está publicado en npm: ofrecer el comando
+        // sería prometer algo que falla al pegarlo en la terminal.
+        config(['distribution.mcp_enabled' => false]);
 
-        $this->get(route('skills.show', $skill))
+        $this->get(route('skills.show', $this->skill()))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('install.mcp', null));
+    }
+
+    public function test_the_skill_page_offers_the_mcp_command_once_enabled(): void
+    {
+        config(['distribution.mcp_enabled' => true]);
+
+        $this->get(route('skills.show', $this->skill()))
             ->assertOk()
             ->assertInertia(fn ($page) => $page
                 ->where('install.mcp', 'claude mcp add ia-skills -- npx -y ia-skills mcp'));
+    }
+
+    public function test_the_command_follows_the_package_name_in_config(): void
+    {
+        // Si `ia-skills` estuviera ocupado en npm, basta con cambiar la variable.
+        config(['distribution.mcp_enabled' => true, 'distribution.npm_package' => 'ia-skills-cli']);
+
+        $this->get(route('skills.show', $this->skill()))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('install.mcp', 'claude mcp add ia-skills -- npx -y ia-skills-cli mcp'));
     }
 }

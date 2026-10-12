@@ -114,7 +114,18 @@ class SkillMarkdown
      */
     public static function mcpCommand(): string
     {
-        return 'claude mcp add ia-skills -- npx -y ia-skills mcp';
+        $package = config('distribution.npm_package');
+
+        return sprintf('claude mcp add ia-skills -- npx -y %s mcp', $package);
+    }
+
+    /**
+     * Si el paquete no está publicado en npm, el comando falla al pegarlo:
+     * mientras tanto la web no lo ofrece.
+     */
+    public static function mcpAvailable(): bool
+    {
+        return (bool) config('distribution.mcp_enabled');
     }
 
     /**
