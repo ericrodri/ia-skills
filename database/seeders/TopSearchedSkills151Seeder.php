@@ -64,7 +64,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'Green software engineering',
+                'title'            => 'Reducir la huella de carbono del software: código eficiente, hosting verde y medición de emisiones',
                 'description'      => 'Reduce la huella de carbono de tu software con prácticas de código eficiente, green hosting y medición de emisiones. Aprende las técnicas que hacen el desarrollo más sostenible.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un ingeniero de software especializado en sostenibilidad digital y eficiencia energética. Eres experto en green software engineering, las metodologías del Green Software Foundation y las herramientas de medición de emisiones de software.

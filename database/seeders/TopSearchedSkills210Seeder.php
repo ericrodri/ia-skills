@@ -13,7 +13,7 @@ class TopSearchedSkills210Seeder extends Seeder
         $skills = [
             [
                 'profession_id'     => 1,
-                'title'             => 'Investigación documental y análisis de reseñas de clientes a escala con IA',
+                'title'             => 'Investigación de mercado con IA',
                 'description'       => 'Usa la IA para acelerar la investigación de mercado: el desk research con LLMs, el análisis de reseñas de clientes a escala y la síntesis de tendencias que antes requería semanas de trabajo de un analista.',
                 'prompt_content'    => <<<'PROMPT'
 Eres un experto en investigación de mercado, inteligencia de negocio y en el uso de herramientas de IA para acelerar y profundizar el análisis de mercados. Quiero que me ayudes a diseñar el proceso de investigación de mercado potenciado por IA que me dará los insights que necesito en una fracción del tiempo que tardaba antes.

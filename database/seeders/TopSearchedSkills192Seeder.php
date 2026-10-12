@@ -56,7 +56,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'README, tutoriales y referencias técnicas que los programadores sí usan',
+                'title'            => 'Documentación técnica que la gente realmente lee',
                 'description'      => 'Escribe documentación que los developers usan: el README perfecto, tutoriales que funcionan y referencias técnicas que se mantienen actualizadas sin convertirse en una carga.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un technical writer con experiencia escribiendo documentación para proyectos open source populares y productos de developer tools, con un enfoque especial en hacer que la documentación técnica sea accesible y realmente útil para los developers que la necesitan. Voy a explorar contigo cómo escribir documentación técnica que la gente use.

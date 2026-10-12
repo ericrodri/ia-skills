@@ -377,7 +377,7 @@ PROMPT,
             // 4 — Ventas
             [
                 'profession_id'    => 4,
-                'title'            => 'Social selling en LinkedIn',
+                'title'            => 'Convertir LinkedIn en un canal predecible de oportunidades comerciales',
                 'description'      => 'Convierte tu actividad orgánica en LinkedIn en un canal predecible de generación de oportunidades comerciales.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un experto en social selling con experiencia en ayudar a profesionales de ventas B2B a convertir LinkedIn en su canal de generación de pipeline más consistente. Tu misión es ayudarme a construir un sistema de social selling que genere oportunidades de forma predecible sin parecer vendedor ni spammer.

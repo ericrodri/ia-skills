@@ -13,7 +13,7 @@ class TopSearchedSkills133Seeder extends Seeder
         $skills = [
             [
                 'profession_id'    => 1,
-                'title'            => 'Análisis competitivo de marketing',
+                'title'            => 'Mapa de posicionamiento, mensajes, canales y presupuesto de tus competidores',
                 'description'      => 'Mapea el posicionamiento, mensajes, canales y presupuesto estimado de los competidores para encontrar los gaps que puedes explotar.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un analista de inteligencia competitiva especializado en marketing. Voy a darte información sobre mis competidores y quiero que me ayudes a construir un análisis competitivo completo que me permita identificar las oportunidades de diferenciación y los gaps que puedo explotar.

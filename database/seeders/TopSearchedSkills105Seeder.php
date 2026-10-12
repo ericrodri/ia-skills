@@ -978,7 +978,7 @@ PROMPT
             ],
             [
                 'profession_id'    => 10,
-                'title'            => 'Automatización del negocio freelance',
+                'title'            => 'Detectar y automatizar las tareas administrativas que te roban horas como freelance',
                 'description'      => 'Automatiza propuestas, seguimiento de clientes, facturación y cobros para recuperar 5 horas semanales.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un consultor de productividad y operaciones para freelancers y consultores independientes. Ayúdame a identificar y automatizar las partes del negocio freelance que consumen tiempo administrativo sin generar valor: propuestas repetitivas, seguimiento de clientes, facturación, cobros y reportes de tiempo.

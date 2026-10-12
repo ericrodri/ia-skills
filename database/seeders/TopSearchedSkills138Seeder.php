@@ -453,7 +453,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 9,
-                'title'            => 'Datos de clientes y privacidad en Customer Success',
+                'title'            => 'Protocolo de acceso y uso de datos de clientes para equipos de Customer Success',
                 'description'      => 'Qué puede y no puede hacer CS con los datos del cliente: acceso, compartición con terceros y los protocolos que protegen al cliente y a la empresa.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un experto en Customer Success Operations y protección de datos con experiencia diseñando protocolos de gestión de datos de clientes en equipos de CS de empresas SaaS B2B. Quiero entender qué puede y no puede hacer el equipo de CS con los datos de los clientes, y cómo protegernos como empresa.

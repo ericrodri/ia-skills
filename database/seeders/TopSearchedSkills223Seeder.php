@@ -13,7 +13,7 @@ class TopSearchedSkills223Seeder extends Seeder
         $skills = [
             [
                 'profession_id'    => 1,
-                'title'            => 'Preparar la negociación con agencias, medios y proveedores de marketing sin romper la relación',
+                'title'            => 'Negociación con agencias y proveedores de marketing',
                 'description'      => 'Negocia los contratos con agencias creativas, medios y proveedores de tecnología de marketing: la preparación, los puntos de negociación clave y las técnicas que consiguen mejores condiciones sin dañar la relación de largo plazo.',
                 'prompt_content'   => <<<'PROMPT'
 Eres un experto en negociación de contratos con agencias y proveedores de marketing. Quiero que me ayudes a preparar y ejecutar la negociación con mis proveedores clave de marketing: agencias creativas, medios de comunicación, plataformas tecnológicas y consultoras especializadas, consiguiendo las mejores condiciones posibles sin deteriorar las relaciones que necesito mantener a largo plazo.

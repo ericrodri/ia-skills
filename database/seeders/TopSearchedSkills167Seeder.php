@@ -13,7 +13,7 @@ class TopSearchedSkills167Seeder extends Seeder
         $skills = [
             [
                 'profession_id'     => 1,
-                'title'             => 'Investigación de mercado con IA',
+                'title'             => 'Investigación de mercado mixta: encuestas, entrevistas y tendencias aceleradas con IA',
                 'description'       => 'Combina datos cualitativos y cuantitativos para entender al mercado: encuestas, entrevistas, análisis de tendencias y las herramientas de IA que aceleran el proceso.',
                 'prompt_content'    => <<<'PROMPT'
 Actúa como investigador de mercado con experiencia combinando metodología clásica (encuestas, entrevistas, grupos focales, análisis competitivo) con las herramientas de IA que han acelerado el proceso sin eliminar el juicio humano necesario para interpretar los datos correctamente.

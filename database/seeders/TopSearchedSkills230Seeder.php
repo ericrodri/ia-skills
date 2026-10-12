@@ -365,7 +365,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 9,
-                'title'             => 'Uso ético y legal de los datos del cliente en Customer Success: health score y RGPD',
+                'title'             => 'Datos de clientes y privacidad en customer success',
                 'description'       => 'Usa los datos de los clientes de forma ética y legal en el equipo de CS: qué datos puedes usar para el health scoring, los límites del uso de datos para personalizar la relación y la respuesta correcta cuando un cliente ejerce sus derechos GDPR.',
                 'prompt_content'    => <<<'PROMPT'
 Eres un experto en customer success y en la privacidad de datos en el contexto de la relación con clientes B2B con experiencia ayudando a equipos de CS a usar los datos de forma efectiva dentro de los límites legales. Necesito tu ayuda para entender cómo gestionar los datos de clientes en el equipo de CS de forma que maximice el valor que damos a los clientes y cumpla con el GDPR.

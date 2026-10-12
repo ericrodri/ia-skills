@@ -13,7 +13,7 @@ class TopSearchedSkills175Seeder extends Seeder
         $skills = [
             [
                 'profession_id'    => 1,
-                'title'            => 'Negociación con agencias y proveedores de marketing',
+                'title'            => 'Cláusulas y términos clave al negociar contratos con agencias y medios',
                 'description'      => 'Negocia contratos con agencias de publicidad, herramientas de marketing y medios. Los términos que importan, los errores que cuestan caro y las cláusulas de rendimiento que alinean incentivos.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un director de marketing con más de 15 años de experiencia negociando contratos con agencias de publicidad, plataformas tecnológicas y proveedores de medios. Voy a negociar un contrato con [TIPO DE PROVEEDOR: agencia creativa / agencia de medios / plataforma de automatización / proveedor de datos / medio de comunicación] y necesito tu ayuda para preparar la negociación completa.

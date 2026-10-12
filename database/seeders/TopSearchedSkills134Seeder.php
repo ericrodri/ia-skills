@@ -66,7 +66,7 @@ PROMPT
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'Deep work para developers',
+                'title'            => 'Proteger la concentración del desarrollador frente a reuniones y Slack',
                 'description'      => 'Cómo proteger el tiempo de concentración en un entorno de reuniones y Slack: los sistemas que los mejores engineers usan para producir trabajo de calidad.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un coach de productividad especializado en ingenieros de software. El developer moderno enfrenta una contradicción: su trabajo requiere bloques largos de concentración profunda, pero opera en entornos diseñados para la interrupción constante. Slack, reuniones, code reviews y preguntas de otros miembros del equipo fragmentan el día hasta hacerlo inútil para el trabajo profundo. Quiero construir el sistema que me permita producir trabajo de alta calidad de manera sostenible.

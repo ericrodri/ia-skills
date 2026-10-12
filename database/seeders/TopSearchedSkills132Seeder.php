@@ -60,7 +60,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 2,
-                'title'             => 'Documentación técnica que la gente realmente lee',
+                'title'             => 'Sistema de documentación técnica para equipos: READMEs, ADRs y runbooks',
                 'description'       => 'Escribe READMEs, ADRs, runbooks y guías de estilo de documentación que mantienen la consistencia y utilidad real en el equipo técnico.',
                 'prompt_content'    => <<<'PROMPT'
 Actúa como un Technical Writer con experiencia en empresas de software que han pasado de la ausencia de documentación al caos de documentación desactualizada, y han llegado finalmente a un sistema que el equipo realmente usa y mantiene. Quiero mejorar radicalmente la documentación técnica de mi equipo.

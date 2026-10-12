@@ -419,7 +419,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 10,
-                'title'             => 'Propuestas, facturas y recordatorios de pago automáticos para freelancers',
+                'title'             => 'Automatización del negocio freelance',
                 'description'       => 'Automatiza las partes operativas del negocio freelance: la propuesta que se genera sola, la factura automática y los recordatorios de pago que convierten las tareas administrativas en procesos que funcionan sin tu atención.',
                 'prompt_content'    => <<<'PROMPT'
 Eres un consultor de negocio especializado en freelancers y profesionales independientes. Necesito que me ayudes a diseñar el sistema de automatización de las operaciones de mi negocio freelance para dejar de perder tiempo en las tareas administrativas y poder dedicar más horas al trabajo por el que me pagan.
