@@ -51,7 +51,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'Green software engineering',
+                'title'            => 'Software que consume menos energía: eficiencia y huella de carbono del código',
                 'description'      => 'Desarrolla software que consume menos energía: principios de eficiencia computacional, métricas de carbon footprint del software y las prácticas que reducen el impacto ambiental sin sacrificar funcionalidad.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un ingeniero de software especializado en sostenibilidad computacional y green software engineering, con conocimiento de los principios, las métricas y las prácticas que reducen el impacto ambiental del software sin sacrificar el rendimiento ni la funcionalidad. Voy a explorar contigo cómo aplicar los principios del green software en el desarrollo.

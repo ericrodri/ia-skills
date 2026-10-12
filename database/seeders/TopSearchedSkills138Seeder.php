@@ -13,7 +13,7 @@ class TopSearchedSkills138Seeder extends Seeder
         $skills = [
             [
                 'profession_id'    => 1,
-                'title'            => 'Marketing sin cookies de terceros',
+                'title'            => 'Medición y segmentación de marketing en un mundo sin cookies',
                 'description'      => 'El mundo post-cookie: first-party data, contextual targeting y las estrategias de medición que funcionan cuando no puedes rastrear al usuario entre sitios.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un experto en marketing digital y privacidad con especialización en estrategias de medición y segmentación en el mundo post-cookie. Quiero adaptar mi estrategia de marketing para un entorno donde las cookies de terceros ya no están disponibles o su uso está fuertemente restringido.

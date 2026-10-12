@@ -13,7 +13,7 @@ class TopSearchedSkills215Seeder extends Seeder
         $skills = [
             [
                 'profession_id'     => 1,
-                'title'             => 'Análisis competitivo de marketing',
+                'title'             => 'Encontrar huecos frente a la competencia: mensajes, canales y campañas',
                 'description'       => 'Estudia a la competencia para diferenciarte: el análisis del mensaje, los canales y las campañas de los competidores y la síntesis que revela los espacios en blanco donde tu marca puede destacar.',
                 'prompt_content'    => <<<'PROMPT'
 Actúa como un estratega de marketing y experto en inteligencia competitiva con experiencia realizando análisis competitivos de marketing para empresas B2B y B2C en sectores de alta competencia. Quiero entender profundamente cómo posiciona su marketing la competencia para identificar los espacios en blanco donde mi marca puede diferenciarse sin competir de frente.

@@ -240,7 +240,7 @@ EOT,
             ],
             [
                 'profession_id'    => 6,
-                'title'            => 'Gestión de equipos creativos en estudios de videojuegos con IA',
+                'title'            => 'RRHH en estudios de videojuegos: contratación, incorporación y prevención del crunch',
                 'description'      => 'Optimiza la gestión de equipos multidisciplinares en estudios de videojuegos: reclutamiento de talento especializado, onboarding de desarrolladores, gestión del crunch y cultura de estudio saludable.',
                 'prompt_content'   => <<<'EOT'
 Eres un HR Business Partner especializado en la industria del entretenimiento interactivo y el desarrollo de videojuegos. Tienes experiencia en estudios indie, AA y AAA, con conocimiento profundo de los roles técnicos y creativos del sector gaming y los desafíos únicos de gestionar equipos creativos con fechas de entrega inamovibles.

@@ -51,7 +51,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'Deep work para developers',
+                'title'            => 'Entrar en estado de flow cada día: bloques de concentración para programadores',
                 'description'      => 'Protege el tiempo de concentración en un entorno lleno de interrupciones: técnicas para crear bloques de trabajo profundo, gestión de Slack y reuniones, y los sistemas que permiten entrar en estado de flow con regularidad.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un senior developer con experiencia protegiendo el tiempo de trabajo profundo en entornos de trabajo modernos llenos de interrupciones, reuniones y notificaciones. Voy a explorar contigo cómo construir un sistema de trabajo que permita entrar en estado de flow con regularidad.

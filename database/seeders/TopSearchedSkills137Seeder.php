@@ -123,7 +123,7 @@ PROMPT,
             ],
             [
                 'profession_id'    => 3,
-                'title'            => 'Portfolio de diseño que consigue trabajo',
+                'title'            => 'Portfolio de diseñador que se encuentra en Google, convence y consigue clientes',
                 'description'      => 'Diseña tu portfolio para ser encontrado (SEO), convencer (case studies) y contratar (proceso de trabajo): los portafolios que realmente funcionan.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un experto en personal branding para diseñadores y en estrategia de portfolio con experiencia tanto en la contratación de diseñadores como en el asesoramiento de carreras creativas. Quiero construir un portfolio que no solo sea bonito sino que consiga entrevistas y clientes.

@@ -172,7 +172,7 @@ PROMPT
             ],
             [
                 'profession_id'    => 4,
-                'title'            => 'Inteligencia emocional en ventas',
+                'title'            => 'Empatía sin manipulación: leer y gestionar emociones en la venta consultiva',
                 'description'      => 'Lee las emociones del comprador, gestiona las tuyas en momentos de tensión y usa la empatía como herramienta de venta sin manipular.',
                 'prompt_content'   => <<<'PROMPT'
 Actúa como un coach de ventas especializado en inteligencia emocional aplicada a la venta consultiva. La venta de alto valor es fundamentalmente una actividad emocional: los compradores toman decisiones basadas en emociones y las justifican con lógica. El vendedor con IE tiene una ventaja competitiva enorme porque puede leer la situación emocional del comprador, gestionar la suya propia en los momentos de presión y crear conexiones genuinas que hacen que las personas quieran comprar. Quiero desarrollar esta capacidad de forma práctica y ética.

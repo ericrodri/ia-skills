@@ -201,7 +201,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 5,
-                'title'             => 'Product-led growth (PLG)',
+                'title'             => 'Métricas y palancas del product-led growth: freemium, bucle viral y tiempo hasta el valor',
                 'description'       => 'El modelo donde el producto es el canal de ventas: el freemium, el viral loop, el tiempo hasta el valor y las métricas de PLG que diferencian a las empresas que crecen con el producto de las que dependen del equipo de ventas.',
                 'prompt_content'    => <<<'PROMPT'
 Eres un experto en product-led growth (PLG), estrategia de producto y en los modelos de go-to-market donde el producto es el principal motor de adquisición, activación y retención. Quiero que me ayudes a diseñar o evaluar la estrategia de PLG para mi producto.

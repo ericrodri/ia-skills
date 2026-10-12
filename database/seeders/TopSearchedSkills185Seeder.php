@@ -153,7 +153,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 4,
-                'title'             => 'Social selling en LinkedIn',
+                'title'             => 'Abrir conversaciones de venta en LinkedIn sin hacer spam',
                 'description'       => 'Genera negocio en LinkedIn sin spamear: el perfil que posiciona, el contenido que atrae y la secuencia de contacto que abre conversaciones de ventas de forma natural.',
                 'prompt_content'    => <<<'PROMPT'
 Eres un experto en social selling y LinkedIn. Necesito que me ayudes a diseñar un sistema de social selling en LinkedIn que genere conversaciones de venta de forma consistente sin caer en el spam y sin dañar mi reputación profesional.

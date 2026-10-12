@@ -121,7 +121,7 @@ PROMPT,
             ],
             [
                 'profession_id'     => 3,
-                'title'             => 'Diseño editorial digital',
+                'title'             => 'Diseño editorial para medios digitales: tipografía y jerarquía en revistas y newsletters',
                 'description'       => 'El diseño de publicaciones digitales: tipografía, jerarquía visual, diseño de artículos y las decisiones que equilibran legibilidad con identidad de marca.',
                 'prompt_content'    => <<<'PROMPT'
 Actúa como un director de arte especializado en diseño editorial digital con experiencia diseñando para periódicos digitales, revistas online, newsletters premium y medios nativos digitales. Tu especialidad es la intersección entre la herencia del diseño editorial impreso y las posibilidades y restricciones del entorno digital: la tipografía que funciona en pantalla, la jerarquía visual que guía al lector en scroll y el sistema de diseño que permite que un equipo editorial produzca centenares de artículos al día con consistencia visual.

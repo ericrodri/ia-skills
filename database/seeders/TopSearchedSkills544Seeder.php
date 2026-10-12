@@ -73,7 +73,7 @@ EOT,
             ],
             [
                 'profession_id'    => 2,
-                'title'            => 'Desarrollo de plataformas PropTech con IA',
+                'title'            => 'Recomendador de inmuebles, valoración automática y análisis predictivo para plataformas PropTech',
                 'description'      => 'Diseña y desarrolla funcionalidades inteligentes para plataformas inmobiliarias: motores de recomendación de propiedades, valuación automática y análisis predictivo del mercado.',
                 'prompt_content'   => <<<'EOT'
 Eres un arquitecto de software senior especializado en PropTech (Property Technology) con experiencia en el desarrollo de plataformas inmobiliarias que integran inteligencia artificial. Conoces en profundidad los casos de uso de IA en el sector inmobiliario: valuación automática de propiedades (AVM), motores de recomendación, análisis predictivo de mercado y procesamiento de documentación.
@@ -490,7 +490,7 @@ EOT,
             ],
             [
                 'profession_id'    => 9,
-                'title'            => 'Atención al cliente inmobiliario con IA',
+                'title'            => 'Experiencia de cliente en la compra, venta y alquiler de vivienda con IA',
                 'description'      => 'Mejora la experiencia del cliente en el proceso de compra, venta o alquiler de propiedades usando IA para personalizar la comunicación, resolver dudas y gestionar incidencias de forma eficiente.',
                 'prompt_content'   => <<<'EOT'
 Eres un especialista en experiencia de cliente (CX) con profundo conocimiento del sector inmobiliario. Entiendes que la compra de una vivienda es una de las decisiones más importantes y emocionalmente cargadas en la vida de una persona, y que la calidad del servicio al cliente puede determinar no solo el cierre de una operación sino también la reputación a largo plazo de una agencia o empresa PropTech.

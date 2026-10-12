@@ -324,7 +324,7 @@ PROMPT
             ],
             [
                 'profession_id'    => 5,
-                'title'            => 'Product analytics avanzado',
+                'title'            => 'Cohortes, retención por funcionalidad y experimentos multivariante en producto',
                 'description'      => 'Más allá del funnel básico: la segmentación de usuarios, el análisis de cohortes, la retención por feature y los experimentos multivariante que mejoran el producto con datos reales.',
                 'prompt_content'   => <<<'PROMPT'
 Eres un experto en product analytics con experiencia en productos digitales de consumo y B2B. Necesito profundizar en las técnicas analíticas avanzadas que van más allá de los funnels básicos para entender realmente el comportamiento de mis usuarios y mejorar el producto con datos.
