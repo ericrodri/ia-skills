@@ -1,0 +1,78 @@
+name: CI
+
+# Se ejecuta en cada rama y en cada pull request, y además lo invoca
+# deploy.yml como barrera previa al despliegue (workflow_call). Por eso `push`
+# ignora main: ahí lo lanza el despliegue y correrlo dos veces sobra.
+on:
+  pull_request:
+  push:
+    branches-ignore: [main]
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  tests:
+    name: Tests (PHP)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+          # gd lo necesita OgImageController para generar los PNG de Open Graph;
+          # sqlite es la base de los tests (phpunit.xml la fija en memoria).
+          extensions: mbstring, pdo, pdo_sqlite, sqlite3, gd, intl, bcmath, zip
+          coverage: none
+
+      - name: Cachear dependencias de Composer
+        uses: actions/cache@v4
+        with:
+          path: vendor
+          key: composer-${{ hashFiles('composer.lock') }}
+          restore-keys: composer-
+
+      - run: composer install --prefer-dist --no-interaction --no-progress
+
+      - name: Preparar el entorno
+        run: |
+          cp .env.example .env
+          php artisan key:generate
+
+      - run: php artisan test
+
+  cli:
+    name: Tests (paquete npm)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/ia-skills-cli
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # El paquete no tiene dependencias ni lockfile: se ejecuta tal cual.
+      - run: npm test
+
+  assets:
+    name: Build de assets
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - run: npm ci
+
+      # El despliegue compila en el servidor y public/build está en .gitignore:
+      # si el build falla, producción se queda sirviendo los assets anteriores.
+      # Mejor enterarse aquí.
+      - run: npm run build

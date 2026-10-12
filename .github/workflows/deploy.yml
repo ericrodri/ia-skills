@@ -4,8 +4,18 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+
 jobs:
+  # Barrera: si los tests o el build fallan, no se despliega. Antes el push a
+  # main iba directo al servidor y ejecutaba `migrate --force` aunque el código
+  # estuviera roto.
+  tests:
+    uses: ./.github/workflows/ci.yml
+
   deploy:
+    needs: tests
     runs-on: ubuntu-latest
     steps:
       - name: Deploy via SSH

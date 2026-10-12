@@ -1,0 +1,48 @@
+name: Publicar paquete npm
+
+# Se dispara al etiquetar una versión del CLI: `cli-v0.2.0`.
+# El prefijo distingue estas etiquetas de cualquier otra del repositorio, que
+# es un proyecto Laravel con su propio ciclo de vida.
+on:
+  push:
+    tags: ['cli-v*']
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  # Necesario para la procedencia (provenance): npm firma el paquete dejando
+  # constancia verificable de desde qué commit y workflow se publicó.
+  id-token: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: tools/ia-skills-cli
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          registry-url: https://registry.npmjs.org
+
+      - name: Comprobar que la etiqueta y package.json coinciden
+        if: startsWith(github.ref, 'refs/tags/')
+        run: |
+          TAG="${GITHUB_REF_NAME#cli-v}"
+          PKG=$(node -p "require('./package.json').version")
+          if [ "$TAG" != "$PKG" ]; then
+            echo "La etiqueta dice $TAG y package.json dice $PKG."
+            echo "Sube la version en package.json antes de etiquetar."
+            exit 1
+          fi
+          echo "Publicando la version $PKG"
+
+      - run: npm test
+
+      - name: Publicar
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
