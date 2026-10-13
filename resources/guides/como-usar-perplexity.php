@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1157,
     'about' => 'Uso práctico de Perplexity como buscador con inteligencia artificial',
-    'related' => ['planificar-un-viaje-con-ia', 'investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
+    'related' => ['comprar-con-ia-black-friday', 'planificar-un-viaje-con-ia', 'investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
     'toc' => [
         'que-es' => 'Qué es y en qué se diferencia de un chat',
         'empezar' => 'Empezar: cuenta y primera búsqueda',

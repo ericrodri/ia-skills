@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
-    'readingMinutes' => 11,
-    'words' => 1800,
+    'readingMinutes' => 12,
+    'words' => 1903,
     'about' => 'Fraude mediante suplantación de identidad con inteligencia artificial generativa',
-    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-cambio' => 'Qué cambió exactamente',
         'anatomia' => 'Anatomía de un fraude del CEO moderno',
@@ -128,6 +128,7 @@ return [
     <li><strong>Pregunta algo que solo esa persona sepa</strong> y que no esté en ninguna red social. Dónde comisteis el domingo, cómo se llamaba el perro.</li>
     <li><strong>Acordad una palabra en familia.</strong> Suena a juego y funciona.</li>
     <li><strong>Desconfía de la urgencia por sistema.</strong> Ninguna emergencia real empeora por dos minutos de comprobación.</li>
+    <li><strong>Ojo también con las ofertas imposibles.</strong> Las tiendas falsas con fotos y textos generados por IA se multiplican en Black Friday y Navidad; cómo comprobarlas está en <a href="/guias/comprar-con-ia-black-friday">comprar con IA en Black Friday</a>.</li>
 </ul>
 
 <h2 id="si-ocurre">Qué hacer en la primera hora</h2>
