@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La pregunta que casi todo el mundo hace es si le van a pillar. La pregunta útil es otra: qué mide exactamente la herramienta que dice haberte pillado, y cuánto se equivoca.',
     'category' => 'Fundamentos',
     'published' => '2026-09-04',
-    'updated' => '2026-09-04',
-    'readingMinutes' => 12,
-    'words' => 2098,
+    'updated' => '2026-10-14',
+    'readingMinutes' => 13,
+    'words' => 2110,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
-    'related' => ['escribir-un-libro-con-ia', 'ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['detectar-imagenes-hechas-con-ia', 'escribir-un-libro-con-ia', 'ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'que-miden' => 'Qué mide un detector, que no es lo que parece',
         'falsos-positivos' => 'Falsos positivos: quién paga el error',
@@ -116,7 +116,7 @@ return [
 
 <ul>
     <li><strong>Marca de agua estadística en el texto.</strong> El generador sesga levemente su elección de palabras siguiendo un patrón secreto que después se puede verificar. Es sólida en teoría y frágil en cuanto alguien edita o reescribe el texto.</li>
-    <li><strong>Metadatos de procedencia</strong> (el estándar C2PA y similares). Firman el archivo en origen. Funcionan bien para imagen y vídeo, y en texto se pierden en el primer copiar y pegar.</li>
+    <li><strong>Metadatos de procedencia</strong> (el estándar C2PA y similares). Firman el archivo en origen. Funcionan bien para imagen y vídeo (lo contamos en <a href="/guias/detectar-imagenes-hechas-con-ia">cómo saber si una imagen está hecha con IA</a>), y en texto se pierden en el primer copiar y pegar.</li>
     <li><strong>Historial de edición.</strong> Un documento en Google Docs o Word con su historial guarda cómo se escribió. No es una prueba de autoría, pero es la evidencia más informativa de las tres, y es la que suele resolver las disputas reales.</li>
 </ul>
 

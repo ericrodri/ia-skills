@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Los asistentes de IA ya recomiendan productos, comparan modelos y en algunos países permiten comprar sin salir del chat. Son muy útiles para decidir qué necesitas; para el precio exacto y la tienda, hay que comprobarlo siempre fuera.',
     'category' => 'Práctica',
     'published' => '2026-10-13',
-    'updated' => '2026-10-13',
+    'updated' => '2026-10-14',
     'readingMinutes' => 6,
-    'words' => 992,
+    'words' => 1028,
     'about' => 'Uso de asistentes de inteligencia artificial para comparar productos y precios en compras online',
-    'related' => ['como-usar-perplexity', 'estafas-con-ia-deepfakes-y-suplantacion', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'cual-es-la-mejor-ia', 'que-es-un-agente-de-ia'],
+    'related' => ['ideas-de-regalo-y-amigo-invisible-con-ia', 'escribir-una-reclamacion-con-ia', 'como-usar-perplexity', 'estafas-con-ia-deepfakes-y-suplantacion', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'cual-es-la-mejor-ia', 'que-es-un-agente-de-ia'],
     'toc' => [
         'para-que' => 'Para qué sirve la IA al comprar',
         'necesidad' => 'Antes de mirar ofertas: qué necesitas',
@@ -94,6 +94,8 @@ return [
     <li><strong>No des más permisos de los necesarios</strong> ni guardes tu tarjeta en servicios que no conoces.</li>
     <li><strong>Confirma tú cada compra</strong>; no dejes que un agente compre de forma automática.</li>
 </ul>
+
+<p>Si todavía no sabes qué regalar, empieza por <a href="/guias/ideas-de-regalo-y-amigo-invisible-con-ia">ideas de regalo y amigo invisible con IA</a>. Y si el pedido llega roto o no llega, en <a href="/guias/escribir-una-reclamacion-con-ia">escribir una reclamación con IA</a> tienes cómo reclamarlo por escrito.</p>
 
 <p>La regla para este Black Friday: deja que la IA piense contigo qué te conviene, y comprueba con tus propios ojos el precio, la tienda y las condiciones antes de pagar.</p>
 HTML,

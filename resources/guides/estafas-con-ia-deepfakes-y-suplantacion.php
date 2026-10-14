@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Tres segundos de audio bastan para clonar una voz, y la videollamada dejó de ser prueba de nada. Cómo son estos fraudes por dentro, por qué los empleados que caen suelen estar siguiendo el protocolo, y el procedimiento de verificación que sí aguanta.',
     'category' => 'Práctica',
     'published' => '2026-09-17',
-    'updated' => '2026-09-17',
+    'updated' => '2026-10-14',
     'readingMinutes' => 12,
-    'words' => 1903,
+    'words' => 1931,
     'about' => 'Fraude mediante suplantación de identidad con inteligencia artificial generativa',
-    'related' => ['comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['detectar-imagenes-hechas-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-cambio' => 'Qué cambió exactamente',
         'anatomia' => 'Anatomía de un fraude del CEO moderno',
@@ -98,7 +98,7 @@ return [
 </table>
 </figure>
 
-<p>Las cuatro señales que aguantan tienen algo en común: <strong>ninguna depende de detectar la falsificación</strong>. Son propiedades de la petición, no del medio. Por eso no envejecen con los modelos.</p>
+<p>Las cuatro señales que aguantan tienen algo en común: <strong>ninguna depende de detectar la falsificación</strong>. Son propiedades de la petición, no del medio. Por eso no envejecen con los modelos. Si lo que tienes delante es una foto y no una petición, en <a href="/guias/detectar-imagenes-hechas-con-ia">cómo saber si una imagen está hecha con IA</a> explicamos las comprobaciones que sí funcionan.</p>
 
 <h2 id="protocolo">El protocolo que sí aguanta</h2>
 

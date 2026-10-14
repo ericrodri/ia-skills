@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Casi nadie detecta un correo escrito con IA por su vocabulario. Lo detecta porque todos los párrafos miden lo mismo, porque abre agradeciendo algo que nadie hizo y porque cierra ofreciendo una disponibilidad que no existe.',
     'category' => 'Práctica',
     'published' => '2026-09-05',
-    'updated' => '2026-09-05',
-    'readingMinutes' => 15,
-    'words' => 2568,
+    'updated' => '2026-10-14',
+    'readingMinutes' => 16,
+    'words' => 2602,
     'about' => 'Redacción de correo electrónico profesional asistida por modelos de lenguaje',
-    'related' => ['traducir-con-ia', 'como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
+    'related' => ['escribir-una-reclamacion-con-ia', 'traducir-con-ia', 'como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'por-que-se-nota' => 'Por qué se nota, y no es por las palabras',
         'contexto' => 'Las cuatro cosas que el modelo no puede adivinar',
@@ -125,6 +125,8 @@ llegado. Es la [primera/segunda] vez. La relación es [buena/tensa].
 Reglas: tono neutro, sin reproche ni ironía. Menciona el impacto
 concreto en [qué se bloquea], no el incumplimiento en abstracto.
 Pide una fecha nueva, no una explicación. Máximo 90 palabras.</code></pre>
+
+<p>Si el retraso es de una empresa a la que le compraste algo, y no de un compañero o proveedor, el escrito cambia: en <a href="/guias/escribir-una-reclamacion-con-ia">escribir una reclamación con IA</a> está el paso a paso.</p>
 
 <h3>Responder a una queja de un cliente</h3>
 
