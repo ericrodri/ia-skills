@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA escribe en segundos un perfil de LinkedIn impecable e idéntico a otros diez mil. Lo que sirve es usarla para sacar a la luz tus resultados, ordenarlos y encontrar las palabras que busca quien selecciona. Los datos los pones tú.',
     'category' => 'Práctica',
     'published' => '2026-10-10',
-    'updated' => '2026-10-10',
+    'updated' => '2026-10-15',
     'readingMinutes' => 10,
-    'words' => 1583,
+    'words' => 1598,
     'about' => 'Redacción y optimización de perfiles profesionales de LinkedIn con asistentes de inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-redes-sociales', 'prompts-de-ia-por-profesion'],
+    'related' => ['buscar-trabajo-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-redes-sociales', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'el-problema' => 'El perfil que suena a todos',
         'limites' => 'Qué cabe en cada sección',
@@ -142,6 +142,6 @@ return [
     <li><strong>Pide una opinión humana</strong>: un compañero que te conozca detectará en un minuto si el perfil suena a ti.</li>
 </ul>
 
-<p>Un buen perfil no es el más pulido, sino el que deja claro en diez segundos qué haces y por qué alguien debería escribirte.</p>
+<p>Un buen perfil no es el más pulido, sino el que deja claro en diez segundos qué haces y por qué alguien debería escribirte. Con el perfil listo, el siguiente paso es <a href="/guias/buscar-trabajo-con-ia">buscar trabajo con IA</a> de forma ordenada.</p>
 HTML,
 ];

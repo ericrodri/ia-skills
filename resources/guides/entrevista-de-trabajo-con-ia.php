@@ -8,11 +8,11 @@ return [
     'excerpt' => 'En casi todo proceso hay ya dos IAs: la que usas tú para prepararte y la que usa la empresa para filtrar. Método de preparación con prompts que funcionan, qué evalúan las entrevistas grabadas y qué derechos tienes cuando una máquina participa en la decisión.',
     'category' => 'Práctica',
     'published' => '2026-09-15',
-    'updated' => '2026-09-15',
+    'updated' => '2026-10-15',
     'readingMinutes' => 11,
-    'words' => 1904,
+    'words' => 1897,
     'about' => 'Preparación de entrevistas de trabajo con inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'ai-act-obligaciones-empresas', 'va-la-ia-a-sustituir-mi-trabajo'],
+    'related' => ['buscar-trabajo-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'ai-act-obligaciones-empresas', 'va-la-ia-a-sustituir-mi-trabajo'],
     'toc' => [
         'el-otro-lado' => 'Qué hace la IA al otro lado de la mesa',
         'derechos' => 'Lo que puedes exigir cuando decide una máquina',
@@ -145,6 +145,6 @@ return [
 
 <p>Con esas notas, dos usos concretos: preparar la siguiente ronda atacando justo los puntos flojos, y redactar el correo de seguimiento —breve, con una aportación real sobre algo que se habló, no un agradecimiento genérico—.</p>
 
-<p>Y si el proceso no sale, el registro sigue valiendo. Tres entrevistas anotadas dicen más sobre qué tienes que reforzar que cualquier consejo general, incluido este.</p>
+<p>Y si el proceso no sale, el registro sigue valiendo. Tres entrevistas anotadas dicen más sobre qué tienes que reforzar que cualquier consejo general, incluido este. Para volver a ponerte en marcha con más ofertas, tienes el proceso completo en <a href="/guias/buscar-trabajo-con-ia">buscar trabajo con IA</a>.</p>
 HTML,
 ];

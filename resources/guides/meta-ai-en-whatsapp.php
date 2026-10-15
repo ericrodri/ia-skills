@@ -8,11 +8,11 @@ return [
     'excerpt' => 'El círculo azul de WhatsApp es Meta AI, el asistente de Meta. No lee tus chats por su cuenta, pero sí todo lo que le escribes o le reenvías. Esto es lo que conviene saber y los ajustes que reducen su presencia.',
     'category' => 'Herramientas',
     'published' => '2026-10-03',
-    'updated' => '2026-10-03',
+    'updated' => '2026-10-15',
     'readingMinutes' => 7,
-    'words' => 1126,
+    'words' => 1152,
     'about' => 'Funcionamiento, privacidad y ajustes del asistente de inteligencia artificial Meta AI dentro de WhatsApp',
-    'related' => ['usar-ia-sin-filtrar-datos-de-clientes', 'estafas-con-ia-deepfakes-y-suplantacion', 'como-usar-chatgpt', 'como-usar-grok', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia'],
+    'related' => ['crear-stickers-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'estafas-con-ia-deepfakes-y-suplantacion', 'como-usar-chatgpt', 'como-usar-grok', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia'],
     'toc' => [
         'que-es' => 'Qué es el círculo azul',
         'que-ve' => 'Qué ve Meta AI y qué no',
@@ -84,7 +84,7 @@ return [
     <li>Crear una imagen divertida para un grupo de amigos.</li>
 </ul>
 
-<p>Para todo lo que vaya más allá, otros asistentes ofrecen más control, historial organizado y planes con garantías. Hay opciones sin coste en la guía de <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>, y para empezar con el más conocido, <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>.</p>
+<p>Para todo lo que vaya más allá, otros asistentes ofrecen más control, historial organizado y planes con garantías. Hay opciones sin coste en la guía de <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>, y para empezar con el más conocido, <a href="/guias/como-usar-chatgpt">cómo usar ChatGPT</a>. Si lo que te interesa de WhatsApp son los stickers, en <a href="/guias/crear-stickers-con-ia">crear stickers con IA</a> explicamos cómo hacer un paquete propio con el estilo que quieras.</p>
 
 <h2 id="trabajo">WhatsApp de trabajo: la regla que importa</h2>
 

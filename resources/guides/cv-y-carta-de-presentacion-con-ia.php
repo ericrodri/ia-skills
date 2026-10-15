@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA no consigue entrevistas escribiendo un currículum bonito. Las consigue en el paso que casi nadie da: reescribir el mismo CV para cada oferta, en cinco minutos en lugar de en cuarenta.',
     'category' => 'Práctica',
     'published' => '2026-09-04',
-    'updated' => '2026-09-04',
-    'readingMinutes' => 14,
-    'words' => 2402,
+    'updated' => '2026-10-15',
+    'readingMinutes' => 15,
+    'words' => 2422,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',
@@ -195,6 +195,6 @@ que se note que entiendo el puesto.</code></pre>
 
 <p>El criterio general para decidir qué se pega y qué no está en la guía de <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a>; aquí el dato sensible es el tuyo, pero el razonamiento no cambia.</p>
 
-<p>Con esto, el reparto queda donde tiene que estar: la herramienta se ocupa de la reescritura, del formato y de la ronda de preguntas incómodas, y tú de los hechos, de las cifras y del párrafo que explica por qué esa empresa. Es lo que convierte veinte candidaturas iguales en veinte candidaturas distintas sin dedicarle el fin de semana.</p>
+<p>Con esto, el reparto queda donde tiene que estar: la herramienta se ocupa de la reescritura, del formato y de la ronda de preguntas incómodas, y tú de los hechos, de las cifras y del párrafo que explica por qué esa empresa. Es lo que convierte veinte candidaturas iguales en veinte candidaturas distintas sin dedicarle el fin de semana. El resto del proceso, desde filtrar ofertas hasta llevar el control de las candidaturas, está en <a href="/guias/buscar-trabajo-con-ia">buscar trabajo con IA</a>.</p>
 HTML,
 ];

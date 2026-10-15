@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Un modelo de lenguaje es buenísimo escribiendo la fórmula y bastante malo aplicándola. Toda la técnica consiste en repartir el trabajo así: la IA redacta, la hoja calcula. Con los prompts y las comprobaciones.',
     'category' => 'Práctica',
     'published' => '2026-09-02',
-    'updated' => '2026-09-02',
+    'updated' => '2026-10-15',
     'readingMinutes' => 14,
-    'words' => 2363,
+    'words' => 2385,
     'about' => 'Uso de inteligencia artificial en hojas de cálculo',
-    'related' => ['microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['presupuesto-personal-y-ahorro-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'regla' => 'La regla que evita el 90 % de los errores',
         'tres-caminos' => 'Los tres caminos y cuál te toca',
@@ -186,6 +186,6 @@ esta tabla, con la fórmula de cada una. No calcules resultados.</code></pre>
 
 <p>Ninguno de los cuatro pide un número, y eso no es casualidad: es la regla del principio aplicada cuatro veces. La IA redacta, la hoja calcula.</p>
 
-<p>La regla se extiende al sitio donde acaban esos números: una cifra mal calculada en un documento se corrige antes de enviarlo, pero en una diapositiva se proyecta delante de quien la conoce de memoria. Cómo repartir el trabajo cuando el destino es una presentación está en la guía de <a href="/guias/presentaciones-con-ia">presentaciones con IA</a>.</p>
+<p>La regla se extiende al sitio donde acaban esos números: una cifra mal calculada en un documento se corrige antes de enviarlo, pero en una diapositiva se proyecta delante de quien la conoce de memoria. Cómo repartir el trabajo cuando el destino es una presentación está en la guía de <a href="/guias/presentaciones-con-ia">presentaciones con IA</a>. Y si quieres practicar fuera del trabajo con datos que conoces bien, un buen ejercicio es <a href="/guias/presupuesto-personal-y-ahorro-con-ia">montar tu presupuesto personal con IA</a>.</p>
 HTML,
 ];
