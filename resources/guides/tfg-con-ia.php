@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Casi todas las universidades han pasado de prohibir la IA en el trabajo de fin de grado a permitirla con condiciones. Las condiciones son las que suspenden: usarla donde no toca, no declararlo o entregar una bibliografía que la IA se inventó.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-09-28',
+    'updated' => '2026-10-16',
     'readingMinutes' => 8,
-    'words' => 1274,
+    'words' => 1308,
     'about' => 'Uso de la inteligencia artificial en trabajos de fin de grado y de máster',
-    'related' => ['estudiar-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia'],
+    'related' => ['corregir-ortografia-con-ia', 'parafrasear-textos-con-ia', 'estudiar-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'normas' => 'Qué dicen las universidades',
         'usos' => 'Usos aceptados y usos que suspenden',
@@ -86,7 +86,7 @@ compruebo si mis datos los cumplen.</code></pre>
 <pre><code>Te paso un párrafo de mi marco teórico. No lo reescribas. Señala
 frases ambiguas, repeticiones y afirmaciones que necesitarían una cita.</code></pre>
 
-<p>Así el texto sigue sonando a ti. Un trabajo reescrito entero por la IA tiene un estilo muy reconocible, como se explica en <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">¿se nota si un texto lo escribe una IA?</a>.</p>
+<p>Así el texto sigue sonando a ti. Un trabajo reescrito entero por la IA tiene un estilo muy reconocible, como se explica en <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">¿se nota si un texto lo escribe una IA?</a>. Para una pasada de ortografía que no te cambie el estilo, sigue los pasos de <a href="/guias/corregir-ortografia-con-ia">corregir ortografía con IA</a>; y si vas a reformular una fuente, recuerda que <a href="/guias/parafrasear-textos-con-ia">parafrasear no es dejar de citar</a>.</p>
 
 <h2 id="bibliografia">El riesgo número uno: la bibliografía</h2>
 

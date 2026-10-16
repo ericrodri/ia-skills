@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La pregunta que casi todo el mundo hace es si le van a pillar. La pregunta útil es otra: qué mide exactamente la herramienta que dice haberte pillado, y cuánto se equivoca.',
     'category' => 'Fundamentos',
     'published' => '2026-09-04',
-    'updated' => '2026-10-14',
+    'updated' => '2026-10-16',
     'readingMinutes' => 13,
-    'words' => 2110,
+    'words' => 2137,
     'about' => 'Detección de textos generados por inteligencia artificial y sus límites',
-    'related' => ['detectar-imagenes-hechas-con-ia', 'escribir-un-libro-con-ia', 'ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['parafrasear-textos-con-ia', 'detectar-imagenes-hechas-con-ia', 'escribir-un-libro-con-ia', 'ia-para-profesores', 'escribir-correos-con-ia', 'errores-al-usar-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'que-miden' => 'Qué mide un detector, que no es lo que parece',
         'falsos-positivos' => 'Falsos positivos: quién paga el error',
@@ -124,7 +124,7 @@ return [
 
 <h2 id="humanizadores">Los humanizadores y por qué son la respuesta equivocada</h2>
 
-<p>Hay un mercado entero de herramientas que reescriben el texto generado para bajar la puntuación de los detectores: varían la longitud de las frases, meten alguna palabra menos frecuente y rompen la simetría. Contra algunos detectores funcionan; es una carrera que se libra cada pocos meses en las dos direcciones.</p>
+<p>Hay un mercado entero de herramientas que reescriben el texto generado para bajar la puntuación de los detectores: varían la longitud de las frases, meten alguna palabra menos frecuente y rompen la simetría. Contra algunos detectores funcionan; es una carrera que se libra cada pocos meses en las dos direcciones. Lo mismo vale para pedir a un asistente que «parafrasee» un texto ajeno: cambiar las palabras no cambia la autoría, como explicamos en <a href="/guias/parafrasear-textos-con-ia">parafrasear textos con IA</a>.</p>
 
 <p>El problema es que resuelven una pregunta equivocada. El texto sigue sin contener nada que solo pudieras aportar tú, así que sigue fallando la única prueba que importa: la de quien lo lee y pregunta. Y añaden dos costes propios que rara vez se mencionan: el reescrito suele perder precisión —cambian términos técnicos por sinónimos que no lo son— y, si la reescritura la hace un tercero con tu documento dentro, acabas de sacar contenido de tu empresa por una vía que nadie ha aprobado. Ese razonamiento está en la guía de <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a>.</p>
 

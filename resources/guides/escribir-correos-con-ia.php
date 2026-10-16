@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Casi nadie detecta un correo escrito con IA por su vocabulario. Lo detecta porque todos los párrafos miden lo mismo, porque abre agradeciendo algo que nadie hizo y porque cierra ofreciendo una disponibilidad que no existe.',
     'category' => 'Práctica',
     'published' => '2026-09-05',
-    'updated' => '2026-10-14',
+    'updated' => '2026-10-16',
     'readingMinutes' => 16,
-    'words' => 2602,
+    'words' => 2618,
     'about' => 'Redacción de correo electrónico profesional asistida por modelos de lenguaje',
-    'related' => ['escribir-una-reclamacion-con-ia', 'traducir-con-ia', 'como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
+    'related' => ['corregir-ortografia-con-ia', 'escribir-una-reclamacion-con-ia', 'traducir-con-ia', 'como-escribir-prompts-efectivos', 'se-nota-si-un-texto-lo-escribe-una-ia', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'por-que-se-nota' => 'Por qué se nota, y no es por las palabras',
         'contexto' => 'Las cuatro cosas que el modelo no puede adivinar',
@@ -220,7 +220,7 @@ resolverlo tú.</code></pre>
 <ol>
     <li><strong>Borra la primera frase y la última.</strong> Vuelve a leer. Nueve de cada diez veces el correo está mejor.</li>
     <li><strong>Busca la petición.</strong> Si no encuentras una acción y una fecha, el correo no está terminado.</li>
-    <li><strong>Comprueba los datos duros.</strong> Cifras, fechas, nombres propios, importes. Es donde se cuela el error que no se perdona.</li>
+    <li><strong>Comprueba los datos duros.</strong> Cifras, fechas, nombres propios, importes. Es donde se cuela el error que no se perdona. Si solo quieres quitar faltas y comas, pide una <a href="/guias/corregir-ortografia-con-ia">corrección ortográfica</a> que no toque el tono.</li>
     <li><strong>Rompe la simetría.</strong> Parte un párrafo, junta dos, deja una frase suelta. Escribe una línea a mano.</li>
     <li><strong>Léelo como si lo recibieras tú.</strong> Si te llegara este correo, ¿contestarías o lo dejarías para luego?</li>
 </ol>

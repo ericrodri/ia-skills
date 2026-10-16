@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA puede ser el mejor profesor particular que has tenido o la forma más rápida de llegar al examen sin saber nada. La diferencia no está en la herramienta, sino en si le pides respuestas o le pides que te haga pensar.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-09-28',
+    'updated' => '2026-10-16',
     'readingMinutes' => 8,
-    'words' => 1263,
+    'words' => 1285,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -110,7 +110,7 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
 
 <ul>
     <li><strong>Prohibido</strong>: la tarea evalúa justo lo que la IA haría por ti. Usarla es copiar.</li>
-    <li><strong>Permitido para ayudarte</strong>: buscar ideas, entender un concepto, revisar la ortografía. El trabajo tiene que ser tuyo.</li>
+    <li><strong>Permitido para ayudarte</strong>: buscar ideas, entender un concepto, revisar la ortografía sin dejar que reescriba (lo explicamos en <a href="/guias/corregir-ortografia-con-ia">corregir ortografía con IA</a>) o comprobar que has entendido una fuente <a href="/guias/parafrasear-textos-con-ia">parafraseándola con tus palabras</a>. El trabajo tiene que ser tuyo.</li>
     <li><strong>Permitido y declarado</strong>: puedes usarla, pero tienes que explicar cómo. Es lo habitual en la universidad y en los trabajos de fin de grado, como se detalla en la guía del <a href="/guias/tfg-con-ia">TFG con IA</a>.</li>
 </ul>
 

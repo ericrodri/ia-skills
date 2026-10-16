@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Un buen sticker es una imagen sencilla, con fondo transparente y una expresión que se entiende de un vistazo. La IA genera el dibujo en segundos; lo que marca la diferencia es pedirle el estilo adecuado y dejarlo en el formato que la aplicación acepta.',
     'category' => 'Práctica',
     'published' => '2026-10-15',
-    'updated' => '2026-10-15',
+    'updated' => '2026-10-16',
     'readingMinutes' => 7,
-    'words' => 1126,
+    'words' => 1150,
     'about' => 'Creación de stickers para aplicaciones de mensajería con generadores de imágenes de inteligencia artificial',
-    'related' => ['crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
+    'related' => ['disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
     'toc' => [
         'opciones' => 'Tres formas de hacerlo',
         'prompt' => 'El prompt de un buen sticker',
@@ -102,6 +102,6 @@ return [
     <li><strong>Uso comercial</strong>: si quieres stickers para tu negocio o para venderlos, revisa antes <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">los derechos de las imágenes hechas con IA</a>.</li>
 </ul>
 
-<p>Y una idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos.</p>
+<p>Los invitados de una fiesta de Halloween también dan para un paquete; para preparar los disfraces tienes ideas en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Y otra idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos.</p>
 HTML,
 ];
