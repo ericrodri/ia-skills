@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-14',
     'updated' => '2026-10-14',
     'readingMinutes' => 7,
-    'words' => 1153,
+    'words' => 1177,
     'about' => 'Redacción de reclamaciones y escritos de consumo con asistentes de inteligencia artificial',
-    'related' => ['escribir-correos-con-ia', 'alucinaciones-de-la-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-escribir-prompts-efectivos', 'resumir-documentos-largos-con-ia'],
+    'related' => ['revisar-un-contrato-con-ia', 'escribir-correos-con-ia', 'alucinaciones-de-la-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-escribir-prompts-efectivos', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA (y qué no)',
         'preparar' => 'Antes de escribir: reúne los hechos',
@@ -97,6 +97,6 @@ return [
     <li><strong>Escala si no hay respuesta</strong>: arbitraje de consumo, el organismo regulador del sector o, si el importe lo justifica, un abogado.</li>
 </ul>
 
-<p>Muchas de estas comunicaciones son correos; en <a href="/guias/escribir-correos-con-ia">escribir correos con IA</a> tienes más técnicas para ajustar el tono. Y si la reclamación viene de una compra de esta temporada, revisa también <a href="/guias/comprar-con-ia-black-friday">comprar con IA en Black Friday</a> para evitar el problema la próxima vez.</p>
+<p>Muchas de estas comunicaciones son correos; en <a href="/guias/escribir-correos-con-ia">escribir correos con IA</a> tienes más técnicas para ajustar el tono. Y si la reclamación viene de una compra de esta temporada, revisa también <a href="/guias/comprar-con-ia-black-friday">comprar con IA en Black Friday</a> para evitar el problema la próxima vez. Y si el problema nace de algo que firmaste, repasa con <a href="/guias/revisar-un-contrato-con-ia">revisar un contrato con IA</a> qué dice exactamente el contrato antes de reclamar.</p>
 HTML,
 ];

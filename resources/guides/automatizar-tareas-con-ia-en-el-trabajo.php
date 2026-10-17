@@ -9,10 +9,10 @@ return [
     'category' => 'Método',
     'published' => '2026-08-25',
     'updated' => '2026-09-08',
-    'readingMinutes' => 8,
-    'words' => 1402,
+    'readingMinutes' => 9,
+    'words' => 1426,
     'about' => 'Automatización con IA',
-    'related' => ['que-es-jev-modelo-system-one', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
+    'related' => ['organizar-tu-tiempo-con-ia', 'que-es-jev-modelo-system-one', 'que-tareas-de-tu-profesion-automatiza-la-ia', 'que-es-un-agente-de-ia', 'ia-para-reuniones-y-actas'],
     'toc' => [
         'inventario' => 'Paso 1: inventario honesto de tu semana',
         'que-automatizar' => 'Paso 2: qué automatizar y qué no tocar',
@@ -116,7 +116,7 @@ return [
 
 <p>Dos tareas se repiten en el inventario de casi cualquier puesto y tienen guía propia, porque cada una esconde su propia trampa: pelearse con una hoja de cálculo —donde la IA escribe la fórmula bien y calcula mal, explicado en <a href="/guias/ia-en-excel-y-google-sheets">IA en Excel y Google Sheets</a>— y redactar el acta de una reunión, en <a href="/guias/ia-para-reuniones-y-actas">IA para reuniones</a>.</p>
 
-<p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro —con línea base y contando el tiempo de revisar, como se explica en <a href="/guias/medir-si-la-ia-ahorra-tiempo">cómo medir si la IA te está ahorrando tiempo de verdad</a>—, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada.</p>
+<p>Elige una. Una sola, la más frecuente y la más fácil de revisar. Cuando esa funcione y hayas medido el ahorro —con línea base y contando el tiempo de revisar, como se explica en <a href="/guias/medir-si-la-ia-ahorra-tiempo">cómo medir si la IA te está ahorrando tiempo de verdad</a>—, pasa a la siguiente. El error más común en esto no es técnico: es intentar automatizar seis cosas a la vez y quedarse sin ninguna acabada. Y si el problema no es una tarea concreta sino que no te da tiempo a todas, empieza por <a href="/guias/organizar-tu-tiempo-con-ia">organizar tu tiempo con IA</a>.</p>
 
 <p>Y si la tarea que has elegido tiene demasiados pasos para resolverla con un prompt suelto, lo que necesitas es un agente que los encadene por su cuenta: cómo funcionan y hasta dónde conviene dejarlos solos está en <a href="/guias/que-es-un-agente-de-ia">qué es un agente de IA</a>. Y si lo que repites miles de veces es una decisión de una sola línea —esta solicitud va a este equipo, este documento pasa el filtro—, desde septiembre de 2026 hay modelos hechos solo para eso: <a href="/guias/que-es-jev-modelo-system-one">Jev</a> es el primero.</p>
 

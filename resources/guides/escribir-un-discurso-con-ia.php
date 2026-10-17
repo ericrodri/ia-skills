@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-09',
     'updated' => '2026-10-09',
     'readingMinutes' => 7,
-    'words' => 1118,
+    'words' => 1141,
     'about' => 'Redacción y ensayo de discursos, brindis y presentaciones orales con asistentes de inteligencia artificial',
-    'related' => ['presentaciones-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'escribir-correos-con-ia', 'traducir-con-ia'],
+    'related' => ['escribir-un-poema-con-ia', 'presentaciones-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'escribir-correos-con-ia', 'traducir-con-ia'],
     'toc' => [
         'por-que-suena-falso' => 'Por qué suena a plantilla',
         'el-material' => 'El material que solo tienes tú',
@@ -94,6 +94,6 @@ return [
     <li><strong>En otro idioma</strong>: escríbelo primero en el tuyo y después tradúcelo pidiendo frases sencillas de pronunciar; los matices los cuenta la guía de <a href="/guias/traducir-con-ia">traducir con IA</a>.</li>
 </ul>
 
-<p>La prueba final es sencilla: si alguien que te conoce escucha el discurso con los ojos cerrados, ¿reconocería que es tuyo? Si sí, está listo.</p>
+<p>La prueba final es sencilla: si alguien que te conoce escucha el discurso con los ojos cerrados, ¿reconocería que es tuyo? Si sí, está listo. Y si en lugar de un discurso prefieres unos versos, en <a href="/guias/escribir-un-poema-con-ia">escribir un poema con IA</a> tienes cómo evitar que suenen a tarjeta.</p>
 HTML,
 ];

@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-03',
     'updated' => '2026-09-08',
     'readingMinutes' => 14,
-    'words' => 2355,
+    'words' => 2382,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['revisar-un-contrato-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',
@@ -166,7 +166,7 @@ que has resumido en una línea o menos y di qué contienen.</code></pre>
     <li><strong>Los anexos.</strong> Es donde vive lo que contradice al cuerpo del contrato, y donde los resúmenes se detienen menos.</li>
 </ul>
 
-<p>El prompt que mejor rinde aquí no pide un resumen, pide localización: «dime en qué página está cada uno de estos siete puntos y cita la primera línea de cada uno». Diez minutos de lectura dirigida en lugar de dos horas de lectura completa, sin renunciar a haber leído lo que decide.</p>
+<p>El prompt que mejor rinde aquí no pide un resumen, pide localización: «dime en qué página está cada uno de estos siete puntos y cita la primera línea de cada uno». Diez minutos de lectura dirigida en lugar de dos horas de lectura completa, sin renunciar a haber leído lo que decide. Si el contrato es uno que vas a firmar tú, en <a href="/guias/revisar-un-contrato-con-ia">revisar un contrato con IA</a> tienes los prompts y qué mirar según el tipo de contrato.</p>
 
 <h2 id="datos">Qué documentos no deberías subir</h2>
 
