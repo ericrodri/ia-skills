@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1279,
     'about' => 'Generación de imágenes con inteligencia artificial',
-    'related' => ['disfraz-de-halloween-con-ia', 'crear-stickers-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['hacer-invitaciones-con-ia', 'disfraz-de-halloween-con-ia', 'crear-stickers-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'herramientas' => 'Qué herramienta usar',
         'prompt' => 'La estructura de un buen prompt',

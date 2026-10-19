@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-03',
     'updated' => '2026-10-03',
     'readingMinutes' => 7,
-    'words' => 1133,
+    'words' => 1174,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -61,6 +61,8 @@ return [
     <li><strong>Ampliar el encuadre</strong> para adaptar una foto vertical a formato horizontal, o al revés, sin recortar al protagonista.</li>
     <li><strong>Restaurar fotos antiguas</strong>: quitar arañazos, mejorar la nitidez o colorear. Ten en cuenta que la IA «inventa» detalles para rellenar; el resultado es una interpretación, no la foto original recuperada. El proceso completo está en <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar fotos antiguas con IA</a>.</li>
 </ol>
+
+<p>Si lo que necesitas no es cambiar la foto sino que se vea más nítida o poder imprimirla más grande, eso es aumentar la resolución, y tiene sus propias herramientas: lo explicamos en <a href="/guias/mejorar-calidad-de-una-foto-con-ia">mejorar la calidad de una foto con IA</a>.</p>
 
 <h2 id="instrucciones">Cómo pedirlo para que salga bien</h2>
 

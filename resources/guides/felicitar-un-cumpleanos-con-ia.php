@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 7,
-    'words' => 1160,
+    'words' => 1187,
     'about' => 'Redacción de felicitaciones de cumpleaños y creación de tarjetas personalizadas con asistentes de inteligencia artificial',
-    'related' => ['escribir-un-poema-con-ia', 'felicitar-la-navidad-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'convertir-texto-a-voz-con-ia', 'dibujos-para-colorear-con-ia'],
+    'related' => ['hacer-invitaciones-con-ia', 'escribir-un-poema-con-ia', 'felicitar-la-navidad-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'convertir-texto-a-voz-con-ia', 'dibujos-para-colorear-con-ia'],
     'toc' => [
         'por-que-suena-a-plantilla' => 'Por qué suena a plantilla',
         'el-prompt' => 'El prompt que funciona',
@@ -72,6 +72,8 @@ return [
 <p><strong>Para niños</strong>. Una lámina con su nombre y sus personajes favoritos para colorear en la fiesta es un detalle barato y muy agradecido: lo explica <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>.</p>
 
 <p>Y si además del mensaje te falta el regalo, en <a href="/guias/ideas-de-regalo-y-amigo-invisible-con-ia">ideas de regalo con IA</a> tienes cómo pedir sugerencias que no sean las de siempre.</p>
+
+<p>Si eres tú quien organiza la fiesta, en <a href="/guias/hacer-invitaciones-con-ia">hacer invitaciones con IA</a> tienes cómo preparar la tarjeta para WhatsApp o para imprimir, sin erratas en la fecha.</p>
 
 <h2 id="grupo">Felicitaciones de grupo y de empresa</h2>
 

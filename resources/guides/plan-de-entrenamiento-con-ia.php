@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-09',
     'updated' => '2026-10-09',
-    'readingMinutes' => 7,
-    'words' => 1211,
+    'readingMinutes' => 8,
+    'words' => 1248,
     'about' => 'Planificación de rutinas de ejercicio y entrenamiento de fuerza con asistentes de inteligencia artificial',
-    'related' => ['menu-semanal-con-ia', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets', 'herramientas-de-ia-gratis'],
+    'related' => ['contar-calorias-con-ia', 'menu-semanal-con-ia', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien y qué no',
         'los-datos' => 'Los datos que necesita',
@@ -87,6 +87,8 @@ return [
 </ul>
 
 <p>Si además organizas las comidas con IA, puedes pedir que el <a href="/guias/menu-semanal-con-ia">menú semanal</a> tenga en cuenta los días de entrenamiento: más hidratos antes de una sesión dura, cenas sencillas los días que llegas tarde.</p>
+
+<p>Y si tu objetivo es ganar músculo o perder grasa, el entrenamiento es solo la mitad: en <a href="/guias/contar-calorias-con-ia">contar calorías con IA</a> tienes cómo estimar las calorías y la proteína de lo que comes sin pesar cada alimento.</p>
 
 <h2 id="seguridad">Lesiones, dolor y salud</h2>
 

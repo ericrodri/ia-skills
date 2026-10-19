@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-12',
     'updated' => '2026-10-12',
-    'readingMinutes' => 7,
-    'words' => 1210,
+    'readingMinutes' => 8,
+    'words' => 1253,
     'about' => 'Restauración, coloreado y mejora de calidad de fotografías antiguas con inteligencia artificial',
-    'related' => ['editar-fotos-con-ia', 'crear-videos-con-ia', 'herramientas-de-ia-gratis', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
+    'related' => ['mejorar-calidad-de-una-foto-con-ia', 'editar-fotos-con-ia', 'crear-videos-con-ia', 'herramientas-de-ia-gratis', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
         'que-hace' => 'Qué puede arreglar la IA y qué no',
         'escanear' => 'Primero, una buena copia digital',
@@ -69,6 +69,8 @@ return [
 </ul>
 
 <p>En <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a> comparamos estas herramientas para otros retoques, y en <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a> están sus límites gratuitos.</p>
+
+<p>Si la foto no es antigua sino simplemente pequeña o pixelada (una imagen de WhatsApp, una captura de vídeo), no necesitas todo el proceso de restauración: basta con aumentar la resolución, como se explica en <a href="/guias/mejorar-calidad-de-una-foto-con-ia">mejorar la calidad de una foto con IA</a>.</p>
 
 <h2 id="pasos">Restaurar por pasos</h2>
 

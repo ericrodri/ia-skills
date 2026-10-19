@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-08',
     'updated' => '2026-10-15',
     'readingMinutes' => 8,
-    'words' => 1251,
+    'words' => 1294,
     'about' => 'Planificación de menús semanales, recetas y lista de la compra con asistentes de inteligencia artificial',
-    'related' => ['organizar-tu-tiempo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'plan-de-entrenamiento-con-ia', 'planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
+    'related' => ['contar-calorias-con-ia', 'organizar-tu-tiempo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'plan-de-entrenamiento-con-ia', 'planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien y qué no',
         'los-datos' => 'Los datos que necesita',
@@ -88,6 +88,8 @@ return [
 </ul>
 
 <p>Ninguno de los dos requiere pagar: los planes gratuitos de los asistentes, que repasamos en <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>, bastan para esto. Y si quieres saber cuánto te ahorra el menú, cruza el gasto en supermercado con tu <a href="/guias/presupuesto-personal-y-ahorro-con-ia">presupuesto personal hecho con IA</a>. Para encajar la compra y la cocina en el resto de la semana, mira <a href="/guias/organizar-tu-tiempo-con-ia">organizar tu tiempo con IA</a>.</p>
+
+<p>Si quieres que el menú se ajuste a unas calorías o a una cantidad de proteína concretas, antes conviene saber cuánto comes ahora. En <a href="/guias/contar-calorias-con-ia">contar calorías con IA</a> se explica cómo hacerlo con una foto del plato y cuánto puedes fiarte del resultado.</p>
 
 <h2 id="salud">Dietas, alergias y salud</h2>
 
