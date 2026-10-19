@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-06',
     'updated' => '2026-10-06',
     'readingMinutes' => 7,
-    'words' => 1199,
+    'words' => 1202,
     'about' => 'Elaboración de un plan de negocio para emprendedores y autónomos con ayuda de inteligencia artificial',
-    'related' => ['ganar-dinero-con-ia', 'ia-para-autonomos-y-pymes', 'investigar-con-ia-deep-research', 'ia-en-excel-y-google-sheets', 'alucinaciones-de-la-ia', 'crear-un-logo-con-ia', 'crear-una-pagina-web-con-ia'],
+    'related' => ['nombre-para-tu-negocio-con-ia', 'ganar-dinero-con-ia', 'ia-para-autonomos-y-pymes', 'investigar-con-ia-deep-research', 'ia-en-excel-y-google-sheets', 'alucinaciones-de-la-ia', 'crear-un-logo-con-ia', 'crear-una-pagina-web-con-ia'],
     'toc' => [
         'el-problema' => 'El error de pedir el plan entero',
         'orden' => 'El orden que funciona',
@@ -88,6 +88,6 @@ return [
 
 <p>Con todo lo anterior, ahora sí, pide la redacción. Pásale el resumen del cliente, la tabla de mercado con fuentes, el resultado de la hoja de cálculo y las respuestas a los riesgos, e indica para quién es: un banco quiere ver tesorería y garantías; una convocatoria de ayudas, el encaje con sus criterios. Revisa que todas las cifras del texto coincidan con las de la hoja.</p>
 
-<p>Y no compartas en un chat personal datos que no deberían salir de tu negocio, como contratos o datos de socios: <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a> explica qué cuenta usar. Cuando el plan esté listo, los siguientes pasos suelen ser la marca y la web: tienes guías para <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a> y <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a>, y una visión general del día a día en <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a>.</p>
+<p>Y no compartas en un chat personal datos que no deberían salir de tu negocio, como contratos o datos de socios: <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a> explica qué cuenta usar. Cuando el plan esté listo, los siguientes pasos suelen ser la marca y la web: tienes guías para <a href="/guias/nombre-para-tu-negocio-con-ia">elegir el nombre</a>, <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a> y <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a>, y una visión general del día a día en <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a>.</p>
 HTML,
 ];

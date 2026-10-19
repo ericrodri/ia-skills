@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-05',
     'updated' => '2026-10-05',
     'readingMinutes' => 7,
-    'words' => 1096,
+    'words' => 1114,
     'about' => 'Diseño de logotipos e identidad de marca con herramientas de inteligencia artificial',
-    'related' => ['prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'editar-fotos-con-ia'],
+    'related' => ['nombre-para-tu-negocio-con-ia', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'editar-fotos-con-ia'],
     'toc' => [
         'que-da' => 'Qué te da la IA y qué no',
         'antes' => 'Antes de abrir la herramienta',
@@ -96,6 +96,6 @@ return [
     <li>Cuanto más hayas modificado tú la propuesta original, más sólida será tu posición si alguien la discute.</li>
 </ul>
 
-<p>Para un negocio que empieza, este proceso suele bastar. Cuando la marca crezca, un diseñador puede partir de lo que ya tienes y convertirlo en una identidad completa. Más ideas para arrancar con poco presupuesto en <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a>.</p>
+<p>Para un negocio que empieza, este proceso suele bastar. Cuando la marca crezca, un diseñador puede partir de lo que ya tienes y convertirlo en una identidad completa. Más ideas para arrancar con poco presupuesto en <a href="/guias/ia-para-autonomos-y-pymes">IA para autónomos y pymes</a>. Y si todavía no tienes claro cómo llamarte, empieza por <a href="/guias/nombre-para-tu-negocio-con-ia">buscar un nombre para tu negocio con IA</a>.</p>
 HTML,
 ];

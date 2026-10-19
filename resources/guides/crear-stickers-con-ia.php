@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-15',
     'updated' => '2026-10-16',
     'readingMinutes' => 7,
-    'words' => 1150,
+    'words' => 1172,
     'about' => 'Creación de stickers para aplicaciones de mensajería con generadores de imágenes de inteligencia artificial',
-    'related' => ['disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
+    'related' => ['dibujos-para-colorear-con-ia', 'disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
     'toc' => [
         'opciones' => 'Tres formas de hacerlo',
         'prompt' => 'El prompt de un buen sticker',
@@ -102,6 +102,6 @@ return [
     <li><strong>Uso comercial</strong>: si quieres stickers para tu negocio o para venderlos, revisa antes <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">los derechos de las imágenes hechas con IA</a>.</li>
 </ul>
 
-<p>Los invitados de una fiesta de Halloween también dan para un paquete; para preparar los disfraces tienes ideas en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Y otra idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos.</p>
+<p>Los invitados de una fiesta de Halloween también dan para un paquete; para preparar los disfraces tienes ideas en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Y otra idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos. Si prefieres que los niños los pinten antes de recortarlos, pide los mismos personajes en contorno siguiendo <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>.</p>
 HTML,
 ];
