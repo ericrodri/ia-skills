@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-10',
     'updated' => '2026-10-10',
     'readingMinutes' => 7,
-    'words' => 1102,
+    'words' => 1130,
     'about' => 'Creación de cuentos infantiles personalizados, con texto e ilustraciones, usando herramientas de inteligencia artificial',
-    'related' => ['dibujos-para-colorear-con-ia', 'escribir-un-libro-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis'],
+    'related' => ['crear-un-comic-con-ia', 'dibujos-para-colorear-con-ia', 'escribir-un-libro-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-lo-hace-especial' => 'Qué hace especial un cuento',
         'segun-la-edad' => 'Extensión y lenguaje según la edad',
@@ -81,7 +81,7 @@ return [
 
 <h2 id="imprimir">Maquetar, imprimir o narrar</h2>
 
-<p>Para maquetarlo, una herramienta de diseño sencilla como Canva o una presentación de diapositivas basta: una página por diapositiva, imagen arriba y texto abajo con letra grande. Exporta en PDF y llévalo a una imprenta o a un servicio de fotolibros, que imprimen tapa dura desde un ejemplar.</p>
+<p>Para maquetarlo, una herramienta de diseño sencilla como Canva o una presentación de diapositivas basta: una página por diapositiva, imagen arriba y texto abajo con letra grande. Exporta en PDF y llévalo a una imprenta o a un servicio de fotolibros, que imprimen tapa dura desde un ejemplar. Si al niño le gustan más los tebeos que los cuentos, la misma historia se puede contar en viñetas con bocadillos; lo explica <a href="/guias/crear-un-comic-con-ia">crear un cómic con IA</a>.</p>
 
 <p>Si prefieres que suene, las herramientas de <a href="/guias/convertir-texto-a-voz-con-ia">texto a voz</a> convierten el cuento en audio con voces muy naturales. Aun así, si es un regalo, grabarlo con tu voz es lo que más se recuerda.</p>
 

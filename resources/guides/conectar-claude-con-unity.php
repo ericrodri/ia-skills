@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-23',
     'updated' => '2026-09-23',
     'readingMinutes' => 5,
-    'words' => 830,
+    'words' => 863,
     'about' => 'Claude',
-    'related' => ['empezar-con-claude-code', 'plugins-y-mcp-en-claude-code', 'que-es-un-agente-de-ia'],
+    'related' => ['crear-un-videojuego-con-ia', 'empezar-con-claude-code', 'plugins-y-mcp-en-claude-code', 'que-es-un-agente-de-ia'],
     'toc' => [
         'que-es' => 'Qué es Unity MCP y para qué sirve',
         'requisitos' => 'Requisitos',
@@ -117,5 +117,7 @@ return [
 </ul>
 
 <p>El punto más importante: Claude escribe el código C# que tú le pides, pero no lo compila ni lo prueba. Revisa siempre los scripts antes de darles al Play, especialmente si acceden a archivos del disco o hacen llamadas de red.</p>
+
+<p>Si todavía no has hecho ningún juego, quizá te convenga empezar más abajo, con un juego sencillo en el navegador que la IA escribe entera: lo explicamos en <a href="/guias/crear-un-videojuego-con-ia">crear un videojuego con IA</a>.</p>
 HTML,
 ];

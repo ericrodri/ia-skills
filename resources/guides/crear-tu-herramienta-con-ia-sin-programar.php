@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
-    'readingMinutes' => 12,
-    'words' => 2065,
+    'readingMinutes' => 13,
+    'words' => 2106,
     'about' => 'Desarrollo de software asistido por IA para personas sin perfil técnico',
-    'related' => ['crear-una-pagina-web-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'claude-code-vs-cursor', 'empezar-con-claude-code'],
+    'related' => ['crear-una-pagina-web-con-ia', 'crear-un-videojuego-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'claude-code-vs-cursor', 'empezar-con-claude-code'],
     'toc' => [
         'que-es' => 'Qué es y de dónde sale el nombre',
         'que-sale-bien' => 'Qué sale bien y qué no, por tipo de herramienta',
@@ -70,6 +70,8 @@ return [
 </figure>
 
 <p>La línea está clara: <strong>mientras los datos no sean de otras personas y el fallo lo pagues tú, construye sin miedo.</strong> En cuanto aparece un tercero —un compañero, un cliente, un dato personal— cambia la conversación, y no por purismo técnico sino porque cambian tus obligaciones. Esa parte la cubre <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">la guía sobre datos de clientes</a>.</p>
+
+<p>Un buen primer proyecto para perder el miedo, aunque no sea una herramienta de trabajo, es un juego sencillo: se rompe sin consecuencias y enseña el mismo método de pedir, probar y corregir. Lo contamos en <a href="/guias/crear-un-videojuego-con-ia">crear un videojuego con IA</a>.</p>
 
 <h2 id="herramientas">Con qué se hace: tres niveles</h2>
 

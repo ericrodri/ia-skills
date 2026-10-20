@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-14',
     'updated' => '2026-10-14',
     'readingMinutes' => 7,
-    'words' => 1120,
+    'words' => 1147,
     'about' => 'Uso de asistentes de inteligencia artificial para elegir regalos y organizar el amigo invisible',
-    'related' => ['comprar-con-ia-black-friday', 'felicitar-la-navidad-con-ia', 'crear-un-cuento-infantil-con-ia', 'restaurar-fotos-antiguas-con-ia', 'como-usar-perplexity', 'crear-musica-con-ia'],
+    'related' => ['carta-a-los-reyes-magos-con-ia', 'comprar-con-ia-black-friday', 'felicitar-la-navidad-con-ia', 'crear-un-cuento-infantil-con-ia', 'restaurar-fotos-antiguas-con-ia', 'como-usar-perplexity', 'crear-musica-con-ia'],
     'toc' => [
         'perfil' => 'El truco: describir a la persona',
         'prompts' => 'Prompts para pedir ideas',
@@ -80,7 +80,7 @@ return [
 
 <ul>
     <li><strong>Una foto antigua recuperada</strong>: la foto de boda de los abuelos, limpia y coloreada, enmarcada. Lo explicamos en <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar fotos antiguas con IA</a>.</li>
-    <li><strong>Un cuento con su nombre</strong> para los peques de la familia, con ilustraciones coherentes. Paso a paso en <a href="/guias/crear-un-cuento-infantil-con-ia">crear un cuento infantil con IA</a>.</li>
+    <li><strong>Un cuento con su nombre</strong> para los peques de la familia, con ilustraciones coherentes. Paso a paso en <a href="/guias/crear-un-cuento-infantil-con-ia">crear un cuento infantil con IA</a>. Si la lista de los niños es interminable, en <a href="/guias/carta-a-los-reyes-magos-con-ia">carta a los Reyes Magos con IA</a> se explica cómo ordenarla y preparar la respuesta de los Reyes.</li>
     <li><strong>Una canción</strong> con anécdotas del año familiar, hecha con las herramientas de <a href="/guias/crear-musica-con-ia">crear música con IA</a>.</li>
     <li><strong>Una lámina o calendario</strong> con vuestras fotos convertidas en ilustraciones, listo para imprimir.</li>
     <li><strong>Un vale de experiencia</strong> diseñado con IA: una ruta planificada, una cena cocinada por ti con un menú escrito para la ocasión.</li>

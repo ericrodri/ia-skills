@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-13',
     'updated' => '2026-10-14',
     'readingMinutes' => 7,
-    'words' => 1152,
+    'words' => 1188,
     'about' => 'Creación de felicitaciones navideñas con herramientas de inteligencia artificial',
-    'related' => ['felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'mensaje' => 'Un mensaje que no parezca de plantilla',
         'tarjeta' => 'La tarjeta: imagen navideña con tu foto',
@@ -90,6 +90,8 @@ return [
 <h2 id="imprimir">Imprimirla o enviarla</h2>
 
 <p>Para imprimir, genera la imagen con la mayor resolución posible y en el formato de la tarjeta (vertical u horizontal) desde el principio; recortar después hace perder calidad. Si la imprenta pide más resolución, usa una herramienta de ampliación con IA. Para enviarla por mensajería, un formato cuadrado o vertical se ve mejor en el móvil.</p>
+
+<p>Si en casa hay niños, el mismo generador sirve para el papel decorado de su carta, y el asistente para escribir la respuesta de Sus Majestades: lo contamos en <a href="/guias/carta-a-los-reyes-magos-con-ia">carta a los Reyes Magos con IA</a>.</p>
 
 <h2 id="cuidado">Lo que conviene evitar</h2>
 

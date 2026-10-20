@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 7,
-    'words' => 1099,
+    'words' => 1131,
     'about' => 'Creación de dibujos y láminas para colorear con generadores de imágenes de inteligencia artificial',
-    'related' => ['crear-un-cuento-infantil-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'ia-para-profesores', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['crear-un-comic-con-ia', 'crear-un-cuento-infantil-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'ia-para-profesores', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'que-herramienta' => 'Qué herramienta usar',
         'el-prompt' => 'El prompt de una lámina para colorear',
@@ -70,6 +70,7 @@ return [
 <ul>
     <li><strong>A partir de una foto</strong>: la mascota, la casa de los abuelos o el coche de la familia. Sube la foto y pide «conviértela en un dibujo de contorno para colorear, línea negra, sin sombras».</li>
     <li><strong>El protagonista del cuento</strong>: si habéis creado un <a href="/guias/crear-un-cuento-infantil-con-ia">cuento infantil con IA</a>, haz una lámina de cada escena y tendréis un libro para pintar.</li>
+    <li><strong>Un cómic para pintar</strong>: viñetas en línea negra con los bocadillos vacíos, para que el niño coloree y escriba los diálogos. El paso a paso está en <a href="/guias/crear-un-comic-con-ia">crear un cómic con IA</a>.</li>
     <li><strong>De temporada</strong>: calabazas y fantasmas simpáticos en octubre, árboles y renos en diciembre. Para una fiesta de Halloween puedes acompañarlas con ideas de <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>.</li>
     <li><strong>Para cumpleaños</strong>: una lámina con el nombre del niño en letras huecas y sus cosas favoritas alrededor, para repartir en la fiesta.</li>
     <li><strong>Pegatinas</strong>: los mismos dibujos, coloreados y recortados, se convierten en pegatinas; lo explica <a href="/guias/crear-stickers-con-ia">crear stickers con IA</a>.</li>
