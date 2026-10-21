@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 7,
-    'words' => 1187,
+    'words' => 1198,
     'about' => 'Redacción de felicitaciones de cumpleaños y creación de tarjetas personalizadas con asistentes de inteligencia artificial',
-    'related' => ['hacer-invitaciones-con-ia', 'escribir-un-poema-con-ia', 'felicitar-la-navidad-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'convertir-texto-a-voz-con-ia', 'dibujos-para-colorear-con-ia'],
+    'related' => ['escribir-una-carta-de-amor-con-ia', 'hacer-invitaciones-con-ia', 'escribir-un-poema-con-ia', 'felicitar-la-navidad-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'convertir-texto-a-voz-con-ia', 'dibujos-para-colorear-con-ia'],
     'toc' => [
         'por-que-suena-a-plantilla' => 'Por qué suena a plantilla',
         'el-prompt' => 'El prompt que funciona',
@@ -53,7 +53,7 @@ return [
 <h2 id="segun-la-persona">El tono según a quién felicitas</h2>
 
 <ul>
-    <li><strong>Pareja</strong>: lo personal pesa más que lo bonito. Un detalle de vuestra rutina emociona más que «eres lo mejor de mi vida». Si quieres algo especial, pide unos versos y sigue los consejos de <a href="/guias/escribir-un-poema-con-ia">escribir un poema con IA</a>.</li>
+    <li><strong>Pareja</strong>: lo personal pesa más que lo bonito. Un detalle de vuestra rutina emociona más que «eres lo mejor de mi vida». Si quieres algo especial, pide unos versos y sigue los consejos de <a href="/guias/escribir-un-poema-con-ia">escribir un poema con IA</a>; para algo más largo, <a href="/guias/escribir-una-carta-de-amor-con-ia">escribir una carta de amor con IA</a>.</li>
     <li><strong>Madre, padre o abuelos</strong>: agradecimiento concreto. «Gracias por enseñarme a cocinar las lentejas» vale más que «gracias por todo».</li>
     <li><strong>Amigos</strong>: la broma interna funciona, pero pide que no sea hiriente. Si es un grupo, una frase que entiendan todos.</li>
     <li><strong>Hijos</strong>: según la edad. Para los pequeños, algo que puedan entender y les haga ilusión; para los adolescentes, corto y sin ponerse cursi en público.</li>

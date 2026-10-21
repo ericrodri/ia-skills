@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-17',
     'updated' => '2026-10-17',
     'readingMinutes' => 7,
-    'words' => 1093,
+    'words' => 1107,
     'about' => 'Escritura de poemas, dedicatorias y versos personalizados con asistentes de inteligencia artificial',
-    'related' => ['felicitar-un-cumpleanos-con-ia', 'escribir-un-discurso-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'felicitar-la-navidad-con-ia', 'crear-musica-con-ia', 'como-escribir-prompts-efectivos', 'crear-un-cuento-infantil-con-ia'],
+    'related' => ['escribir-una-carta-de-amor-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-discurso-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'felicitar-la-navidad-con-ia', 'crear-musica-con-ia', 'como-escribir-prompts-efectivos', 'crear-un-cuento-infantil-con-ia'],
     'toc' => [
         'por-que-suena-a-ia' => 'Por qué los poemas de IA se parecen todos',
         'material' => 'El material: detalles, no adjetivos',
@@ -100,6 +100,6 @@ return [
     <li><strong>Para niños</strong>: rima marcada, ritmo regular y algo de juego de palabras. Si quieres algo más largo, convierte el poema en un <a href="/guias/crear-un-cuento-infantil-con-ia">cuento infantil</a>.</li>
 </ul>
 
-<p>Y si el poema te ha quedado bien, puedes ir un paso más allá y ponerle música: en <a href="/guias/crear-musica-con-ia">crear música con IA</a> se explica cómo adaptar la letra para que encaje en una canción. Si lo que buscas es algo más breve para un mensaje, mira <a href="/guias/felicitar-un-cumpleanos-con-ia">felicitar un cumpleaños con IA</a>.</p>
+<p>Y si el poema te ha quedado bien, puedes ir un paso más allá y ponerle música: en <a href="/guias/crear-musica-con-ia">crear música con IA</a> se explica cómo adaptar la letra para que encaje en una canción. Si lo que buscas es algo más breve para un mensaje, mira <a href="/guias/felicitar-un-cumpleanos-con-ia">felicitar un cumpleaños con IA</a>, y si prefieres la prosa para declararte, <a href="/guias/escribir-una-carta-de-amor-con-ia">escribir una carta de amor con IA</a>.</p>
 HTML,
 ];

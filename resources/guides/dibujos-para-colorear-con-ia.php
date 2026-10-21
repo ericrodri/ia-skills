@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1131,
     'about' => 'Creación de dibujos y láminas para colorear con generadores de imágenes de inteligencia artificial',
-    'related' => ['crear-un-comic-con-ia', 'crear-un-cuento-infantil-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'ia-para-profesores', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['convertir-una-foto-en-dibujo-con-ia', 'crear-un-comic-con-ia', 'crear-un-cuento-infantil-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'ia-para-profesores', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'que-herramienta' => 'Qué herramienta usar',
         'el-prompt' => 'El prompt de una lámina para colorear',

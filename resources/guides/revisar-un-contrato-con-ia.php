@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-17',
     'updated' => '2026-10-17',
     'readingMinutes' => 7,
-    'words' => 1172,
+    'words' => 1201,
     'about' => 'Lectura y análisis de contratos de alquiler, trabajo y servicios con asistentes de inteligencia artificial',
-    'related' => ['resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'escribir-una-reclamacion-con-ia', 'como-escribir-prompts-efectivos', 'ia-para-autonomos-y-pymes'],
+    'related' => ['interpretar-una-analitica-con-ia', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'escribir-una-reclamacion-con-ia', 'como-escribir-prompts-efectivos', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'para-que-sirve' => 'Para qué sirve (y para qué no)',
         'antes' => 'Antes de pegar el contrato',
@@ -68,7 +68,7 @@ return [
 
 <blockquote>«¿Qué cosas que suelen aparecer en un contrato así no aparecen en este? ¿Hay alguna cláusula ambigua que pueda interpretarse de dos maneras?»</blockquote>
 
-<p>Para contratos muy largos, lee también <a href="/guias/resumir-documentos-largos-con-ia">resumir documentos largos con IA</a>: explica cómo evitar que el asistente se salte las páginas del final.</p>
+<p>Para contratos muy largos, lee también <a href="/guias/resumir-documentos-largos-con-ia">resumir documentos largos con IA</a>: explica cómo evitar que el asistente se salte las páginas del final. El mismo método de pedir explicaciones en lenguaje llano sin dar datos personales sirve para otros documentos difíciles, como se cuenta en <a href="/guias/interpretar-una-analitica-con-ia">interpretar una analítica de sangre con IA</a>.</p>
 
 <h2 id="por-tipo">Qué mirar según el tipo de contrato</h2>
 

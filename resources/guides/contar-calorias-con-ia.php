@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 8,
-    'words' => 1252,
+    'words' => 1277,
     'about' => 'Estimación de calorías y macronutrientes de comidas con asistentes y aplicaciones de inteligencia artificial',
-    'related' => ['menu-semanal-con-ia', 'plan-de-entrenamiento-con-ia', 'alucinaciones-de-la-ia', 'organizar-tu-tiempo-con-ia', 'herramientas-de-ia-gratis', 'ia-en-excel-y-google-sheets'],
+    'related' => ['interpretar-una-analitica-con-ia', 'menu-semanal-con-ia', 'plan-de-entrenamiento-con-ia', 'alucinaciones-de-la-ia', 'organizar-tu-tiempo-con-ia', 'herramientas-de-ia-gratis', 'ia-en-excel-y-google-sheets'],
     'toc' => [
         'como-funciona' => 'Cómo calcula la IA las calorías de una foto',
         'donde-falla' => 'Dónde se equivoca',
@@ -50,7 +50,7 @@ return [
     <li><strong>Las raciones</strong>: un plato hondo engaña, el arroz amontonado engaña y un plato grande hace parecer pequeña cualquier ración.</li>
     <li><strong>Platos mezclados</strong>: lentejas con chorizo, lasaña, un guiso. La IA adivina la receta y sus proporciones.</li>
     <li><strong>Bebidas y salsas</strong>: un refresco y uno sin azúcar son iguales en la foto, y la mayonesa se confunde con el alioli o el yogur.</li>
-    <li><strong>Seguridad sin motivo</strong>: el asistente te dirá «542 kcal» con la misma seguridad cuando acierta que cuando se inventa media receta. Es el mismo fenómeno que se explica en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>: un número exacto no significa un cálculo exacto.</li>
+    <li><strong>Seguridad sin motivo</strong>: el asistente te dirá «542 kcal» con la misma seguridad cuando acierta que cuando se inventa media receta. Es el mismo fenómeno que se explica en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>: un número exacto no significa un cálculo exacto. Pasa lo mismo cuando se le pregunta por los resultados de unos análisis; en <a href="/guias/interpretar-una-analitica-con-ia">interpretar una analítica con IA</a> se explica cómo hacerlo con prudencia.</li>
 </ul>
 
 <h2 id="como-hacerlo">Cómo hacerlo para que acierte más</h2>
