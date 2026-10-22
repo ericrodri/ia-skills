@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-07',
     'updated' => '2026-10-07',
     'readingMinutes' => 7,
-    'words' => 1098,
+    'words' => 1132,
     'about' => 'Decoración e interiorismo doméstico con generación y edición de imágenes por inteligencia artificial',
-    'related' => ['editar-fotos-con-ia', 'crear-imagenes-con-ia', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'alucinaciones-de-la-ia', 'herramientas-de-ia-gratis'],
+    'related' => ['identificar-plantas-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'alucinaciones-de-la-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'para-que-sirve' => 'Para qué sirve',
         'la-foto' => 'La foto de partida',
@@ -68,7 +68,7 @@ return [
     <li><strong>Usa referencias</strong>: puedes subir una foto de un salón que te guste y pedir que aplique ese estilo al tuyo.</li>
 </ul>
 
-<p>Las mismas técnicas sirven para cualquier imagen; hay más en <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a> y en <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>.</p>
+<p>Las mismas técnicas sirven para cualquier imagen; hay más en <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a> y en <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>. Y si en la habitación hay plantas y no sabes cuáles son ni cuánta luz necesitan, puedes averiguarlo con una foto antes de decidir dónde van, como se cuenta en <a href="/guias/identificar-plantas-con-ia">identificar plantas con IA</a>.</p>
 
 <h2 id="de-la-imagen-a-la-tienda">De la imagen a la tienda</h2>
 

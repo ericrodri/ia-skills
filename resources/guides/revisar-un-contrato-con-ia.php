@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-17',
     'updated' => '2026-10-17',
     'readingMinutes' => 7,
-    'words' => 1201,
+    'words' => 1234,
     'about' => 'Lectura y análisis de contratos de alquiler, trabajo y servicios con asistentes de inteligencia artificial',
-    'related' => ['interpretar-una-analitica-con-ia', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'escribir-una-reclamacion-con-ia', 'como-escribir-prompts-efectivos', 'ia-para-autonomos-y-pymes'],
+    'related' => ['carta-de-baja-voluntaria-con-ia', 'interpretar-una-analitica-con-ia', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'escribir-una-reclamacion-con-ia', 'como-escribir-prompts-efectivos', 'ia-para-autonomos-y-pymes'],
     'toc' => [
         'para-que-sirve' => 'Para qué sirve (y para qué no)',
         'antes' => 'Antes de pegar el contrato',
@@ -100,6 +100,6 @@ return [
     <li>Ya hay un conflicto. En ese caso, la IA puede ayudarte a ordenar los hechos y a escribir el primer escrito; en <a href="/guias/escribir-una-reclamacion-con-ia">escribir una reclamación con IA</a> tienes cómo.</li>
 </ul>
 
-<p>Llegar a esa consulta con el resumen y las preguntas preparadas también ahorra tiempo y dinero: el profesional se centra en lo que de verdad importa.</p>
+<p>Llegar a esa consulta con el resumen y las preguntas preparadas también ahorra tiempo y dinero: el profesional se centra en lo que de verdad importa. Y si lo que tienes delante es tu salida de la empresa, la guía de <a href="/guias/carta-de-baja-voluntaria-con-ia">carta de baja voluntaria con IA</a> explica cómo calcular el preaviso a partir de tu contrato o convenio.</p>
 HTML,
 ];

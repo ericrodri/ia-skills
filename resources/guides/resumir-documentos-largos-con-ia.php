@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-09-03',
     'updated' => '2026-09-08',
-    'readingMinutes' => 14,
-    'words' => 2382,
+    'readingMinutes' => 15,
+    'words' => 2407,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['revisar-un-contrato-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['resumir-un-libro-con-ia', 'revisar-un-contrato-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',
@@ -132,7 +132,7 @@ que has resumido en una línea o menos y di qué contienen.</code></pre>
 
 <h2 id="por-partes">Cuando el documento no cabe: trocear por secciones, no por páginas</h2>
 
-<p>Con documentos muy largos —cientos de páginas, o varios archivos a la vez— la fiabilidad se recupera troceando. Con una condición: <strong>los cortes van por límites lógicos, no cada X páginas</strong>. Un capítulo partido en dos produce dos resúmenes que se pierden el argumento.</p>
+<p>Con documentos muy largos —cientos de páginas, o varios archivos a la vez— la fiabilidad se recupera troceando. Con una condición: <strong>los cortes van por límites lógicos, no cada X páginas</strong>. Un capítulo partido en dos produce dos resúmenes que se pierden el argumento. Con una novela o un ensayo el método es el mismo, cortando por capítulos; lo aplicamos paso a paso en <a href="/guias/resumir-un-libro-con-ia">resumir un libro con IA</a>.</p>
 
 <figure>
 <table>

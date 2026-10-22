@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-14',
     'updated' => '2026-10-14',
     'readingMinutes' => 7,
-    'words' => 1147,
+    'words' => 1165,
     'about' => 'Verificación de imágenes generadas o manipuladas con inteligencia artificial',
-    'related' => ['estafas-con-ia-deepfakes-y-suplantacion', 'se-nota-si-un-texto-lo-escribe-una-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'alucinaciones-de-la-ia', 'editar-fotos-con-ia'],
+    'related' => ['identificar-plantas-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'se-nota-si-un-texto-lo-escribe-una-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'alucinaciones-de-la-ia', 'editar-fotos-con-ia'],
     'toc' => [
         'por-que' => 'Por qué ya no basta con mirar',
         'contexto' => 'Primero, el contexto',
@@ -86,7 +86,7 @@ return [
     <li><strong>¿Existe el original sin retocar?</strong> Comparar las dos versiones muestra exactamente qué se ha añadido o quitado.</li>
 </ul>
 
-<p>Recorta la imagen si tiene textos o marcos añadidos: el buscador encuentra mejor la foto limpia.</p>
+<p>Recorta la imagen si tiene textos o marcos añadidos: el buscador encuentra mejor la foto limpia. La misma búsqueda por imagen sirve para muchas otras cosas, por ejemplo para <a href="/guias/identificar-plantas-con-ia">identificar plantas con una foto</a>.</p>
 
 <h2 id="detectores">Detectores automáticos: para qué sirven</h2>
 

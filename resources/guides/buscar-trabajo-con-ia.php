@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-15',
     'updated' => '2026-10-15',
     'readingMinutes' => 7,
-    'words' => 1108,
+    'words' => 1137,
     'about' => 'Búsqueda de empleo con asistentes de inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'trabajar-en-inteligencia-artificial', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['carta-de-baja-voluntaria-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'trabajar-en-inteligencia-artificial', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'objetivo' => 'Antes de buscar: qué quieres',
         'ofertas' => 'Encontrar y filtrar ofertas',
@@ -95,6 +95,6 @@ return [
 
 <p>En <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">estafas con IA</a> tienes más señales y qué hacer si ya has picado. Y tres errores que vemos a menudo: enviar la misma carta a todas las empresas, confiar en salarios o datos de empresa que la IA no ha citado de ninguna fuente, y pegar en el chat datos de terceros, como referencias con nombre y teléfono, sin necesidad.</p>
 
-<p>Cuando consigas la entrevista, sigue con <a href="/guias/entrevista-de-trabajo-con-ia">preparar una entrevista de trabajo con IA</a>.</p>
+<p>Cuando consigas la entrevista, sigue con <a href="/guias/entrevista-de-trabajo-con-ia">preparar una entrevista de trabajo con IA</a>. Y si ya tienes una oferta y vas a dejar tu puesto actual, en <a href="/guias/carta-de-baja-voluntaria-con-ia">carta de baja voluntaria con IA</a> se explica cómo comunicarlo sin perder días del finiquito.</p>
 HTML,
 ];
