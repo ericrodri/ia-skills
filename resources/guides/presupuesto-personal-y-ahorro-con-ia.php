@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-15',
     'updated' => '2026-10-15',
     'readingMinutes' => 6,
-    'words' => 1031,
+    'words' => 1058,
     'about' => 'Presupuesto doméstico y control de gastos personales con asistentes de inteligencia artificial',
-    'related' => ['ia-en-excel-y-google-sheets', 'menu-semanal-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos'],
+    'related' => ['entender-tu-nomina-con-ia', 'ia-en-excel-y-google-sheets', 'menu-semanal-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'para-que' => 'Para qué sirve (y para qué no)',
         'datos' => 'Exportar tus movimientos sin exponerte',
@@ -82,6 +82,7 @@ return [
     <li><strong>Gastos hormiga</strong>: cafés, comida a domicilio, envíos. Pide el total por trimestre y la frecuencia.</li>
     <li><strong>Supermercado</strong>: un <a href="/guias/menu-semanal-con-ia">menú semanal con lista de la compra</a> es de lo que más reduce este capítulo.</li>
     <li><strong>Suministros</strong>: pega tu factura de luz o de móvil (sin datos personales) y pide que te explique cada concepto y qué preguntar al comparar tarifas.</li>
+    <li><strong>Ingresos</strong>: antes de cuadrar gastos, asegúrate de que cobras lo que te corresponde. La guía para <a href="/guias/entender-tu-nomina-con-ia">entender tu nómina con IA</a> explica cada línea y qué revisar.</li>
     <li><strong>Compras grandes</strong>: antes de las rebajas, decide cuánto puedes gastar y usa la IA para <a href="/guias/comprar-con-ia-black-friday">comparar precios con cabeza</a>.</li>
 </ul>
 

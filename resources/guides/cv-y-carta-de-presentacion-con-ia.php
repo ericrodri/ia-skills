@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-10-15',
     'readingMinutes' => 15,
-    'words' => 2422,
+    'words' => 2443,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['carta-de-recomendacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',
@@ -136,7 +136,7 @@ dudar. Sé duro, no me animes.</code></pre>
     <li><strong>Qué propones.</strong> Una frase sobre qué harías en los primeros meses. Casi nadie la escribe y se recuerda.</li>
 </ol>
 
-<p>Lo que hunde una carta es que sirva igual para otra empresa. «Me apasiona vuestra cultura de innovación» es una frase que no ha costado nada escribir y que se lee como tal. El modelo la produce por defecto precisamente porque es lo más probable; evitarla es cuestión de darle tu material en lugar de un tema, y el porqué está en la guía sobre <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">si se nota que un texto lo ha escrito una IA</a>.</p>
+<p>Lo que hunde una carta es que sirva igual para otra empresa. «Me apasiona vuestra cultura de innovación» es una frase que no ha costado nada escribir y que se lee como tal. El modelo la produce por defecto precisamente porque es lo más probable; evitarla es cuestión de darle tu material en lugar de un tema, y el porqué está en la guía sobre <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">si se nota que un texto lo ha escrito una IA</a>. Si además te piden referencias por escrito, el mismo material de logros sirve para preparar una <a href="/guias/carta-de-recomendacion-con-ia">carta de recomendación con IA</a>.</p>
 
 <h2 id="linkedin">LinkedIn: el mismo material, otro lector</h2>
 

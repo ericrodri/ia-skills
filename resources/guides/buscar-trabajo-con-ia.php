@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-15',
     'updated' => '2026-10-15',
     'readingMinutes' => 7,
-    'words' => 1137,
+    'words' => 1165,
     'about' => 'Búsqueda de empleo con asistentes de inteligencia artificial',
-    'related' => ['carta-de-baja-voluntaria-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'trabajar-en-inteligencia-artificial', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['carta-de-recomendacion-con-ia', 'carta-de-baja-voluntaria-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'trabajar-en-inteligencia-artificial', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'objetivo' => 'Antes de buscar: qué quieres',
         'ofertas' => 'Encontrar y filtrar ofertas',
@@ -70,6 +70,7 @@ return [
     <li><strong>Mensaje a un antiguo compañero</strong>: «Escribe un mensaje breve y natural a un excompañero con el que no hablo desde hace dos años para contarle que busco trabajo en [ÁREA] y preguntarle si su empresa contrata. Nada de tono de vendedor».</li>
     <li><strong>Candidatura espontánea</strong>: pide un correo de cinco o seis líneas a la persona que dirige el área, con una propuesta concreta de en qué podrías ayudar.</li>
     <li><strong>Preparar una conversación</strong>: antes de un café con alguien del sector, pide diez preguntas que te ayuden a entender cómo se contrata en su empresa.</li>
+    <li><strong>Pedir referencias</strong>: si un antiguo jefe acepta recomendarte y te pide un borrador, la guía de la <a href="/guias/carta-de-recomendacion-con-ia">carta de recomendación con IA</a> explica cómo prepararlo sin inflar méritos.</li>
 </ul>
 
 <p>Escribe tú la primera frase y la despedida: son las partes que más delatan un mensaje automático.</p>
