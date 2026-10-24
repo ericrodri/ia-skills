@@ -44,7 +44,7 @@ class HomeController extends Controller
         // sitio para que Seo::normalize no le añada el sufijo por duplicado.
         Seo::share([
             'title' => 'ia-skills: skills y prompts de IA para profesionales',
-            'description' => "IA Skills: {$count} skills de IA y prompts gratis, organizados por profesión y votados por la comunidad. Úsalos en Claude, ChatGPT o Gemini sin registrarte.",
+            'description' => "IA Skills: {$count} skills de IA y prompts gratis para tu profesión. Instálalos en Claude Code o úsalos en ChatGPT y Gemini, sin registrarte.",
             'canonical' => route('home'),
             'fallback' => [
                 'heading' => 'Skills de IA y prompts que usan los mejores profesionales',
