@@ -96,6 +96,9 @@
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('guides.index') }}">Guías</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('how-it-works') }}">Cómo funciona</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.saved') }}">Guardadas</a></li>
+                        @if(\App\Support\SkillMarkdown::mcpAvailable())
+                            <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('mcp') }}">Claude Code (MCP)</a></li>
+                        @endif
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('legal.privacy') }}">Privacidad</a></li>
                     </ul>
                 </div>

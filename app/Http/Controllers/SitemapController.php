@@ -6,6 +6,7 @@ use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\User;
 use App\Support\Collections;
+use App\Support\SkillMarkdown;
 use App\Support\Guides;
 use App\Support\ProfessionTasks;
 use Illuminate\Http\Response;
@@ -65,6 +66,11 @@ class SitemapController extends Controller
             ['loc' => route('collections.index'), 'changefreq' => 'weekly', 'priority' => '0.7'],
             ['loc' => route('legal.privacy'), 'changefreq' => 'yearly', 'priority' => '0.2'],
         ];
+
+        // /mcp solo existe con el paquete npm disponible: si no, daria 404.
+        if (SkillMarkdown::mcpAvailable()) {
+            $urls[] = ['loc' => route('mcp'), 'changefreq' => 'monthly', 'priority' => '0.7'];
+        }
 
         foreach (Collections::all() as $collection) {
             $urls[] = [

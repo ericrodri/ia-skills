@@ -468,6 +468,7 @@ git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
                             <summary class="cursor-pointer list-none text-xs text-violet-700 dark:text-violet-400 hover:underline">Que Claude Code busque e instale solo (MCP)</summary>
                             <p class="mt-2 text-[11px] text-violet-700/80 dark:text-violet-400/80">
                                 Registra el catálogo una vez y Claude podrá buscar e instalar skills durante la conversación, sin volver a pasar por la web.
+                                <a href="/mcp" class="underline hover:no-underline">Cómo funciona</a>
                             </p>
                             <div class="mt-2 flex items-stretch gap-2">
                                 <pre class="flex-1 min-w-0 bg-gray-900 text-gray-100 rounded-lg px-3 py-2 text-xs font-mono overflow-x-auto whitespace-nowrap">{{ install.mcp }}</pre>

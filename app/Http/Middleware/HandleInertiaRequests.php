@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use App\Support\SiteData;
+use App\Support\SkillMarkdown;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -45,6 +46,8 @@ class HandleInertiaRequests extends Middleware
             // Fuente única de la navegación, compartida con layouts/site.blade.php.
             'nav' => [
                 'primary' => fn () => SiteData::primaryNav(),
+                // null si el paquete npm no esta disponible: /mcp daria 404.
+                'mcp' => fn () => SkillMarkdown::mcpAvailable() ? route('mcp') : null,
             ],
         ];
     }

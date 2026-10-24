@@ -10,6 +10,7 @@ use App\Http\Controllers\GuideController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LegalController;
 use App\Http\Controllers\LlmsTxtController;
+use App\Http\Controllers\McpController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\PageController;
@@ -85,6 +86,7 @@ Route::get('/guias/{slug}', [GuideController::class, 'show'])->name('guides.show
 // Skills
 Route::get('/skills', [SkillController::class, 'index'])->name('skills.index');
 Route::get('/como-funciona', [PageController::class, 'howItWorks'])->name('how-it-works');
+Route::get('/mcp', McpController::class)->name('mcp');
 Route::get('/privacidad', [LegalController::class, 'privacy'])->name('legal.privacy');
 
 

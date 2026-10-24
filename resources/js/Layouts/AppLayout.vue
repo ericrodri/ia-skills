@@ -204,6 +204,8 @@ function logout() {
                         <Link :href="route('rankings.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Ranking</Link>
                         <a href="/guias" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guías</a>
                         <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-white transition-colors">RSS</a>
+                        <!-- /mcp es Blade, no Inertia: enlace normal -->
+                        <a v-if="$page.props.nav?.mcp" :href="$page.props.nav.mcp" class="hover:text-gray-900 dark:hover:text-white transition-colors">Claude Code (MCP)</a>
                         <Link :href="route('how-it-works')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Cómo funciona</Link>
                         <Link :href="route('skills.saved')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guardadas</Link>
                         <Link v-if="!auth?.user" :href="route('register')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Registrarse</Link>
