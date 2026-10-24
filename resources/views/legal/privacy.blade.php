@@ -58,6 +58,7 @@
                 <li><strong>Avisos sobre tu actividad</strong> (tu skill se ha aprobado o rechazado, alguien la ha comentado o ha respondido a tu comentario): forman parte del servicio y puedes desactivarlos en cualquier momento desde tu perfil (art. 6.1.b RGPD).</li>
                 <li><strong>Resumen semanal por email:</strong> solo si lo pides expresamente. Sin cuenta, además, tienes que confirmarlo desde un email antes de recibir nada. Base legal: tu consentimiento (art. 6.1.a RGPD), que puedes retirar con un clic desde cualquier email.</li>
                 <li><strong>Seguridad y prevención de abusos</strong> (límites de peticiones por IP, protección contra spam y accesos no autorizados): interés legítimo en mantener la web segura (art. 6.1.f RGPD).</li>
+                <li><strong>Estadísticas de uso</strong> (contar cuántas veces se instala cada skill, sin identificarte): se guarda durante 24 horas un resumen no reversible de tu IP y tu navegador para no contar dos veces la misma instalación. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
             </ul>
             <p>No tomamos decisiones automatizadas con efectos sobre ti ni elaboramos perfiles con fines comerciales.</p>
 
@@ -75,6 +76,7 @@
                 <li><strong>Cuenta:</strong> hasta que la borres. Al eliminarla desde tu perfil se borran también tus skills, comentarios, votos y guardadas.</li>
                 <li><strong>Sesiones:</strong> caducan tras {{ $sessionMinutes }} minutos sin actividad, salvo que marques «Recordarme».</li>
                 <li><strong>Resumen semanal sin cuenta:</strong> mientras sigas suscrito. Las altas que no se confirman y las bajas se borran a los 30 días.</li>
+                <li><strong>Estadísticas de instalación:</strong> el resumen de IP y navegador se descarta a las 24 horas. Solo queda el recuento total de cada skill, que no está asociado a nadie.</li>
                 <li><strong>Registros técnicos del servidor:</strong> el tiempo imprescindible para la seguridad y la resolución de errores.</li>
             </ul>
 

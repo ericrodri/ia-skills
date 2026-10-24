@@ -36,10 +36,13 @@ class InstallCounter
             return false;
         }
 
+        // HMAC con la clave de la aplicación, no un hash simple: la política de
+        // privacidad promete un resumen no reversible de la IP, y un hash sin
+        // clave sobre el espacio de IPv4 se deshace probando todas.
         $key = sprintf(
             'skill-install.%d.%s',
             $skill->id,
-            hash('xxh128', $request->ip().'|'.$request->userAgent())
+            hash_hmac('sha256', $request->ip().'|'.$request->userAgent(), (string) config('app.key'))
         );
 
         // add() es atómico: devuelve false si la clave ya existe, así que dos

@@ -22,5 +22,5 @@ return [
     'hosting' => env('LEGAL_HOSTING_PROVIDER', 'Hetzner Online GmbH, con servidores en Alemania (UE)'),
 
     // Fecha de la última revisión del texto (cámbiala al editarlo)
-    'updated' => '2026-09-23',
+    'updated' => '2026-10-24',
 ];
