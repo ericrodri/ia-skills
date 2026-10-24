@@ -30,7 +30,7 @@ return [
         '¿Y si migro solo de hosting o de HTTP a HTTPS?' => 'Un cambio de hosting sin cambiar URLs no es una migración SEO: si el dominio, las rutas y el contenido son idénticos, lo único que vigilas es que no haya caídas ni respuestas lentas durante el cambio de DNS. El paso a HTTPS sí lo es, aunque de las sencillas: redirección 301 de cada URL http a su equivalente https, canónicas y enlaces internos apuntando a https, y la propiedad nueva dada de alta en Search Console.',
     ],
     'ctaTitle' => 'Prompts de migración y control de calidad listos para usar',
-    'ctaBody' => 'Generar y verificar mapas de redirecciones a partir de exportaciones: <a href="/profesiones/desarrollo">Desarrollo</a>. Para el seguimiento del tráfico antes y después: <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
+    'ctaBody' => 'Generar y verificar mapas de redirecciones a partir de exportaciones: <a href="/profesiones/desarrollo">Desarrollo</a>. Para el seguimiento del tráfico antes y después: <a href="/skills?q=datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>Una migración es el único proyecto de SEO donde no se gana nada y se puede perder todo. Si sale bien, el tráfico queda como estaba; si sale mal, desaparecen años de trabajo en una tarde. Por eso el objetivo no es optimizar: es no romper.</p>
 

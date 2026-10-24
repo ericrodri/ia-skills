@@ -28,7 +28,7 @@ return [
         '¿Puedo identificar setas con una app?' => 'Para curiosear, sí; para comer, nunca. Varias setas mortales se parecen mucho a especies comestibles, y una foto no muestra los detalles que hacen falta para distinguirlas. Lleva siempre las setas a una sociedad micológica o a un experto antes de consumirlas.',
     ],
     'ctaTitle' => 'Más usos prácticos de la IA',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para sacar partido a los asistentes con imágenes, documentos y datos, organizadas por profesión, como <a href="/profesiones/analisis-de-datos">análisis de datos</a> o <a href="/profesiones/freelancers">autónomos</a>.',
+    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para sacar partido a los asistentes con imágenes, documentos y datos, organizadas por profesión, como <a href="/skills?q=datos">análisis de datos</a> o <a href="/profesiones/freelancers">autónomos</a>.',
     'body' => <<<'HTML'
 <p>Una planta que te han regalado y no sabes cómo cuidar, un árbol que ves cada día en el parque, una flor del campo que te ha llamado la atención. Hoy basta con una foto para tener un nombre. Las aplicaciones de reconocimiento de imágenes y los asistentes como ChatGPT, Gemini o Claude aciertan la mayoría de las veces con las especies comunes. Esta guía explica cuál usar en cada caso, cómo hacer la foto para que acierten más y cuándo no deberías fiarte de lo que te dicen.</p>
 

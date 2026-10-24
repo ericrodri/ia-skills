@@ -30,7 +30,7 @@ return [
         '¿Merece la pena mirarlo ahora o esperar?' => 'Mirarlo sí, migrar no. Es un producto de cinco días con cifras que solo ha publicado el fabricante y sin verificación independiente todavía. Lo que sí tiene sentido hacer ya es identificar en tu sistema las llamadas a un modelo grande que solo devuelven una etiqueta o un número: esa lista te sirve igual aunque Jev acabe sin cuajar, porque es donde estás pagando precio de redacción por un trabajo de clasificación.',
     ],
     'ctaTitle' => 'Skills de desarrollo listas para instalar',
-    'ctaBody' => 'Clasificación, extracción y automatización con modelos, con el prompt y el contexto ya resueltos: <a href="/profesiones/desarrollo">Desarrollo</a>. Para la parte de datos y evaluación, mira <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
+    'ctaBody' => 'Clasificación, extracción y automatización con modelos, con el prompt y el contexto ya resueltos: <a href="/profesiones/desarrollo">Desarrollo</a>. Para la parte de datos y evaluación, mira <a href="/skills?q=datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>El 15 de septiembre de 2026, una empresa llamada TypeSafe AI presentó <strong>Jev</strong> y, de paso, se inventó una categoría para meterlo: los <em>System One models</em>. La idea es bastante menos abstracta de lo que suena, y merece cinco minutos aunque no escribas código, porque describe un problema que tiene cualquiera que haya puesto un modelo en producción.</p>
 

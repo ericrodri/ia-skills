@@ -28,7 +28,7 @@ return [
         '¿Sirve para vídeos en otro idioma?' => 'Sí. Puedes pedir el resumen en español de un vídeo en inglés, alemán o japonés, siempre que tenga transcripción o subtítulos automáticos. Ten en cuenta que los subtítulos automáticos fallan con nombres propios, cifras y términos técnicos, y esos errores pasan al resumen, así que revisa esos datos en el vídeo.',
     ],
     'ctaTitle' => 'Del resumen al trabajo',
-    'ctaBody' => 'Resumir es el primer paso; lo útil es lo que haces después. En el <a href="/skills">catálogo de skills</a> hay instrucciones para sacar ideas, actas y contenidos de vídeos y documentos, por ejemplo en <a href="/profesiones/marketing">marketing</a> y <a href="/profesiones/analisis-de-datos">análisis de datos</a>.',
+    'ctaBody' => 'Resumir es el primer paso; lo útil es lo que haces después. En el <a href="/skills">catálogo de skills</a> hay instrucciones para sacar ideas, actas y contenidos de vídeos y documentos, por ejemplo en <a href="/profesiones/marketing">marketing</a> y <a href="/skills?q=datos">análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>Hay vídeos que merecen dos horas y vídeos que caben en cinco líneas, y antes de verlos no hay forma de saber cuál es cuál. Resumir un vídeo de YouTube con IA resuelve eso: te dice de qué va, cuáles son las ideas principales y en qué minuto aparece lo que buscas. Funciona bien con conferencias, tutoriales, entrevistas y pódcast. Lo importante es saber de dónde saca la información la IA, porque de eso depende que el resumen sea fiel o se lo invente.</p>
 

@@ -29,7 +29,7 @@ return [
         '¿Puede la IA hacer el análisis estadístico del TFG?' => 'Puede ayudarte a elegir la prueba adecuada, escribir el código en R o Python y explicarte los resultados. El análisis tienes que entenderlo y comprobarlo tú: si el tribunal te pregunta por qué usaste esa prueba, «me lo dijo la IA» no es una respuesta.',
     ],
     'ctaTitle' => 'Skills para investigar y escribir mejor',
-    'ctaBody' => 'Revisión de literatura, análisis de datos o redacción académica: en <a href="/profesiones/analisis-de-datos">Análisis de datos</a> y en el <a href="/skills">catálogo de skills</a> hay instrucciones pensadas para trabajar con rigor.',
+    'ctaBody' => 'Revisión de literatura, análisis de datos o redacción académica: en <a href="/skills?q=datos">Análisis de datos</a> y en el <a href="/skills">catálogo de skills</a> hay instrucciones pensadas para trabajar con rigor.',
     'body' => <<<'HTML'
 <p>Hace dos cursos la respuesta de muchas facultades a la IA en el trabajo de fin de grado era un «no» genérico. Hoy la mayoría de universidades españolas tiene una norma escrita, y casi todas dicen lo mismo con palabras distintas: puedes usarla como ayuda, tienes que decir cómo la has usado y el trabajo intelectual tiene que ser tuyo. Esta guía traduce eso a decisiones concretas. Sirve igual para un TFM.</p>
 

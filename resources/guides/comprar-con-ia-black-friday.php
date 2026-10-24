@@ -29,7 +29,7 @@ return [
         '¿Las recomendaciones de la IA son publicidad?' => 'Los asistentes dicen no cobrar por ordenar productos, pero se basan en reseñas y artículos de internet, muchos con enlaces de afiliados. Pide siempre los pros y contras y las fuentes, y desconfía si todo parece positivo.',
     ],
     'ctaTitle' => 'Instrucciones para decidir mejor',
-    'ctaBody' => 'Comparar opciones con criterios claros sirve igual para un portátil que para elegir proveedor. En el <a href="/skills">catálogo de skills</a> encontrarás prompts de <a href="/profesiones/analisis-de-datos">análisis</a> y <a href="/profesiones/ventas">ventas</a> para tablas comparativas y decisiones de compra.',
+    'ctaBody' => 'Comparar opciones con criterios claros sirve igual para un portátil que para elegir proveedor. En el <a href="/skills">catálogo de skills</a> encontrarás prompts de <a href="/skills?q=datos">análisis</a> y <a href="/profesiones/ventas">ventas</a> para tablas comparativas y decisiones de compra.',
     'body' => <<<'HTML'
 <p>El Black Friday es la semana en la que más gente compra cosas que no había planeado, a menudo con descuentos menos generosos de lo que parecen. Los asistentes de IA pueden ser un buen aliado: te ayudan a aclarar qué necesitas, a comparar modelos con calma y a detectar ofertas sospechosas. También pueden equivocarse con un precio o recomendar un producto que ya no se vende. Esta guía explica cómo usarlos para comprar mejor, no para comprar más.</p>
 

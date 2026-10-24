@@ -29,7 +29,7 @@ return [
         '¿Hay alguna IA gratis para resolver matemáticas?' => 'Sí. Los planes gratuitos de ChatGPT, Gemini y Claude, Google Lens, Photomath y la versión gratuita de Wolfram Alpha permiten resolver y comprobar ejercicios. Las versiones de pago añaden más uso de los modelos de razonamiento y, en algunas, explicaciones paso a paso más detalladas.',
     ],
     'ctaTitle' => 'Instrucciones para estudiar mejor',
-    'ctaBody' => 'Pedir pistas en lugar de soluciones es una instrucción que se puede guardar y reutilizar. En el <a href="/skills">catálogo de skills</a> hay instrucciones probadas para análisis y cálculo, por ejemplo en <a href="/profesiones/analisis-de-datos">análisis de datos</a> y <a href="/profesiones/finanzas">finanzas</a>.',
+    'ctaBody' => 'Pedir pistas en lugar de soluciones es una instrucción que se puede guardar y reutilizar. En el <a href="/skills">catálogo de skills</a> hay instrucciones probadas para análisis y cálculo, por ejemplo en <a href="/skills?q=datos">análisis de datos</a> y <a href="/profesiones/finanzas">finanzas</a>.',
     'body' => <<<'HTML'
 <p>Haces una foto del ejercicio, la subes a un chat y en unos segundos tienes la solución explicada paso a paso. Funciona sorprendentemente bien en la mayoría de los casos. El problema es el resto: cuando la IA lee mal un exponente o se equivoca en una resta del tercer paso, llega a un resultado falso con la misma seguridad y la misma explicación ordenada. Esta guía explica qué herramienta usar, cómo pedir la solución, cómo comprobarla y cómo aprovecharla para aprender.</p>
 

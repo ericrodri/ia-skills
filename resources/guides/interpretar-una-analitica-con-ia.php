@@ -29,7 +29,7 @@ return [
         '¿Sirve también para otros informes médicos?' => 'El método es el mismo para un análisis de orina, un informe de radiología o el resumen de un alta: pedir explicaciones en lenguaje llano, sin datos personales, y llevar las dudas al médico. Cuanto más técnico y específico es el informe, más prudente hay que ser con la respuesta.',
     ],
     'ctaTitle' => 'Instrucciones para entender documentos',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para resumir documentos, explicar textos técnicos en lenguaje llano y preparar preguntas, útiles para <a href="/profesiones/analisis-de-datos">análisis de datos</a> y para <a href="/profesiones/freelancers">profesionales independientes</a>.',
+    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para resumir documentos, explicar textos técnicos en lenguaje llano y preparar preguntas, útiles para <a href="/skills?q=datos">análisis de datos</a> y para <a href="/profesiones/freelancers">profesionales independientes</a>.',
     'body' => <<<'HTML'
 <p>Los resultados de la analítica suelen llegar a la aplicación del centro de salud o del laboratorio antes que la cita con el médico, y entre medias hay días de mirar asteriscos y siglas sin entender nada. Pegar el informe en ChatGPT, Gemini o Claude se ha vuelto lo normal. Bien usado, ayuda mucho: te explica qué es cada cosa y llegas a la consulta con preguntas mejores. Mal usado, te asusta sin motivo o, peor, te tranquiliza cuando no debe. Esta guía explica cómo hacerlo con cabeza.</p>
 

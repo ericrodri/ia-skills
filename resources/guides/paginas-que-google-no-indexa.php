@@ -30,7 +30,7 @@ return [
         '¿El sitemap hace que se indexe?' => 'No. El sitemap ayuda a descubrir URLs, que es el primer paso y no el último: una página puede estar en el sitemap y quedarse en «Descubierta» indefinidamente. Es útil que esté limpio —solo URLs indexables, con respuesta 200, canónicas de sí mismas—, porque un sitemap lleno de redirecciones y de páginas con noindex gasta credibilidad. Pero la indexación se gana con enlaces y con contenido que merezca estar.',
     ],
     'ctaTitle' => 'Prompts de auditoría y diagnóstico listos para usar',
-    'ctaBody' => 'Revisar exportaciones de Search Console y priorizar arreglos: <a href="/profesiones/analisis-de-datos">Análisis de datos</a>. Para tocar redirecciones, robots y renderizado sin romper nada: <a href="/profesiones/desarrollo">Desarrollo</a>.',
+    'ctaBody' => 'Revisar exportaciones de Search Console y priorizar arreglos: <a href="/skills?q=datos">Análisis de datos</a>. Para tocar redirecciones, robots y renderizado sin romper nada: <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>Es la situación más frustrante del SEO porque no hay nada que optimizar: la página simplemente no existe para Google. Y el informe que debería explicarlo usa etiquetas que parecen un diagnóstico cuando en realidad son una descripción. Esto es lo que significa cada una y qué se arregla en cada caso.</p>
 
