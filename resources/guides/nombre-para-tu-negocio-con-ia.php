@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 8,
-    'words' => 1246,
+    'words' => 1272,
     'about' => 'Búsqueda de nombres para empresas, marcas y productos con asistentes de inteligencia artificial y comprobación de disponibilidad',
-    'related' => ['crear-un-logo-con-ia', 'plan-de-negocio-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'posicionar-una-web-nueva-en-google', 'seo-local-con-ia'],
+    'related' => ['crear-un-logo-con-ia', 'nombre-para-un-bebe-con-ia', 'plan-de-negocio-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'posicionar-una-web-nueva-en-google', 'seo-local-con-ia'],
     'toc' => [
         'antes-de-pedir' => 'Antes de pedir nombres',
         'el-prompt' => 'El prompt para generar ideas',
@@ -90,6 +90,6 @@ return [
 
 <p>Para un negocio local, la palabra del servicio puede ir en la ficha de Google Business Profile como descripción, sin necesidad de forzarla en el nombre. En <a href="/guias/seo-local-con-ia">SEO local con IA</a> tienes cómo trabajar esa ficha, y en <a href="/guias/posicionar-una-web-nueva-en-google">posicionar una web nueva en Google</a>, los primeros pasos cuando el dominio ya es tuyo.</p>
 
-<p>Con el nombre decidido, el siguiente paso es la imagen: en <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a> se explica cómo pasar de un nombre a un logotipo que puedas usar en la web, las redes y las facturas.</p>
+<p>Con el nombre decidido, el siguiente paso es la imagen: en <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a> se explica cómo pasar de un nombre a un logotipo que puedas usar en la web, las redes y las facturas. Y si el nombre que te toca buscar es el de un hijo, el método es parecido: lo cuenta <a href="/guias/nombre-para-un-bebe-con-ia">elegir nombre para tu bebé con IA</a>.</p>
 HTML,
 ];

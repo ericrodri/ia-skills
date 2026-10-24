@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-23',
     'updated' => '2026-10-23',
-    'readingMinutes' => 8,
-    'words' => 1374,
+    'readingMinutes' => 9,
+    'words' => 1406,
     'about' => 'Lectura e interpretación de la nómina española (devengos, deducciones, cotizaciones e IRPF) con ayuda de asistentes de inteligencia artificial',
-    'related' => ['presupuesto-personal-y-ahorro-con-ia', 'carta-de-baja-voluntaria-con-ia', 'revisar-un-contrato-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'escribir-una-reclamacion-con-ia', 'alucinaciones-de-la-ia'],
+    'related' => ['pedir-un-aumento-de-sueldo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'carta-de-baja-voluntaria-con-ia', 'revisar-un-contrato-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'escribir-una-reclamacion-con-ia', 'alucinaciones-de-la-ia'],
     'toc' => [
         'partes' => 'Las cuatro partes de una nómina',
         'datos' => 'Qué quitar antes de pegarla',
@@ -102,6 +102,6 @@ return [
     <li><strong>Las conclusiones legales</strong>: «te están pagando por debajo de convenio» es una afirmación que debe confirmar un profesional. Por qué la IA a veces cita normas o cifras inexistentes está explicado en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</li>
 </ul>
 
-<p>Usada así, como un compañero que sabe leer nóminas y te ayuda a preparar las preguntas, la IA convierte un papel incomprensible en algo que puedes revisar en diez minutos al mes. Y si estás pensando en cambiar de trabajo, entender tu nómina actual es el primer paso para comparar ofertas; cuando llegue el momento, la guía de la <a href="/guias/carta-de-baja-voluntaria-con-ia">carta de baja voluntaria</a> explica el preaviso y qué debe incluir el finiquito, y la de <a href="/guias/revisar-un-contrato-con-ia">revisar un contrato con IA</a> sirve para leer el nuevo antes de firmar.</p>
+<p>Usada así, como un compañero que sabe leer nóminas y te ayuda a preparar las preguntas, la IA convierte un papel incomprensible en algo que puedes revisar en diez minutos al mes. Si al revisarla concluyes que cobras menos de lo que vale tu trabajo, la guía para <a href="/guias/pedir-un-aumento-de-sueldo-con-ia">pedir un aumento de sueldo con IA</a> te ayuda a preparar la cifra y la conversación. Y si estás pensando en cambiar de trabajo, entender tu nómina actual es el primer paso para comparar ofertas; cuando llegue el momento, la guía de la <a href="/guias/carta-de-baja-voluntaria-con-ia">carta de baja voluntaria</a> explica el preaviso y qué debe incluir el finiquito, y la de <a href="/guias/revisar-un-contrato-con-ia">revisar un contrato con IA</a> sirve para leer el nuevo antes de firmar.</p>
 HTML,
 ];

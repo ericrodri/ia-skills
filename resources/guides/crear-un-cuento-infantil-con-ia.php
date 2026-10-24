@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-10',
     'updated' => '2026-10-10',
     'readingMinutes' => 7,
-    'words' => 1130,
+    'words' => 1146,
     'about' => 'Creación de cuentos infantiles personalizados, con texto e ilustraciones, usando herramientas de inteligencia artificial',
-    'related' => ['crear-un-comic-con-ia', 'dibujos-para-colorear-con-ia', 'escribir-un-libro-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis'],
+    'related' => ['crear-un-comic-con-ia', 'nombre-para-un-bebe-con-ia', 'dibujos-para-colorear-con-ia', 'escribir-un-libro-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-lo-hace-especial' => 'Qué hace especial un cuento',
         'segun-la-edad' => 'Extensión y lenguaje según la edad',
@@ -91,6 +91,6 @@ return [
 
 <p>Muchas aplicaciones ofrecen convertir una foto de tu hijo en el protagonista. Antes de subirla, piensa que es la cara de un menor en el servidor de una empresa. La alternativa funciona igual de bien: describe al niño con palabras (pelo rizado, gafas rojas, siempre con su conejo de peluche). Saldrá un personaje que él reconocerá como suyo, sin dejar su foto en ningún sitio.</p>
 
-<p>La prueba final es leérselo. Si al terminar dice «otra vez», el cuento está bien hecho. Y si quiere más, convierte cada escena en una lámina para pintar: lo explica <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>.</p>
+<p>La prueba final es leérselo. Si al terminar dice «otra vez», el cuento está bien hecho. Y si quiere más, convierte cada escena en una lámina para pintar: lo explica <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>. Si el protagonista aún está en camino, también puedes usar la IA para <a href="/guias/nombre-para-un-bebe-con-ia">elegir su nombre</a>.</p>
 HTML,
 ];

@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-03',
     'updated' => '2026-10-03',
     'readingMinutes' => 7,
-    'words' => 1200,
+    'words' => 1224,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['quitar-el-fondo-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -82,7 +82,7 @@ return [
 
 <blockquote>«Pon este producto sobre fondo blanco puro, con una sombra suave debajo. No cambies el color, la forma ni la etiqueta del producto.»</blockquote>
 
-<p>La última frase es clave: la IA tiende a «embellecer», y un producto que en la foto parece distinto al que llega a casa genera devoluciones y reclamaciones. Para fotos de ambiente (el producto en una cocina, en una mesa de oficina), puedes generar el fondo, pero el producto debe seguir siendo el real. Cómo aprovechar después esas imágenes para posicionar está en <a href="/guias/seo-para-tiendas-online">SEO para tiendas online</a>, y para adaptarlas a cada red, en <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a>.</p>
+<p>La última frase es clave: la IA tiende a «embellecer», y un producto que en la foto parece distinto al que llega a casa genera devoluciones y reclamaciones. Para fotos de ambiente (el producto en una cocina, en una mesa de oficina), puedes generar el fondo, pero el producto debe seguir siendo el real. Si solo necesitas aislarlo sobre blanco o transparente, un recortador conserva la foto original; lo explica <a href="/guias/quitar-el-fondo-de-una-foto-con-ia">quitar el fondo de una foto con IA</a>. Cómo aprovechar después esas imágenes para posicionar está en <a href="/guias/seo-para-tiendas-online">SEO para tiendas online</a>, y para adaptarlas a cada red, en <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a>.</p>
 
 <h2 id="limites">Límites: lo que no deberías editar</h2>
 

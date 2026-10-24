@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-15',
     'updated' => '2026-10-16',
     'readingMinutes' => 7,
-    'words' => 1172,
+    'words' => 1185,
     'about' => 'Creación de stickers para aplicaciones de mensajería con generadores de imágenes de inteligencia artificial',
-    'related' => ['dibujos-para-colorear-con-ia', 'disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
+    'related' => ['quitar-el-fondo-de-una-foto-con-ia', 'dibujos-para-colorear-con-ia', 'disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
     'toc' => [
         'opciones' => 'Tres formas de hacerlo',
         'prompt' => 'El prompt de un buen sticker',
@@ -37,7 +37,7 @@ return [
 
 <ul>
     <li><strong>Dentro de WhatsApp</strong>. En el panel de stickers hay una opción para crear uno a partir de una foto: recorta el sujeto automáticamente y te deja añadir texto. En algunos países e idiomas, <a href="/guias/meta-ai-en-whatsapp">Meta AI</a> también genera stickers a partir de una descripción. Es lo más rápido, pero el estilo es limitado.</li>
-    <li><strong>Con un generador de imágenes</strong> como ChatGPT, Gemini, Copilot o Midjourney. Tienes control total del estilo y puedes crear un personaje coherente. Luego hay que quitar el fondo y pasarlo al móvil.</li>
+    <li><strong>Con un generador de imágenes</strong> como ChatGPT, Gemini, Copilot o Midjourney. Tienes control total del estilo y puedes crear un personaje coherente. Luego hay que quitar el fondo (en <a href="/guias/quitar-el-fondo-de-una-foto-con-ia">quitar el fondo de una foto con IA</a> están las opciones gratuitas) y pasarlo al móvil.</li>
     <li><strong>Con una aplicación de paquetes</strong>. Hay aplicaciones gratuitas para Android y iPhone que reciben tus imágenes, quitan el fondo, ajustan el tamaño y crean un paquete que se añade a WhatsApp de una vez.</li>
 </ul>
 
