@@ -33,7 +33,7 @@ class ProfessionController extends Controller
             'canonical' => route('professions.index'),
             'fallback' => [
                 'heading' => 'Prompts y skills de IA por profesión',
-                'paragraphs' => ['Elige tu profesión para ver los prompts y skills de IA que la comunidad ha votado como más útiles.'],
+                'paragraphs' => ['Elige tu profesión para ver los prompts y skills de IA pensados para tu trabajo.'],
                 'links' => $professions->mapWithKeys(fn (Profession $p) => [
                     "Prompts de IA para {$p->name} ({$p->skills_count})" => route('professions.show', ['profession' => $p->slug]),
                 ])->all(),
@@ -102,7 +102,7 @@ class ProfessionController extends Controller
 
         Seo::share([
             'title' => $title,
-            'description' => "{$total} prompts y skills de IA para {$profession->name}, ordenados por los votos de la comunidad. Copia, personaliza y ejecuta en Claude, ChatGPT o Gemini.",
+            'description' => "{$total} prompts y skills de IA para {$profession->name}. Copia, personaliza y ejecuta en Claude, ChatGPT o Gemini.",
             // Una búsqueda es una vista filtrada de esta misma página, no una
             // URL propia: su canónica apunta al listado limpio.
             'canonical' => $search === '' && $page > 1 ? $url.'?page='.$page : $url,

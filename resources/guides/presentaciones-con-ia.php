@@ -33,7 +33,7 @@ return [
         '¿Se nota si la presentación la ha hecho una IA?' => 'Se nota el contenido genérico, no la herramienta. Nadie distingue una diapositiva bien maquetada por Copilot de una hecha a mano, pero cualquiera detecta una presentación que no dice nada concreto sobre su empresa, con titulares que son categorías («Resultados», «Próximos pasos») en vez de afirmaciones. La prueba rápida: lee solo los titulares en orden. Si no cuentan la historia completa, ninguna cantidad de diseño lo va a arreglar.',
     ],
     'ctaTitle' => 'Prompts de presentación que ya usa gente',
-    'ctaBody' => 'El comité mensual, la propuesta a cliente y la demo de producto son presentaciones repetidas, así que merecen un prompt fijo en lugar de improvisarse cada vez. Hay material votado por quien lo usa en <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/product-management">Product Management</a>.',
+    'ctaBody' => 'El comité mensual, la propuesta a cliente y la demo de producto son presentaciones repetidas, así que merecen un prompt fijo en lugar de improvisarse cada vez. Hay material listo para usar en <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/product-management">Product Management</a>.',
     'body' => <<<'HTML'
 <p>Escribes una frase, esperas veinte segundos y tienes dieciocho diapositivas maquetadas, con iconos, con jerarquía tipográfica y sin una sola errata. Es la demostración más vistosa que tiene la IA generativa hoy, y también la que produce más presentaciones que nadie recuerda al día siguiente.</p>
 

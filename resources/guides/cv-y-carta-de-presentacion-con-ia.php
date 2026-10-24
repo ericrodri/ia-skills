@@ -34,7 +34,7 @@ return [
         '¿Puedo pegar mi currículum en ChatGPT? ¿Y la oferta?' => 'La oferta no tiene ningún problema, es pública. Tu CV lleva datos personales: nombre, teléfono, dirección, historial laboral completo. Lo prudente es quitar los datos de contacto antes de pegarlo, que además no aportan nada a la tarea, y desactivar el uso de tus conversaciones para entrenamiento en los ajustes de la herramienta. Y si estás buscando trabajo mientras trabajas en otro sitio, no lo hagas nunca desde la cuenta corporativa de tu empresa actual.',
     ],
     'ctaTitle' => 'Prompts de candidatura por profesión',
-    'ctaBody' => 'Cada sector valora cosas distintas en un CV, así que los prompts que funcionan también cambian. Hay material votado por quien lo usa en <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/desarrollo">Desarrollo</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
+    'ctaBody' => 'Cada sector valora cosas distintas en un CV, así que los prompts que funcionan también cambian. Hay material listo para usar en <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/desarrollo">Desarrollo</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
     'body' => <<<'HTML'
 <p>El uso más extendido de la IA para buscar trabajo es también el que peor funciona: pedirle un currículum. Devuelve uno correcto, ordenado, sin erratas y absolutamente idéntico al que le devuelve a las otras cuatrocientas personas que le han pedido lo mismo para ese puesto.</p>
 

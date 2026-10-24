@@ -30,7 +30,7 @@ return [
         '¿Se puede recuperar el tráfico de Discover tras una caída?' => 'A veces vuelve solo, porque el feed es volátil por naturaleza. Si la caída coincide con un update y no se recupera en semanas, la vía es la misma que en la búsqueda: menos piezas recicladas, más contenido original de los temas en los que la web tiene experiencia demostrada, y títulos que prometan lo que la página cumple.',
     ],
     'ctaTitle' => 'Prompts para planificar contenido de actualidad',
-    'ctaBody' => 'Detectar temas con tirón, proponer ángulos originales o revisar que un titular no sea clickbait: en <a href="/profesiones/marketing">Marketing</a> están los prompts de contenido y SEO mejor valorados.',
+    'ctaBody' => 'Detectar temas con tirón, proponer ángulos originales o revisar que un titular no sea clickbait: en <a href="/profesiones/marketing">Marketing</a> están los prompts de contenido y SEO.',
     'body' => <<<'HTML'
 <p>Google Discover es el feed de artículos que aparece en la aplicación de Google y en la página de inicio de Google en el móvil. Nadie busca nada: Google decide qué enseñar a cada persona según lo que sabe de sus intereses. Para muchos medios es la primera fuente de tráfico, y para casi todos es la más imprevisible.</p>
 

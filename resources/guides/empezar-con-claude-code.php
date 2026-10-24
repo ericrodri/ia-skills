@@ -33,7 +33,7 @@ return [
         '¿Se lleva mi código a algún sitio?' => 'Envía el contexto que necesita para responder: los archivos que lee y los resultados de los comandos que ejecuta, igual que cualquier asistente en la nube. No sube el repositorio entero. Si trabajas con código sujeto a acuerdos de confidencialidad, la conversación que toca tener es con quien firma esos acuerdos, y lo razonable es dejarlo escrito en la política interna antes de instalarlo en veinte portátiles.',
     ],
     'ctaTitle' => 'Lo primero que merece la pena instalar después',
-    'ctaBody' => 'Un Claude Code recién instalado sabe de tu proyecto lo que lee. Los skills son la forma de darle procedimientos que no tenga que reinventar cada vez: mira los mejor valorados en <a href="/profesiones/desarrollo">Desarrollo</a>, o los de tu área si no escribes código.',
+    'ctaBody' => 'Un Claude Code recién instalado sabe de tu proyecto lo que lee. Los skills son la forma de darle procedimientos que no tenga que reinventar cada vez: mira los de <a href="/profesiones/desarrollo">Desarrollo</a>, o los de tu área si no escribes código.',
     'body' => <<<'HTML'
 <p>Claude Code es un agente que trabaja desde la terminal sobre los archivos de tu proyecto: lee lo que necesita, propone cambios, ejecuta comandos y lanza los tests. La instalación son dos minutos. Lo que decide si a la semana sigues usándolo es otra cosa: el orden en que aprendes a darle contexto, a acotarle el permiso y a dejarle las instrucciones por escrito.</p>
 

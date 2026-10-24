@@ -29,7 +29,7 @@ return [
         '¿Se pueden compartir skills con el equipo?' => 'Sí, y es donde más valor tienen. Si el skill vive en el repositorio del proyecto, cualquiera que lo clone lo tiene disponible. Es la forma más barata de que una convención interna deje de depender de que alguien la recuerde.',
     ],
     'ctaTitle' => 'Skills listos para instalar',
-    'ctaBody' => 'En el catálogo hay skills y prompts ya escritos y votados por quien los usa a diario. Empieza por la categoría de <a href="/profesiones/desarrollo">Desarrollo</a> si trabajas con código, o por <a href="/profesiones/marketing">Marketing</a> si tu día son campañas y contenido.',
+    'ctaBody' => 'En el catálogo hay skills y prompts ya escritos, listos para instalar. Empieza por la categoría de <a href="/profesiones/desarrollo">Desarrollo</a> si trabajas con código, o por <a href="/profesiones/marketing">Marketing</a> si tu día son campañas y contenido.',
     'body' => <<<'HTML'
 <p>Si llevas unos meses usando IA para trabajar, probablemente tengas un documento —o una nota, o un chat marcado como favorito— donde guardas los prompts que sí funcionan. El de resumir reuniones. El de revisar código. El que te escribe la descripción de una vacante sin que suene a plantilla de 2015.</p>
 

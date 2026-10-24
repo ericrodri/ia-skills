@@ -32,7 +32,7 @@ return [
         '¿Cuánto tiempo hay que guardar las grabaciones?' => 'El menos posible, y decidido de antemano. La grabación en bruto casi nunca hace falta una vez tienes el acta aprobada: fija un plazo corto —dos o cuatro semanas— para el audio y la transcripción completa, y conserva solo el acta, que es el documento con valor. El problema de dejarlo por defecto es que las plataformas guardan indefinidamente, y a los dos años tienes un archivo con miles de conversaciones sobre personas que nadie puede justificar si alguien pregunta.',
     ],
     'ctaTitle' => 'Prompts de reunión que ya usa gente',
-    'ctaBody' => 'El acta, el seguimiento y el correo posterior son tareas repetidas, y por tanto candidatas a tener un prompt fijo. Hay material votado por quien lo usa en <a href="/profesiones/product-management">Product Management</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/rrhh">RRHH</a>.',
+    'ctaBody' => 'El acta, el seguimiento y el correo posterior son tareas repetidas, y por tanto candidatas a tener un prompt fijo. Hay material listo para usar en <a href="/profesiones/product-management">Product Management</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/rrhh">RRHH</a>.',
     'body' => <<<'HTML'
 <p>Casi todo el mundo que ha probado un asistente de reuniones ha pasado por la misma secuencia: asombro las dos primeras semanas, y luego una carpeta de correos sin abrir con resúmenes que nadie lee. La transcripción funciona. El resumen, no tanto. Y el motivo es concreto y arreglable.</p>
 

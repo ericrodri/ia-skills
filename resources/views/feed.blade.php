@@ -3,7 +3,7 @@
     <channel>
         <title>ia-skills — últimas skills y prompts de IA</title>
         <link>{{ route('skills.index') }}</link>
-        <description>Las skills y prompts de IA más recientes publicados por la comunidad de ia-skills, organizados por profesión.</description>
+        <description>Las skills y prompts de IA más recientes publicados en ia-skills, organizados por profesión.</description>
         <language>es-es</language>
         <lastBuildDate>{{ $items[0]['published'] ?? now()->toRssString() }}</lastBuildDate>
         <atom:link href="{{ route('feed') }}" rel="self" type="application/rss+xml" />

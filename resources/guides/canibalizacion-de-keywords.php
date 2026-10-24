@@ -29,7 +29,7 @@ return [
         '¿Y si las dos páginas posicionan bien?' => 'Entonces no lo toques. La regla práctica es intervenir solo cuando hay un perjuicio medible: alternancia, una posición estancada en la segunda página o tráfico que llega a la página que no convierte. Fusionar dos páginas que funcionan es una forma habitual de perder tráfico por arreglar algo que no estaba roto.',
         '¿Cada cuánto conviene revisarlo?' => 'Una vez por trimestre en un sitio que publica poco, y cada mes si publicas varias piezas a la semana o tienes un catálogo con filtros que generan URLs. También conviene revisarlo justo después de cerrar un cluster de contenido, que es el momento en el que más se produce.',
     ],
-    'ctaTitle' => 'Prompts de auditoría de contenidos votados por profesionales',
+    'ctaTitle' => 'Prompts de auditoría de contenidos listos para usar',
     'ctaBody' => 'Inventarios de contenido, criterios de fusión y redacción de reemplazos: <a href="/profesiones/marketing">Marketing</a>. Para cruzar datos de Search Console a escala, mira <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>Es uno de los problemas de SEO más comunes y de los peor explicados. La versión que circula —«Google se confunde y te castiga»— no describe lo que pasa, y lleva a arreglar cosas que no están rotas y a dejar sin tocar las que sí.</p>

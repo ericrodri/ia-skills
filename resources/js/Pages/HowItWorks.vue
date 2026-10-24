@@ -162,7 +162,7 @@ const faqItems = [
     },
     {
         q: '¿Para qué sirven las skills de inteligencia artificial?',
-        a: 'Las skills de IA sirven para automatizar y acelerar tareas profesionales repetitivas: generación de contenido, análisis de documentos, escritura de código, investigación de mercado, atención al cliente y mucho más. En lugar de escribir instrucciones desde cero cada vez, usas una skill ya validada por la comunidad que produce resultados de alta calidad de forma consistente.',
+        a: 'Las skills de IA sirven para automatizar y acelerar tareas profesionales repetitivas: generación de contenido, análisis de documentos, escritura de código, investigación de mercado, atención al cliente y mucho más. En lugar de escribir instrucciones desde cero cada vez, usas una skill ya escrita que produce resultados de alta calidad de forma consistente.',
     },
     {
         q: '¿Qué herramientas de IA puedo usar con estas skills?',

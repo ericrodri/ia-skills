@@ -30,7 +30,7 @@ return [
         '¿Se puede recuperar la confianza después de publicar contenido malo a escala?' => 'Sí, y el orden importa. Primero se quita o se reescribe lo que no aporta nada, en lugar de seguir publicando encima. Después se refuerza lo que sí tiene sustancia con datos propios y firma real. Los sistemas evalúan el sitio en conjunto, así que un montón de páginas vacías arrastra también a las buenas: podar suele mover más que publicar.',
     ],
     'ctaTitle' => 'Prompts de redacción que no borran tu criterio',
-    'ctaBody' => 'Flujos de escritura donde la IA ordena y tú aportas la experiencia, votados por quien publica a diario: <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
+    'ctaBody' => 'Flujos de escritura donde la IA ordena y tú aportas la experiencia, listos para usar: <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
     'body' => <<<'HTML'
 <p>Hay una pregunta que aparece en cada reunión de contenidos desde hace dos años: «¿nos va a penalizar Google por usar IA?». La respuesta corta es que no, y la larga es más incómoda: no penaliza la herramienta, pero sí el resultado típico de usarla mal, que es un texto correcto donde no hay nadie detrás.</p>
 

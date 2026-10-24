@@ -33,7 +33,7 @@ return [
         '¿Cuál es la multa por incumplir el artículo 50?' => 'Hasta 15 millones de euros o el 3 % del volumen de negocio mundial anual, la cifra que sea mayor. Para las prácticas prohibidas del artículo 5 la horquilla sube a 35 millones o el 7 %, y facilitar información incorrecta a las autoridades se queda en 7,5 millones o el 1 %. Para pymes y empresas emergentes se aplica la menor de las dos cifras en lugar de la mayor, y la autoridad debe ponderar gravedad, duración, cooperación y si el incumplimiento fue intencionado.',
     ],
     'ctaTitle' => 'La formación se sostiene mejor con material propio',
-    'ctaBody' => 'La forma más barata de alfabetizar a un equipo es darle prompts que ya funcionan en su oficio y explicarle por qué funcionan. En el catálogo hay material votado por quien lo usa a diario en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/finanzas">Finanzas</a> y siete profesiones más.',
+    'ctaBody' => 'La forma más barata de alfabetizar a un equipo es darle prompts que ya funcionan en su oficio y explicarle por qué funcionan. En el catálogo hay material listo para usar en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/finanzas">Finanzas</a> y siete profesiones más.',
     'body' => <<<'HTML'
 <p>Hay una lectura muy extendida del Reglamento Europeo de Inteligencia Artificial que dice, más o menos, que es un problema de las grandes tecnológicas. Es cómoda y es falsa. El texto reparte obligaciones por el papel que juegas, no por tu tamaño, y el papel de casi todas las empresas españolas —«usamos herramientas de IA que ha hecho otro»— tiene deberes propios desde febrero de 2025.</p>
 

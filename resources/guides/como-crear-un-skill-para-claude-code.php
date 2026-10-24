@@ -27,10 +27,10 @@ return [
         '¿Cuánto debe medir un skill?' => 'Lo más corto que siga siendo inequívoco. Entre 30 y 150 líneas cubre la mayoría de casos. Si te sale mucho más largo, normalmente es que estás juntando dos tareas distintas y conviene partirlo en dos skills.',
         '¿Puedo incluir archivos de apoyo?' => 'Sí. Cualquier archivo que pongas en la carpeta del skill puede referenciarse desde el SKILL.md: una plantilla, un ejemplo de salida, una lista de criterios larga. Es la forma de no inflar las instrucciones principales.',
         '¿Cómo sé si mi skill se está activando?' => 'Pídele algo con las palabras que usarías normalmente y comprueba si el resultado sigue el procedimiento que escribiste. Si no lo sigue, el problema casi siempre está en la descripción, no en las instrucciones.',
-        '¿Puedo publicar mi skill para que lo usen otros?' => 'Sí. Puedes subirlo a un repositorio público o compartirlo en ia-skills, donde otros profesionales lo votan y comentan. Los skills mejor valorados son los que llevan puestos meses de uso real, no los recién escritos.',
+        '¿Puedo publicar mi skill para que lo usen otros?' => 'Sí. Puedes subirlo a un repositorio público o compartirlo en ia-skills, donde otros pueden encontrarlo, comentarlo e instalarlo.',
     ],
     'ctaTitle' => 'No empieces de cero',
-    'ctaBody' => 'Antes de escribir el tuyo, mira si alguien ya resolvió esa tarea. Hay skills y prompts para todas las profesiones, con el prompt completo a la vista y ordenados por lo útiles que le han parecido a quien los usó.',
+    'ctaBody' => 'Antes de escribir el tuyo, mira si alguien ya resolvió esa tarea. Hay skills y prompts para todas las profesiones, con el prompt completo a la vista.',
     'body' => <<<'HTML'
 <p>Escribir un skill lleva diez minutos. Escribir un skill que se active cuando lo necesitas y produzca siempre el mismo tipo de resultado lleva dos o tres iteraciones. Esta guía va sobre lo segundo.</p>
 

@@ -33,7 +33,7 @@ return [
         '¿Merece la pena pedirle a la IA que genere macros o Apps Script?' => 'Merece la pena y es donde el ahorro es más grande, con una precaución: pruébalo siempre sobre una copia. Una fórmula equivocada da un resultado raro que ves; una macro equivocada reescribe cien celdas sin preguntar y el deshacer no siempre alcanza. Pide el código, léelo por encima buscando cualquier instrucción que borre o sobrescriba, ejecútalo en un duplicado del archivo y compara.',
     ],
     'ctaTitle' => 'Prompts de hoja de cálculo ya escritos',
-    'ctaBody' => 'En el catálogo hay prompts probados para conciliaciones, informes y limpieza de datos en <a href="/profesiones/finanzas">Finanzas</a>, <a href="/profesiones/marketing">Marketing</a> y <a href="/profesiones/product-management">Product Management</a>, ordenados por los votos de quien los usa cada semana.',
+    'ctaBody' => 'En el catálogo hay prompts probados para conciliaciones, informes y limpieza de datos en <a href="/profesiones/finanzas">Finanzas</a>, <a href="/profesiones/marketing">Marketing</a> y <a href="/profesiones/product-management">Product Management</a>.',
     'body' => <<<'HTML'
 <p>Hay una forma de usar la IA en una hoja de cálculo que funciona muy bien y otra que produce números falsos con una convicción alarmante. La diferencia no está en la herramienta ni en el prompt: está en quién hace la aritmética.</p>
 

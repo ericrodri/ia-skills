@@ -29,7 +29,7 @@ return [
         '¿Hay que hacer investigación aparte para ChatGPT y Perplexity?' => 'No una investigación aparte, sí una capa más. Las consultas que la gente escribe en un asistente son más largas, más específicas y con más contexto personal que las que teclea en un buscador. La forma barata de cubrirlas es convertir cada racimo en las preguntas literales que alguien haría en una conversación y asegurarte de que tu contenido las responde en la primera frase del apartado correspondiente.',
         '¿Cuánto tarda este flujo?' => 'Para un sitio mediano, entre cuatro y seis horas repartidas: una para exportar y limpiar datos, dos para la clasificación asistida, una para revisar a mano lo que el modelo ha puesto en la casilla equivocada y otra para convertirlo en calendario. Hecho a mano, el mismo trabajo son dos o tres días, y la parte que se ahorra es precisamente la más mecánica.',
     ],
-    'ctaTitle' => 'Prompts de SEO listos, votados por quien vive de esto',
+    'ctaTitle' => 'Prompts de SEO listos para usar',
     'ctaBody' => 'Los prompts de clasificación por intención, auditoría de cobertura y briefing de contenido están en <a href="/profesiones/marketing">Marketing</a>. Si además llevas la parte de datos o de implementación, mira <a href="/profesiones/desarrollo">Desarrollo</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
     'body' => <<<'HTML'
 <p>La investigación de palabras clave se ha partido en dos trabajos que antes iban juntos. Uno es conseguir datos fiables de demanda, que sigue necesitando herramientas con datos reales. El otro es dar sentido a esos datos —agrupar, clasificar, priorizar, detectar lo que falta— y ese, que era el que se comía los días, se delega bien.</p>

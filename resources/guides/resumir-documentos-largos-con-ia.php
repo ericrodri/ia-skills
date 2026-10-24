@@ -34,7 +34,7 @@ return [
         '¿Qué documentos no debería subir a una IA?' => 'Los que llevan datos personales de terceros que no puedes tratar en esa herramienta, y los que están bajo obligación de confidencialidad ajena: expedientes de personal, historiales, propuestas no firmadas de otra empresa, documentación de un cliente que no autorizó ese tratamiento. La pregunta práctica no es si el documento es sensible, sino si la herramienta que vas a usar está aprobada para esa categoría de dato. Está desarrollado en la guía sobre usar IA sin filtrar datos de clientes.',
     ],
     'ctaTitle' => 'Prompts de lectura y análisis que ya usa gente',
-    'ctaBody' => 'Leer documentos ajenos con criterio es la tarea repetida de media empresa, y por tanto candidata a tener un prompt fijo. Hay material votado por quien lo usa en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/finanzas">Finanzas</a> y <a href="/profesiones/product-management">Product Management</a>.',
+    'ctaBody' => 'Leer documentos ajenos con criterio es la tarea repetida de media empresa, y por tanto candidata a tener un prompt fijo. Hay material listo para usar en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/finanzas">Finanzas</a> y <a href="/profesiones/product-management">Product Management</a>.',
     'body' => <<<'HTML'
 <p>Subes un PDF de doscientas páginas, pides un resumen y en veinte segundos tienes página y media que se lee bien, ordena el documento y no contiene ni una frase falsa. Es la demostración que convence a cualquiera, y también el sitio exacto donde empieza el problema.</p>
 

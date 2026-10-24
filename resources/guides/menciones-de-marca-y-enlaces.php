@@ -28,7 +28,7 @@ return [
         '¿Cuánto tarda en notarse?' => 'Más que en SEO clásico. Los modelos combinan datos de entrenamiento con recuperación en tiempo real, así que una mención nueva puede aparecer en una respuesta con búsqueda en la misma semana y tardar mucho más en formar parte de lo que el modelo «sabe» sin buscar. Por eso la medición útil es de tendencia trimestral, no de comprobaciones sueltas.',
         '¿Sirve poner el nombre de la marca muchas veces en mi propia web?' => 'No. Lo que se mide son las menciones en sitios de terceros, que es justo lo que no controlas y por eso significa algo. Repetir el nombre en tus propias páginas no cambia ninguna de las señales del estudio y sí empeora el texto. En tu web, lo que sí ayuda es que la información sobre quién eres sea consistente y esté marcada; eso está en la guía de datos estructurados.',
     ],
-    'ctaTitle' => 'Prompts de contenido y relaciones públicas votados por profesionales',
+    'ctaTitle' => 'Prompts de contenido y relaciones públicas listos para usar',
     'ctaBody' => 'Investigación de medios, preparación de fuentes y briefings de contenido citable: <a href="/profesiones/marketing">Marketing</a>. Para la parte de datos y medición, mira <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>En 2026 hay un dato que se repite en todas las presentaciones sobre visibilidad en IA: las menciones de marca pesan tres veces más que los enlaces. Se cita mucho y se lee poco. Conviene mirarlo entero, porque el dato es real, el titular es una simplificación y lo que hay que hacer con él no es exactamente lo que se suele concluir.</p>

@@ -30,7 +30,7 @@ return [
         '¿El Modo IA va a sustituir a la búsqueda normal?' => 'De momento convive con ella: es una pestaña opcional y la mayoría de las búsquedas siguen pasando por los resultados de siempre, a menudo con un AI Overview encima. Lo razonable es tratarlo como un canal más que crece, y medirlo, no como el fin del tráfico orgánico.',
     ],
     'ctaTitle' => 'Prompts para preparar contenido que se cite',
-    'ctaBody' => 'Auditar qué preguntas cubre una página, reescribir secciones para que respondan solas o comprobar en qué respuestas apareces: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido mejor valorados.',
+    'ctaBody' => 'Auditar qué preguntas cubre una página, reescribir secciones para que respondan solas o comprobar en qué respuestas apareces: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido.',
     'body' => <<<'HTML'
 <p>El Modo IA es la respuesta de Google a ChatGPT y Perplexity dentro del propio buscador. Escribes una pregunta larga, Google responde con un texto generado y enlaces a las fuentes, y puedes seguir preguntando sobre lo mismo. No hay diez resultados azules, o no como protagonistas.</p>
 

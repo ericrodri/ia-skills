@@ -35,7 +35,7 @@ return [
         '¿El error es del modelo o de quien lo usa?' => 'Del reparto de tareas, que es una decisión humana. El modelo hace bien lo que es reversible y verificable —redactar, reformular, estructurar, proponer— y hace mal lo que exige saber si algo es cierto. Cuando alguien le encarga lo segundo, el resultado sale mal aunque el prompt sea impecable. Ahí es donde la elección de herramienta importa mucho menos de lo que parece: lo que cambia el resultado es qué le pides.',
     ],
     'ctaTitle' => 'Prompts que ya han pasado por el filtro de alguien',
-    'ctaBody' => 'La mitad de estos errores desaparecen cuando reutilizas un prompt que ya funcionó en lugar de improvisar. Hay material votado por quien lo usa en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/finanzas">Finanzas</a> y <a href="/profesiones/marketing">Marketing</a>.',
+    'ctaBody' => 'La mitad de estos errores desaparecen cuando reutilizas un prompt que ya funcionó en lugar de improvisar. Hay material listo para usar en <a href="/profesiones/legal">Legal</a>, <a href="/profesiones/finanzas">Finanzas</a> y <a href="/profesiones/marketing">Marketing</a>.',
     'body' => <<<'HTML'
 <p>Casi todas las listas de errores al usar IA en el trabajo hablan de prompts: que sea específico, que dé contexto, que asigne un rol. Está bien y es lo de menos. Los fallos que cuestan dinero y credibilidad no vienen de escribir mal la petición, sino de encargarle al modelo una tarea en la que un error no se nota al revisar el resultado.</p>
 

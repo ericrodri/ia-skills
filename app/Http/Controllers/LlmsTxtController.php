@@ -26,7 +26,7 @@ class LlmsTxtController extends Controller
             '# ia-skills',
             '',
             '> Biblioteca colaborativa de prompts y skills de IA en español, organizados por '
-                .'profesión y ordenados por los votos de quien los usa a diario. '
+                .'profesión. '
                 .SiteData::skillsCountLabel().' recursos publicados, gratis y sin registro para consultarlos.',
             '',
             'El catálogo cubre prompts reutilizables y skills instalables (carpetas con un '

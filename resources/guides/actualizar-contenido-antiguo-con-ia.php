@@ -29,7 +29,7 @@ return [
         '¿Sirve la IA para reescribir los artículos antiguos?' => 'Sirve para las partes mecánicas: detectar datos que ya no cuadran, sacar la lista de afirmaciones que habría que verificar, proponer una estructura nueva a partir de las consultas reales que recibe la página. No sirve para la parte que da valor, que es aportar lo que ha cambiado desde que lo escribiste. Si la reescritura se limita a reformular lo mismo con otras palabras, tendrás un artículo distinto y el mismo problema.',
         '¿Qué hago con un artículo que perdió tráfico porque la consulta ya la responde la IA?' => 'Primero, comprobar que es eso: en Search Console se ve como impresiones estables con clics cayendo, no como impresiones cayendo. Si es el caso, reescribir por reescribir no lo recupera. Lo que funciona es desplazar el ángulo hacia lo que un resumen generado no puede dar —datos propios, un proceso concreto, una plantilla descargable— y aceptar que parte de ese tráfico no vuelve.',
     ],
-    'ctaTitle' => 'Prompts de auditoría de contenido votados por profesionales',
+    'ctaTitle' => 'Prompts de auditoría de contenido listos para usar',
     'ctaBody' => 'Clasificación por intención, detección de solapamientos y briefings de reescritura: <a href="/profesiones/marketing">Marketing</a>. Si además llevas la parte de redirecciones y plantillas, mira <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>Hay un momento en la vida de cualquier sitio con unos años en el que publicar deja de ser la prioridad. Tienes doscientos artículos, la mitad no recibe visitas, y cada uno que añades tarda más en despegar. En ese punto la palanca ya no es escribir más: es decidir qué hacer con lo que ya tienes.</p>

@@ -32,7 +32,7 @@ return [
         '¿Con cuál se revisa mejor lo que ha hecho la IA?' => 'Con la que te obligue a mirar. Un editor te muestra los cambios en el sitio donde vas a leerlos igualmente; un agente de terminal te los presenta como un diff y te deja aceptar en bloque, lo cual es más rápido y más peligroso. La costumbre que protege es la misma en las dos: rama aparte, árbol limpio y ningún cambio aprobado sin haberlo leído.',
     ],
     'ctaTitle' => 'La ventaja no está en la herramienta, está en lo que le das',
-    'ctaBody' => 'Las dos rinden mucho más con instrucciones y procedimientos preparados. En <a href="/profesiones/desarrollo">Desarrollo</a> tienes los prompts y skills de código mejor valorados; si además haces revisión o documentación, mira los de <a href="/profesiones/product-management">Product Management</a>.',
+    'ctaBody' => 'Las dos rinden mucho más con instrucciones y procedimientos preparados. En <a href="/profesiones/desarrollo">Desarrollo</a> tienes los prompts y skills de código; si además haces revisión o documentación, mira los de <a href="/profesiones/product-management">Product Management</a>.',
     'body' => <<<'HTML'
 <p>La comparación se plantea mal casi siempre. No son dos versiones de la misma herramienta: Claude Code es un agente que trabaja sobre un proyecto desde la terminal (y desde su app, la web o extensiones de IDE), y Cursor es un editor de código —derivado de VS Code— con la IA metida dentro del flujo de edición. Uno está pensado para delegar una tarea entera; el otro, para que escribas acompañado.</p>
 

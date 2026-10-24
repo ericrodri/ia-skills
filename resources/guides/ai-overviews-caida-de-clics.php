@@ -30,7 +30,7 @@ return [
         '¿Conviene entonces dejar de publicar contenido informativo?' => 'Conviene dejar de publicar contenido informativo que solo repite el consenso, que es justo lo que el bloque generado resume mejor que nadie. Lo que sigue trayendo clics es lo que la respuesta generada no puede contener: datos propios, herramientas, comparativas hechas de verdad, criterio de alguien que ha hecho el trabajo. El mismo material que hace que te citen.',
     ],
     'ctaTitle' => 'Prompts de SEO y analítica para el trabajo del día',
-    'ctaBody' => 'Clasificar consultas por intención, cruzar Search Console con la analítica o redactar el informe mensual son tareas que se delegan bien. En <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido mejor valorados; la parte técnica está en <a href="/profesiones/desarrollo">Desarrollo</a>.',
+    'ctaBody' => 'Clasificar consultas por intención, cruzar Search Console con la analítica o redactar el informe mensual son tareas que se delegan bien. En <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido; la parte técnica está en <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>El cuadro es siempre el mismo. Las impresiones en Search Console están igual o mejor que hace un año, la posición media no se ha movido, y los clics llevan meses cayendo. Nadie ha tocado la web y no hay ninguna penalización. Lo que hay es un bloque de respuesta generada encima de los diez resultados de siempre.</p>
 

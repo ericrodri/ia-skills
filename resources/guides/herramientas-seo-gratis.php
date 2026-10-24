@@ -30,7 +30,7 @@ return [
         '¿Qué herramienta gratuita uso para medir la velocidad?' => 'PageSpeed Insights. Da dos tipos de datos: los de laboratorio, que simulan una carga, y los de campo, que vienen de usuarios reales de Chrome. Los que cuentan para Google son los de campo. Si tu web tiene poco tráfico y no hay datos de campo, usa el informe de laboratorio como orientación.',
     ],
     'ctaTitle' => 'Prompts para sacarle más partido a tus datos de SEO',
-    'ctaBody' => 'Analizar una exportación de Search Console, agrupar búsquedas o convertir una auditoría en tareas: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO mejor valorados.',
+    'ctaBody' => 'Analizar una exportación de Search Console, agrupar búsquedas o convertir una auditoría en tareas: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO.',
     'body' => <<<'HTML'
 <p>Las listas de «las 50 mejores herramientas SEO» tienen un problema: meten en el mismo saco lo imprescindible y lo que usarás una vez. En la práctica, casi todo el SEO de una web pequeña o mediana se hace con seis o siete herramientas gratuitas. Esta guía explica cuáles son, qué hace cada una y cuándo tiene sentido empezar a pagar.</p>
 

@@ -34,7 +34,7 @@ class PageController extends Controller
                             '@type' => 'HowToStep',
                             'position' => 1,
                             'name' => 'Elige tu profesión',
-                            'text' => "Entra en la categoría de tu profesión y revisa las skills mejor valoradas por la comunidad. Hay {$count} entre las que elegir.",
+                            'text' => "Entra en la categoría de tu profesión y revisa las skills disponibles. Hay {$count} entre las que elegir.",
                             'url' => route('professions.index'),
                         ],
                         [

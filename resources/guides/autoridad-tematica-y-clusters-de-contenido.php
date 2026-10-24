@@ -30,7 +30,7 @@ return [
         '¿Puedo tener autoridad en varios temas a la vez?' => 'Sí, pero no desde el principio. Lo razonable es consolidar uno hasta que traiga tráfico estable y solo entonces abrir el siguiente, preferiblemente adyacente. Abrir cinco temas a la vez con un sitio pequeño reparte el mismo esfuerzo en cinco frentes y ninguno llega a la profundidad que hace falta. Los sitios grandes lo hacen en paralelo porque tienen equipos en paralelo.',
         '¿Sirve generar el cluster entero con IA?' => 'Para el mapa, sí: agrupar consultas por intención y detectar huecos es exactamente lo que hace bien. Para el texto, el problema no es el idioma sino que un cluster generado sin experiencia real es indistinguible de los otros veinte iguales que ya existen, y ahí no hay nada que citar. El reparto útil es IA para la estructura y para los borradores, y criterio propio para lo que solo puedes saber tú: qué falla en la práctica, cuánto cuesta, qué pasó cuando lo probaste.',
     ],
-    'ctaTitle' => 'Prompts de estrategia de contenidos votados por profesionales',
+    'ctaTitle' => 'Prompts de estrategia de contenidos listos para usar',
     'ctaBody' => 'Mapas de temas, briefings y calendarios editoriales: <a href="/profesiones/marketing">Marketing</a>. Para la parte de seguimiento y cuadros de mando, mira <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>Hay una pregunta que aparece siempre que un proyecto pequeño lleva un año publicando sin resultados: «¿escribo más o escribo mejor?». La respuesta suele ser ninguna de las dos. El problema habitual no es el volumen ni la calidad pieza a pieza, es que los cuarenta artículos publicados hablan de cuarenta cosas distintas y ninguno se apoya en otro.</p>

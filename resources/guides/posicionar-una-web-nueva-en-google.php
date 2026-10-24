@@ -30,7 +30,7 @@ return [
         '¿Sirven de algo las redes sociales para el SEO de una web nueva?' => 'No como factor de posicionamiento directo, pero sí como vía de descubrimiento: generan las primeras visitas, las primeras menciones y, a veces, los primeros enlaces. En una web sin audiencia son la forma más rápida de que alguien lea lo que publicas.',
     ],
     'ctaTitle' => 'Prompts para arrancar una web desde cero',
-    'ctaBody' => 'Buscar temas con poca competencia, planificar el primer cluster o redactar briefs de contenido: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO mejor valorados.',
+    'ctaBody' => 'Buscar temas con poca competencia, planificar el primer cluster o redactar briefs de contenido: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO.',
     'body' => <<<'HTML'
 <p>La mayoría de consejos de SEO están pensados para webs que ya tienen tráfico: optimizar lo que funciona, recuperar lo que cae. Una web nueva no tiene nada de eso. No tiene datos en Search Console, no tiene enlaces y Google no sabe de qué va. El trabajo de los primeros meses es darle esas tres cosas en el orden correcto.</p>
 

@@ -228,7 +228,7 @@ class SkillController extends Controller
         $canonical = route('skills.index');
         $robots = null;
         $title = "Explorar prompts y skills de IA: {$count} workflows por profesión";
-        $description = "Busca entre {$count} prompts y skills de IA por profesión, herramienta y dificultad. Ordenados por los votos de la comunidad y listos para copiar.";
+        $description = "Busca entre {$count} prompts y skills de IA por profesión, herramienta y dificultad, listos para copiar.";
 
         if (isset($filters['q'])) {
             $robots = 'noindex, follow';
@@ -240,7 +240,7 @@ class SkillController extends Controller
             if ($profession) {
                 $canonical = route('professions.show', ['profession' => $profession['slug']]);
                 $title = "Prompts y skills de IA para {$profession['name']}";
-                $description = "Los mejores prompts y skills de IA para {$profession['name']}, votados por la comunidad.";
+                $description = "Los mejores prompts y skills de IA para {$profession['name']}, listos para copiar.";
             }
         } elseif ($filters !== []) {
             $robots = 'noindex, follow';

@@ -31,7 +31,7 @@ return [
         '¿Debe coincidir el title con el H1?' => 'No tiene que ser idéntico, pero sí decir lo mismo. El H1 puede ser más largo o más natural; el title, más compacto y con la búsqueda principal al principio. Si prometen cosas distintas, Google tiende a reescribir el título usando el encabezado.',
     ],
     'ctaTitle' => 'Prompts para reescribir títulos y descripciones por lotes',
-    'ctaBody' => 'Generar variantes de title por intención, auditar descripciones duplicadas o priorizar páginas por CTR: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y copy mejor valorados.',
+    'ctaBody' => 'Generar variantes de title por intención, auditar descripciones duplicadas o priorizar páginas por CTR: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y copy.',
     'body' => <<<'HTML'
 <p>El title y la meta description son el anuncio gratuito de cada página. Es lo que se ve en Google antes del clic, y en muchas webs es también lo menos trabajado: un título que repite el H1, una descripción que nadie escribió y que Google rellena como puede.</p>
 

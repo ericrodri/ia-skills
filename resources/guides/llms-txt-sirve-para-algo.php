@@ -30,7 +30,7 @@ return [
         '¿Cambiará esto en el futuro?' => 'Puede. El estándar es joven y a alguna de las compañías le puede compensar adoptarlo, sobre todo para documentación técnica, que es el caso de uso donde más sentido tiene. La postura razonable es la de siempre con los estándares emergentes: si generarlo te cuesta veinte minutos y cero mantenimiento, adelante; si te obliga a montar un proceso, espera a que alguien confirme que lo lee.',
     ],
     'ctaTitle' => 'Los prompts de SEO que usa gente que vive de esto',
-    'ctaBody' => 'Auditoría de contenido, briefings y clasificación por intención, votados por profesionales: <a href="/profesiones/marketing">Marketing</a>. Si lo que llevas es la parte técnica, mira <a href="/profesiones/desarrollo">Desarrollo</a>.',
+    'ctaBody' => 'Auditoría de contenido, briefings y clasificación por intención, listos para usar: <a href="/profesiones/marketing">Marketing</a>. Si lo que llevas es la parte técnica, mira <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>En 2024 alguien propuso un fichero llamado <code>llms.txt</code>: un índice en Markdown, en la raíz del dominio, que le explicara a un modelo de lenguaje qué hay en tu sitio y por dónde empezar a leer. La idea es buena. El problema es que dos años después casi nadie lo pide.</p>
 

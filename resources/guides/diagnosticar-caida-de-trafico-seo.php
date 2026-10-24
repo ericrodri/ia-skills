@@ -30,7 +30,7 @@ return [
         '¿Sirve de algo pedir una revisión a Google?' => 'Solo si tienes una acción manual, y eso aparece dicho con esas palabras en Search Console, en el apartado de Acciones manuales. Son poco frecuentes. Si ese apartado está limpio, no hay ninguna revisión que pedir ni ningún formulario que rellenar: lo que ha cambiado es el algoritmo o tu web, y en ambos casos se arregla trabajando, no comunicando.',
         '¿Debo desindexar las páginas que han perdido tráfico?' => 'Casi nunca, y menos en caliente. Una página sin tráfico no perjudica al resto por existir; lo que perjudica es tener cientos de páginas vacías que nadie ha revisado nunca. La decisión de retirar contenido se toma con criterio y con datos de varios meses, no como reacción a una caída de tres semanas.',
     ],
-    'ctaTitle' => 'Prompts de análisis y diagnóstico votados por profesionales',
+    'ctaTitle' => 'Prompts de análisis y diagnóstico listos para usar',
     'ctaBody' => 'Cruces de Search Console, detección de anomalías y cuadros de mando: <a href="/profesiones/analisis-de-datos">Análisis de datos</a>. Para la parte de contenido y priorización, mira <a href="/profesiones/marketing">Marketing</a>.',
     'body' => <<<'HTML'
 <p>Las caídas de tráfico se diagnostican casi siempre al revés. Se empieza por la hipótesis más cara —«el contenido ya no gusta a Google»— y se acaba reescribiendo páginas que estaban bien, mientras la causa real era un <code>noindex</code> desplegado por error o una etiqueta de analítica que dejó de disparar. El orden de abajo va de lo más barato de comprobar a lo más caro de arreglar, y ese orden es la mitad del trabajo.</p>

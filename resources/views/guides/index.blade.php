@@ -39,7 +39,7 @@
             <p class="mt-2 text-gray-600 dark:text-gray-300">
                 Las guías explican el método. El catálogo tiene el trabajo hecho:
                 <a class="font-medium text-brand-700 dark:text-brand-400 underline" href="{{ route('skills.index') }}">más de {{ $skillsCount }} skills y prompts</a>
-                organizados por profesión y ordenados por los votos de la comunidad.
+                organizados por profesión.
             </p>
             <ul class="mt-4 flex flex-wrap gap-2">
                 @foreach($footerProfessions as $profession)

@@ -32,7 +32,7 @@ return [
         '¿Merece la pena medir el coste de los tokens?' => 'En chat, casi nunca: la suscripción es plana y pequeña frente al coste de una hora de trabajo. En agentes, sí, porque un agente llama al modelo una vez por paso y una tarea puede costar quince o veinte veces lo que costaría en chat. En la encuesta de McKinsey de 2026, uno de cada cinco encuestados ya señalaba el coste operativo de la IA como una restricción para su uso.',
     ],
     'ctaTitle' => 'Empieza por una tarea que ya esté escrita',
-    'ctaBody' => 'Medir es más fácil cuando el prompt no cambia entre repeticiones. En el catálogo hay skills y prompts estables, votados por quien los usa a diario: elige uno de <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/finanzas">Finanzas</a> o <a href="/profesiones/customer-support">Atención al cliente</a> y mide sobre él.',
+    'ctaBody' => 'Medir es más fácil cuando el prompt no cambia entre repeticiones. En el catálogo hay skills y prompts estables, listos para usar: elige uno de <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/finanzas">Finanzas</a> o <a href="/profesiones/customer-support">Atención al cliente</a> y mide sobre él.',
     'body' => <<<'HTML'
 <p>Pregunta a cualquiera que use IA a diario si le ahorra tiempo y te dirá que sí, sin dudarlo. Pídele la cifra y verás cómo cambia la cara. La sensación de ir más rápido es de las más fiables que existen y de las peor calibradas: notamos el minuto que nos ahorramos escribiendo y no notamos los ocho que gastamos comprobando.</p>
 

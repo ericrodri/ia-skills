@@ -29,7 +29,7 @@ return [
         '¿Qué hago si mi página encaja con la intención y aun así no sube?' => 'Comprueba en este orden: que no tengas otra página compitiendo por lo mismo, que la que quieres posicionar reciba enlaces internos desde las páginas fuertes del sitio, y que el contenido no sea una versión más corta de lo que ya hay en los diez primeros puestos. Acertar la intención es el requisito de entrada, no la ventaja competitiva.',
         '¿Esto cambia con las respuestas generadas por IA?' => 'Cambia el reparto de clics, no el análisis. Los buscadores con respuesta generada siguen eligiendo qué fuentes citan según lo que resuelve la consulta, así que el encaje de intención decide si te citan. Lo que sí cambia es qué intenciones dejan de traer tráfico: las definiciones simples se responden arriba y ya no se hace clic, mientras las consultas de comparación y decisión siguen llevando a la web.',
     ],
-    'ctaTitle' => 'Prompts de investigación de contenidos votados por profesionales',
+    'ctaTitle' => 'Prompts de investigación de contenidos listos para usar',
     'ctaBody' => 'Clasificar consultas, analizar resultados y planificar contenido: <a href="/profesiones/marketing">Marketing</a>. Para el análisis de exportaciones grandes de Search Console, mira <a href="/profesiones/analisis-de-datos">Análisis de datos</a>.',
     'body' => <<<'HTML'
 <p>Es el concepto de SEO que más se nombra y menos se aplica. Casi todo el mundo sabe recitar los cuatro tipos; muy poca gente abre la página de resultados antes de decidir qué va a escribir. Y ahí es donde se pierde el trabajo: en publicar un artículo de 2.000 palabras para una consulta donde Google lleva dos años enseñando una tabla comparativa.</p>

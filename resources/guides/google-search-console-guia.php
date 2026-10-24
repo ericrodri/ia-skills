@@ -31,7 +31,7 @@ return [
         '¿El Modo IA y los AI Overviews salen en Search Console?' => 'Sus clics e impresiones cuentan dentro del total de búsqueda web del informe de rendimiento, mezclados con el resto. Para verlos aparte está el informe de IA generativa, que da impresiones por página pero no clics ni consultas.',
     ],
     'ctaTitle' => 'Prompts para analizar Search Console sin hojas de cálculo eternas',
-    'ctaBody' => 'Clasificar consultas, detectar páginas con muchas impresiones y pocos clics o preparar el informe mensual: <a href="/profesiones/marketing">Marketing</a> y <a href="/profesiones/analisis-de-datos">Análisis de datos</a> tienen los prompts mejor valorados para ese trabajo.',
+    'ctaBody' => 'Clasificar consultas, detectar páginas con muchas impresiones y pocos clics o preparar el informe mensual: <a href="/profesiones/marketing">Marketing</a> y <a href="/profesiones/analisis-de-datos">Análisis de datos</a> tienen los prompts para ese trabajo.',
     'body' => <<<'HTML'
 <p>Search Console es gratis, la da Google y tiene datos que ninguna herramienta de pago puede tener: las búsquedas reales por las que apareces, las veces que te han visto y lo que Google piensa de cada una de tus URLs. Aun así, en la mayoría de las webs se usa para una sola cosa: mirar si la gráfica de clics sube o baja.</p>
 

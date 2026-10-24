@@ -31,7 +31,7 @@ return [
         '¿Cómo sé si mi puesto está en riesgo?' => 'Haz el inventario de una semana real y clasifica cada hora en tres cajas: producir texto o datos a partir de reglas conocidas, decidir con responsabilidad, y tratar con personas o cosas físicas. Si la primera caja se lleva más de la mitad del tiempo, tu puesto va a cambiar de forma en los próximos dos o tres años. Eso es distinto de desaparecer, pero es exactamente la señal que conviene no ignorar.',
     ],
     'ctaTitle' => 'El mejor seguro es saber usarla en tu oficio',
-    'ctaBody' => 'Quien sale reforzado de este cambio no es quien más herramientas conoce, sino quien sabe qué delegar en su propio trabajo. En el catálogo hay skills y prompts escritos y votados por profesionales en activo: empieza por <a href="/profesiones/finanzas">Finanzas</a>, <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/customer-support">Atención al cliente</a> o <a href="/profesiones/marketing">Marketing</a>.',
+    'ctaBody' => 'Quien sale reforzado de este cambio no es quien más herramientas conoce, sino quien sabe qué delegar en su propio trabajo. En el catálogo hay skills y prompts escritos para cada profesión: empieza por <a href="/profesiones/finanzas">Finanzas</a>, <a href="/profesiones/rrhh">RRHH</a>, <a href="/profesiones/customer-support">Atención al cliente</a> o <a href="/profesiones/marketing">Marketing</a>.',
     'body' => <<<'HTML'
 <p>La pregunta se hace casi siempre en el peor formato posible: ¿me va a quitar la IA el trabajo, sí o no? Formulada así solo admite dos respuestas, y las dos son falsas. La útil es otra: <em>qué parte</em> de lo que hago hoy va a dejar de hacerse como se hace, en cuánto tiempo, y qué queda de mi puesto cuando eso pase.</p>
 

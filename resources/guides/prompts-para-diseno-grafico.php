@@ -31,7 +31,7 @@ return [
         '¿Puedo usar comercialmente lo que genera la IA?' => 'Depende de la herramienta, del plan y del país, y en España una imagen generada sin intervención creativa humana difícilmente tiene protección de derechos de autor. Si la pieza va a un cliente, revisa las condiciones del proveedor y evita pedir estilos de artistas vivos o marcas reconocibles.',
         '¿Cuándo conviene convertir estos prompts en un skill?' => 'Cuando repites el mismo tipo de encargo. Si cada semana preparas creatividades para redes de la misma marca, guardar el contexto de marca, las restricciones y el formato de salida como un skill te evita pegarlo cada vez y hace que todas las propuestas salgan con el mismo criterio.',
     ],
-    'ctaTitle' => 'Más prompts de diseño gráfico, votados por diseñadores',
+    'ctaTitle' => 'Más prompts de diseño gráfico, listos para usar',
     'ctaBody' => 'En <a href="/profesiones/diseno/diseno-grafico">prompts de IA para diseño gráfico</a> están los que la comunidad ha probado para logos, carteles, paletas y packaging. Y en <a href="/profesiones/diseno">Diseño</a>, los de UX/UI, branding y design systems.',
     'body' => <<<'HTML'
 <p>La mayoría de las listas de «prompts para diseño gráfico» son en realidad prompts para generar imágenes bonitas. Sirven para una captura en redes, pero no para el trabajo de un diseñador, que casi nunca empieza por la imagen: empieza por entender qué necesita el cliente, qué no ha dicho y qué va a rechazar.</p>

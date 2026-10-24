@@ -31,7 +31,7 @@ return [
         '¿La IA sirve para la investigación de palabras clave?' => 'Para agrupar, clasificar por intención y detectar huecos en tu cobertura, muy bien; es de las tareas donde más tiempo ahorra. Para volúmenes de búsqueda, no: los modelos los inventan con toda naturalidad. Los datos de volumen salen de herramientas con datos reales; la IA se encarga del trabajo de ordenar lo que esas herramientas devuelven.',
     ],
     'ctaTitle' => 'Prompts de contenido que no huelen a plantilla',
-    'ctaBody' => 'La diferencia entre un texto que posiciona y uno que se hunde suele estar en el prompt y en quién lo revisa. En el catálogo hay skills y prompts de contenido votados por quien vive de esto: mira <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
+    'ctaBody' => 'La diferencia entre un texto que posiciona y uno que se hunde suele estar en el prompt y en quién lo revisa. En el catálogo hay skills y prompts de contenido listos para usar: mira <a href="/profesiones/marketing">Marketing</a>, <a href="/profesiones/ventas">Ventas</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
     'body' => <<<'HTML'
 <p>La pregunta que se hace todo el mundo —«¿me penaliza Google si escribo con IA?»— lleva tres años obteniendo la misma respuesta oficial y tres años sin que nadie se la crea, porque en paralelo se ven sitios enteros desaparecer de un día para otro después de publicar en masa con IA.</p>
 

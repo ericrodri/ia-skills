@@ -33,7 +33,7 @@ return [
         '¿Quién responde si la IA se equivoca?' => 'La persona que firmó el trabajo y la empresa que lo entregó. Ninguna política traslada la responsabilidad al proveedor del modelo, y por eso el punto de revisión humana no es burocracia: es el mecanismo que hace que el error se detecte antes de salir. Una política que no dice quién revisa qué, no dice nada.',
     ],
     'ctaTitle' => 'La política dice qué se puede hacer; los prompts, cómo hacerlo bien',
-    'ctaBody' => 'Una vez definido el marco, lo que falta es material aprobado que la gente use. En <a href="/profesiones/legal">Legal</a> y <a href="/profesiones/rrhh">Recursos Humanos</a> están los prompts mejor valorados para revisión documental, políticas internas y comunicación al equipo.',
+    'ctaBody' => 'Una vez definido el marco, lo que falta es material aprobado que la gente use. En <a href="/profesiones/legal">Legal</a> y <a href="/profesiones/rrhh">Recursos Humanos</a> están los prompts para revisión documental, políticas internas y comunicación al equipo.',
     'body' => <<<'HTML'
 <p>Tu equipo ya está usando inteligencia artificial. Con política o sin ella, alguien pegó ayer un contrato en un chat para que se lo resumiera, alguien redactó una oferta con un asistente y alguien más subió un CSV con datos de clientes. La pregunta no es si se usa, es si sabes con qué datos se está usando y si podrías demostrarlo si te lo preguntan.</p>
 

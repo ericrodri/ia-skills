@@ -30,7 +30,7 @@ return [
         '¿Cambia algo el enlazado interno para la visibilidad en IA?' => 'Cambia el motivo, no la técnica. Los rastreadores de los modelos hacen lo mismo que Googlebot: seguir enlaces de HTML normales desde las páginas que ya conocen. Una página a la que solo se llega por un buscador interno o por JavaScript es invisible para ambos. Lo que sí es específico de la IA es que el texto del enlace y el párrafo que lo rodea aportan contexto sobre de qué va el destino, y eso ayuda a que se cite la página correcta.',
     ],
     'ctaTitle' => 'Prompts de SEO revisados por gente que vive de esto',
-    'ctaBody' => 'Auditoría de contenido, clasificación por intención y briefings, votados por profesionales: <a href="/profesiones/marketing">Marketing</a>. Para la parte de rastreo y plantillas, mira <a href="/profesiones/desarrollo">Desarrollo</a>.',
+    'ctaBody' => 'Auditoría de contenido, clasificación por intención y briefings, listos para usar: <a href="/profesiones/marketing">Marketing</a>. Para la parte de rastreo y plantillas, mira <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>El enlazado interno es la única señal de posicionamiento que controlas por completo. No dependes de que nadie te enlace, ni de un presupuesto, ni de un algoritmo que cambia cada trimestre: decides tú, desde tu CMS, en cinco minutos. Y es justo por eso que casi nadie lo revisa. Lo que se puede hacer cuando sea acaba no haciéndose nunca.</p>
 

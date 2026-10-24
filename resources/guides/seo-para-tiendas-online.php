@@ -31,7 +31,7 @@ return [
         '¿El blog sirve para algo en un ecommerce?' => 'Sí, para las búsquedas informativas previas a la compra, como guías de talla, comparativas o cómo elegir. Esas páginas atraen tráfico que todavía no está listo para comprar y, bien enlazadas, pasan autoridad a las categorías. Lo que no debe hacer el blog es competir con las categorías por la misma palabra clave.',
     ],
     'ctaTitle' => 'Prompts para fichas y categorías',
-    'ctaBody' => 'Descripciones de producto con datos propios, textos de categoría o análisis de la competencia: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y ecommerce mejor valorados.',
+    'ctaBody' => 'Descripciones de producto con datos propios, textos de categoría o análisis de la competencia: en <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y ecommerce.',
     'body' => <<<'HTML'
 <p>Una tienda online tiene un problema que no tiene un blog: cientos o miles de páginas muy parecidas entre sí, generadas por un sistema, con textos que a menudo no ha escrito nadie de la casa. El SEO de una tienda consiste, en gran parte, en poner orden en eso.</p>
 

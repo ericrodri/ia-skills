@@ -49,7 +49,7 @@ class HomeController extends Controller
             'fallback' => [
                 'heading' => 'Skills de IA y prompts que usan los mejores profesionales',
                 'paragraphs' => [
-                    'Skills reales, workflows y prompts validados por la comunidad. Organizados por profesión, listos para usar.',
+                    'Skills, workflows y prompts de IA organizados por profesión, listos para copiar o instalar en Claude Code.',
                     ...self::WHAT_IS_A_SKILL,
                 ],
                 // toBase(): merge() de una colección Eloquent espera modelos y

@@ -31,7 +31,7 @@ return [
         '¿Y los datos de los clientes?' => 'Es la parte que más se descuida. Todo lo que el cliente escriba en ese chat entra en un sistema que probablemente sea de un tercero, y ahí aplican tanto la protección de datos como tus propios compromisos de confidencialidad. Lo mínimo: contrato de encargado de tratamiento con el proveedor, saber en qué región se procesa, política de retención definida y filtrado de lo que se envía al modelo. Un chatbot que registre números de tarjeta en su historial es un problema serio, no un fallo menor.',
     ],
     'ctaTitle' => 'Prompts de atención al cliente listos para adaptar',
-    'ctaBody' => 'Guiones de respuesta, clasificación de tickets, tono de marca y escalado a humano son la materia prima de un buen asistente. En <a href="/profesiones/customer-support">Atención al cliente</a> están los prompts mejor valorados; si lo montas tú, mira también <a href="/profesiones/desarrollo">Desarrollo</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
+    'ctaBody' => 'Guiones de respuesta, clasificación de tickets, tono de marca y escalado a humano son la materia prima de un buen asistente. En <a href="/profesiones/customer-support">Atención al cliente</a> están los prompts para ese trabajo; si lo montas tú, mira también <a href="/profesiones/desarrollo">Desarrollo</a> y <a href="/profesiones/freelancers">Freelancers</a>.',
     'body' => <<<'HTML'
 <p>La conversación sobre chatbots ha cambiado de sitio. Ya no va de si la máquina entiende —eso está resuelto— sino de si el proyecto se sostiene: cuántas consultas se come de verdad, qué pasa con las que no, cuánto cuesta mantenerlo y qué se rompe cuando el cliente se enfada.</p>
 

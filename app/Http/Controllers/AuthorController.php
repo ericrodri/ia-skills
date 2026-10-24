@@ -46,7 +46,7 @@ class AuthorController extends Controller
                 ? "Skills de IA de {$user->name} · página {$page}"
                 : "{$user->name}: {$stats['skills']} skills de IA publicadas",
             'description' => $user->bio
-                ?: "Prompts y skills de IA publicados por {$user->name} en ia-skills: {$stats['skills']} recursos y {$stats['votes']} votos de la comunidad.",
+                ?: "Prompts y skills de IA publicados por {$user->name} en ia-skills: {$stats['skills']} recursos publicados.",
             'canonical' => $page > 1 ? $url.'?page='.$page : $url,
             'robots' => $stats['skills'] === 0 || $page > 1 ? 'noindex, follow' : null,
             'ogType' => 'profile',

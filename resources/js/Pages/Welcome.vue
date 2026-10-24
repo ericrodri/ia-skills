@@ -32,7 +32,7 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
                     <span class="text-brand-600 dark:text-brand-500">que usan los mejores profesionales</span>
                 </h1>
                 <p class="mt-5 text-lg text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-                    Skills reales, workflows y prompts validados por la comunidad. Organizados por profesión, listos para usar.
+                    Skills, workflows y prompts de IA organizados por profesión, listos para copiar o instalar en Claude Code.
                 </p>
                 <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
                     <Link :href="route('skills.index')" class="btn-primary text-base px-6 py-3">

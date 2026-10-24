@@ -30,7 +30,7 @@ return [
         '¿Cómo sé si ChatGPT está enviándome visitas?' => 'Míralo por referrer en tu analítica: los dominios de los asistentes aparecen como origen. Es una medida a la baja, porque muchas citas se leen sin hacer clic. Complétala preguntando directamente a los asistentes por tu categoría, de forma periódica, y anotando si sales y con qué se te describe.',
     ],
     'ctaTitle' => 'Prompts de SEO y contenido listos para usar',
-    'ctaBody' => 'Auditar contenido, agrupar consultas por intención o redactar briefings son tareas que se delegan bien. En <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido mejor valorados; si además tocas la parte técnica, mira los de <a href="/profesiones/desarrollo">Desarrollo</a>.',
+    'ctaBody' => 'Auditar contenido, agrupar consultas por intención o redactar briefings son tareas que se delegan bien. En <a href="/profesiones/marketing">Marketing</a> están los prompts de SEO y contenido; si además tocas la parte técnica, mira los de <a href="/profesiones/desarrollo">Desarrollo</a>.',
     'body' => <<<'HTML'
 <p>Durante veinte años el trabajo consistió en salir arriba en una lista de diez enlaces azules. Esa lista sigue existiendo, pero ha dejado de ser el único sitio donde la gente encuentra respuestas: una parte creciente de las consultas termina en un asistente que responde directamente y cita tres o cuatro fuentes.</p>
 

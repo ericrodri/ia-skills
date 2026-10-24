@@ -63,7 +63,7 @@ class OgImageController extends Controller
             return $this->generate(
                 label: 'ia-skills',
                 title: 'Prompts y skills de IA para profesionales',
-                subtitle: 'Workflows validados por la comunidad, organizados por profesión.',
+                subtitle: 'Skills y prompts de IA organizados por profesión.',
                 meta: '⚡ ia-skills.com',
             );
         });

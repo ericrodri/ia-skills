@@ -72,7 +72,7 @@
 
             <section class="guide-callout mt-14">
                 <p class="font-semibold text-gray-900 dark:text-white">{{ $guide['ctaTitle'] ?? 'Pasa de la teoría al catálogo' }}</p>
-                <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $guide['ctaBody'] ?? 'Explora las skills que la comunidad ha votado como las más útiles y cópialas en un clic.' !!}</p>
+                <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $guide['ctaBody'] ?? 'Explora las skills de tu profesión y cópialas en un clic.' !!}</p>
                 <div class="mt-4 flex flex-wrap gap-3">
                     <a href="{{ route('skills.index') }}" class="btn-primary">Explorar {{ $skillsCount }} skills &rarr;</a>
                     <a href="{{ route('professions.index') }}" class="btn-secondary">Ver por profesión</a>
