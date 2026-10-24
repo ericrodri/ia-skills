@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.ericrodri/ia-skills",
+  "title": "ia-skills: prompts y skills de IA en español",
+  "description": "Busca e instala en Claude Code miles de prompts y skills de IA en español, por profesión.",
+  "websiteUrl": "https://ia-skills.com/mcp",
+  "repository": {
+    "url": "https://github.com/ericrodri/ia-skills",
+    "source": "github",
+    "subfolder": "tools/ia-skills-cli"
+  },
+  "version": "0.1.2",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ia-skills",
+      "version": "0.1.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "packageArguments": [
+        {
+          "type": "positional",
+          "value": "mcp"
+        }
+      ]
+    }
+  ]
+}

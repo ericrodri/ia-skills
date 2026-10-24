@@ -3,6 +3,10 @@ name: Publicar paquete npm
 # Se dispara al etiquetar una versión del CLI: `cli-v0.2.0`.
 # El prefijo distingue estas etiquetas de cualquier otra del repositorio, que
 # es un proyecto Laravel con su propio ciclo de vida.
+#
+# Publica en dos sitios, en este orden:
+#   1. npm (el paquete que ejecuta `npx ia-skills mcp`)
+#   2. el registro oficial de MCP (la ficha que leen los directorios y clientes)
 on:
   push:
     tags: ['cli-v*']
@@ -10,9 +14,14 @@ on:
 
 permissions:
   contents: read
-  # Necesario para la procedencia (provenance): npm firma el paquete dejando
-  # constancia verificable de desde qué commit y workflow se publicó.
+  # Lo usan dos cosas: la procedencia de npm (firma desde qué commit y workflow
+  # se publicó) y el login OIDC del registro de MCP, que así no necesita secreto.
   id-token: write
+
+env:
+  # Versión fijada a propósito: una publicación nueva del registro no debe
+  # romper este flujo sin que se haya tocado nada aquí.
+  MCP_PUBLISHER_VERSION: v1.8.4
 
 jobs:
   publish:
@@ -28,21 +37,52 @@ jobs:
           node-version: '22'
           registry-url: https://registry.npmjs.org
 
-      - name: Comprobar que la etiqueta y package.json coinciden
-        if: startsWith(github.ref, 'refs/tags/')
+      - name: Comprobar que todas las versiones coinciden
         run: |
-          TAG="${GITHUB_REF_NAME#cli-v}"
           PKG=$(node -p "require('./package.json').version")
-          if [ "$TAG" != "$PKG" ]; then
-            echo "La etiqueta dice $TAG y package.json dice $PKG."
-            echo "Sube la version en package.json antes de etiquetar."
-            exit 1
+          SERVER=$(node -p "require('./server.json').version")
+          SERVER_PKG=$(node -p "require('./server.json').packages[0].version")
+
+          for v in "$SERVER" "$SERVER_PKG"; do
+            if [ "$v" != "$PKG" ]; then
+              echo "package.json dice $PKG pero server.json dice $SERVER / $SERVER_PKG."
+              echo "Actualiza la versión en server.json (dos sitios) antes de etiquetar."
+              exit 1
+            fi
+          done
+
+          if [ "${GITHUB_REF_TYPE}" = "tag" ]; then
+            TAG="${GITHUB_REF_NAME#cli-v}"
+            if [ "$TAG" != "$PKG" ]; then
+              echo "La etiqueta dice $TAG y package.json dice $PKG."
+              exit 1
+            fi
           fi
-          echo "Publicando la version $PKG"
+
+          echo "Publicando la versión $PKG"
 
       - run: npm test
 
-      - name: Publicar
+      - name: Publicar en npm
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Instalar mcp-publisher
+        run: |
+          curl -fsSL "https://github.com/modelcontextprotocol/registry/releases/download/${MCP_PUBLISHER_VERSION}/mcp-publisher_linux_amd64.tar.gz" \
+            | tar xz mcp-publisher
+
+      - name: Publicar en el registro oficial de MCP
+        run: |
+          ./mcp-publisher login github-oidc
+          # El registro comprueba el campo mcpName del paquete recién publicado
+          # en npm, y npm tarda un poco en servir la versión nueva: se reintenta.
+          for intento in 1 2 3 4 5; do
+            if ./mcp-publisher publish; then
+              exit 0
+            fi
+            echo "Intento $intento fallido, esperando a que npm propague la versión…"
+            sleep 30
+          done
+          exit 1

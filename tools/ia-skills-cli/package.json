@@ -1,7 +1,8 @@
 {
   "name": "ia-skills",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Busca e instala skills de ia-skills.com en Claude Code desde la terminal o como servidor MCP.",
+  "mcpName": "io.github.ericrodri/ia-skills",
   "homepage": "https://ia-skills.com",
   "repository": {
     "type": "git",

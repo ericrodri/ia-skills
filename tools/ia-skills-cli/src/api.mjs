@@ -1,6 +1,7 @@
 import { mkdir, writeFile, access } from 'node:fs/promises'
 import { homedir } from 'node:os'
 import { join } from 'node:path'
+import { VERSION } from './version.mjs'
 
 /**
  * Cliente mínimo de la API pública de ia-skills (/api/v1) y de los SKILL.md
@@ -10,7 +11,7 @@ export const BASE_URL = (process.env.IA_SKILLS_URL || 'https://ia-skills.com').r
 
 async function request(path, { json = true } = {}) {
     const res = await fetch(BASE_URL + path, {
-        headers: { Accept: json ? 'application/json' : 'text/markdown', 'User-Agent': 'ia-skills-cli/0.1' },
+        headers: { Accept: json ? 'application/json' : 'text/markdown', 'User-Agent': `ia-skills-cli/${VERSION}` },
     })
 
     if (res.status === 404) throw new Error('No encontrada. Revisa el slug de la skill.')

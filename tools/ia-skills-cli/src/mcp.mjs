@@ -1,5 +1,6 @@
 import { createInterface } from 'node:readline'
 import { getSkill, installSkill, searchSkills } from './api.mjs'
+import { VERSION } from './version.mjs'
 
 /**
  * Servidor MCP por stdio (JSON-RPC 2.0, un mensaje por línea).
@@ -8,7 +9,7 @@ import { getSkill, installSkill, searchSkills } from './api.mjs'
  * cliente MCP: buscar skills, leer una y instalarla. Sin SDK para no arrastrar
  * dependencias en algo que es un puñado de métodos.
  */
-const SERVER_INFO = { name: 'ia-skills', version: '0.1.0' }
+const SERVER_INFO = { name: 'ia-skills', version: VERSION }
 const DEFAULT_PROTOCOL = '2025-06-18'
 
 const TOOLS = [
