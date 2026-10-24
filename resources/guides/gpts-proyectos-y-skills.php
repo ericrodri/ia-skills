@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2391,
     'about' => 'Reutilización de instrucciones en asistentes de IA mediante GPTs, proyectos y skills',
-    'related' => ['que-son-los-skills-de-claude-code', 'como-escribir-prompts-efectivos', 'agent-skills-estandar-abierto'],
+    'related' => ['que-es-un-skill-de-ia', 'que-son-los-skills-de-claude-code', 'como-escribir-prompts-efectivos', 'agent-skills-estandar-abierto'],
     'toc' => [
         'problema' => 'El prompt bueno siempre está en otra conversación',
         'cuatro-niveles' => 'Cuatro niveles de reutilización',

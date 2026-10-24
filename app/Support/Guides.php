@@ -19,6 +19,7 @@ class Guides
 {
     /** Orden de publicación: primero el contenido pilar. */
     private const ORDER = [
+        'que-es-un-skill-de-ia',
         'que-son-los-skills-de-claude-code',
         'agent-skills-estandar-abierto',
         'empezar-con-claude-code',

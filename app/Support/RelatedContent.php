@@ -28,6 +28,7 @@ class RelatedContent
      * votadas, así que un término demasiado específico no deja el bloque vacío.
      */
     private const GUIDES = [
+        'que-es-un-skill-de-ia' => [['desarrollo', 'freelancers'], 'skill'],
         'que-son-los-skills-de-claude-code' => [['desarrollo'], 'skill'],
         'agent-skills-estandar-abierto' => [['desarrollo'], 'skill'],
         'empezar-con-claude-code' => [['desarrollo'], 'claude code'],

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2104,
     'about' => 'Agent Skills',
-    'related' => ['que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'plugins-y-mcp-en-claude-code'],
+    'related' => ['que-es-un-skill-de-ia', 'que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'plugins-y-mcp-en-claude-code'],
     'toc' => [
         'que-es' => 'Qué es Agent Skills y por qué se convirtió en estándar',
         'anatomia' => 'La anatomía de un skill: un archivo y tres carpetas',

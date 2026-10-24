@@ -1,18 +1,18 @@
 <?php
 
 return [
-    'title' => 'Qué son los skills de Claude Code y para qué sirven',
-    'navTitle' => 'Qué son los skills',
-    'seoTitle' => 'Qué son los skills de Claude Code: guía práctica',
-    'description' => 'Un skill es una carpeta con un SKILL.md que enseña a la IA a hacer una tarea siempre igual. En qué se diferencia de un prompt y cuándo usar cada uno.',
+    'title' => 'Skills de Claude Code: cómo funcionan y dónde se instalan',
+    'navTitle' => 'Skills de Claude Code',
+    'seoTitle' => 'Skills de Claude Code: cómo funcionan y se instalan',
+    'description' => 'Cómo es un skill de Claude Code por dentro, cómo decide Claude cuándo usarlo, dónde se instala y los cinco errores que más se repiten al escribirlo.',
     'excerpt' => 'Un prompt se escribe una vez y se olvida. Un skill se instala una vez y se usa siempre. Esta es la diferencia y por qué importa cuando trabajas con IA todos los días.',
     'category' => 'Fundamentos',
     'published' => '2026-08-20',
-    'updated' => '2026-10-10',
+    'updated' => '2026-10-24',
     'readingMinutes' => 9,
-    'words' => 1422,
+    'words' => 1468,
     'about' => 'Claude Code',
-    'related' => ['skills-de-ia-mas-virales', 'como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
+    'related' => ['que-es-un-skill-de-ia', 'skills-de-ia-mas-virales', 'como-crear-un-skill-para-claude-code', 'gpts-proyectos-y-skills', 'agent-skills-estandar-abierto'],
     'toc' => [
         'que-es' => 'Qué es exactamente un skill',
         'prompt-vs-skill' => 'Prompt, skill y plugin: las diferencias',
@@ -23,7 +23,7 @@ return [
     ],
     'faq' => [
         '¿Necesito saber programar para usar un skill?' => 'No. Un skill es un archivo de texto en Markdown. Si sabes escribir instrucciones claras para un compañero de trabajo, sabes escribir un skill. La parte técnica se reduce a crear una carpeta y un archivo.',
-        '¿Los skills funcionan con ChatGPT o Gemini?' => 'El formato SKILL.md con carga automática es propio de Claude. Pero el contenido de un buen skill —el procedimiento, los criterios, el formato de salida— se puede pegar como prompt en cualquier herramienta. En ia-skills muchas fichas indican si el recurso es un skill instalable o un prompt reutilizable.',
+        '¿Los skills funcionan con ChatGPT o Gemini?' => 'Con ChatGPT, sí: desde que el formato se publicó como estándar abierto, ChatGPT y Codex leen skills, igual que Cursor o GitHub Copilot; en la guía de Agent Skills está qué carpeta usa cada uno. En las herramientas que no los leen, el contenido de un buen skill —el procedimiento, los criterios, el formato de salida— se puede pegar como prompt: lo que se pierde es la carga automática.',
         '¿Cuántos skills puedo tener instalados a la vez?' => 'Tantos como quieras, porque solo se carga en contexto el que la tarea necesita. Lo que sí conviene evitar es tener varios skills con descripciones parecidas: si dos compiten por la misma tarea, el modelo puede elegir el que no esperabas.',
         '¿Un skill puede ejecutar comandos o tocar mis archivos?' => 'El skill en sí es texto: instrucciones. Lo que puede pasar es que esas instrucciones le pidan al asistente ejecutar comandos, y ahí el asistente sí actúa con los permisos que tú le has dado. Por eso conviene leer un skill antes de instalarlo, igual que leerías un script antes de ejecutarlo.',
         '¿Se pueden compartir skills con el equipo?' => 'Sí, y es donde más valor tienen. Si el skill vive en el repositorio del proyecto, cualquiera que lo clone lo tiene disponible. Es la forma más barata de que una convención interna deje de depender de que alguien la recuerde.',
@@ -34,6 +34,8 @@ return [
 <p>Si llevas unos meses usando IA para trabajar, probablemente tengas un documento —o una nota, o un chat marcado como favorito— donde guardas los prompts que sí funcionan. El de resumir reuniones. El de revisar código. El que te escribe la descripción de una vacante sin que suene a plantilla de 2015.</p>
 
 <p>Ese documento es el síntoma de un problema: el conocimiento sobre <em>cómo</em> pedirle las cosas a la IA está fuera de la herramienta. Cada vez que lo necesitas tienes que acordarte de que existe, buscarlo, copiarlo y adaptarlo. Los skills existen para resolver exactamente eso.</p>
+
+<p>Esta guía va de cómo funcionan dentro de Claude Code. Si buscas la idea general, válida para cualquier asistente, empieza por <a href="/guias/que-es-un-skill-de-ia">qué es un skill de IA</a>.</p>
 
 <h2 id="que-es">Qué es exactamente un skill</h2>
 
