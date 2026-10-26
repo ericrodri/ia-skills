@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-09',
     'updated' => '2026-10-09',
     'readingMinutes' => 8,
-    'words' => 1248,
+    'words' => 1280,
     'about' => 'Planificación de rutinas de ejercicio y entrenamiento de fuerza con asistentes de inteligencia artificial',
-    'related' => ['contar-calorias-con-ia', 'menu-semanal-con-ia', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets', 'herramientas-de-ia-gratis'],
+    'related' => ['propositos-de-ano-nuevo-con-ia', 'contar-calorias-con-ia', 'menu-semanal-con-ia', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien y qué no',
         'los-datos' => 'Los datos que necesita',
@@ -101,6 +101,6 @@ return [
     <li><strong>Técnica en ejercicios con mucha carga</strong>: sentadilla, peso muerto, press. Un par de sesiones con un entrenador que te vea compensan cualquier plan.</li>
 </ul>
 
-<p>En esos casos la IA sigue siendo útil para lo aburrido: convertir las pautas del profesional en un calendario, recordarte la progresión y llevar el registro. Pásale sus indicaciones y pídele que las respete al pie de la letra.</p>
+<p>En esos casos la IA sigue siendo útil para lo aburrido: convertir las pautas del profesional en un calendario, recordarte la progresión y llevar el registro. Pásale sus indicaciones y pídele que las respete al pie de la letra. Si entrenar es tu propósito de Año Nuevo, la guía de <a href="/guias/propositos-de-ano-nuevo-con-ia">propósitos de Año Nuevo con IA</a> te ayuda a encajarlo con el resto de tu semana para no abandonar en febrero.</p>
 HTML,
 ];

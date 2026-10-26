@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-23',
     'updated' => '2026-10-23',
     'readingMinutes' => 7,
-    'words' => 1206,
+    'words' => 1223,
     'about' => 'Redacción de cartas de recomendación laborales y académicas con ayuda de asistentes de inteligencia artificial',
-    'related' => ['cv-y-carta-de-presentacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'escribir-correos-con-ia', 'carta-de-baja-voluntaria-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['carta-de-motivacion-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'escribir-correos-con-ia', 'carta-de-baja-voluntaria-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-es' => 'Qué hace útil una carta de recomendación',
         'estructura' => 'La estructura',
@@ -102,7 +102,7 @@ return [
 <p>Las cartas para estudios tienen sus propias reglas:</p>
 
 <ul>
-    <li><strong>Lee la convocatoria</strong>: muchas indican extensión, idioma, qué aspectos valorar e incluso un formulario propio. Pégale ese texto a la IA para que lo respete.</li>
+    <li><strong>Lee la convocatoria</strong>: muchas indican extensión, idioma, qué aspectos valorar e incluso un formulario propio. Pégale ese texto a la IA para que lo respete. Si además tienes que escribir tu <a href="/guias/carta-de-motivacion-con-ia">carta de motivación</a>, conviene que las dos cuenten la misma historia.</li>
     <li><strong>Capacidad académica e investigadora</strong>: notas, un trabajo de fin de grado, una práctica de laboratorio, una pregunta original en clase. Comparar con el resto del grupo («entre los cinco mejores de cien alumnos») es muy útil si es cierto.</li>
     <li><strong>Confidencialidad</strong>: algunos programas, sobre todo fuera de España, exigen que el candidato no vea la carta. Si es así, no prepares tú el borrador; pasa la información a quien la firma y deja que la escriba sin tu borrador.</li>
     <li><strong>Otro idioma</strong>: si la carta debe ir en inglés, mejor escribirla en el propio idioma y traducirla después pidiendo el registro formal; los matices están en la guía de <a href="/guias/traducir-con-ia">traducir con IA</a>.</li>

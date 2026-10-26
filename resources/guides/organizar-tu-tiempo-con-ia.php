@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-17',
     'updated' => '2026-10-17',
-    'readingMinutes' => 6,
-    'words' => 1071,
+    'readingMinutes' => 7,
+    'words' => 1098,
     'about' => 'Planificación semanal, priorización de tareas y gestión del tiempo con asistentes de inteligencia artificial',
-    'related' => ['automatizar-tareas-con-ia-en-el-trabajo', 'ia-para-reuniones-y-actas', 'medir-si-la-ia-ahorra-tiempo', 'menu-semanal-con-ia', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
+    'related' => ['propositos-de-ano-nuevo-con-ia', 'automatizar-tareas-con-ia-en-el-trabajo', 'ia-para-reuniones-y-actas', 'medir-si-la-ia-ahorra-tiempo', 'menu-semanal-con-ia', 'gpts-proyectos-y-skills', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'que-puede-hacer' => 'Qué puede hacer la IA por tu agenda',
         'vaciar' => 'Paso 1: vaciar la cabeza',
@@ -86,6 +86,6 @@ return [
     <li><strong>Confundir organizarse con automatizar</strong>. Si una tarea se repite cada semana igual, quizá no haya que planificarla sino quitársela de encima: lo explica <a href="/guias/automatizar-tareas-con-ia-en-el-trabajo">automatizar tareas con IA en el trabajo</a>.</li>
 </ul>
 
-<p>Fuera del trabajo funciona igual: los turnos de la casa, las extraescolares o la compra caben en el mismo plan, y para las comidas puedes combinarlo con un <a href="/guias/menu-semanal-con-ia">menú semanal con IA</a>.</p>
+<p>Fuera del trabajo funciona igual: los turnos de la casa, las extraescolares o la compra caben en el mismo plan, y para las comidas puedes combinarlo con un <a href="/guias/menu-semanal-con-ia">menú semanal con IA</a>. Y si en enero quieres hacer sitio a un hábito nuevo, la guía de <a href="/guias/propositos-de-ano-nuevo-con-ia">propósitos de Año Nuevo con IA</a> explica cómo convertirlo en una acción semanal.</p>
 HTML,
 ];

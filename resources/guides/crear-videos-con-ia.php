@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-05',
     'updated' => '2026-10-05',
     'readingMinutes' => 7,
-    'words' => 1218,
+    'words' => 1233,
     'about' => 'Generación y montaje de vídeos con herramientas de inteligencia artificial',
-    'related' => ['crear-un-avatar-con-ia', 'restaurar-fotos-antiguas-con-ia', 'convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['animar-una-foto-con-ia', 'crear-un-avatar-con-ia', 'restaurar-fotos-antiguas-con-ia', 'convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'tipos' => 'Tres formas de hacer un vídeo con IA',
         'herramientas' => 'Qué herramienta usar',
@@ -39,7 +39,7 @@ return [
 
 <ul>
     <li><strong>Generar tomas desde cero.</strong> Escribes lo que quieres ver y el modelo crea un clip corto. Sirve para escenas que no podrías grabar, ambientes o planos de recurso.</li>
-    <li><strong>Animar una imagen.</strong> Partes de una foto o ilustración y la IA le da movimiento. Es la manera de mantener el mismo producto, personaje o estilo en varias tomas. También se usa para dar movimiento a retratos familiares, después de <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar la foto antigua</a>.</li>
+    <li><strong>Animar una imagen.</strong> Partes de una foto o ilustración y la IA le da movimiento. Es la manera de mantener el mismo producto, personaje o estilo en varias tomas. También se usa para dar movimiento a retratos familiares, después de <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar la foto antigua</a>. Cómo describir el movimiento para que resulte creíble está en <a href="/guias/animar-una-foto-con-ia">animar una foto con IA</a>.</li>
     <li><strong>Montar con ayuda de la IA.</strong> Grabas tú (o reúnes clips) y la herramienta corta silencios, añade subtítulos, propone música y adapta el formato a vertical. Es lo que más tiempo ahorra a quien publica a menudo.</li>
 </ul>
 

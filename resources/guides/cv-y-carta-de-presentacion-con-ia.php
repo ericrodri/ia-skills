@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-04',
     'updated' => '2026-10-15',
     'readingMinutes' => 15,
-    'words' => 2443,
+    'words' => 2473,
     'about' => 'Uso de la inteligencia artificial para preparar el currículum y la candidatura',
-    'related' => ['carta-de-recomendacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['carta-de-motivacion-con-ia', 'carta-de-recomendacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'foto-de-perfil-profesional-con-ia', 'entrevista-de-trabajo-con-ia', 'como-escribir-prompts-efectivos', 'prompts-de-ia-por-profesion', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'ats' => 'Qué hace de verdad un ATS con tu currículum',
         'trampa' => 'El truco de las palabras clave ocultas y por qué te bloquea',
@@ -128,7 +128,7 @@ dudar. Sé duro, no me animes.</code></pre>
 
 <h2 id="carta">La carta de presentación y el párrafo que no puede escribir un modelo</h2>
 
-<p>Una carta de presentación tiene tres párrafos y solo uno decide algo.</p>
+<p>Una carta de presentación tiene tres párrafos y solo uno decide algo. (Si lo que te piden es una carta para una beca, un máster o un Erasmus, es otro documento con otra estructura: lo explicamos en <a href="/guias/carta-de-motivacion-con-ia">carta de motivación con IA</a>.)</p>
 
 <ol>
     <li><strong>Por qué esta empresa.</strong> Concreto, con algo que solo se sabe habiendo mirado: su producto, un cambio reciente, un problema que se ve desde fuera. <strong>Este es el párrafo que no se delega</strong>, porque la información no está en el prompt a menos que la pongas tú.</li>
