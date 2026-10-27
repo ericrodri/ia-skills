@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA puede ser el mejor profesor particular que has tenido o la forma más rápida de llegar al examen sin saber nada. La diferencia no está en la herramienta, sino en si le pides respuestas o le pides que te haga pensar.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-10-16',
+    'updated' => '2026-10-27',
     'readingMinutes' => 8,
-    'words' => 1312,
+    'words' => 1332,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -91,7 +91,7 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
 
 <p>La IA responde mejor, y se equivoca menos, cuando trabaja sobre un texto concreto en lugar de sobre lo que «sabe». Sube tus apuntes, el tema del libro o las diapositivas del profesor y pídele que responda solo a partir de ellos. Así las preguntas de repaso se ajustan a lo que entra en el examen y no a lo que el modelo cree que debería entrar.</p>
 
-<p>Para eso funcionan especialmente bien las herramientas pensadas para trabajar con documentos, como el cuaderno de Gemini, que se explica en <a href="/guias/gemini-notebook-antes-notebooklm">Gemini Notebook</a>. Y si el material es muy largo, conviene leer antes <a href="/guias/resumir-documentos-largos-con-ia">cómo resumir documentos largos</a>: con textos extensos los modelos se saltan partes sin avisar. Si lo que tienes que trabajar es una lectura obligatoria, la guía de <a href="/guias/resumir-un-libro-con-ia">resumir un libro con IA</a> explica cómo hacerlo sin que se invente el argumento.</p>
+<p>Para eso funcionan especialmente bien las herramientas pensadas para trabajar con documentos, como el cuaderno de Gemini, que se explica en <a href="/guias/gemini-notebook-antes-notebooklm">Gemini Notebook</a>. Y si el material es muy largo, conviene leer antes <a href="/guias/resumir-documentos-largos-con-ia">cómo resumir documentos largos</a>: con textos extensos los modelos se saltan partes sin avisar. Si lo que tienes que trabajar es una lectura obligatoria, la guía de <a href="/guias/resumir-un-libro-con-ia">resumir un libro con IA</a> explica cómo hacerlo sin que se invente el argumento, y la de <a href="/guias/comentario-de-texto-con-ia">comentario de texto con IA</a> cómo practicar ese ejercicio con correcciones sin que te lo haga ella.</p>
 
 <h2 id="errores">Cuándo no fiarse</h2>
 

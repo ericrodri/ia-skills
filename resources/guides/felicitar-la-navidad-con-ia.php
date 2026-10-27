@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Con la IA puedes hacer en una tarde una felicitación navideña con tu foto, un texto que suene a ti y hasta un pequeño vídeo. El truco está en darle detalles reales: sin ellos, todas las felicitaciones acaban pareciendo la misma.',
     'category' => 'Práctica',
     'published' => '2026-10-13',
-    'updated' => '2026-10-14',
+    'updated' => '2026-10-27',
     'readingMinutes' => 7,
-    'words' => 1188,
+    'words' => 1225,
     'about' => 'Creación de felicitaciones navideñas con herramientas de inteligencia artificial',
-    'related' => ['carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['fotos-de-navidad-con-ia', 'menu-de-navidad-con-ia', 'carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'mensaje' => 'Un mensaje que no parezca de plantilla',
         'tarjeta' => 'La tarjeta: imagen navideña con tu foto',
@@ -65,7 +65,7 @@ return [
     <li><strong>Itera sobre la imagen que te gusta</strong> en vez de generar de nuevo, como explicamos en <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>.</li>
 </ul>
 
-<p>Si la foto de partida está oscura o tiene a alguien sobrando, arréglala antes con lo que contamos en <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>. Y si tienes una foto antigua de las navidades de los abuelos, una felicitación con esa imagen restaurada suele emocionar más que cualquier ilustración.</p>
+<p>Si la foto de partida está oscura o tiene a alguien sobrando, arréglala antes con lo que contamos en <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>. Y si tienes una foto antigua de las navidades de los abuelos, una felicitación con esa imagen restaurada suele emocionar más que cualquier ilustración. Si lo que buscas es un retrato realista, con jersey navideño y chimenea, la guía de <a href="/guias/fotos-de-navidad-con-ia">fotos de Navidad con IA</a> tiene prompts para cada caso y explica cómo evitar que la IA te cambie la cara.</p>
 
 <h2 id="video">Felicitaciones en vídeo y con voz</h2>
 

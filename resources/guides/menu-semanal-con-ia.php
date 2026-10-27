@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Decidir qué se come cada día cansa más que cocinar. La IA hace en cinco minutos un menú para toda la semana, con la lista de la compra ordenada por pasillos. Lo que no sabe es lo que hay en tu nevera ni lo que le sienta mal a tu familia, si no se lo dices.',
     'category' => 'Práctica',
     'published' => '2026-10-08',
-    'updated' => '2026-10-15',
+    'updated' => '2026-10-27',
     'readingMinutes' => 8,
-    'words' => 1294,
+    'words' => 1320,
     'about' => 'Planificación de menús semanales, recetas y lista de la compra con asistentes de inteligencia artificial',
-    'related' => ['contar-calorias-con-ia', 'organizar-tu-tiempo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'plan-de-entrenamiento-con-ia', 'planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
+    'related' => ['menu-de-navidad-con-ia', 'contar-calorias-con-ia', 'organizar-tu-tiempo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'plan-de-entrenamiento-con-ia', 'planificar-un-viaje-con-ia', 'como-escribir-prompts-efectivos', 'herramientas-de-ia-gratis', 'alucinaciones-de-la-ia', 'gpts-proyectos-y-skills', 'ia-en-excel-y-google-sheets'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien y qué no',
         'los-datos' => 'Los datos que necesita',
@@ -76,7 +76,7 @@ return [
     <li><strong>Las sobras</strong>: «me han sobrado arroz y medio pimiento, ¿qué cena hago en quince minutos?».</li>
 </ul>
 
-<p>Los precios que te dé son orientativos: el modelo no consulta tu supermercado y puede tener datos de hace años, por la misma razón que explicamos en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>. Si quieres llevar el gasto real, anótalo en una hoja de cálculo.</p>
+<p>Los precios que te dé son orientativos: el modelo no consulta tu supermercado y puede tener datos de hace años, por la misma razón que explicamos en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>. Si quieres llevar el gasto real, anótalo en una hoja de cálculo. Y para las comidas grandes de diciembre, con cantidades para muchos comensales y compras que conviene adelantar, está la guía del <a href="/guias/menu-de-navidad-con-ia">menú de Navidad con IA</a>.</p>
 
 <h2 id="reutilizar">Que no tengas que explicarlo cada semana</h2>
 

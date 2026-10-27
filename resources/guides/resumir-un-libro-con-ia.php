@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1118,
     'about' => 'Elaboración de resúmenes de libros, novelas y ensayos con ayuda de asistentes de inteligencia artificial para estudio y lectura',
-    'related' => ['estudiar-con-ia', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'mapas-mentales-y-esquemas-con-ia', 'parafrasear-textos-con-ia', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['comentario-de-texto-con-ia', 'estudiar-con-ia', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'mapas-mentales-y-esquemas-con-ia', 'parafrasear-textos-con-ia', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'problema' => 'Por qué se inventa los libros',
         'texto' => 'Darle el texto, no el título',
