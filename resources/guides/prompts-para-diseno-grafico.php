@@ -8,11 +8,11 @@ return [
     'excerpt' => 'ChatGPT no va a diseñar tu logo, pero sí puede ahorrarte la mitad del trabajo que hay alrededor: entender el encargo, abrir territorios, justificar una paleta o revisar una pieza con ojos frescos. Diez prompts probados, con la estructura que los hace funcionar.',
     'category' => 'Catálogo',
     'published' => '2026-09-25',
-    'updated' => '2026-09-25',
+    'updated' => '2026-10-28',
     'readingMinutes' => 11,
     'words' => 1799,
     'about' => 'Prompts para diseño gráfico',
-    'related' => ['crear-un-logo-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
+    'related' => ['hacer-un-cartel-con-ia', 'crear-un-logo-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA en diseño gráfico',
         'estructura' => 'La estructura de un buen prompt de diseño',

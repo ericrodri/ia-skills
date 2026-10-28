@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Un discurso escrito por la IA sin tu ayuda se reconoce en la segunda frase: podría ser de cualquier boda o de cualquier jubilación. La IA es muy buena ordenando lo que tú recuerdas y ajustándolo para que se diga bien en voz alta. Los recuerdos los pones tú.',
     'category' => 'Práctica',
     'published' => '2026-10-09',
-    'updated' => '2026-10-09',
+    'updated' => '2026-10-28',
     'readingMinutes' => 7,
-    'words' => 1159,
+    'words' => 1179,
     'about' => 'Redacción y ensayo de discursos, brindis y presentaciones orales con asistentes de inteligencia artificial',
-    'related' => ['mensaje-de-pesame-con-ia', 'escribir-un-poema-con-ia', 'presentaciones-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'escribir-correos-con-ia', 'traducir-con-ia'],
+    'related' => ['mensaje-de-despedida-con-ia', 'mensaje-de-pesame-con-ia', 'escribir-un-poema-con-ia', 'presentaciones-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'convertir-texto-a-voz-con-ia', 'como-escribir-prompts-efectivos', 'escribir-correos-con-ia', 'traducir-con-ia'],
     'toc' => [
         'por-que-suena-falso' => 'Por qué suena a plantilla',
         'el-material' => 'El material que solo tienes tú',
@@ -88,7 +88,7 @@ return [
 
 <ul>
     <li><strong>Boda</strong>: una anécdota que hable de la pareja, no solo de tu amigo o familiar. Y el brindis al final, anunciado para que la gente prepare la copa.</li>
-    <li><strong>Despedida o jubilación</strong>: lo que ha cambiado gracias a esa persona, con un ejemplo. Evita los chistes sobre la edad salvo que estés seguro de que le gustan.</li>
+    <li><strong>Despedida o jubilación</strong>: lo que ha cambiado gracias a esa persona, con un ejemplo. Evita los chistes sobre la edad salvo que estés seguro de que le gustan. Si en vez de hablar vas a escribir una tarjeta o un correo, mira el <a href="/guias/mensaje-de-despedida-con-ia">mensaje de despedida con IA</a>.</li>
     <li><strong>Funeral</strong>: aquí la IA solo debe ayudar a ordenar y a recortar. Las palabras, tuyas. Y pide que suavice cualquier frase que pueda sonar fría. Si lo que necesitas es un mensaje breve para la familia, está en <a href="/guias/mensaje-de-pesame-con-ia">mensaje de pésame con IA</a>.</li>
     <li><strong>Trabajo</strong>: si hay diapositivas, el discurso manda y las diapositivas acompañan; el método está en <a href="/guias/presentaciones-con-ia">presentaciones con IA</a>. Comprueba cada cifra contra la fuente: la IA puede inventarlas.</li>
     <li><strong>En otro idioma</strong>: escríbelo primero en el tuyo y después tradúcelo pidiendo frases sencillas de pronunciar; los matices los cuenta la guía de <a href="/guias/traducir-con-ia">traducir con IA</a>.</li>

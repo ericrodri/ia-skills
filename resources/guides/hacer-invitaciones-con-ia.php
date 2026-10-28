@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA dibuja una invitación preciosa en un minuto y escribe mal la fecha en la misma imagen. El truco es separar las dos cosas: la ilustración la hace la IA, el texto lo pones tú encima. Así sale una tarjeta para WhatsApp o para imprimir sin una sola errata.',
     'category' => 'Práctica',
     'published' => '2026-10-19',
-    'updated' => '2026-10-19',
+    'updated' => '2026-10-28',
     'readingMinutes' => 8,
-    'words' => 1314,
+    'words' => 1340,
     'about' => 'Creación de invitaciones para fiestas y celebraciones con asistentes de inteligencia artificial y generadores de imágenes',
-    'related' => ['felicitar-un-cumpleanos-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'escribir-un-discurso-con-ia', 'felicitar-la-navidad-con-ia'],
+    'related' => ['hacer-un-cartel-con-ia', 'felicitar-un-cumpleanos-con-ia', 'crear-imagenes-con-ia', 'crear-stickers-con-ia', 'disfraz-de-halloween-con-ia', 'escribir-un-discurso-con-ia', 'felicitar-la-navidad-con-ia'],
     'toc' => [
         'datos' => 'Los datos que tiene que llevar',
         'texto' => 'El texto: prompt y tono según la fiesta',
@@ -76,7 +76,7 @@ return [
     <li><strong>Fiesta de disfraces o Halloween</strong>: la misma ilustración puede servir de invitación y de idea para el disfraz; mira <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>.</li>
 </ul>
 
-<p>Si vas a hacer pegatinas para las bolsas de chuches o el detalle de los invitados, aprovecha el mismo estilo: en <a href="/guias/crear-stickers-con-ia">crear stickers con IA</a> tienes cómo sacarlas con fondo transparente.</p>
+<p>Si vas a hacer pegatinas para las bolsas de chuches o el detalle de los invitados, aprovecha el mismo estilo: en <a href="/guias/crear-stickers-con-ia">crear stickers con IA</a> tienes cómo sacarlas con fondo transparente. Y si el evento es abierto y necesitas anunciarlo, la guía de <a href="/guias/hacer-un-cartel-con-ia">hacer un cartel con IA</a> aplica el mismo método a un A4 para imprimir.</p>
 
 <h2 id="montar">Montar la tarjeta</h2>
 

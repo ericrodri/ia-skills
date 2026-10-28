@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Casi todas las universidades han pasado de prohibir la IA en el trabajo de fin de grado a permitirla con condiciones. Las condiciones son las que suspenden: usarla donde no toca, no declararlo o entregar una bibliografía que la IA se inventó.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-10-16',
+    'updated' => '2026-10-28',
     'readingMinutes' => 8,
-    'words' => 1308,
+    'words' => 1326,
     'about' => 'Uso de la inteligencia artificial en trabajos de fin de grado y de máster',
-    'related' => ['corregir-ortografia-con-ia', 'parafrasear-textos-con-ia', 'estudiar-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia'],
+    'related' => ['citar-en-apa-con-ia', 'corregir-ortografia-con-ia', 'parafrasear-textos-con-ia', 'estudiar-con-ia', 'alucinaciones-de-la-ia', 'investigar-con-ia-deep-research', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia'],
     'toc' => [
         'normas' => 'Qué dicen las universidades',
         'usos' => 'Usos aceptados y usos que suspenden',
@@ -95,7 +95,7 @@ frases ambiguas, repeticiones y afirmaciones que necesitarían una cita.</code><
 <ul>
     <li><strong>No saques referencias de un chat.</strong> Búscalas en Google Scholar, en la biblioteca de tu universidad o en las bases de datos de tu área.</li>
     <li><strong>Comprueba cada cita</strong> contra el texto original, no contra un resumen.</li>
-    <li><strong>Usa un gestor de referencias</strong> (Zotero, Mendeley) para que las citas salgan de fuentes reales.</li>
+    <li><strong>Usa un gestor de referencias</strong> (Zotero, Mendeley) para que las citas salgan de fuentes reales. Para el formato, la guía de <a href="/guias/citar-en-apa-con-ia">citar en APA con IA</a> explica cómo pedírselo sin que invente datos.</li>
 </ul>
 
 <p>Por qué los modelos inventan con tanta seguridad está explicado en la guía de <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</p>

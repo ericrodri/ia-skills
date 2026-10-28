@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Cuando muere alguien cercano a un amigo o a un compañero, lo difícil no es escribir sino encontrar las palabras. La IA puede ayudarte a ordenarlas, siempre que el recuerdo y el tono los pongas tú.',
     'category' => 'Práctica',
     'published' => '2026-10-23',
-    'updated' => '2026-10-23',
+    'updated' => '2026-10-28',
     'readingMinutes' => 7,
     'words' => 1158,
     'about' => 'Redacción de mensajes de pésame y tarjetas de condolencias con ayuda de asistentes de inteligencia artificial',
-    'related' => ['escribir-un-discurso-con-ia', 'escribir-un-poema-con-ia', 'escribir-correos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos'],
+    'related' => ['mensaje-de-despedida-con-ia', 'escribir-un-discurso-con-ia', 'escribir-un-poema-con-ia', 'escribir-correos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'por-que' => 'Por qué cuesta tanto (y por qué la IA ayuda)',
         'material' => 'Lo que tienes que darle',

@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La IA puede ser el mejor profesor particular que has tenido o la forma más rápida de llegar al examen sin saber nada. La diferencia no está en la herramienta, sino en si le pides respuestas o le pides que te haga pensar.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-10-27',
+    'updated' => '2026-10-28',
     'readingMinutes' => 8,
     'words' => 1332,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['citar-en-apa-con-ia', 'comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',

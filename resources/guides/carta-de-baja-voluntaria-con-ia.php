@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Una carta de baja voluntaria es corta y casi siempre igual, pero un error en la fecha o en el preaviso puede costarte días de sueldo en el finiquito. La IA la redacta en un minuto; lo que tienes que comprobar tú son los datos y los plazos.',
     'category' => 'Práctica',
     'published' => '2026-10-22',
-    'updated' => '2026-10-22',
+    'updated' => '2026-10-28',
     'readingMinutes' => 8,
-    'words' => 1252,
+    'words' => 1273,
     'about' => 'Redacción de cartas de baja voluntaria y renuncia al puesto de trabajo con ayuda de asistentes de inteligencia artificial',
-    'related' => ['entender-tu-nomina-con-ia', 'buscar-trabajo-con-ia', 'escribir-correos-con-ia', 'revisar-un-contrato-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'escribir-una-reclamacion-con-ia'],
+    'related' => ['mensaje-de-despedida-con-ia', 'entender-tu-nomina-con-ia', 'buscar-trabajo-con-ia', 'escribir-correos-con-ia', 'revisar-un-contrato-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'entrevista-de-trabajo-con-ia', 'escribir-una-reclamacion-con-ia'],
     'toc' => [
         'contenido' => 'Qué debe llevar la carta',
         'preaviso' => 'El preaviso y la fecha de efectos',
@@ -96,7 +96,7 @@ return [
     <li><strong>Por burofax</strong>, si la empresa se niega a firmar el recibí o la relación es tensa. Es la vía que deja más constancia.</li>
 </ul>
 
-<p>Durante el preaviso sigues trabajando con normalidad. Al final te corresponde el finiquito: salario de los días trabajados del mes, vacaciones no disfrutadas y la parte proporcional de las pagas extra si no están prorrateadas. No firmes el finiquito como «conforme» si no estás de acuerdo con las cantidades; puedes firmar «no conforme» o «recibí» y revisarlo después. Para comprobar las cantidades, sirve el mismo método que en la guía de <a href="/guias/entender-tu-nomina-con-ia">entender tu nómina con IA</a>.</p>
+<p>Durante el preaviso sigues trabajando con normalidad, y el último día toca despedirse del equipo: en <a href="/guias/mensaje-de-despedida-con-ia">mensaje de despedida con IA</a> tienes cómo escribir ese correo sin dramatismo. Al final te corresponde el finiquito: salario de los días trabajados del mes, vacaciones no disfrutadas y la parte proporcional de las pagas extra si no están prorrateadas. No firmes el finiquito como «conforme» si no estás de acuerdo con las cantidades; puedes firmar «no conforme» o «recibí» y revisarlo después. Para comprobar las cantidades, sirve el mismo método que en la guía de <a href="/guias/entender-tu-nomina-con-ia">entender tu nómina con IA</a>.</p>
 
 <p>Y si te vas porque ya tienes otro trabajo, o para buscarlo, aquí tienes por dónde seguir: <a href="/guias/buscar-trabajo-con-ia">buscar trabajo con IA</a>, <a href="/guias/cv-y-carta-de-presentacion-con-ia">el CV y la carta de presentación</a> y <a href="/guias/entrevista-de-trabajo-con-ia">preparar la entrevista</a>.</p>
 HTML,

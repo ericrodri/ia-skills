@@ -8,11 +8,11 @@ return [
     'excerpt' => 'La investigación profunda con IA no falla inventando fuentes: falla eligiéndolas. Un informe puede tener cuarenta enlaces reales y aun así estar construido sobre lo que era fácil de encontrar en lugar de lo que era cierto.',
     'category' => 'Método',
     'published' => '2026-09-05',
-    'updated' => '2026-09-05',
+    'updated' => '2026-10-28',
     'readingMinutes' => 14,
     'words' => 2341,
     'about' => 'Investigación documental asistida por agentes de IA con búsqueda web',
-    'related' => ['como-usar-perplexity', 'gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
+    'related' => ['citar-en-apa-con-ia', 'como-usar-perplexity', 'gemini-notebook-antes-notebooklm', 'alucinaciones-de-la-ia', 'que-es-un-agente-de-ia'],
     'toc' => [
         'que-es' => 'Qué hace un modo de investigación profunda',
         'no-es' => 'El fallo no es inventar: es seleccionar',

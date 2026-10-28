@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Generar una imagen con IA cuesta diez segundos. Conseguir la imagen que necesitabas cuesta bastante más, y casi siempre por lo mismo: un prompt que describe el tema pero no la foto.',
     'category' => 'Práctica',
     'published' => '2026-09-28',
-    'updated' => '2026-10-16',
+    'updated' => '2026-10-28',
     'readingMinutes' => 8,
-    'words' => 1279,
+    'words' => 1303,
     'about' => 'Generación de imágenes con inteligencia artificial',
-    'related' => ['hacer-invitaciones-con-ia', 'disfraz-de-halloween-con-ia', 'crear-stickers-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
+    'related' => ['hacer-un-cartel-con-ia', 'hacer-invitaciones-con-ia', 'disfraz-de-halloween-con-ia', 'crear-stickers-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'herramientas' => 'Qué herramienta usar',
         'prompt' => 'La estructura de un buen prompt',
@@ -100,7 +100,7 @@ de bloques de madera que sube hacia la derecha, con una pequeña planta
 en el último bloque. Estilo fotográfico minimalista, mucho espacio
 vacío a la izquierda para poner texto. Formato 16:9.</code></pre>
 
-<p>Para piezas más elaboradas de diseño (logotipos, carteles, identidad visual) hay diez ejemplos más en la guía de <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>. Y si lo que buscas es una idea para la piel, en <a href="/guias/disenar-un-tatuaje-con-ia">diseñar un tatuaje con IA</a> explicamos cómo pedir un diseño que se pueda tatuar.</p>
+<p>Para piezas más elaboradas de diseño (logotipos, carteles, identidad visual) hay diez ejemplos más en la guía de <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>, y si necesitas un cartel para un evento o tu negocio, la de <a href="/guias/hacer-un-cartel-con-ia">hacer un cartel con IA</a> explica cómo montarlo sin letras deformadas. Y si lo que buscas es una idea para la piel, en <a href="/guias/disenar-un-tatuaje-con-ia">diseñar un tatuaje con IA</a> explicamos cómo pedir un diseño que se pueda tatuar.</p>
 
 <h2 id="editar">Editar en vez de regenerar</h2>
 
