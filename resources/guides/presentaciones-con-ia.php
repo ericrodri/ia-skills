@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2233,
     'about' => 'Creación de presentaciones y diapositivas con inteligencia artificial',
-    'related' => ['escribir-un-discurso-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
+    'related' => ['hacer-una-infografia-con-ia', 'hacer-un-informe-con-ia', 'escribir-un-discurso-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'errores-al-usar-ia-en-el-trabajo'],
     'toc' => [
         'por-que-no-convence' => 'Por qué la presentación generada de un tirón no convence',
         'titulares' => 'El titular de acción: la técnica que hace el trabajo',
@@ -183,7 +183,7 @@ esperarías la respuesta. No respondas por mí.</code></pre>
 
 <p>Una imagen generada funciona cuando es ilustrativa y abstracta —una portada, una transición de sección, una metáfora visual— y delata cuando pretende ser información: personas con manos raras, gráficos falsos con ejes ilegibles, capturas de pantalla de productos que no existen.</p>
 
-<p>La prueba es sencilla: si la imagen aporta un dato, no puede ser generada. Si aporta ambiente, puede. Y en presentaciones a cliente conviene comprobar además qué dice la política de marca de la empresa sobre imágenes generadas, porque cada vez más marcas tienen una.</p>
+<p>La prueba es sencilla: si la imagen aporta un dato, no puede ser generada. Si aporta ambiente, puede. Y en presentaciones a cliente conviene comprobar además qué dice la política de marca de la empresa sobre imágenes generadas, porque cada vez más marcas tienen una. Cuando la diapositiva tiene que explicar varios datos de un vistazo, prepara una <a href="/guias/hacer-una-infografia-con-ia">infografía con IA</a> a partir de los datos reales; y si el contenido va también por escrito, mira cómo <a href="/guias/hacer-un-informe-con-ia">hacer un informe con IA</a>.</p>
 
 <h2 id="ultimo-tramo">El último tramo no se delega</h2>
 

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1157,
     'about' => 'Diseño de carteles para eventos, actividades y pequeños negocios con herramientas de inteligencia artificial generativa',
-    'related' => ['crear-imagenes-con-ia', 'hacer-invitaciones-con-ia', 'prompts-para-diseno-grafico', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['hacer-una-infografia-con-ia', 'crear-imagenes-con-ia', 'hacer-invitaciones-con-ia', 'prompts-para-diseno-grafico', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'que-hace' => 'Qué hace bien la IA y qué no',
         'texto' => 'Primero el texto',
@@ -82,7 +82,7 @@ return [
     <li><strong>1080 × 1920 píxeles</strong> para historias y estados de WhatsApp.</li>
 </ul>
 
-<p>Lo más práctico es diseñar primero el A4 y después redimensionar, recolocando el texto en cada formato. La guía de <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a> explica cómo preparar el texto de la publicación que acompaña al cartel.</p>
+<p>Lo más práctico es diseñar primero el A4 y después redimensionar, recolocando el texto en cada formato. La guía de <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a> explica cómo preparar el texto de la publicación que acompaña al cartel. Si en lugar de anunciar un evento quieres explicar datos o un proceso, lo que necesitas es una <a href="/guias/hacer-una-infografia-con-ia">infografía hecha con IA</a>.</p>
 
 <h2 id="revisar">Antes de imprimir</h2>
 

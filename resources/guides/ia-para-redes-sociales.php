@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1192,
     'about' => 'Uso de la inteligencia artificial para crear y gestionar contenido en redes sociales',
-    'related' => ['crear-videos-con-ia', 'crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
+    'related' => ['hacer-una-infografia-con-ia', 'crear-videos-con-ia', 'crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'donde' => 'Dónde ayuda y dónde no',
         'voz' => 'Enséñale tu voz primero',
@@ -85,7 +85,7 @@ más de una publicación promocional de cada cuatro.</code></pre>
 
 <p>Los asistentes generan imágenes para ilustrar una publicación, y los editores de diseño y vídeo ya incluyen funciones de IA para quitar fondos, subtitular o recortar un vídeo largo en clips. Cómo pedir una imagen que no parezca de catálogo está en <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>, y lo que puedes y no puedes hacer con ellas legalmente, en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">derechos y uso comercial</a>. Para vídeo, voz y subtítulos, consulta <a href="/guias/video-y-audio-con-ia-en-el-trabajo">vídeo y audio con IA</a>.</p>
 
-<p>Dos avisos: no uses imágenes realistas de personas o lugares que no existen presentándolas como reales, y etiqueta el contenido generado cuando la plataforma lo pida. Las fotos de tu equipo y tu local siguen generando más confianza que cualquier imagen generada.</p>
+<p>Dos avisos: no uses imágenes realistas de personas o lugares que no existen presentándolas como reales, y etiqueta el contenido generado cuando la plataforma lo pida. Las fotos de tu equipo y tu local siguen generando más confianza que cualquier imagen generada. Para explicar datos o un proceso en carrusel, sigue la guía de <a href="/guias/hacer-una-infografia-con-ia">hacer una infografía con IA</a>.</p>
 
 <h2 id="comunidad">Comentarios y mensajes</h2>
 

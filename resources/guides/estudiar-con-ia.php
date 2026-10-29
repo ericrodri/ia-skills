@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1332,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['citar-en-apa-con-ia', 'comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['hacer-una-redaccion-con-ia', 'citar-en-apa-con-ia', 'comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -114,7 +114,7 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
     <li><strong>Permitido y declarado</strong>: puedes usarla, pero tienes que explicar cómo. Es lo habitual en la universidad y en los trabajos de fin de grado, como se detalla en la guía del <a href="/guias/tfg-con-ia">TFG con IA</a>.</li>
 </ul>
 
-<p>Si no está claro, pregunta. Es mucho mejor que tener que explicar después por qué tu trabajo se parece al de otros tres compañeros.</p>
+<p>Si no está claro, pregunta. Es mucho mejor que tener que explicar después por qué tu trabajo se parece al de otros tres compañeros. Para las tareas de escritura, en <a href="/guias/hacer-una-redaccion-con-ia">hacer una redacción con IA</a> tienes un método que respeta esas reglas.</p>
 
 <h2 id="rutina">Una rutina de estudio con IA</h2>
 

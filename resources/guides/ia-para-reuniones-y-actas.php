@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 13,
     'words' => 2244,
     'about' => 'Automatización de actas y resúmenes de reuniones con IA',
-    'related' => ['pasar-audio-a-texto-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
+    'related' => ['hacer-un-informe-con-ia', 'pasar-audio-a-texto-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-esta-resuelto' => 'Lo que está resuelto y lo que no',
         'tipos' => 'Tres formas de grabar, con tres consecuencias distintas',
@@ -153,7 +153,7 @@ Cita la parte de la transcripción en cada caso.</code></pre>
 
 <h2 id="responsable">El acta sigue teniendo un dueño humano</h2>
 
-<p>El error de organización más frecuente es tratar el acta automática como un documento que no requiere aprobación. Si nadie la firma, nadie la corrige, y una tarea mal atribuida se convierte en un malentendido de dos semanas.</p>
+<p>El error de organización más frecuente es tratar el acta automática como un documento que no requiere aprobación. Si nadie la firma, nadie la corrige, y una tarea mal atribuida se convierte en un malentendido de dos semanas. Y si las decisiones de varias reuniones tienen que acabar en un documento para dirección, mira cómo <a href="/guias/hacer-un-informe-con-ia">hacer un informe con IA</a>.</p>
 
 <p>La rutina que funciona cabe en tres pasos: alguien que estuvo en la reunión repasa los bloques de decisiones y tareas —dos minutos, con las citas es rápido—, corrige lo que haga falta, y lo envía él. El acta la manda una persona, no un bot. Eso es lo que hace que la gente la lea y que las correcciones lleguen.</p>
 

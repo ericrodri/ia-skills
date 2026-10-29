@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 6,
     'words' => 1062,
     'about' => 'Corrección ortográfica, gramatical y de puntuación de textos en español con asistentes de inteligencia artificial',
-    'related' => ['parafrasear-textos-con-ia', 'escribir-correos-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'traducir-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['hacer-una-redaccion-con-ia', 'parafrasear-textos-con-ia', 'escribir-correos-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'traducir-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'diferencia' => 'Qué aporta frente al corrector de siempre',
         'prompt' => 'El prompt para corregir sin reescribir',
@@ -99,6 +99,6 @@ return [
 
 <p>Antes de pegar un texto, piensa en lo que contiene. Un contrato, un informe médico o un correo con datos de clientes no deberían ir a una herramienta que no controlas. Quita nombres y datos personales o usa la versión de empresa que tenga tu organización; lo explicamos en <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a>.</p>
 
-<p>Para documentos largos, como un <a href="/guias/tfg-con-ia">TFG</a> o un informe de muchas páginas, corrige por apartados. El modelo se concentra mejor en textos cortos, la lista de cambios se puede revisar y no hay riesgo de que se salte párrafos. Y si el trabajo es académico, consulta las normas de tu universidad sobre el uso de IA: corregir la ortografía suele estar permitido, pero conviene confirmarlo.</p>
+<p>Para documentos largos, como un <a href="/guias/tfg-con-ia">TFG</a> o un informe de muchas páginas, corrige por apartados. El modelo se concentra mejor en textos cortos, la lista de cambios se puede revisar y no hay riesgo de que se salte párrafos. Y si el trabajo es académico, consulta las normas de tu universidad sobre el uso de IA: corregir la ortografía suele estar permitido, pero conviene confirmarlo. Si eres estudiante y lo que quieres es escribir mejor tus textos del colegio, la guía de <a href="/guias/hacer-una-redaccion-con-ia">hacer una redacción con IA</a> explica cómo usarla de profesor.</p>
 HTML,
 ];

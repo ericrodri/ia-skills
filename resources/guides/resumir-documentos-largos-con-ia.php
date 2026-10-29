@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 15,
     'words' => 2407,
     'about' => 'Resumen y análisis de documentos extensos con inteligencia artificial',
-    'related' => ['resumir-un-libro-con-ia', 'revisar-un-contrato-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['hacer-un-informe-con-ia', 'resumir-un-libro-con-ia', 'revisar-un-contrato-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resumir-videos-de-youtube-con-ia', 'traducir-con-ia', 'ventana-de-contexto-conversaciones-largas', 'gemini-notebook-antes-notebooklm', 'investigar-con-ia-deep-research', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'omision' => 'Un resumen no miente: omite',
         'centro' => 'Por qué el centro del documento es el punto débil',
@@ -191,6 +191,6 @@ que has resumido en una línea o menos y di qué contienen.</code></pre>
     <li><strong>Lee entero lo que decide.</strong> Cláusulas críticas, cifras que van a un informe, anexos.</li>
 </ol>
 
-<p>Los seis pasos suman diez minutos sobre los veinte segundos del resumen directo. La diferencia es que al final puedes decir qué has leído y qué no, que es exactamente lo que te van a preguntar si algo sale mal. El resto de fallos que se repiten al trabajar con IA están en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>.</p>
+<p>Los seis pasos suman diez minutos sobre los veinte segundos del resumen directo. La diferencia es que al final puedes decir qué has leído y qué no, que es exactamente lo que te van a preguntar si algo sale mal. El resto de fallos que se repiten al trabajar con IA están en la guía de <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>. Si el resumen es el punto de partida de un documento propio, sigue con <a href="/guias/hacer-un-informe-con-ia">hacer un informe con IA</a>.</p>
 HTML,
 ];

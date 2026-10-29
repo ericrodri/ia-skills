@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1167,
     'about' => 'Uso de asistentes de inteligencia artificial para aprender y practicar el comentario de texto en secundaria, bachillerato y la prueba de acceso a la universidad',
-    'related' => ['estudiar-con-ia', 'resumir-un-libro-con-ia', 'corregir-ortografia-con-ia', 'parafrasear-textos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores'],
+    'related' => ['hacer-una-redaccion-con-ia', 'estudiar-con-ia', 'resumir-un-libro-con-ia', 'corregir-ortografia-con-ia', 'parafrasear-textos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-profesores'],
     'toc' => [
         'por-que-no-copiar' => 'Por qué no sirve pedirle el comentario hecho',
         'pasos' => 'Los pasos del comentario',
@@ -91,6 +91,6 @@ return [
 
 <p>Corrige bien, pero no es infalible. Los fallos más comunes en comentarios de texto son tres: atribuir un texto o una fecha equivocados, ver recursos literarios donde no los hay (o etiquetar mal uno que sí está) y, en Historia, mezclar datos de épocas cercanas. Cuando algo de su corrección te sorprenda, compruébalo en el libro o pregunta a tu profesor; en <a href="/guias/alucinaciones-de-la-ia">las alucinaciones de la IA</a> explicamos por qué inventa con tanta seguridad.</p>
 
-<p>Si eres docente y quieres preparar textos y rúbricas para tus alumnos, la guía de <a href="/guias/ia-para-profesores">IA para profesores</a> recoge cómo hacerlo. Y si eres estudiante, la regla de oro es sencilla: que todo lo que entregues lo hayas escrito tú, y que la IA solo haya hecho de profesor.</p>
+<p>Si eres docente y quieres preparar textos y rúbricas para tus alumnos, la guía de <a href="/guias/ia-para-profesores">IA para profesores</a> recoge cómo hacerlo. Y si eres estudiante, la regla de oro es sencilla: que todo lo que entregues lo hayas escrito tú, y que la IA solo haya hecho de profesor. El mismo método sirve para los textos de opinión y los ensayos: lo explicamos en <a href="/guias/hacer-una-redaccion-con-ia">hacer una redacción con IA</a>.</p>
 HTML,
 ];
