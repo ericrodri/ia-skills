@@ -36,7 +36,7 @@ return [
     'body' => <<<'HTML'
 <p>Pide a cualquier asistente «mejora mi perfil de LinkedIn» y obtendrás un texto impecable: «Profesional apasionado por la innovación, orientado a resultados y con una sólida trayectoria». Es exactamente lo que dicen otros diez mil perfiles, y por eso nadie lo lee. La IA es útil en LinkedIn para otra cosa: hacerte preguntas hasta sacar tus resultados reales, ordenarlos y encontrar las palabras con las que te buscan los reclutadores.</p>
 
-<p>El método, en corto: deja que la IA te entreviste para sacar tus logros, pídele el titular y el extracto a partir de esos datos, cruza tu perfil con ofertas reales para encontrar las palabras clave y comprueba cada cifra antes de publicar. Abajo tienes los prompts de cada paso y ejemplos de antes y después.</p>
+<p>El método, en corto: deja que la IA te entreviste para sacar tus logros, pídele el titular y el extracto a partir de esos datos, cruza tu perfil con ofertas reales para encontrar las palabras clave y comprueba cada cifra antes de publicar. Abajo tienes los prompts de cada paso y ejemplos de antes y después. Si lo que necesitas es una bio corta en tercera persona para una charla o una web, mira <a href="/guias/escribir-una-biografia-con-ia">escribir una biografía con IA</a>.</p>
 
 <h2 id="el-problema">El perfil que suena a todos</h2>
 

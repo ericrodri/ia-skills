@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1165,
     'about' => 'Preparación de oposiciones con asistentes de inteligencia artificial',
-    'related' => ['estudiar-con-ia', 'alucinaciones-de-la-ia', 'gemini-notebook-antes-notebooklm', 'mapas-mentales-y-esquemas-con-ia', 'resumir-documentos-largos-con-ia', 'pasar-audio-a-texto-con-ia'],
+    'related' => ['hacer-un-examen-tipo-test-con-ia', 'estudiar-con-ia', 'alucinaciones-de-la-ia', 'gemini-notebook-antes-notebooklm', 'mapas-mentales-y-esquemas-con-ia', 'resumir-documentos-largos-con-ia', 'pasar-audio-a-texto-con-ia'],
     'toc' => [
         'regla' => 'La regla de oro: el BOE manda',
         'temario' => 'Montar el temario con la IA',
@@ -69,7 +69,7 @@ return [
 
 <blockquote>«A partir del tema 7 que te he subido, crea 15 preguntas tipo test con cuatro opciones y una sola correcta, al estilo de las oposiciones de auxiliar administrativo del Estado. Incluye distractores que se parezcan a la respuesta correcta (plazos cercanos, órganos parecidos). No me des las soluciones hasta que te conteste.»</blockquote>
 
-<p>Después, pide la corrección con el artículo que justifica cada respuesta y compruébalo tú en el texto. Las preguntas que la IA no pueda justificar con un artículo concreto, descártalas. Otro truco útil: pega exámenes de convocatorias anteriores y pide «diez preguntas nuevas con el mismo estilo y dificultad».</p>
+<p>Después, pide la corrección con el artículo que justifica cada respuesta y compruébalo tú en el texto. Las preguntas que la IA no pueda justificar con un artículo concreto, descártalas. Otro truco útil: pega exámenes de convocatorias anteriores y pide «diez preguntas nuevas con el mismo estilo y dificultad». Cómo conseguir distractores que no se descarten a la primera lo contamos en <a href="/guias/hacer-un-examen-tipo-test-con-ia">hacer un examen tipo test con IA</a>.</p>
 
 <h2 id="desarrollo">Temas de desarrollo y supuestos prácticos</h2>
 

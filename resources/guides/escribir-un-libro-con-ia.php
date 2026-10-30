@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1331,
     'about' => 'Escritura de libros de ficción y no ficción con ayuda de asistentes de inteligencia artificial, autoría y publicación',
-    'related' => ['crear-un-cuento-infantil-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ventana-de-contexto-conversaciones-largas', 'imagenes-con-ia-derechos-y-uso-comercial', 'gpts-proyectos-y-skills', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia'],
+    'related' => ['escribir-una-biografia-con-ia', 'crear-un-cuento-infantil-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ventana-de-contexto-conversaciones-largas', 'imagenes-con-ia-derechos-y-uso-comercial', 'gpts-proyectos-y-skills', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia'],
     'toc' => [
         'el-reparto' => 'Qué hace la IA y qué haces tú',
         'idea-e-indice' => 'De la idea al índice',
@@ -50,7 +50,7 @@ return [
 
 <p>Las preguntas te obligan a decidir tú. En no ficción funciona igual: «quiero escribir un libro sobre cómo gestionar un pequeño taller; ¿qué tendría que saber de mis lectores antes de empezar?».</p>
 
-<p><strong>2. Pide varias estructuras.</strong> Con tus respuestas, pide tres índices distintos: uno cronológico, uno que empiece por el final, uno con dos líneas temporales. Quédate con lo mejor de cada uno. En no ficción, pide que cada capítulo responda a una pregunta concreta del lector.</p>
+<p><strong>2. Pide varias estructuras.</strong> Con tus respuestas, pide tres índices distintos: uno cronológico, uno que empiece por el final, uno con dos líneas temporales. Quédate con lo mejor de cada uno. En no ficción, pide que cada capítulo responda a una pregunta concreta del lector. Si el libro cuenta la vida de alguien de tu familia, en <a href="/guias/escribir-una-biografia-con-ia">escribir una biografía con IA</a> explicamos cómo prepararlo a partir de entrevistas.</p>
 
 <p><strong>3. Una línea por capítulo.</strong> Antes de escribir nada, cada capítulo debe tener una frase que diga qué pasa o qué aprende el lector. Si no sabes escribir esa frase, el capítulo no está listo.</p>
 

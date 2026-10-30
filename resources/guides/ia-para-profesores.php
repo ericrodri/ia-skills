@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1359,
     'about' => 'Uso de la inteligencia artificial por el profesorado',
-    'related' => ['resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
+    'related' => ['hacer-un-examen-tipo-test-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
     'toc' => [
         'donde-ahorra' => 'Dónde ahorra tiempo de verdad',
         'que-no' => 'Lo que no conviene delegar',
@@ -74,6 +74,8 @@ return [
     <li><strong>Necesidades concretas</strong>: alumnos con dificultades de lectura, recién llegados que no dominan el idioma, altas capacidades.</li>
     <li><strong>Formato de salida</strong>: una tabla, una ficha para imprimir, diez preguntas tipo test con la respuesta marcada.</li>
 </ul>
+
+<p>Los exámenes tipo test tienen sus propios trucos, sobre todo en las opciones falsas: los explicamos en <a href="/guias/hacer-un-examen-tipo-test-con-ia">hacer un examen tipo test con IA</a>.</p>
 
 <p>Si repites el mismo contexto cada semana, guárdalo en un proyecto o en unas instrucciones fijas. Cómo hacerlo en cada herramienta está en la guía de <a href="/guias/gpts-proyectos-y-skills">GPTs, proyectos y skills</a>.</p>
 

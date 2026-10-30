@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1260,
     'about' => 'Restauración, coloreado y mejora de calidad de fotografías antiguas con inteligencia artificial',
-    'related' => ['animar-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'editar-fotos-con-ia', 'crear-videos-con-ia', 'herramientas-de-ia-gratis', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
+    'related' => ['hacer-un-arbol-genealogico-con-ia', 'escribir-una-biografia-con-ia', 'animar-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'editar-fotos-con-ia', 'crear-videos-con-ia', 'herramientas-de-ia-gratis', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
         'que-hace' => 'Qué puede arreglar la IA y qué no',
         'escanear' => 'Primero, una buena copia digital',
@@ -116,7 +116,7 @@ return [
 
 <ul>
     <li><strong>Guarda tres versiones</strong>: el escaneo original, la restaurada y, si la hay, la coloreada. Pon en el nombre del archivo quién sale y el año aproximado.</li>
-    <li><strong>Indica que está restaurada con IA</strong> si la compartes o la usas en un árbol genealógico, para que nadie la tome por un documento exacto.</li>
+    <li><strong>Indica que está restaurada con IA</strong> si la compartes o la usas en un <a href="/guias/hacer-un-arbol-genealogico-con-ia">árbol genealógico</a>, para que nadie la tome por un documento exacto.</li>
     <li><strong>Para imprimir</strong>, exporta a la máxima resolución y pide una prueba pequeña antes de encargar una copia grande.</li>
     <li><strong>Animarla</strong>: algunas herramientas de vídeo convierten la foto en un clip corto en el que la persona sonríe o gira la cabeza. Emociona, pero es un efecto inventado; cómo hacerlo sin que la cara cambie está en <a href="/guias/animar-una-foto-con-ia">animar una foto con IA</a>.</li>
 </ul>
