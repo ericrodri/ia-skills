@@ -1,0 +1,172 @@
+[
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para convertir tu foto en una figura de acción coleccionable con IA",
+    "description": "Convierte una foto tuya, de tu familia o de tu mascota en una figura coleccionable realista sobre su peana, con caja y accesorios, manteniendo la cara reconocible.",
+    "use_case": "Hacer una figura coleccionable con tu foto para un regalo, una felicitación o tus redes",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto de cuerpo entero, nítida y con buena luz (la postura de la foto será la de la figura) y pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nCrea una figura coleccionable a escala 1/7 de [la persona / las personas / la mascota] de la foto, con estilo y ambiente realistas.\n\nEscena:\n- La figura está sobre [la mesa de un escritorio / una estantería / una mesa de madera], encima de una peana redonda de acrílico transparente sin texto.\n- Detrás, la caja del producto con una ilustración de la figura y el nombre [«NOMBRE»] en letras grandes. [Si no quieres caja, borra esta línea.]\n- Accesorios junto a la figura: [una taza de café / una guitarra / un balón / una cámara / ninguno].\n- Al lado, una pantalla de ordenador mostrando el modelado 3D de la figura. [Opcional.]\n\nAcabado:\n- Plástico pintado con brillo suave, como una figura de colección real.\n- Luz de estudio cálida y fondo desenfocado.\n\nReglas de fidelidad:\n- La cara de la figura debe ser reconocible: mismos rasgos, peinado y color de pelo que en la foto.\n- Respeta la ropa y la postura de la foto.\n- Escribe el nombre de la caja exactamente así: «[NOMBRE]».\n\nVariantes que puedes pedir después:\n- «Hazla como figura de plastilina hecha a mano.»\n- «Hazla como muñeco de punto de ganchillo.»\n- «Pon a las dos personas en la misma peana, abrazadas.»\n\nSi la cara no sale parecida, usa una foto más cercana y de frente y añade: «Mantén los rasgos faciales exactos de la foto»."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para probarte un corte o un color de pelo en tu foto antes de ir a la peluquería",
+    "description": "Ve cómo te quedaría un corte, un flequillo o un tinte sobre tu propia foto, sin que la IA te cambie la cara, y compara varias opciones en un mismo panel.",
+    "use_case": "Decidir un cambio de look y enseñar a la peluquera exactamente lo que quieres",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto tuya de frente, con luz natural, el pelo suelto y sin filtros, y pega el texto. Si quieres comparar varias opciones, pídelas de una en una.\n\nINSTRUCCIONES (en español)\n\nCambia solo el pelo de la persona de la foto. Todo lo demás debe quedar idéntico.\n\nCambio que quiero probar:\n- Corte: [melena corta a la altura de la mandíbula / media melena con capas / corte pixie / con flequillo abierto / degradado corto en los laterales].\n- Color: [el mismo que tengo / castaño chocolate / rubio miel con mechas finas / cobrizo / gris natural].\n- Textura: [liso / ondas suaves / rizos definidos], como quedaría de verdad con mi tipo de pelo, que es [fino / grueso / ondulado / rizado].\n\nReglas de fidelidad:\n- Mantén exactamente la cara, los rasgos, la expresión, el tono de piel y las proporciones de cada persona.\n- No cambies nada que no te haya pedido: mismo encuadre, mismos objetos, misma ropa.\n- Si algo no se puede hacer sin inventar detalles importantes, dímelo en lugar de inventarlo.\n- El pelo nuevo debe tener un nacimiento, un volumen y unas puntas creíbles, no de peluca.\n- Respeta la luz de la foto original en el pelo nuevo.\n\nDespués:\n1. Genera la misma foto con [segunda opción de corte o color] para comparar.\n2. Monta las opciones una al lado de la otra con una etiqueta debajo de cada una.\n3. Dime en dos líneas qué corte favorece más a la forma de mi cara y por qué, sin exagerar.\n\nSi el resultado no convence:\n- Si cambia la cara, responde: «Vuelve a la imagen original y cambia solo [lo pedido]. No toques la cara.»\n- Pide los cambios de uno en uno en lugar de todos a la vez.\n- Si se degrada tras varias ediciones, empieza un chat nuevo con la foto original.\n\nLa foto es orientativa: el resultado real depende de tu pelo. Enséñasela a tu peluquera como referencia, no como promesa."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para probarte ropa en tu foto con IA: ve cómo te queda un look antes de comprarlo",
+    "description": "Viste a la persona de tu foto con una prenda o un look concreto, a partir de la foto de la prenda o de una descripción, sin cambiarle la cara ni el cuerpo.",
+    "use_case": "Ver cómo te queda una prenda que vas a comprar o preparar el look de un evento",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto tuya de cuerpo entero, de frente y con ropa ajustada o sencilla, y, si la tienes, la foto de la prenda. Pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nImagen 1: la persona. Imagen 2: la prenda [si no hay imagen 2, usa esta descripción: chaqueta de lino beige, vestido midi verde botella, traje azul marino…].\n\nViste a la persona de la imagen 1 con [la prenda de la imagen 2 / el look descrito], para [una boda de día / una entrevista de trabajo / el día a día].\n\nCompleta el look con:\n- [Pantalón, falda o parte de abajo: mantener la de la foto / cambiar por …].\n- Calzado: [mantener / cambiar por …].\n- Accesorios: [ninguno / bolso, cinturón, reloj…].\n\nReglas:\n- Mantén exactamente la cara, el peinado, el tono de piel, la complexión y la postura.\n- La prenda debe caer como caería en ese cuerpo, con arrugas y pliegues naturales, sin estilizar la figura.\n- Respeta el color y el estampado de la prenda de la imagen 2 lo más fielmente posible.\n- Mismo fondo y misma luz que la foto original.\n\nDespués:\n1. Haz una segunda versión con [otra prenda o color] para comparar.\n2. Dime qué colores de la paleta del look favorecen más con mi tono de piel y de pelo, en dos o tres líneas.\n\nSi el resultado no convence:\n- Si cambia la cara, responde: «Vuelve a la imagen original y cambia solo [lo pedido]. No toques la cara.»\n- Pide los cambios de uno en uno en lugar de todos a la vez.\n- Si se degrada tras varias ediciones, empieza un chat nuevo con la foto original.\n\nEs una simulación: tallas, tejidos y caídas reales pueden variar. Úsala para decidir, no como prueba exacta."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para ver cómo queda un tatuaje sobre tu piel antes de hacértelo",
+    "description": "Coloca un diseño de tatuaje sobre la foto de tu brazo, espalda o tobillo con la curvatura, la escala y la tinta de un tatuaje real, para decidir tamaño y zona.",
+    "use_case": "Probar el tamaño, la zona y el estilo de un tatuaje antes de pedir cita",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto nítida de la zona del cuerpo (brazo, antebrazo, espalda, tobillo…) con luz natural y, si lo tienes, la imagen del diseño. Pega el texto.\n\nINSTRUCCIONES (en español)\n\nImagen 1: la zona del cuerpo. Imagen 2: el diseño del tatuaje [si no hay imagen 2, usa esta descripción: una golondrina de línea fina, una frase en caligrafía, una flor de acuarela…].\n\nColoca el diseño como un tatuaje real en [la cara interna del antebrazo / el omóplato / el tobillo / la muñeca].\n\n- Tamaño aproximado: [5 cm / 10 cm de alto / del codo a la muñeca].\n- Estilo de tinta: [línea fina negra / tradicional con color / acuarela / sombreado gris].\n- Antigüedad: [recién hecho, con la piel ligeramente enrojecida / ya curado].\n\nReglas:\n- El tatuaje debe seguir la curvatura de la piel y deformarse ligeramente con ella.\n- Respeta la textura de la piel, el vello y los lunares: la tinta va bajo la piel, no pegada encima.\n- No cambies el tono de piel ni el resto de la foto.\n- Mantén las proporciones del diseño; si lleva texto, escríbelo exactamente así: «[TEXTO]».\n\nDespués:\n1. Haz una versión con el diseño un [30 %] más pequeño para comparar.\n2. Prueba la misma pieza en [otra zona] si te subo otra foto.\n\nEl resultado es orientativo. Lleva la imagen a tu estudio como referencia: el tatuador ajustará el diseño a tu piel y a tu anatomía. Si el diseño es de otro artista, pídele permiso o úsalo solo como inspiración."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para quitar los reflejos de las gafas en una foto con IA",
+    "description": "Elimina los brillos y reflejos de los cristales de las gafas para que se vean los ojos, sin quitar las gafas ni cambiar la mirada ni la expresión.",
+    "use_case": "Recuperar un retrato o una foto de perfil en la que los reflejos de las gafas tapan los ojos",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: sube la foto (la de mayor calidad que tengas) y pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nElimina los reflejos y brillos de los cristales de las gafas de [la persona de la foto / la persona de la izquierda].\n\n- Los ojos deben verse con claridad a través de los cristales, con la misma dirección de la mirada que en la foto.\n- Mantén las gafas: misma montura, mismo color y misma forma. No las quites.\n- Conserva el ligero efecto de los cristales graduados (los ojos pueden verse un poco más pequeños o grandes): no lo corrijas.\n- Si el reflejo tapa por completo un ojo, reconstrúyelo copiando la forma, el color y la expresión del otro ojo de la misma persona.\n\nReglas de fidelidad:\n- Mantén exactamente la cara, los rasgos, la expresión, el tono de piel y las proporciones de cada persona.\n- No cambies nada que no te haya pedido: mismo encuadre, mismos objetos, misma ropa.\n- Si algo no se puede hacer sin inventar detalles importantes, dímelo en lugar de inventarlo.\n\nSi el resultado no convence:\n- Si los ojos parecen de otra persona, pide: «Haz los ojos idénticos a los de la foto original en forma y color; solo quita el brillo».\n- Si quitar todo el reflejo queda raro, pide: «Deja un reflejo suave y natural, solo reduce el que tapa los ojos»."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para arreglar una foto de grupo con IA: ojos cerrados, alguien que no mira o salió movido",
+    "description": "Corrige a una persona concreta de una foto de grupo (ojos cerrados, mirando a otro lado, gesto raro) usando otra foto suya de la misma serie, sin tocar al resto.",
+    "use_case": "Salvar la foto de grupo de una boda, una comida familiar o un equipo en la que siempre sale alguien mal",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube la foto de grupo (imagen 1) y, si la tienes, otra foto de la misma serie en la que esa persona salga bien (imagen 2). Pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nEn la imagen 1, corrige solo a [la persona de la camisa azul / la tercera por la izquierda / la niña de la primera fila]:\n- Problema: [tiene los ojos cerrados / está mirando a otro lado / sale movida / tiene un gesto raro].\n- Arreglo: [ojos abiertos mirando a cámara / mirando a cámara / nítida / con una sonrisa natural como la del resto].\n- Usa su cara de la imagen 2 como referencia para que siga siendo ella. [Si no hay imagen 2, usa su propia cara de la imagen 1.]\n\nReglas:\n- No toques a ninguna otra persona del grupo.\n- La cara corregida debe tener la misma luz, nitidez, tamaño y ángulo que el resto de la foto.\n- Mantén su peinado, su ropa y su postura.\n- Si con la información que hay no se puede corregir sin inventar sus rasgos, dímelo.\n\nSi quedan varias personas por arreglar, corrígelas de una en una, en mensajes distintos, comprobando el resultado cada vez.\n\nSi el resultado no convence:\n- Si cambia la cara, responde: «Vuelve a la imagen original y cambia solo [lo pedido]. No toques la cara.»\n- Pide los cambios de uno en uno en lugar de todos a la vez.\n- Si se degrada tras varias ediciones, empieza un chat nuevo con la foto original."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para arreglar una foto oscura o a contraluz con IA sin que parezca editada",
+    "description": "Recupera las caras y los detalles de una foto oscura, de interior o hecha a contraluz, equilibrando luces y sombras sin efecto HDR exagerado ni cambiar a nadie.",
+    "use_case": "Recuperar fotos de interior, de noche o a contraluz en las que no se ve bien a las personas",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: sube la foto original (no una captura) y pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nMejora la luz de esta foto. El problema es que [está muy oscura en general / las caras salen oscuras porque hay una ventana o el sol detrás / es de noche y tiene mucho ruido].\n\nHaz lo siguiente:\n1. Aclara las zonas en sombra, sobre todo las caras, hasta que se vean con naturalidad.\n2. Recupera el cielo o la ventana quemados solo si hay información; si están completamente blancos, déjalos así.\n3. Corrige el balance de blancos si tiene una dominante [amarilla / azul / verde] evidente.\n4. Reduce el ruido sin dejar la piel como plástico.\n\nReglas:\n- Resultado natural, como si la foto se hubiera hecho con buena luz desde el principio.\n- Sin efecto HDR, sin halos alrededor de las personas y sin colores saturados.\n- No cambies caras, expresiones, ropa ni encuadre.\n- No añadas fuentes de luz que no existían.\n\nDespués, dame dos versiones: una más fiel a la luz original y otra algo más luminosa, para elegir.\n\nSi las caras cambian, responde: «Vuelve a la foto original y cambia solo la luz. No modifiques las caras»."
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Prompt para ampliar una foto con IA o pasarla de horizontal a vertical para historias",
+    "description": "Extiende los bordes de una foto de forma coherente para cambiar su formato (de horizontal a vertical o cuadrado) sin recortar a nadie ni deformar la imagen.",
+    "use_case": "Adaptar una foto horizontal a historias de Instagram, a un cartel vertical o a una portada sin perder lo importante",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube la foto y pega el texto. Funciona mejor con fondos sencillos (cielo, pared, paisaje) que con multitudes o texto.\n\nINSTRUCCIONES (en español)\n\nAmplía esta imagen hasta el formato [vertical 9:16 para historias / cuadrado 1:1 / horizontal 16:9 / A4 vertical] extendiendo los bordes, sin recortar ni deformar lo que ya hay.\n\n- Lado que hay que ampliar: [arriba y abajo / los dos laterales / solo por arriba para dejar sitio a un titular].\n- Qué debe aparecer en la zona nueva: [continuación natural del cielo, el suelo y el fondo / más espacio vacío y limpio para poner texto].\n\nReglas:\n- La parte original de la foto debe quedar idéntica, en el mismo sitio y al mismo tamaño.\n- La zona añadida debe continuar la perspectiva, la luz, el color y la textura del original, sin costuras visibles.\n- No añadas personas, animales, texto ni objetos llamativos en la zona nueva.\n- Si una persona está cortada por el borde, completa solo lo imprescindible (un hombro, un brazo) y de forma coherente.\n\nDespués:\n1. Dime si hay alguna zona donde la ampliación pueda notarse, para revisarla.\n2. Si voy a poner texto encima, propón en qué zona quedaría más legible.\n\nSi la unión se nota, pide: «Suaviza la transición entre la foto original y la parte añadida, igualando el color y el grano»."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para quitar la fecha, un texto o un objeto pequeño de una foto con IA",
+    "description": "Borra de una foto propia la fecha impresa de una cámara antigua, un texto, un cable o una mancha, reconstruyendo el fondo sin dejar rastro.",
+    "use_case": "Limpiar fotos propias de detalles que distraen antes de imprimirlas o publicarlas",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: sube la foto y pega el texto. Úsalo solo con fotos tuyas o con permiso: no lo uses para quitar marcas de agua ni firmas de fotos ajenas, porque identifican a su autor.\n\nINSTRUCCIONES (en español)\n\nElimina de esta foto [la fecha naranja de la esquina inferior derecha / el texto que aparece arriba / el cable que cruza el cielo / la mancha de la lente / la papelera del fondo].\n\n- Reconstruye lo que hay detrás de forma coherente con el resto: mismo color, textura, luz y perspectiva.\n- No toques nada más de la foto: personas, colores y encuadre deben quedar idénticos.\n- Si lo que hay que quitar tapa algo importante (una cara, un letrero que no quiero borrar), dímelo antes de inventar.\n\nSi hay varias cosas que quitar, quítalas de una en una, en mensajes distintos.\n\nSi el resultado deja una zona borrosa o rara, pide: «Vuelve a reconstruir esa zona con la misma textura que lo que la rodea»."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para envejecer o rejuvenecer una foto con IA: cómo te verías dentro de 30 años",
+    "description": "Muestra a la persona de la foto con 20, 40 o 70 años, con cambios realistas de piel, pelo y rasgos, sin convertirla en otra persona.",
+    "use_case": "Ver cómo te verías de mayor o de joven, para un regalo, un juego familiar o una felicitación",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto de frente, nítida y sin filtros. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas. No lo uses con fotos de menores para envejecerlos ni para crear imágenes que se puedan hacer pasar por reales.\n\nINSTRUCCIONES (en español)\n\nMuestra a la persona de la foto con [70 años / 50 años / 25 años], tal como podría verse de forma realista.\n\nCambios que debe tener:\n- Piel: [arrugas de expresión en ojos y frente, manchas suaves / piel más lisa y firme].\n- Pelo: [canas progresivas y algo menos de volumen / el mismo pelo con el color natural de su juventud].\n- Rostro: los cambios naturales de la edad en mejillas, mandíbula y párpados, sin exagerar.\n\nReglas:\n- Debe seguir siendo claramente la misma persona: mismos ojos, misma nariz, misma forma de cara, misma expresión.\n- Misma ropa, mismo encuadre y misma luz que la foto original.\n- Resultado realista, sin efecto de filtro de aplicación ni caricatura.\n\nDespués, si quiero:\n1. Monta una secuencia de 4 imágenes de la misma persona: [edad actual], +15, +30 y +45 años.\n2. Haz una versión en la que salgan juntas la persona actual y su versión de [70 años], sentadas en un banco.\n\nEs una simulación, no una predicción: no sirve para saber cómo envejecerás de verdad."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para hacer un retrato de tu mascota como un cuadro clásico",
+    "description": "Convierte la foto de tu perro o gato en un retrato al óleo de época, con traje, fondo de palacio y marco dorado, manteniendo sus manchas y su expresión.",
+    "use_case": "Hacer un regalo original o un cuadro para casa con la foto de tu mascota",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto nítida de tu mascota, con la cara bien visible y a la altura de sus ojos, y pega el texto.\n\nINSTRUCCIONES (en español)\n\nConvierte a [mi perro / mi gata], [nombre], en el protagonista de un retrato al óleo de estilo [aristócrata del siglo XVIII / general napoleónico / reina renacentista / capitán de barco].\n\nComposición:\n- Retrato de medio cuerpo, sentado con porte solemne, mirando [a cámara / ligeramente de lado].\n- Vestuario: [casaca roja con botones dorados y gorguera de encaje / uniforme con medallas / capa de terciopelo con corona].\n- Fondo: [cortinas de terciopelo y columna de mármol / biblioteca antigua / paisaje con barco al fondo].\n- Luz cálida de lateral, como en la pintura clásica, con pinceladas visibles y craquelado suave del barniz.\n- Marco dorado ornamentado alrededor del cuadro. [Si no lo quieres, borra esta línea.]\n\nReglas:\n- El animal debe ser reconocible: mismo color y dibujo del pelo, mismas manchas, misma forma de orejas y ojos.\n- Mantén su expresión: es su retrato, no el de otro perro de la misma raza.\n- No imites el estilo de un pintor concreto por su nombre; usa la descripción de la época.\n- Una placa en el marco con el texto «[NOMBRE]» escrito exactamente así. [Opcional.]\n\nSi quieres imprimirlo, pide al final la versión sin marco, en formato vertical y a la mayor resolución posible."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para convertir una foto en dibujo a lápiz o acuarela con IA",
+    "description": "Transforma una foto en un dibujo a lápiz de grafito o en una acuarela con aspecto hecho a mano, con trazo, papel y textura creíbles y los rasgos reconocibles.",
+    "use_case": "Hacer un regalo, una lámina o una tarjeta con aspecto de dibujo a partir de una foto",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: sube la foto y pega el texto. Funciona mejor con fotos sencillas, bien iluminadas y con pocos elementos.\n\nINSTRUCCIONES (en español)\n\nConvierte esta foto en [un dibujo a lápiz de grafito / una acuarela / un dibujo a tinta con aguada / un dibujo a carboncillo].\n\nEstilo:\n- Aspecto hecho a mano sobre [papel de dibujo blanco con algo de grano / papel de acuarela de grano grueso].\n- [Lápiz: trazos de sombreado visibles, líneas de construcción suaves y zonas sin terminar en los bordes.]\n- [Acuarela: manchas de color con bordes irregulares, algo de agua acumulada y el blanco del papel en las luces.]\n- Nivel de detalle: [boceto suelto / dibujo detallado con sombras trabajadas].\n- Color: [blanco y negro / paleta suave de tres o cuatro colores].\n\nReglas:\n- Las personas o animales deben ser reconocibles: mismos rasgos, proporciones y expresión.\n- Mantén la composición de la foto, pero puedes simplificar el fondo para que destaque lo principal.\n- No imites el estilo de un artista concreto por su nombre.\n- Sin texto ni firma.\n\nDespués, dame una versión enmarcada en un passe-partout blanco, lista para imprimir en [A4 / 20x30]."
+  },
+  {
+    "profession_slug": "ventas",
+    "title": "Prompt para amueblar con IA la foto de un piso vacío para el anuncio de venta o alquiler",
+    "description": "Añade muebles y decoración a la foto de una habitación vacía (home staging virtual) respetando paredes, ventanas y suelo, con el aviso de imagen recreada para el anuncio.",
+    "use_case": "Mejorar las fotos de un piso vacío en Idealista, Fotocasa o Airbnb sin pagar una sesión de home staging",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 15,
+    "prompt_content": "Uso: sube la foto de la habitación vacía, hecha en horizontal, con luz de día y desde una esquina, y pega el texto.\n\nINSTRUCCIONES (en español)\n\nAmuebla esta [salón / dormitorio / cocina / despacho] vacío como si fuera una foto real de un anuncio inmobiliario.\n\nEstilo y público:\n- Estilo: [nórdico cálido / contemporáneo / mediterráneo / clásico actualizado].\n- Público al que va dirigido: [pareja joven / familia con niños / teletrabajo / alquiler turístico].\n- Paleta: [tonos neutros con madera clara / blanco y verde salvia / colores cálidos].\n\nMuebles: [sofá de tres plazas, mesa de centro, alfombra, estantería, plantas / cama de matrimonio, mesitas, lámparas / mesa de comedor para cuatro].\n\nReglas imprescindibles:\n- No cambies nada de la vivienda: paredes, ventanas, puertas, suelo, techo, enchufes, radiadores y vistas deben quedar exactamente iguales.\n- No muevas ni tapes defectos que el comprador debe ver (humedades, grietas, instalaciones).\n- Muebles a escala real, apoyados en el suelo, con sombras coherentes con la luz de las ventanas.\n- Sin personas, sin mascotas y sin texto.\n\nDespués:\n1. Revisa la imagen y dime si algún mueble no cabría en la realidad por las medidas aparentes.\n2. Propón el texto del aviso para el anuncio.\n\nIndica siempre en el anuncio que es una imagen recreada con mobiliario virtual («Imagen amueblada virtualmente») y publica también la foto original. Presentar como real una vivienda distinta a como es puede ser publicidad engañosa."
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Prompt para mejorar la foto de un plato para la carta, Google Maps o Glovo",
+    "description": "Mejora la foto de un plato hecha con el móvil (luz, color, fondo y presentación) sin cambiar la comida, para que se vea apetecible en la carta o en las apps de reparto.",
+    "use_case": "Restaurantes y bares que hacen las fotos de sus platos con el móvil y quieren que vendan",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube la foto del plato hecha con el móvil, desde arriba o en ángulo de 45 grados, y pega el texto.\n\nINSTRUCCIONES (en español)\n\nMejora esta foto de [nombre del plato] para usarla en [la carta / Google Maps / Glovo, Uber Eats o Just Eat / redes sociales].\n\nMejoras:\n1. Luz natural suave de lateral, como junto a una ventana, sin brillos quemados en salsas o aceite.\n2. Color fiel y apetecible: blancos neutros, verdes frescos, tostados dorados. Sin saturar.\n3. Fondo: [la misma mesa pero más limpia / mesa de madera / mármol claro / fondo liso de color …], desenfocado.\n4. Retira migas, manchas en el borde del plato y servilletas arrugadas.\n5. Formato: [cuadrado 1:1 / horizontal 4:3 / vertical 4:5].\n\nReglas imprescindibles:\n- La comida debe ser exactamente la misma: mismas raciones, mismos ingredientes, mismo emplatado y mismo tamaño.\n- No añadas ingredientes, guarniciones ni salsas que el plato no lleva.\n- El plato y los cubiertos deben ser los mismos que en la foto.\n\nLa foto tiene que representar lo que el cliente va a recibir: si el plato que llega no se parece a la foto, la reseña negativa está asegurada y, en las apps de reparto, puede ser motivo de reclamación."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para cambiar la estación o la hora de una foto con IA: nieve, atardecer o noche",
+    "description": "Transforma una foto de exterior para que parezca tomada en otra estación o a otra hora (nevada, otoño, atardecer, noche con luces) manteniendo el lugar y las personas.",
+    "use_case": "Felicitaciones, publicaciones de temporada o ver cómo luce una casa o un local en otra época del año",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube una foto de exterior (calle, fachada, paisaje, jardín) y pega el texto.\n\nINSTRUCCIONES (en español)\n\nTransforma esta foto para que parezca tomada [en invierno con nieve / en otoño / al atardecer / de noche con las luces encendidas / en un día de lluvia].\n\nCambios:\n- Cielo: [nublado y gris / cálido de atardecer con tonos naranjas / noche azul oscuro].\n- Vegetación: [ramas sin hojas con nieve / hojas ocres y rojas en el suelo / la misma].\n- Luz: [luz fría y difusa / luz baja y dorada desde [izquierda/derecha] / farolas y ventanas encendidas].\n- Detalles: [nieve acumulada en tejados, coches y aceras / charcos con reflejos / guirnaldas de luces].\n\nReglas:\n- Mismo lugar, mismo encuadre y mismos edificios, con todas sus ventanas, puertas y letreros.\n- Las personas deben ser las mismas y conservar su cara y postura; adapta solo su ropa si se nota mucho el cambio de estación [opcional].\n- Sombras y reflejos coherentes con la nueva luz.\n- Resultado realista, no de postal ni de pintura.\n\nDespués, si quiero, haz una serie de cuatro con la misma foto: primavera, verano, otoño e invierno, para montar un carrusel o un calendario."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para hacer que una foto del móvil parezca hecha con cámara profesional",
+    "description": "Da a una foto de móvil el aspecto de una cámara réflex: fondo desenfocado natural, mejor separación del sujeto, color cuidado y nitidez, sin cambiar a la persona.",
+    "use_case": "Mejorar retratos y fotos de producto hechas con el móvil para redes, web o perfil profesional",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: sube la foto original del móvil (no una captura) y pega el texto. Usa solo fotos tuyas o de personas que te hayan dado permiso para editarlas.\n\nINSTRUCCIONES (en español)\n\nHaz que esta foto parezca tomada con una cámara profesional y un objetivo de retrato.\n\nCambios:\n1. Desenfoca el fondo de forma natural y progresiva, como con un objetivo de 85 mm a f/1.8: más desenfoque cuanto más lejos esté cada elemento.\n2. El sujeto principal [la persona / el producto] debe quedar nítido, con un recorte limpio en pelo, orejas y bordes.\n3. Color natural y cuidado, con piel realista, sin filtros.\n4. Mejora ligeramente la nitidez de ojos y detalles, sin efecto artificial.\n\nReglas de fidelidad:\n- Mantén exactamente la cara, los rasgos, la expresión, el tono de piel y las proporciones de cada persona.\n- No cambies nada que no te haya pedido: mismo encuadre, mismos objetos, misma ropa.\n- Si algo no se puede hacer sin inventar detalles importantes, dímelo en lugar de inventarlo.\n- No hagas el desenfoque uniforme como un filtro: el suelo cercano debe estar menos desenfocado que el fondo lejano.\n\nSi el borde del pelo queda raro o recortado, pide: «Rehaz el borde del pelo con mechones naturales y una transición suave con el fondo»."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para convertir un boceto o un dibujo en una imagen realista con IA",
+    "description": "Pasa un boceto a mano, un dibujo infantil o un esquema a una imagen realista o a un render, respetando la composición, las formas y las proporciones del dibujo.",
+    "use_case": "Ver un diseño, una idea de producto o el dibujo de un niño convertidos en algo real",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: haz una foto al boceto con buena luz, de frente y sin sombras, súbela y pega el texto.\n\nINSTRUCCIONES (en español)\n\nConvierte este boceto en [una fotografía realista / un render 3D de producto / una ilustración acabada / un juguete real].\n\nQué es el dibujo: [una silla de diseño / la fachada de una casa / un personaje inventado por mi hijo / un logotipo / el plano de una tienda].\n\nMateriales y acabado:\n- Materiales: [madera de roble y metal negro mate / peluche de tela suave / hormigón y vidrio].\n- Colores: [los del dibujo / estos: …].\n- Escenario: [fondo de estudio neutro / en un salón real / en la calle].\n\nReglas:\n- Respeta la composición, las formas y las proporciones del boceto; no lo «mejores» cambiando el diseño.\n- Interpreta las líneas inseguras como lo que el dibujo quería representar, no como defectos.\n- Si una parte del boceto es ambigua, elige la interpretación más sencilla y dime cuál has elegido.\n- Si el dibujo tiene texto, escríbelo exactamente así: «[TEXTO]».\n\nDespués:\n1. Muestra el boceto y el resultado lado a lado.\n2. Si es un producto, dame dos vistas más (lateral y trasera) con el mismo diseño.\n\nSi el dibujo es de un niño, para que lo reconozca como suyo mantén sus «errores» con gracia: los ojos de distinto tamaño o los brazos largos son parte del personaje."
+  }
+]
