@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-06',
     'updated' => '2026-10-06',
     'readingMinutes' => 7,
-    'words' => 1202,
+    'words' => 1227,
     'about' => 'Elaboración de un plan de negocio para emprendedores y autónomos con ayuda de inteligencia artificial',
-    'related' => ['nombre-para-tu-negocio-con-ia', 'ganar-dinero-con-ia', 'ia-para-autonomos-y-pymes', 'investigar-con-ia-deep-research', 'ia-en-excel-y-google-sheets', 'alucinaciones-de-la-ia', 'crear-un-logo-con-ia', 'crear-una-pagina-web-con-ia'],
+    'related' => ['hacer-un-analisis-dafo-con-ia', 'nombre-para-tu-negocio-con-ia', 'ganar-dinero-con-ia', 'ia-para-autonomos-y-pymes', 'investigar-con-ia-deep-research', 'ia-en-excel-y-google-sheets', 'alucinaciones-de-la-ia', 'crear-un-logo-con-ia', 'crear-una-pagina-web-con-ia'],
     'toc' => [
         'el-problema' => 'El error de pedir el plan entero',
         'orden' => 'El orden que funciona',
@@ -82,7 +82,7 @@ return [
 
 <blockquote>«Actúa como un analista de riesgos de un banco que tiene que decidir si me presta [importe]. Con este plan y esta hoja de cálculo, dime las cinco razones por las que lo rechazarías, ordenadas por gravedad, y qué dato o cambio respondería a cada una.»</blockquote>
 
-<p>Repite con «escenario pesimista»: ventas un 30 % por debajo y seis meses más hasta el punto de equilibrio. Si el negocio no aguanta ese escenario con tu colchón de tesorería, es mejor saberlo ahora. Y si todavía estás decidiendo qué negocio montar, en <a href="/guias/ganar-dinero-con-ia">ganar dinero con IA</a> hay formas realistas de empezar con lo que ya sabes hacer.</p>
+<p>Repite con «escenario pesimista»: ventas un 30 % por debajo y seis meses más hasta el punto de equilibrio. Si el negocio no aguanta ese escenario con tu colchón de tesorería, es mejor saberlo ahora. Si el banco o la convocatoria te piden un DAFO, tienes el método para que no salga genérico en <a href="/guias/hacer-un-analisis-dafo-con-ia">hacer un análisis DAFO con IA</a>. Y si todavía estás decidiendo qué negocio montar, en <a href="/guias/ganar-dinero-con-ia">ganar dinero con IA</a> hay formas realistas de empezar con lo que ya sabes hacer.</p>
 
 <h2 id="documento">Paso 5: el documento final</h2>
 

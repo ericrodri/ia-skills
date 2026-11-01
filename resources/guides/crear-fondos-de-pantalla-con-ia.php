@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-31',
     'updated' => '2026-10-31',
     'readingMinutes' => 7,
-    'words' => 1172,
+    'words' => 1193,
     'about' => 'Creación de fondos de pantalla para teléfonos móviles y ordenadores con generadores de imágenes de inteligencia artificial',
-    'related' => ['crear-imagenes-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'crear-stickers-con-ia', 'fotos-de-navidad-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['hacer-un-calendario-con-ia', 'crear-imagenes-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'crear-stickers-con-ia', 'fotos-de-navidad-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'que-hace-bueno' => 'Qué hace bueno a un fondo de pantalla',
         'herramientas' => 'Con qué herramienta hacerlo',
@@ -82,6 +82,6 @@ return [
 
 <p>Después, descárgala en PNG o JPG de buena calidad y ponla desde los ajustes de fondo de pantalla del móvil o del ordenador. Si el sistema la recorta mal, ajusta el encuadre con los dedos o el ratón antes de confirmar.</p>
 
-<p>Una última nota: si quieres compartir o vender tus fondos, revisa antes las condiciones del generador y lee <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">qué derechos tienes sobre las imágenes hechas con IA</a>. Para uso personal no hay problema; para venderlos, sí puede haberlo.</p>
+<p>Una última nota: si quieres compartir o vender tus fondos, revisa antes las condiciones del generador y lee <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">qué derechos tienes sobre las imágenes hechas con IA</a>. Para uso personal no hay problema; para venderlos, sí puede haberlo. Y si te ha gustado una serie de ilustraciones, con el mismo estilo puedes <a href="/guias/hacer-un-calendario-con-ia">hacer un calendario con IA</a> para regalar.</p>
 HTML,
 ];

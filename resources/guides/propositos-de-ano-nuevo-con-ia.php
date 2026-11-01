@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-26',
     'updated' => '2026-10-26',
     'readingMinutes' => 7,
-    'words' => 1092,
+    'words' => 1111,
     'about' => 'Planificación y seguimiento de propósitos de Año Nuevo con asistentes de inteligencia artificial',
-    'related' => ['organizar-tu-tiempo-con-ia', 'plan-de-entrenamiento-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'aprender-ingles-con-ia', 'aprender-ia-desde-cero-plan-de-30-dias', 'menu-semanal-con-ia'],
+    'related' => ['organizar-tu-tiempo-con-ia', 'hacer-un-calendario-con-ia', 'plan-de-entrenamiento-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'aprender-ingles-con-ia', 'aprender-ia-desde-cero-plan-de-30-dias', 'menu-semanal-con-ia'],
     'toc' => [
         'por-que-fallan' => 'Por qué fallan los propósitos',
         'elegir' => 'Elegir pocos y bien',
@@ -85,7 +85,7 @@ return [
     <li>Formación: un <a href="/guias/aprender-ia-desde-cero-plan-de-30-dias">plan de 30 días para aprender IA desde cero</a>.</li>
 </ul>
 
-<p>Si el problema de fondo es la falta de tiempo, empieza por <a href="/guias/organizar-tu-tiempo-con-ia">organizar tu tiempo con IA</a>: sin huecos en la agenda, ningún propósito sobrevive.</p>
+<p>Si el problema de fondo es la falta de tiempo, empieza por <a href="/guias/organizar-tu-tiempo-con-ia">organizar tu tiempo con IA</a>: sin huecos en la agenda, ningún propósito sobrevive. Y si te ayuda verlos cada día, apúntalos en un <a href="/guias/hacer-un-calendario-con-ia">calendario hecho con IA</a> colgado donde no puedas ignorarlo.</p>
 
 <h2 id="seguimiento">Revisar sin abandonar</h2>
 
