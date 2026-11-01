@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1136,
     'about' => 'Resolución y aprendizaje de problemas de matemáticas con asistentes de inteligencia artificial',
-    'related' => ['estudiar-con-ia', 'alucinaciones-de-la-ia', 'ia-para-profesores', 'como-escribir-prompts-efectivos', 'ia-en-excel-y-google-sheets', 'tfg-con-ia'],
+    'related' => ['ayudar-con-los-deberes-con-ia', 'estudiar-con-ia', 'alucinaciones-de-la-ia', 'ia-para-profesores', 'como-escribir-prompts-efectivos', 'ia-en-excel-y-google-sheets', 'tfg-con-ia'],
     'toc' => [
         'por-que-falla' => 'Por qué la IA se equivoca en matemáticas',
         'herramientas' => 'Qué herramienta usar',
@@ -105,6 +105,6 @@ return [
 
 <p>Si tu hijo te pide ayuda con un problema que ya no recuerdas cómo se hacía, la IA te ayuda a ponerte al día en cinco minutos: «Explícame cómo se resuelven los sistemas de ecuaciones por sustitución, como a alguien que lo dio hace veinte años». Así puedes acompañarle sin darle la solución.</p>
 
-<p>Y si te preocupa que la use para copiar, la respuesta no es prohibirla: es pedirle que te explique a ti cómo lo ha resuelto. Si sabe explicarlo, ha aprendido, venga la ayuda de donde venga.</p>
+<p>Y si te preocupa que la use para copiar, la respuesta no es prohibirla: es pedirle que te explique a ti cómo lo ha resuelto. Si sabe explicarlo, ha aprendido, venga la ayuda de donde venga. Para el resto de asignaturas, tienes un método completo en <a href="/guias/ayudar-con-los-deberes-con-ia">ayudar a tus hijos con los deberes con IA</a>.</p>
 HTML,
 ];

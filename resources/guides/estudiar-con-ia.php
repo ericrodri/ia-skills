@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1332,
     'about' => 'Uso de la inteligencia artificial para estudiar',
-    'related' => ['hacer-un-examen-tipo-test-con-ia', 'hacer-una-redaccion-con-ia', 'citar-en-apa-con-ia', 'comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
+    'related' => ['ayudar-con-los-deberes-con-ia', 'hacer-un-examen-tipo-test-con-ia', 'hacer-una-redaccion-con-ia', 'citar-en-apa-con-ia', 'comentario-de-texto-con-ia', 'resumir-un-libro-con-ia', 'parafrasear-textos-con-ia', 'corregir-ortografia-con-ia', 'preparar-oposiciones-con-ia', 'mapas-mentales-y-esquemas-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'aprender-ingles-con-ia', 'tfg-con-ia', 'ia-para-profesores', 'resumir-documentos-largos-con-ia', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'gemini-notebook-antes-notebooklm'],
     'toc' => [
         'trampa' => 'La trampa de la respuesta rápida',
         'tecnicas' => 'Cuatro técnicas que funcionan',
@@ -127,6 +127,6 @@ claras y explícame por qué lo son, para que las corrija yo.</code></pre>
     <li><strong>Repite el paso anterior</strong> unos días después, centrándote en lo que fallaste.</li>
 </ol>
 
-<p>Es más lento que pedirle un resumen y leerlo. También es la única de las dos formas que funciona el día del examen. Con los idiomas pasa lo mismo, y ahí el modo de voz cambia las reglas: tienes un método completo en <a href="/guias/aprender-ingles-con-ia">aprender inglés con IA</a>.</p>
+<p>Es más lento que pedirle un resumen y leerlo. También es la única de las dos formas que funciona el día del examen. Con los idiomas pasa lo mismo, y ahí el modo de voz cambia las reglas: tienes un método completo en <a href="/guias/aprender-ingles-con-ia">aprender inglés con IA</a>. Si eres madre o padre y buscas cómo acompañar a tus hijos, la guía de <a href="/guias/ayudar-con-los-deberes-con-ia">ayudar con los deberes con IA</a> está escrita para ti.</p>
 HTML,
 ];

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1359,
     'about' => 'Uso de la inteligencia artificial por el profesorado',
-    'related' => ['hacer-un-examen-tipo-test-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
+    'related' => ['ayudar-con-los-deberes-con-ia', 'hacer-un-examen-tipo-test-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
     'toc' => [
         'donde-ahorra' => 'Dónde ahorra tiempo de verdad',
         'que-no' => 'Lo que no conviene delegar',
@@ -143,6 +143,6 @@ entendido. No pongas notas.</code></pre>
     <li>Cuando el borrador te salga casi bien a la primera, pasa a la siguiente tarea.</li>
 </ol>
 
-<p>En un mes tendrás cuatro o cinco plantillas que te ahorran horas, y un criterio propio sobre dónde la IA te ayuda y dónde prefieres hacerlo tú.</p>
+<p>En un mes tendrás cuatro o cinco plantillas que te ahorran horas, y un criterio propio sobre dónde la IA te ayuda y dónde prefieres hacerlo tú. Y si las familias te preguntan cómo pueden ayudar en casa sin que la IA haga los deberes, puedes enviarles <a href="/guias/ayudar-con-los-deberes-con-ia">esta guía para padres</a>.</p>
 HTML,
 ];

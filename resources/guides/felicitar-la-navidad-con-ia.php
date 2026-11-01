@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1225,
     'about' => 'Creación de felicitaciones navideñas con herramientas de inteligencia artificial',
-    'related' => ['fotos-de-navidad-con-ia', 'menu-de-navidad-con-ia', 'carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['escribir-una-carta-de-agradecimiento-con-ia', 'fotos-de-navidad-con-ia', 'menu-de-navidad-con-ia', 'carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'mensaje' => 'Un mensaje que no parezca de plantilla',
         'tarjeta' => 'La tarjeta: imagen navideña con tu foto',
@@ -102,7 +102,7 @@ return [
     <li><strong>Picar en falsas felicitaciones</strong>: en estas fechas circulan tarjetas animadas con enlaces fraudulentos. Si recibes una que pide datos o descargar algo, lee <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">estafas con IA</a>.</li>
 </ul>
 
-<p>Si la tarjeta acompaña a un regalo, en <a href="/guias/ideas-de-regalo-y-amigo-invisible-con-ia">ideas de regalo y amigo invisible con IA</a> tienes cómo acertar con él. Y si quieres que la felicitación vaya en verso, en <a href="/guias/escribir-un-poema-con-ia">escribir un poema con IA</a> tienes cómo conseguirlo sin rimas forzadas.</p>
+<p>Si la tarjeta acompaña a un regalo, en <a href="/guias/ideas-de-regalo-y-amigo-invisible-con-ia">ideas de regalo y amigo invisible con IA</a> tienes cómo acertar con él. Y si quieres que la felicitación vaya en verso, en <a href="/guias/escribir-un-poema-con-ia">escribir un poema con IA</a> tienes cómo conseguirlo sin rimas forzadas. Y para dar las gracias por los regalos o por la ayuda de todo el año, mira <a href="/guias/escribir-una-carta-de-agradecimiento-con-ia">escribir una carta de agradecimiento con IA</a>.</p>
 
 <p>Una felicitación hecha con IA funciona igual que una hecha a mano: lo que la gente recuerda no es la técnica, sino que se note que pensaste en ellos. El mismo método vale para el resto del año: en <a href="/guias/felicitar-un-cumpleanos-con-ia">felicitar un cumpleaños con IA</a> tienes cómo ajustar el tono a cada persona.</p>
 HTML,

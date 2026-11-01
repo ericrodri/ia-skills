@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1253,
     'about' => 'Creación de retratos y fotografías navideñas a partir de fotos propias con herramientas de edición de imagen por inteligencia artificial',
-    'related' => ['felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'animar-una-foto-con-ia', 'foto-de-perfil-profesional-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
+    'related' => ['crear-fondos-de-pantalla-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'animar-una-foto-con-ia', 'foto-de-perfil-profesional-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
         'como-funciona' => 'Cómo funciona: editar tu foto, no inventar otra',
         'herramientas' => 'Qué herramienta usar',
@@ -79,7 +79,7 @@ return [
 
 <blockquote>«Convierte esta foto en una ilustración navideña de acuarela, manteniendo los rasgos reconocibles de las tres personas. Fondo con nieve y estrellas, colores cálidos, formato vertical.»</blockquote>
 
-<p>Si la foto va a acabar en una felicitación, la guía de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad con IA</a> explica cómo añadir el texto y prepararla para imprimir o enviar. Y si quieres que la foto se mueva, con la nieve cayendo o un saludo, puedes <a href="/guias/animar-una-foto-con-ia">animarla con IA</a> después.</p>
+<p>Si la foto va a acabar en una felicitación, la guía de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad con IA</a> explica cómo añadir el texto y prepararla para imprimir o enviar. Y si quieres que la foto se mueva, con la nieve cayendo o un saludo, puedes <a href="/guias/animar-una-foto-con-ia">animarla con IA</a> después. También puedes convertir la mejor en el fondo del móvil durante las fiestas siguiendo <a href="/guias/crear-fondos-de-pantalla-con-ia">crear fondos de pantalla con IA</a>.</p>
 
 <h2 id="parecido">Cuando no te pareces a ti</h2>
 

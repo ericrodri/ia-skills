@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1223,
     'about' => 'Redacción de cartas de recomendación laborales y académicas con ayuda de asistentes de inteligencia artificial',
-    'related' => ['carta-de-motivacion-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'escribir-correos-con-ia', 'carta-de-baja-voluntaria-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['escribir-una-carta-de-agradecimiento-con-ia', 'carta-de-motivacion-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'buscar-trabajo-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'escribir-correos-con-ia', 'carta-de-baja-voluntaria-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-es' => 'Qué hace útil una carta de recomendación',
         'estructura' => 'La estructura',
@@ -108,6 +108,6 @@ return [
     <li><strong>Otro idioma</strong>: si la carta debe ir en inglés, mejor escribirla en el propio idioma y traducirla después pidiendo el registro formal; los matices están en la guía de <a href="/guias/traducir-con-ia">traducir con IA</a>.</li>
 </ul>
 
-<p>En resumen: la IA pone el orden y la redacción; los ejemplos, la firma y la responsabilidad son de quien recomienda. Con ese reparto, una carta que antes costaba una tarde está lista en veinte minutos y dice algo que de verdad ayuda.</p>
+<p>En resumen: la IA pone el orden y la redacción; los ejemplos, la firma y la responsabilidad son de quien recomienda. Con ese reparto, una carta que antes costaba una tarde está lista en veinte minutos y dice algo que de verdad ayuda. Cuando la carta llegue a su destino, un agradecimiento breve a quien la firmó cierra bien el círculo; tienes cómo escribirlo en <a href="/guias/escribir-una-carta-de-agradecimiento-con-ia">escribir una carta de agradecimiento con IA</a>.</p>
 HTML,
 ];

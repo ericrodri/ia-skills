@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1171,
     'about' => 'Redacción de mensajes de despedida laboral, de jubilación y de último día de trabajo con ayuda de asistentes de inteligencia artificial',
-    'related' => ['escribir-un-discurso-con-ia', 'carta-de-baja-voluntaria-con-ia', 'mensaje-de-pesame-con-ia', 'escribir-correos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['escribir-una-carta-de-agradecimiento-con-ia', 'escribir-un-discurso-con-ia', 'carta-de-baja-voluntaria-con-ia', 'mensaje-de-pesame-con-ia', 'escribir-correos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'plantilla' => 'Por qué los mensajes de despedida suenan todos igual',
         'material' => 'Lo que tienes que darle a la IA',
@@ -86,6 +86,6 @@ return [
     <li><strong>WhatsApp</strong>: algo más informal, y mejor un mensaje propio en privado que solo un emoji en el grupo.</li>
 </ul>
 
-<p>Un último consejo: no pegues en la IA datos personales de terceros que no necesita, como teléfonos o motivos médicos de una baja. Para escribir un buen mensaje basta con los recuerdos y el tono.</p>
+<p>Un último consejo: no pegues en la IA datos personales de terceros que no necesita, como teléfonos o motivos médicos de una baja. Para escribir un buen mensaje basta con los recuerdos y el tono. Y si lo que quieres es dar las gracias sin que haya despedida de por medio, tienes el método en <a href="/guias/escribir-una-carta-de-agradecimiento-con-ia">escribir una carta de agradecimiento con IA</a>.</p>
 HTML,
 ];

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1185,
     'about' => 'Creación de stickers para aplicaciones de mensajería con generadores de imágenes de inteligencia artificial',
-    'related' => ['quitar-el-fondo-de-una-foto-con-ia', 'dibujos-para-colorear-con-ia', 'disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
+    'related' => ['crear-fondos-de-pantalla-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'dibujos-para-colorear-con-ia', 'disfraz-de-halloween-con-ia', 'crear-imagenes-con-ia', 'meta-ai-en-whatsapp', 'crear-un-avatar-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'felicitar-la-navidad-con-ia'],
     'toc' => [
         'opciones' => 'Tres formas de hacerlo',
         'prompt' => 'El prompt de un buen sticker',
@@ -102,6 +102,6 @@ return [
     <li><strong>Uso comercial</strong>: si quieres stickers para tu negocio o para venderlos, revisa antes <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">los derechos de las imágenes hechas con IA</a>.</li>
 </ul>
 
-<p>Los invitados de una fiesta de Halloween también dan para un paquete; para preparar los disfraces tienes ideas en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Y otra idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos. Si prefieres que los niños los pinten antes de recortarlos, pide los mismos personajes en contorno siguiendo <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>.</p>
+<p>Los invitados de una fiesta de Halloween también dan para un paquete; para preparar los disfraces tienes ideas en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Y otra idea para esta temporada: un paquete con el personaje de la familia con gorro de Papá Noel es una forma original de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad</a> en los grupos. Si prefieres que los niños los pinten antes de recortarlos, pide los mismos personajes en contorno siguiendo <a href="/guias/dibujos-para-colorear-con-ia">dibujos para colorear con IA</a>. Y con el mismo personaje puedes hacer un fondo a juego para el móvil: lo explicamos en <a href="/guias/crear-fondos-de-pantalla-con-ia">crear fondos de pantalla con IA</a>.</p>
 HTML,
 ];
