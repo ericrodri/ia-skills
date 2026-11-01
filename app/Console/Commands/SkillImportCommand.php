@@ -44,10 +44,27 @@ class SkillImportCommand extends Command
             ->pluck('id', 'slug');
 
         $inserted = 0;
+        $updated = 0;
         $skipped = 0;
         $insertedTitles = [];
 
         foreach ($data as $item) {
+            // Con "slug", la entrada corrige una skill ya publicada en vez de
+            // crear otra: la URL no cambia y queda una versión nueva en el
+            // historial con el motivo ("changelog").
+            if (isset($item['slug'])) {
+                $line = $this->updateExisting($item);
+
+                if ($line === null) {
+                    $skipped++;
+                } else {
+                    $updated++;
+                    $insertedTitles[] = $line;
+                }
+
+                continue;
+            }
+
             $professionId = $professions[$item['profession_slug'] ?? ''] ?? null;
 
             if (! $professionId) {
@@ -99,9 +116,81 @@ class SkillImportCommand extends Command
             $this->line($line);
         }
 
-        $this->info("Insertadas: {$inserted} | Omitidas: {$skipped}");
+        $this->info("Insertadas: {$inserted} | Actualizadas: {$updated} | Omitidas: {$skipped}");
 
         return self::SUCCESS;
+    }
+
+    /**
+     * Campos que una corrección puede cambiar. El slug, el autor, los votos y
+     * las métricas nunca se tocan.
+     */
+    private const UPDATABLE = ['title', 'description', 'prompt_content', 'tool_name', 'difficulty', 'estimated_minutes', 'use_case', 'resource_type'];
+
+    private function updateExisting(array $item): ?string
+    {
+        $skill = Skill::where('slug', $item['slug'])->first();
+
+        if (! $skill) {
+            $this->line("  ⚠ No existe la skill {$item['slug']} — omitida");
+
+            return null;
+        }
+
+        if (blank($item['changelog'] ?? null)) {
+            $this->line("  ⚠ Falta el changelog de la corrección de {$item['slug']} — omitida");
+
+            return null;
+        }
+
+        $previousPrompt = $skill->prompt_content;
+        $promptChanged = isset($item['prompt_content']) && $item['prompt_content'] !== $previousPrompt;
+
+        $skill->fill(array_intersect_key($item, array_flip(self::UPDATABLE)));
+
+        if (isset($item['profession_slug'])) {
+            $professionId = Profession::where('slug', $item['profession_slug'])->value('id');
+
+            if ($professionId) {
+                $skill->profession_id = $professionId;
+            }
+        }
+
+        if (! $skill->isDirty()) {
+            $this->line("  · Sin cambios: {$skill->slug}");
+
+            return null;
+        }
+
+        if ($promptChanged) {
+            $skill->version = $skill->version + 1;
+        }
+
+        $skill->save();
+
+        if ($promptChanged) {
+            // Las skills importadas antiguas pueden no tener su versión inicial
+            // guardada: se reconstruye para que el diff tenga con qué comparar.
+            if (! SkillVersion::where('skill_id', $skill->id)->where('version', $skill->version - 1)->exists()) {
+                SkillVersion::create([
+                    'skill_id'       => $skill->id,
+                    'user_id'        => 1,
+                    'version'        => $skill->version - 1,
+                    'prompt_content' => $previousPrompt,
+                    'changelog'      => 'Versión publicada antes del historial',
+                ]);
+            }
+
+            SkillVersion::create([
+                'skill_id'       => $skill->id,
+                'user_id'        => 1,
+                'version'        => $skill->version,
+                'prompt_content' => $skill->prompt_content,
+                'changelog'      => $item['changelog'],
+            ]);
+        }
+
+        return "  ↻ [{$skill->slug}] v{$skill->version}: {$item['changelog']}";
     }
 
     private function uniqueSlug(string $base): string
