@@ -1,0 +1,172 @@
+[
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para transcribir un audio a texto con IA y dejarlo limpio y ordenado",
+    "description": "Convierte una nota de voz, una entrevista o una clase en texto bien puntuado, con hablantes identificados, sin muletillas y con un resumen al final.",
+    "use_case": "Pasar a texto entrevistas, reuniones, clases o notas de voz largas sin escucharlas de nuevo",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube el archivo de audio (o pega la transcripción automática si ya la tienes) y pega el texto. Si el audio es largo, divídelo en partes de 20-30 minutos.\n\nINSTRUCCIONES (en español)\n\nTranscribe este audio a texto en español.\n\nContexto:\n- Qué es: [una entrevista / una reunión de trabajo / una clase / una nota de voz / un pódcast].\n- Personas que hablan: [número y nombres o roles: entrevistadora y candidato, profesor, Ana y Luis…].\n- Vocabulario especial: [nombres propios, marcas, siglas o términos técnicos que aparecen, escritos como deben quedar].\n\nCómo quiero la transcripción:\n1. Texto fiel a lo que se dice: no resumas ni cambies el sentido.\n2. Puntuación y párrafos correctos para que se lea con facilidad.\n3. Quita muletillas y repeticiones sin valor («eh», «o sea», «vale, vale») salvo que cambien el significado. [Si necesitas transcripción literal para un trabajo académico o legal, pide: «mantén las muletillas y las pausas».]\n4. Indica quién habla al principio de cada intervención: **Nombre:**.\n5. Si una parte no se entiende, escribe [inaudible] con el minuto aproximado. No inventes lo que no se oye.\n\nAl final:\n- Un resumen de 5 líneas con las ideas principales.\n- Una lista de tareas, fechas o cifras que se mencionen, con el minuto aproximado.\n\nRevisa siempre los nombres propios y las cifras contra el audio antes de usar el texto: es donde más falla la transcripción automática. Si el audio es de otras personas, asegúrate de tener su permiso para grabarlo y transcribirlo."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para corregir la ortografía y la gramática de un texto sin cambiar tu estilo",
+    "description": "Corrige faltas de ortografía, tildes, puntuación y concordancia según la RAE y te explica cada cambio, sin reescribir el texto ni hacerlo más formal.",
+    "use_case": "Revisar un correo, un trabajo, un post o un documento antes de enviarlo sin que la IA cambie tu forma de escribir",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: pega el texto que quieres revisar debajo de las instrucciones.\n\nINSTRUCCIONES (en español)\n\nCorrige la ortografía y la gramática de este texto según las normas de la RAE.\n\nReglas:\n1. Corrige solo errores: faltas de ortografía, tildes, puntuación, mayúsculas, concordancia y tiempos verbales.\n2. No cambies mi estilo, mi vocabulario ni el orden de las frases. No lo hagas más formal ni más largo.\n3. No corrijas expresiones coloquiales ni regionales si son correctas en el registro del texto.\n4. Si una frase es ambigua o se entiende mal, no la reescribas: señálala y propón una alternativa aparte.\n5. Respeta los nombres propios, las marcas y los términos técnicos tal como están, salvo error evidente.\n\nFormato de salida:\n1. El texto corregido completo, listo para copiar.\n2. Una tabla con cada cambio: texto original | corrección | regla que se aplica (en una frase).\n3. Las frases ambiguas, si las hay, con tu propuesta.\n\nSi no hay errores, dímelo y no cambies nada.\n\nTEXTO:\n[pega aquí tu texto]"
+  },
+  {
+    "profession_slug": "customer-support",
+    "title": "Prompt para escribir un correo formal con IA: petición, reclamación o seguimiento",
+    "description": "Redacta un correo formal claro y educado a partir de unas notas: asunto, saludo adecuado, petición concreta, plazo y despedida, en el tono justo.",
+    "use_case": "Escribir correos a una empresa, la administración, un profesor, un cliente o un superior sin que suenen bruscos ni recargados",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: completa los datos entre corchetes y pega el texto.\n\nINSTRUCCIONES (en español)\n\nEscribe un correo formal con estos datos:\n\n- A quién va: [cargo o empresa: atención al cliente de mi compañía eléctrica, la secretaría de la universidad, mi jefa…]. Nombre si lo sé: [nombre].\n- Quién lo envía: [mi nombre y, si hace falta, cargo, número de cliente, DNI o expediente].\n- Motivo: [qué ha pasado o qué necesito, con fechas y cifras].\n- Qué pido exactamente: [devolución, cita, información, revisión, respuesta antes del día X].\n- Tono: [cordial / firme pero educado / muy formal].\n- Documentos que adjunto: [factura, captura, contrato…].\n\nReglas:\n1. Asunto concreto de menos de diez palabras que diga de qué va el correo.\n2. La petición, en el primer o el segundo párrafo, no al final.\n3. Frases cortas, sin fórmulas anticuadas («por medio de la presente», «sin otro particular»).\n4. Si hay un plazo o un derecho que me ampara, menciónalo sin amenazar.\n5. Máximo 150 palabras en el cuerpo.\n\nDame dos versiones: una más cordial y otra más firme. Después, dime qué dato falta, si falta alguno, para que el correo sea más eficaz.\n\nNo inventes números de referencia, leyes ni plazos que no te haya dado: si crees que aplica alguno, dímelo aparte para que lo compruebe."
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para parafrasear un texto con tus palabras sin perder el sentido",
+    "description": "Reescribe un párrafo o un texto con otras palabras y otra estructura, manteniendo las ideas y el nivel, y te marca qué partes conviene citar en lugar de parafrasear.",
+    "use_case": "Reformular fuentes para un trabajo, adaptar un texto a otro público o evitar repetirte, citando lo que corresponde",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: pega el texto original y completa los datos.\n\nINSTRUCCIONES (en español)\n\nParafrasea este texto.\n\nPara qué es: [un trabajo de clase / un artículo / adaptarlo a otro público / evitar repetir lo que ya escribí].\nPúblico y nivel: [universitario / lectores sin conocimientos previos / profesional del sector].\nLongitud: [parecida al original / un 30 % más corto / más desarrollado].\n\nReglas:\n1. Mantén todas las ideas y datos del original, sin añadir ni quitar información.\n2. Cambia el vocabulario y la estructura de las frases de verdad, no solo sinónimos sueltos.\n3. Conserva exactamente los términos técnicos, nombres propios, cifras y citas textuales.\n4. Que suene natural en español, no a traducción.\n\nDespués del texto:\n- Señala las frases o datos que, por ser muy específicos o literales, deberías citar con su fuente en lugar de parafrasear.\n- Indica de dónde debería salir la referencia si el texto procede de una fuente (autor, año, título), para que la añada yo.\n\nParafrasear no sustituye a citar: si las ideas son de otra persona, la fuente va igualmente.\n\nTEXTO ORIGINAL:\n[pega aquí el texto]"
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para hacer un esquema o un mapa mental de un tema con IA",
+    "description": "Convierte un tema, unos apuntes o un documento en un esquema jerárquico claro y en un mapa mental listo para dibujar o importar en una aplicación.",
+    "use_case": "Estudiar un tema, preparar una presentación u ordenar las ideas de un documento largo",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: pega tus apuntes o el texto, o escribe solo el tema, y completa los datos.\n\nINSTRUCCIONES (en español)\n\nHaz un esquema y un mapa mental de: [tema o «el texto que pego abajo»].\n\n- Para qué lo quiero: [estudiar para un examen / preparar una presentación / entender un informe].\n- Nivel: [secundaria / universidad / profesional].\n- Profundidad: [3 niveles como máximo / muy detallado].\n\nPaso 1. Esquema jerárquico\n- Idea central arriba.\n- Entre 4 y 7 ramas principales, ordenadas de forma lógica (cronológica, causa-efecto o de lo general a lo concreto).\n- Debajo de cada rama, ideas secundarias en frases muy cortas (de 3 a 8 palabras).\n- Marca con ★ lo que es más probable que pregunten o lo más importante.\n\nPaso 2. Mapa mental\nDame el mismo contenido en formato Markdown con viñetas anidadas, para importarlo en una aplicación de mapas mentales como Xmind, MindMeister o Whimsical. [Si usas ChatGPT con imágenes, añade: «Después, dibújalo como un mapa mental limpio, con colores por rama».]\n\nPaso 3. Repaso\nCinco preguntas que pueda responder solo mirando el esquema, para comprobar que lo he entendido.\n\nSi te paso un texto, usa solo su contenido: no añadas información de fuera sin marcarla como «ampliación».\n\nTEXTO:\n[pega aquí tus apuntes, o déjalo vacío si solo das el tema]"
+  },
+  {
+    "profession_slug": "rrhh",
+    "title": "Prompt para preparar una entrevista de trabajo con IA: preguntas, respuestas y simulacro",
+    "description": "Prepara una entrevista para una oferta concreta: preguntas probables, respuestas con ejemplos de tu experiencia (método STAR), preguntas para el entrevistador y un simulacro.",
+    "use_case": "Llegar a una entrevista de trabajo con las respuestas pensadas y practicadas para esa empresa y ese puesto",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 30,
+    "prompt_content": "Uso: pega la oferta de trabajo y un resumen de tu currículum o experiencia. No incluyas datos personales que no hagan falta (DNI, dirección, teléfono).\n\nINSTRUCCIONES (en español)\n\nAyúdame a preparar una entrevista para este puesto.\n\n- Oferta: [pega aquí la oferta].\n- Mi experiencia: [pega tu CV resumido o los puntos clave].\n- Tipo de entrevista: [primera con recursos humanos / técnica / con el responsable del equipo / en inglés].\n- Lo que más me preocupa: [un hueco en el CV / cambio de sector / la pregunta del salario / los nervios].\n\nPaso 1. Las 10 preguntas más probables para este puesto, incluidas las de comportamiento («cuéntame una vez que…»).\n\nPaso 2. Para cada una, una respuesta modelo de menos de un minuto hablada, basada en mi experiencia real y con estructura STAR (situación, tarea, acción, resultado). No inventes logros: si falta un ejemplo, dime qué tipo de experiencia mía encajaría y yo la completo.\n\nPaso 3. Cómo responder a lo que me preocupa, con dos o tres frases que pueda adaptar.\n\nPaso 4. Cinco preguntas inteligentes para hacer al final, específicas de esta empresa y este puesto.\n\nPaso 5. Simulacro: hazme las preguntas de una en una, espera mi respuesta y dame una valoración breve (qué funciona, qué sobra, qué falta) antes de pasar a la siguiente.\n\nAntes de la entrevista, comprueba en la web de la empresa cualquier dato que menciones sobre ella."
+  },
+  {
+    "profession_slug": "rrhh",
+    "title": "Prompt para escribir una carta de presentación que no suene a plantilla",
+    "description": "Redacta una carta de presentación para una oferta concreta, conectando tu experiencia con lo que pide el puesto, en menos de 250 palabras y sin frases hechas.",
+    "use_case": "Acompañar una candidatura con una carta personalizada que se lea entera",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: pega la oferta y tu experiencia, y completa los datos.\n\nINSTRUCCIONES (en español)\n\nEscribe una carta de presentación para esta oferta.\n\n- Oferta: [pega aquí la oferta o los requisitos principales].\n- Empresa: [nombre y algo concreto que sepas de ella: un proyecto, un producto, una noticia].\n- Mi experiencia relevante: [3-5 puntos con datos: años, logros con cifras, herramientas].\n- Por qué me interesa este puesto de verdad: [motivo concreto].\n- Tono: [profesional y cercano / formal].\n\nReglas:\n1. Menos de 250 palabras, en tres o cuatro párrafos.\n2. Primera frase específica de esta empresa y este puesto, nada de «Por medio de la presente me dirijo a ustedes».\n3. Conecta dos o tres requisitos de la oferta con ejemplos concretos de mi experiencia. Sin adjetivos vacíos («proactivo», «apasionado», «orientado a resultados»).\n4. Cierra proponiendo una conversación, sin suplicar.\n5. No inventes experiencia, cifras ni títulos que no te haya dado.\n\nDame la carta y, aparte, las tres frases que más tendría que personalizar si la reutilizo para otra oferta."
+  },
+  {
+    "profession_slug": "rrhh",
+    "title": "Prompt para hacer un examen tipo test con IA a partir de tus apuntes",
+    "description": "Crea preguntas tipo test con cuatro opciones a partir de un temario o unos apuntes, con distractores creíbles, la respuesta correcta explicada y distintos niveles de dificultad.",
+    "use_case": "Profesores que preparan exámenes y estudiantes que quieren ponerse a prueba antes de un examen o una oposición",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: pega los apuntes, el tema o el texto del que deben salir las preguntas.\n\nINSTRUCCIONES (en español)\n\nCrea un examen tipo test a partir del texto que pego abajo.\n\n- Número de preguntas: [10 / 20 / 30].\n- Nivel: [secundaria / universidad / oposición / formación de empresa].\n- Dificultad: [mezcla: 30 % fácil, 50 % media, 20 % difícil].\n- Penalización por error, si la hay: [ninguna / un tercio].\n\nReglas:\n1. Usa solo información del texto. Si una pregunta necesita algo que no está, no la hagas.\n2. Cuatro opciones por pregunta (a, b, c, d) y una sola correcta.\n3. Distractores creíbles: errores típicos de alguien que ha estudiado a medias, no opciones absurdas.\n4. Evita «todas las anteriores», «ninguna de las anteriores» y las negaciones dobles.\n5. Reparte la respuesta correcta entre a, b, c y d de forma equilibrada.\n6. Cubre todo el temario, no solo el principio.\n\nFormato de salida:\n1. El examen sin soluciones, listo para imprimir.\n2. La plantilla de respuestas con una explicación de una línea por pregunta y el fragmento del texto en que se basa.\n\n[Si eres estudiante: después, hazme las preguntas de una en una y corrígeme al momento.]\n\nTEXTO:\n[pega aquí los apuntes o el tema]"
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para crear una imagen realista con IA que no parezca hecha con IA",
+    "description": "Genera fotografías realistas desde cero describiendo cámara, luz, textura e imperfecciones naturales, para evitar el aspecto plástico y demasiado perfecto típico de la IA.",
+    "use_case": "Crear imágenes realistas para un blog, una presentación, redes o un proyecto sin recurrir a bancos de imágenes",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: completa los datos y pega el texto en ChatGPT o Gemini con la generación de imágenes activada.\n\nINSTRUCCIONES (en español)\n\nGenera una fotografía realista de: [describe la escena: una mujer de unos 50 años leyendo en una cafetería de barrio, un taller de carpintería con herramientas, un plato de lentejas en una mesa de madera…].\n\nFotografía:\n- Tipo de cámara y objetivo: [foto de móvil / cámara réflex con objetivo de 35 mm / teleobjetivo].\n- Luz: [luz natural de ventana a media mañana / luz de tarde cálida / fluorescente de oficina].\n- Encuadre: [plano medio / primer plano / plano general], a la altura de los ojos.\n- Momento: espontáneo, como si nadie posara.\n\nRealismo (muy importante):\n1. Textura real: poros de la piel, arrugas de la ropa, polvo, desgaste y pequeñas manchas.\n2. Imperfecciones naturales: algo de grano, un objeto ligeramente desordenado, luz no perfecta.\n3. Colores naturales, sin saturación ni contraste exagerados.\n4. Proporciones correctas en manos, dedos, ojos y dientes.\n5. Sin texto, sin marcas comerciales reconocibles y sin logos.\n6. Nada de aspecto de anuncio, piel de porcelana ni fondo de estudio salvo que lo pida.\n\nFormato: [horizontal 3:2 / vertical 4:5 / cuadrado].\n\nSi el resultado parece artificial, pide: «Hazla menos perfecta: más grano, luz más irregular y piel con textura real». Si la imagen representa a una persona realista y la vas a publicar, indica que está generada con IA."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para crear un personaje que salga igual en varias imágenes con IA",
+    "description": "Diseña un personaje con una ficha visual fija y una hoja de referencia, y te da el texto para reutilizarlo en nuevas escenas sin que cambie la cara, la ropa ni el estilo.",
+    "use_case": "Cuentos ilustrados, cómics, mascotas de marca o series de publicaciones en las que el mismo personaje debe aparecer siempre igual",
+    "tool_name": "Gemini",
+    "difficulty": "beginner",
+    "estimated_minutes": 15,
+    "prompt_content": "Uso: pega el texto. Para las escenas siguientes, sube siempre la hoja de referencia que se genere en el paso 2 junto con la nueva instrucción.\n\nINSTRUCCIONES (en español)\n\nQuiero crear un personaje que aparezca igual en muchas imágenes.\n\nPaso 1. Ficha del personaje\nAyúdame a definir una ficha visual cerrada con: edad aparente, complexión, forma de la cara, color y peinado del pelo, color de ojos, rasgos distintivos (gafas, pecas, cicatriz), ropa habitual con colores exactos, accesorio característico y estilo de dibujo [ilustración plana / acuarela infantil / 3D de animación / realista].\nMi idea: [describe al personaje: una niña exploradora de 8 años, un perro mascota de una panadería, un señor mayor inventor…].\n\nPaso 2. Hoja de referencia\nGenera una hoja de personaje sobre fondo blanco con: vista de frente, de perfil y de espaldas, tres expresiones (alegre, sorprendida, enfadada) y la paleta de colores con su nombre. Mismo estilo en todas.\n\nPaso 3. Texto fijo\nEscribe un párrafo de descripción del personaje de unas 60 palabras que yo pueda pegar al principio de cada nueva petición.\n\nPaso 4. Primera escena\nUsando la hoja de referencia, genera al personaje en: [escena]. Mantén exactamente la cara, el pelo, la ropa, los colores y el estilo de la hoja.\n\nPara cada escena nueva: sube la hoja de referencia, pega el párrafo del paso 3 y describe solo la acción y el lugar. Si algo cambia, responde: «Corrige [el detalle] para que sea igual que en la hoja de referencia».\n\nNo pidas que se parezca a un personaje existente de una película o una marca: describe sus rasgos con tus palabras."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para hacer un logo con ChatGPT o Gemini: propuestas, variantes y qué hacer después",
+    "description": "Crea propuestas de logo a partir de un brief corto, con variantes en color, blanco y negro e icono, y una lista de lo que hay que hacer para convertirlo en un logo profesional.",
+    "use_case": "Emprendedores y pequeños negocios que necesitan una primera propuesta de logo o ideas para llevar a un diseñador",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 15,
+    "prompt_content": "Uso: completa el brief y pega el texto en ChatGPT o Gemini con la generación de imágenes activada.\n\nINSTRUCCIONES (en español)\n\nQuiero un logo para mi negocio.\n\nBrief:\n- Nombre exacto: «[NOMBRE]» (escríbelo exactamente así, letra a letra).\n- A qué se dedica: [descripción en una frase].\n- Público: [a quién vende].\n- Tres palabras que debe transmitir: [cercano, artesanal, fiable…] y una que debe evitar: [infantil, frío…].\n- Colores: [preferencias o «propónmelos tú»].\n- Dónde se va a usar: [rótulo, redes, web, etiquetas, bordado…].\n\nPaso 1. Antes de dibujar, propón tres conceptos distintos en texto (idea, símbolo, tipo de letra y colores) y por qué encaja cada uno.\n\nPaso 2. Cuando elija uno, genera el logo:\n- Diseño plano, sin degradados ni sombras, sobre fondo blanco.\n- Formas simples que se reconozcan a 32 píxeles.\n- Texto perfectamente legible y sin faltas.\n\nPaso 3. Variantes del concepto elegido: horizontal, solo icono, en negro sobre blanco y en blanco sobre fondo de color.\n\nPaso 4. Dime qué tendría que hacer para usarlo de verdad: vectorizarlo, sustituir la tipografía por una fuente real con licencia comercial, comprobar que no se parece a una marca registrada en la base de datos de la OEPM y registrarlo si me interesa.\n\nUn logo generado con IA es un punto de partida: revisa con un diseñador o vectoriza antes de imprimir rótulos o merchandising."
+  },
+  {
+    "profession_slug": "product-management",
+    "title": "Prompt para resumir un PDF o un documento largo con IA sin perder lo importante",
+    "description": "Resume un informe, un contrato, una normativa o un estudio largo por niveles: una línea, un párrafo y un resumen por secciones, con cifras, plazos y obligaciones señaladas y la página de cada dato.",
+    "use_case": "Entender rápido un documento largo y saber qué partes hay que leer completas",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: sube el PDF o pega el texto. Si es un documento confidencial, usa una herramienta o un plan que permita trabajar con esa información.\n\nINSTRUCCIONES (en español)\n\nResume este documento.\n\n- Qué es: [un informe / un contrato / una normativa / un estudio / unas actas].\n- Para qué lo necesito: [decidir si lo firmo / preparar una reunión / estudiar / contárselo a mi equipo].\n- Lo que más me interesa: [plazos, costes, obligaciones, conclusiones, riesgos…].\n\nFormato del resumen:\n1. En una línea: de qué trata y cuál es la conclusión o la decisión principal.\n2. En un párrafo de unas 80 palabras: lo esencial para alguien que no lo va a leer.\n3. Por secciones: dos o tres viñetas por cada apartado del documento, con su número de página.\n4. Tabla de datos clave: cifras, fechas, plazos, importes y obligaciones, con la página donde aparece cada uno.\n5. Lo que debería leer entero: las partes que no se pueden resumir sin perder algo importante, y por qué.\n6. Dudas o contradicciones que hayas encontrado en el documento.\n\nReglas:\n- Usa solo lo que dice el documento. Si algo no está claro, dilo en lugar de suponer.\n- Cita textualmente las frases clave que tengan consecuencias (obligaciones, penalizaciones, excepciones).\n\nComprueba en el original los datos que vayas a usar para decidir algo: el resumen es una guía de lectura, no un sustituto."
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Prompt para traducir un texto con IA manteniendo el tono y los términos de tu marca",
+    "description": "Traduce textos de web, producto, correos o redes adaptándolos al país de destino: mismo tono, glosario de términos fijo, unidades y formatos locales, y una lista de puntos para que un nativo revise.",
+    "use_case": "Traducir contenido comercial o de marca a otros idiomas sin que suene a traducción automática",
+    "tool_name": "Claude",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "prompt_content": "Uso: pega el texto y completa los datos. Para textos legales o médicos, la revisión de un traductor profesional es imprescindible.\n\nINSTRUCCIONES (en español)\n\nTraduce este texto de [idioma de origen] a [idioma de destino] para [país o mercado: inglés de Estados Unidos, portugués de Brasil, francés de Francia…].\n\n- Tipo de texto: [web, ficha de producto, correo a clientes, publicación en redes, presentación].\n- Tono: [cercano y directo / profesional / divertido], igual que en el original.\n- Glosario fijo (no traducir o traducir siempre así): [nombre del producto, eslogan, términos técnicos: original → traducción].\n\nReglas:\n1. Adapta, no traduzcas palabra por palabra: expresiones, ejemplos y referencias culturales que se entiendan en el país de destino.\n2. Mantén el formato: títulos, listas, negritas y enlaces en su sitio.\n3. Convierte monedas, unidades, fechas y formatos de número al uso local solo si te lo pido: [sí / no].\n4. Respeta la longitud aproximada si es para un espacio limitado (botones, anuncios, asuntos de correo).\n5. Si un juego de palabras o un eslogan no funciona en el otro idioma, propón dos alternativas y explícalas.\n\nFormato de salida:\n1. La traducción lista para usar.\n2. Una tabla con las decisiones dudosas: original | traducción | por qué.\n3. Una lista breve de lo que debería revisar un hablante nativo antes de publicar.\n\nTEXTO:\n[pega aquí el texto]"
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Prompt para hacer una presentación de PowerPoint con IA: guion, diapositivas y notas",
+    "description": "Convierte un tema o un documento en una presentación completa: estructura, texto de cada diapositiva, idea de imagen o gráfico y notas del orador para el tiempo que tengas.",
+    "use_case": "Preparar una presentación de clase, de trabajo o para un cliente en poco tiempo y con un hilo claro",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 20,
+    "prompt_content": "Uso: completa los datos y pega el documento o tus notas si los tienes.\n\nINSTRUCCIONES (en español)\n\nPrepara una presentación sobre: [tema].\n\n- Público: [clase de bachillerato / comité de dirección / cliente / congreso].\n- Objetivo: [informar / convencer de una decisión / enseñar a hacer algo].\n- Duración: [10 / 20 / 45 minutos].\n- Material de partida: [pega tus notas, el informe o los datos; si no hay, déjalo vacío].\n\nPaso 1. Estructura\nUn hilo con principio, desarrollo y cierre, con el mensaje principal en una frase. Calcula una diapositiva por cada 1-2 minutos.\n\nPaso 2. Diapositivas\nPara cada una:\n- Título que sea una afirmación («Las ventas cayeron por el canal online»), no una etiqueta («Ventas»).\n- Como mucho tres viñetas de menos de diez palabras.\n- Qué poner como apoyo visual: gráfico (con tipo y datos), imagen o esquema.\n- Notas del orador: lo que hay que decir, en frases que se puedan leer en voz alta.\n\nPaso 3. Cierre\nDiapositiva final con la conclusión y la petición o el siguiente paso. Tres preguntas probables del público con su respuesta.\n\nFormato: dámelo diapositiva por diapositiva. [Si usas ChatGPT, añade al final: «Genera el archivo .pptx con un diseño limpio de dos colores».]\n\nUsa solo los datos que te doy: si falta alguno para una diapositiva, márcalo con [DATO PENDIENTE] en lugar de inventarlo."
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Prompt para hacer una infografía con IA a partir de un texto o unos datos",
+    "description": "Convierte un texto, un proceso o unos datos en una infografía vertical: estructura en bloques, iconos, cifras destacadas y la imagen generada con texto legible.",
+    "use_case": "Explicar un proceso, un informe o unas cifras en una sola imagen para redes, clase o una presentación",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 15,
+    "prompt_content": "Uso: pega el texto o los datos y completa los datos. Para la imagen, usa ChatGPT o Gemini con la generación de imágenes activada.\n\nINSTRUCCIONES (en español)\n\nCrea una infografía a partir de este contenido.\n\n- Tema: [título provisional].\n- Público: [estudiantes / clientes / equipo interno / redes sociales].\n- Formato: [vertical 4:5 para Instagram / vertical alargada para web / horizontal 16:9 para presentación].\n- Estilo: [plano y moderno / corporativo / infantil], con los colores [paleta o colores de marca].\n\nPaso 1. Estructura en texto\n- Título de menos de ocho palabras y una entradilla de una línea.\n- Entre 4 y 6 bloques, cada uno con un icono sugerido, un titular corto y una o dos líneas de texto.\n- Las cifras clave destacadas en grande.\n- Fuente de los datos al pie.\nEnséñame la estructura antes de generar la imagen.\n\nPaso 2. Imagen\nCuando la apruebe, genera la infografía con:\n- Todo el texto exactamente como en la estructura, sin faltas.\n- Jerarquía clara, mucho espacio en blanco y lectura de arriba abajo.\n- Iconos sencillos y coherentes entre sí.\n\nSi alguna palabra sale mal escrita en la imagen, pide: «Corrige solo el texto de [bloque] para que diga exactamente: …». Si hay mucho texto, genera la imagen sin textos y añádelos después en Canva o PowerPoint para que queden perfectos.\n\nCONTENIDO:\n[pega aquí el texto o los datos]"
+  },
+  {
+    "profession_slug": "customer-support",
+    "title": "Prompt para responder a una reseña negativa en Google con IA",
+    "description": "Escribe una respuesta pública a una reseña negativa que reconoce el problema, da tu versión sin discutir, ofrece una solución y cuida lo que leerán los próximos clientes.",
+    "use_case": "Negocios con ficha en Google Maps, TripAdvisor o apps de reparto que reciben críticas y no saben cómo contestar",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "prompt_content": "Uso: pega la reseña y completa los datos de lo que pasó.\n\nINSTRUCCIONES (en español)\n\nAyúdame a responder a esta reseña negativa de mi negocio.\n\n- Negocio: [tipo y nombre: restaurante, peluquería, tienda online…].\n- Reseña (texto y estrellas): [pega aquí].\n- Lo que pasó según nosotros: [hechos, sin adjetivos].\n- ¿Tiene razón en algo? [sí, en… / no / en parte].\n- Qué podemos ofrecer: [invitarle a volver, devolución, hablar por teléfono, nada].\n- Firma: [nombre de quien responde y cargo].\n\nReglas:\n1. Menos de 100 palabras. Agradece la reseña y llama a la persona por su nombre si aparece.\n2. Reconoce lo que sea cierto sin excusas. Si no tiene razón, explica los hechos con calma, sin acusar ni ironizar.\n3. Ofrece una vía privada para resolverlo (teléfono o correo), sin pedir que retire la reseña.\n4. Nada de datos personales del cliente ni detalles de su pedido que no haya publicado él.\n5. Piensa en quien leerá la respuesta mañana: que vea un negocio que escucha y resuelve.\n\nDame dos versiones: una si el cliente tiene razón y otra si no la tiene. Si la reseña contiene insultos, amenazas o datos falsos graves, dímelo y explícame cómo denunciarla en la plataforma en lugar de responder."
+  },
+  {
+    "profession_slug": "rrhh",
+    "title": "Prompt para adaptar tu currículum a una oferta de trabajo con IA",
+    "description": "Ajusta tu CV a una oferta concreta: detecta las palabras clave que pide, reescribe tu experiencia con logros medibles y te dice qué falta, sin inventar nada.",
+    "use_case": "Mandar un currículum distinto y mejor dirigido a cada oferta, que pase los filtros automáticos y lo lea una persona",
+    "tool_name": "ChatGPT",
+    "difficulty": "beginner",
+    "estimated_minutes": 15,
+    "prompt_content": "Uso: pega la oferta y tu currículum actual. Quita antes los datos que no hacen falta (DNI, dirección completa, foto, estado civil).\n\nINSTRUCCIONES (en español)\n\nAdapta mi currículum a esta oferta.\n\n- Oferta: [pega aquí la oferta].\n- Mi currículum: [pega aquí tu CV en texto].\n- País y sector: [España, sector…], para usar las convenciones habituales.\n\nPaso 1. Análisis\n- Las 10 palabras clave y requisitos más importantes de la oferta.\n- Cuáles cumplo y dónde aparece en mi CV, cuáles cumplo pero no se ven, y cuáles no cumplo.\n\nPaso 2. CV adaptado\n- Un perfil de tres líneas dirigido a este puesto.\n- La experiencia reordenada para que lo más relevante vaya primero.\n- Cada puesto con 3-5 viñetas que empiecen por un verbo de acción y, cuando sea posible, un resultado medible. Si no tengo la cifra, pon [CIFRA] para que la complete yo.\n- Las palabras clave de la oferta incluidas de forma natural donde sean ciertas.\n- Una página si tengo menos de diez años de experiencia; dos como máximo.\n\nPaso 3. Lo que falta\nQué requisito importante no cubro y cómo podría compensarlo en la carta o en la entrevista.\n\nRegla fija: no inventes experiencia, títulos, herramientas ni cifras. Solo reescribe y ordena lo que es verdad."
+  }
+]
