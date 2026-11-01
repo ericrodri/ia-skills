@@ -339,18 +339,20 @@ function submitComment() {
                     </div>
 
                     <!-- Instalación rápida para Plugins y Skills de Claude Code -->
+                    <!--
+                        Cada skill o plugin de terceros se instala distinto (marketplace
+                        de plugins, `npx skills add`, copia manual), así que aquí no se
+                        inventa un comando: se remite a la sección de instalación de la
+                        ficha, que es la que lleva los comandos verificados del repo.
+                    -->
                     <div v-if="skill.resource_type === 'claude_plugin'" class="mt-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700">
-                        <p class="text-xs font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider mb-2">Instalación — Plugin de Claude Code</p>
-                        <pre class="text-xs text-amber-900 dark:text-amber-200 font-mono whitespace-pre-wrap">claude plugin marketplace add {{ skill.slug.split('-').pop() }}
-claude plugin install {{ skill.slug.split('-').pop() }}@marketplace</pre>
-                        <p class="mt-2 text-xs text-amber-700 dark:text-amber-400">Consulta el workflow completo más abajo para los comandos exactos de este plugin.</p>
+                        <p class="text-xs font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider mb-1">Plugin de Claude Code</p>
+                        <p class="text-sm text-amber-900 dark:text-amber-200">Se instala desde Claude Code con los comandos de la sección <strong>Instalación</strong> de abajo, tal y como los publica su autor.</p>
                     </div>
 
                     <div v-else-if="skill.resource_type === 'claude_skill'" class="mt-6 p-4 rounded-xl bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-700">
-                        <p class="text-xs font-semibold text-violet-700 dark:text-violet-400 uppercase tracking-wider mb-2">Instalación — Skill de Claude Code</p>
-                        <pre class="text-xs text-violet-900 dark:text-violet-200 font-mono whitespace-pre-wrap">mkdir -p ~/.claude/skills
-git clone &lt;repo&gt; ~/.claude/skills/nombre-del-skill</pre>
-                        <p class="mt-2 text-xs text-violet-700 dark:text-violet-400">El repo exacto y los pasos detallados están en el workflow de abajo.</p>
+                        <p class="text-xs font-semibold text-violet-700 dark:text-violet-400 uppercase tracking-wider mb-1">Skill de Claude Code</p>
+                        <p class="text-sm text-violet-900 dark:text-violet-200">Se instala con los comandos de la sección <strong>Instalación</strong> de abajo, tal y como los publica su autor.</p>
                     </div>
 
                     <!-- Prompt -->
