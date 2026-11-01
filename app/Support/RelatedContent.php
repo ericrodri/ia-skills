@@ -158,6 +158,7 @@ class RelatedContent
         'ia-para-reuniones-y-actas' => [['product-management', 'rrhh'], 'reunión'],
         'presentaciones-con-ia' => [['ventas', 'diseno'], 'presentación'],
         'video-y-audio-con-ia-en-el-trabajo' => [['marketing', 'diseno'], 'vídeo'],
+        'synthesia-vs-heygen' => [['rrhh', 'marketing', 'ventas', 'customer-support'], 'con avatar'],
         'escribir-correos-con-ia' => [['ventas', 'customer-support'], 'email'],
         'resumir-documentos-largos-con-ia' => [['legal', 'finanzas'], 'resum'],
         'gemini-notebook-antes-notebooklm' => [['product-management', 'legal'], 'document'],

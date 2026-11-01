@@ -119,6 +119,7 @@ class Guides
         'presentaciones-con-ia',
         'hacer-un-informe-con-ia',
         'video-y-audio-con-ia-en-el-trabajo',
+        'synthesia-vs-heygen',
         'pasar-audio-a-texto-con-ia',
         'escribir-correos-con-ia',
         'escribir-una-reclamacion-con-ia',

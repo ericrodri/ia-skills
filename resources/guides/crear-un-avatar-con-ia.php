@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-11',
     'updated' => '2026-10-11',
     'readingMinutes' => 7,
-    'words' => 1079,
+    'words' => 1095,
     'about' => 'Creación de avatares con inteligencia artificial: ilustraciones a partir de una foto, personajes consistentes y avatares de vídeo que hablan',
-    'related' => ['foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['synthesia-vs-heygen', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'tipos' => 'Tres tipos de avatar',
         'desde-tu-foto' => 'Un avatar ilustrado a partir de tu foto',
@@ -79,7 +79,7 @@ return [
     <li><strong>Tu propio avatar</strong>: grabas unos minutos de vídeo hablando a cámara, con buena luz y fondo neutro, y la herramienta crea una copia que puede decir cualquier texto. Suelen pedir una grabación en la que autorizas expresamente el uso de tu imagen.</li>
 </ul>
 
-<p>Dan buen resultado en vídeos de formación, explicaciones de producto o versiones de un mismo vídeo en varios idiomas. Para contenido de redes con el que quieres crear cercanía, suelen notarse: los gestos se repiten y la mirada es demasiado fija. La voz puede venir de una herramienta de <a href="/guias/convertir-texto-a-voz-con-ia">texto a voz</a>, y el resto del proceso está en <a href="/guias/crear-videos-con-ia">crear vídeos con IA</a>.</p>
+<p>Dan buen resultado en vídeos de formación, explicaciones de producto o versiones de un mismo vídeo en varios idiomas. Para contenido de redes con el que quieres crear cercanía, suelen notarse: los gestos se repiten y la mirada es demasiado fija. La voz puede venir de una herramienta de <a href="/guias/convertir-texto-a-voz-con-ia">texto a voz</a>, y el resto del proceso está en <a href="/guias/crear-videos-con-ia">crear vídeos con IA</a>. Las dos herramientas más usadas para este tipo de vídeo se comparan en <a href="/guias/synthesia-vs-heygen">Synthesia vs HeyGen</a>.</p>
 
 <h2 id="privacidad">Privacidad y límites</h2>
 

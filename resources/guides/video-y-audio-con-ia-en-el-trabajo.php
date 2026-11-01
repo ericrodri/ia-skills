@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-09-17',
     'readingMinutes' => 11,
-    'words' => 1900,
+    'words' => 1917,
     'about' => 'Generación de vídeo y audio sintético con inteligencia artificial en entornos profesionales',
-    'related' => ['convertir-texto-a-voz-con-ia', 'crear-videos-con-ia', 'crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
+    'related' => ['synthesia-vs-heygen', 'convertir-texto-a-voz-con-ia', 'crear-videos-con-ia', 'crear-musica-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'presentaciones-con-ia', 'ai-act-obligaciones-empresas'],
     'toc' => [
         'que-hay' => 'Qué hay: cuatro cosas distintas que se llaman igual',
         'que-rinde' => 'Qué rinde y qué no',
@@ -102,6 +102,8 @@ return [
 </ul>
 
 <p>Si usas un avatar con la cara de alguien de la empresa, díselo a quien lo va a ver. No por la norma —que también—, sino porque descubrirlo por su cuenta destruye más confianza de la que ahorró el vídeo.</p>
+
+<p>Si estás decidiendo con qué herramienta hacerlos, las dos más usadas se comparan en <a href="/guias/synthesia-vs-heygen">Synthesia vs HeyGen</a>.</p>
 
 <h2 id="permisos">Clonar una voz o una cara: de quién es el permiso</h2>
 
