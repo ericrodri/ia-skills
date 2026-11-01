@@ -1,0 +1,222 @@
+[
+  {
+    "profession_slug": "desarrollo",
+    "title": "Code Review de Anthropic — Revisión de pull requests con cuatro agentes y filtro de falsos positivos",
+    "description": "Plugin oficial de Anthropic que revisa un pull request con cuatro agentes en paralelo: dos comprueban que se cumple tu CLAUDE.md, uno busca bugs en los cambios y otro revisa el historial del código. Solo muestra los problemas con una confianza de 80 sobre 100 o más.",
+    "use_case": "Antes de pedir revisión a un compañero, o como primera revisión automática en cada PR para que lleguen sin errores evidentes.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nEl comando `/code-review`:\n\n1. Comprueba si el PR necesita revisión (se salta los cerrados, borradores, triviales o ya revisados).\n2. Lee los archivos CLAUDE.md del repositorio con las normas del proyecto.\n3. Resume los cambios del PR.\n4. Lanza cuatro agentes en paralelo:\n   - Dos verifican que los cambios cumplen las normas de CLAUDE.md.\n   - Uno busca bugs en lo que ha cambiado (no en código anterior).\n   - Uno analiza el historial (`git blame`) para detectar problemas de contexto.\n5. Puntúa cada problema de 0 a 100 y descarta los que no llegan a 80.\n\nCada hallazgo enlaza a las líneas exactas del código.\n\n## Instalación\n\nEl marketplace oficial ya viene añadido en Claude Code:\n\n```\n/plugin install code-review@claude-plugins-official\n```\n\n## Cómo usarlo\n\nEn la rama del PR:\n\n```\n/code-review\n```\n\nPor defecto muestra la revisión en la terminal. Para publicarla como comentario en el PR:\n\n```\n/code-review --comment\n```\n\n## Consejo\n\nCuanto más concretas sean las normas de tu CLAUDE.md, más útil es la revisión: los dos primeros agentes las usan como criterio.\n\n## Fuente\n\n- Plugin oficial de Anthropic: `code-review@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-review"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Code Simplifier — Un agente que limpia el código recién escrito sin cambiar lo que hace",
+    "description": "Plugin oficial de Anthropic con un agente que simplifica y ordena el código que acabas de modificar: menos anidamiento, nombres más claros, nada de ternarios encadenados, sin cambiar el comportamiento y siguiendo las normas de tu CLAUDE.md.",
+    "use_case": "Después de una sesión larga con Claude, cuando el código funciona pero ha quedado enrevesado o inconsistente con el resto del proyecto.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nAñade el agente `code-simplifier`, que revisa el código modificado recientemente y lo refina con estas reglas:\n\n1. **No cambia el comportamiento**: solo cómo está escrito, nunca lo que hace.\n2. **Sigue las normas del proyecto** definidas en tu CLAUDE.md.\n3. **Gana claridad**: menos anidamiento, menos código redundante, nombres más claros, sin comentarios que repiten lo obvio y sin ternarios encadenados.\n4. **No se pasa de listo**: prefiere código explícito a soluciones compactas difíciles de leer, y no elimina abstracciones útiles.\n5. **Se ciñe a lo reciente**: solo toca lo modificado en la sesión, salvo que le pidas más.\n\n## Instalación\n\n```\n/plugin install code-simplifier@claude-plugins-official\n```\n\n## Cómo usarlo\n\n- «Simplifica el código que hemos tocado hoy.»\n- «Pasa el code-simplifier por el módulo de facturación.»\n\nRevisa el diff antes de confirmar: aunque el objetivo es no cambiar el comportamiento, conviene ejecutar los tests después.\n\n## Fuente\n\n- Plugin oficial de Anthropic: `code-simplifier@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/code-simplifier"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "CLAUDE.md Management — Mantén al día la memoria de tu proyecto en Claude Code",
+    "description": "Plugin oficial de Anthropic con dos herramientas para tu CLAUDE.md: una skill que lo audita contra el estado actual del código y un comando que guarda en él lo aprendido durante la sesión.",
+    "use_case": "Proyectos en los que el CLAUDE.md se ha quedado desactualizado o en los que Claude repite errores que ya le corregiste en otra sesión.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué incluye\n\n| | claude-md-improver (skill) | /revise-claude-md (comando) |\n|---|---|---|\n| Para qué | Que CLAUDE.md refleje el código actual | Guardar lo aprendido en la sesión |\n| Cuándo | Mantenimiento periódico | Al terminar una sesión que reveló contexto que faltaba |\n\n## Instalación\n\n```\n/plugin install claude-md-management@claude-plugins-official\n```\n\n## Cómo usarlo\n\nAuditar el CLAUDE.md (la skill se activa sola):\n\n- «Audita mis archivos CLAUDE.md.»\n- «¿Está al día mi CLAUDE.md?»\n\nDevuelve una puntuación de calidad y los cambios recomendados.\n\nGuardar lo aprendido al final de una sesión:\n\n```\n/revise-claude-md\n```\n\n## Fuente\n\n- Plugin oficial de Anthropic: `claude-md-management@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-md-management"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Feature Dev — Desarrollo de funcionalidades en siete fases con agentes especializados",
+    "description": "Plugin oficial de Anthropic que guía el desarrollo de una funcionalidad nueva en siete fases: entender qué se pide, explorar el código existente, aclarar dudas, diseñar la arquitectura, implementar, revisar la calidad y resumir. Pide tu aprobación antes de pasar a escribir código.",
+    "use_case": "Funcionalidades medianas o grandes en un proyecto existente, donde lanzarse a programar sin entender el código lleva a soluciones que no encajan.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 30,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Las siete fases\n\n1. **Descubrimiento**: aclara qué problema resuelves y qué restricciones hay.\n2. **Exploración del código**: lanza 2 o 3 agentes en paralelo que buscan funcionalidades parecidas, mapean la arquitectura y analizan el código relacionado.\n3. **Preguntas**: te plantea las dudas que han surgido y espera tus respuestas.\n4. **Diseño de arquitectura**: propone enfoques y te pregunta cuál prefieres.\n5. **Implementación**: solo empieza con tu aprobación explícita.\n6. **Revisión de calidad**: revisa el resultado, te enseña lo encontrado y te pregunta qué hacer.\n7. **Resumen**: lo que se ha hecho y lo que queda.\n\n## Instalación\n\n```\n/plugin install feature-dev@claude-plugins-official\n```\n\n## Cómo usarlo\n\n```\n/feature-dev Añadir exportación de facturas a PDF desde el panel de clientes\n```\n\nO solo `/feature-dev` y te preguntará qué quieres construir.\n\n## Consejos\n\n- Cuanto más concreta sea la petición, menos preguntas hará.\n- No te saltes fases: la de exploración también sirve para conocer mejor tu propio código.\n\n## Fuente\n\n- Plugin oficial de Anthropic: `feature-dev@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/feature-dev"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Security Guidance — Revisión de seguridad automática del código que escribe Claude",
+    "description": "Plugin oficial de Anthropic que revisa la seguridad del código generado en tres capas: avisos inmediatos ante unos 25 patrones peligrosos, una revisión del diff con IA al terminar cada respuesta y un revisor que analiza cada commit siguiendo el flujo de datos entre archivos.",
+    "use_case": "Proyectos donde Claude escribe código que maneja datos de usuarios, autenticación o entradas externas, y no quieres depender solo de tu revisión manual.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Las tres capas\n\n1. **Avisos por patrones**: al editar o escribir un archivo, avisa al instante de unos 25 patrones peligrosos conocidos (deserialización insegura, `innerHTML` sin escapar, secretos escritos en el código…).\n2. **Revisión del diff con IA**: cuando Claude termina una respuesta, el plugin revisa los cambios y le devuelve los problemas graves para que los corrija antes de que veas el resultado.\n3. **Revisión de cada commit**: al hacer `git commit`, un revisor lee los archivos relacionados y sigue el flujo de datos para detectar fallos que afectan a varios archivos (acceso a datos de otros usuarios, saltarse la autenticación, SSRF).\n\nCubre inyección, XSS, SSRF, secretos en el código, IDOR, deserialización insegura y recorrido de rutas, entre otros.\n\n## Requisitos\n\n- Claude Code 2.1.144 o superior.\n- Python 3.8 o superior en el PATH.\n- Credenciales para las revisiones con IA: sirve tu sesión de Claude Code.\n\n## Instalación\n\n```\n/plugin install security-guidance@claude-plugins-official\n```\n\nNo necesita configuración. Por defecto usa el modelo Opus más reciente; se puede cambiar con variables de entorno (consulta el README).\n\n## Ten en cuenta\n\nLas revisiones con IA consumen uso de tu cuenta. Y no sustituyen a una auditoría de seguridad en aplicaciones críticas.\n\n## Fuente\n\n- Plugin oficial de Anthropic: `security-guidance@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/security-guidance"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Ralph Loop — Claude repite la misma tarea hasta terminarla de verdad",
+    "description": "Plugin oficial de Anthropic que implementa la técnica «Ralph Wiggum»: Claude trabaja en una tarea y, cada vez que intenta terminar, se le devuelve el mismo encargo para que siga mejorando su trabajo hasta cumplir el criterio de finalización que tú definas.",
+    "use_case": "Tareas con un criterio de terminado verificable (que pasen todos los tests, que exista una documentación completa) que Claude tiende a dejar a medias.",
+    "tool_name": "Claude Code",
+    "difficulty": "advanced",
+    "estimated_minutes": 30,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Cómo funciona\n\nUn hook intercepta cada intento de Claude de terminar y le devuelve el mismo prompt. Como su trabajo anterior queda en los archivos y en el historial de git, en cada vuelta ve lo que ya hizo y lo mejora. El bucle termina cuando Claude escribe la frase de finalización que has definido o se alcanza el máximo de iteraciones.\n\n## Instalación\n\n```\n/plugin install ralph-loop@claude-plugins-official\n```\n\n## Cómo usarlo\n\n```\n/ralph-loop \"Crea una API REST de tareas: CRUD, validación y tests. Cuando todo funcione y los tests pasen, escribe <promise>COMPLETO</promise>.\" --completion-promise \"COMPLETO\" --max-iterations 30\n```\n\nPara cancelarlo: `/cancel-ralph`.\n\n## Escribir un buen prompt para el bucle\n\n- **Criterio de terminado verificable**: «todos los tests pasan», no «que quede bien».\n- **Pon siempre `--max-iterations`**: sin límite, el bucle puede consumir mucho uso si el objetivo no se alcanza.\n- Funciona mejor cuando hay tests que dicen objetivamente si algo está bien.\n\n## Fuente\n\n- Plugin oficial de Anthropic: `ralph-loop@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/ralph-loop"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Claude Code Setup — Recomendaciones de hooks, skills y servidores MCP para tu proyecto",
+    "description": "Plugin oficial de Anthropic que analiza tu proyecto y recomienda las automatizaciones de Claude Code que más te convienen: servidores MCP, skills, hooks, subagentes y comandos. Solo analiza: no modifica ningún archivo.",
+    "use_case": "Al empezar a usar Claude Code en un proyecto, cuando no sabes qué plugins, hooks o servidores MCP te ahorrarían más trabajo.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nRevisa el código de tu proyecto y propone las 1 o 2 mejores opciones de cada tipo:\n\n- **Servidores MCP**: integraciones externas (documentación actualizada, navegador para probar el frontend…).\n- **Skills**: conocimiento empaquetado (diseño de interfaces, planificación…).\n- **Hooks**: acciones automáticas (formatear al guardar, pasar el linter, bloquear archivos sensibles).\n- **Subagentes**: revisores especializados (seguridad, rendimiento, accesibilidad).\n- **Comandos**: flujos rápidos (tests, revisión de PR, explicar código).\n\nNo cambia nada: solo analiza y recomienda.\n\n## Instalación\n\n```\n/plugin install claude-code-setup@claude-plugins-official\n```\n\n## Cómo usarlo\n\n- «Recomiéndame automatizaciones para este proyecto.»\n- «Ayúdame a configurar Claude Code.»\n- «¿Qué hooks debería usar?»\n\n## Fuente\n\n- Plugin oficial de Anthropic: `claude-code-setup@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/claude-code-setup"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Commit Commands — Commit, push y pull request en un solo comando",
+    "description": "Plugin oficial de Anthropic con comandos para el flujo de git: crear un commit con un mensaje que sigue el estilo de tu repositorio, hacer commit, push y abrir el pull request de una vez, y limpiar las ramas locales que ya no existen en el remoto.",
+    "use_case": "Para no escribir a mano mensajes de commit ni descripciones de PR al final de cada tarea.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Comandos\n\n### `/commit`\n\nRevisa los cambios, mira los últimos commits para imitar el estilo del repositorio, redacta el mensaje, prepara los archivos y crea el commit. Evita incluir archivos con secretos como `.env` o `credentials.json`.\n\n### `/commit-push-pr`\n\nTodo de una vez: crea una rama si estás en main, hace el commit, sube la rama y abre el pull request con un resumen de los cambios y una lista de pruebas. Te devuelve la URL del PR.\n\n### `/clean_gone`\n\nBorra las ramas locales (y sus worktrees) que ya se eliminaron en el remoto.\n\n## Requisitos\n\nPara `/commit-push-pr`: la CLI de GitHub (`gh`) instalada y con sesión iniciada, y un remoto llamado `origin`.\n\n## Instalación\n\n```\n/plugin install commit-commands@claude-plugins-official\n```\n\n## Fuente\n\n- Plugin oficial de Anthropic: `commit-commands@claude-plugins-official`\n- Repositorio: https://github.com/anthropics/claude-plugins-official/tree/main/plugins/commit-commands"
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Figma para Claude Code — Del diseño al código con los componentes y variables reales",
+    "description": "Plugin oficial de Figma: Claude lee tus archivos de diseño (componentes, variables, estructura de los frames) y genera código a partir de un frame seleccionado, reutilizando los componentes de tu proyecto. En beta también puede crear y modificar contenido en el lienzo de Figma.",
+    "use_case": "Pasar diseños de Figma a código sin traducir a mano colores, espaciados y componentes, o mantener sincronizado el sistema de diseño con el código.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- **Extraer el contexto del diseño**: variables, componentes y disposición de los elementos.\n- **Generar código desde un frame** seleccionado.\n- **Reutilizar tus componentes** con Code Connect, en lugar de crear otros nuevos.\n- **Escribir en el lienzo** (beta): crear y modificar contenido de Figma desde Claude.\n\n## Instalación\n\n```\n/plugin install figma@claude-plugins-official\n```\n\nLa primera vez, inicia sesión con tu cuenta de Figma cuando te lo pida (o desde `/mcp`).\n\n## Límites según tu plan\n\n- Plan Starter o asientos View/Collab en planes de pago: hasta 6 llamadas al mes.\n- Asientos Dev o Full en planes Professional, Organization o Enterprise: límites por minuto, suficientes para el uso diario.\n- Escribir en el lienzo es gratis durante la beta; Figma ha anunciado que será de pago por uso.\n\n## Cómo usarlo\n\n- «Implementa este frame de Figma en React con nuestros componentes: [enlace al frame].»\n- «Extrae las variables de color y tipografía del archivo y pásalas a tokens de Tailwind.»\n\n## Fuente\n\n- Repositorio: https://github.com/figma/mcp-server-guide\n- Autor: Figma"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Supabase para Claude Code — Gestiona proyectos, base de datos y funciones desde la conversación",
+    "description": "Plugin de Supabase que conecta Claude Code con su servidor MCP para gestionar proyectos, bases de datos Postgres y Edge Functions, e incluye dos skills: guía general de Supabase y buenas prácticas de rendimiento y diseño de esquemas en Postgres.",
+    "use_case": "Aplicaciones construidas sobre Supabase en las que quieres que Claude consulte el esquema real, cree migraciones o revise el rendimiento de las consultas.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué incluye\n\n- **Servidor MCP de Supabase**: gestionar proyectos, bases de datos y Edge Functions.\n- **Skill `supabase`**: orientación general sobre los productos de Supabase.\n- **Skill `supabase-postgres-best-practices`**: rendimiento y diseño de esquemas en Postgres.\n\n## Instalación\n\n```\n/plugin install supabase@claude-plugins-official\n```\n\nLa primera vez que Claude use el servidor se abrirá el navegador para que inicies sesión en Supabase y autorices el acceso.\n\nSi ya habías añadido el servidor MCP de Supabase a mano, quítalo después de instalar el plugin para no cargar las mismas herramientas dos veces.\n\n## Cómo usarlo\n\n- «Revisa el esquema de mi proyecto y dime qué índices faltan.»\n- «Crea una migración para añadir la tabla de suscripciones con políticas RLS.»\n\n## Precaución\n\nEl plugin puede modificar tu base de datos. Trabaja sobre un proyecto de desarrollo o una rama, no directamente sobre producción.\n\n## Fuente\n\n- Repositorio: https://github.com/supabase-community/supabase-plugin\n- Autor: Supabase"
+  },
+  {
+    "profession_slug": "product-management",
+    "title": "Atlassian para Claude Code — Jira y Confluence sin salir de la conversación",
+    "description": "Plugin oficial de Atlassian que conecta Claude con Jira, Confluence, Jira Service Management, Bitbucket, Loom y el resto de su suite: buscar y resumir, crear y actualizar incidencias o páginas, y automatizar tareas repetitivas.",
+    "use_case": "Equipos que trabajan en Jira y Confluence y quieren que Claude cree tickets, resuma sprints o documente decisiones sin cambiar de herramienta.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- **Buscar y resumir** en Jira, Confluence, Jira Service Management, Bitbucket, Goals y Projects.\n- **Revisar grabaciones** de Loom.\n- **Crear y actualizar** incidencias y páginas.\n- **Automatizar** trabajo repetitivo entre herramientas.\n\n## Requisitos\n\n- Un sitio de Atlassian Cloud con Jira, Confluence u otro de sus productos.\n- Las herramientas de Jira Service Management necesitan que un administrador active la autenticación por token de API.\n\n## Instalación\n\n```\n/plugin install atlassian@claude-plugins-official\n```\n\nDespués, en Claude Code, abre `/mcp` y autentícate con tu cuenta de Atlassian en el navegador (OAuth). No necesitas ninguna clave para el uso normal.\n\n## Ejemplos\n\n- «Resume el estado del sprint actual del proyecto WEB y dime qué está bloqueado.»\n- «Crea en Jira las tareas de este documento de requisitos, con sus criterios de aceptación.»\n- «Busca en Confluence la decisión que tomamos sobre la política de reembolsos.»\n\n## Fuente\n\n- Repositorio: https://github.com/atlassian/atlassian-mcp-server\n- Autor: Atlassian\n- Licencia: Apache 2.0"
+  },
+  {
+    "profession_slug": "rrhh",
+    "title": "Slack para Claude Code — Busca, resume canales y redacta anuncios desde la conversación",
+    "description": "Plugin oficial de Slack: Claude busca mensajes, archivos y personas, lee canales e hilos, envía y programa mensajes, trabaja con canvas y trae comandos para resumir canales, preparar el standup o redactar un anuncio.",
+    "use_case": "Ponerse al día de varios canales después de unos días fuera, preparar comunicados internos o encontrar en qué hilo se decidió algo.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- **Buscar** mensajes, archivos, usuarios y canales, públicos y privados.\n- **Mensajes**: enviar y programar mensajes, leer canales, seguir hilos, añadir reacciones.\n- **Canvas**: crear, leer y actualizar documentos.\n- **Personas**: leer perfiles y miembros de un canal.\n\n## Comandos\n\n- `/slack:summarize-channel <canal>`: resumen de un canal.\n- `/slack:channel-digest <canal1, canal2…>`: resumen de varios canales.\n- `/slack:find-discussions <tema>`: dónde se ha hablado de algo.\n- `/slack:draft-announcement <tema>`: borrador de un anuncio.\n- `/slack:standup`: preparar tu standup.\n\nIncluye también skills para crear y desplegar aplicaciones de Slack.\n\n## Requisitos\n\nEl administrador de tu espacio de trabajo debe aprobar la integración MCP antes de que puedas conectarte.\n\n## Instalación\n\n```\n/plugin install slack@claude-plugins-official\n```\n\nLa primera vez te pedirá autorizar el acceso a tu espacio de trabajo (OAuth).\n\n## Ojo al enviar\n\nClaude puede enviar mensajes en tu nombre. Pídele que te enseñe el borrador antes de publicarlo.\n\n## Fuente\n\n- Repositorio: https://github.com/slackapi/slack-skills-plugin\n- Autor: Slack\n- Licencia: MIT"
+  },
+  {
+    "profession_slug": "freelancers",
+    "title": "Notion para Claude Code — Busca, crea páginas y gestiona bases de datos de tu espacio",
+    "description": "Plugin oficial de Notion: Claude busca en tu espacio de trabajo, lee y actualiza páginas, añade filas a bases de datos y trae skills para capturar conocimiento, documentar reuniones e investigaciones y convertir especificaciones en tareas.",
+    "use_case": "Si llevas proyectos, clientes, notas de reuniones o tareas en Notion y quieres crearlas o consultarlas sin salir de Claude Code.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- Buscar en tu espacio de trabajo.\n- Leer páginas y bases de datos.\n- Crear y actualizar páginas, y añadir bloques o notas.\n- Insertar filas en bases de datos respetando sus propiedades.\n\nIncluye skills del recetario de Notion: captura de conocimiento, notas de reuniones, documentación de investigaciones y de especificación a implementación.\n\n## Comandos\n\n- `/Notion:search`, `/Notion:find`: buscar.\n- `/Notion:create-page`, `/Notion:create-task`, `/Notion:create-database-row`: crear.\n- `/Notion:database-query`: consultar una base de datos.\n\n## Instalación\n\n```\n/plugin install notion@claude-plugins-official\n```\n\nReinicia Claude Code después de instalarlo. La conexión se autoriza con tu cuenta de Notion (OAuth), sin claves.\n\n## Ejemplos\n\n- «Crea una página por cada cliente de esta lista en mi base de datos de Clientes.»\n- «Resume las notas de reuniones de este mes con el cliente Acme.»\n\n## Fuente\n\n- Repositorio: https://github.com/makenotion/claude-code-notion-plugin\n- Autor: Notion"
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Canva para Claude Code — Adapta diseños a cada red social y revisa la marca",
+    "description": "Plugin oficial de Canva: Claude adapta un diseño a los formatos de varias redes sociales de una vez, crea diseños en lote a partir de una tabla con una plantilla de marca, aplica los comentarios de una revisión y comprueba si un diseño cumple tu guía de marca.",
+    "use_case": "Equipos de marketing que producen muchas piezas en Canva y pierden tiempo adaptando tamaños, aplicando correcciones o revisando que todo respete la marca.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Skills incluidas\n\n- **resize-for-social-media**: adapta un diseño a Facebook, Instagram y LinkedIn en una sola operación.\n- **bulk-create**: crea un diseño por cada fila de una tabla usando una plantilla de marca (requiere Canva Enterprise).\n- **implement-feedback**: lee los comentarios de un diseño y aplica los cambios.\n- **edit-design**: edita un diseño existente, pidiendo tu aprobación antes de cada cambio.\n- **get-design-feedback**: revisa un diseño y devuelve comentarios estructurados, sin modificarlo.\n- **brand-check**: comprueba un diseño contra tu kit de marca.\n\n## Instalación\n\n```\n/plugin install canva@claude-plugins-official\n```\n\nConecta el servidor MCP de Canva e inicia sesión con tu cuenta cuando te lo pida.\n\n## Ejemplos\n\n- «Adapta el diseño de la campaña de Navidad a historias de Instagram, LinkedIn y Facebook.»\n- «Revisa si esta presentación cumple nuestra guía de marca.»\n- «Aplica los comentarios que ha dejado el cliente en el diseño del folleto.»\n\n## Fuente\n\n- Repositorio: https://github.com/canva-sdks/canva-skills\n- Autor: Canva\n- Licencia: Apache 2.0"
+  },
+  {
+    "profession_slug": "ventas",
+    "title": "HubSpot Sales para Claude Code — Tu día comercial en el CRM sin abrir HubSpot",
+    "description": "Plugin oficial de HubSpot con skills para toda la jornada comercial: resumen diario con prioridades, estado del pipeline, preparación de llamadas, registro de llamadas, seguimientos, búsqueda de contactos e importación de contactos y oportunidades al CRM.",
+    "use_case": "Comerciales que usan HubSpot y quieren preparar reuniones, registrar actividad y mantener el pipeline al día hablando con Claude.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Skills incluidas\n\n- **daily-brief**: resumen del día con prioridades.\n- **pipeline-pulse**: estado del pipeline y oportunidades en riesgo.\n- **call-prep**: preparación de una llamada con el contexto del CRM.\n- **log-call**: registrar una llamada en el CRM.\n- **follow-up**: redactar y programar seguimientos.\n- **contact-lookup**: buscar un contacto o una empresa.\n- **import-contacts**: importar contactos y oportunidades desde un CSV, texto pegado o, si lo conectas, Gmail.\n- **onboarding**: flujos de alta de clientes.\n\n## Instalación\n\n```\n/plugin install hubspot-sales@claude-plugins-official\n```\n\nSe conecta al servidor MCP oficial de HubSpot: inicia sesión con tu cuenta de HubSpot cuando te lo pida (o desde `/mcp`).\n\n## Ejemplos\n\n- «Prepárame la llamada de las 11 con Construcciones Ruiz.»\n- «¿Qué oportunidades llevan más de dos semanas sin actividad?»\n- «Registra la llamada: interesados en el plan anual, enviar propuesta el viernes.»\n\n## Fuente\n\n- Repositorio: https://github.com/HubSpot/hubspot-mcp-plugins (HubSpot-Sales)\n- Autor: HubSpot\n- Licencia: Apache 2.0"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Sentry para Claude Code — Depura errores de producción con el contexto real",
+    "description": "Plugin oficial de Sentry: Claude consulta los errores de producción a través de su servidor MCP para depurarlos con la traza y el contexto reales, y trae asistentes para instalar Sentry en cualquier plataforma, revisar código con contexto de errores y configurar la monitorización.",
+    "use_case": "Cuando un error aparece en Sentry y quieres que Claude lo investigue con la traza real en lugar de describírselo tú.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- **Depurar errores de producción**: Claude lee las incidencias de Sentry, su traza y su contexto.\n- **Instalar Sentry** en tu proyecto con asistentes para cada plataforma.\n- **Revisar código** teniendo en cuenta los errores que ya ha registrado Sentry.\n- **Configurar la monitorización**: alertas, rendimiento y otras funciones.\n\nLas skills se cargan bajo demanda, así que no llenan el contexto si no las usas.\n\n## Instalación\n\n```\n/plugin install sentry@claude-plugins-official\n```\n\nInicia sesión con tu cuenta de Sentry cuando te lo pida (o desde `/mcp`).\n\n## Ejemplos\n\n- «Investiga el error más frecuente de esta semana en el proyecto web y propón un arreglo.»\n- «Añade Sentry a esta aplicación de Laravel.»\n\n## Fuente\n\n- Repositorio: https://github.com/getsentry/plugin-claude\n- Autor: Sentry\n- Licencia: MIT"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Stripe para Claude Code — Integra pagos y suscripciones con las buenas prácticas de Stripe",
+    "description": "Plugin oficial de Stripe que da a Claude conocimiento de primera mano para planificar, construir y revisar una integración de pagos: elección de API, suscripciones, Connect, impuestos, seguridad, actualizaciones de versión y facturación por uso, además de acceso a tu cuenta mediante su servidor MCP.",
+    "use_case": "Antes de integrar Stripe en un producto, o para revisar y actualizar una integración que ya funciona.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 15,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Skills incluidas\n\n- **stripe-best-practices**: decisiones de integración (qué API usar, Connect, suscripciones, impuestos, seguridad).\n- **upgrade-stripe**: actualizar versiones de la API, webhooks y SDK.\n- **metronome**: facturación por uso.\n- **connect-recommend**: propone la configuración de Connect a partir de la web de tu empresa.\n\n## Instalación\n\n```\n/plugin install stripe@claude-plugins-official\n```\n\nPara consultar tu cuenta, el plugin usa el servidor MCP remoto de Stripe, que se autoriza por OAuth con tu cuenta.\n\n## Ejemplos\n\n- «Quiero cobrar una suscripción mensual con 14 días de prueba. ¿Qué API uso y qué webhooks necesito?»\n- «Revisa nuestra integración de pagos y dime qué hay que actualizar.»\n\n## Precaución\n\nUsa claves y cuentas de prueba mientras desarrollas. No conectes tu cuenta en modo real hasta revisar lo que hace cada acción.\n\n## Telemetría\n\nLas skills envían eventos de uso a Stripe. Para desactivarlo, define `DO_NOT_TRACK=1`.\n\n## Fuente\n\n- Repositorio: https://github.com/stripe/ai (providers/claude/plugin)\n- Autor: Stripe\n- Licencia: MIT"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Chrome DevTools para Claude Code — Rendimiento, red y consola de un Chrome real",
+    "description": "Plugin oficial del equipo de Chrome DevTools: Claude controla e inspecciona un navegador Chrome real para grabar trazas de rendimiento, analizar peticiones de red, leer la consola con trazas mapeadas al código fuente y depurar accesibilidad, cookies, LCP o fugas de memoria.",
+    "use_case": "Diagnosticar por qué una página carga lento, encontrar una petición que falla o depurar un problema que solo aparece en el navegador.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué permite\n\n- **Rendimiento**: graba trazas y extrae conclusiones (por ejemplo, qué retrasa el LCP).\n- **Depuración**: peticiones de red, capturas de pantalla y mensajes de consola con trazas mapeadas a tu código.\n- **Automatización fiable**: basada en Puppeteer, espera sola a que carguen los resultados.\n\nIncluye skills para accesibilidad, cookies, optimización del LCP y fugas de memoria.\n\n## Requisitos\n\n- Node.js (versión LTS) y npm.\n- Google Chrome estable o Chrome for Testing.\n\n## Instalación\n\n```\n/plugin install chrome-devtools-mcp@claude-plugins-official\n```\n\nNo necesita claves: el servidor se ejecuta en tu ordenador.\n\n## Ejemplos\n\n- «Abre localhost:3000, graba una traza de carga y dime qué está retrasando el LCP.»\n- «¿Qué peticiones fallan al enviar el formulario de pago?»\n\n## Estadísticas de uso\n\nEstán activadas por defecto. Para desactivarlas: `CHROME_DEVTOOLS_MCP_NO_USAGE_STATISTICS=1`.\n\n## Fuente\n\n- Repositorio: https://github.com/ChromeDevTools/chrome-devtools-mcp\n- Autor: equipo de Chrome DevTools (Google)\n- Licencia: Apache 2.0"
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Canvas Design — Carteles y piezas gráficas en PNG y PDF desde una idea",
+    "description": "Skill oficial de Anthropic para crear piezas visuales estáticas (carteles, ilustraciones, composiciones) en PNG o PDF. Claude define primero una filosofía de diseño y la aplica, y está pensada para crear obra original sin copiar el estilo de artistas existentes.",
+    "use_case": "Carteles para un evento, piezas para redes o portadas cuando no tienes diseñador y quieres algo con intención visual, no una plantilla.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_skill",
+    "prompt_content": "## Qué hace\n\nAntes de dibujar, Claude escribe una breve filosofía de diseño para la pieza (concepto, composición, color, tipografía) y luego la ejecuta en un archivo PNG o PDF.\n\nEstá diseñada para crear trabajos originales: no reproduce el estilo de artistas concretos.\n\n## Instalación\n\nEn Claude.ai está disponible directamente. En Claude Code:\n\n```bash\nnpx skills add anthropics/skills --skill canvas-design -a claude-code\n```\n\n## Cómo usarla\n\n- «Diseña un cartel A3 para unas jornadas de puertas abiertas de una escuela de música.»\n- «Crea la portada en PDF del informe anual, sobria y con mucho espacio en blanco.»\n\nDile el formato final (A4, cuadrado para Instagram, 1920×1080…) y para qué se va a usar.\n\n## Fuente\n\n- Repositorio: https://github.com/anthropics/skills (skills/canvas-design)\n- Autor: Anthropic\n- Licencia: Apache 2.0"
+  },
+  {
+    "profession_slug": "diseno",
+    "title": "Theme Factory — Aplica un tema visual coherente a presentaciones, documentos y webs",
+    "description": "Skill oficial de Anthropic con 10 temas predefinidos de colores y tipografías que Claude aplica a cualquier pieza (presentaciones, documentos, informes, landings HTML), o crea uno nuevo sobre la marcha para que todo tenga el mismo aspecto.",
+    "use_case": "Cuando generas varias piezas con Claude (una presentación, un informe, una landing) y quieres que todas compartan colores y tipografía sin definirlos cada vez.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 5,
+    "resource_type": "claude_skill",
+    "prompt_content": "## Qué hace\n\n- Incluye 10 temas listos con su paleta de colores y combinación de fuentes.\n- Los aplica a cualquier pieza: diapositivas, documentos, informes o páginas HTML.\n- Si ninguno encaja, crea un tema nuevo a partir de tu descripción.\n\n## Instalación\n\nEn Claude.ai está disponible directamente. En Claude Code:\n\n```bash\nnpx skills add anthropics/skills --skill theme-factory -a claude-code\n```\n\n## Cómo usarla\n\n- «Enséñame los temas disponibles y aplica el más sobrio a esta presentación.»\n- «Crea un tema con los colores de nuestra marca, azul marino y mostaza, y úsalo en el informe y en la landing.»\n\n## Combínala con\n\nLas skills de PowerPoint, Word y PDF de Anthropic, para generar los archivos ya con el tema aplicado.\n\n## Fuente\n\n- Repositorio: https://github.com/anthropics/skills (skills/theme-factory)\n- Autor: Anthropic\n- Licencia: Apache 2.0"
+  }
+]
