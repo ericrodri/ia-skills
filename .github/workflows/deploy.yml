@@ -36,6 +36,11 @@ jobs:
             composer install --no-dev --optimize-autoloader
             npm install
             npm run build
+            # Vite ya no vacía public/build (ver vite.config.js): se borran
+            # los assets de compilaciones de hace más de 7 días. Cada build
+            # reescribe los actuales, así que nunca entran en el filtro, y se
+            # conservan una semana los que aún pueda pedir una pestaña abierta.
+            find public/build/assets -type f -mtime +7 -delete
             php artisan migrate --force
             for f in database/imports/*.json; do
               [ -f "$f" ] || continue
