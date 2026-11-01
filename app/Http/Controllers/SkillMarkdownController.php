@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Skill;
 use App\Support\InstallCounter;
 use App\Support\SkillMarkdown;
+use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
@@ -17,8 +18,13 @@ use Illuminate\Http\Response;
  */
 class SkillMarkdownController extends Controller
 {
-    public function __invoke(Request $request, Skill $skill): Response
+    public function __invoke(Request $request, Skill $skill): Response|RedirectResponse
     {
+        // Los comandos de instalación ya publicados siguen funcionando: curl -L
+        // sigue el 301 hasta la ficha que sustituye a la fusionada.
+        if ($redirect = $skill->mergedRedirect('skills.markdown', $request->query())) {
+            return $redirect;
+        }
         abort_unless($request->user()?->can('view', $skill) ?? $skill->status === 'published', 404);
 
         $name = SkillMarkdown::name($skill);

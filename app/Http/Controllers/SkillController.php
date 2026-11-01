@@ -165,8 +165,14 @@ class SkillController extends Controller
         );
     }
 
-    public function show(Request $request, Skill $skill): Response
+    public function show(Request $request, Skill $skill): Response|RedirectResponse
     {
+        // Duplicado fusionado en otra ficha: 301 para que Google y los
+        // enlaces externos pasen a la que se queda.
+        if ($redirect = $skill->mergedRedirect('skills.show')) {
+            return $redirect;
+        }
+
         $user = $request->user();
 
         // Solo el autor o un admin pueden ver skills no publicadas

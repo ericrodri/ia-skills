@@ -3,14 +3,16 @@
 namespace App\Models;
 
 use App\Observers\SkillObserver;
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Http\RedirectResponse;
 
-#[\Illuminate\Database\Eloquent\Attributes\ObservedBy([SkillObserver::class])]
+#[ObservedBy([SkillObserver::class])]
 class Skill extends Model
 {
     use HasFactory;
@@ -56,6 +58,26 @@ class Skill extends Model
     public function profession(): BelongsTo
     {
         return $this->belongsTo(Profession::class);
+    }
+
+    /**
+     * Ficha en la que se fusionó esta, si era un duplicado (App\Support\SkillMerger).
+     */
+    public function mergedInto(): BelongsTo
+    {
+        return $this->belongsTo(Skill::class, 'merged_into_id');
+    }
+
+    /**
+     * Respuesta 301 hacia la ficha que sustituye a esta, o null si no está fusionada.
+     */
+    public function mergedRedirect(string $route, array $parameters = []): ?RedirectResponse
+    {
+        if ($this->status !== 'merged' || ! $this->mergedInto) {
+            return null;
+        }
+
+        return redirect()->route($route, ['skill' => $this->mergedInto->slug] + $parameters, 301);
     }
 
     public function author(): BelongsTo
