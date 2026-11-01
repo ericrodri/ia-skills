@@ -10,7 +10,7 @@ return [
     'published' => '2026-10-04',
     'updated' => '2026-11-01',
     'readingMinutes' => 7,
-    'words' => 1190,
+    'words' => 1204,
     'about' => 'Comparativa de asistentes de inteligencia artificial según el tipo de tarea',
     'related' => ['chatgpt-vs-gemini', 'claude-vs-chatgpt-para-trabajar', 'vale-la-pena-pagar-chatgpt-plus', 'herramientas-de-ia-gratis', 'como-usar-perplexity', 'como-usar-deepseek'],
     'toc' => [
@@ -74,7 +74,7 @@ return [
     <li><strong>Uso gratuito sin límites estrictos:</strong> DeepSeek ofrece mucho sin pagar, con matices de privacidad que explicamos en <a href="/guias/como-usar-deepseek">cómo usar DeepSeek</a>.</li>
 </ul>
 
-<p>Si dudas entre las dos más populares, tienes la comparativa detallada de <a href="/guias/chatgpt-vs-gemini">ChatGPT vs Gemini</a>, y si tu duda es para el trabajo, la de <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude vs ChatGPT</a>.</p>
+<p>Si dudas entre las dos más populares, tienes la comparativa detallada de <a href="/guias/chatgpt-vs-gemini">ChatGPT vs Gemini</a>, y si tu duda es para el trabajo, la de <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude vs ChatGPT</a>. Para buscar información, compara <a href="/guias/perplexity-vs-chatgpt">Perplexity vs ChatGPT</a>, y si usas Office, <a href="/guias/copilot-vs-chatgpt">Copilot vs ChatGPT</a>.</p>
 
 <h2 id="ecosistema">El factor que más pesa: dónde trabajas</h2>
 

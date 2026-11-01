@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-06',
     'updated' => '2026-10-06',
     'readingMinutes' => 7,
-    'words' => 1083,
+    'words' => 1103,
     'about' => 'Uso práctico del asistente de inteligencia artificial gratuito Microsoft Copilot en Windows, Edge y móvil',
-    'related' => ['microsoft-365-copilot-en-el-trabajo', 'como-usar-chatgpt', 'cual-es-la-mejor-ia', 'herramientas-de-ia-gratis', 'como-usar-gemini', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['copilot-vs-chatgpt', 'microsoft-365-copilot-en-el-trabajo', 'como-usar-chatgpt', 'cual-es-la-mejor-ia', 'herramientas-de-ia-gratis', 'como-usar-gemini', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'que-es' => 'Qué es Copilot (y qué no es)',
         'donde' => 'Dónde está y cómo empezar',
@@ -84,5 +84,7 @@ return [
 <h2 id="pagar">¿Merece la pena pagar?</h2>
 
 <p>Para particulares, Microsoft incluye más uso de Copilot en las suscripciones de Microsoft 365, y eso añade algo que el gratuito no tiene: Copilot dentro de Word, Excel, PowerPoint y Outlook en tus propios archivos. Si ya pagas Microsoft 365 Personal o Familia, actívalo antes de contratar otra IA. Si no, el plan gratuito cubre de sobra el uso de chat, y la comparación con las alternativas está en <a href="/guias/cual-es-la-mejor-ia">cuál es la mejor IA</a> y en <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>.</p>
+
+<p>Si dudas entre Copilot y ChatGPT, o entre pagar Microsoft 365 o ChatGPT Plus, los comparamos en <a href="/guias/copilot-vs-chatgpt">Copilot vs ChatGPT</a>.</p>
 HTML,
 ];

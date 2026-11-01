@@ -5,6 +5,12 @@
         @if($done)
             <p class="text-4xl" aria-hidden="true">✓</p>
             <h1 class="mt-4 text-2xl font-bold text-gray-900 dark:text-white">¡Suscripción confirmada!</h1>
+            @if($pack)
+                <p class="mt-3 text-gray-600 dark:text-gray-400">
+                    Ya puedes descargar el pack de las mejores skills de IA para {{ $pack['name'] }}.
+                </p>
+                <a href="{{ $pack['url'] }}" class="btn-primary mt-6">Abrir el pack de {{ $pack['name'] }}</a>
+            @endif
             <p class="mt-3 text-gray-600 dark:text-gray-400">
                 Desde el próximo lunes recibirás en {{ $email }} las skills más votadas de la semana y las guías nuevas.
                 Cada email lleva un enlace para darte de baja con un clic.

@@ -48,6 +48,8 @@ class RelatedContent
         'como-usar-grok' => [['marketing', 'customer-support'], 'redes'],
         'crear-musica-con-ia' => [['marketing', 'diseno'], 'audio'],
         'chatgpt-vs-gemini' => [['marketing', 'freelancers', 'analisis-de-datos'], null],
+        'perplexity-vs-chatgpt' => [['marketing', 'ventas', 'freelancers'], 'investiga'],
+        'copilot-vs-chatgpt' => [['finanzas', 'product-management', 'freelancers'], null],
         'meta-ai-en-whatsapp' => [['customer-support', 'freelancers'], null],
         'aprender-ingles-con-ia' => [['rrhh', 'freelancers'], 'inglés'],
         'editar-fotos-con-ia' => [['diseno', 'marketing'], 'foto'],

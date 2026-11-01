@@ -56,7 +56,7 @@
             <ul>
                 <li><strong>Prestar el servicio</strong> (tu cuenta, publicar, votar, guardar, tu perfil público): es necesario para cumplir las condiciones de uso que aceptas al registrarte (art. 6.1.b RGPD).</li>
                 <li><strong>Avisos sobre tu actividad</strong> (tu skill se ha aprobado o rechazado, alguien la ha comentado o ha respondido a tu comentario): forman parte del servicio y puedes desactivarlos en cualquier momento desde tu perfil (art. 6.1.b RGPD).</li>
-                <li><strong>Resumen semanal por email:</strong> solo si lo pides expresamente. Sin cuenta, además, tienes que confirmarlo desde un email antes de recibir nada. Base legal: tu consentimiento (art. 6.1.a RGPD), que puedes retirar con un clic desde cualquier email.</li>
+                <li><strong>Resumen semanal por email:</strong> solo si lo pides expresamente. Sin cuenta, además, tienes que confirmarlo desde un email antes de recibir nada. Base legal: tu consentimiento (art. 6.1.a RGPD), que puedes retirar con un clic desde cualquier email. Si pides el pack de skills de una profesión, el formulario te lo avisa: te enviamos el enlace de descarga al confirmar y quedas apuntado al resumen semanal, del que puedes darte de baja cuando quieras sin perder el pack. Guardamos de qué formulario llegaste para saber qué pack enviarte.</li>
                 <li><strong>Seguridad y prevención de abusos</strong> (límites de peticiones por IP, protección contra spam y accesos no autorizados): interés legítimo en mantener la web segura (art. 6.1.f RGPD).</li>
                 <li><strong>Estadísticas de uso</strong> (contar cuántas veces se instala cada skill, sin identificarte): se guarda durante 24 horas un resumen no reversible de tu IP y tu navegador para no contar dos veces la misma instalación. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
             </ul>
@@ -67,8 +67,8 @@
             <ul>
                 <li><strong>Brevo (Sendinblue SAS, Francia, UE)</strong>: envío de los emails de la web. Recibe tu email y el contenido de cada mensaje.</li>
                 <li><strong>Alojamiento del servidor</strong>{{ $legal['hosting'] ? ': '.$legal['hosting'] : '' }}. Es donde se guarda la base de datos de la web.</li>
-                <li><strong>Google Fonts (Google)</strong>: la tipografía de la web se descarga de los servidores de Google, que reciben tu dirección IP al cargar la página. Google puede tratar estos datos fuera de la UE, amparado por el Marco de Privacidad de Datos UE-EE. UU.</li>
             </ul>
+            <p>La tipografía de la web se sirve desde nuestro propio servidor, así que cargar una página no envía tu dirección IP a terceros.</p>
             <p>Lo que publicas en tu perfil, tus skills y tus comentarios es público: cualquiera puede verlo, y los buscadores pueden indexarlo.</p>
 
             <h2 id="conservacion">5. Cuánto tiempo los guardamos</h2>

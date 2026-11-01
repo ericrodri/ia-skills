@@ -99,6 +99,8 @@ class Guides
         'trabajar-en-inteligencia-artificial',
         'claude-vs-chatgpt-para-trabajar',
         'chatgpt-vs-gemini',
+        'perplexity-vs-chatgpt',
+        'copilot-vs-chatgpt',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

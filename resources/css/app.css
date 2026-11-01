@@ -1,5 +1,8 @@
-/* La fuente Inter se carga desde app.blade.php: un @import aquí
-   serializa la descarga detrás del CSS y empeora el LCP. */
+/* Inter se sirve desde nuestro propio dominio (antes venía de Google Fonts):
+   Vite incluye este CSS en el bundle y copia los .woff2 a public/build, así
+   que no hay una segunda conexión ni se envía la IP del visitante a Google.
+   El archivo latino se precarga desde las vistas para no retrasar el LCP. */
+@import '@fontsource-variable/inter/wght.css';
 
 @tailwind base;
 @tailwind components;

@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-15',
     'updated' => '2026-09-15',
     'readingMinutes' => 13,
-    'words' => 2197,
+    'words' => 2211,
     'about' => 'Microsoft 365 Copilot',
     'related' => ['como-usar-copilot', 'ia-en-excel-y-google-sheets', 'ia-para-reuniones-y-actas', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
@@ -131,7 +131,7 @@ return [
 
 <h2 id="vs-chatgpt">Copilot, ChatGPT o Claude: cuál para qué</h2>
 
-<p>No es una competición, son categorías distintas. Copilot compra contexto interno; los chats generalistas compran capacidad de razonamiento y escritura por la mitad de precio.</p>
+<p>No es una competición, son categorías distintas. Copilot compra contexto interno; los chats generalistas compran capacidad de razonamiento y escritura por la mitad de precio. Si la duda es para uso personal, la comparación está en <a href="/guias/copilot-vs-chatgpt">Copilot vs ChatGPT</a>.</p>
 
 <ul>
     <li><strong>Copilot gana</strong> cuando la pregunta empieza por «según lo que hablamos en…», «en el contrato que está en…», «resume el hilo de…». Nadie va a copiar cuarenta correos en un chat.</li>

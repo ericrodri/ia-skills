@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Mail\NewsletterConfirmationMail;
+use App\Mail\ProfessionPackMail;
 use App\Models\NewsletterSubscriber;
 use App\Models\User;
+use App\Support\ProfessionPack;
 use App\Support\Seo;
 use App\Support\SiteData;
 use Illuminate\Contracts\View\View;
@@ -58,9 +60,24 @@ class NewsletterController extends Controller
         $alreadyGetsIt = User::where('email', $email)->where('newsletter_opt_in', true)->exists();
 
         $subscriber = NewsletterSubscriber::firstOrNew(['email' => $email]);
+        $pack = ProfessionPack::professionFromSource($data['source'] ?? null);
+
+        if ($pack && ($alreadyGetsIt || $subscriber->isActive())) {
+            // Ya recibe el resumen: no hay nada que confirmar, se le manda el
+            // pack directamente. La respuesta es la misma que en un alta nueva.
+            try {
+                Mail::to($email)->send(new ProfessionPackMail($pack));
+            } catch (Throwable $e) {
+                report($e);
+
+                return $this->back($request, 'No hemos podido enviarte el email. Inténtalo de nuevo en unos minutos.', error: true);
+            }
+        }
 
         if (! $alreadyGetsIt && ! $subscriber->isActive()) {
-            $subscriber->source ??= $data['source'] ?? null;
+            // Un pack pedido manda sobre el origen anterior: es lo que se
+            // entrega al confirmar.
+            $subscriber->source = $pack ? ProfessionPack::source($pack) : ($subscriber->source ?? $data['source'] ?? null);
             $subscriber->confirmed_at = null;
             $subscriber->unsubscribed_at = null;
             $subscriber->save();
@@ -79,14 +96,26 @@ class NewsletterController extends Controller
 
     public function confirmSubscription(NewsletterSubscriber $subscriber): View
     {
-        return $this->page('confirm', $subscriber->email, done: $subscriber->isActive());
+        return $this->page('confirm', $subscriber->email, done: $subscriber->isActive(), pack: $subscriber->isActive() ? $this->pack($subscriber) : null);
     }
 
     public function storeConfirmation(NewsletterSubscriber $subscriber): View
     {
         $subscriber->forceFill(['confirmed_at' => now(), 'unsubscribed_at' => null])->save();
 
-        return $this->page('confirm', $subscriber->email, done: true);
+        return $this->page('confirm', $subscriber->email, done: true, pack: $this->pack($subscriber));
+    }
+
+    /**
+     * Profesión y enlace del pack que pidió el suscriptor, si pidió uno.
+     *
+     * @return array{name: string, url: string}|null
+     */
+    private function pack(NewsletterSubscriber $subscriber): ?array
+    {
+        $profession = ProfessionPack::professionFromSource($subscriber->source);
+
+        return $profession ? ['name' => $profession->name, 'url' => ProfessionPack::url($profession)] : null;
     }
 
     public function confirm(User $user): View
@@ -131,7 +160,10 @@ class NewsletterController extends Controller
         return $request->header('X-Inertia') ? url()->previous() : url()->previous().'#newsletter';
     }
 
-    private function page(string $view, string $email, bool $done): View
+    /**
+     * @param  array{name: string, url: string}|null  $pack
+     */
+    private function page(string $view, string $email, bool $done, ?array $pack = null): View
     {
         Seo::share([
             'title' => $view === 'confirm' ? 'Confirmar suscripción' : 'Baja del resumen semanal',
@@ -142,6 +174,7 @@ class NewsletterController extends Controller
         return view("newsletter.{$view}", [
             'email' => $email,
             'done' => $done,
+            'pack' => $pack,
             'action' => request()->fullUrl(),
             'skillsCount' => SiteData::skillsCountLabel(),
             'footerProfessions' => SiteData::professions(),

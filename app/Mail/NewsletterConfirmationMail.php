@@ -3,6 +3,7 @@
 namespace App\Mail;
 
 use App\Models\NewsletterSubscriber;
+use App\Support\ProfessionPack;
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
@@ -23,7 +24,11 @@ class NewsletterConfirmationMail extends Mailable
 
     public function envelope(): Envelope
     {
-        return new Envelope(subject: 'Confirma tu suscripción al resumen semanal de ia-skills');
+        $profession = ProfessionPack::professionFromSource($this->subscriber->source);
+
+        return new Envelope(subject: $profession
+            ? "Confirma tu email para descargar el pack de skills para {$profession->name}"
+            : 'Confirma tu suscripción al resumen semanal de ia-skills');
     }
 
     public function content(): Content
@@ -36,6 +41,7 @@ class NewsletterConfirmationMail extends Mailable
                     now()->addDays(self::LINK_DAYS),
                     ['subscriber' => $this->subscriber->id],
                 ),
+                'packProfession' => ProfessionPack::professionFromSource($this->subscriber->source)?->name,
             ],
         );
     }

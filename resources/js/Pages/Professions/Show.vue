@@ -3,6 +3,7 @@ import { Head, Link, router } from '@inertiajs/vue3'
 import { ref, watch } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import SkillCard from '@/Components/SkillCard.vue'
+import ProfessionPackForm from '@/Components/ProfessionPackForm.vue'
 
 // El copy editorial y las FAQ llegan del servidor (App\Support\ProfessionContent)
 // para que el FAQPage de datos estructurados se emita en el HTML inicial.
@@ -75,6 +76,11 @@ function clearSearch() {
             <div class="bg-gray-50 dark:bg-gray-800/50 rounded-2xl p-6 border border-gray-100 dark:border-gray-700">
                 <p v-for="(paragraph, i) in content.intro" :key="i" class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed" :class="i > 0 ? 'mt-3' : ''">{{ paragraph }}</p>
             </div>
+        </div>
+
+        <!-- Pack descargable a cambio del email (solo con skills suficientes) -->
+        <div v-if="profession.skills_count >= 20 && !filters?.q" class="max-w-6xl mx-auto px-4 sm:px-6 pt-8">
+            <ProfessionPackForm :profession="profession" />
         </div>
 
         <!-- Skills list -->

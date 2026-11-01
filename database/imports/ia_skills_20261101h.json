@@ -1,0 +1,57 @@
+[
+  {
+    "profession_slug": "desarrollo",
+    "title": "Remotion Skills — Vídeos programados con React desde Claude Code",
+    "description": "Skills oficiales de Remotion para que Claude Code cree, edite y renderice vídeos hechos con React siguiendo las buenas prácticas del framework: composiciones, subtítulos, mapas, interactividad y renderizado.",
+    "use_case": "Generar vídeos con código (explicativos, promocionales, con datos o subtítulos) pidiéndoselo a Claude Code en lenguaje natural dentro de un proyecto de Remotion.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 15,
+    "resource_type": "claude_skill",
+    "prompt_content": "## Qué hace\n\nRemotion es un framework para crear vídeos con React: cada fotograma es un componente, así que un vídeo se programa como una web. Estas skills oficiales enseñan a Claude Code a trabajar con Remotion siguiendo sus buenas prácticas.\n\nIncluye, entre otras:\n\n- `/remotion-best-practices`: la skill general, con las reglas del framework.\n- `/remotion-create`: crear un vídeo o una composición nueva.\n- `/remotion-captions`: subtítulos sincronizados.\n- `/remotion-maps`: animaciones sobre mapas.\n- `/remotion-render`: renderizar el vídeo final.\n- `/remotion-studio`, `/remotion-interactivity`, `/remotion-multimedia`, `/remotion-upgrade` y `/remotion-docs`.\n\n## Instalación\n\nSegún el README del repositorio oficial, con cualquiera de estos comandos:\n\n```\nnpx skills add remotion-dev/skills\n```\n\n```\ngh skill install remotion-dev/skills\n```\n\nSi empiezas un proyecto nuevo, `bun create video` ofrece añadir las skills al crearlo.\n\n## Cómo usarlo\n\nDentro de un proyecto de Remotion, pide a Claude Code lo que quieres en lenguaje natural:\n\n```\nCrea un vídeo vertical de 20 segundos que presente las tres ventajas de nuestro producto con texto animado y subtítulos.\n```\n\nClaude aplicará las skills de Remotion para crear la composición y, cuando se lo pidas, renderizarla.\n\n## Requisitos\n\nUn proyecto de Remotion, con su entorno de Node o Bun. Las skills no piden claves de API.\n\n## Fuente\n\n- Repositorio oficial: https://github.com/remotion-dev/skills"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Webapp Testing de Anthropic — Claude prueba tu web en el navegador con Playwright",
+    "description": "Skill oficial de Anthropic para que Claude Code compruebe una aplicación web local con Playwright: abre el navegador, navega, hace capturas, lee los registros de la consola y verifica que el frontend funciona.",
+    "use_case": "Comprobar que una funcionalidad nueva se ve y funciona en el navegador, o depurar un error de la interfaz, sin hacerlo a mano.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nEs una caja de herramientas para probar aplicaciones web locales con Playwright, el automatizador de navegadores. Con ella, Claude Code puede:\n\n- Arrancar tu servidor de desarrollo y abrir la página en un navegador sin interfaz.\n- Navegar, hacer clic y rellenar formularios.\n- Hacer capturas de pantalla para comprobar cómo se ve.\n- Leer los registros de la consola del navegador para encontrar errores.\n\nUsa scripts de Python con Playwright e incluye un ayudante (`scripts/with_server.py`) para levantar el servidor mientras se ejecutan las pruebas.\n\n## Instalación\n\nViene en el plugin `example-skills` del marketplace oficial de Anthropic:\n\n```\n/plugin marketplace add anthropics/skills\n/plugin install example-skills@anthropic-agent-skills\n```\n\nEl plugin incluye también otras skills de ejemplo, como `frontend-design`, `skill-creator` y `web-artifacts-builder`.\n\n## Cómo usarlo\n\n```\nArranca la app, entra en /registro, rellena el formulario con datos de prueba y comprueba que aparece el mensaje de bienvenida. Si falla, enséñame la captura y los errores de la consola.\n```\n\n## Requisitos\n\nPython con Playwright y un navegador instalado para Playwright. No necesita claves de API.\n\n## Fuente\n\n- Repositorio oficial: https://github.com/anthropics/skills (skill `webapp-testing`)"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Web Artifacts Builder de Anthropic — Artefactos complejos con React, Tailwind y shadcn/ui",
+    "description": "Skill oficial de Anthropic para construir artefactos HTML de varios componentes con React, TypeScript, Tailwind CSS y shadcn/ui, y empaquetarlos en un solo archivo listo para compartir.",
+    "use_case": "Crear prototipos, paneles o pequeñas herramientas interactivas más elaboradas de lo que permite un artefacto escrito a mano.",
+    "tool_name": "Claude Code",
+    "difficulty": "advanced",
+    "estimated_minutes": 15,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nAyuda a Claude a construir artefactos HTML complejos, con varios componentes, estado y diseño cuidado, usando tecnologías de frontend actuales:\n\n- React 18 con TypeScript.\n- Tailwind CSS y componentes de shadcn/ui.\n- Vite y Parcel para empaquetar.\n\nIncluye dos scripts: `scripts/init-artifact.sh <nombre-del-proyecto>` crea el proyecto y `scripts/bundle-artifact.sh` lo empaqueta en un único archivo HTML.\n\n## Instalación\n\nViene en el plugin `example-skills` del marketplace oficial de Anthropic:\n\n```\n/plugin marketplace add anthropics/skills\n/plugin install example-skills@anthropic-agent-skills\n```\n\n## Cómo usarlo\n\n```\nHazme un panel interactivo para seguir las ventas mensuales por comercial, con filtros por mes y un gráfico de barras. Empaquétalo en un solo HTML.\n```\n\n## Requisitos\n\nNode 18 o superior. No necesita claves de API.\n\n## Fuente\n\n- Repositorio oficial: https://github.com/anthropics/skills (skill `web-artifacts-builder`)"
+  },
+  {
+    "profession_slug": "marketing",
+    "title": "Marketing Skills de alirezarezvani — 47 skills de marketing para Claude Code",
+    "description": "Plugin con 47 skills de marketing organizadas en contenido, SEO y AEO, conversión, canales, crecimiento, análisis, ventas y X/Twitter: copywriting, auditoría SEO, anuncios, emails, precios y más.",
+    "use_case": "Equipos de marketing y freelancers que quieren un conjunto amplio de procedimientos de marketing listos para usar desde Claude Code.",
+    "tool_name": "Claude Code",
+    "difficulty": "beginner",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nEs el plugin de marketing del repositorio `alirezarezvani/claude-skills`, uno de los más populares de skills para Claude Code. Según su marketplace, reúne 47 skills en ocho áreas: contenido, SEO y AEO (optimización para respuestas de IA), conversión, canales, crecimiento, análisis, apoyo a ventas y crecimiento en X/Twitter. Incluye además scripts de Python y documentos de referencia.\n\nAlgunas de las skills que contiene:\n\n- `copywriting`, `content-strategy` y `social-content`.\n- `seo-audit`, `schema-markup`, `local-seo-manager` y `aeo`.\n- `paid-ads`, `email-sequence` y `cold-email`.\n- `page-cro`, `ab-test-setup` y `pricing-strategy`.\n- `launch-strategy`, `churn-prevention` y `campaign-analytics`.\n\n## Instalación\n\n```\n/plugin marketplace add alirezarezvani/claude-skills\n/plugin install marketing-skills@claude-code-skills\n```\n\nTambién puedes clonar el repositorio y copiar solo las carpetas de las skills que quieras a `~/.claude/skills/`.\n\n## Cómo usarlo\n\nPídele la tarea con normalidad y Claude cargará la skill que encaje:\n\n```\nHaz una auditoría SEO de la página de inicio de mi web y dame las 10 mejoras más importantes ordenadas por impacto.\n```\n\n## Requisitos\n\nNo necesita claves de API. Las skills hablan de herramientas como Google Analytics, Search Console o HubSpot, pero no las exigen: trabajan con los datos que les pases.\n\n## Fuente\n\n- Repositorio: https://github.com/alirezarezvani/claude-skills (licencia MIT)"
+  },
+  {
+    "profession_slug": "desarrollo",
+    "title": "Engineering Skills de alirezarezvani — Arquitectura, frontend, backend, QA, DevOps y seguridad",
+    "description": "Plugin con unas 30 skills de ingeniería para Claude Code: arquitectura, frontend, backend, QA, DevOps, seguridad, datos e IA, revisión de código, TDD, auditoría de accesibilidad y Playwright.",
+    "use_case": "Desarrolladores que quieren que Claude Code trabaje con criterios de perfil senior en cada área del desarrollo, sin escribir esas instrucciones desde cero.",
+    "tool_name": "Claude Code",
+    "difficulty": "intermediate",
+    "estimated_minutes": 10,
+    "resource_type": "claude_plugin",
+    "prompt_content": "## Qué hace\n\nEs el plugin de ingeniería del repositorio `alirezarezvani/claude-skills`. Reúne skills con el criterio de un perfil senior para cada área:\n\n- Arquitectura y elección de tecnologías: `senior-architect`, `tech-stack-evaluator`.\n- Desarrollo: `senior-frontend`, `senior-backend`, `senior-fullstack`.\n- Calidad: `senior-qa`, `code-reviewer`, `tdd-guide` y un kit de Playwright.\n- Operaciones y seguridad: `senior-devops`, `senior-secops`, `senior-security`.\n- Datos e IA: ingeniería de datos, ciencia de datos y aprendizaje automático.\n- Accesibilidad: auditoría y corrección según WCAG 2.2.\n\n## Instalación\n\n```\n/plugin marketplace add alirezarezvani/claude-skills\n/plugin install engineering-skills@claude-code-skills\n```\n\nEl repositorio tiene además un plugin separado, `engineering-advanced-skills`, con otras skills más especializadas.\n\n## Cómo usarlo\n\n```\nRevisa la arquitectura de este proyecto y propón cómo separar el módulo de pagos en un servicio aparte, con los riesgos de cada opción.\n```\n\n## Requisitos\n\nLa mayoría no necesita nada más. Algunas skills conectan con servicios externos y piden su propia cuenta o autenticación: la de Google Workspace, las integraciones opcionales de Playwright con TestRail o BrowserStack, o las de Snowflake y Stripe. En Windows, el README recomienda clonar con `git clone -c core.symlinks=true` y el modo de desarrollador activado.\n\n## Fuente\n\n- Repositorio: https://github.com/alirezarezvani/claude-skills (licencia MIT)"
+  }
+]

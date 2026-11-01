@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-30',
     'updated' => '2026-09-30',
     'readingMinutes' => 7,
-    'words' => 1157,
+    'words' => 1178,
     'about' => 'Uso práctico de Perplexity como buscador con inteligencia artificial',
-    'related' => ['comprar-con-ia-black-friday', 'planificar-un-viaje-con-ia', 'investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
+    'related' => ['perplexity-vs-chatgpt', 'comprar-con-ia-black-friday', 'planificar-un-viaje-con-ia', 'investigar-con-ia-deep-research', 'alucinaciones-de-la-ia', 'como-usar-claude', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'aparecer-en-chatgpt-y-perplexity-geo'],
     'toc' => [
         'que-es' => 'Qué es y en qué se diferencia de un chat',
         'empezar' => 'Empezar: cuenta y primera búsqueda',
@@ -98,5 +98,7 @@ cuantía, plazo y enlace a la convocatoria oficial.</code></pre>
 <p>Si tienes una web, hay otra cara de la moneda: Perplexity también es un canal por el que tus clientes pueden encontrarte. Cómo conseguir que te cite está en <a href="/guias/aparecer-en-chatgpt-y-perplexity-geo">aparecer en ChatGPT y Perplexity</a>.</p>
 
 <p>Si solo te quedas con una idea: Perplexity te ahorra buscar, no comprobar. Úsalo para llegar antes a las fuentes buenas y lee esas fuentes.</p>
+
+<p>Si dudas entre Perplexity y ChatGPT, o entre pagar uno u otro, los comparamos tarea por tarea en <a href="/guias/perplexity-vs-chatgpt">Perplexity vs ChatGPT</a>.</p>
 HTML,
 ];
