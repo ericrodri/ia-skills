@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
     'readingMinutes' => 8,
-    'words' => 1241,
+    'words' => 1266,
     'about' => 'Uso práctico de Google Gemini en el entorno profesional',
     'related' => ['chatgpt-vs-gemini', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'gemini-notebook-antes-notebooklm', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
@@ -106,5 +106,7 @@ problemas, ordenada por gravedad.</code></pre>
 </ul>
 
 <p>Si solo te quedas con una idea: la ventaja de Gemini no es que sea más listo, es que ya está donde trabajas. Aprovéchala para dejar de copiar y pegar, y revisa lo que entrega como revisarías el trabajo de un compañero.</p>
+
+<p>Si no trabajas en Gmail ni en Drive y dudas entre Gemini y otro asistente, tienes la comparativa completa en <a href="/guias/cual-es-la-mejor-ia">¿cuál es la mejor IA?</a>.</p>
 HTML,
 ];

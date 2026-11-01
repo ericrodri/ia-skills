@@ -1,0 +1,14 @@
+[
+  {
+    "slug": "como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion",
+    "title": "Cómo pedirle a ChatGPT que mejore la calidad de una foto",
+    "description": "Prompt para que ChatGPT quite lo borroso, el ruido y los píxeles de una foto y la amplíe sin cambiar caras ni detalles.",
+    "changelog": "Título y descripción más claros: el título largo se cortaba en Google"
+  },
+  {
+    "slug": "prompts-para-diseno-grafico-con-ia-conceptos-paletas-y-briefs-creativos",
+    "title": "Ideación de diseño con IA: conceptos, paletas HEX y briefs creativos",
+    "description": "Abre territorios de concepto, propone paletas con códigos HEX, monta un moodboard y cierra el brief creativo con Claude.",
+    "changelog": "Título centrado en la ideación para no competir con la guía de prompts para diseño gráfico"
+  }
+]

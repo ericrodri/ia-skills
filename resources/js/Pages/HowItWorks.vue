@@ -48,7 +48,7 @@ const aiTools = [
             {
                 icon: '📋',
                 title: 'Copia el prompt completo',
-                desc: 'Copia el prompt desde la skill. En ChatGPT, pégalo directamente en el chat de GPT-4o o GPT-4.'
+                desc: 'Copia el prompt desde la skill y pégalo en el chat de ChatGPT. Funciona con el modelo por defecto, también en el plan gratuito.'
             },
             {
                 icon: '✏️',
@@ -61,8 +61,8 @@ const aiTools = [
                 desc: 'Para skills que uses frecuentemente, crea un GPT personalizado con el prompt como instrucciones del sistema.'
             },
         ],
-        tip: 'En ChatGPT puedes usar los prompts en la ventana de chat o configurarlos como GPTs. Los modelos GPT-4o y o1 dan los mejores resultados con prompts complejos.',
-        url: 'https://chat.openai.com',
+        tip: 'En ChatGPT puedes usar los prompts en la ventana de chat o guardarlos como GPT o proyecto. Para los prompts más complejos, elige un modelo de razonamiento si tu plan lo incluye.',
+        url: 'https://chatgpt.com',
     },
     {
         id: 'gemini',
@@ -77,7 +77,7 @@ const aiTools = [
             {
                 icon: '📋',
                 title: 'Pega el prompt en Gemini',
-                desc: 'Abre gemini.google.com y pega el prompt directamente. Usa Gemini 1.5 Pro o Gemini 2.0 para mejores resultados.'
+                desc: 'Abre gemini.google.com y pega el prompt directamente. Para tareas complejas, elige el modelo más avanzado que incluya tu plan.'
             },
             {
                 icon: '✏️',
@@ -90,7 +90,7 @@ const aiTools = [
                 desc: 'Si usas Google Docs, Sheets o Gmail, puedes activar Gemini dentro de esas apps y usar los prompts de ia-skills directamente.'
             },
         ],
-        tip: 'Gemini destaca cuando el prompt necesita procesar documentos de Google Drive o cuando trabajas en el ecosistema de Google Workspace. La versión Advanced (1.5 Pro) da mejores resultados.',
+        tip: 'Gemini destaca cuando el prompt necesita procesar documentos de Google Drive o cuando trabajas en el ecosistema de Google Workspace. Con el plan Google AI Pro tienes los modelos más capaces y Gemini dentro de Gmail y Docs.',
         url: 'https://gemini.google.com',
     },
     {
@@ -178,7 +178,7 @@ const faqItems = [
     },
     {
         q: '¿Funcionan con la versión gratuita de Claude o ChatGPT?',
-        a: 'Sí, la mayoría funcionan. Las skills marcadas como "avanzadas" dan mejores resultados con modelos de pago (Claude Sonnet/Opus, GPT-4o, Gemini Advanced) porque requieren razonamiento más complejo. Las skills de nivel principiante e intermedio funcionan bien con los modelos gratuitos.',
+        a: 'Sí, la mayoría funcionan. Las skills marcadas como "avanzadas" dan mejores resultados con modelos de pago (Claude Sonnet u Opus, los modelos de razonamiento de ChatGPT o Gemini con Google AI Pro) porque requieren razonamiento más complejo. Las skills de nivel principiante e intermedio funcionan bien con los modelos gratuitos.',
     },
     {
         q: '¿Puedo modificar una skill para adaptarla a mi caso?',
@@ -209,11 +209,15 @@ const faqItems = [
                     ⚡ Guía completa
                 </div>
                 <h1 class="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-5 leading-tight">
-                    ¿Qué es una <span class="text-brand-600 dark:text-brand-400">skill de IA</span><br>y cómo te ayuda?
+                    Cómo usar las <span class="text-brand-600 dark:text-brand-400">skills de ia-skills</span><br>en tres pasos
                 </h1>
                 <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-                    Una skill es un prompt profesional diseñado para que cualquier IA produzca un resultado de experto en tu área.
-                    Sin prompts vagos, sin prueba y error. Solo resultados.
+                    Cada ficha es un prompt profesional o un skill listo para instalar: lo copias, rellenas tus datos y
+                    lo ejecutas en Claude, ChatGPT o Gemini. Sin prompts vagos, sin prueba y error.
+                </p>
+                <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
+                    ¿Qué es exactamente un skill y en qué se diferencia de un prompt? Lo explicamos en
+                    <a href="/guias/que-es-un-skill-de-ia" class="text-brand-600 dark:text-brand-400 font-medium hover:underline">qué es un skill de IA</a>.
                 </p>
             </section>
 

@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-25',
     'updated' => '2026-10-28',
     'readingMinutes' => 11,
-    'words' => 1799,
+    'words' => 1838,
     'about' => 'Prompts para diseño gráfico',
     'related' => ['hacer-un-cartel-con-ia', 'crear-un-logo-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
@@ -98,6 +98,8 @@ Para cada adjetivo, dime qué decisiones visuales concretas
 lo transmiten y cuáles lo contradicen, en tipografía, color,
 composición y fotografía. Señala dónde entran en conflicto
 entre sí y cómo lo resolverías.</code></pre>
+
+<p>Si quieres llevar la fase de ideación más lejos, con territorios de concepto, paletas con códigos HEX y moodboard en un solo proceso, tienes la versión completa en la skill <a href="/skills/prompts-para-diseno-grafico-con-ia-conceptos-paletas-y-briefs-creativos">ideación de diseño con IA: conceptos, paletas y briefs</a>.</p>
 
 <h2 id="logo">Prompts para logos e identidad</h2>
 

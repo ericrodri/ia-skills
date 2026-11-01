@@ -1,20 +1,21 @@
 <?php
 
 return [
-    'title' => 'Modo IA de Google: qué es y qué cambia para tu web',
+    'title' => 'Modo IA de Google: qué es, cómo usarlo y qué cambia para tu web',
     'navTitle' => 'Modo IA de Google',
-    'seoTitle' => 'Modo IA de Google: qué cambia para tu web',
-    'description' => 'Cómo funciona el Modo IA de Google, en qué se diferencia de los AI Overviews, cómo se mide en Search Console y qué hacer para que tu web aparezca citada.',
+    'seoTitle' => 'Modo IA de Google: qué es, cómo usarlo y qué cambia',
+    'description' => 'Qué es el Modo IA de Google, cómo usarlo en el móvil y el ordenador, en qué se diferencia de los AI Overviews y qué hacer para que tu web aparezca citada.',
     'excerpt' => 'Desde octubre de 2025 en España hay una pestaña en Google que no enseña diez enlaces: conversa. El Modo IA cambia qué búsquedas llegan a tu web y cómo se miden. Esto es lo que se sabe, lo que no y qué hacer mientras tanto.',
     'category' => 'Método',
     'published' => '2026-09-23',
-    'updated' => '2026-09-23',
-    'readingMinutes' => 9,
-    'words' => 1467,
+    'updated' => '2026-11-01',
+    'readingMinutes' => 10,
+    'words' => 1696,
     'about' => 'Modo IA de Google (AI Mode)',
     'related' => ['ai-overviews-caida-de-clics', 'aparecer-en-chatgpt-y-perplexity-geo', 'medir-el-trafico-de-ia', 'google-search-console-guia', 'datos-estructurados-para-ia', 'eeat-experiencia-contenido-con-ia'],
     'toc' => [
         'que-es' => 'Qué es el Modo IA',
+        'como-usarlo' => 'Cómo usarlo',
         'diferencias' => 'Modo IA frente a AI Overviews',
         'como-elige' => 'Cómo elige las fuentes',
         'medir' => 'Cómo se mide',
@@ -23,6 +24,7 @@ return [
         'errores' => 'Lo que no hace falta hacer',
     ],
     'faq' => [
+        '¿Cómo activo el Modo IA de Google?' => 'No hay que activar nada. Haz una búsqueda en google.com y pulsa la pestaña «Modo IA», junto a Todo, Imágenes o Noticias. En el móvil está en la aplicación de Google. Para volver a los resultados de siempre, pulsa «Todo» o «Web».',
         '¿Desde cuándo está el Modo IA en España?' => 'Google empezó a desplegarlo en España el 8 de octubre de 2025, junto con una cincuentena de países más y 36 idiomas nuevos. Aparece como una opción dentro de la página de resultados y en las aplicaciones de Google para Android e iOS.',
         '¿Hace falta optimizar algo especial para el Modo IA?' => 'Google dice que no: para aparecer basta con que la página esté indexada y pueda mostrar un fragmento en la búsqueda normal. No hay marcado, archivo ni etiqueta específicos. En la práctica, lo que más pesa es lo de siempre, llevado más lejos: páginas que resuelven una parte concreta de una pregunta mejor que nadie.',
         '¿Puedo ver en Search Console los clics del Modo IA?' => 'Los clics y las impresiones del Modo IA cuentan dentro del total de búsqueda web del informe de rendimiento, pero no se pueden separar ahí. Para ver en qué páginas apareces en respuestas generativas está el informe de IA generativa, que da impresiones por página y no da consultas.',
@@ -43,6 +45,22 @@ return [
 <p>Su rasgo técnico más importante es lo que Google llama <em>query fan-out</em>, descomposición de la consulta: en lugar de buscar tu pregunta tal cual, la divide en subpreguntas, lanza muchas búsquedas a la vez y compone la respuesta con lo que encuentra. Si preguntas «qué portátil me compro para editar vídeo con 1.200 euros», por debajo se buscan cosas como requisitos de edición, modelos en ese rango, comparativas y opiniones.</p>
 
 <p>Google dice que las preguntas en el Modo IA son dos o tres veces más largas que en la búsqueda tradicional. Ese dato explica casi todo lo que viene después.</p>
+
+<h2 id="como-usarlo">Cómo usarlo</h2>
+
+<p>No hay que activar nada ni pagar: es gratis y viene integrado en el buscador.</p>
+
+<ul>
+    <li><strong>En el ordenador:</strong> busca algo en google.com y pulsa la pestaña <strong>Modo IA</strong>, junto a Todo, Imágenes o Noticias.</li>
+    <li><strong>En el móvil:</strong> abre la aplicación de Google; el Modo IA aparece en la pantalla de búsqueda.</li>
+    <li><strong>Para seguir preguntando:</strong> escribe debajo de la respuesta, como en un chat. Recuerda lo que has preguntado antes, así que puedes afinar («y si el presupuesto fuera la mitad») sin repetir todo.</li>
+    <li><strong>Con una foto o con la voz:</strong> pulsa el icono de la cámara o del micrófono en la caja de búsqueda.</li>
+    <li><strong>Para volver a los resultados de siempre:</strong> pulsa la pestaña <strong>Todo</strong> o <strong>Web</strong>.</li>
+</ul>
+
+<p>Funciona mejor con preguntas largas y concretas que con dos palabras sueltas, y como cualquier respuesta generada puede equivocarse: abre las fuentes que cita antes de fiarte de un dato importante. Por qué se equivocan estas herramientas está en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</p>
+
+<p>El resto de la guía es para quien tiene una web y quiere saber qué cambia.</p>
 
 <h2 id="diferencias">Modo IA frente a AI Overviews</h2>
 

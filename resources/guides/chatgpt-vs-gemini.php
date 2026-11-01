@@ -3,14 +3,14 @@
 return [
     'title' => 'ChatGPT o Gemini: cuál elegir según lo que vayas a hacer',
     'navTitle' => 'ChatGPT o Gemini',
-    'seoTitle' => 'ChatGPT o Gemini: cuál es mejor para ti',
-    'description' => 'ChatGPT o Gemini: diferencias reales en redacción, búsqueda, documentos, imágenes, plan gratuito y precio, y cómo decidir con una prueba de una semana.',
+    'seoTitle' => 'ChatGPT vs Gemini en 2026: cuál es mejor y para qué',
+    'description' => 'ChatGPT o Gemini: diferencias en textos, búsqueda, documentos, imágenes, plan gratis y precio (unos 23 € frente a 22 €), y cómo decidir en una semana.',
     'excerpt' => 'Los dos cuestan lo mismo y responden a un nivel parecido. La diferencia está en lo que los rodea: tu correo, tus documentos y las herramientas que ya usas. Así se decide sin perder el tiempo.',
     'category' => 'Herramientas',
     'published' => '2026-10-02',
-    'updated' => '2026-10-02',
+    'updated' => '2026-11-01',
     'readingMinutes' => 7,
-    'words' => 1106,
+    'words' => 1143,
     'about' => 'Comparativa práctica entre los asistentes de inteligencia artificial ChatGPT y Gemini',
     'related' => ['cual-es-la-mejor-ia', 'vale-la-pena-pagar-chatgpt-plus', 'como-usar-chatgpt', 'como-usar-gemini', 'claude-vs-chatgpt-para-trabajar', 'herramientas-de-ia-gratis', 'microsoft-365-copilot-en-el-trabajo', 'como-usar-grok'],
     'toc' => [
@@ -24,7 +24,7 @@ return [
     'faq' => [
         '¿Qué es mejor, ChatGPT o Gemini?' => 'Ninguno gana en todo. ChatGPT suele ser más cómodo para redactar, conversar por voz y crear asistentes personalizados, y tiene más integraciones con herramientas de terceros. Gemini destaca en búsqueda con información reciente, en documentos muy largos y en su integración con Gmail, Drive y el resto de Google. Elige según dónde trabajas.',
         '¿Gemini es gratis?' => 'Sí, tiene un plan gratuito generoso que incluye conversación, búsqueda e imágenes con límites. El plan de pago, dentro de Google One, añade modelos más capaces, más uso, Gemini en Gmail y Docs y almacenamiento en la nube.',
-        '¿Cuánto cuestan ChatGPT y Gemini?' => 'Sus planes individuales de pago rondan los 20 euros al mes, y ambos ofrecen una opción más barata con menos funciones y otra muy superior para uso intensivo. Para empresas, Gemini viene incluido en muchos planes de Google Workspace, y ChatGPT tiene planes Business y Enterprise.',
+        '¿Cuánto cuestan ChatGPT y Gemini?' => 'En España, ChatGPT Plus cuesta unos 23 euros al mes y Google AI Pro, unos 22. Ambos tienen una opción más barata con menos funciones (ChatGPT Go, unos 8 euros; Google AI Plus, unos 5) y otra muy superior para uso intensivo. Para empresas, Gemini viene incluido en muchos planes de Google Workspace, y ChatGPT tiene planes Business y Enterprise.',
         '¿Puedo usar los dos a la vez?' => 'Sí, y es lo que hace mucha gente: el gratuito de uno y el de pago del otro. Lo que no compensa es pagar los dos sin una razón concreta. Los prompts que escribas funcionan en ambos con pocos cambios.',
         '¿Cuál es mejor para estudiantes?' => 'Para estudiar con apuntes y documentos largos, Gemini y su herramienta de cuadernos tienen ventaja, y Google suele ofrecer promociones para estudiantes. Para practicar idiomas por voz o pedir explicaciones paso a paso, ChatGPT funciona muy bien. En ambos casos, revisa lo que digan antes de entregarlo.',
     ],
@@ -67,7 +67,7 @@ return [
 
 <p>El plan gratuito de Gemini es de los más generosos del mercado, y para un uso personal ocasional puede bastar. El de ChatGPT también permite mucho, aunque con límites más ajustados en los modelos mejores y en las imágenes. La lista completa de opciones sin pagar está en <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>.</p>
 
-<p>En pago, sus planes individuales cuestan casi lo mismo, en torno a 20 euros al mes. La diferencia es qué incluyen: el de Gemini va dentro de Google One y suma almacenamiento en la nube y Gemini en Gmail y Docs; el de ChatGPT da más uso de sus modelos, imágenes, agentes y proyectos. Si ya pagas almacenamiento de Google, Gemini puede salirte casi gratis.</p>
+<p>En pago, sus planes individuales cuestan casi lo mismo: unos 23 euros al mes ChatGPT Plus y unos 22 Google AI Pro, con opciones más baratas de unos 8 y 5 euros (comprueba los precios actuales antes de contratar). La diferencia es qué incluyen: el de Gemini va dentro de Google One y suma almacenamiento en la nube y Gemini en Gmail y Docs; el de ChatGPT da más uso de sus modelos, imágenes, agentes y proyectos. Si ya pagas almacenamiento de Google, Gemini puede salirte casi gratis.</p>
 
 <h2 id="datos">Privacidad en el trabajo</h2>
 

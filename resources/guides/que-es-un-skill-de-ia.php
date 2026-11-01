@@ -1,23 +1,24 @@
 <?php
 
 return [
-    'title' => 'Qué es un skill de IA y para qué sirve',
+    'title' => 'Qué es un skill en IA, para qué sirve y en qué se diferencia de un prompt',
     'navTitle' => 'Qué es un skill de IA',
-    'seoTitle' => 'Qué es un skill de IA: definición, usos y ejemplos',
-    'description' => 'Un skill de IA es un procedimiento escrito que el asistente aplica solo cuando reconoce la tarea. Qué es, en qué se diferencia de un prompt y dónde se usa.',
+    'seoTitle' => 'Qué es un skill en IA y su diferencia con un prompt',
+    'description' => 'Una skill de IA son instrucciones guardadas que el asistente aplica solo cuando reconoce la tarea. Qué es, diferencia con un prompt, ejemplos y cómo empezar.',
     'excerpt' => 'Un prompt lo pegas tú cada vez. Un skill lo aplica el asistente por su cuenta cuando reconoce la tarea. Qué es exactamente, en qué se diferencia de un GPT, un agente o un servidor MCP, y cómo empezar.',
     'category' => 'Fundamentos',
     'published' => '2026-10-24',
-    'updated' => '2026-10-24',
-    'readingMinutes' => 9,
-    'words' => 1485,
+    'updated' => '2026-11-01',
+    'readingMinutes' => 10,
+    'words' => 1684,
     'about' => 'Skills para asistentes de inteligencia artificial y el estándar abierto Agent Skills',
     'related' => ['que-son-los-skills-de-claude-code', 'agent-skills-estandar-abierto', 'gpts-proyectos-y-skills', 'que-es-un-agente-de-ia'],
     'toc' => [
         'que-es' => 'Qué es un skill de IA',
         'problema' => 'El problema que resuelve',
         'por-dentro' => 'Cómo es un skill por dentro',
-        'diferencias' => 'Skill, prompt, GPT, agente y MCP',
+        'skill-vs-prompt' => 'Diferencia entre skill y prompt',
+        'diferencias' => 'Skill, GPT, agente y MCP',
         'donde' => 'Dónde se pueden usar',
         'ejemplos' => 'Ejemplos por profesión',
         'empezar' => 'Cómo empezar hoy',
@@ -88,9 +89,32 @@ Máximo una página. Sin introducción ni conclusiones.</code></pre>
 
 <p>La pieza clave es la descripción. El asistente no lee todos tus skills enteros en cada mensaje: lee solo sus descripciones y, cuando una encaja con lo que le pides, carga el resto. Por eso la descripción tiene que decir <em>cuándo</em> usarlo, con las palabras que de verdad vas a escribir. Cómo se redactan para que se activen bien lo contamos en <a href="/guias/como-crear-un-skill-para-claude-code">cómo crear un skill</a>.</p>
 
-<h2 id="diferencias">Skill, prompt, GPT, agente y MCP: en qué se diferencian</h2>
+<h2 id="skill-vs-prompt">Diferencia entre skill y prompt</h2>
 
-<p>Son términos que se usan como sinónimos y no lo son. La forma más rápida de distinguirlos es preguntarse qué guarda cada uno y quién decide cuándo se usa.</p>
+<p><strong>Un prompt es lo que escribes en el chat para pedir algo una vez; un skill es un procedimiento guardado que el asistente aplica por su cuenta cada vez que reconoce la tarea.</strong> El texto puede ser casi idéntico: lo que cambia es dónde vive y quién decide usarlo.</p>
+
+<figure>
+<table>
+    <thead>
+        <tr><th></th><th>Prompt</th><th>Skill</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Dónde está</strong></td><td>En la conversación</td><td>Guardado en el asistente, disponible en todas las conversaciones</td></tr>
+        <tr><td><strong>Quién lo activa</strong></td><td>Tú, pegándolo cada vez</td><td>El asistente, al reconocer la tarea por su descripción</td></tr>
+        <tr><td><strong>Cuánto dura</strong></td><td>Lo que dura la conversación</td><td>Hasta que lo borres</td></tr>
+        <tr><td><strong>Qué contiene</strong></td><td>Una petición</td><td>Un procedimiento: pasos, criterios, formato y, a veces, plantillas o scripts</td></tr>
+        <tr><td><strong>Se comparte</strong></td><td>Copiando y pegando</td><td>Instalando el mismo archivo en el equipo</td></tr>
+    </tbody>
+</table>
+</figure>
+
+<p>Un ejemplo. El prompt sería escribir cada lunes «resume esta reunión en decisiones, tareas con responsable y temas abiertos» y pegar la transcripción. El skill es ese mismo texto guardado como <code>SKILL.md</code>: a partir de entonces basta con pegar la transcripción, porque el asistente reconoce que es una reunión y aplica el procedimiento solo.</p>
+
+<p>No compiten: casi todos los buenos skills empiezan siendo un prompt que se repetía demasiado. Si todavía no tienes ese prompt afinado, empieza por <a href="/guias/como-escribir-prompts-efectivos">cómo escribir prompts efectivos</a>.</p>
+
+<h2 id="diferencias">Skill, GPT, agente y MCP: en qué se diferencian</h2>
+
+<p>Además del prompt, hay otros términos que se usan como sinónimos y no lo son. La forma más rápida de distinguirlos es preguntarse qué guarda cada uno y quién decide cuándo se usa.</p>
 
 <figure>
 <table>

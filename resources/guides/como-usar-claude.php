@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-30',
     'updated' => '2026-09-30',
     'readingMinutes' => 9,
-    'words' => 1433,
+    'words' => 1456,
     'about' => 'Uso práctico de Claude, el asistente de IA de Anthropic, en el entorno profesional',
     'related' => ['claude-vs-chatgpt-para-trabajar', 'gpts-proyectos-y-skills', 'que-son-los-skills-de-claude-code', 'como-usar-chatgpt', 'como-usar-gemini', 'como-escribir-prompts-efectivos'],
     'toc' => [
@@ -114,5 +114,7 @@ contradice las tarifas.</code></pre>
 </ul>
 
 <p>Si solo te quedas con una idea: Claude rinde más cuanto mejor contexto le das, y los proyectos existen para que ese contexto se lo des una sola vez.</p>
+
+<p>Si estás eligiendo asistente y Claude es solo una de las opciones, la comparativa por tareas está en <a href="/guias/cual-es-la-mejor-ia">¿cuál es la mejor IA?</a>.</p>
 HTML,
 ];

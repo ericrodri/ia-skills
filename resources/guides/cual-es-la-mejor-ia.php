@@ -1,20 +1,21 @@
 <?php
 
 return [
-    'title' => '¿Cuál es la mejor IA? Cómo elegir según lo que necesitas',
+    'title' => '¿Cuál es la mejor IA en 2026? Comparativa según lo que necesitas',
     'navTitle' => 'Cuál es la mejor IA',
-    'seoTitle' => '¿Cuál es la mejor IA? Comparativa por usos',
-    'description' => 'No hay una IA mejor para todo. Comparamos ChatGPT, Gemini, Claude, Copilot, Perplexity y DeepSeek por tarea: escribir, buscar, programar e imágenes.',
+    'seoTitle' => '¿Cuál es la mejor IA en 2026? Comparativa por usos',
+    'description' => 'ChatGPT, Gemini, Claude, Copilot, Perplexity o DeepSeek: cuál es mejor para escribir, buscar, programar o crear imágenes, con tabla comparativa y precios.',
     'excerpt' => 'Preguntar cuál es la mejor IA es como preguntar cuál es el mejor coche: depende de para qué. Esta guía te dice qué asistente encaja con cada tarea y cómo comprobarlo tú mismo en media hora.',
     'category' => 'Herramientas',
     'published' => '2026-10-04',
-    'updated' => '2026-10-04',
-    'readingMinutes' => 6,
-    'words' => 1050,
+    'updated' => '2026-11-01',
+    'readingMinutes' => 7,
+    'words' => 1190,
     'about' => 'Comparativa de asistentes de inteligencia artificial según el tipo de tarea',
     'related' => ['chatgpt-vs-gemini', 'claude-vs-chatgpt-para-trabajar', 'vale-la-pena-pagar-chatgpt-plus', 'herramientas-de-ia-gratis', 'como-usar-perplexity', 'como-usar-deepseek'],
     'toc' => [
         'respuesta-corta' => 'La respuesta corta',
+        'tabla' => 'Comparativa de las principales IA',
         'por-tarea' => 'La mejor IA para cada tarea',
         'ecosistema' => 'El factor que más pesa: dónde trabajas',
         'privacidad' => 'Privacidad y datos de empresa',
@@ -38,6 +39,28 @@ return [
 <p>Si no quieres leer más: empieza con <strong>ChatGPT</strong> o <strong>Gemini</strong>, que son las más completas y tienen un plan gratuito generoso. Si trabajas con documentos largos o escribes mucho, prueba también <strong>Claude</strong>. Si lo que haces es buscar información y necesitas fuentes, usa <strong>Perplexity</strong>. Y si tu empresa ya paga Microsoft 365, mira primero <strong>Copilot</strong>, porque es la que tendrás integrada en Word, Excel y Outlook.</p>
 
 <p>Los modelos punteros están muy cerca unos de otros. La diferencia que notarás no es tanto de «inteligencia» como de herramientas alrededor: dónde se integra, qué archivos puede leer, qué límites de uso tiene y cuánto cuesta.</p>
+
+<h2 id="tabla">Comparativa de las principales IA</h2>
+
+<p>Situación en noviembre de 2026. Los precios son los del plan individual principal en España y cambian a menudo; compruébalos antes de pagar.</p>
+
+<figure>
+<table>
+    <thead>
+        <tr><th>IA</th><th>Mejor para</th><th>Plan gratuito</th><th>Plan de pago</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>ChatGPT</strong></td><td>Uso general, la más versátil y con más extras</td><td>Muy completo, con límites</td><td>Go, unos 8 €; Plus, unos 23 €</td></tr>
+        <tr><td><strong>Gemini</strong></td><td>Quien trabaja en Gmail, Drive y Docs; imágenes</td><td>Muy completo, con límites</td><td>Google AI Pro, unos 22 €</td></tr>
+        <tr><td><strong>Claude</strong></td><td>Escribir, documentos largos y programar</td><td>Correcto, con límites más estrictos</td><td>Claude Pro, unos 22 €</td></tr>
+        <tr><td><strong>Copilot</strong></td><td>Word, Excel y Outlook en empresas con Microsoft 365</td><td>Sí, en la web y en Windows</td><td>Incluido en algunos planes de Microsoft 365</td></tr>
+        <tr><td><strong>Perplexity</strong></td><td>Buscar información con fuentes citadas</td><td>Sí, con búsquedas avanzadas limitadas</td><td>Perplexity Pro</td></tr>
+        <tr><td><strong>DeepSeek</strong></td><td>Uso gratuito intensivo, sin datos sensibles</td><td>Muy generoso</td><td>No tiene plan de pago para el chat</td></tr>
+    </tbody>
+</table>
+</figure>
+
+<p>Cómo se reparten los precios y qué incluye cada plan está en <a href="/guias/vale-la-pena-pagar-chatgpt-plus">¿vale la pena pagar ChatGPT Plus?</a>.</p>
 
 <h2 id="por-tarea">La mejor IA para cada tarea</h2>
 

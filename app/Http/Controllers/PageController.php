@@ -15,7 +15,7 @@ class PageController extends Controller
 
         Seo::share([
             'title' => 'Cómo usar los prompts y skills de IA de ia-skills',
-            'description' => "Guía rápida para copiar un prompt, rellenar sus campos y ejecutarlo en Claude, ChatGPT o Gemini. Qué es un skill, qué es un plugin y cómo instalarlos.",
+            'description' => 'Cómo usar las skills de ia-skills en tres pasos: copia el prompt, rellena tus datos y ejecútalo en Claude, ChatGPT o Gemini. Y cómo instalar skills y plugins.',
             'canonical' => route('how-it-works'),
             'schema' => [
                 Seo::organization(),

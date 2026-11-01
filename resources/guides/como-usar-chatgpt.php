@@ -9,8 +9,8 @@ return [
     'category' => 'Fundamentos',
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
-    'readingMinutes' => 6,
-    'words' => 1076,
+    'readingMinutes' => 7,
+    'words' => 1104,
     'about' => 'Uso práctico de ChatGPT en el entorno profesional',
     'related' => ['vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-claude', 'como-usar-gemini', 'como-usar-deepseek', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
     'toc' => [
@@ -105,5 +105,7 @@ correo: [pega el correo]</code></pre>
 </ul>
 
 <p>Hay una lista más larga, con ejemplos reales, en <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>. Pero si te quedas con una sola idea, que sea esta: ChatGPT no es un oráculo, es un colaborador rápido que necesita que le expliques bien las cosas y que revises lo que entrega.</p>
+
+<p>Si todavía dudas de si ChatGPT es la herramienta que más te conviene, la comparamos con Gemini, Claude, Copilot y el resto en <a href="/guias/cual-es-la-mejor-ia">¿cuál es la mejor IA?</a>.</p>
 HTML,
 ];

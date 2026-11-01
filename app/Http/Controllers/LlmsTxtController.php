@@ -67,7 +67,7 @@ class LlmsTxtController extends Controller
             '- ['.'Catálogo completo]('.route('skills.index').'): todas las skills y prompts, filtrables por profesión.',
             '- [Profesiones]('.route('professions.index').'): índice de áreas cubiertas.',
             '- [Guías]('.route('guides.index').'): contenido editorial sobre skills, prompts y automatización.',
-            '- [Cómo funciona]('.route('how-it-works').'): qué es una skill y cómo se publica en el catálogo.',
+            '- [Cómo funciona]('.route('how-it-works').'): cómo usar un prompt o un skill del catálogo en Claude, ChatGPT o Gemini.',
             '- [Colecciones]('.route('collections.index').'): packs de skills seleccionados para un objetivo concreto.',
             '- [Ranking]('.route('rankings.index').'): lo más votado, guardado y en tendencia esta semana.',
             '',
