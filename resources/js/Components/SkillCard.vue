@@ -8,10 +8,11 @@ defineProps({
 const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzado' }
 const difficultyClass = { beginner: 'badge-difficulty-beginner', intermediate: 'badge-difficulty-intermediate', advanced: 'badge-difficulty-advanced' }
 
-const resourceTypeLabel = { claude_skill: 'Skill', claude_plugin: 'Plugin' }
+const resourceTypeLabel = { claude_skill: 'Skill', claude_plugin: 'Plugin', mcp_server: 'MCP' }
 const resourceTypeClass = {
     claude_skill:  'bg-violet-50 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 border border-violet-200 dark:border-violet-700',
     claude_plugin: 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-700',
+    mcp_server:    'bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-700',
 }
 </script>
 

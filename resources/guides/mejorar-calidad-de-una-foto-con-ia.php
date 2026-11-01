@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-19',
     'updated' => '2026-10-19',
     'readingMinutes' => 7,
-    'words' => 1183,
+    'words' => 1213,
     'about' => 'Aumento de resolución, reducción de ruido y mejora de nitidez de fotografías con herramientas de inteligencia artificial',
-    'related' => ['restaurar-fotos-antiguas-con-ia', 'editar-fotos-con-ia', 'foto-de-perfil-profesional-con-ia', 'ia-local-privada-en-tu-ordenador', 'detectar-imagenes-hechas-con-ia', 'herramientas-de-ia-gratis'],
+    'related' => ['prompts-para-editar-fotos-con-ia', 'restaurar-fotos-antiguas-con-ia', 'editar-fotos-con-ia', 'foto-de-perfil-profesional-con-ia', 'ia-local-privada-en-tu-ordenador', 'detectar-imagenes-hechas-con-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-hace' => 'Qué hace la IA cuando «mejora» una foto',
         'herramientas' => 'Qué herramienta usar',
@@ -103,5 +103,7 @@ return [
 </ul>
 
 <p>Con esos límites claros, mejorar la calidad de una foto con IA es de los usos más agradecidos: unos minutos para recuperar una imagen que dabas por perdida.</p>
+
+<p>Para otros arreglos (quitar reflejos, arreglar una foto oscura o una de grupo con alguien con los ojos cerrados) tienes los prompts listos en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con IA</a>.</p>
 HTML,
 ];

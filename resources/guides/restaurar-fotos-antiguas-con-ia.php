@@ -10,7 +10,7 @@ return [
     'published' => '2026-10-12',
     'updated' => '2026-10-12',
     'readingMinutes' => 8,
-    'words' => 1260,
+    'words' => 1289,
     'about' => 'Restauración, coloreado y mejora de calidad de fotografías antiguas con inteligencia artificial',
     'related' => ['hacer-un-arbol-genealogico-con-ia', 'escribir-una-biografia-con-ia', 'animar-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'editar-fotos-con-ia', 'crear-videos-con-ia', 'herramientas-de-ia-gratis', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
@@ -122,5 +122,7 @@ return [
 </ul>
 
 <p>Las mismas técnicas que devuelven la vida a una foto antigua sirven para fabricar imágenes falsas de personas reales. En <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">estafas con IA y deepfakes</a> está cómo reconocerlas.</p>
+
+<p>Y si después quieres seguir con otras ediciones, como colorearla, animarla o juntar a personas de fotos distintas, tienes todos los prompts en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con IA</a>.</p>
 HTML,
 ];

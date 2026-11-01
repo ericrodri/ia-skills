@@ -29,6 +29,7 @@ const resourceTypeOptions = [
     { value: 'prompt',        label: 'Prompt / Workflow', desc: 'Prompt o flujo de trabajo', icon: '💬' },
     { value: 'claude_skill',  label: 'Claude Skill',      desc: 'Skill para Claude Code',    icon: '🟣' },
     { value: 'claude_plugin', label: 'Claude Plugin',     desc: 'Plugin para Claude Code',   icon: '🟡' },
+    { value: 'mcp_server',    label: 'Servidor MCP',      desc: 'Conecta Claude con datos o herramientas', icon: '🔵' },
 ]
 
 const difficultyOptions = [

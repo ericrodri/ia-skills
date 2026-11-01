@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-03',
     'updated' => '2026-10-03',
-    'readingMinutes' => 7,
-    'words' => 1224,
+    'readingMinutes' => 8,
+    'words' => 1250,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['fotos-de-navidad-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['prompts-para-editar-fotos-con-ia', 'fotos-de-navidad-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -93,5 +93,7 @@ return [
 </ul>
 
 <p>Las dudas sobre si puedes usar comercialmente una imagen editada o generada, y de quién es, están resueltas en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>. Y si te encuentras con una foto tuya manipulada, la guía de <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">deepfakes y suplantación</a> explica cómo actuar.</p>
+
+<p>Si prefieres ir directo a las instrucciones, tienes más de cuarenta listas para copiar, ordenadas por tarea, en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con ChatGPT y Gemini</a>.</p>
 HTML,
 ];

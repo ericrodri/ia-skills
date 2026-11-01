@@ -70,6 +70,7 @@ class Guides
         'crear-imagenes-con-ia',
         'crear-musica-con-ia',
         'editar-fotos-con-ia',
+        'prompts-para-editar-fotos-con-ia',
         'quitar-el-fondo-de-una-foto-con-ia',
         'detectar-imagenes-hechas-con-ia',
         'crear-stickers-con-ia',

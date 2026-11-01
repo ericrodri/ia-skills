@@ -26,7 +26,7 @@ class PublicApiController extends Controller
         $validated = $request->validate([
             'q' => ['nullable', 'string', 'max:200'],
             'profession' => ['nullable', 'string', 'max:100'],
-            'type' => ['nullable', 'in:prompt,claude_skill,claude_plugin'],
+            'type' => ['nullable', 'in:prompt,claude_skill,claude_plugin,mcp_server'],
             'sort' => ['nullable', 'in:top,new,saved'],
             'limit' => ['nullable', 'integer', 'min:1', 'max:'.self::MAX_LIMIT],
         ]);

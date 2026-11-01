@@ -65,7 +65,7 @@ const sortOptions = [
     { value: 'trending', label: 'Trending' },
 ]
 
-const typeLabels = { prompt: 'Prompt', claude_skill: 'Skill', claude_plugin: 'Plugin' }
+const typeLabels = { prompt: 'Prompt', claude_skill: 'Skill', claude_plugin: 'Plugin', mcp_server: 'Servidor MCP' }
 
 // Filtros activos como chips que se pueden quitar de uno en uno: con cinco
 // facetas combinables, sin esto no se ve de un vistazo por qué salen pocos resultados.
@@ -173,6 +173,7 @@ function clearAll() {
                                 <button @click="selectedType = 'prompt'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'prompt' ? 'bg-brand-50 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Prompt</button>
                                 <button @click="selectedType = 'claude_skill'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_skill' ? 'bg-violet-50 dark:bg-violet-900/40 text-violet-700 dark:text-violet-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Skill</button>
                                 <button @click="selectedType = 'claude_plugin'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'claude_plugin' ? 'bg-amber-50 dark:bg-amber-900/40 text-amber-700 dark:text-amber-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Plugin</button>
+                                <button @click="selectedType = 'mcp_server'; applyFilters()" :class="['px-3 py-1.5 rounded-lg text-sm text-left transition-colors', selectedType === 'mcp_server' ? 'bg-sky-50 dark:bg-sky-900/40 text-sky-700 dark:text-sky-300 font-medium' : 'text-gray-600 dark:text-gray-400 hover:bg-gray-50 dark:hover:bg-gray-700/50']">Servidor MCP</button>
                             </div>
                         </div>
 

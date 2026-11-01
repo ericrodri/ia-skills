@@ -25,7 +25,7 @@ const TOOLS = [
                     description: 'Slug de profesión para acotar.',
                     enum: ['marketing', 'desarrollo', 'diseno', 'ventas', 'product-management', 'rrhh', 'finanzas', 'legal', 'customer-support', 'freelancers'],
                 },
-                type: { type: 'string', enum: ['prompt', 'claude_skill', 'claude_plugin'] },
+                type: { type: 'string', enum: ['prompt', 'claude_skill', 'claude_plugin', 'mcp_server'] },
                 limit: { type: 'integer', minimum: 1, maximum: 20, default: 8 },
             },
             required: ['query'],

@@ -77,14 +77,16 @@ const aiToast = ref('')
 const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzado' }
 const difficultyClass = { beginner: 'badge-difficulty-beginner', intermediate: 'badge-difficulty-intermediate', advanced: 'badge-difficulty-advanced' }
 
-const resourceTypeLabel = { claude_skill: 'Skill', claude_plugin: 'Plugin' }
+const resourceTypeLabel = { claude_skill: 'Skill', claude_plugin: 'Plugin', mcp_server: 'MCP' }
 const resourceTypeClass = {
     claude_skill:  'bg-violet-50 dark:bg-violet-900/30 text-violet-700 dark:text-violet-300 border border-violet-200 dark:border-violet-700',
     claude_plugin: 'bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 border border-amber-200 dark:border-amber-700',
+    mcp_server:    'bg-sky-50 dark:bg-sky-900/30 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-700',
 }
 const resourceTypeInfo = {
     claude_skill:  'Un Skill es un archivo Markdown (SKILL.md) que enseña a Claude Code un comportamiento específico. Se instala clonando un repositorio en ~/.claude/skills/ y se activa con /nombre-del-skill.',
     claude_plugin: 'Un Plugin es una extensión instalada mediante el sistema oficial de plugins de Claude Code (claude plugin install). Puede incluir hooks, scripts y configuraciones más complejas que un Skill.',
+    mcp_server:    'Un servidor MCP conecta Claude Code con una herramienta o una fuente de datos externa (documentos, una base de datos, una web). Se añade con claude mcp add y Claude lo usa cuando necesita esos datos.',
 }
 
 const showTypeInfo = ref(false)
@@ -308,9 +310,11 @@ function submitComment() {
                             class="mb-4 p-3 rounded-xl text-xs leading-relaxed"
                             :class="skill.resource_type === 'claude_plugin'
                                 ? 'bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700 text-amber-800 dark:text-amber-300'
+                                : skill.resource_type === 'mcp_server'
+                                ? 'bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-700 text-sky-800 dark:text-sky-300'
                                 : 'bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-700 text-violet-800 dark:text-violet-300'"
                         >
-                            <p class="font-semibold mb-1">¿Qué es un {{ resourceTypeLabel[skill.resource_type] }} de Claude Code?</p>
+                            <p class="font-semibold mb-1">{{ skill.resource_type === 'mcp_server' ? '¿Qué es un servidor MCP?' : `¿Qué es un ${resourceTypeLabel[skill.resource_type]} de Claude Code?` }}</p>
                             <p>{{ resourceTypeInfo[skill.resource_type] }}</p>
                             <div class="mt-2 pt-2 border-t border-current border-opacity-20 flex gap-4">
                                 <span><strong>Skill</strong> — archivo SKILL.md · se instala con git clone · se activa con /nombre</span>
@@ -348,6 +352,11 @@ function submitComment() {
                     <div v-if="skill.resource_type === 'claude_plugin'" class="mt-6 p-4 rounded-xl bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-700">
                         <p class="text-xs font-semibold text-amber-700 dark:text-amber-400 uppercase tracking-wider mb-1">Plugin de Claude Code</p>
                         <p class="text-sm text-amber-900 dark:text-amber-200">Se instala desde Claude Code con los comandos de la sección <strong>Instalación</strong> de abajo, tal y como los publica su autor.</p>
+                    </div>
+
+                    <div v-else-if="skill.resource_type === 'mcp_server'" class="mt-6 p-4 rounded-xl bg-sky-50 dark:bg-sky-900/20 border border-sky-200 dark:border-sky-700">
+                        <p class="text-xs font-semibold text-sky-700 dark:text-sky-400 uppercase tracking-wider mb-1">Servidor MCP</p>
+                        <p class="text-sm text-sky-900 dark:text-sky-200">Se conecta a Claude Code con los comandos de la sección <strong>Instalación</strong> de abajo, tal y como los publica su autor.</p>
                     </div>
 
                     <div v-else-if="skill.resource_type === 'claude_skill'" class="mt-6 p-4 rounded-xl bg-violet-50 dark:bg-violet-900/20 border border-violet-200 dark:border-violet-700">

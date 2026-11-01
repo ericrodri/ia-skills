@@ -25,7 +25,7 @@ class StoreSkillRequest extends FormRequest
             'difficulty'        => ['required', 'in:beginner,intermediate,advanced'],
             'estimated_minutes' => ['nullable', 'integer', 'min:1', 'max:480'],
             'use_case'          => ['nullable', 'string', 'max:500'],
-            'resource_type'     => ['nullable', 'in:prompt,claude_skill,claude_plugin'],
+            'resource_type'     => ['nullable', 'in:prompt,claude_skill,claude_plugin,mcp_server'],
         ];
     }
 }

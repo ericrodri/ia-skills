@@ -53,6 +53,7 @@ class RelatedContent
         'meta-ai-en-whatsapp' => [['customer-support', 'freelancers'], null],
         'aprender-ingles-con-ia' => [['rrhh', 'freelancers'], 'inglés'],
         'editar-fotos-con-ia' => [['diseno', 'marketing'], 'foto'],
+        'prompts-para-editar-fotos-con-ia' => [['diseno', 'freelancers'], 'foto'],
         'cual-es-la-mejor-ia' => [['freelancers', 'marketing', 'product-management'], null],
         'vale-la-pena-pagar-chatgpt-plus' => [['freelancers', 'product-management'], 'chatgpt'],
         'crear-una-pagina-web-con-ia' => [['marketing', 'freelancers', 'diseno'], 'web'],
