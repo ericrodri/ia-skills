@@ -60,6 +60,11 @@ más, el archivo entero se rechaza).
 - Entrada sin `slug`: crea una skill nueva (se omite si ya existe el título).
 - Entrada con `slug` + `changelog`: corrige una skill publicada sin cambiar su
   URL. Si cambia el prompt, sube la versión y el motivo queda en el historial.
+- Entrada con `slug` + `merge_into`: fusiona una ficha duplicada en otra
+  (`App\Support\SkillMerger`). Deja de publicarse, su URL y su `skill.md`
+  redirigen con un 301 y sus comentarios, guardados y votos pasan a la otra.
+  Para detectar duplicados en bloque: `php artisan skills:merge-duplicates`
+  (sin `--apply` solo lista).
 - Una vez desplegado e importado, **quita el JSON del repo** (`git rm`): si no,
   el árbol del servidor acumula archivos borrados sin confirmar.
 - Antes de publicar una skill o plugin de terceros, verifica en su README el

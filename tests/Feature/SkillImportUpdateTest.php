@@ -7,6 +7,7 @@ use App\Models\Skill;
 use App\Models\SkillVersion;
 use App\Models\User;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Testing\PendingCommand;
 use Tests\TestCase;
 
 /**
@@ -33,7 +34,7 @@ class SkillImportUpdateTest extends TestCase
         ]);
     }
 
-    private function import(array $items): \Illuminate\Testing\PendingCommand
+    private function import(array $items): PendingCommand
     {
         $path = tempnam(sys_get_temp_dir(), 'imp').'.json';
         file_put_contents($path, json_encode($items));
@@ -100,6 +101,23 @@ class SkillImportUpdateTest extends TestCase
         $skill = $this->skill->fresh();
         $this->assertSame(12, $skill->vote_score);
         $this->assertSame('published', $skill->status);
+    }
+
+    public function test_an_entry_with_merge_into_merges_the_duplicate(): void
+    {
+        $dup = Skill::factory()->create(['slug' => 'caveman-duplicada', 'title' => 'Caveman duplicada', 'status' => 'published']);
+
+        $this->import([['slug' => 'caveman-duplicada', 'merge_into' => 'caveman-reduce-un-75-los-tokens']])
+            ->expectsOutputToContain('Actualizadas: 1')
+            ->assertSuccessful();
+
+        $this->assertSame('merged', $dup->fresh()->status);
+        $this->assertSame($this->skill->id, $dup->fresh()->merged_into_id);
+
+        // Repetir el archivo no hace nada.
+        $this->import([['slug' => 'caveman-duplicada', 'merge_into' => 'caveman-reduce-un-75-los-tokens']])
+            ->expectsOutputToContain('Omitidas: 1')
+            ->assertSuccessful();
     }
 
     public function test_new_and_updated_skills_can_share_a_file(): void

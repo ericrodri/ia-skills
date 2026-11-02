@@ -5,6 +5,7 @@ namespace App\Console\Commands;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\SkillVersion;
+use App\Support\SkillMerger;
 use Illuminate\Console\Command;
 use Illuminate\Support\Str;
 
@@ -53,7 +54,9 @@ class SkillImportCommand extends Command
             // crear otra: la URL no cambia y queda una versión nueva en el
             // historial con el motivo ("changelog").
             if (isset($item['slug'])) {
-                $line = $this->updateExisting($item);
+                // Con "merge_into", la ficha es un duplicado: se fusiona en la
+                // otra y su URL redirige con un 301 (App\Support\SkillMerger).
+                $line = isset($item['merge_into']) ? $this->mergeExisting($item) : $this->updateExisting($item);
 
                 if ($line === null) {
                     $skipped++;
@@ -191,6 +194,28 @@ class SkillImportCommand extends Command
         }
 
         return "  ↻ [{$skill->slug}] v{$skill->version}: {$item['changelog']}";
+    }
+
+    private function mergeExisting(array $item): ?string
+    {
+        $from = Skill::where('slug', $item['slug'])->first();
+        $into = Skill::where('slug', $item['merge_into'])->first();
+
+        if (! $from || ! $into) {
+            $this->line("  ⚠ No existe {$item['slug']} o {$item['merge_into']} — omitida");
+
+            return null;
+        }
+
+        if ($from->status === 'merged') {
+            $this->line("  · Ya estaba fusionada: {$from->slug}");
+
+            return null;
+        }
+
+        SkillMerger::merge($from, $into);
+
+        return "  ⇢ [{$from->slug}] fusionada en {$into->slug}";
     }
 
     private function uniqueSlug(string $base): string
