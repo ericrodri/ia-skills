@@ -101,7 +101,8 @@ correo: [pega el correo]</code></pre>
     <li><strong>Creerse todo.</strong> Puede inventar datos, citas y referencias con total seguridad. Comprueba lo que vayas a usar; la guía de <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a> explica cómo.</li>
     <li><strong>Conversaciones eternas.</strong> Tras muchos mensajes sobre temas distintos, las respuestas empeoran. Abre una conversación nueva para cada tarea.</li>
     <li><strong>Pegar datos confidenciales.</strong> Anonimiza nombres, importes e identificadores antes.</li>
-    <li><strong>Enviar el texto tal cual.</strong> Se nota. Úsalo como borrador y dale tu voz.</li>
+    <li><strong>Enviar el texto tal cual.</strong> Se nota. Úsalo como borrador y dale tu voz: en <a href="/guias/que-la-ia-escriba-como-un-humano">cómo hacer que la IA escriba como un humano</a> están las frases que lo delatan.</li>
+    <li><strong>Fiarse de que le parezca bien.</strong> Tiende a darte la razón. Para que sea sincero, mira <a href="/guias/chatgpt-siempre-te-da-la-razon">cómo hacer que ChatGPT no te dé siempre la razón</a>.</li>
 </ul>
 
 <p>Hay una lista más larga, con ejemplos reales, en <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>. Pero si te quedas con una sola idea, que sea esta: ChatGPT no es un oráculo, es un colaborador rápido que necesita que le expliques bien las cosas y que revises lo que entrega.</p>

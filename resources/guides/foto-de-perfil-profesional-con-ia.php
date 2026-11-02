@@ -84,7 +84,7 @@ return [
 
 <h2 id="donde-no">Dónde no se puede usar</h2>
 
-<p>Una foto retocada con IA no sirve para documentos oficiales: <strong>DNI, pasaporte, carné de conducir</strong> o visados exigen fotos sin alteraciones de los rasgos, y pueden rechazarla. Tampoco es buena idea en perfiles donde la identidad se verifica con la cara, como algunos bancos o plataformas de trabajo.</p>
+<p>Una foto retocada con IA no sirve para documentos oficiales: <strong>DNI, pasaporte, carné de conducir</strong> o visados exigen fotos sin alteraciones de los rasgos, y pueden rechazarla. Para carnets que no son oficiales (el gimnasio, la tarjeta de empresa) sí sirve el <a href="/skills/prompt-para-preparar-una-foto-de-carnet-con-ia-fondo-blanco-encuadre-y-luz">prompt para preparar una foto de carnet</a>, que cambia el fondo y el encuadre sin tocar la cara. Tampoco es buena idea en perfiles donde la identidad se verifica con la cara, como algunos bancos o plataformas de trabajo.</p>
 
 <p>Y cuidado con lo que subes. Tu cara es un dato personal, y algunas aplicaciones de retratos guardan las fotos o las usan para entrenar. Lee qué hacen con ellas antes de subirlas y bórralas al terminar. Si alguna vez encuentras una imagen tuya manipulada sin permiso, la guía de <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">deepfakes y suplantación</a> explica cómo actuar, y las dudas sobre quién es dueño de una imagen generada están en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>.</p>
 HTML,

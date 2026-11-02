@@ -109,7 +109,7 @@ si recibió el email anterior.</code></pre>
 
 <h2 id="ejemplos">Un ejemplo vale más que tres párrafos</h2>
 
-<p>Dar uno o dos ejemplos del resultado que esperas es la técnica más eficaz que existe para fijar tono, longitud y estructura a la vez.</p>
+<p>Dar uno o dos ejemplos del resultado que esperas es la técnica más eficaz que existe para fijar tono, longitud y estructura a la vez. Es también lo que mejor funciona para <a href="/guias/que-la-ia-escriba-como-un-humano">que la IA escriba como un humano</a>: pegarle textos tuyos.</p>
 
 <pre><code>Clasifica cada ticket con este formato exacto:
 

@@ -102,6 +102,8 @@ class Guides
         'chatgpt-vs-gemini',
         'perplexity-vs-chatgpt',
         'copilot-vs-chatgpt',
+        'chatgpt-siempre-te-da-la-razon',
+        'que-la-ia-escriba-como-un-humano',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

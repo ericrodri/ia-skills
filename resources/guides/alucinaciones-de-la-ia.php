@@ -109,6 +109,8 @@ return [
 
 <h2 id="prompts">Cuatro prompts que reducen la invención</h2>
 
+<p>Si prefieres una sola instrucción para guardar en los ajustes, está en el <a href="/skills/prompt-para-que-chatgpt-no-se-invente-datos-respuestas-con-fuentes-y-no-lo-se">prompt para que ChatGPT no se invente datos</a>. Y no hay que confundir inventar con adular: por qué el asistente tiende a darte la razón se explica en <a href="/guias/chatgpt-siempre-te-da-la-razon">cómo hacer que ChatGPT no te dé siempre la razón</a>.</p>
+
 <pre><code>1. PERMISO PARA NO SABER
 Responde solo con lo que aparezca en el texto que te paso.
 Si algo no aparece, escribe exactamente: NO APARECE EN EL TEXTO.

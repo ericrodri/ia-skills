@@ -142,7 +142,7 @@ return [
 
 <h2 id="escribir">Escribir con IA de manera que suene a ti</h2>
 
-<p>La forma de no parecer un texto generado no es esquivar detectores: es que el texto contenga cosas que solo tú puedes poner.</p>
+<p>La forma de no parecer un texto generado no es esquivar detectores: es que el texto contenga cosas que solo tú puedes poner. La lista de frases que delatan a un asistente y el prompt para evitarlas están en <a href="/guias/que-la-ia-escriba-como-un-humano">cómo hacer que la IA escriba como un humano</a>.</p>
 
 <ul>
     <li><strong>Aporta el material tú.</strong> Tus notas, tus cifras, tu caso. Un texto escrito a partir de un tema sale genérico por construcción.</li>

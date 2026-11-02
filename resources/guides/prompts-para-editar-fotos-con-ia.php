@@ -88,6 +88,8 @@ return [
     <li><a href="/skills/prompt-para-hacer-una-foto-familiar-con-ia-juntando-fotos-de-varias-personas">Foto familiar juntando fotos de varias personas</a>.</li>
     <li><a href="/skills/prompt-para-hacer-una-sesion-de-fotos-con-ia-6-poses-y-escenarios-con-la-misma-persona">Sesión de fotos con IA</a>: seis poses y escenarios con la misma persona.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-profesional-para-linkedin-o-el-curriculum-a-partir-de-un-selfie">Foto profesional para LinkedIn o el currículum</a> a partir de un selfie.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-estilo-polaroid-con-ia-a-partir-de-tus-fotos">Foto estilo Polaroid</a> con marco blanco y flash, también juntando a dos personas.</li>
+    <li><a href="/skills/prompt-para-preparar-una-foto-de-carnet-con-ia-fondo-blanco-encuadre-y-luz">Foto tipo carnet</a> con fondo blanco, para usos que no son oficiales.</li>
 </ul>
 
 <h2 id="probar">Probar cambios en ti antes de hacerlos</h2>
@@ -104,6 +106,7 @@ return [
 <ul>
     <li><a href="/skills/prompt-para-convertir-tu-foto-en-una-figura-de-accion-coleccionable-con-ia">Convertir tu foto en una figura de acción coleccionable</a>.</li>
     <li><a href="/skills/prompt-para-hacer-una-caricatura-a-partir-de-una-foto-con-chatgpt">Caricatura a partir de una foto</a>.</li>
+    <li><a href="/skills/prompt-para-convertir-tu-foto-en-un-retrato-de-los-anos-80-con-ia">Retrato de los años 80</a>, con peinado, ropa y fondo de época.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-ilustracion-de-animacion-japonesa-clasica-dibujada-a-mano">Ilustración de animación japonesa clásica</a>.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-dibujo-a-lapiz-o-acuarela-con-ia">Dibujo a lápiz o acuarela</a>.</li>
     <li><a href="/skills/prompt-para-hacer-un-retrato-de-tu-mascota-como-un-cuadro-clasico">Retrato de tu mascota como un cuadro clásico</a>.</li>

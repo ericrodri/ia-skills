@@ -169,6 +169,8 @@ class RelatedContent
         'errores-al-usar-ia-en-el-trabajo' => [['freelancers', 'customer-support'], null],
         'alucinaciones-de-la-ia' => [['legal', 'finanzas'], 'verifica'],
         'se-nota-si-un-texto-lo-escribe-una-ia' => [['marketing'], 'redacción'],
+        'chatgpt-siempre-te-da-la-razon' => [['freelancers', 'product-management'], 'sincer'],
+        'que-la-ia-escriba-como-un-humano' => [['freelancers', 'marketing'], 'escrib'],
         'cv-y-carta-de-presentacion-con-ia' => [['rrhh'], 'candidat'],
         'entrevista-de-trabajo-con-ia' => [['rrhh'], 'entrevista'],
         'ia-para-profesores' => [['rrhh', 'freelancers'], 'educa'],
