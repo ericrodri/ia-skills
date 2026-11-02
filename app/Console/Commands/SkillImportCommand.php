@@ -213,6 +213,17 @@ class SkillImportCommand extends Command
             return null;
         }
 
+        // Si el destino ya se fusionó en otra ficha, se va directo a la final.
+        while ($into->status === 'merged' && $into->mergedInto) {
+            $into = $into->mergedInto;
+        }
+
+        if ($from->is($into)) {
+            $this->line("  · {$from->slug} ya es la ficha final — omitida");
+
+            return null;
+        }
+
         SkillMerger::merge($from, $into);
 
         return "  ⇢ [{$from->slug}] fusionada en {$into->slug}";

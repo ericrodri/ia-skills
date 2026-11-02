@@ -1,0 +1,82 @@
+[
+    {
+        "slug": "ia-en-customer-success-prediccion-de-churn-y-personalizacion-del-journey",
+        "merge_into": "ia-en-customer-success-respuestas-analisis-de-sentimiento-y-predicciones"
+    },
+    {
+        "slug": "liderazgo-en-customer-success-motivar-al-equipo-en-cuentas-dificiles",
+        "merge_into": "liderazgo-en-customer-success-con-ia-gestion-del-churn-desarrollo-del-equipo-y-estrategia-de-expansion"
+    },
+    {
+        "slug": "cs-automation-triaje-seguimiento-y-las-tareas-que-el-csm-no-deberia-hacer-manualmente",
+        "merge_into": "cs-automation-triaje-de-tickets-y-respuestas-automatizadas"
+    },
+    {
+        "slug": "cs-sprints-mejora-continua-en-el-equipo-de-customer-success",
+        "merge_into": "sprints-de-mejora-continua-en-customer-success"
+    },
+    {
+        "slug": "resiliencia-emocional-en-equipos-de-atencion-al-cliente",
+        "merge_into": "ia-para-la-resiliencia-emocional-en-equipos-de-atencion-al-cliente"
+    },
+    {
+        "slug": "soporte-al-cliente-global-gestion-en-multiples-regiones-y-zonas-horarias",
+        "merge_into": "soporte-al-cliente-global-con-ia-equipos-multilingue-y-multiculturales"
+    },
+    {
+        "slug": "escalar-el-negocio-freelance-sin-contratar-los-sistemas-y-la-automatizacion-que-multiplican-los-ingresos",
+        "merge_into": "escalar-el-negocio-freelance-sin-contratar-sistemas-y-procesos-que-multiplican-tu-capacidad"
+    },
+    {
+        "slug": "gestion-del-tiempo-como-freelance-el-sistema-que-separa-produccion-de-gestion-y-evita-el-siempre-ocupado",
+        "merge_into": "gestion-del-tiempo-como-freelance-sistemas-de-productividad-y-trabajo-profundo"
+    },
+    {
+        "slug": "construir-equipo-como-freelance-cuando-y-como-subcontratar",
+        "merge_into": "subcontratar-y-construir-el-equipo-del-freelance"
+    },
+    {
+        "slug": "linkedin-como-canal-de-captacion-de-clientes-para-freelancers",
+        "merge_into": "linkedin-como-canal-de-captacion-de-clientes-para-freelancers-personal-branding-con-ia-que-genera-proyectos"
+    },
+    {
+        "slug": "metricas-del-negocio-freelance",
+        "merge_into": "metricas-del-negocio-freelance-facturacion-margen-y-pipeline"
+    },
+    {
+        "slug": "automatizar-el-negocio-freelance-mas-tiempo-para-el-trabajo-de-valor",
+        "merge_into": "automatizar-el-negocio-freelance"
+    },
+    {
+        "slug": "colaborar-con-otros-freelancers-proyectos-conjuntos-y-redes-de-apoyo",
+        "merge_into": "colaborar-con-otros-freelancers"
+    },
+    {
+        "slug": "gestion-del-conocimiento-del-freelance-tu-ventaja-acumulada",
+        "merge_into": "gestion-del-conocimiento-del-freelance-sistemas-personales-de-pkm"
+    },
+    {
+        "slug": "automatizacion-del-negocio-freelance",
+        "merge_into": "automatizacion-del-negocio-freelance-propuestas-facturas-y-seguimiento"
+    },
+    {
+        "slug": "sistema-de-gestion-del-conocimiento-personal-para-freelancers-con-ia",
+        "merge_into": "sistema-de-conocimiento-personal-para-freelancers-con-ia"
+    },
+    {
+        "slug": "crear-cursos-y-talleres-online-para-vender-como-freelancer-con-ia",
+        "merge_into": "crear-y-vender-cursos-online-como-freelancer-con-ia"
+    },
+    {
+        "slug": "estrategia-de-tarifas-y-precios-para-freelancers-con-ia",
+        "merge_into": "estrategia-de-precios-y-tarifas-para-freelancers-con-ia"
+    },
+    {
+        "slug": "ia-para-construir-reputacion-online-como-freelancer",
+        "merge_into": "construir-y-proteger-la-reputacion-online-como-freelancer-con-ia"
+    },
+    {
+        "slug": "jobs-to-be-done-el-framework-que-revela-por-que-los-usuarios-realmente-usan-tu-producto",
+        "merge_into": "jobs-to-be-done-innovar-a-partir-del-progreso-del-cliente"
+    }
+]

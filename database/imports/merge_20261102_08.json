@@ -1,0 +1,82 @@
+[
+    {
+        "slug": "contratos-internacionales",
+        "merge_into": "contratos-internacionales-ley-aplicable-jurisdiccion-y-gestion-del-riesgo-legal-en-ventas-cross-border"
+    },
+    {
+        "slug": "comunicacion-legal-clara-del-lenguaje-juridico-al-lenguaje-de-negocio",
+        "merge_into": "comunicacion-legal-clara"
+    },
+    {
+        "slug": "marco-legal-del-trabajo-remoto",
+        "merge_into": "marco-legal-del-trabajo-remoto-y-el-teletrabajo"
+    },
+    {
+        "slug": "marketing-de-contenidos-y-seo-para-despachos-de-abogados",
+        "merge_into": "marketing-de-contenidos-seo-para-despachos-de-abogados"
+    },
+    {
+        "slug": "gestion-legal-de-crisis-corporativas-con-ia-responsabilidad-comunicados-y-litigios",
+        "merge_into": "gestion-legal-de-crisis-corporativas"
+    },
+    {
+        "slug": "gestion-legal-durante-crisis-corporativas-con-ia",
+        "merge_into": "gestion-legal-de-crisis-corporativas"
+    },
+    {
+        "slug": "marco-legal-para-la-gestion-de-crisis-corporativas",
+        "merge_into": "gestion-legal-de-crisis-corporativas"
+    },
+    {
+        "slug": "expansion-internacional-el-marco-legal",
+        "merge_into": "expansion-internacional-la-estructura-juridica-correcta-para-cada-mercado"
+    },
+    {
+        "slug": "legal-para-startups-el-minimo-legal-que-necesitas",
+        "merge_into": "legal-para-startups-proteger-la-empresa-desde-el-dia-uno-sin-abogados-caros"
+    },
+    {
+        "slug": "contratos-y-compliance-legal-en-campanas-de-marketing-de-influencers",
+        "merge_into": "contratos-y-compliance-legal-para-campanas-de-influencers-con-ia"
+    },
+    {
+        "slug": "soporte-proactivo-contacta-al-cliente-antes-de-que-tenga-un-problema-y-antes-de-que-se-vaya",
+        "merge_into": "soporte-proactivo-anticipa-los-problemas-del-cliente-antes-de-que-contacte"
+    },
+    {
+        "slug": "retencion-de-clientes-en-riesgo-de-churn-el-playbook-de-intervencion-temprana",
+        "merge_into": "retencion-de-clientes-en-riesgo-de-churn-el-playbook-para-salvar-cuentas-antes-de-que-se-vayan"
+    },
+    {
+        "slug": "soporte-en-e-commerce-devoluciones-reclamaciones-y-picos-de-temporada",
+        "merge_into": "soporte-en-e-commerce-devoluciones-logistica-inversa-y-coordinacion-con-fulfillment"
+    },
+    {
+        "slug": "proyectos-de-implementacion-con-clientes-enterprise",
+        "merge_into": "gestion-de-proyectos-de-implementacion-de-clientes-enterprise"
+    },
+    {
+        "slug": "carrera-en-customer-success-de-csm-junior-a-vp-de-cs",
+        "merge_into": "carrera-en-customer-success-un-campo-joven-con-mucho-futuro"
+    },
+    {
+        "slug": "vp-de-customer-success-construir-la-funcion",
+        "merge_into": "vp-de-customer-success-construir-y-escalar-el-equipo"
+    },
+    {
+        "slug": "desarrollo-profesional-en-customer-success-el-plan-de-carrera-del-csm",
+        "merge_into": "desarrollo-profesional-en-customer-success-de-csm-a-vp"
+    },
+    {
+        "slug": "enterprise-customer-success-qbrs-y-success-plans",
+        "merge_into": "enterprise-customer-success-gestionar-las-cuentas-mas-grandes"
+    },
+    {
+        "slug": "customer-education-content",
+        "merge_into": "customer-education-content-el-contenido-que-ensena-a-usar-el-producto"
+    },
+    {
+        "slug": "ia-en-customer-success-automatizacion-con-toque-humano",
+        "merge_into": "ia-en-customer-success-respuestas-analisis-de-sentimiento-y-predicciones"
+    }
+]

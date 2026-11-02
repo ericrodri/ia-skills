@@ -20,7 +20,8 @@ class SkillMergeDuplicatesCommand extends Command
         {--threshold=0.8 : Parecido mínimo entre títulos (0-1)}
         {--from= : Fusionar solo esta ficha (slug)…}
         {--into= : …en esta otra (slug)}
-        {--apply : Hacer los cambios; sin esta opción solo se listan}';
+        {--apply : Hacer los cambios; sin esta opción solo se listan}
+        {--export= : En vez de fusionar, escribe en esta carpeta los JSON de database/imports con las fusiones (merge_into), de 20 en 20}';
 
     protected $description = 'Fusiona fichas duplicadas: la sobrante redirige (301) a la que se queda';
 
@@ -44,6 +45,10 @@ class SkillMergeDuplicatesCommand extends Command
         $this->newLine();
         $this->info(count($groups)." grupos, {$merges} fichas a fusionar.");
 
+        if ($dir = $this->option('export')) {
+            return $this->export($groups, $dir);
+        }
+
         if (! $this->option('apply')) {
             $this->comment('Nada cambiado. Repite con --apply para fusionar.');
 
@@ -57,6 +62,39 @@ class SkillMergeDuplicatesCommand extends Command
         }
 
         $this->info("Fusionadas: {$merges}.");
+
+        return self::SUCCESS;
+    }
+
+    /**
+     * Fusiones como archivos de importación: así llegan a producción con el
+     * deploy (skills:import admite «merge_into»), sin tocar el servidor a mano.
+     *
+     * @param  array<int, array{keep: Skill, merge: array<int, Skill>, score: float}>  $groups
+     */
+    private function export(array $groups, string $dir): int
+    {
+        $entries = [];
+
+        foreach ($groups as $group) {
+            foreach ($group['merge'] as $skill) {
+                $entries[] = ['slug' => $skill->slug, 'merge_into' => $group['keep']->slug];
+            }
+        }
+
+        if (! is_dir($dir)) {
+            mkdir($dir, 0775, true);
+        }
+
+        $prefix = 'merge_'.now()->format('Ymd');
+
+        foreach (array_chunk($entries, 20) as $i => $chunk) {
+            $path = rtrim($dir, '/').'/'.$prefix.'_'.str_pad((string) ($i + 1), 2, '0', STR_PAD_LEFT).'.json';
+            file_put_contents($path, json_encode($chunk, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES)."\n");
+            $this->line("  → {$path}");
+        }
+
+        $this->info(count($entries).' fusiones exportadas.');
 
         return self::SUCCESS;
     }

@@ -80,6 +80,7 @@ class SkillMerger
             ->each(function (Collection $skills) use ($threshold, &$groups) {
                 $items = $skills->values();
                 $tokens = $items->map(fn (Skill $s) => self::tokens($s->title))->all();
+                $heads = $items->map(fn (Skill $s) => self::headline($s->title))->all();
                 $parent = range(0, $items->count() - 1);
                 $best = [];
 
@@ -89,9 +90,9 @@ class SkillMerger
 
                 for ($i = 0; $i < $items->count(); $i++) {
                     for ($j = $i + 1; $j < $items->count(); $j++) {
-                        $score = self::similarity($tokens[$i], $tokens[$j]);
+                        $score = self::matches($tokens[$i], $heads[$i], $tokens[$j], $heads[$j], $threshold);
 
-                        if ($score >= $threshold) {
+                        if ($score > 0) {
                             $parent[$find($j)] = $find($i);
                             $root = $find($i);
                             $best[$root] = max($best[$root] ?? 0, $score);
@@ -112,12 +113,13 @@ class SkillMerger
                     usort($members, fn (Skill $a, Skill $b) => [mb_strlen($b->prompt_content), $a->id] <=> [mb_strlen($a->prompt_content), $b->id]);
                     $keep = array_shift($members);
                     $keepTokens = self::tokens($keep->title);
+                    $keepHead = self::headline($keep->title);
 
                     // Solo lo que se parece directamente a la que se queda: un
                     // grupo encadenado (A~B, B~C) no basta para fusionar C en A.
                     $merge = array_values(array_filter(
                         $members,
-                        fn (Skill $s) => self::similarity($keepTokens, self::tokens($s->title)) >= $threshold,
+                        fn (Skill $s) => self::matches($keepTokens, $keepHead, self::tokens($s->title), self::headline($s->title), $threshold) > 0,
                     ));
 
                     if ($merge === []) {
@@ -133,6 +135,48 @@ class SkillMerger
             });
 
         return $groups;
+    }
+
+    /**
+     * Parecido entre dos fichas, o 0 si no son duplicadas. Cuentan como
+     * duplicadas si sus títulos coinciden lo bastante (Jaccard) o si tratan
+     * exactamente del mismo tema y solo cambia el subtítulo: «Infraestructura
+     * como código con Terraform» frente a «Infraestructura como código con
+     * Terraform: gestiona la infraestructura…».
+     *
+     * @param  array<int, string>  $tokensA
+     * @param  array<int, string>  $headA
+     * @param  array<int, string>  $tokensB
+     * @param  array<int, string>  $headB
+     */
+    public static function matches(array $tokensA, array $headA, array $tokensB, array $headB, float $threshold): float
+    {
+        $score = self::similarity($tokensA, $tokensB);
+
+        if ($score >= $threshold) {
+            return $score;
+        }
+
+        // El tema tiene que coincidir como frase, no como bolsa de palabras:
+        // «De empleado a freelance» y «IA como empleado del freelance»
+        // comparten palabras y no son lo mismo.
+        return count($headA) >= 2 && $headA === $headB ? 1.0 : 0.0;
+    }
+
+    /**
+     * Palabras del tema principal, en orden: lo que va antes de los dos puntos
+     * o la raya, sin un «con IA» final ni un «IA para» inicial, que no
+     * cambian el tema.
+     *
+     * @return array<int, string>
+     */
+    public static function headline(string $title): array
+    {
+        $head = Str::lower(Str::ascii(preg_split('/\s*[:—–]\s*/u', $title)[0]));
+        $head = preg_replace(['/\s+con (la )?ia$/', '/^ia (para|en) /'], '', trim($head));
+
+        // Sin quitar palabras vacías: «de», «como» o «del» cambian el sentido.
+        return preg_split('/[^a-z0-9]+/', $head, -1, PREG_SPLIT_NO_EMPTY);
     }
 
     /**

@@ -1,0 +1,82 @@
+[
+    {
+        "slug": "diseno-colaborativo-en-remoto",
+        "merge_into": "diseno-colaborativo-en-remoto-figma-workshops-y-feedback-a-distancia"
+    },
+    {
+        "slug": "diseno-sostenible-y-economia-circular-con-ia",
+        "merge_into": "diseno-sostenible-y-economia-circular"
+    },
+    {
+        "slug": "gestion-de-proyectos-de-diseno-de-la-brief-al-entregable-sin-caos",
+        "merge_into": "gestion-de-proyectos-de-diseno-con-ia-del-brief-al-entregable-final"
+    },
+    {
+        "slug": "ux-y-diseno-de-experiencia-para-apps-de-seguros-con-ia",
+        "merge_into": "diseno-de-experiencia-de-usuario-para-apps-de-seguros-con-ia"
+    },
+    {
+        "slug": "ia-para-diseno-de-moda-y-colecciones-asistido-por-ia",
+        "merge_into": "diseno-de-moda-asistido-por-ia-para-creacion-de-colecciones"
+    },
+    {
+        "slug": "negociacion-con-entidades-financieras",
+        "merge_into": "negociacion-con-entidades-financieras-consigue-mejores-condiciones-en-creditos-lineas-ico-y-confirming"
+    },
+    {
+        "slug": "reporting-financiero-para-inversores-el-pack-mensual-que-genera-confianza-y-evita-preguntas-incomodas",
+        "merge_into": "reporting-financiero-para-inversores"
+    },
+    {
+        "slug": "gestion-de-la-tesoreria-en-startups-manten-la-caja-bajo-control-cuando-el-crecimiento-consume-el-efectivo",
+        "merge_into": "gestion-de-la-tesoreria-en-startups"
+    },
+    {
+        "slug": "valoracion-de-startups-pre-money-dcf-y-multiplos",
+        "merge_into": "valoracion-de-startups-dcf-comparables-y-vc-method-para-presentar-a-inversores"
+    },
+    {
+        "slug": "control-presupuestario-mensual",
+        "merge_into": "control-presupuestario-mensual-el-analisis-de-budget-vs-actual-que-convierte-los-numeros-en-decisiones"
+    },
+    {
+        "slug": "presupuesto-de-tesoreria-a-13-semanas",
+        "merge_into": "presupuesto-de-tesoreria-a-13-semanas-anticipa-los-problemas-de-caja-antes-de-que-se-conviertan-en-crisis"
+    },
+    {
+        "slug": "negociacion-financiera-con-bancos-inversores-y-contrapartes",
+        "merge_into": "negociacion-financiera"
+    },
+    {
+        "slug": "consultoria-financiera",
+        "merge_into": "consultoria-financiera-el-diagnostico-de-la-salud-financiera"
+    },
+    {
+        "slug": "finanzas-conductuales-protege-tu-cartera-de-tus-propios-sesgos",
+        "merge_into": "finanzas-conductuales-sesgos-cognitivos-que-distorsionan-las-decisiones-financieras"
+    },
+    {
+        "slug": "financial-storytelling-los-numeros-que-cuentan-una-historia",
+        "merge_into": "financial-storytelling-numeros-que-convencen-a-inversores"
+    },
+    {
+        "slug": "financial-innovation-nuevos-modelos-de-negocio-y-sus-implicaciones",
+        "merge_into": "financial-innovation-nuevos-modelos-instrumentos-y-la-transformacion-del-cfo"
+    },
+    {
+        "slug": "liderazgo-financiero-comunicar-malas-noticias-a-la-direccion",
+        "merge_into": "liderazgo-financiero-con-ia-analisis-estrategico-comunicacion-con-inversores-y-gestion-del-riesgo"
+    },
+    {
+        "slug": "finance-automation-conciliacion-reporting-y-los-procesos-que-ya-no-necesitan-a-nadie",
+        "merge_into": "finance-automation-conciliacion-reporting-y-deteccion-de-anomalias"
+    },
+    {
+        "slug": "comunicacion-financiera-en-redes-sociales-con-ia",
+        "merge_into": "comunicacion-financiera-y-de-inversion-en-redes-sociales"
+    },
+    {
+        "slug": "propiedad-industrial-proteger-la-innovacion-con-patentes",
+        "merge_into": "propiedad-industrial-marcas-patentes-y-disenos-industriales-para-proteger-tu-negocio-en-espana-y-europa"
+    }
+]

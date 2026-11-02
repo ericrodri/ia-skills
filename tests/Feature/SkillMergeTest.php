@@ -98,6 +98,34 @@ class SkillMergeTest extends TestCase
         $this->assertTrue($groups[0]['merge'][0]->is($short));
     }
 
+    public function test_same_topic_with_a_different_subtitle_counts_as_duplicate(): void
+    {
+        $this->skill('Infraestructura como código con Terraform', ['prompt_content' => 'corto']);
+        $this->skill('Infraestructura como código con Terraform: gestiona la nube sin tocar la consola', ['prompt_content' => str_repeat('largo ', 40)]);
+        // Mismas palabras, distinto tema: no se tocan.
+        $this->skill('De empleado a freelance');
+        $this->skill('IA como empleado del freelance: delegar tareas al asistente');
+
+        $groups = SkillMerger::duplicateGroups();
+
+        $this->assertCount(1, $groups);
+        $this->assertStringContainsString('gestiona la nube', $groups[0]['keep']->title);
+    }
+
+    public function test_the_export_writes_import_files_instead_of_merging(): void
+    {
+        $this->skill('Sales playbook', ['slug' => 'sales-playbook', 'prompt_content' => str_repeat('x ', 50)]);
+        $dup = $this->skill('Sales playbook: el manual del equipo', ['slug' => 'sales-playbook-manual', 'prompt_content' => 'x']);
+        $dir = sys_get_temp_dir().'/merge-export-'.uniqid();
+
+        $this->artisan('skills:merge-duplicates', ['--export' => $dir])->assertSuccessful();
+
+        $files = glob($dir.'/*.json');
+        $this->assertCount(1, $files);
+        $this->assertSame([['slug' => 'sales-playbook-manual', 'merge_into' => 'sales-playbook']], json_decode(file_get_contents($files[0]), true));
+        $this->assertSame('published', $dup->fresh()->status);
+    }
+
     public function test_the_command_only_lists_without_apply(): void
     {
         $this->skill('Relaciones con los medios y PR');

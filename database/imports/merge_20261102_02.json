@@ -1,0 +1,82 @@
+[
+    {
+        "slug": "ventas-internacionales",
+        "merge_into": "ventas-internacionales-negociar-y-cerrar-en-diferentes-culturas"
+    },
+    {
+        "slug": "gestion-de-multiples-stakeholders-en-ventas-enterprise-complejas",
+        "merge_into": "gestion-de-multiples-stakeholders-en-ventas-enterprise"
+    },
+    {
+        "slug": "sales-automation-el-proceso-comercial-que-funciona-solo",
+        "merge_into": "sales-automation-prospeccion-seguimiento-y-crm-con-ia"
+    },
+    {
+        "slug": "storytelling-en-ventas-cierra-mas-con-historias-que-con-argumentos-racionales",
+        "merge_into": "storytelling-en-ventas"
+    },
+    {
+        "slug": "innovacion-en-el-proceso-de-ventas",
+        "merge_into": "innovacion-en-el-proceso-de-ventas-experimentar-con-nuevos-modelos-comerciales"
+    },
+    {
+        "slug": "innovacion-en-el-proceso-de-ventas-experimenta-mide-y-optimiza-cada-fase-del-embudo",
+        "merge_into": "innovacion-en-el-proceso-de-ventas-experimentar-con-nuevos-modelos-comerciales"
+    },
+    {
+        "slug": "sales-intelligence-uso-de-datos-para-priorizar-prospectos-y-personalizar-el-outreach",
+        "merge_into": "sales-intelligence-usar-datos-para-identificar-y-cerrar-oportunidades"
+    },
+    {
+        "slug": "analisis-predictivo-de-pipeline-de-ventas-con-ia",
+        "merge_into": "dashboard-de-pipeline-de-ventas-con-ia-y-analisis-predictivo"
+    },
+    {
+        "slug": "lanzamiento-en-product-hunt-headline-primer-comentario-y-estrategia",
+        "merge_into": "lanzamiento-en-product-hunt"
+    },
+    {
+        "slug": "growth-hacking-disena-y-ejecuta-experimentos-de-crecimiento-con-metodologia-aarrr",
+        "merge_into": "growth-hacking-experimentos-rapidos-para-escalar-la-adquisicion"
+    },
+    {
+        "slug": "marketing-de-afiliados-construye-un-programa-que-convierte-a-tus-clientes-en-tu-equipo-de-ventas",
+        "merge_into": "affiliate-marketing-construir-y-gestionar-un-programa-de-afiliados-rentable"
+    },
+    {
+        "slug": "relaciones-con-los-medios",
+        "merge_into": "pr-y-relaciones-con-medios"
+    },
+    {
+        "slug": "employer-branding-y-atraccion-de-talento-para-marketing-con-ia",
+        "merge_into": "employer-branding-y-atraccion-de-talento-con-ia"
+    },
+    {
+        "slug": "employer-branding-con-ia-para-atraer-talento",
+        "merge_into": "employer-branding-con-ia-para-atraer-talento-de-marketing"
+    },
+    {
+        "slug": "modelo-de-negocio-freemium-cuando-y-como-monetizar",
+        "merge_into": "modelo-de-negocio-freemium-disena-el-freemium-que-convierte-sin-regalar-todo"
+    },
+    {
+        "slug": "estrategia-de-contenido-para-youtube-con-ia-de-la-idea-al-canal-con-audiencia-fiel",
+        "merge_into": "estrategia-de-contenido-para-youtube"
+    },
+    {
+        "slug": "burnout-en-marketing-reconocerlo-y-gestionarlo-antes-de-que-sea-tarde",
+        "merge_into": "burnout-en-marketing-prevenir-y-recuperarse"
+    },
+    {
+        "slug": "burnout-en-marketing-senales-causas-y-recuperacion",
+        "merge_into": "burnout-en-marketing-prevenir-y-recuperarse"
+    },
+    {
+        "slug": "marketing-sostenible-y-greenwashing",
+        "merge_into": "marketing-sostenible-sin-greenwashing"
+    },
+    {
+        "slug": "aprendizaje-continuo-en-marketing-como-mantenerse-al-dia",
+        "merge_into": "aprendizaje-continuo-en-marketing-mantenerse-al-dia"
+    }
+]

@@ -1,0 +1,82 @@
+[
+    {
+        "slug": "usar-influencers-internos-y-employer-branding-para-atraer-talento",
+        "merge_into": "employer-branding-con-influencers-internos-e-ia-para-atraer-talento"
+    },
+    {
+        "slug": "gestion-del-talento-y-cultura-en-empresas-de-logistica-y-transporte-con-ia",
+        "merge_into": "gestion-de-talento-en-empresas-de-logistica-y-transporte-con-ia"
+    },
+    {
+        "slug": "gestion-de-talento-en-empresas-de-transporte-y-logistica-con-ia",
+        "merge_into": "gestion-de-talento-en-empresas-de-logistica-y-transporte-con-ia"
+    },
+    {
+        "slug": "ia-para-gestion-de-talento-en-empresas-del-sector-energetico",
+        "merge_into": "gestion-de-talento-en-el-sector-energetico-con-ia"
+    },
+    {
+        "slug": "generador-de-documentacion-de-api-en-formato-openapiswagger",
+        "merge_into": "generador-de-documentacion-de-api-openapiswagger"
+    },
+    {
+        "slug": "diseno-de-arquitectura-de-microservicios",
+        "merge_into": "diseno-de-arquitectura-de-microservicios-con-ia"
+    },
+    {
+        "slug": "arquitectura-de-microservicios",
+        "merge_into": "arquitectura-de-microservicios-cuando-dividir-el-monolito-y-como-hacerlo-sin-destruir-el-equipo"
+    },
+    {
+        "slug": "arquitectura-de-microservicios-del-monolito-al-sistema-distribuido-sin-romper-produccion",
+        "merge_into": "arquitectura-de-microservicios-cuando-dividir-el-monolito-y-como-hacerlo-sin-destruir-el-equipo"
+    },
+    {
+        "slug": "arquitectura-de-microservicios-decide-cuando-usarlos-y-como-disenarlos",
+        "merge_into": "arquitectura-de-microservicios-cuando-dividir-el-monolito-y-como-hacerlo-sin-destruir-el-equipo"
+    },
+    {
+        "slug": "websockets-y-tiempo-real-implementa-notificaciones-y-actualizaciones-en-vivo-en-tu-aplicacion-web",
+        "merge_into": "websockets-y-tiempo-real-socketio-ably-y-arquitectura-para-tu-caso-de-uso"
+    },
+    {
+        "slug": "infraestructura-como-codigo-con-terraform",
+        "merge_into": "infraestructura-como-codigo-con-terraform-gestiona-la-infraestructura-cloud-sin-tocar-la-consola"
+    },
+    {
+        "slug": "arquitectura-serverless-cuando-usar-funciones-en-la-nube-y-cuando-no-con-aws-lambda-y-cloudflare-workers",
+        "merge_into": "arquitectura-serverless"
+    },
+    {
+        "slug": "kubernetes-en-produccion-operaciones-del-dia-2",
+        "merge_into": "kubernetes-en-produccion-deployments-hpa-y-troubleshooting-avanzado"
+    },
+    {
+        "slug": "integracion-de-pasarelas-de-pago-stripe-paypal-y-alternativas",
+        "merge_into": "integracion-de-pasarelas-de-pago"
+    },
+    {
+        "slug": "engineering-management-de-senior-dev-a-manager",
+        "merge_into": "engineering-management-liderazgo-tecnico-sin-micromanagement"
+    },
+    {
+        "slug": "green-software-engineering-reduce-la-huella-de-carbono-del-codigo",
+        "merge_into": "green-software-engineering"
+    },
+    {
+        "slug": "liderazgo-tecnico-con-inteligencia-emocional-aumentada-por-ia",
+        "merge_into": "liderazgo-tecnico-con-inteligencia-emocional"
+    },
+    {
+        "slug": "consultoria-tecnica",
+        "merge_into": "consultoria-tecnica-auditar-y-recomendar"
+    },
+    {
+        "slug": "negociacion-de-oferta-de-trabajo-tech",
+        "merge_into": "negociacion-de-oferta-de-trabajo-y-compensacion-tech"
+    },
+    {
+        "slug": "linkedin-para-developers-usar-la-red-profesional-sin-sentirse-un-vendedor",
+        "merge_into": "linkedin-para-developers-estrategia-de-contenido-con-ia-para-posicionarte-como-referente-tecnico"
+    }
+]
