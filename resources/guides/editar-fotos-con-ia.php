@@ -92,7 +92,7 @@ return [
     <li><strong>Imágenes con contenido manipulado que se publican como reales.</strong> Desde agosto de 2026, el Reglamento europeo de IA exige etiquetar los contenidos generados o manipulados que puedan pasar por auténticos.</li>
 </ul>
 
-<p>Las dudas sobre si puedes usar comercialmente una imagen editada o generada, y de quién es, están resueltas en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>. Y si te encuentras con una foto tuya manipulada, la guía de <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">deepfakes y suplantación</a> explica cómo actuar.</p>
+<p>Las dudas sobre si puedes usar comercialmente una imagen editada o generada, y de quién es, están resueltas en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>. Si Gemini se niega a editar tu foto o te contesta con texto, las causas y soluciones están en <a href="/guias/gemini-no-genera-imagenes">por qué Gemini no genera imágenes</a>. Y si te encuentras con una foto tuya manipulada, la guía de <a href="/guias/estafas-con-ia-deepfakes-y-suplantacion">deepfakes y suplantación</a> explica cómo actuar.</p>
 
 <p>Si prefieres ir directo a las instrucciones, tienes más de cuarenta listas para copiar, ordenadas por tarea, en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con ChatGPT y Gemini</a>.</p>
 HTML,

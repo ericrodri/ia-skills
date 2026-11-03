@@ -87,6 +87,8 @@ return [
     <li><strong>Tareas que requieren acceso a tus sistemas</strong>, salvo que se lo des expresamente.</li>
 </ul>
 
+<p>Tampoco es gratis para el planeta, aunque cada pregunta gaste mucho menos de lo que se suele decir: las cifras reales están en <a href="/guias/cuanta-agua-y-energia-gasta-la-ia">cuánta agua y energía gasta ChatGPT</a>.</p>
+
 <p>Los fallos más frecuentes al usarla en la oficina están recogidos en <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores al usar IA en el trabajo</a>.</p>
 
 <h2 id="trabajo">Qué significa para tu trabajo</h2>
