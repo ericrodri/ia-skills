@@ -48,7 +48,7 @@ return [
 
 <h2 id="voz">Conversación por voz: el ejercicio principal</h2>
 
-<p>Abre la aplicación de ChatGPT, Gemini o Claude en el móvil y activa el modo de voz. Antes de hablar, dale el contexto en una sola instrucción:</p>
+<p>Abre la aplicación de ChatGPT, Gemini o Claude en el móvil y activa el modo de voz (si no sabes dónde está, lo explicamos en <a href="/guias/hablar-con-chatgpt-por-voz">cómo hablar con ChatGPT por voz</a>). Antes de hablar, dale el contexto en una sola instrucción:</p>
 
 <blockquote>«Quiero practicar inglés. Mi nivel es B1. Habla conmigo como si fueras un compañero de trabajo en una pausa para el café. Usa frases cortas y vocabulario cotidiano. Hazme preguntas para que yo hable más que tú. Si no entiendo algo, repítelo más despacio y con otras palabras.»</blockquote>
 

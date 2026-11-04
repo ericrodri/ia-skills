@@ -104,6 +104,8 @@ contradice las tarifas.</code></pre>
 
 <p>La comparativa por tareas, con criterios concretos, está en <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude o ChatGPT para trabajar</a>. Lo más fiable sigue siendo hacer tu tarea más habitual en dos asistentes durante una semana y quedarte con el que menos tengas que corregir.</p>
 
+<p>Si lo usas a diario, la aplicación de escritorio para Windows o Mac añade Cowork y los conectores con tu ordenador; lo contamos en <a href="/guias/chatgpt-claude-y-gemini-para-ordenador">ChatGPT, Claude y Gemini para el ordenador</a>.</p>
+
 <h2 id="errores">Errores habituales</h2>
 
 <ul>

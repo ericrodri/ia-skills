@@ -34,7 +34,7 @@ return [
 
 <h2 id="empezar">Empezar: cuenta y configuración</h2>
 
-<p>Entra en chatgpt.com o instala la aplicación de móvil o de escritorio y crea una cuenta. La versión gratuita basta para aprender; qué incluye y dónde se queda corta está en la guía de <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>.</p>
+<p>Entra en chatgpt.com o instala la aplicación de móvil o de escritorio y crea una cuenta. Dónde descargar la aplicación oficial para Windows o Mac, sin caer en copias, está en <a href="/guias/chatgpt-claude-y-gemini-para-ordenador">ChatGPT, Claude y Gemini para el ordenador</a>, y cómo hablarle en lugar de escribir, en <a href="/guias/hablar-con-chatgpt-por-voz">hablar con ChatGPT por voz</a>. La versión gratuita basta para aprender; qué incluye y dónde se queda corta está en la guía de <a href="/guias/herramientas-de-ia-gratis">herramientas de IA gratis</a>.</p>
 
 <p>Antes de la primera conversación de trabajo, dedica cinco minutos a la configuración:</p>
 

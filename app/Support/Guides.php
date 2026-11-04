@@ -107,6 +107,8 @@ class Guides
         'chatgpt-no-funciona',
         'gemini-no-genera-imagenes',
         'cuanta-agua-y-energia-gasta-la-ia',
+        'chatgpt-claude-y-gemini-para-ordenador',
+        'hablar-con-chatgpt-por-voz',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

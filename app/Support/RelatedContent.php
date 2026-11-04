@@ -174,6 +174,8 @@ class RelatedContent
         'chatgpt-no-funciona' => [['freelancers', 'customer-support'], null],
         'gemini-no-genera-imagenes' => [['diseno', 'marketing'], 'foto'],
         'cuanta-agua-y-energia-gasta-la-ia' => [['product-management', 'freelancers'], null],
+        'chatgpt-claude-y-gemini-para-ordenador' => [['freelancers', 'product-management'], null],
+        'hablar-con-chatgpt-por-voz' => [['rrhh', 'freelancers'], 'entrevista'],
         'cv-y-carta-de-presentacion-con-ia' => [['rrhh'], 'candidat'],
         'entrevista-de-trabajo-con-ia' => [['rrhh'], 'entrevista'],
         'ia-para-profesores' => [['rrhh', 'freelancers'], 'educa'],
