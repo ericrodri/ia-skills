@@ -109,6 +109,8 @@ class Guides
         'cuanta-agua-y-energia-gasta-la-ia',
         'chatgpt-claude-y-gemini-para-ordenador',
         'hablar-con-chatgpt-por-voz',
+        'que-es-nano-banana',
+        'memoria-e-historial-de-chatgpt',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

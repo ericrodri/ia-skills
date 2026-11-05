@@ -176,6 +176,8 @@ class RelatedContent
         'cuanta-agua-y-energia-gasta-la-ia' => [['product-management', 'freelancers'], null],
         'chatgpt-claude-y-gemini-para-ordenador' => [['freelancers', 'product-management'], null],
         'hablar-con-chatgpt-por-voz' => [['rrhh', 'freelancers'], 'entrevista'],
+        'que-es-nano-banana' => [['diseno', 'marketing'], 'imagen'],
+        'memoria-e-historial-de-chatgpt' => [['freelancers', 'rrhh'], null],
         'cv-y-carta-de-presentacion-con-ia' => [['rrhh'], 'candidat'],
         'entrevista-de-trabajo-con-ia' => [['rrhh'], 'entrevista'],
         'ia-para-profesores' => [['rrhh', 'freelancers'], 'educa'],

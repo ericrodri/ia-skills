@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
     'readingMinutes' => 8,
-    'words' => 1266,
+    'words' => 1316,
     'about' => 'Uso práctico de Google Gemini en el entorno profesional',
     'related' => ['chatgpt-vs-gemini', 'como-usar-chatgpt', 'herramientas-de-ia-gratis', 'gemini-notebook-antes-notebooklm', 'ia-en-excel-y-google-sheets', 'como-escribir-prompts-efectivos', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
@@ -103,7 +103,7 @@ problemas, ordenada por gravedad.</code></pre>
     <li><strong>Creerse las cifras.</strong> Gemini puede inventar datos con total seguridad. Usa la comprobación con la Búsqueda y lee la guía de <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</li>
     <li><strong>Confundirlo con el buscador.</strong> Las respuestas con IA del buscador de Google no son lo mismo que una conversación con Gemini: para trabajo con contexto, usa el chat.</li>
     <li><strong>Enviar sin revisar.</strong> Un borrador de Gemini en Gmail es un punto de partida. Dale tu voz antes de pulsar enviar.</li>
-    <li><strong>Pensar que no sabe hacer imágenes.</strong> Si contesta con texto o se niega, casi siempre es la cuenta, el límite del día o la forma de pedirlo: lo explicamos en <a href="/guias/gemini-no-genera-imagenes">por qué Gemini no genera imágenes</a>.</li>
+    <li><strong>Pensar que no sabe hacer imágenes.</strong> Si contesta con texto o se niega, casi siempre es la cuenta, el límite del día o la forma de pedirlo: lo explicamos en <a href="/guias/gemini-no-genera-imagenes">por qué Gemini no genera imágenes</a>, y qué versión de su modelo de imágenes usas, en <a href="/guias/que-es-nano-banana">qué es Nano Banana</a>.</li>
 </ul>
 
 <p>Si solo te quedas con una idea: la ventaja de Gemini no es que sea más listo, es que ya está donde trabajas. Aprovéchala para dejar de copiar y pegar, y revisa lo que entrega como revisarías el trabajo de un compañero.</p>

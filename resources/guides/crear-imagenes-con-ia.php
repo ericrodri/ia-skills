@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-10-28',
     'readingMinutes' => 8,
-    'words' => 1361,
+    'words' => 1386,
     'about' => 'Generación de imágenes con inteligencia artificial',
     'related' => ['crear-fondos-de-pantalla-con-ia', 'hacer-un-cartel-con-ia', 'hacer-invitaciones-con-ia', 'disfraz-de-halloween-con-ia', 'crear-stickers-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'disenar-un-tatuaje-con-ia', 'decorar-tu-casa-con-ia', 'crear-un-logo-con-ia', 'ia-para-redes-sociales', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'herramientas-de-ia-gratis', 'presentaciones-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'como-escribir-prompts-efectivos'],
     'toc' => [
@@ -137,6 +137,8 @@ izquierda a color azul marino y quita la taza de la mesa.</code></pre>
 </ol>
 
 <p>Con eso cubierto, la IA se convierte en lo que mejor sabe ser: una forma rápida de pasar de «algo así» a una imagen concreta que puedes enseñar, corregir y usar. Si partes de una foto real que quieres retocar, quitar el fondo o limpiar, sigue con <a href="/guias/editar-fotos-con-ia">editar fotos con IA</a>; si lo que necesitas es la imagen de tu marca, con <a href="/guias/crear-un-logo-con-ia">crear un logo con IA</a>. Y para una tarjeta con vuestra foto y un mensaje propio, tienes los pasos en <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad con IA</a>. Y para convertir tus personajes en un paquete para el móvil, sigue con <a href="/guias/crear-stickers-con-ia">crear stickers con IA</a>. Y si se acerca el 31 de octubre, tienes ideas y prompts en <a href="/guias/disfraz-de-halloween-con-ia">disfraz de Halloween con IA</a>. Para un fondo para el móvil o el ordenador, con la proporción y el espacio para el reloj bien resueltos, sigue con <a href="/guias/crear-fondos-de-pantalla-con-ia">crear fondos de pantalla con IA</a>.</p>
+
+<p>El modelo de imágenes de Gemini, el popular Nano Banana, tiene varias versiones y se puede usar gratis; lo explicamos en <a href="/guias/que-es-nano-banana">qué es Nano Banana</a>.</p>
 
 <p>Si lo que quieres no es crear desde cero sino cambiar una foto que ya tienes, los prompts de edición están en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con ChatGPT y Gemini</a>.</p>
 HTML,

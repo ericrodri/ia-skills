@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 7,
-    'words' => 1172,
+    'words' => 1233,
     'about' => 'Uso práctico de ChatGPT en el entorno profesional',
     'related' => ['vale-la-pena-pagar-chatgpt-plus', 'chatgpt-vs-gemini', 'como-usar-claude', 'como-usar-gemini', 'como-usar-deepseek', 'herramientas-de-ia-gratis', 'como-escribir-prompts-efectivos', 'gpts-proyectos-y-skills', 'claude-vs-chatgpt-para-trabajar', 'errores-al-usar-ia-en-el-trabajo', 'alucinaciones-de-la-ia'],
     'toc' => [
@@ -81,6 +81,8 @@ correo: [pega el correo]</code></pre>
     <li><strong>Voz.</strong> En el móvil puedes dictarle o mantener una conversación hablada. Muy útil para ordenar ideas mientras caminas o preparar una presentación en voz alta.</li>
     <li><strong>Imágenes.</strong> Genera y edita imágenes en la misma conversación. Cómo pedirlas está en <a href="/guias/crear-imagenes-con-ia">crear imágenes con IA</a>.</li>
 </ul>
+
+<p>ChatGPT también puede recordar datos sobre ti entre conversaciones. Cómo ver esa memoria, borrarla o liberarla cuando se llena está en <a href="/guias/memoria-e-historial-de-chatgpt">memoria e historial de ChatGPT</a>.</p>
 
 <h2 id="tareas">Cinco tareas para empezar mañana</h2>
 

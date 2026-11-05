@@ -32,7 +32,7 @@ return [
     'ctaTitle' => 'Prompts de imagen que Gemini entiende a la primera',
     'ctaBody' => 'Tienes el <a href="/skills/prompt-para-que-gemini-no-cambie-la-cara-al-editar-una-foto">prompt para que Gemini no cambie la cara</a>, el de <a href="/skills/prompt-para-unir-a-dos-personas-en-una-foto-con-ia">unir a dos personas en una foto</a> y el de <a href="/skills/prompt-para-restaurar-fotos-antiguas-o-danadas-con-chatgpt-o-gemini">restaurar fotos antiguas</a>. Más ideas en la guía de <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos</a>.',
     'body' => <<<'HTML'
-<p>Gemini se hizo famoso por su editor de imágenes, conocido como Nano Banana, y desde entonces una de las búsquedas más repetidas es por qué no funciona. La frustración es comprensible: a una persona le hace una figura de colección con su foto en diez segundos y a otra le contesta con un párrafo explicando cómo sería esa imagen.</p>
+<p>Gemini se hizo famoso por su editor de imágenes, conocido como <a href="/guias/que-es-nano-banana">Nano Banana</a>, y desde entonces una de las búsquedas más repetidas es por qué no funciona. La frustración es comprensible: a una persona le hace una figura de colección con su foto en diez segundos y a otra le contesta con un párrafo explicando cómo sería esa imagen.</p>
 
 <p>Casi nunca es un fallo del servicio. Es la cuenta, el límite del día, las normas o la forma de pedirlo. Esta guía te ayuda a saber cuál es tu caso.</p>
 
