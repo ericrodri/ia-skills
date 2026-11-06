@@ -111,6 +111,8 @@ class Guides
         'hablar-con-chatgpt-por-voz',
         'que-es-nano-banana',
         'memoria-e-historial-de-chatgpt',
+        'desactivar-gemini-en-el-movil',
+        'usar-chatgpt-como-psicologo',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

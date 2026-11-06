@@ -10,7 +10,7 @@ return [
     'published' => '2026-11-02',
     'updated' => '2026-11-02',
     'readingMinutes' => 10,
-    'words' => 1727,
+    'words' => 1752,
     'about' => 'La complacencia de los asistentes de IA y cómo conseguir respuestas sinceras',
     'related' => ['alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'como-usar-chatgpt', 'errores-al-usar-ia-en-el-trabajo', 'que-la-ia-escriba-como-un-humano', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
@@ -129,5 +129,7 @@ return [
 <p>Lo que buscas es que te dé la razón cuando la tienes y te la quite cuando no. Por eso la instrucción de arriba pide exactitud y argumentos, no desacuerdo. Una forma rápida de comprobar que está bien ajustada: enséñale algo que sepas que está bien hecho. Si también le encuentra cinco problemas graves, has pasado de un extremo al otro y conviene suavizar el texto.</p>
 
 <p>Con la instrucción permanente guardada y la costumbre de preguntar sin dar tu opinión, la diferencia se nota desde la primera conversación: menos elogios, más «esto no cuadra», y respuestas que sirven para decidir. Es uno de los <a href="/guias/errores-al-usar-ia-en-el-trabajo">errores más comunes al usar IA en el trabajo</a>, y de los más fáciles de corregir.</p>
+
+<p>Donde más pesa este defecto es cuando le cuentas problemas personales: si lo usas para desahogarte, lee antes <a href="/guias/usar-chatgpt-como-psicologo">si se puede usar ChatGPT como psicólogo</a>.</p>
 HTML,
 ];

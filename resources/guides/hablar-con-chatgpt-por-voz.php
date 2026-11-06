@@ -106,7 +106,7 @@ return [
 <ul>
     <li><strong>Lo que dices se guarda.</strong> La conversación queda transcrita en tu historial. Si no quieres que se use para entrenar modelos, desactívalo en los controles de datos de los ajustes.</li>
     <li><strong>Sigue inventándose cosas.</strong> Una voz segura y natural no hace que la respuesta sea más fiable. Comprueba los datos importantes; lo explicamos en <a href="/guias/alucinaciones-de-la-ia">por qué la IA se inventa cosas</a>.</li>
-    <li><strong>Cuidado con la sensación de compañía.</strong> La voz hace que la conversación parezca humana, y es fácil acabar contándole cosas que no le contarías a una aplicación. Puede ayudar a ordenar ideas, pero no es un terapeuta ni un amigo. Si atraviesas un mal momento, habla con una persona o con un profesional.</li>
+    <li><strong>Cuidado con la sensación de compañía.</strong> La voz hace que la conversación parezca humana, y es fácil acabar contándole cosas que no le contarías a una aplicación. Puede ayudar a ordenar ideas, pero no es un terapeuta ni un amigo. Si atraviesas un mal momento, habla con una persona o con un profesional; lo desarrollamos en <a href="/guias/usar-chatgpt-como-psicologo">ChatGPT como psicólogo</a>.</li>
     <li><strong>Ya no está en WhatsApp.</strong> El número de ChatGPT para WhatsApp dejó de funcionar en enero de 2026. En WhatsApp el asistente disponible es Meta AI, que contamos en <a href="/guias/meta-ai-en-whatsapp">Meta AI en WhatsApp</a>.</li>
 </ul>
 

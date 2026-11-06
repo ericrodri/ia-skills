@@ -178,6 +178,8 @@ class RelatedContent
         'hablar-con-chatgpt-por-voz' => [['rrhh', 'freelancers'], 'entrevista'],
         'que-es-nano-banana' => [['diseno', 'marketing'], 'imagen'],
         'memoria-e-historial-de-chatgpt' => [['freelancers', 'rrhh'], null],
+        'desactivar-gemini-en-el-movil' => [['customer-support', 'freelancers'], null],
+        'usar-chatgpt-como-psicologo' => [['rrhh', 'freelancers'], null],
         'cv-y-carta-de-presentacion-con-ia' => [['rrhh'], 'candidat'],
         'entrevista-de-trabajo-con-ia' => [['rrhh'], 'entrevista'],
         'ia-para-profesores' => [['rrhh', 'freelancers'], 'educa'],

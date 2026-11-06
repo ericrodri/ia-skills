@@ -8,9 +8,9 @@ return [
     'excerpt' => 'ChatGPT recuerda cosas de ti de dos formas distintas, y borrar una no borra la otra. Esta guía explica dónde está cada una, cómo limpiarlas y qué hacer cuando aparece el aviso de memoria llena.',
     'category' => 'Herramientas',
     'published' => '2026-11-05',
-    'updated' => '2026-11-05',
+    'updated' => '2026-11-06',
     'readingMinutes' => 8,
-    'words' => 1385,
+    'words' => 1447,
     'about' => 'Memoria, historial de conversaciones y privacidad en ChatGPT',
     'related' => ['como-usar-chatgpt', 'usar-ia-sin-filtrar-datos-de-clientes', 'ventana-de-contexto-conversaciones-largas', 'gpts-proyectos-y-skills', 'chatgpt-no-funciona', 'vale-la-pena-pagar-chatgpt-plus'],
     'toc' => [
@@ -26,6 +26,7 @@ return [
         '¿Qué hago si la memoria de ChatGPT está llena?' => 'El aviso significa que ya no cabe ningún recuerdo nuevo, no que ChatGPT deje de funcionar. Entra en gestionar memorias y borra lo que ya no sirve: datos repetidos, cosas de un proyecto terminado o detalles que guardó sin que se lo pidieras. Otra opción es pedirle que resuma varios recuerdos en uno. Lo que sea estable y largo, como tu estilo de escritura, va mejor en las instrucciones personalizadas.',
         '¿Cómo borro el historial de ChatGPT en el móvil?' => 'Para borrar una conversación, mantén pulsado su nombre en la lista de chats o abre su menú de tres puntos y elige eliminar. Para borrarlas todas, ve a los ajustes y busca la opción de eliminar todos los chats en el apartado de controles de datos. Lo que borres en el móvil desaparece también del ordenador, porque el historial va ligado a la cuenta.',
         '¿ChatGPT recuerda conversaciones anteriores?' => 'Sí, si tienes activada la memoria. Por un lado guarda recuerdos concretos, que puedes ver y editar. Por otro, puede consultar tus conversaciones anteriores para personalizar las respuestas. Las dos opciones se activan o desactivan por separado en los ajustes de personalización. Si las desactivas, cada chat empieza desde cero, aunque el historial siga visible en la barra lateral.',
+        '¿Dónde están los chats archivados de ChatGPT?' => 'No aparecen en la barra lateral, pero no se han borrado. En el ordenador, entra en Ajustes, Controles de datos, Chats archivados y pulsa Gestionar: ahí puedes abrirlos, desarchivarlos o borrarlos. En el móvil están en el mismo apartado de los ajustes. El buscador del historial también los encuentra.',
         '¿Si borro un chat, OpenAI lo borra de verdad?' => 'Desaparece de tu cuenta al momento, y OpenAI dice que lo elimina de sus sistemas en un plazo de unos 30 días, salvo que tenga que conservarlo por motivos legales o de seguridad. Si ese chat ya se usó para entrenar modelos, borrarlo no deshace ese entrenamiento; por eso conviene desactivar la opción de mejorar el modelo antes de compartir información delicada.',
     ],
     'ctaTitle' => 'Instrucciones que no ocupan memoria',
@@ -89,7 +90,7 @@ return [
 <ul>
     <li><strong>Un chat:</strong> abre el menú de tres puntos junto a su nombre en la barra lateral, o mantenlo pulsado en el móvil, y elige eliminar.</li>
     <li><strong>Todos los chats:</strong> en los ajustes, dentro de los controles de datos, está la opción de eliminar todos los chats.</li>
-    <li><strong>Archivar en lugar de borrar:</strong> si solo quieres despejar la lista, archiva. El chat desaparece de la barra lateral pero lo puedes recuperar desde los ajustes.</li>
+    <li><strong>Archivar en lugar de borrar:</strong> si solo quieres despejar la lista, archiva. El chat desaparece de la barra lateral pero lo puedes recuperar desde los ajustes, en Controles de datos, Chats archivados.</li>
 </ul>
 
 <p>El historial va ligado a tu cuenta, así que lo que borres en el móvil desaparece también del ordenador y de la web. OpenAI elimina los chats borrados de sus sistemas en un plazo de unos 30 días, salvo obligaciones legales o de seguridad.</p>
