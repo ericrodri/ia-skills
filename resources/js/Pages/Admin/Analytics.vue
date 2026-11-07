@@ -67,7 +67,7 @@ const deviceNames = { mobile: 'Móvil', desktop: 'Ordenador', tablet: 'Tableta' 
             <div class="flex flex-wrap items-center justify-between gap-4">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Analítica</h1>
-                    <p class="text-sm text-gray-500 dark:text-gray-400">Visitas reales (con JavaScript), sin bots ni cookies. Tus visitas como admin no cuentan.</p>
+                    <p class="text-sm text-gray-500 dark:text-gray-400">Solo cuentan visitas con señal de una persona (ratón, toque, scroll o tecla), sin cookies. Tus visitas como admin no cuentan. Datos fiables desde el 7 de noviembre de 2026 por la tarde.</p>
                 </div>
                 <nav class="flex gap-1 rounded-xl bg-gray-100 dark:bg-gray-800 p-1 text-sm" aria-label="Periodo">
                     <Link

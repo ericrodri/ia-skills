@@ -118,9 +118,21 @@
             </div>
         </footer>
     </div>
-    {{-- Analítica propia, sin cookies (App\Support\Analytics). En las páginas Inertia lo hace app.js. --}}
+    {{-- Analítica propia, sin cookies (App\Support\Analytics). En las páginas Inertia lo hace app.js.
+         Solo avisa tras una señal de persona (ratón, toque, scroll o tecla) y nunca desde navegadores automatizados. --}}
     <script>
-        navigator.sendBeacon && navigator.sendBeacon('/hola', new URLSearchParams({ p: location.pathname + location.search, r: document.referrer }))
+        (function () {
+            if (!navigator.sendBeacon || navigator.webdriver) return
+            var events = ['pointermove', 'pointerdown', 'scroll', 'wheel', 'keydown', 'touchstart'], sent = false
+            var data = new URLSearchParams({ p: location.pathname + location.search, r: document.referrer })
+            function send() {
+                if (sent) return
+                sent = true
+                events.forEach(function (e) { window.removeEventListener(e, send, true) })
+                navigator.sendBeacon('/hola', data)
+            }
+            events.forEach(function (e) { window.addEventListener(e, send, { capture: true, passive: true }) })
+        })()
     </script>
 </body>
 
