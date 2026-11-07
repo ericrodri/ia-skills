@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 2154,
     'about' => 'Adopción de inteligencia artificial en pymes y autónomos',
-    'related' => ['hacer-un-cuadrante-de-turnos-con-ia', 'ganar-dinero-con-ia', 'plan-de-negocio-con-ia', 'hacer-un-analisis-dafo-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['contabilidad-con-ia', 'hacer-un-cuadrante-de-turnos-con-ia', 'ganar-dinero-con-ia', 'plan-de-negocio-con-ia', 'hacer-un-analisis-dafo-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis', 'seo-local-con-ia', 'chatbot-de-atencion-al-cliente-con-ia', 'automatizar-sin-programar-n8n-make-zapier', 'medir-si-la-ia-ahorra-tiempo', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'por-donde-no' => 'Por dónde no empezar',
         'las-cinco' => 'Las cinco tareas que mueven la caja',
@@ -68,7 +68,7 @@ return [
 </table>
 </figure>
 
-<p>Fíjate en que ninguna es «hacer mi oficio». La IA no va a diseñar tu instalación eléctrica ni a llevar tu contabilidad. Va a quitarte la parte administrativa y comercial que te impide dedicarte a tu oficio, que en un autónomo es fácilmente el 40 % de la semana.</p>
+<p>Fíjate en que ninguna es «hacer mi oficio». La IA no va a diseñar tu instalación eléctrica ni a llevar tu contabilidad, aunque sí a pasarte las facturas a limpio, como contamos en <a href="/guias/contabilidad-con-ia">IA para contabilidad</a>. Va a quitarte la parte administrativa y comercial que te impide dedicarte a tu oficio, que en un autónomo es fácilmente el 40 % de la semana.</p>
 
 <p>Si quieres el detalle por tarea, hay guías específicas para <a href="/guias/escribir-correos-con-ia">escribir correos</a>, <a href="/guias/ia-en-excel-y-google-sheets">hojas de cálculo</a> y <a href="/guias/resumir-documentos-largos-con-ia">documentos largos</a>. Si tienes empleados, cuadrar los turnos del mes es de las tareas que más tiempo se ahorran: lo explicamos en <a href="/guias/hacer-un-cuadrante-de-turnos-con-ia">hacer un cuadrante de turnos con IA</a>.</p>
 

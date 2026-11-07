@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 14,
     'words' => 2428,
     'about' => 'Uso de inteligencia artificial en hojas de cálculo',
-    'related' => ['hacer-un-cuadrante-de-turnos-con-ia', 'hacer-un-informe-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
+    'related' => ['hacer-un-cuadrante-de-turnos-con-ia', 'contabilidad-con-ia', 'hacer-un-informe-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'microsoft-365-copilot-en-el-trabajo', 'presentaciones-con-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes'],
     'toc' => [
         'regla' => 'La regla que evita el 90 % de los errores',
         'tres-caminos' => 'Los tres caminos y cuál te toca',

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 8,
     'words' => 1250,
     'about' => 'Edición y retoque de fotografías con herramientas de inteligencia artificial',
-    'related' => ['prompts-para-editar-fotos-con-ia', 'fotos-de-navidad-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
+    'related' => ['prompts-para-editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'fotos-de-navidad-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'convertir-una-foto-en-dibujo-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'decorar-tu-casa-con-ia', 'foto-de-perfil-profesional-con-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-para-diseno-grafico', 'seo-para-tiendas-online', 'ia-para-redes-sociales', 'herramientas-de-ia-gratis'],
     'toc' => [
         'que-cambia' => 'Qué ha cambiado: editar hablando',
         'herramientas' => 'Qué herramienta usar para cada cosa',
@@ -55,7 +55,7 @@ return [
 
 <ol>
     <li><strong>Quitar el fondo</strong> o sustituirlo por uno liso. Revisa siempre el pelo y los bordes finos.</li>
-    <li><strong>Eliminar objetos o personas</strong>: papeleras, cables, gente que pasaba. Funciona mejor con fondos sencillos.</li>
+    <li><strong>Eliminar objetos o personas</strong>: papeleras, cables, gente que pasaba. Funciona mejor con fondos sencillos; el paso a paso según tu móvil está en <a href="/guias/borrar-personas-de-una-foto-con-ia">borrar personas de una foto con IA</a>.</li>
     <li><strong>Arreglar la luz</strong>: fotos oscuras, contraluces, tonos amarillentos de interior.</li>
     <li><strong>Redecorar una habitación</strong>: ver tu salón con otro estilo o color antes de comprar; lo explicamos en <a href="/guias/decorar-tu-casa-con-ia">decorar tu casa con IA</a>.</li>
     <li><strong>Ampliar el encuadre</strong> para adaptar una foto vertical a formato horizontal, o al revés, sin recortar al protagonista.</li>

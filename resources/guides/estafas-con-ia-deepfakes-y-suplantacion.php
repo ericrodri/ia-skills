@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 12,
     'words' => 1937,
     'about' => 'Fraude mediante suplantación de identidad con inteligencia artificial generativa',
-    'related' => ['detectar-imagenes-hechas-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
+    'related' => ['detectar-imagenes-hechas-con-ia', 'invertir-en-bolsa-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
         'que-cambio' => 'Qué cambió exactamente',
         'anatomia' => 'Anatomía de un fraude del CEO moderno',

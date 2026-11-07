@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 6,
     'words' => 1058,
     'about' => 'Presupuesto doméstico y control de gastos personales con asistentes de inteligencia artificial',
-    'related' => ['entender-tu-nomina-con-ia', 'ia-en-excel-y-google-sheets', 'menu-semanal-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos'],
+    'related' => ['entender-tu-nomina-con-ia', 'declaracion-de-la-renta-con-ia', 'invertir-en-bolsa-con-ia', 'ia-en-excel-y-google-sheets', 'menu-semanal-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'para-que' => 'Para qué sirve (y para qué no)',
         'datos' => 'Exportar tus movimientos sin exponerte',
@@ -39,7 +39,7 @@ return [
     <li><strong>Sirve</strong> para clasificar movimientos, detectar suscripciones olvidadas, calcular medias y comparar meses.</li>
     <li><strong>Sirve</strong> para montar la hoja de cálculo con fórmulas y gráficos sin saber Excel.</li>
     <li><strong>Sirve</strong> para explicarte conceptos: qué es un fondo de emergencia, cómo funciona una TAE o qué significa amortizar.</li>
-    <li><strong>No sirve</strong> como asesor de inversiones. No conoce tu situación completa, puede <a href="/guias/alucinaciones-de-la-ia">equivocarse con datos</a> y no responde de sus consejos. Para invertir, consulta con un profesional autorizado.</li>
+    <li><strong>No sirve</strong> como asesor de inversiones. No conoce tu situación completa, puede <a href="/guias/alucinaciones-de-la-ia">equivocarse con datos</a> y no responde de sus consejos. Para invertir, consulta con un profesional autorizado; lo que sí puede hacer la IA lo contamos en <a href="/guias/invertir-en-bolsa-con-ia">IA para invertir en bolsa</a>.</li>
 </ul>
 
 <h2 id="datos">Exportar tus movimientos sin exponerte</h2>

@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1145,
     'about' => 'Instrucciones (prompts) para editar fotografías con ChatGPT y Gemini',
-    'related' => ['editar-fotos-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'regla' => 'La regla que evita que te cambie la cara',
         'plantilla' => 'La plantilla base',

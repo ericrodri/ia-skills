@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 9,
     'words' => 1406,
     'about' => 'Lectura e interpretación de la nómina española (devengos, deducciones, cotizaciones e IRPF) con ayuda de asistentes de inteligencia artificial',
-    'related' => ['pedir-un-aumento-de-sueldo-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'carta-de-baja-voluntaria-con-ia', 'revisar-un-contrato-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'escribir-una-reclamacion-con-ia', 'alucinaciones-de-la-ia'],
+    'related' => ['pedir-un-aumento-de-sueldo-con-ia', 'declaracion-de-la-renta-con-ia', 'presupuesto-personal-y-ahorro-con-ia', 'carta-de-baja-voluntaria-con-ia', 'revisar-un-contrato-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'escribir-una-reclamacion-con-ia', 'alucinaciones-de-la-ia'],
     'toc' => [
         'partes' => 'Las cuatro partes de una nómina',
         'datos' => 'Qué quitar antes de pegarla',
