@@ -18,6 +18,10 @@ return Application::configure(basePath: dirname(__DIR__))
             \App\Http\Middleware\RedirectToCanonicalHost::class,
         ]);
 
+        // Uso por IA (asistentes, agentes y rastreadores): métrica de producto.
+        // Global para cubrir también la API y llms.txt; cuenta en terminate().
+        $middleware->append(\App\Http\Middleware\RecordAiUsage::class);
+
         $middleware->web(append: [
             \App\Http\Middleware\HandleInertiaRequests::class,
             \Illuminate\Http\Middleware\AddLinkHeadersForPreloadedAssets::class,

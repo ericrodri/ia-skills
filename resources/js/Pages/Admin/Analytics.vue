@@ -56,6 +56,14 @@ const share = (part, rows) => {
 }
 
 const deviceNames = { mobile: 'Móvil', desktop: 'Ordenador', tablet: 'Tableta' }
+
+const aiGroups = [
+    { key: 'asistente', label: 'Lecturas de asistentes', hint: 'ChatGPT, Claude, Perplexity… leyendo una página para responder a alguien' },
+    { key: 'agente', label: 'Instalaciones y agentes', hint: 'skill.md, CLI y MCP de ia-skills, Claude Code' },
+    { key: 'indice', label: 'Rastreos para IA y buscadores', hint: 'Google, Bing, OpenAI, Anthropic, Amazon… indexando o entrenando' },
+]
+const groupNames = { asistente: 'asistente', agente: 'agente', indice: 'rastreo' }
+const kindNames = { skill_md: 'skill.md', llms: 'llms.txt', api: 'API', guia: 'Guías', ficha: 'Fichas', otra: 'Otras páginas' }
 </script>
 
 <template>
@@ -96,6 +104,60 @@ const deviceNames = { mobile: 'Móvil', desktop: 'Ordenador', tablet: 'Tableta' 
                     </p>
                 </div>
             </div>
+
+            <!-- Uso por IA: la métrica de producto (App\Support\AiUsage) -->
+            <section class="rounded-2xl border border-brand-200 dark:border-brand-800/60 bg-brand-50/50 dark:bg-brand-900/10 p-5">
+                <h2 class="font-semibold text-gray-900 dark:text-white">Uso por IA</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Asistentes, agentes y rastreadores que consumen ia-skills. Solo los que se identifican; registro desde el 7 de noviembre de 2026.</p>
+
+                <div class="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-4">
+                    <div v-for="g in aiGroups" :key="g.key" class="rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-4" :title="g.hint">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">{{ g.label }}</p>
+                        <p class="mt-1 text-2xl font-bold text-gray-900 dark:text-white tabular-nums">{{ n(report.ai.groups[g.key]) }}</p>
+                        <p class="mt-1 text-xs text-gray-400">{{ g.hint }}</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid gap-6 lg:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Por asistente o rastreador</h3>
+                        <ul class="mt-2 space-y-1.5 text-sm">
+                            <li v-for="a in report.ai.agents" :key="a.label" class="flex justify-between gap-3">
+                                <span class="text-gray-700 dark:text-gray-300">{{ a.label }} <span class="text-xs text-gray-400">· {{ groupNames[a.grp] }}</span></span>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(a.hits) }}</span>
+                            </li>
+                            <li v-if="!report.ai.agents.length" class="text-gray-400">Sin datos en este periodo.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Páginas que leen los asistentes</h3>
+                        <ul class="mt-2 space-y-1.5 text-xs">
+                            <li v-for="p in report.ai.pages" :key="p.label" class="flex justify-between gap-3">
+                                <a :href="p.label" target="_blank" rel="noopener" class="truncate text-gray-600 dark:text-gray-400 hover:text-brand-600" :title="p.label">{{ p.label }}</a>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(p.hits) }}</span>
+                            </li>
+                            <li v-if="!report.ai.pages.length" class="text-gray-400">Todavía ninguna lectura de asistentes.</li>
+                        </ul>
+                        <h3 class="mt-5 text-sm font-semibold text-gray-900 dark:text-white">Qué piden asistentes y agentes</h3>
+                        <ul class="mt-2 space-y-1.5 text-sm">
+                            <li v-for="k in report.ai.kinds" :key="k.label" class="flex justify-between">
+                                <span class="text-gray-700 dark:text-gray-300">{{ kindNames[k.label] ?? k.label }}</span>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(k.hits) }}</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Skills más instaladas <span class="font-normal text-gray-400">(histórico: {{ n(report.ai.installsTotal) }})</span></h3>
+                        <ul class="mt-2 space-y-1.5 text-xs">
+                            <li v-for="s in report.ai.topInstalled" :key="s.slug" class="flex justify-between gap-3">
+                                <a :href="`/skills/${s.slug}`" target="_blank" rel="noopener" class="truncate text-gray-600 dark:text-gray-400 hover:text-brand-600" :title="s.label">{{ s.label }}</a>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(s.hits) }}</span>
+                            </li>
+                            <li v-if="!report.ai.topInstalled.length" class="text-gray-400">Aún no hay instalaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
 
             <!-- Visitantes por día -->
             <section class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">

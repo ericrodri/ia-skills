@@ -191,6 +191,7 @@ class Analytics
             'campaigns' => $top('utm_source', 8, true),
             'devices' => $top('device', 3),
             'affiliates' => self::affiliateClicks($from, $to),
+            'ai' => AiUsage::report($from, $to),
         ];
     }
 
