@@ -7,6 +7,7 @@ use App\Http\Requests\UpdateSkillRequest;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\SkillVersion;
+use App\Support\Affiliates;
 use App\Support\RelatedContent;
 use App\Support\Seo;
 use App\Support\SiteData;
@@ -210,6 +211,12 @@ class SkillController extends Controller
             ],
             'guides'     => $guides,
             'neighbours' => $neighbours,
+            // Recuadro de herramientas con enlace de afiliado que menciona la ficha.
+            'affiliateTools' => Affiliates::forText(
+                implode(' ', [$skill->title, $skill->tool_name, $skill->description, $skill->prompt_content]),
+                '/skills/'.$skill->slug,
+            ),
+            'affiliateDisclosure' => Affiliates::DISCLOSURE,
         ]);
     }
 

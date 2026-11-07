@@ -70,6 +70,7 @@
                 <li><strong>Alojamiento del servidor</strong>{{ $legal['hosting'] ? ': '.$legal['hosting'] : '' }}. Es donde se guarda la base de datos de la web.</li>
             </ul>
             <p>La tipografía de la web se sirve desde nuestro propio servidor, así que cargar una página no envía tu dirección IP a terceros.</p>
+            <p><strong>Enlaces de afiliado.</strong> Algunas fichas y guías recomiendan herramientas (por ejemplo, ElevenLabs) con un enlace de afiliado, marcado como tal junto al botón: si contratas un plan, recibimos una comisión sin que te cueste más. Al hacer clic contamos el clic (herramienta, día y página de origen, sin ningún dato tuyo) y te llevamos a la web de esa empresa, que puede usar sus propias cookies para atribuir la compra según su política de privacidad.</p>
             <p>Lo que publicas en tu perfil, tus skills y tus comentarios es público: cualquiera puede verlo, y los buscadores pueden indexarlo.</p>
 
             <h2 id="conservacion">5. Cuánto tiempo los guardamos</h2>

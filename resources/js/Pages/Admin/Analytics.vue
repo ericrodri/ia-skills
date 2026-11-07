@@ -167,6 +167,27 @@ const deviceNames = { mobile: 'Móvil', desktop: 'Ordenador', tablet: 'Tableta' 
                         </ul>
                     </section>
 
+                    <!-- Afiliados -->
+                    <section class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
+                        <h2 class="font-semibold text-gray-900 dark:text-white">Clics en afiliados</h2>
+                        <ul v-if="report.affiliates.tools.length" class="mt-3 space-y-2 text-sm">
+                            <li v-for="a in report.affiliates.tools" :key="a.label" class="flex justify-between">
+                                <span class="text-gray-700 dark:text-gray-300">{{ a.label }}</span>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(a.clicks) }}</span>
+                            </li>
+                        </ul>
+                        <p v-else class="mt-3 text-sm text-gray-400">Sin clics en este periodo.</p>
+                        <template v-if="report.affiliates.pages.length">
+                            <p class="mt-4 text-xs font-medium text-gray-500 dark:text-gray-400">Desde qué páginas</p>
+                            <ul class="mt-2 space-y-1.5 text-xs">
+                                <li v-for="p in report.affiliates.pages" :key="p.label + p.tool" class="flex justify-between gap-3">
+                                    <a :href="p.label" target="_blank" rel="noopener" class="truncate text-gray-600 dark:text-gray-400 hover:text-brand-600" :title="p.label">{{ p.label }}</a>
+                                    <span class="tabular-nums text-gray-900 dark:text-white">{{ n(p.clicks) }}</span>
+                                </li>
+                            </ul>
+                        </template>
+                    </section>
+
                     <!-- Campañas -->
                     <section v-if="report.campaigns.length" class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
                         <h2 class="font-semibold text-gray-900 dark:text-white">Campañas (utm_source)</h2>

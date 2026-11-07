@@ -70,6 +70,10 @@
                 </section>
             @endif
 
+            @include('partials.affiliate-box', [
+                'tools' => \App\Support\Affiliates::forText($guide['title'].' '.$guide['body'], '/guias/'.$guide['slug']),
+            ])
+
             <section class="guide-callout mt-14">
                 <p class="font-semibold text-gray-900 dark:text-white">{{ $guide['ctaTitle'] ?? 'Pasa de la teoría al catálogo' }}</p>
                 <p class="mt-2 text-gray-600 dark:text-gray-300">{!! $guide['ctaBody'] ?? 'Explora las skills de tu profesión y cópialas en un clic.' !!}</p>

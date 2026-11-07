@@ -52,7 +52,7 @@ class Analytics
     {
         $agent = (string) $request->userAgent();
 
-        if ($agent === '' || preg_match(self::BOT_AGENTS, $agent) || $request->user()?->is_admin) {
+        if (self::isBot($agent) || $request->user()?->is_admin) {
             return false;
         }
 
@@ -82,6 +82,11 @@ class Analytics
         ]);
 
         return true;
+    }
+
+    public static function isBot(string $agent): bool
+    {
+        return trim($agent) === '' || (bool) preg_match(self::BOT_AGENTS, $agent);
     }
 
     /**
@@ -185,6 +190,25 @@ class Analytics
             'sources' => $top('referrer', 12),
             'campaigns' => $top('utm_source', 8, true),
             'devices' => $top('device', 3),
+            'affiliates' => self::affiliateClicks($from, $to),
+        ];
+    }
+
+    /**
+     * Clics en enlaces de afiliado (/ir/{tool}) por herramienta y las páginas
+     * que más clics generan.
+     *
+     * @return array{tools: list<array{label: string, clicks: int}>, pages: list<array{label: string, tool: string, clicks: int}>}
+     */
+    private static function affiliateClicks(string $from, string $to): array
+    {
+        $range = fn () => DB::table('affiliate_clicks')->whereBetween('day', [$from, $to]);
+
+        return [
+            'tools' => $range()->selectRaw('tool, count(*) as clicks')->groupBy('tool')->orderByDesc('clicks')->get()
+                ->map(fn ($r) => ['label' => $r->tool, 'clicks' => (int) $r->clicks])->all(),
+            'pages' => $range()->whereNotNull('from')->selectRaw('"from", tool, count(*) as clicks')->groupBy('from', 'tool')->orderByDesc('clicks')->limit(10)->get()
+                ->map(fn ($r) => ['label' => $r->from, 'tool' => $r->tool, 'clicks' => (int) $r->clicks])->all(),
         ];
     }
 }

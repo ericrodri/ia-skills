@@ -8,6 +8,7 @@ Disallow: /dashboard
 Disallow: /profile
 Disallow: /guardadas
 Disallow: /admin/
+Disallow: /ir/
 Disallow: /skills/crear
 Disallow: /login
 Disallow: /register

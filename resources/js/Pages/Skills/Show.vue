@@ -2,6 +2,7 @@
 import { Head, Link, router, usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
+import AffiliateBox from '@/Components/AffiliateBox.vue'
 import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
 
@@ -19,6 +20,9 @@ const props = defineProps({
     // se enlazan con <a>, nunca con <Link>.
     guides: { type: Array, default: () => [] },
     neighbours: { type: Array, default: () => [] },
+    // Herramientas con enlace de afiliado que menciona la ficha (App\Support\Affiliates)
+    affiliateTools: { type: Array, default: () => [] },
+    affiliateDisclosure: { type: String, default: '' },
 })
 
 // Instalar como Skill de Claude Code
@@ -450,6 +454,8 @@ function submitComment() {
                         </div>
                         <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono">{{ skill.prompt_content }}</pre>
                     </div>
+
+                    <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 
                     <!-- Usar como Skill de Claude Code: SKILL.md generado desde la ficha -->
                     <div v-if="install && skill.resource_type === 'prompt'" class="mt-6 p-4 rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50/60 dark:bg-violet-900/10">

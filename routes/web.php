@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AffiliateController;
 use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CollectionController;
@@ -137,6 +138,12 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::post('/skills/{skill}/rechazar', [AdminController::class, 'reject'])->name('skills.reject');
     Route::get('/analitica', [AnalyticsController::class, 'index'])->name('analytics');
 });
+
+// Enlaces de afiliado: cuenta el clic y redirige (config/affiliates.php).
+Route::get('/ir/{tool}', [AffiliateController::class, 'go'])
+    ->where('tool', '[a-z0-9-]+')
+    ->middleware('throttle:60,1')
+    ->name('affiliates.go');
 
 // Analítica propia: el navegador avisa de cada página vista (App\Support\Analytics).
 // Sin CSRF (sendBeacon no manda cabeceras); no cambia nada del usuario.
