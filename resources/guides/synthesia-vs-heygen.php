@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Las dos hacen lo mismo sobre el papel: escribes un guion y un presentador sintético lo dice a cámara en el idioma que elijas. En la práctica, una está pensada para departamentos de formación y la otra para marketing y creadores. Qué las diferencia, cuánto cuestan y cómo probarlas antes de pagar.',
     'category' => 'Herramientas',
     'published' => '2026-11-01',
-    'updated' => '2026-11-01',
+    'updated' => '2026-11-07',
     'readingMinutes' => 8,
-    'words' => 1361,
+    'words' => 1377,
     'about' => 'Comparativa de Synthesia y HeyGen, herramientas de vídeo con avatares generados por inteligencia artificial para empresas',
-    'related' => ['video-y-audio-con-ia-en-el-trabajo', 'crear-un-avatar-con-ia', 'convertir-texto-a-voz-con-ia', 'crear-videos-con-ia', 'ai-act-obligaciones-empresas', 'estafas-con-ia-deepfakes-y-suplantacion'],
+    'related' => ['doblar-un-video-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-un-avatar-con-ia', 'convertir-texto-a-voz-con-ia', 'crear-videos-con-ia', 'ai-act-obligaciones-empresas', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
         'resumen' => 'La respuesta corta',
         'que-hacen' => 'Qué hacen las dos',
@@ -54,7 +54,7 @@ return [
     <li><strong>Tu propio avatar</strong>: grabas unos minutos hablando a cámara y obtienes una copia digital que dice cualquier texto con tu cara y tu voz.</li>
     <li><strong>Más de cien idiomas</strong>, español incluido, con voces de distintos acentos.</li>
     <li><strong>Editor por escenas</strong> parecido a un programa de presentaciones: cada escena tiene su texto, su fondo y lo que aparece en pantalla.</li>
-    <li><strong>Traducción de vídeos</strong>: subes un vídeo y lo devuelven en otro idioma, con la voz del original.</li>
+    <li><strong>Traducción de vídeos</strong>: subes un vídeo y lo devuelven en otro idioma, con la voz del original. Comparamos esta opción con ElevenLabs y el doblaje de YouTube en <a href="/guias/doblar-un-video-con-ia">doblar un vídeo con IA</a>.</li>
 </ul>
 
 <p>Si quieres entender antes los tipos de avatar y qué cuidar con tu propia imagen, está explicado en <a href="/guias/crear-un-avatar-con-ia">cómo crear un avatar con IA</a>.</p>

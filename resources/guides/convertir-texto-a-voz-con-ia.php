@@ -8,11 +8,11 @@ return [
     'excerpt' => 'Las voces sintéticas ya no suenan a contestador automático: con un buen texto pasan por una locución grabada. El truco está menos en la herramienta que en cómo escribes para el oído, y en no usar una voz que no es tuya.',
     'category' => 'Práctica',
     'published' => '2026-10-08',
-    'updated' => '2026-10-08',
+    'updated' => '2026-11-07',
     'readingMinutes' => 8,
-    'words' => 1277,
+    'words' => 1314,
     'about' => 'Síntesis de voz (texto a voz) con inteligencia artificial para narraciones, vídeos y accesibilidad',
-    'related' => ['crear-un-podcast-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-videos-con-ia', 'pasar-audio-a-texto-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'traducir-con-ia', 'herramientas-de-ia-gratis'],
+    'related' => ['como-usar-elevenlabs', 'clonar-tu-voz-con-ia', 'crear-un-podcast-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-videos-con-ia', 'pasar-audio-a-texto-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'traducir-con-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'para-que' => 'Para qué se usa',
         'herramientas' => 'Qué herramienta usar',
@@ -59,6 +59,8 @@ return [
         <tr><td>Muchos audios automatizados</td><td>Las API de voz de Google, Microsoft, OpenAI o ElevenLabs</td><td>Pago por caracteres</td></tr>
     </tbody>
 </table>
+
+<p>Si te decides por ElevenLabs, tienes el paso a paso, el plan gratis y los precios en <a href="/guias/como-usar-elevenlabs">cómo usar ElevenLabs</a>, y si quieres que la locución tenga tu propia voz, en <a href="/guias/clonar-tu-voz-con-ia">cómo clonar tu voz con IA</a>.</p>
 
 <p>Si vas a montar un vídeo completo, la voz es solo una pieza; el resto del proceso está en <a href="/guias/crear-videos-con-ia">crear vídeos con IA</a>.</p>
 

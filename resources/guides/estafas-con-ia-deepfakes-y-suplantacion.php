@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-17',
     'updated' => '2026-10-14',
     'readingMinutes' => 12,
-    'words' => 1931,
+    'words' => 1937,
     'about' => 'Fraude mediante suplantación de identidad con inteligencia artificial generativa',
     'related' => ['detectar-imagenes-hechas-con-ia', 'comprar-con-ia-black-friday', 'usar-ia-sin-filtrar-datos-de-clientes', 'como-usar-grok', 'politica-de-uso-de-ia-en-la-empresa', 'se-nota-si-un-texto-lo-escribe-una-ia'],
     'toc' => [
@@ -41,7 +41,7 @@ return [
 
 <p>El fraude del CEO y la factura falsa llevan décadas funcionando por correo. Durante todo ese tiempo, la defensa recomendada fue siempre la misma: ante la duda, llama o pide una videollamada. Funcionaba porque falsificar una voz o una cara en directo era caro y difícil.</p>
 
-<p>Ya no lo es. La clonación de voz reconstruye tono, timbre, cadencia y hasta las muletillas de una persona a partir de unos pocos segundos de audio, con herramientas al alcance de cualquiera —las mismas que se usan de forma legítima para <a href="/guias/video-y-audio-con-ia-en-el-trabajo">doblar vídeos corporativos</a>—. El vídeo va un paso por detrás pero va. En España, los operadores bloquean cada año cientos de millones de llamadas fraudulentas, y las autoridades llevan varios trimestres señalando el crecimiento de las denuncias por suplantación con medios biométricos.</p>
+<p>Ya no lo es. La clonación de voz reconstruye tono, timbre, cadencia y hasta las muletillas de una persona a partir de unos pocos segundos de audio, con herramientas al alcance de cualquiera —las mismas que se usan de forma legítima para <a href="/guias/video-y-audio-con-ia-en-el-trabajo">doblar vídeos corporativos</a> o para <a href="/guias/clonar-tu-voz-con-ia">clonar tu propia voz</a>—. El vídeo va un paso por detrás pero va. En España, los operadores bloquean cada año cientos de millones de llamadas fraudulentas, y las autoridades llevan varios trimestres señalando el crecimiento de las denuncias por suplantación con medios biométricos.</p>
 
 <p>La consecuencia práctica cabe en una frase: <strong>ver y oír a alguien ha dejado de ser una forma de verificar quién es</strong>. Todo procedimiento interno que dependa de eso está roto y hay que reescribirlo.</p>
 

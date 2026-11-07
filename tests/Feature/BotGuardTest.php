@@ -3,10 +3,10 @@
 namespace Tests\Feature;
 
 use App\Mail\NewsletterConfirmationMail;
-use App\Models\NewsletterSubscriber;
 use App\Models\User;
 use App\Support\BotGuard;
 use Illuminate\Foundation\Testing\RefreshDatabase;
+use Illuminate\Routing\Middleware\ThrottleRequests;
 use Illuminate\Support\Facades\Mail;
 use Tests\TestCase;
 
@@ -94,7 +94,7 @@ class BotGuardTest extends TestCase
     public function test_hay_un_tope_diario_de_emails_de_confirmacion(): void
     {
         // Sin el límite por IP, que salta antes: aquí se prueba el tope global.
-        $this->withoutMiddleware(\Illuminate\Routing\Middleware\ThrottleRequests::class);
+        $this->withoutMiddleware(ThrottleRequests::class);
 
         for ($i = 0; $i < 62; $i++) {
             $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => "p{$i}@example.com"]);

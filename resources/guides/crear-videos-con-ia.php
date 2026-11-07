@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Escribir una frase y recibir un vídeo de ocho segundos ya es rutina. Montar con eso algo que alguien quiera ver hasta el final no lo es. Qué herramienta conviene para cada caso, cómo pedir las tomas y cómo unirlas en un vídeo con sentido.',
     'category' => 'Práctica',
     'published' => '2026-10-05',
-    'updated' => '2026-10-05',
+    'updated' => '2026-11-07',
     'readingMinutes' => 7,
-    'words' => 1246,
+    'words' => 1272,
     'about' => 'Generación y montaje de vídeos con herramientas de inteligencia artificial',
     'related' => ['animar-una-foto-con-ia', 'crear-un-avatar-con-ia', 'synthesia-vs-heygen', 'restaurar-fotos-antiguas-con-ia', 'convertir-texto-a-voz-con-ia', 'video-y-audio-con-ia-en-el-trabajo', 'crear-imagenes-con-ia', 'ia-para-redes-sociales', 'crear-musica-con-ia', 'pasar-audio-a-texto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
@@ -77,7 +77,7 @@ return [
     <li><strong>Escribe el guion</strong> en cinco o seis frases, una por toma. Puedes pedir ayuda a ChatGPT o Claude, pero decide tú el mensaje.</li>
     <li><strong>Genera cada toma</strong> dos o tres veces y quédate con la mejor. Descarta sin pena las que tengan manos raras o textos deformados.</li>
     <li><strong>Monta en un editor</strong> (CapCut, Canva o el que uses): ordena, recorta y ajusta el ritmo.</li>
-    <li><strong>Añade voz y música.</strong> Si narras tú, mejor que una voz sintética para contenido personal. Para la banda sonora tienes la guía de <a href="/guias/crear-musica-con-ia">crear música con IA</a>.</li>
+    <li><strong>Añade voz y música.</strong> Si narras tú, mejor que una voz sintética para contenido personal; si prefieres una voz de IA, tienes cómo hacerlo en <a href="/guias/como-usar-elevenlabs">cómo usar ElevenLabs</a>, y para llevar el vídeo a otro idioma, <a href="/guias/doblar-un-video-con-ia">doblar un vídeo con IA</a>. Para la banda sonora tienes la guía de <a href="/guias/crear-musica-con-ia">crear música con IA</a>.</li>
     <li><strong>Pon subtítulos.</strong> La mayoría de la gente ve los vídeos sin sonido. Los editores los generan solos; revisa nombres propios y cifras.</li>
     <li><strong>Exporta en el formato de cada red</strong>: vertical para TikTok, Reels y Shorts; horizontal para YouTube. Cómo adaptar el mensaje a cada una está en <a href="/guias/ia-para-redes-sociales">IA para redes sociales</a>.</li>
 </ol>
