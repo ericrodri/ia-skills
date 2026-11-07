@@ -118,6 +118,10 @@
             </div>
         </footer>
     </div>
+    {{-- Analítica propia, sin cookies (App\Support\Analytics). En las páginas Inertia lo hace app.js. --}}
+    <script>
+        navigator.sendBeacon && navigator.sendBeacon('/hola', new URLSearchParams({ p: location.pathname + location.search, r: document.referrer }))
+    </script>
 </body>
 
 </html>

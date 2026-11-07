@@ -19,7 +19,7 @@
         <div class="guide-content mt-10">
             <p>
                 En ia-skills tratamos solo los datos necesarios para que la web funcione. No vendemos datos, no mostramos
-                publicidad y no usamos herramientas de analítica ni cookies de seguimiento. Aquí se explica con detalle qué
+                publicidad, no usamos cookies de seguimiento ni herramientas de analítica de terceros: las estadísticas de visitas las calculamos nosotros, sin identificarte. Aquí se explica con detalle qué
                 datos tratamos, para qué y cómo puedes controlarlos, conforme al Reglamento General de Protección de Datos
                 (RGPD) y a la Ley Orgánica 3/2018 (LOPDGDD).
             </p>
@@ -40,7 +40,7 @@
             </ul>
 
             <h2 id="datos">2. Qué datos tratamos</h2>
-            <p><strong>Si solo navegas</strong>, no te pedimos ningún dato. El servidor registra, como cualquier web, datos técnicos de cada petición (dirección IP, navegador, página solicitada y fecha) para poder funcionar y protegerse de abusos.</p>
+            <p><strong>Si solo navegas</strong>, no te pedimos ningún dato. El servidor registra, como cualquier web, datos técnicos de cada petición (dirección IP, navegador, página solicitada y fecha) para poder funcionar y protegerse de abusos. Además, al abrir cada página tu navegador nos indica qué página es, desde qué web llegaste y si usas móvil, tableta u ordenador, para nuestras estadísticas de visitas (ver más abajo).</p>
             <p><strong>Si creas una cuenta</strong>, tratamos:</p>
             <ul>
                 <li>Nombre, email y contraseña. La contraseña se guarda cifrada con un algoritmo irreversible: nadie, tampoco nosotros, puede leerla.</li>
@@ -59,6 +59,7 @@
                 <li><strong>Resumen semanal por email:</strong> solo si lo pides expresamente. Sin cuenta, además, tienes que confirmarlo desde un email antes de recibir nada. Base legal: tu consentimiento (art. 6.1.a RGPD), que puedes retirar con un clic desde cualquier email. Si pides el pack de skills de una profesión, el formulario te lo avisa: te enviamos el enlace de descarga al confirmar y quedas apuntado al resumen semanal, del que puedes darte de baja cuando quieras sin perder el pack. Guardamos de qué formulario llegaste para saber qué pack enviarte.</li>
                 <li><strong>Seguridad y prevención de abusos</strong> (límites de peticiones por IP, protección contra spam y accesos no autorizados): interés legítimo en mantener la web segura (art. 6.1.f RGPD).</li>
                 <li><strong>Estadísticas de uso</strong> (contar cuántas veces se instala cada skill, sin identificarte): se guarda durante 24 horas un resumen no reversible de tu IP y tu navegador para no contar dos veces la misma instalación. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
+                <li><strong>Estadísticas de visitas</strong> (cuántas personas visitan cada página, desde qué web llegan y con qué tipo de dispositivo): no usamos cookies ni servicios de terceros, y no guardamos tu IP. Para contar visitantes únicos guardamos un resumen de tu IP y tu navegador calculado con una clave aleatoria que cambia cada día y se borra a los dos días; después no hay forma de saber a quién corresponde. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
             </ul>
             <p>No tomamos decisiones automatizadas con efectos sobre ti ni elaboramos perfiles con fines comerciales.</p>
 
@@ -77,6 +78,7 @@
                 <li><strong>Sesiones:</strong> caducan tras {{ $sessionMinutes }} minutos sin actividad, salvo que marques «Recordarme».</li>
                 <li><strong>Resumen semanal sin cuenta:</strong> mientras sigas suscrito. Las altas que no se confirman y las bajas se borran a los 30 días.</li>
                 <li><strong>Estadísticas de instalación:</strong> el resumen de IP y navegador se descarta a las 24 horas. Solo queda el recuento total de cada skill, que no está asociado a nadie.</li>
+                <li><strong>Estadísticas de visitas:</strong> 25 meses. La clave que permite calcular el resumen de IP y navegador se borra a los dos días, así que lo que se conserva no está asociado a nadie.</li>
                 <li><strong>Registros técnicos del servidor:</strong> el tiempo imprescindible para la seguridad y la resolución de errores.</li>
             </ul>
 

@@ -1,6 +1,7 @@
 <?php
 
 use App\Models\NewsletterSubscriber;
+use App\Models\PageView;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
@@ -19,6 +20,6 @@ Schedule::command('newsletter:weekly')
 
 // Borra las suscripciones sin confirmar y las bajas a los 30 días, como
 // promete la política de privacidad (NewsletterSubscriber::prunable()).
-Schedule::command('model:prune', ['--model' => [NewsletterSubscriber::class]])
+Schedule::command('model:prune', ['--model' => [NewsletterSubscriber::class, PageView::class]])
     ->daily()
     ->onOneServer();

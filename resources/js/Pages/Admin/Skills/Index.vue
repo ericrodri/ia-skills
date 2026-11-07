@@ -2,6 +2,7 @@
 import { Head, Link, router, useForm } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
+import AdminNav from '@/Components/AdminNav.vue'
 
 const props = defineProps({
     skills: Object,
@@ -51,6 +52,7 @@ const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', 
 
     <AppLayout>
         <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10">
+            <AdminNav />
 
             <!-- Header -->
             <div class="mb-8">

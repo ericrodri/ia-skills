@@ -28,6 +28,9 @@ return Application::configure(basePath: dirname(__DIR__))
         // firma de la URL (middleware `signed`).
         $middleware->validateCsrfTokens(except: [
             'newsletter/baja/*',
+            // Aviso de página vista con sendBeacon, que no puede mandar el
+            // token. Solo inserta una fila anónima (App\Support\Analytics).
+            'hola',
         ]);
 
         $middleware->alias([

@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AnalyticsController;
 use App\Http\Controllers\AuthorController;
 use App\Http\Controllers\CollectionController;
 use App\Http\Controllers\CommentController;
@@ -134,6 +135,13 @@ Route::middleware(['auth', 'admin'])->prefix('admin')->name('admin.')->group(fun
     Route::get('/skills', [AdminController::class, 'index'])->name('skills.index');
     Route::post('/skills/{skill}/aprobar', [AdminController::class, 'approve'])->name('skills.approve');
     Route::post('/skills/{skill}/rechazar', [AdminController::class, 'reject'])->name('skills.reject');
+    Route::get('/analitica', [AnalyticsController::class, 'index'])->name('analytics');
 });
+
+// Analítica propia: el navegador avisa de cada página vista (App\Support\Analytics).
+// Sin CSRF (sendBeacon no manda cabeceras); no cambia nada del usuario.
+Route::post('/hola', [AnalyticsController::class, 'collect'])
+    ->middleware('throttle:120,1')
+    ->name('analytics.collect');
 
 require __DIR__ . '/auth.php';
