@@ -18,6 +18,7 @@
         <form method="POST" action="{{ route('newsletter.subscribe') }}" class="mt-4 flex flex-col sm:flex-row gap-2">
             @csrf
             <input type="hidden" name="source" value="{{ $source ?? '' }}">
+            <input type="hidden" name="{{ \App\Support\BotGuard::FIELD }}" value="{{ \App\Support\BotGuard::token() }}">
             {{-- Honeypot: invisible para personas, los bots lo rellenan --}}
             <div class="hidden" aria-hidden="true">
                 <label>No rellenes este campo <input type="text" name="website" tabindex="-1" autocomplete="off"></label>

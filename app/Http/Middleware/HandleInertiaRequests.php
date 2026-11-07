@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Support\BotGuard;
 use App\Support\SiteData;
 use App\Support\SkillMarkdown;
 use Illuminate\Http\Request;
@@ -49,6 +50,9 @@ class HandleInertiaRequests extends Middleware
                 // null si el paquete npm no esta disponible: /mcp daria 404.
                 'mcp' => fn () => SkillMarkdown::mcpAvailable() ? route('mcp') : null,
             ],
+            // Ficha antibots de los formularios públicos (App\Support\BotGuard).
+            // Se renueva en cada visita; los formularios la leen al enviar.
+            'formToken' => fn () => BotGuard::token(),
         ];
     }
 }

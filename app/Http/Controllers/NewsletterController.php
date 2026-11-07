@@ -6,12 +6,14 @@ use App\Mail\NewsletterConfirmationMail;
 use App\Mail\ProfessionPackMail;
 use App\Models\NewsletterSubscriber;
 use App\Models\User;
+use App\Support\BotGuard;
 use App\Support\ProfessionPack;
 use App\Support\Seo;
 use App\Support\SiteData;
 use Illuminate\Contracts\View\View;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
@@ -34,15 +36,31 @@ use Throwable;
  */
 class NewsletterController extends Controller
 {
+    /** Días sin reenviar la confirmación a un mismo email pendiente. */
+    private const RESEND_DAYS = 3;
+
+    /** Máximo de emails de confirmación al día. Lo normal son menos de diez. */
+    private const DAILY_CONFIRMATION_CAP = 60;
+
     private const SUBSCRIBED_MESSAGE = 'Te hemos enviado un email para confirmar la suscripción. Si no lo ves, revisa la carpeta de spam.';
 
     public function subscribe(Request $request): RedirectResponse
     {
+        // A un bot se le responde como a un alta normal, para que no aprenda
+        // a esquivar el filtro, pero no se guarda nada ni se manda ningún email.
+        $bot = BotGuard::check($request);
+
+        if ($bot === BotGuard::EXPIRED) {
+            return $this->back($request, 'La página llevaba demasiado tiempo abierta. Recárgala e inténtalo de nuevo.', error: true);
+        }
+
+        if ($bot !== null) {
+            return $this->back($request, self::SUBSCRIBED_MESSAGE);
+        }
+
         $validator = Validator::make($request->all(), [
             'email' => ['required', 'string', 'email', 'max:255'],
             'source' => ['nullable', 'string', 'max:120'],
-            // Honeypot: un campo oculto que solo rellenan los bots.
-            'website' => ['nullable', 'max:0'],
         ], [
             'email.required' => 'Escribe tu email.',
             'email.email' => 'Ese email no parece válido.',
@@ -75,6 +93,14 @@ class NewsletterController extends Controller
         }
 
         if (! $alreadyGetsIt && ! $subscriber->isActive()) {
+            // Quien ya tiene un email de confirmación reciente no recibe otro:
+            // los bots repiten la misma dirección y la víctima recibía uno por
+            // envío. El tope diario protege la reputación del dominio si aun
+            // así se cuela una avalancha.
+            if ($this->confirmationRecentlySent($subscriber) || ! $this->underDailyConfirmationCap()) {
+                return $this->back($request, self::SUBSCRIBED_MESSAGE);
+            }
+
             // Un pack pedido manda sobre el origen anterior: es lo que se
             // entrega al confirmar.
             $subscriber->source = $pack ? ProfessionPack::source($pack) : ($subscriber->source ?? $data['source'] ?? null);
@@ -147,6 +173,22 @@ class NewsletterController extends Controller
      * Inertia: a las primeras se vuelve con el ancla del formulario; a
      * Inertia, sin ancla y con el flash que pinta AppLayout.
      */
+    private function confirmationRecentlySent(NewsletterSubscriber $subscriber): bool
+    {
+        return $subscriber->exists
+            && $subscriber->confirmed_at === null
+            && $subscriber->unsubscribed_at === null
+            && $subscriber->updated_at?->gt(now()->subDays(self::RESEND_DAYS));
+    }
+
+    private function underDailyConfirmationCap(): bool
+    {
+        $key = 'newsletter-confirmations:'.now()->toDateString();
+        Cache::add($key, 0, now()->endOfDay());
+
+        return Cache::increment($key) <= self::DAILY_CONFIRMATION_CAP;
+    }
+
     private function back(Request $request, string $message, bool $error = false): RedirectResponse
     {
         return redirect()->to($this->previous($request))

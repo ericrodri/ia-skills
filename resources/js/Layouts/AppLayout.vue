@@ -18,7 +18,8 @@ const newsletter = useForm({ email: '', website: '', source: 'footer' })
 const newsletterSent = ref(false)
 
 function subscribe() {
-    newsletter.post(route('newsletter.subscribe'), {
+    // La ficha antibots se lee al enviar: así es la de la última visita.
+    newsletter.transform((data) => ({ ...data, _ft: page.props.formToken })).post(route('newsletter.subscribe'), {
         preserveScroll: true,
         onSuccess: () => {
             newsletterSent.value = !page.props.flash?.error

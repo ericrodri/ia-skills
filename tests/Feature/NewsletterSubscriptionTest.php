@@ -38,7 +38,7 @@ class NewsletterSubscriptionTest extends TestCase
     public function test_subscribing_creates_a_pending_subscriber_and_sends_the_confirmation(): void
     {
         $this->from(route('guides.index'))
-            ->post(route('newsletter.subscribe'), ['email' => 'Ana@Example.com ', 'source' => 'guias'])
+            ->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'Ana@Example.com ', 'source' => 'guias'])
             ->assertRedirect(route('guides.index').'#newsletter')
             ->assertSessionHas('newsletter_status');
 
@@ -54,7 +54,7 @@ class NewsletterSubscriptionTest extends TestCase
     {
         NewsletterSubscriber::create(['email' => 'ana@example.com'])->forceFill(['confirmed_at' => now()])->save();
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'ana@example.com'])
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com'])
             ->assertSessionHas('newsletter_status', fn ($m) => str_contains($m, 'Te hemos enviado un email'));
 
         Mail::assertNothingSent();
@@ -62,8 +62,8 @@ class NewsletterSubscriptionTest extends TestCase
 
     public function test_bots_filling_the_honeypot_are_rejected(): void
     {
-        $this->post(route('newsletter.subscribe'), ['email' => 'bot@example.com', 'website' => 'http://spam'])
-            ->assertSessionHasErrors('website');
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'bot@example.com', 'website' => 'http://spam'])
+            ->assertSessionHas('newsletter_status');
 
         $this->assertDatabaseCount('newsletter_subscribers', 0);
         Mail::assertNothingSent();
@@ -71,16 +71,16 @@ class NewsletterSubscriptionTest extends TestCase
 
     public function test_invalid_emails_are_rejected(): void
     {
-        $this->post(route('newsletter.subscribe'), ['email' => 'no-es-un-email'])->assertSessionHasErrors('email');
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'no-es-un-email'])->assertSessionHasErrors('email');
     }
 
     public function test_subscription_is_rate_limited(): void
     {
         foreach (range(1, 3) as $i) {
-            $this->post(route('newsletter.subscribe'), ['email' => "p{$i}@example.com"])->assertRedirect();
+            $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => "p{$i}@example.com"])->assertRedirect();
         }
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'p4@example.com'])->assertStatus(429);
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'p4@example.com'])->assertStatus(429);
     }
 
     public function test_opening_the_confirmation_link_does_not_confirm_by_itself(): void
@@ -147,7 +147,7 @@ class NewsletterSubscriptionTest extends TestCase
         $subscriber = NewsletterSubscriber::create(['email' => 'ana@example.com']);
         $subscriber->forceFill(['confirmed_at' => now(), 'unsubscribed_at' => now()])->save();
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'ana@example.com']);
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com']);
 
         $subscriber->refresh();
         $this->assertNull($subscriber->confirmed_at);

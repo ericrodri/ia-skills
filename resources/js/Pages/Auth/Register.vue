@@ -1,7 +1,9 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue'
 import InputError from '@/Components/InputError.vue'
-import { Head, Link, useForm } from '@inertiajs/vue3'
+import { Head, Link, useForm, usePage } from '@inertiajs/vue3'
+
+const page = usePage()
 
 const form = useForm({
     name: '',
@@ -9,10 +11,12 @@ const form = useForm({
     password: '',
     password_confirmation: '',
     newsletter_opt_in: false,
+    // Honeypot (App\Support\BotGuard): oculto, solo lo rellenan los bots.
+    website: '',
 })
 
 const submit = () => {
-    form.post(route('register'), {
+    form.transform((data) => ({ ...data, _ft: page.props.formToken })).post(route('register'), {
         onFinish: () => form.reset('password', 'password_confirmation'),
     })
 }
@@ -29,6 +33,7 @@ const submit = () => {
         </div>
 
         <form @submit.prevent="submit" class="space-y-4">
+            <input v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
             <!-- Name -->
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">

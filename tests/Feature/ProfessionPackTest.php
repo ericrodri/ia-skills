@@ -34,7 +34,7 @@ class ProfessionPackTest extends TestCase
     {
         Mail::fake();
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'Ana@Example.com', 'source' => 'pack:legal'])
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'Ana@Example.com', 'source' => 'pack:legal'])
             ->assertRedirect();
 
         $subscriber = NewsletterSubscriber::firstWhere('email', 'ana@example.com');
@@ -74,8 +74,8 @@ class ProfessionPackTest extends TestCase
             ->forceFill(['confirmed_at' => now()])->save();
         User::factory()->create(['email' => 'luis@example.com', 'newsletter_opt_in' => true]);
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'ana@example.com', 'source' => 'pack:legal']);
-        $this->post(route('newsletter.subscribe'), ['email' => 'luis@example.com', 'source' => 'pack:legal']);
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com', 'source' => 'pack:legal']);
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'luis@example.com', 'source' => 'pack:legal']);
 
         Mail::assertSent(ProfessionPackMail::class, 2);
         Mail::assertNotSent(NewsletterConfirmationMail::class);
@@ -104,7 +104,7 @@ class ProfessionPackTest extends TestCase
     {
         Mail::fake();
 
-        $this->post(route('newsletter.subscribe'), ['email' => 'ana@example.com', 'source' => 'pack:no-existe']);
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com', 'source' => 'pack:no-existe']);
 
         Mail::assertSent(NewsletterConfirmationMail::class, fn (NewsletterConfirmationMail $mail) => ! str_contains($mail->render(), 'pack'));
     }

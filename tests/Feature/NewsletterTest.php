@@ -125,7 +125,7 @@ class NewsletterTest extends TestCase
 
     public function test_registration_can_opt_in(): void
     {
-        $this->post(route('register'), [
+        $this->post(route('register'), $this->formGuard() + [
             'name' => 'Nueva',
             'email' => 'nueva@example.com',
             'password' => 'password-segura-123',

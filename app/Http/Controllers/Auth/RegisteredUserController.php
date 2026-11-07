@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Support\BotGuard;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -31,6 +32,15 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        // Mismo filtro que la newsletter (App\Support\BotGuard): la mayoría de
+        // los registros de noviembre de 2026 eran bots que mandaban el email
+        // de verificación a direcciones ajenas.
+        if (BotGuard::check($request) !== null) {
+            throw ValidationException::withMessages([
+                'email' => 'No hemos podido completar el registro. Recarga la página e inténtalo de nuevo.',
+            ]);
+        }
+
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|lowercase|email|max:255|unique:' . User::class,

@@ -14,7 +14,7 @@ const form = useForm({ email: '', website: '', source: `pack:${props.profession.
 const sent = ref(false)
 
 function submit() {
-    form.post(route('newsletter.subscribe'), {
+    form.transform((data) => ({ ...data, _ft: page.props.formToken })).post(route('newsletter.subscribe'), {
         preserveScroll: true,
         onSuccess: () => {
             sent.value = !page.props.flash?.error
