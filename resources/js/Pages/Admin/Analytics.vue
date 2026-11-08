@@ -163,7 +163,7 @@ const kindNames = { skill_md: 'skill.md', llms: 'llms.txt', api: 'API', guia: 'G
             <section class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
                 <h2 class="font-semibold text-gray-900 dark:text-white">Uso de las fichas</h2>
                 <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
-                    Botones pulsados en las fichas: copiar, abrir en una IA, adaptar o instalar. Registro desde el 8 de noviembre de 2026.
+                    Botones pulsados en las fichas: copiar, abrir en una IA, rellenar los datos del prompt o instalar. Registro desde el 8 de noviembre de 2026.
                     <template v-if="report.skillActions.skillVisitors">
                         {{ n(report.skillActions.total) }} usos para {{ n(report.skillActions.skillVisitors) }} visitas a fichas.
                     </template>

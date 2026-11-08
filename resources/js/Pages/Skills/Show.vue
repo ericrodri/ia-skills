@@ -1,10 +1,11 @@
 <script setup>
 import { Head, Link, router, usePage } from '@inertiajs/vue3'
-import { ref } from 'vue'
+import { ref, nextTick } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import AffiliateBox from '@/Components/AffiliateBox.vue'
 import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
+import { promptFields, fillPrompt, promptSegments } from '@/utils/promptFields'
 
 import { computed } from 'vue'
 
@@ -106,50 +107,36 @@ const resourceTypeInfo = {
 
 const showTypeInfo = ref(false)
 
-// Remix
-const showRemix = ref(false)
-const remixCopied = ref(false)
-const remixValues = ref({})
+// Huecos del prompt ([actividad], [año]…): se rellenan sobre la ficha y todos
+// los botones (copiar, abrir en una IA) usan ya el prompt rellenado. Lo que
+// escribe el visitante no sale de su navegador.
+const fields = computed(() => promptFields(props.skill.prompt_content))
+const values = ref({})
+const showFields = ref(false)
+const filledCount = computed(() => fields.value.filter(f => values.value[f.key]?.trim()).length)
+const filledPrompt = computed(() => fillPrompt(props.skill.prompt_content, values.value))
+const segments = computed(() => promptSegments(props.skill.prompt_content, values.value))
+let trackedFill = false
 
-const remixFields = computed(() => {
-    const seen = new Set()
-    const fields = []
-    const regex = /\[([^\]]{3,80})\]/g
-    let m
-    while ((m = regex.exec(props.skill.prompt_content)) !== null) {
-        const label = m[1]
-        if (!seen.has(label)) {
-            seen.add(label)
-            fields.push(label)
-            if (remixValues.value[label] === undefined) remixValues.value[label] = ''
-        }
-    }
-    return fields
-})
-
-const remixPrompt = computed(() => {
-    let result = props.skill.prompt_content
-    for (const [key, val] of Object.entries(remixValues.value)) {
-        if (val.trim()) result = result.replaceAll(`[${key}]`, val.trim())
-    }
-    return result
-})
-
-const remixFilled = computed(() => Object.values(remixValues.value).some(v => v.trim()))
-
-function openRemix() { showRemix.value = true }
-
-function copyRemix() {
-    track('adaptar')
-    navigator.clipboard.writeText(remixPrompt.value)
-    remixCopied.value = true
-    setTimeout(() => remixCopied.value = false, 2000)
+function openFields(key = null) {
+    if (!showFields.value) track('adaptar')
+    showFields.value = true
+    if (key) nextTick(() => document.getElementById(fieldId(key))?.focus())
 }
 
-function openRemixInClaude() {
-    track('adaptar')
-    const encoded = encodeURIComponent(remixPrompt.value)
-    window.open('https://claude.ai/new?q=' + encoded, '_blank', 'noopener,noreferrer')
+function fieldId(key) {
+    return 'hueco-' + fields.value.findIndex(f => f.key === key)
+}
+
+function onFieldInput() {
+    if (!trackedFill && filledCount.value > 0) {
+        trackedFill = true
+        track('rellenar')
+    }
+}
+
+function clearFields() {
+    values.value = {}
 }
 
 async function vote(value) {
@@ -168,14 +155,14 @@ async function toggleSave() {
 
 function copyPrompt() {
     track('copiar')
-    navigator.clipboard.writeText(props.skill.prompt_content)
+    navigator.clipboard.writeText(filledPrompt.value)
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
 }
 
 function openInClaude() {
     track('abrir_claude')
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
+    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
     const encoded = encodeURIComponent(fullPrompt)
     const desktopUrl = 'claude://claude.ai/new?q=' + encoded
     const webUrl = 'https://claude.ai/new?q=' + encoded
@@ -194,7 +181,7 @@ function openInClaude() {
 function openInTool(toolId) {
     track('abrir_' + toolId)
     showAIMenu.value = false
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
+    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
     const encoded = encodeURIComponent(fullPrompt)
 
     // Herramientas que aceptan ?q= para pre-cargar el prompt automáticamente
@@ -237,7 +224,7 @@ function openInTool(toolId) {
 
 function openInOpenCode() {
     track('abrir_opencode')
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
+    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
     const encoded = encodeURIComponent(fullPrompt)
 
     // Use append deep link - inserts text into current session prompt input
@@ -450,17 +437,6 @@ function submitComment() {
                                     </div>
                                 </div>
 
-                                <!-- Adaptar (remix) -->
-                                <button
-                                    v-if="remixFields.length > 0"
-                                    @click="openRemix"
-                                    class="flex items-center gap-1.5 text-xs font-medium px-2.5 py-1.5 rounded-lg bg-brand-50 dark:bg-brand-900/30 text-brand-700 dark:text-brand-400 hover:bg-brand-100 dark:hover:bg-brand-900/50 border border-brand-200 dark:border-brand-700 transition-colors"
-                                    title="Personaliza este prompt con tu contexto"
-                                >
-                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/></svg>
-                                    Adaptar
-                                </button>
-
                                 <!-- Copiar -->
                                 <button @click="copyPrompt" class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                                     <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
@@ -469,7 +445,70 @@ function submitComment() {
                                 </button>
                             </div>
                         </div>
-                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono">{{ skill.prompt_content }}</pre>
+                        <!-- Huecos del prompt: se rellenan aquí y los botones de arriba
+                             mandan ya el prompt completo (utils/promptFields.js) -->
+                        <div v-if="fields.length" class="mb-3 rounded-xl border border-amber-200 dark:border-amber-800/60 bg-amber-50/70 dark:bg-amber-900/10">
+                            <button
+                                v-if="!showFields"
+                                type="button"
+                                @click="openFields()"
+                                class="w-full flex items-center justify-between gap-3 px-4 py-2.5 text-left"
+                            >
+                                <span class="text-sm text-amber-900 dark:text-amber-200">
+                                    <strong>{{ fields.length === 1 ? '1 dato por rellenar' : `${fields.length} datos por rellenar` }}</strong>
+                                    <span class="hidden sm:inline"> · los botones enviarán el prompt ya completo</span>
+                                </span>
+                                <span class="shrink-0 text-xs font-semibold px-2.5 py-1 rounded-lg bg-amber-500 hover:bg-amber-600 text-white transition-colors">Rellenar aquí</span>
+                            </button>
+                            <div v-else class="p-4">
+                                <div class="flex items-center justify-between gap-3 mb-3">
+                                    <p class="text-sm font-semibold text-amber-900 dark:text-amber-200">
+                                        Tus datos <span class="font-normal text-amber-700 dark:text-amber-400">· {{ filledCount }} de {{ fields.length }}</span>
+                                    </p>
+                                    <div class="flex items-center gap-3 text-xs">
+                                        <button v-if="filledCount" type="button" @click="clearFields" class="text-amber-700 dark:text-amber-400 hover:underline">Borrar</button>
+                                        <button type="button" @click="showFields = false" class="text-amber-700 dark:text-amber-400 hover:underline">Ocultar</button>
+                                    </div>
+                                </div>
+                                <div class="grid gap-3 sm:grid-cols-2">
+                                    <div v-for="field in fields" :key="field.key" :class="field.long ? 'sm:col-span-2' : ''">
+                                        <label :for="fieldId(field.key)" class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">{{ field.label }}</label>
+                                        <textarea
+                                            v-if="field.long"
+                                            :id="fieldId(field.key)"
+                                            v-model="values[field.key]"
+                                            @input="onFieldInput"
+                                            rows="3"
+                                            :placeholder="field.hint"
+                                            class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900 outline-none"
+                                        />
+                                        <input
+                                            v-else
+                                            :id="fieldId(field.key)"
+                                            v-model="values[field.key]"
+                                            @input="onFieldInput"
+                                            type="text"
+                                            :placeholder="field.hint"
+                                            class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900 outline-none"
+                                        />
+                                        <div v-if="field.options.length" class="mt-1.5 flex flex-wrap gap-1.5">
+                                            <button
+                                                v-for="option in field.options"
+                                                :key="option"
+                                                type="button"
+                                                @click="values[field.key] = option; onFieldInput()"
+                                                class="text-xs px-2 py-0.5 rounded-full border transition-colors"
+                                                :class="values[field.key] === option
+                                                    ? 'border-brand-400 bg-brand-50 text-brand-700 dark:bg-brand-900/30 dark:text-brand-300'
+                                                    : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 hover:border-brand-300'"
+                                            >{{ option }}</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">Lo que escribes no sale de tu navegador. Los datos que dejes vacíos se envían entre corchetes, para que se los des a la IA.</p>
+                            </div>
+                        </div>
+                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
                     </div>
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
@@ -716,81 +755,7 @@ function submitComment() {
         </div>
     </AppLayout>
 
-    <!-- Remix modal -->
     <Teleport to="body">
-        <Transition
-            enter-active-class="transition ease-out duration-200"
-            enter-from-class="opacity-0"
-            enter-to-class="opacity-100"
-            leave-active-class="transition ease-in duration-150"
-            leave-from-class="opacity-100"
-            leave-to-class="opacity-0"
-        >
-            <div v-if="showRemix" class="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 overflow-y-auto" @click.self="showRemix = false">
-                <!-- Backdrop -->
-                <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="showRemix = false" />
-
-                <!-- Panel -->
-                <div class="relative w-full max-w-2xl my-4 bg-white dark:bg-gray-900 rounded-2xl shadow-2xl ring-1 ring-gray-200 dark:ring-gray-700 flex flex-col">
-                    <!-- Header -->
-                    <div class="flex items-center justify-between px-6 py-4 border-b border-gray-100 dark:border-gray-800">
-                        <div>
-                            <h2 class="text-base font-semibold text-gray-900 dark:text-gray-100">Adaptar a mi contexto</h2>
-                            <p class="text-xs text-gray-500 dark:text-gray-400 mt-0.5">Rellena los campos para personalizar el prompt</p>
-                        </div>
-                        <button @click="showRemix = false" class="w-8 h-8 flex items-center justify-center rounded-lg text-gray-400 hover:text-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-                        </button>
-                    </div>
-
-                    <!-- Body -->
-                    <div class="px-6 py-5 space-y-4 overflow-y-auto max-h-[60vh]">
-                        <div v-for="field in remixFields" :key="field">
-                            <label class="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1.5">{{ field }}</label>
-                            <input
-                                v-model="remixValues[field]"
-                                type="text"
-                                :placeholder="`Ej: ${field}`"
-                                class="w-full rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-3 py-2 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900 outline-none transition-colors"
-                            />
-                        </div>
-
-                        <!-- Preview -->
-                        <div v-if="remixFilled">
-                            <p class="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-2">Vista previa del prompt personalizado</p>
-                            <pre class="bg-gray-900 text-gray-100 rounded-xl p-4 text-xs leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono max-h-64">{{ remixPrompt }}</pre>
-                        </div>
-                    </div>
-
-                    <!-- Footer -->
-                    <div class="px-6 py-4 border-t border-gray-100 dark:border-gray-800 flex items-center justify-between gap-3">
-                        <p class="text-xs text-gray-400 dark:text-gray-500">{{ remixFields.length }} campos · {{ Object.values(remixValues).filter(v => v.trim()).length }} rellenados</p>
-                        <div class="flex items-center gap-2">
-                            <button
-                                @click="copyRemix"
-                                :disabled="!remixFilled"
-                                class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm border transition-colors"
-                                :class="remixFilled ? 'border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:border-brand-300 hover:bg-brand-50 dark:hover:bg-brand-900/20' : 'border-gray-100 dark:border-gray-800 text-gray-300 dark:text-gray-600 cursor-not-allowed'"
-                            >
-                                <svg v-if="!remixCopied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                                <svg v-else class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                {{ remixCopied ? 'Copiado' : 'Copiar' }}
-                            </button>
-                            <button
-                                @click="openRemixInClaude"
-                                :disabled="!remixFilled"
-                                class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-semibold transition-colors"
-                                :class="remixFilled ? 'bg-[#D97757] hover:bg-[#c46440] text-white' : 'bg-gray-100 dark:bg-gray-800 text-gray-400 cursor-not-allowed'"
-                            >
-                                <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-                                Abrir en Claude
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Transition>
-
         <!-- Diff de versiones -->
         <div v-if="diffOpen" class="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6 overflow-y-auto" @click.self="diffOpen = false">
             <div class="fixed inset-0 bg-black/50 backdrop-blur-sm" @click="diffOpen = false" />
