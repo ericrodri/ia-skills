@@ -6,6 +6,7 @@ use App\Models\Skill;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 /**
  * Enlazado interno entre las dos capas del sitio: las guías (intención
@@ -351,6 +352,186 @@ class RelatedContent
             'title' => $s->title,
             'description' => $s->description,
         ])->all();
+    }
+
+    /**
+     * Palabras que aparecen en cientos de títulos y no dicen de qué trata la
+     * ficha. Se ignoran al buscar fichas parecidas.
+     */
+    private const WEAK_WORDS = [
+        'prompt', 'prompts', 'chatgpt', 'gemini', 'claude', 'copilot', 'pedirle', 'pedir', 'hacer', 'crear',
+        'usar', 'mejor', 'mas', 'paso', 'guia', 'plantilla', 'skill', 'skills', 'nano', 'banana',
+        'preparar', 'revisar', 'generar', 'generador', 'completo', 'cualquier', 'forma', 'darle', 'dar',
+        'antes', 'cada', 'todo', 'tipo', 'manera', 'cual', 'cuando', 'donde', 'gratis', 'online',
+        'entender', 'cambiar', 'cambie', 'conseguir', 'funcionan', 'sirve', 'saber', 'aprender',
+    ];
+
+    /** Variantes que cuentan como la misma palabra al comparar títulos. */
+    private const SYNONYMS = [
+        'quitar' => 'borrar', 'eliminar' => 'borrar',
+        'imagen' => 'foto', 'fotografia' => 'foto',
+    ];
+
+    /**
+     * Fichas de la misma profesión que tratan de lo mismo, para el bloque
+     * «siguiente paso» que va justo debajo del prompt. A diferencia de
+     * neighbours() (pensado para repartir el rastreo), aquí importa que la
+     * persona encuentre la siguiente tarea: quien quita a alguien de una foto
+     * suele querer también mejorarla o restaurarla.
+     *
+     * Se puntúa por palabras del título compartidas. Solo escalares en la
+     * caché (CLAUDE.md).
+     *
+     * @param  array<int, string>  $exclude  slugs que ya se muestran en otro sitio
+     * @return array<int, array{slug: string, title: string}>
+     */
+    public static function similar(Skill $skill, int $limit = 3, array $exclude = []): array
+    {
+        $words = self::keywords($skill->title);
+
+        if ($words === []) {
+            return [];
+        }
+
+        $candidates = Cache::remember("related.similar.{$skill->id}", now()->addHours(self::CACHE_HOURS), function () use ($skill, $words) {
+            $rows = Skill::published()
+                ->where('profession_id', $skill->profession_id)
+                ->whereKeyNot($skill->getKey())
+                ->where(function ($q) use ($skill) {
+                    // En SQL con las palabras tal cual (sin sinónimos): «foto»
+                    // encuentra también «fotos».
+                    $raw = self::stems(array_diff(SkillMerger::tokens($skill->title), self::WEAK_WORDS));
+                    foreach (array_slice($raw, 0, 6) as $word) {
+                        self::whereTitleContains($q, $word);
+                    }
+                })
+                ->orderByDesc('vote_score')
+                ->limit(60)
+                ->get(['slug', 'title']);
+
+            return $rows
+                ->map(fn (Skill $s) => [
+                    'slug' => $s->slug,
+                    'title' => $s->title,
+                    'score' => count(array_intersect($words, self::keywords($s->title))),
+                ])
+                ->filter(fn (array $s) => $s['score'] > 0)
+                ->sortByDesc('score')
+                ->take(8)
+                ->values()
+                ->all();
+        });
+
+        return collect($candidates)
+            ->reject(fn (array $s) => in_array($s['slug'], $exclude, true))
+            ->take($limit)
+            ->map(fn (array $s) => ['slug' => $s['slug'], 'title' => $s['title']])
+            ->values()
+            ->all();
+    }
+
+    /**
+     * La guía que mejor encaja con una ficha. Los términos de GUIDES son
+     * demasiado amplios para esto («foto» casa con diez guías), así que se
+     * comparan las palabras del título de la ficha con las del slug y el
+     * título de cada guía. Cada palabra pesa menos cuantas más guías la
+     * usan: «foto» apenas distingue y «personas» decide. Una guía de otra
+     * profesión necesita dos palabras en común, para que una auditoría de
+     * seguridad no acabe en la auditoría SEO. Si ninguna encaja, la primera
+     * guía de la profesión.
+     *
+     * @param  array<int, array{slug: string, title: string, excerpt: string, url: string}>  $fallback
+     * @return array{slug: string, title: string, excerpt: string, url: string}|null
+     */
+    public static function guideForSkill(Skill $skill, array $fallback = []): ?array
+    {
+        $words = self::keywords($skill->title);
+        $profession = $skill->profession?->slug;
+
+        // El slug es corto y editorial; el título añade contexto pero también
+        // ruido («con tu cara» en la de Navidad), así que pesa un cuarto. La
+        // rareza de cada palabra se mide en los slugs.
+        $guides = collect(Guides::all())->map(fn (array $g) => $g + [
+            'slugStems' => self::keywords(str_replace('-', ' ', $g['slug'])),
+            'stems' => self::keywords(str_replace('-', ' ', $g['slug']).' '.$g['title']),
+        ]);
+
+        $frequency = array_count_values($guides->pluck('slugStems')->flatten()->all());
+
+        $best = null;
+        $bestScore = 0.0;
+
+        foreach ($guides as $guide) {
+            $shared = array_intersect($words, $guide['stems']);
+            $ownProfession = in_array($profession, self::GUIDES[$guide['slug']][0] ?? [], true);
+
+            if ($shared === [] || (! $ownProfession && count($shared) < 2)) {
+                continue;
+            }
+
+            $score = array_sum(array_map(fn (string $w) => (in_array($w, $guide['slugStems'], true) ? 1 : 0.25) / ($frequency[$w] ?? 1), $shared))
+                + ($ownProfession ? 0.05 : 0)
+                + count($shared) / count($guide['stems']) / 100;
+
+            if ($score > $bestScore) {
+                [$best, $bestScore] = [$guide, $score];
+            }
+        }
+
+        if ($best === null) {
+            return $fallback[0] ?? null;
+        }
+
+        return [
+            'slug' => $best['slug'],
+            'title' => $best['title'],
+            'excerpt' => $best['excerpt'],
+            'url' => route('guides.show', ['slug' => $best['slug']]),
+        ];
+    }
+
+    /**
+     * Palabras que dicen de qué trata un título: sin vacías ni genéricas, en
+     * singular y con los sinónimos unificados.
+     *
+     * @return array<int, string>
+     */
+    private static function keywords(string $text): array
+    {
+        $words = self::stems(array_diff(SkillMerger::tokens($text), self::WEAK_WORDS));
+
+        return array_values(array_unique(array_map(fn (string $w) => self::SYNONYMS[$w] ?? $w, $words)));
+    }
+
+    /**
+     * Plural a singular a lo bruto («fotos» → «foto»), suficiente para
+     * comparar títulos.
+     *
+     * @param  array<int, string>  $words
+     * @return array<int, string>
+     */
+    private static function stems(array $words): array
+    {
+        return array_values(array_unique(array_map(
+            fn (string $w) => strlen($w) > 4 ? preg_replace('/(es|s)$/', '', $w) : $w,
+            $words,
+        )));
+    }
+
+    /**
+     * Como whereContains(), pero solo en el título y unido con OR.
+     *
+     * @param  Builder<Skill>  $query
+     */
+    private static function whereTitleContains($query, string $term): void
+    {
+        if (DB::connection()->getDriverName() === 'pgsql') {
+            $query->orWhereRaw('unaccent(title) ILIKE unaccent(?)', ['%'.$term.'%']);
+
+            return;
+        }
+
+        $query->orWhere('title', 'like', '%'.$term.'%');
     }
 
     /**

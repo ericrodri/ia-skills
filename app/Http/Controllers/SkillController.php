@@ -193,6 +193,12 @@ class SkillController extends Controller
 
         $guides = RelatedContent::guidesForProfession($skill->profession?->slug, 2);
         $neighbours = RelatedContent::neighbours($skill);
+        // «Siguiente paso» bajo el prompt: fichas de la misma tarea y la guía
+        // que mejor encaja. Sin repetir las vecinas del final de la página.
+        $nextStep = [
+            'skills' => RelatedContent::similar($skill, 3, array_column($neighbours, 'slug')),
+            'guide' => RelatedContent::guideForSkill($skill, $guides),
+        ];
 
         $this->shareShowSeo($skill, $guides, $neighbours);
 
@@ -211,6 +217,7 @@ class SkillController extends Controller
             ],
             'guides'     => $guides,
             'neighbours' => $neighbours,
+            'nextStep'   => $nextStep,
             // Recuadro de herramientas con enlace de afiliado que menciona la ficha.
             'affiliateTools' => Affiliates::forText(
                 implode(' ', [$skill->title, $skill->tool_name, $skill->description, $skill->prompt_content]),

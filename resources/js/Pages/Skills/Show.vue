@@ -20,16 +20,27 @@ const props = defineProps({
     // se enlazan con <a>, nunca con <Link>.
     guides: { type: Array, default: () => [] },
     neighbours: { type: Array, default: () => [] },
+    // «Siguiente paso» bajo el prompt: { skills: [{slug, title}], guide: {url, title, excerpt} | null }
+    nextStep: { type: Object, default: () => ({ skills: [], guide: null }) },
     // Herramientas con enlace de afiliado que menciona la ficha (App\Support\Affiliates)
     affiliateTools: { type: Array, default: () => [] },
     affiliateDisclosure: { type: String, default: '' },
 })
 
+// Qué botones se usan en la ficha (App\Support\SkillActions). Sin cookies ni
+// datos de nadie; los navegadores automatizados que se declaran no avisan.
+function track(action) {
+    if (!navigator.sendBeacon || navigator.webdriver) return
+    navigator.sendBeacon('/hola/accion', new URLSearchParams({ s: props.skill.slug, a: action }))
+}
+
 // Instalar como Skill de Claude Code
 const installCopied = ref('')
+const installActions = { prompt: 'claude_code', mcp: 'mcp', command: 'terminal' }
 
 // kind: 'prompt' (instrucción para Claude Code) o 'command' (terminal)
 function copyInstall(kind) {
+    track(installActions[kind])
     navigator.clipboard.writeText(props.install[kind])
     installCopied.value = kind
     setTimeout(() => installCopied.value = '', 2000)
@@ -129,12 +140,14 @@ const remixFilled = computed(() => Object.values(remixValues.value).some(v => v.
 function openRemix() { showRemix.value = true }
 
 function copyRemix() {
+    track('adaptar')
     navigator.clipboard.writeText(remixPrompt.value)
     remixCopied.value = true
     setTimeout(() => remixCopied.value = false, 2000)
 }
 
 function openRemixInClaude() {
+    track('adaptar')
     const encoded = encodeURIComponent(remixPrompt.value)
     window.open('https://claude.ai/new?q=' + encoded, '_blank', 'noopener,noreferrer')
 }
@@ -154,12 +167,14 @@ async function toggleSave() {
 }
 
 function copyPrompt() {
+    track('copiar')
     navigator.clipboard.writeText(props.skill.prompt_content)
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
 }
 
 function openInClaude() {
+    track('abrir_claude')
     const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
     const encoded = encodeURIComponent(fullPrompt)
     const desktopUrl = 'claude://claude.ai/new?q=' + encoded
@@ -177,6 +192,7 @@ function openInClaude() {
 }
 
 function openInTool(toolId) {
+    track('abrir_' + toolId)
     showAIMenu.value = false
     const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
     const encoded = encodeURIComponent(fullPrompt)
@@ -220,6 +236,7 @@ function openInTool(toolId) {
 }
 
 function openInOpenCode() {
+    track('abrir_opencode')
     const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${props.skill.prompt_content}`
     const encoded = encodeURIComponent(fullPrompt)
 
@@ -457,6 +474,27 @@ function submitComment() {
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 
+                    <!-- Siguiente paso: la mayoría llega desde Google a una ficha y se va
+                         tras usarla. Aquí, sin bajar, las fichas de la misma tarea y la guía. -->
+                    <section v-if="nextStep.skills.length || nextStep.guide" class="mt-6 rounded-xl border border-gray-100 dark:border-gray-800 p-4">
+                        <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Siguiente paso</h2>
+                        <ul v-if="nextStep.skills.length" class="mt-3 space-y-2">
+                            <li v-for="s in nextStep.skills" :key="s.slug" class="flex gap-2 text-sm">
+                                <span class="text-brand-500 shrink-0" aria-hidden="true">→</span>
+                                <Link :href="route('skills.show', s.slug)" class="text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">{{ s.title }}</Link>
+                            </li>
+                        </ul>
+                        <!-- Guías = Blade: <a>, no <Link> -->
+                        <a
+                            v-if="nextStep.guide"
+                            :href="nextStep.guide.url"
+                            class="mt-3 block rounded-lg bg-gray-50 dark:bg-gray-900 px-3 py-2.5 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors"
+                        >
+                            <span class="block text-xs text-gray-400 dark:text-gray-500">Guía</span>
+                            <span class="block text-sm font-medium text-gray-800 dark:text-gray-200">{{ nextStep.guide.title }}</span>
+                        </a>
+                    </section>
+
                     <!-- Usar como Skill de Claude Code: SKILL.md generado desde la ficha -->
                     <div v-if="install && skill.resource_type === 'prompt'" class="mt-6 p-4 rounded-xl border border-violet-200 dark:border-violet-800 bg-violet-50/60 dark:bg-violet-900/10">
                         <div class="flex flex-wrap items-start justify-between gap-3">
@@ -474,6 +512,7 @@ function submitComment() {
                                 >{{ installCopied === 'prompt' ? 'Copiado: pégalo en Claude Code' : 'Pídeselo a Claude Code' }}</button>
                                 <a
                                     :href="install.url + '?download=1'"
+                                    @click="track('skill_md')"
                                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors"
                                 >
                                     <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>

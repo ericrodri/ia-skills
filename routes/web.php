@@ -151,4 +151,9 @@ Route::post('/hola', [AnalyticsController::class, 'collect'])
     ->middleware('throttle:120,1')
     ->name('analytics.collect');
 
+// Botones pulsados en una ficha: copiar, abrir en una IA, instalar (App\Support\SkillActions).
+Route::post('/hola/accion', [AnalyticsController::class, 'action'])
+    ->middleware('throttle:60,1')
+    ->name('analytics.action');
+
 require __DIR__ . '/auth.php';

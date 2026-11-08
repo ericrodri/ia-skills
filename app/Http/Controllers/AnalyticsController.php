@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Support\Analytics;
+use App\Support\SkillActions;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Inertia\Inertia;
@@ -23,6 +24,17 @@ class AnalyticsController extends Controller
     public function collect(Request $request): Response
     {
         Analytics::record($request);
+
+        return response()->noContent();
+    }
+
+    /**
+     * Aviso de un botón pulsado en una ficha (App\Support\SkillActions).
+     * Igual que collect(): siempre 204.
+     */
+    public function action(Request $request): Response
+    {
+        SkillActions::record($request);
 
         return response()->noContent();
     }

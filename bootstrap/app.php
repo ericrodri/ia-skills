@@ -35,6 +35,8 @@ return Application::configure(basePath: dirname(__DIR__))
             // Aviso de página vista con sendBeacon, que no puede mandar el
             // token. Solo inserta una fila anónima (App\Support\Analytics).
             'hola',
+            // Lo mismo para los botones de una ficha (App\Support\SkillActions).
+            'hola/accion',
         ]);
 
         $middleware->alias([
