@@ -120,6 +120,7 @@ class Guides
         'invertir-en-bolsa-con-ia',
         'contabilidad-con-ia',
         'borrar-personas-de-una-foto-con-ia',
+        'pasar-una-foto-a-texto-con-ia',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',

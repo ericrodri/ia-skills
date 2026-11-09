@@ -1,16 +1,16 @@
 <?php
 
 return [
-    'title' => 'Prompts para editar fotos con ChatGPT y Gemini: más de 40 listos para copiar',
+    'title' => 'Prompts para editar fotos con ChatGPT y Gemini (Nano Banana): más de 40 listos para copiar',
     'navTitle' => 'Prompts para editar fotos',
     'seoTitle' => 'Prompts para editar fotos con ChatGPT y Gemini',
-    'description' => 'Más de 40 prompts para editar fotos con ChatGPT y Gemini: mejorar la calidad, quitar personas, unir fotos o cambiar el fondo sin que cambie la cara.',
+    'description' => 'Más de 40 prompts para editar fotos con ChatGPT y Gemini (Nano Banana): mejorar la calidad, quitar personas o cambiar el fondo sin que cambie la cara.',
     'excerpt' => 'Pedirle a ChatGPT o a Gemini que edite una foto funciona sorprendentemente bien… hasta que te cambia la cara. La diferencia está en cómo se pide. Aquí tienes la regla que lo evita, una plantilla base y más de cuarenta prompts listos para copiar, ordenados por lo que quieres hacer.',
     'category' => 'Práctica',
     'published' => '2026-11-02',
-    'updated' => '2026-11-02',
-    'readingMinutes' => 7,
-    'words' => 1145,
+    'updated' => '2026-11-09',
+    'readingMinutes' => 8,
+    'words' => 1321,
     'about' => 'Instrucciones (prompts) para editar fotografías con ChatGPT y Gemini',
     'related' => ['editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
@@ -29,6 +29,7 @@ return [
         '¿Cómo hago para que la IA no me cambie la cara?' => 'Di primero lo que debe quedar igual y después el único cambio que quieres: «Mantén exactamente la cara, la expresión y el tono de piel; cambia solo el fondo». Pide los cambios de uno en uno y, si la cara empieza a cambiar tras varias ediciones, vuelve a empezar con la foto original en un chat nuevo.',
         '¿Se pueden editar fotos con IA gratis?' => 'Sí. ChatGPT y Gemini permiten editar fotos en su plan gratuito, con un número limitado de imágenes al día. Para un uso ocasional es suficiente; si editas muchas fotos seguidas, notarás el límite.',
         '¿Puedo editar fotos de otras personas con IA?' => 'Solo con su permiso, y nunca para hacerles decir o hacer algo que no han hecho. Si una imagen editada de una persona real parece una foto auténtica y la vas a publicar, indica que está modificada con IA.',
+        '¿Sirven estos prompts para Nano Banana?' => 'Sí. Nano Banana es el nombre del modelo de imagen de Gemini: es el que edita la foto cuando le pides un cambio en la aplicación o en la web. Todos los prompts de esta página funcionan con él tal cual. En Gemini conviene escribir «edita esta imagen» en lugar de «crea una imagen», para que parta de tu foto y no la invente de nuevo.',
         '¿Por qué la foto pierde calidad después de varias ediciones?' => 'Cada edición genera la imagen de nuevo y se acumulan pequeños cambios. Para varios cambios, pídelos todos de una vez en una instrucción clara o parte siempre de la foto original. Guarda la original aparte por si tienes que empezar de nuevo.',
     ],
     'ctaTitle' => 'Más prompts de imagen',
@@ -109,7 +110,8 @@ return [
     <li><a href="/skills/prompt-para-convertir-tu-foto-en-un-retrato-de-los-anos-80-con-ia">Retrato de los años 80</a>, con peinado, ropa y fondo de época.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-ilustracion-de-animacion-japonesa-clasica-dibujada-a-mano">Ilustración de animación japonesa clásica</a>.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-dibujo-a-lapiz-o-acuarela-con-ia">Dibujo a lápiz o acuarela</a>.</li>
-    <li><a href="/skills/prompt-para-hacer-un-retrato-de-tu-mascota-como-un-cuadro-clasico">Retrato de tu mascota como un cuadro clásico</a>.</li>
+    <li><a href="/skills/prompt-para-hacer-un-retrato-de-tu-mascota-como-un-cuadro-clasico">Retrato de tu mascota como un cuadro clásico</a>, o una <a href="/skills/prompt-para-hacer-una-foto-de-tu-perro-o-tu-gato-con-ia-sesion-de-estudio-disfraz-o-escena">foto de tu perro o tu gato</a> de estudio, disfrazado o en una escena.</li>
+    <li><a href="/skills/prompt-para-hacer-un-retrato-profesional-en-blanco-y-negro-con-ia-a-partir-de-tu-foto">Retrato profesional en blanco y negro</a>, con luz y fondo de estudio.</li>
     <li><a href="/skills/prompt-para-crear-stickers-personalizados-para-whatsapp-a-partir-de-tus-fotos">Stickers para WhatsApp con tus fotos</a>.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-o-tarjeta-de-cumpleanos-personalizada-con-ia">Foto o tarjeta de cumpleaños personalizada</a>.</li>
     <li><a href="/skills/prompt-para-convertir-un-boceto-o-un-dibujo-en-una-imagen-realista-con-ia">Convertir un boceto o un dibujo en imagen realista</a>.</li>
@@ -121,6 +123,8 @@ return [
 <h2 id="negocio">Para tu negocio</h2>
 
 <ul>
+    <li><a href="/skills/prompt-para-convertir-una-foto-en-un-logo-con-chatgpt-o-gemini-tu-negocio-tu-mascota-o-tu-cara">Convertir una foto en un logo</a>: tu local, tu producto o tu mascota.</li>
+    <li><a href="/skills/prompt-para-cambiar-o-traducir-el-texto-de-una-imagen-con-ia-sin-perder-la-tipografia">Cambiar o traducir el texto de una imagen</a> sin perder la tipografía. Si lo que quieres es copiar ese texto, mira <a href="/guias/pasar-una-foto-a-texto-con-ia">pasar una foto a texto</a>.</li>
     <li><a href="/skills/prompt-para-hacer-fotos-de-producto-con-ia-para-tu-tienda-online-o-vinted">Fotos de producto</a> para tu tienda online o Vinted.</li>
     <li><a href="/skills/prompt-para-mejorar-la-foto-de-un-plato-para-la-carta-google-maps-o-glovo">Mejorar la foto de un plato</a> para la carta, Google Maps o Glovo.</li>
     <li><a href="/skills/prompt-para-amueblar-con-ia-la-foto-de-un-piso-vacio-para-el-anuncio-de-venta-o-alquiler">Amueblar la foto de un piso vacío</a> para el anuncio.</li>

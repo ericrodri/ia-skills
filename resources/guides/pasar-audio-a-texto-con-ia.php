@@ -9,10 +9,10 @@ return [
     'category' => 'Práctica',
     'published' => '2026-10-05',
     'updated' => '2026-10-05',
-    'readingMinutes' => 6,
-    'words' => 1043,
+    'readingMinutes' => 7,
+    'words' => 1077,
     'about' => 'Transcripción automática de audio y vídeo a texto con inteligencia artificial',
-    'related' => ['convertir-texto-a-voz-con-ia', 'resumir-videos-de-youtube-con-ia', 'ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
+    'related' => ['pasar-una-foto-a-texto-con-ia', 'convertir-texto-a-voz-con-ia', 'resumir-videos-de-youtube-con-ia', 'ia-para-reuniones-y-actas', 'resumir-documentos-largos-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'crear-videos-con-ia', 'estudiar-con-ia', 'ia-local-privada-en-tu-ordenador'],
     'toc' => [
         'como-funciona' => 'Qué hace la IA al transcribir',
         'segun-el-audio' => 'Qué herramienta usar según el audio',
@@ -95,5 +95,7 @@ return [
     <li><strong>Usa la cuenta de empresa</strong>, no la personal, si el audio es de trabajo; las condiciones sobre el uso de tus datos cambian mucho entre ambas. Lo detallamos en <a href="/guias/usar-ia-sin-filtrar-datos-de-clientes">usar IA sin filtrar datos de clientes</a>.</li>
     <li><strong>Transcribe en local</strong> lo más sensible. Whisper funciona en un ordenador normal con programas gratuitos; cómo montarlo está en <a href="/guias/ia-local-privada-en-tu-ordenador">IA local y privada en tu ordenador</a>.</li>
 </ul>
+
+<p>Si el texto que necesitas está en una imagen y no en una grabación, como una página, un ticket o unos apuntes a mano, el proceso equivalente está en <a href="/guias/pasar-una-foto-a-texto-con-ia">pasar una foto a texto</a>.</p>
 HTML,
 ];

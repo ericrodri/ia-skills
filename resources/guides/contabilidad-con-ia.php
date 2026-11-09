@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1199,
     'about' => 'Inteligencia artificial aplicada a la contabilidad y la gestión de facturas en España',
-    'related' => ['ia-para-autonomos-y-pymes', 'ia-en-excel-y-google-sheets', 'declaracion-de-la-renta-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'hacer-un-informe-con-ia', 'automatizar-sin-programar-n8n-make-zapier'],
+    'related' => ['pasar-una-foto-a-texto-con-ia', 'ia-para-autonomos-y-pymes', 'ia-en-excel-y-google-sheets', 'declaracion-de-la-renta-con-ia', 'usar-ia-sin-filtrar-datos-de-clientes', 'hacer-un-informe-con-ia', 'automatizar-sin-programar-n8n-make-zapier'],
     'toc' => [
         'que-hace' => 'Qué parte de la contabilidad hace bien',
         'herramientas' => 'Qué herramienta usar',
