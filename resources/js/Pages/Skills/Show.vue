@@ -34,6 +34,17 @@ function track(action) {
     navigator.sendBeacon('/hola/accion', new URLSearchParams({ s: props.skill.slug, a: action }))
 }
 
+// Mucha gente no pulsa «Copiar»: selecciona el prompt y hace Ctrl+C. Se
+// cuenta una vez por visita y solo si se copia un trozo con sustancia.
+let manualCopyTracked = false
+function onManualCopy() {
+    if (manualCopyTracked) return
+    const selected = String(window.getSelection?.() ?? '').trim()
+    if (selected.length < 40) return
+    manualCopyTracked = true
+    track('copiar_mano')
+}
+
 // Instalar como Skill de Claude Code
 const installCopied = ref('')
 const installActions = { prompt: 'claude_code', mcp: 'mcp', command: 'terminal' }
@@ -469,7 +480,7 @@ function submitComment() {
                                 </button>
                             </div>
                         </div>
-                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono">{{ skill.prompt_content }}</pre>
+                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy">{{ skill.prompt_content }}</pre>
                     </div>
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />

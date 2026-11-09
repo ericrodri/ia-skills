@@ -19,6 +19,7 @@ class SkillActions
     /** Acción => nombre en el panel. */
     public const ACTIONS = [
         'copiar' => 'Copiar el prompt',
+        'copiar_mano' => 'Copiar el prompt a mano (seleccionar y Ctrl+C)',
         'abrir_claude' => 'Abrir en Claude',
         'abrir_chatgpt' => 'Abrir en ChatGPT',
         'abrir_gemini' => 'Abrir en Gemini',
