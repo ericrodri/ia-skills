@@ -50,12 +50,39 @@ class BotGuardTest extends TestCase
 
     public function test_los_user_agents_imposibles_se_ignoran(): void
     {
+        // Muchos envíos seguidos desde la misma IP: sin esto salta el límite por minuto.
+        $this->withoutMiddleware(ThrottleRequests::class);
+
         foreach ([
             '"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 Chrome/142.0.0.0 Safari/537.36"',
             'Mozilla/5.0 (compatible; MSIE 9.0; AOL 9.7; AOLBuild 4343.19; Windows NT 6.1; Trident/5.0)',
             'Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.8.1b2) Gecko/20060821 BonEcho/2.0b2',
+            // Los que siguieron entrando tras la primera versión del filtro (nov. de 2026).
+            'Mozilla/5.0 (Macintosh; U; PPC Mac OS X Mach-O; en-US; rv:1.8.0.7) Gecko/20060911 Camino/1.0.3',
+            'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en; rv:1.8.1.4) Gecko/20070509 Camino/1.5',
+            'AmigaVoyager/2.95 (compatible; MC680x0; AmigaOS; SV1)',
+            'Mozilla/5.0 (Macintosh; U; PPC Mac OS X; en) AppleWebKit/418.9 (KHTML, like Safari) Cheshire/1.0.ALPHA',
+            'Mozilla/5.0 (Macintosh; U; Intel Mac OS X; en) AppleWebKit/418.9 (KHTML, like Gecko, Safari/419.3)',
         ] as $agent) {
             $this->assertSilentlyIgnored($this->formGuard() + ['email' => 'victima@example.com'], ['User-Agent' => $agent]);
+        }
+    }
+
+    public function test_los_navegadores_actuales_pasan_el_filtro_de_user_agent(): void
+    {
+        $this->withoutMiddleware(ThrottleRequests::class);
+
+        foreach ([
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:146.0) Gecko/20100101 Firefox/146.0',
+            'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:146.0) Gecko/20100101 Firefox/146.0',
+            'Mozilla/5.0 (iPhone; CPU iPhone OS 18_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.6 Mobile/15E148 Safari/604.1',
+            'Mozilla/5.0 (Linux; Android 15; SM-S921B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/155.0.0.0 Mobile Safari/537.36',
+            'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0',
+        ] as $i => $agent) {
+            $this->withHeaders(['User-Agent' => $agent])
+                ->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => "persona{$i}@example.com"]);
+
+            $this->assertDatabaseHas('newsletter_subscribers', ['email' => "persona{$i}@example.com"]);
         }
     }
 

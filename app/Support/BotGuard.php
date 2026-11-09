@@ -34,7 +34,15 @@ class BotGuard
 
     public const EXPIRED = 'expired';
 
-    private const IMPOSSIBLE_AGENTS = '/MSIE|Trident\/|BonEcho|Arora|FunWebProducts|AOLBuild|Firefox\/[0-9]\./i';
+    /**
+     * Navegadores retirados hace más de diez años. El bot va rotando una lista
+     * de agentes antiguos; tras la primera versión del filtro siguió entrando
+     * con Camino, AmigaVoyager, Cheshire y Safari de Mac PowerPC. Ojo con
+     * Gecko: Firefox actual manda siempre «Gecko/20100101», por eso solo se
+     * descartan las fechas 2000-2009.
+     */
+    private const IMPOSSIBLE_AGENTS = '/MSIE|Trident\/|BonEcho|Arora|FunWebProducts|AOLBuild|Firefox\/[0-9]\.'
+        .'|Camino\/|AmigaVoyager|Cheshire\/|PPC Mac OS X|Windows 98|Gecko\/200\d{5}|AppleWebKit\/[1-4]\d\d\b/i';
 
     public static function token(?int $issuedAt = null): string
     {
