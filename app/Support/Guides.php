@@ -121,6 +121,7 @@ class Guides
         'contabilidad-con-ia',
         'borrar-personas-de-una-foto-con-ia',
         'pasar-una-foto-a-texto-con-ia',
+        'convertir-una-imagen-a-vector',
         'agentes-de-escritorio-cowork-chatgpt-work',
         'microsoft-365-copilot-en-el-trabajo',
         'ia-para-programar',
