@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 7,
     'words' => 1114,
     'about' => 'Diseño de logotipos e identidad de marca con herramientas de inteligencia artificial',
-    'related' => ['nombre-para-tu-negocio-con-ia', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'editar-fotos-con-ia'],
+    'related' => ['convertir-una-imagen-a-vector', 'nombre-para-tu-negocio-con-ia', 'prompts-para-diseno-grafico', 'imagenes-con-ia-derechos-y-uso-comercial', 'crear-imagenes-con-ia', 'crear-una-pagina-web-con-ia', 'ia-para-autonomos-y-pymes', 'editar-fotos-con-ia'],
     'toc' => [
         'que-da' => 'Qué te da la IA y qué no',
         'antes' => 'Antes de abrir la herramienta',
@@ -78,7 +78,7 @@ return [
 <h2 id="terminar">De la imagen al logo terminado</h2>
 
 <ol>
-    <li><strong>Vectoriza</strong> la propuesta elegida con Inkscape (gratis), Illustrator o un vectorizador web, y repasa las curvas.</li>
+    <li><strong>Vectoriza</strong> la propuesta elegida con Inkscape (gratis), Illustrator o un vectorizador web, y repasa las curvas. El paso a paso está en <a href="/guias/convertir-una-imagen-a-vector">convertir una imagen a vector</a>.</li>
     <li><strong>Sustituye la tipografía</strong> que haya inventado la IA por una fuente real con licencia comercial, por ejemplo de Google Fonts. Así podrás usarla también en la web y los documentos.</li>
     <li><strong>Prepara las versiones</strong>: horizontal, solo símbolo, en un color, en negativo para fondos oscuros, y un icono cuadrado para redes y favicon.</li>
     <li><strong>Prueba en contexto</strong>: en una tarjeta, en la cabecera de la web, en una foto de perfil. Si vas a montar la web ahora, la guía de <a href="/guias/crear-una-pagina-web-con-ia">crear una página web con IA</a> sigue desde aquí.</li>

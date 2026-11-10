@@ -19,6 +19,7 @@ class SkillActions
     /** Acción => nombre en el panel. */
     public const ACTIONS = [
         'copiar' => 'Copiar el prompt',
+        'copiar_mano' => 'Copiar el prompt a mano (seleccionar y Ctrl+C)',
         'abrir_claude' => 'Abrir en Claude',
         'abrir_chatgpt' => 'Abrir en ChatGPT',
         'abrir_gemini' => 'Abrir en Gemini',
@@ -31,6 +32,10 @@ class SkillActions
         'skill_md' => 'Descargar SKILL.md',
         'mcp' => 'Copiar el comando MCP',
         'terminal' => 'Copiar el comando de terminal',
+        // Oferta del pack tras copiar (SkillPackOffer.vue). Las altas se
+        // cuentan aparte, por el `source` "pack:{profesión}:ficha".
+        'pack_visto' => 'Ver la oferta del pack tras copiar',
+        'pack_cerrar' => 'Cerrar la oferta del pack',
     ];
 
     public static function record(Request $request): bool

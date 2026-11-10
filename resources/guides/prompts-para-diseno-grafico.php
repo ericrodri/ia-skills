@@ -12,7 +12,7 @@ return [
     'readingMinutes' => 11,
     'words' => 1838,
     'about' => 'Prompts para diseño gráfico',
-    'related' => ['hacer-un-cartel-con-ia', 'crear-un-logo-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
+    'related' => ['crear-un-logo-con-ia', 'convertir-una-imagen-a-vector', 'hacer-un-cartel-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'como-escribir-prompts-efectivos', 'imagenes-con-ia-derechos-y-uso-comercial', 'prompts-de-ia-por-profesion'],
     'toc' => [
         'que-hace-bien' => 'Qué hace bien la IA en diseño gráfico',
         'estructura' => 'La estructura de un buen prompt de diseño',

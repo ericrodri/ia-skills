@@ -46,6 +46,38 @@ class ProfessionPackTest extends TestCase
         Mail::assertNotSent(ProfessionPackMail::class);
     }
 
+    public function test_a_pack_requested_from_a_ficha_keeps_its_origin(): void
+    {
+        Mail::fake();
+
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com', 'source' => 'pack:legal:ficha'])
+            ->assertRedirect();
+
+        $subscriber = NewsletterSubscriber::firstWhere('email', 'ana@example.com');
+        $this->assertSame('pack:legal:ficha', $subscriber->source);
+        $this->assertSame('legal', ProfessionPack::professionFromSource($subscriber->source)?->slug);
+
+        Mail::assertSent(NewsletterConfirmationMail::class, fn (NewsletterConfirmationMail $mail) => str_contains($mail->render(), 'Confirmar y descargar el pack'));
+    }
+
+    public function test_an_unknown_origin_is_dropped(): void
+    {
+        Mail::fake();
+
+        $this->post(route('newsletter.subscribe'), $this->formGuard() + ['email' => 'ana@example.com', 'source' => 'pack:legal:lo-que-sea']);
+
+        $this->assertSame('pack:legal', NewsletterSubscriber::firstWhere('email', 'ana@example.com')->source);
+    }
+
+    public function test_confirming_a_pack_from_a_ficha_shows_the_pack_link(): void
+    {
+        $subscriber = NewsletterSubscriber::create(['email' => 'ana@example.com', 'source' => 'pack:legal:ficha']);
+
+        $this->post(URL::temporarySignedRoute('newsletter.confirm.store', now()->addDay(), ['subscriber' => $subscriber->id]))
+            ->assertOk()
+            ->assertSee('Abrir el pack de Legal');
+    }
+
     public function test_confirming_shows_the_pack_link(): void
     {
         $subscriber = NewsletterSubscriber::create(['email' => 'ana@example.com', 'source' => 'pack:legal']);

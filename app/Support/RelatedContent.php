@@ -188,6 +188,8 @@ class RelatedContent
         'invertir-en-bolsa-con-ia' => [['finanzas'], 'invert'],
         'contabilidad-con-ia' => [['finanzas', 'freelancers'], 'factura'],
         'borrar-personas-de-una-foto-con-ia' => [['diseno', 'marketing'], 'foto'],
+        'pasar-una-foto-a-texto-con-ia' => [['freelancers', 'finanzas', 'diseno'], 'el texto de una'],
+        'convertir-una-imagen-a-vector' => [['diseno', 'freelancers', 'marketing'], 'un logo'],
         'cv-y-carta-de-presentacion-con-ia' => [['rrhh'], 'candidat'],
         'entrevista-de-trabajo-con-ia' => [['rrhh'], 'entrevista'],
         'ia-para-profesores' => [['rrhh', 'freelancers'], 'educa'],

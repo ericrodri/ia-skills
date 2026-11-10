@@ -3,6 +3,7 @@ import { Head, Link, router, usePage } from '@inertiajs/vue3'
 import { ref, nextTick } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import AffiliateBox from '@/Components/AffiliateBox.vue'
+import SkillPackOffer, { markPackOffered, packOfferAllowed } from '@/Components/SkillPackOffer.vue'
 import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
 import { promptFields, fillPrompt, promptSegments } from '@/utils/promptFields'
@@ -33,6 +34,33 @@ const props = defineProps({
 function track(action) {
     if (!navigator.sendBeacon || navigator.webdriver) return
     navigator.sendBeacon('/hola/accion', new URLSearchParams({ s: props.skill.slug, a: action }))
+}
+
+// Mucha gente no pulsa «Copiar»: selecciona el prompt y hace Ctrl+C. Se
+// cuenta una vez por visita y solo si se copia un trozo con sustancia.
+let manualCopyTracked = false
+function onManualCopy() {
+    if (manualCopyTracked) return
+    const selected = String(window.getSelection?.() ?? '').trim()
+    if (selected.length < 40) return
+    manualCopyTracked = true
+    track('copiar_mano')
+    offerPack()
+}
+
+// Tras copiar, el pack de la profesión a cambio del email (SkillPackOffer).
+// Una vez por visita, nunca a usuarios con cuenta (eligen en su perfil).
+const showPackOffer = ref(false)
+function offerPack() {
+    if (page.props.auth?.user || !props.skill.profession || !packOfferAllowed()) return
+    markPackOffered()
+    showPackOffer.value = true
+    track('pack_visto')
+}
+
+function closePackOffer() {
+    showPackOffer.value = false
+    track('pack_cerrar')
 }
 
 // Instalar como Skill de Claude Code
@@ -158,6 +186,7 @@ function copyPrompt() {
     navigator.clipboard.writeText(filledPrompt.value)
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
+    offerPack()
 }
 
 function openInClaude() {
@@ -508,8 +537,10 @@ function submitComment() {
                                 <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">Lo que escribes no sale de tu navegador. Los datos que dejes vacíos se envían entre corchetes, para que se los des a la IA.</p>
                             </div>
                         </div>
-                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
+                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
                     </div>
+
+                    <SkillPackOffer v-if="showPackOffer" :profession="skill.profession" @close="closePackOffer" />
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 
@@ -550,7 +581,8 @@ function submitComment() {
                                     title="Copia una instrucción para pegar en Claude Code"
                                 >{{ installCopied === 'prompt' ? 'Copiado: pégalo en Claude Code' : 'Pídeselo a Claude Code' }}</button>
                                 <a
-                                    :href="install.url + '?download=1'"
+                                    :href="install.url"
+                                    :download="`${skill.slug}-SKILL.md`"
                                     @click="track('skill_md')"
                                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors"
                                 >

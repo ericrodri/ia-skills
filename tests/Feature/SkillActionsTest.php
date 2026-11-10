@@ -34,11 +34,12 @@ class SkillActionsTest extends TestCase
         $this->press(['s' => $skill->slug, 'a' => 'copiar'])->assertNoContent();
         $this->press(['s' => $skill->slug, 'a' => 'copiar'])->assertNoContent();
         $this->press(['s' => $skill->slug, 'a' => 'abrir_chatgpt'])->assertNoContent();
+        $this->press(['s' => $skill->slug, 'a' => 'copiar_mano'])->assertNoContent();
         $this->press(['s' => $skill->slug, 'a' => 'rellenar'])->assertNoContent();
 
         $rows = DB::table('skill_actions')->orderBy('action')->get();
-        $this->assertCount(3, $rows);
-        $this->assertSame(['abrir_chatgpt' => 1, 'copiar' => 2, 'rellenar' => 1], $rows->pluck('hits', 'action')->map(fn ($v) => (int) $v)->all());
+        $this->assertCount(4, $rows);
+        $this->assertSame(['abrir_chatgpt' => 1, 'copiar' => 2, 'copiar_mano' => 1, 'rellenar' => 1], $rows->pluck('hits', 'action')->map(fn ($v) => (int) $v)->all());
     }
 
     public function test_descarta_bots_admins_acciones_desconocidas_y_fichas_no_publicadas(): void
