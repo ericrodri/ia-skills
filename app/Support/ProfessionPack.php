@@ -26,9 +26,17 @@ class ProfessionPack
     /** Días que vale el enlace de descarga. */
     public const LINK_DAYS = 30;
 
-    public static function source(Profession $profession): string
+    /**
+     * Dónde se pidió el pack, además de la página de la profesión, para
+     * comparar qué formulario trae más altas: "pack:{slug}:{origen}".
+     */
+    public const ORIGINS = ['ficha'];
+
+    public static function source(Profession $profession, ?string $origin = null): string
     {
-        return self::SOURCE_PREFIX.$profession->slug;
+        $source = self::SOURCE_PREFIX.$profession->slug;
+
+        return in_array($origin, self::ORIGINS, true) ? "{$source}:{$origin}" : $source;
     }
 
     /**
@@ -41,8 +49,23 @@ class ProfessionPack
         }
 
         return Profession::where('is_active', true)
-            ->where('slug', Str::after($source, self::SOURCE_PREFIX))
+            ->where('slug', Str::before(Str::after($source, self::SOURCE_PREFIX), ':'))
             ->first();
+    }
+
+    /**
+     * Origen del pack ("ficha"), o null si se pidió desde la página de la profesión.
+     */
+    public static function originFromSource(?string $source): ?string
+    {
+        if ($source === null || ! Str::startsWith($source, self::SOURCE_PREFIX)) {
+            return null;
+        }
+
+        $rest = Str::after($source, self::SOURCE_PREFIX);
+        $origin = Str::contains($rest, ':') ? Str::after($rest, ':') : null;
+
+        return in_array($origin, self::ORIGINS, true) ? $origin : null;
     }
 
     public static function url(Profession $profession): string

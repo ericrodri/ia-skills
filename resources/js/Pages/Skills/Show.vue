@@ -3,6 +3,7 @@ import { Head, Link, router, usePage } from '@inertiajs/vue3'
 import { ref } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import AffiliateBox from '@/Components/AffiliateBox.vue'
+import SkillPackOffer, { markPackOffered, packOfferAllowed } from '@/Components/SkillPackOffer.vue'
 import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
 
@@ -43,6 +44,22 @@ function onManualCopy() {
     if (selected.length < 40) return
     manualCopyTracked = true
     track('copiar_mano')
+    offerPack()
+}
+
+// Tras copiar, el pack de la profesión a cambio del email (SkillPackOffer).
+// Una vez por visita, nunca a usuarios con cuenta (eligen en su perfil).
+const showPackOffer = ref(false)
+function offerPack() {
+    if (page.props.auth?.user || !props.skill.profession || !packOfferAllowed()) return
+    markPackOffered()
+    showPackOffer.value = true
+    track('pack_visto')
+}
+
+function closePackOffer() {
+    showPackOffer.value = false
+    track('pack_cerrar')
 }
 
 // Instalar como Skill de Claude Code
@@ -155,6 +172,7 @@ function copyRemix() {
     navigator.clipboard.writeText(remixPrompt.value)
     remixCopied.value = true
     setTimeout(() => remixCopied.value = false, 2000)
+    offerPack()
 }
 
 function openRemixInClaude() {
@@ -182,6 +200,7 @@ function copyPrompt() {
     navigator.clipboard.writeText(props.skill.prompt_content)
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
+    offerPack()
 }
 
 function openInClaude() {
@@ -482,6 +501,8 @@ function submitComment() {
                         </div>
                         <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy">{{ skill.prompt_content }}</pre>
                     </div>
+
+                    <SkillPackOffer v-if="showPackOffer" :profession="skill.profession" @close="closePackOffer" />
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 

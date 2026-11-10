@@ -103,7 +103,9 @@ class NewsletterController extends Controller
 
             // Un pack pedido manda sobre el origen anterior: es lo que se
             // entrega al confirmar.
-            $subscriber->source = $pack ? ProfessionPack::source($pack) : ($subscriber->source ?? $data['source'] ?? null);
+            $subscriber->source = $pack
+                ? ProfessionPack::source($pack, ProfessionPack::originFromSource($data['source'] ?? null))
+                : ($subscriber->source ?? $data['source'] ?? null);
             $subscriber->confirmed_at = null;
             $subscriber->unsubscribed_at = null;
             $subscriber->save();
