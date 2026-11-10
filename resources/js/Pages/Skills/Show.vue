@@ -522,7 +522,8 @@ function submitComment() {
                                     title="Copia una instrucción para pegar en Claude Code"
                                 >{{ installCopied === 'prompt' ? 'Copiado: pégalo en Claude Code' : 'Pídeselo a Claude Code' }}</button>
                                 <a
-                                    :href="install.url + '?download=1'"
+                                    :href="install.url"
+                                    :download="`${skill.slug}-SKILL.md`"
                                     @click="track('skill_md')"
                                     class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold border border-violet-300 dark:border-violet-700 text-violet-700 dark:text-violet-300 hover:bg-violet-100 dark:hover:bg-violet-900/40 transition-colors"
                                 >
