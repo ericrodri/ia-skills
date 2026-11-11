@@ -42,8 +42,10 @@ Allow: /
 # noviembre de 2026 descargó los archivos de /build/ unas 300.000 veces en un
 # día. No le sirven para indexar: no se los pedimos. Un grupo propio sustituye
 # al de «*», así que repite sus reglas. A Google no se le aplica: necesita
-# /build/ para ver las páginas, que se pintan con JavaScript.
+# /build/ para ver las páginas, que se pintan con JavaScript. AIWebIndex hacía
+# lo mismo a goteo (unas 11.000 descargas diarias), así que comparte el grupo.
 User-agent: ShapBot
+User-agent: AIWebIndex
 Allow: /
 Disallow: /build/
 Disallow: /dashboard

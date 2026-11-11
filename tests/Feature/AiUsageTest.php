@@ -39,7 +39,7 @@ class AiUsageTest extends TestCase
     {
         $robots = file_get_contents(public_path('robots.txt'));
 
-        $this->assertMatchesRegularExpression('/User-agent: ShapBot\nAllow: \/\nDisallow: \/build\//', $robots);
+        $this->assertMatchesRegularExpression('/User-agent: ShapBot\nUser-agent: AIWebIndex\nAllow: \/\nDisallow: \/build\//', $robots);
         // El grupo general no lo prohíbe: Google necesita /build/ para ver las páginas.
         $general = strstr(strstr($robots, 'User-agent: *'), 'User-agent: GPTBot', true);
         $this->assertStringNotContainsString('/build/', $general);
