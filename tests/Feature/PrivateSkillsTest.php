@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\Profession;
 use App\Models\Skill;
+use App\Models\SkillVersion;
 use App\Models\User;
 use App\Support\SkillMerger;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -238,5 +239,108 @@ class PrivateSkillsTest extends TestCase
 
         $this->expectException(InvalidArgumentException::class);
         SkillMerger::merge($this->skill, Skill::published()->where('title', self::TITLE)->first());
+    }
+
+    public function test_quien_tiene_el_enlace_ve_la_ficha_sin_cuenta(): void
+    {
+        $url = route('skills.show', $this->skill->slug);
+
+        $this->get($url.'?token=otro-token')->assertNotFound();
+
+        $this->get($url.'?token='.$this->skill->access_token)
+            ->assertOk()
+            ->assertSee('<meta name="referrer" content="no-referrer">', false)
+            ->assertSee('noindex, nofollow', false)
+            ->assertInertia(fn ($page) => $page
+                ->where('skill.title', self::TITLE)
+                ->missing('skill.access_token')
+                ->where('share.viaLink', true)
+                ->where('share.url', null)
+                ->where('canEdit', false)
+                ->where('install.url', fn ($u) => str_contains($u, 'token='.$this->skill->access_token)));
+
+        // Con sesión de otra persona, el enlace también vale (pero no puede editarla).
+        $this->actingAs(User::factory()->create())
+            ->get($url.'?token='.$this->skill->access_token)
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('share.viaLink', true)->where('canEdit', false));
+
+        // El historial de versiones se abre con el mismo enlace.
+        SkillVersion::create([
+            'skill_id' => $this->skill->id,
+            'user_id' => $this->owner->id,
+            'version' => 1,
+            'prompt_content' => $this->skill->prompt_content,
+            'changelog' => 'Versión inicial',
+        ]);
+        $this->app['auth']->forgetGuards();
+        $versionUrl = route('skills.versions.show', ['skill' => $this->skill->slug, 'version' => 1]);
+        $this->getJson($versionUrl)->assertNotFound();
+        $this->getJson($versionUrl.'?token='.$this->skill->access_token)->assertOk()->assertJsonPath('version', 1);
+    }
+
+    public function test_el_autor_ve_el_enlace_y_puede_cambiarlo(): void
+    {
+        $old = $this->skill->access_token;
+
+        $this->actingAs($this->owner)->get(route('skills.show', $this->skill->slug))
+            ->assertInertia(fn ($page) => $page
+                ->where('share.viaLink', false)
+                ->where('share.url', route('skills.show', ['skill' => $this->skill->slug, 'token' => $old])));
+
+        // Nadie más puede cambiarlo.
+        $this->actingAs(User::factory()->create(['is_admin' => true]))
+            ->post(route('skills.share.reset', $this->skill->slug))
+            ->assertNotFound();
+        $this->assertSame($old, $this->skill->fresh()->access_token);
+
+        $this->actingAs($this->owner)
+            ->post(route('skills.share.reset', $this->skill->slug))
+            ->assertRedirect(route('skills.show', $this->skill->slug));
+
+        $new = $this->skill->fresh()->access_token;
+        $this->assertNotSame($old, $new);
+
+        $this->app['auth']->forgetGuards();
+        $this->get(route('skills.show', $this->skill->slug).'?token='.$old)->assertNotFound();
+        $this->get(route('skills.markdown', $this->skill->slug).'?token='.$old)->assertNotFound();
+        $this->get(route('skills.show', $this->skill->slug).'?token='.$new)->assertOk();
+    }
+
+    public function test_hacerla_publica_anula_los_enlaces_compartidos(): void
+    {
+        $old = $this->skill->access_token;
+
+        $this->actingAs($this->owner)
+            ->patch(route('skills.update', $this->skill->slug), $this->payload(['title' => self::TITLE, 'visibility' => 'public']))
+            ->assertRedirect();
+
+        $this->assertNull($this->skill->fresh()->access_token);
+
+        // Si vuelve a ser privada, estrena enlace: el viejo no la reabre.
+        $this->actingAs($this->owner)
+            ->patch(route('skills.update', $this->skill->slug), $this->payload(['title' => self::TITLE, 'visibility' => 'private']))
+            ->assertRedirect();
+
+        $fresh = $this->skill->fresh();
+        $this->assertSame('private', $fresh->status);
+        $this->assertNotSame($old, $fresh->access_token);
+
+        $this->app['auth']->forgetGuards();
+        $this->get(route('skills.show', $this->skill->slug).'?token='.$old)->assertNotFound();
+    }
+
+    public function test_una_publicada_no_tiene_enlace_para_compartir(): void
+    {
+        $published = Skill::published()->first();
+
+        $this->get(route('skills.show', $published->slug))
+            ->assertOk()
+            ->assertDontSee('name="referrer"', false)
+            ->assertInertia(fn ($page) => $page->where('share', null));
+
+        $this->actingAs($published->author)
+            ->post(route('skills.share.reset', $published->slug))
+            ->assertNotFound();
     }
 }

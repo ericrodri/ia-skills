@@ -14,6 +14,9 @@
 @endif
 <link rel="canonical" href="{{ $seo['canonical'] }}">
 <meta name="robots" content="{{ $seo['robots'] }}">
+@if($seo['referrer'] ?? null)
+<meta name="referrer" content="{{ $seo['referrer'] }}">
+@endif
 @if(config('services.site_verification.google'))
 <meta name="google-site-verification" content="{{ config('services.site_verification.google') }}">
 @endif

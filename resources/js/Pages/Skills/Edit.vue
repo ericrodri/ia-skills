@@ -27,7 +27,7 @@ const form = useForm({
 // no puede volverse privada (tiene votos, guardados y una URL indexada).
 const canChangeVisibility = computed(() => ['draft', 'rejected', 'private'].includes(props.skill.status))
 const visibilityOptions = [
-    { value: 'private', label: 'Solo para mí', desc: 'Privada: no se publica ni pasa por revisión.' },
+    { value: 'private', label: 'Privada', desc: 'Para ti y tu equipo: no se publica ni pasa por revisión. La compartes con un enlace.' },
     { value: 'public', label: 'Compartirla', desc: 'La revisamos y la publicamos en el catálogo.' },
 ]
 

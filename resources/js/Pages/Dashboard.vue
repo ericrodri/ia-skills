@@ -74,14 +74,14 @@ const formatNumber = (n) => new Intl.NumberFormat('es-ES').format(n ?? 0)
                     <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
                         <h2 class="font-semibold text-gray-900 dark:text-gray-100">
                             Solo para ti
-                            <span class="ml-2 text-xs font-normal text-gray-400 dark:text-gray-500">skills privadas, nadie más las ve</span>
+                            <span class="ml-2 text-xs font-normal text-gray-400 dark:text-gray-500">skills privadas: solo tú y quien tenga su enlace</span>
                         </h2>
                         <Link v-if="private.length" :href="route('skills.create', { privada: 1 })" class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline">+ Guardar otra</Link>
                     </div>
 
                     <div v-if="!private.length" class="rounded-xl border border-dashed border-gray-300 dark:border-gray-700 p-6">
                         <p class="text-sm text-gray-700 dark:text-gray-300">Guarda aquí los prompts que usas en tu trabajo y no quieres publicar.</p>
-                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Los tendrás a mano para copiarlos, rellenar sus datos o instalarlos en Claude Code. No pasan por revisión ni aparecen en la web.</p>
+                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Los tendrás a mano para copiarlos, rellenar sus datos o instalarlos en Claude Code, y podrás pasárselos a tu equipo con un enlace. No pasan por revisión ni aparecen en la web.</p>
                         <Link :href="route('skills.create', { privada: 1 })" class="mt-4 inline-flex btn-secondary text-sm">Guardar una skill privada</Link>
                     </div>
 

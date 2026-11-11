@@ -62,6 +62,9 @@ class Seo
             'ogImage' => $data['ogImage'] ?? route('og.default'),
             'ogImageAlt' => self::clean($data['ogImageAlt'] ?? $title),
             'locale' => $data['locale'] ?? 'es_ES',
+            // 'no-referrer' en páginas cuya URL lleva un enlace secreto (skills
+            // privadas compartidas): así no viaja a las webs que se enlazan.
+            'referrer' => $data['referrer'] ?? null,
             'prev' => $data['prev'] ?? null,
             'next' => $data['next'] ?? null,
             // Contenido equivalente para clientes sin JavaScript (Bingbot, GPTBot,

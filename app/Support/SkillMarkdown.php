@@ -106,6 +106,19 @@ class SkillMarkdown
     }
 
     /**
+     * Enlace a la ficha de una skill privada para compartirla: quien lo abre
+     * la ve sin cuenta (sin comentarios, votos ni guardados).
+     */
+    public static function shareUrl(Skill $skill): ?string
+    {
+        if (! $skill->isPrivate() || ! $skill->access_token) {
+            return null;
+        }
+
+        return route('skills.show', ['skill' => $skill->slug, 'token' => $skill->access_token]);
+    }
+
+    /**
      * Comando de terminal que instala el skill en el directorio personal.
      */
     public static function installCommand(Skill $skill): string

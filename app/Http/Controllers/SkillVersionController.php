@@ -17,7 +17,11 @@ class SkillVersionController extends Controller
 {
     public function show(Request $request, Skill $skill, int $version): JsonResponse
     {
-        abort_unless($request->user()?->can('view', $skill) ?? $skill->status === 'published', 404);
+        abort_unless(
+            $skill->hasAccessToken($request->query('token'))
+                || ($request->user()?->can('view', $skill) ?? $skill->status === 'published'),
+            404,
+        );
 
         $current = $skill->versions()
             ->where('version', $version)

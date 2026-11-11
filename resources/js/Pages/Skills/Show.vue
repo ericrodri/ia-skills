@@ -26,6 +26,9 @@ const props = defineProps({
     // Herramientas con enlace de afiliado que menciona la ficha (App\Support\Affiliates)
     affiliateTools: { type: Array, default: () => [] },
     affiliateDisclosure: { type: String, default: '' },
+    // Skill privada: { viaLink, url }. url (el enlace para compartir) solo
+    // llega al autor; viaLink indica que quien la ve llegó con ese enlace.
+    share: { type: Object, default: null },
 })
 
 // Qué botones se usan en la ficha (App\Support\SkillActions). Sin cookies ni
@@ -96,7 +99,9 @@ async function openDiff(version) {
     diffError.value = ''
     diffData.value = null
     try {
-        const { data } = await axios.get(route('skills.versions.show', { skill: props.skill.slug, version }))
+        // Quien llega con el enlace de una privada necesita el mismo token para el historial.
+        const token = props.share?.viaLink ? new URLSearchParams(window.location.search).get('token') : null
+        const { data } = await axios.get(route('skills.versions.show', { skill: props.skill.slug, version, ...(token ? { token } : {}) }))
         diffData.value = data
     } catch {
         diffError.value = 'No se pudo cargar esta versión.'
@@ -108,8 +113,21 @@ async function openDiff(version) {
 const page = usePage()
 const auth = page.props.auth
 
-// Skill privada: solo la ve su autor (SkillPolicy). Sin votos, guardados ni comentarios.
+// Skill privada: solo la ve su autor (SkillPolicy) y quien tenga su enlace.
+// Sin votos, guardados ni comentarios.
 const isPrivate = computed(() => props.skill.status === 'private')
+
+const shareCopied = ref(false)
+function copyShareLink() {
+    navigator.clipboard.writeText(props.share.url)
+    shareCopied.value = true
+    setTimeout(() => shareCopied.value = false, 2000)
+}
+
+function resetShareLink() {
+    if (!confirm('¿Cambiar el enlace? Quien tenga el actual dejará de poder abrir esta skill y su SKILL.md.')) return
+    router.post(route('skills.share.reset', props.skill.slug), {}, { preserveScroll: true })
+}
 
 const voteScore = ref(props.skill.vote_score)
 const currentVote = ref(props.userVote)
@@ -301,12 +319,32 @@ function submitComment() {
         </Transition>
 
         <!-- Banner de estado para el autor / admin -->
-        <div v-if="isPrivate" class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+        <div v-if="isPrivate && share?.viaLink" class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
                 <span class="text-lg" aria-hidden="true">🔒</span>
-                <span class="font-semibold text-gray-800 dark:text-gray-200">Skill privada.</span>
-                <span class="text-gray-600 dark:text-gray-400">Solo la ves tú: no aparece en la web ni en los buscadores.</span>
-                <Link :href="route('dashboard')" class="text-brand-600 dark:text-brand-400 hover:underline">Ver todas mis skills privadas</Link>
+                <span class="font-semibold text-gray-800 dark:text-gray-200">Skill privada compartida contigo.</span>
+                <span class="text-gray-600 dark:text-gray-400">Solo la ve quien tiene este enlace: no aparece en la web ni en los buscadores.</span>
+            </div>
+        </div>
+        <div v-else-if="isPrivate" class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 text-sm">
+                <div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+                    <span class="text-lg" aria-hidden="true">🔒</span>
+                    <span class="font-semibold text-gray-800 dark:text-gray-200">Skill privada.</span>
+                    <span class="text-gray-600 dark:text-gray-400">No aparece en la web ni en los buscadores. Solo la ves tú y quien tenga su enlace.</span>
+                    <Link :href="route('dashboard')" class="text-brand-600 dark:text-brand-400 hover:underline">Ver todas mis skills privadas</Link>
+                </div>
+                <div v-if="share?.url" class="mt-3 sm:ml-8">
+                    <label for="share-link" class="block text-xs font-medium text-gray-600 dark:text-gray-400 mb-1">Enlace para compartirla con tu equipo (pueden verla e instalarla sin cuenta)</label>
+                    <div class="flex flex-col sm:flex-row gap-2">
+                        <input id="share-link" type="text" readonly :value="share.url" @focus="$event.target.select()"
+                            class="flex-1 min-w-0 rounded-lg border-gray-300 dark:border-gray-700 bg-white dark:bg-gray-800 text-xs font-mono text-gray-700 dark:text-gray-300" />
+                        <div class="flex gap-2 shrink-0">
+                            <button type="button" @click="copyShareLink" class="btn-primary text-sm">{{ shareCopied ? 'Copiado' : 'Copiar enlace' }}</button>
+                            <button type="button" @click="resetShareLink" class="px-3 py-1.5 text-sm rounded-lg border border-gray-300 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800">Cambiar enlace</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
         <div v-if="skill.status === 'draft'" class="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-700">

@@ -124,6 +124,10 @@ Route::middleware(['auth', 'verified'])->group(function () {
 Route::get('/guardadas', [SavedSkillController::class, 'index'])->name('skills.saved');
 
 Route::get('/skills/{skill:slug}', [SkillController::class, 'show'])->name('skills.show');
+// Cambiar el enlace para compartir una skill privada (el anterior deja de funcionar)
+Route::post('/skills/{skill:slug}/enlace', [SkillController::class, 'resetShareLink'])
+    ->middleware(['auth', 'throttle:skill-writes'])
+    ->name('skills.share.reset');
 // La ficha como SKILL.md instalable (curl -o ~/.claude/skills/x/SKILL.md)
 Route::get('/skills/{skill:slug}/skill.md', SkillMarkdownController::class)->name('skills.markdown');
 // Contenido de una versión y la anterior, para el diff del historial

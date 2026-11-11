@@ -117,7 +117,7 @@ class SkillController extends Controller
         // skills_count se incrementa solo cuando el admin la aprueba
         return redirect()->route('skills.show', $skill)
             ->with('success', $private
-                ? 'Skill guardada. Es privada: solo la ves tú.'
+                ? 'Skill guardada. Es privada: solo la ves tú y quien tenga su enlace, que encontrarás arriba.'
                 : '¡Skill enviada! La revisaremos y la publicaremos en breve.');
     }
 
@@ -161,7 +161,10 @@ class SkillController extends Controller
 
             if ($visibilityChange) {
                 if ($wasPrivate) {
+                    // Los enlaces que se compartieron mientras era privada no
+                    // deben volver a abrirla si algún día vuelve a serlo.
                     $skill->status = 'draft';
+                    $skill->access_token = null;
                 } else {
                     $skill->makePrivate();
                 }
@@ -186,7 +189,7 @@ class SkillController extends Controller
 
         $message = match (true) {
             $visibilityChange && $wasPrivate => 'Skill enviada a revisión. La publicaremos en cuanto la aprobemos.',
-            $visibilityChange => 'Skill guardada como privada: solo la ves tú.',
+            $visibilityChange => 'Skill guardada como privada: solo la ves tú y quien tenga su enlace.',
             $promptChanged => "Skill actualizada. Se guardó la versión {$skill->version}.",
             default => 'Skill actualizada.',
         };
@@ -204,11 +207,12 @@ class SkillController extends Controller
 
         $user = $request->user();
 
-        // Solo el autor o un admin pueden ver skills no publicadas
-        abort_unless(
-            $user ? $user->can('view', $skill) : $skill->status === 'published',
-            404
-        );
+        // Solo el autor o un admin pueden ver skills no publicadas. Una privada
+        // también la ve quien tenga su enlace para compartir (?token=).
+        $canView = $user ? $user->can('view', $skill) : $skill->status === 'published';
+        $viaLink = ! $canView && $skill->hasAccessToken($request->query('token'));
+
+        abort_unless($canView || $viaLink, 404);
 
         $skill->increment('views_count');
 
@@ -252,7 +256,41 @@ class SkillController extends Controller
                 '/skills/'.$skill->slug,
             ),
             'affiliateDisclosure' => Affiliates::DISCLOSURE,
+            'share' => $this->shareData($skill, $user?->id === $skill->user_id, $viaLink),
         ]);
+    }
+
+    /**
+     * Enlace para compartir una skill privada: el autor lo ve y lo puede
+     * cambiar; quien llega con él solo sabe que se la han compartido.
+     *
+     * @return array{viaLink: bool, url: ?string}|null
+     */
+    private function shareData(Skill $skill, bool $isOwner, bool $viaLink): ?array
+    {
+        if (! $skill->isPrivate()) {
+            return null;
+        }
+
+        return [
+            'viaLink' => $viaLink,
+            'url' => $isOwner ? SkillMarkdown::shareUrl($skill) : null,
+        ];
+    }
+
+    /**
+     * Cambia el enlace secreto de una skill privada: el anterior (el de la
+     * ficha y el del SKILL.md) deja de funcionar.
+     */
+    public function resetShareLink(Request $request, Skill $skill): RedirectResponse
+    {
+        abort_unless($skill->isPrivate() && $request->user()->id === $skill->user_id, 404);
+
+        $skill->access_token = Str::random(40);
+        $skill->save();
+
+        return redirect()->route('skills.show', $skill)
+            ->with('success', 'Enlace cambiado. El anterior ya no funciona: compártelo de nuevo con quien quieras que la vea.');
     }
 
     /**
@@ -391,8 +429,9 @@ class SkillController extends Controller
                 : Seo::clean($skill->description),
             'canonical' => $url,
             'robots' => $skill->status === 'published' ? null : 'noindex, nofollow',
+            'referrer' => $skill->isPrivate() ? 'no-referrer' : null,
             'ogType' => 'article',
-            'ogImage' => route('og.skill', ['skill' => $skill->slug]),
+            'ogImage' => $skill->isPrivate() ? route('og.default') : route('og.skill', ['skill' => $skill->slug]),
             'ogImageAlt' => $skill->title,
             'fallback' => [
                 'heading' => $skill->title,

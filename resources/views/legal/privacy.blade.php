@@ -46,7 +46,7 @@
                 <li>Nombre, email y contraseña. La contraseña se guarda cifrada con un algoritmo irreversible: nadie, tampoco nosotros, puede leerla.</li>
                 <li>Nombre de usuario y, si la escribes, una bio. Ambos aparecen en tu perfil público (<code>/autores/tu-usuario</code>).</li>
                 <li>Lo que publicas: skills, comentarios y sus versiones. Son públicos y aparecen con tu nombre.</li>
-                <li>Tus skills privadas, si guardas alguna: solo las ves tú. No aparecen en la web, en los buscadores, en la API ni en el resumen semanal, y no las revisamos ni las leemos. Cada una tiene un enlace secreto para instalarla en Claude Code: quien tenga ese enlace puede descargarla, así que no lo compartas si no quieres que otros la vean.</li>
+                <li>Tus skills privadas, si guardas alguna: solo las ves tú. No aparecen en la web, en los buscadores, en la API ni en el resumen semanal, y no las revisamos ni las leemos. Cada una tiene un enlace secreto para compartirla con quien quieras o instalarla en Claude Code: quien tenga ese enlace puede verla y descargarla, aunque no tenga cuenta. Puedes cambiar el enlace cuando quieras desde la propia skill y el anterior deja de funcionar.</li>
                 <li>Tus votos y las skills que guardas. No se muestran a otras personas.</li>
                 <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave).</li>
                 <li>Mientras tienes la sesión abierta, la dirección IP y el navegador asociados a ella.</li>

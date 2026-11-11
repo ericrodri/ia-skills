@@ -29,7 +29,7 @@ const isPrivate = computed(() => form.visibility === 'private')
 
 const visibilityOptions = [
     { value: 'public', label: 'Compartirla', desc: 'La revisamos y la publicamos en el catálogo.' },
-    { value: 'private', label: 'Solo para mí', desc: 'Privada: no se publica ni pasa por revisión.' },
+    { value: 'private', label: 'Privada', desc: 'Para ti y tu equipo: no se publica ni pasa por revisión. La compartes con un enlace.' },
 ]
 
 const resourceTypeOptions = [
@@ -113,7 +113,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                         <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ isPrivate ? 'Guardar una skill privada' : 'Compartir una skill' }}</h1>
                         <p class="text-sm text-gray-500 dark:text-gray-400">
                             {{ isPrivate
-                                ? 'Un prompt tuyo, a mano para copiarlo, rellenarlo o instalarlo en Claude Code. Nadie más lo ve.'
+                                ? 'Un prompt tuyo, a mano para copiarlo, rellenarlo o instalarlo en Claude Code. Solo lo ves tú y quien tenga su enlace.'
                                 : 'Ayuda a la comunidad compartiendo un workflow o prompt que te funciona.' }}
                         </p>
                     </div>
