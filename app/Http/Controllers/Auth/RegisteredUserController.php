@@ -14,6 +14,7 @@ use Illuminate\Validation\Rules;
 use Illuminate\Validation\ValidationException;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class RegisteredUserController extends Controller
 {
@@ -30,7 +31,7 @@ class RegisteredUserController extends Controller
      *
      * @throws ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request): RedirectResponse|SymfonyResponse
     {
         // Mismo filtro que la newsletter (App\Support\BotGuard): la mayoría de
         // los registros de noviembre de 2026 eran bots que mandaban el email
@@ -60,6 +61,7 @@ class RegisteredUserController extends Controller
 
         Auth::login($user);
 
-        return redirect(route('skills.saved', absolute: false));
+        // Si se registró a mitad de conectar Claude, vuelve a la pantalla de permiso.
+        return AuthenticatedSessionController::toIntended(route('skills.saved', absolute: false));
     }
 }

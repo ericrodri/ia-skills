@@ -1,6 +1,7 @@
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
 import ApiTokenForm from './Partials/ApiTokenForm.vue';
+import ConnectedApps from './Partials/ConnectedApps.vue';
 import DeleteUserForm from './Partials/DeleteUserForm.vue';
 import UpdatePasswordForm from './Partials/UpdatePasswordForm.vue';
 import UpdateProfileInformationForm from './Partials/UpdateProfileInformationForm.vue';
@@ -15,6 +16,7 @@ defineProps({
     apiTokenLastUsedAt: { type: String, default: null },
     plainTextApiToken: { type: String, default: null },
     profile: { type: Object, default: () => ({}) },
+    connectedApps: { type: Array, default: () => [] },
 });
 </script>
 
@@ -59,6 +61,12 @@ defineProps({
                         :plain-text-api-token="plainTextApiToken"
                         class="max-w-xl"
                     />
+                </div>
+
+                <div
+                    class="bg-white p-4 shadow-sm border border-gray-100 sm:rounded-xl sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+                >
+                    <ConnectedApps :apps="connectedApps" class="max-w-xl" />
                 </div>
 
                 <div

@@ -48,7 +48,8 @@
                 <li>Lo que publicas: skills, comentarios y sus versiones. Son públicos y aparecen con tu nombre.</li>
                 <li>Tus skills privadas, si guardas alguna: solo las ves tú. No aparecen en la web, en los buscadores, en la API ni en el resumen semanal, y no las revisamos ni las leemos. Cada una tiene un enlace secreto para compartirla con quien quieras o instalarla en Claude Code: quien tenga ese enlace puede verla y descargarla, aunque no tenga cuenta. Puedes cambiar el enlace cuando quieras desde la propia skill y el anterior deja de funcionar.</li>
                 <li>Tus votos y las skills que guardas. No se muestran a otras personas.</li>
-                <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave). Esa clave es la que usa el conector de Claude: con ella, Claude puede leer tus skills, también las privadas, cuando tú se lo pides en una conversación. Solo lectura: no puede cambiar ni borrar nada. Lo que Claude haga con lo que lee se rige por las condiciones de Anthropic. Si generas una clave nueva o la revocas, el conector deja de funcionar.</li>
+                <li><strong>Si conectas una aplicación como Claude</strong> (el conector de ia-skills), qué aplicación es, cuándo le diste permiso y cuándo lo usó por última vez, para enseñártelo en tu perfil. Guardamos sus tokens de acceso solo como un resumen cifrado. Con ese permiso, la aplicación puede leer tus skills, también las privadas, cuando tú se lo pides en una conversación; no puede cambiar ni borrar nada ni ver tu email. Lo que haga con lo que lee se rige por las condiciones de su empresa (en el caso de Claude, Anthropic). Puedes desconectarla cuando quieras desde tu perfil.</li>
+                <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave). Esa clave también sirve para conectar Claude con tus skills a través de una dirección que la lleva.</li>
                 <li>Mientras tienes la sesión abierta, la dirección IP y el navegador asociados a ella.</li>
             </ul>
             <p><strong>Si te suscribes al resumen semanal sin cuenta</strong>, tratamos tu email, la página desde la que te apuntaste y las fechas de alta, confirmación y baja.</p>
@@ -77,6 +78,7 @@
             <h2 id="conservacion">5. Cuánto tiempo los guardamos</h2>
             <ul>
                 <li><strong>Cuenta:</strong> hasta que la borres. Al eliminarla desde tu perfil se borran también tus skills (también las privadas), comentarios, votos y guardadas.</li>
+                <li><strong>Aplicaciones conectadas:</strong> mientras no las desconectes. Si una no se usa en 60 días, su permiso caduca y se borra.</li>
                 <li><strong>Sesiones:</strong> caducan tras {{ $sessionMinutes }} minutos sin actividad, salvo que marques «Recordarme».</li>
                 <li><strong>Resumen semanal sin cuenta:</strong> mientras sigas suscrito. Las altas que no se confirman y las bajas se borran a los 30 días.</li>
                 <li><strong>Estadísticas de instalación:</strong> el resumen de IP y navegador se descarta a las 24 horas. Solo queda el recuento total de cada skill, que no está asociado a nadie.</li>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Support\McpConnector;
+use App\Support\OAuth;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
@@ -11,15 +12,17 @@ use Illuminate\Http\Response;
 /**
  * Conector MCP remoto de ia-skills (transporte «Streamable HTTP»).
  *
- * - POST /api/mcp           catálogo público, sin clave.
- * - POST /api/mcp/{clave}   lo mismo más las skills propias del dueño de la
- *                           clave de API (la del perfil), incluidas las privadas.
+ * - POST /api/mcp                     catálogo público, sin credenciales.
+ * - POST /api/mcp + Bearer (OAuth)    lo mismo más las skills propias de quien
+ *                                     dio permiso, incluidas las privadas. Es
+ *                                     lo que usa el directorio de conectores.
+ * - POST /api/mcp/{clave}             igual, con la clave de API del perfil
+ *                                     en la ruta (conector personal anterior
+ *                                     al OAuth; el directorio no lo admite).
  *
- * Es la URL que se pega en Claude → Ajustes → Conectores, o en
- * `claude mcp add --transport http`. La clave va en la ruta porque los
- * conectores de Claude no permiten añadir cabeceras; regenerarla en el perfil
- * corta el acceso. Sin sesiones ni streaming: cada petición JSON-RPC recibe
- * su respuesta en JSON, que el protocolo permite.
+ * Es la URL que se pega en Claude → Personalizar → Conectores, o en
+ * `claude mcp add --transport http`. Sin sesiones ni streaming: cada
+ * petición JSON-RPC recibe su respuesta en JSON, que el protocolo permite.
  *
  * Las herramientas están en App\Support\McpConnector.
  */
@@ -41,8 +44,50 @@ class McpConnectorController extends Controller
             }
 
             $user->forceFill(['api_token_last_used_at' => now()])->save();
+        } elseif (($bearer = $request->bearerToken()) !== null) {
+            // Token del OAuth (App\Support\OAuth). Si no vale, 401 con la pista
+            // de dónde renovarlo: así Claude refresca el token o vuelve a pedir
+            // permiso en vez de seguir como anónimo.
+            $user = OAuth::userForAccessToken($bearer);
+
+            if (! $user) {
+                return $this->unauthorized('api/mcp', 'Token caducado o revocado.', true);
+            }
         }
 
+        return $this->serve($request, $user);
+    }
+
+    /**
+     * /api/mcp/cuenta: lo mismo, pero sin token responde 401 para que el
+     * cliente (Claude Code) ofrezca iniciar sesión en vez de seguir anónimo.
+     */
+    public function account(Request $request): JsonResponse|Response
+    {
+        $bearer = $request->bearerToken();
+        $user = $bearer !== null ? OAuth::userForAccessToken($bearer) : null;
+
+        if (! $user) {
+            return $this->unauthorized('api/mcp/cuenta', 'Inicia sesión en ia-skills para usar esta dirección.', $bearer !== null);
+        }
+
+        return $this->serve($request, $user);
+    }
+
+    private function unauthorized(string $resourcePath, string $message, bool $invalidToken): JsonResponse
+    {
+        return response()
+            ->json($this->error(null, -32001, $message), 401)
+            ->header('WWW-Authenticate', sprintf(
+                'Bearer resource_metadata="%s"%s, scope="%s"',
+                url('/.well-known/oauth-protected-resource/'.$resourcePath),
+                $invalidToken ? ', error="invalid_token"' : '',
+                OAuth::SCOPE,
+            ));
+    }
+
+    private function serve(Request $request, ?User $user): JsonResponse|Response
+    {
         $payload = $request->json()->all();
 
         if (! is_array($payload) || $payload === []) {

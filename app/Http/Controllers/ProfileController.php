@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ProfileUpdateRequest;
+use App\Models\OAuthToken;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -37,7 +38,33 @@ class ProfileController extends Controller
                 'notify_by_email' => (bool) $user->notify_by_email,
                 'newsletter_opt_in' => (bool) $user->newsletter_opt_in,
             ],
+            // Aplicaciones con acceso por OAuth (el conector de Claude), una por cliente.
+            'connectedApps' => OAuthToken::with('client:id,name,redirect_uris')
+                ->where('user_id', $user->id)
+                ->get()
+                ->groupBy('client_id')
+                ->map(fn ($tokens) => [
+                    'id' => $tokens->first()->client_id,
+                    'name' => $tokens->first()->client?->name,
+                    'host' => parse_url($tokens->first()->client?->redirect_uris[0] ?? '', PHP_URL_HOST),
+                    'connected_at' => $tokens->min('created_at')?->toIso8601String(),
+                    'last_used_at' => $tokens->max('last_used_at')?->toIso8601String(),
+                ])
+                ->values()
+                ->all(),
         ]);
+    }
+
+    /**
+     * Quita el acceso a una aplicación conectada por OAuth: borra todos sus
+     * tokens de esta cuenta. Si la persona vuelve a conectarla, pedirá
+     * permiso otra vez.
+     */
+    public function disconnectApp(Request $request, int $client): RedirectResponse
+    {
+        OAuthToken::where('user_id', $request->user()->id)->where('client_id', $client)->delete();
+
+        return Redirect::to(route('profile.edit').'#aplicaciones')->with('status', 'app-disconnected');
     }
 
     public function generateApiToken(Request $request): RedirectResponse

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Inertia\Response;
+use Symfony\Component\HttpFoundation\Response as SymfonyResponse;
 
 class AuthenticatedSessionController extends Controller
 {
@@ -27,13 +28,29 @@ class AuthenticatedSessionController extends Controller
     /**
      * Handle an incoming authentication request.
      */
-    public function store(LoginRequest $request): RedirectResponse
+    public function store(LoginRequest $request): RedirectResponse|SymfonyResponse
     {
         $request->authenticate();
 
         $request->session()->regenerate();
 
-        return redirect()->intended(route('skills.saved', absolute: false));
+        return self::toIntended(route('skills.saved', absolute: false));
+    }
+
+    /**
+     * Vuelve a la página que se quería ver antes de entrar. Si es una página
+     * Blade (la pantalla de permiso del conector de Claude), con una visita
+     * completa: Inertia no puede pintar HTML que no es suyo y lo abriría en
+     * una ventana flotante.
+     */
+    public static function toIntended(string $default): RedirectResponse|SymfonyResponse
+    {
+        $redirect = redirect()->intended($default);
+        $path = (string) parse_url($redirect->getTargetUrl(), PHP_URL_PATH);
+
+        return str_starts_with($path, '/oauth/')
+            ? Inertia::location($redirect->getTargetUrl())
+            : $redirect;
     }
 
     /**

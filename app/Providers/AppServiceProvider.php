@@ -61,6 +61,13 @@ class AppServiceProvider extends ServiceProvider
         ]);
 
         // La API es pública y sin sesión: se limita por token, o por IP si no lo hay.
+        // OAuth del conector: el registro es abierto, así que se limita por IP.
+        RateLimiter::for('oauth-register', fn (Request $request) => [
+            Limit::perMinute(10)->by('oauth-register-min:'.$request->ip()),
+            Limit::perDay(100)->by('oauth-register-day:'.$request->ip()),
+        ]);
+        RateLimiter::for('oauth', fn (Request $request) => Limit::perMinute(30)->by('oauth:'.$request->ip()));
+
         RateLimiter::for('api', fn (Request $request) => Limit::perMinute(60)
             ->by($request->query('api_key') ?? $request->bearerToken() ?? $request->ip()));
 

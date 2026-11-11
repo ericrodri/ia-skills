@@ -14,6 +14,8 @@ use App\Http\Controllers\LegalController;
 use App\Http\Controllers\LlmsTxtController;
 use App\Http\Controllers\McpController;
 use App\Http\Controllers\NewsletterController;
+use App\Http\Controllers\OAuthAuthorizeController;
+use App\Http\Controllers\OAuthServerController;
 use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfessionController;
@@ -121,11 +123,26 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
     Route::post('/profile/api-token', [ProfileController::class, 'generateApiToken'])->middleware('throttle:skill-writes')->name('profile.api-token.generate');
     Route::delete('/profile/api-token', [ProfileController::class, 'revokeApiToken'])->name('profile.api-token.revoke');
+    // Aplicaciones conectadas por OAuth (el conector de Claude): desconectar borra sus tokens.
+    Route::delete('/profile/aplicaciones/{client}', [ProfileController::class, 'disconnectApp'])->name('profile.apps.disconnect');
+
+    // Pantalla de permiso del OAuth del conector (App\Support\OAuth). Sin sesión,
+    // el login devuelve aquí al terminar.
+    Route::get('/oauth/autorizar', [OAuthAuthorizeController::class, 'show'])->name('oauth.authorize');
+    Route::post('/oauth/autorizar', [OAuthAuthorizeController::class, 'decide'])->middleware('throttle:oauth')->name('oauth.authorize.decide');
 });
 
 Route::get('/guardadas', [SavedSkillController::class, 'index'])->name('skills.saved');
 
 Route::get('/skills/{skill:slug}', [SkillController::class, 'show'])->name('skills.show');
+
+// Metadatos OAuth del conector MCP (RFC 9728 y RFC 8414): Claude los lee
+// para saber dónde pedir permiso. La segunda forma lleva la ruta del recurso.
+Route::get('/.well-known/oauth-protected-resource', [OAuthServerController::class, 'protectedResource']);
+Route::get('/.well-known/oauth-protected-resource/api/mcp', [OAuthServerController::class, 'protectedResource']);
+Route::get('/.well-known/oauth-protected-resource/api/mcp/cuenta', [OAuthServerController::class, 'protectedResource']);
+Route::get('/.well-known/oauth-authorization-server', [OAuthServerController::class, 'authorizationServer']);
+
 // Cambiar el enlace para compartir una skill privada (el anterior deja de funcionar)
 Route::post('/skills/{skill:slug}/enlace', [SkillController::class, 'resetShareLink'])
     ->middleware(['auth', 'throttle:skill-writes'])
