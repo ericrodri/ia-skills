@@ -25,7 +25,13 @@ class SkillMarkdownController extends Controller
         if ($redirect = $skill->mergedRedirect('skills.markdown', $request->query())) {
             return $redirect;
         }
-        abort_unless($request->user()?->can('view', $skill) ?? $skill->status === 'published', 404);
+        // Una privada también se abre con su enlace secreto: así la instala
+        // Claude Code, que no tiene la sesión del navegador.
+        abort_unless(
+            $skill->hasAccessToken($request->query('token'))
+                || ($request->user()?->can('view', $skill) ?? $skill->status === 'published'),
+            404,
+        );
 
         $name = SkillMarkdown::name($skill);
         $disposition = $request->boolean('download') ? 'attachment' : 'inline';

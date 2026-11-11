@@ -26,6 +26,8 @@ class StoreSkillRequest extends FormRequest
             'estimated_minutes' => ['nullable', 'integer', 'min:1', 'max:480'],
             'use_case'          => ['nullable', 'string', 'max:500'],
             'resource_type'     => ['nullable', 'in:prompt,claude_skill,claude_plugin,mcp_server'],
+            // public: pasa por moderación y se publica; private: solo para su autor.
+            'visibility'        => ['nullable', 'in:public,private'],
         ];
     }
 }

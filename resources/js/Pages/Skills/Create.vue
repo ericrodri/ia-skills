@@ -20,7 +20,17 @@ const form = useForm({
     estimated_minutes: '',
     use_case: '',
     resource_type: 'prompt',
+    // public: pasa por revisión y se publica; private: solo la ve su autor.
+    // Desde el panel se llega con ?privada=1.
+    visibility: new URLSearchParams(window.location.search).has('privada') ? 'private' : 'public',
 })
+
+const isPrivate = computed(() => form.visibility === 'private')
+
+const visibilityOptions = [
+    { value: 'public', label: 'Compartirla', desc: 'La revisamos y la publicamos en el catálogo.' },
+    { value: 'private', label: 'Solo para mí', desc: 'Privada: no se publica ni pasa por revisión.' },
+]
 
 const resourceTypeOptions = [
     { value: 'prompt',        label: 'Prompt / Workflow', desc: 'Prompt o flujo de trabajo', icon: '💬' },
@@ -100,8 +110,12 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                 <div class="flex items-center gap-3 mb-3">
                     <div class="w-10 h-10 rounded-xl bg-brand-100 dark:bg-brand-900/40 flex items-center justify-center text-xl">⚡</div>
                     <div>
-                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">Compartir una skill</h1>
-                        <p class="text-sm text-gray-500 dark:text-gray-400">Ayuda a la comunidad compartiendo un workflow o prompt que te funciona.</p>
+                        <h1 class="text-2xl font-bold text-gray-900 dark:text-white">{{ isPrivate ? 'Guardar una skill privada' : 'Compartir una skill' }}</h1>
+                        <p class="text-sm text-gray-500 dark:text-gray-400">
+                            {{ isPrivate
+                                ? 'Un prompt tuyo, a mano para copiarlo, rellenarlo o instalarlo en Claude Code. Nadie más lo ve.'
+                                : 'Ayuda a la comunidad compartiendo un workflow o prompt que te funciona.' }}
+                        </p>
                     </div>
                 </div>
             </div>
@@ -120,6 +134,25 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
             </div>
 
             <form @submit.prevent="submit" class="space-y-8">
+
+                <!-- Visibilidad: pública (con revisión) o solo para su autor -->
+                <fieldset>
+                    <legend class="sr-only">¿Quién puede verla?</legend>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label
+                            v-for="opt in visibilityOptions"
+                            :key="opt.value"
+                            class="cursor-pointer rounded-xl border-2 p-3 transition-all"
+                            :class="form.visibility === opt.value
+                                ? 'border-brand-400 bg-brand-50 dark:bg-brand-900/30'
+                                : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'"
+                        >
+                            <input type="radio" :value="opt.value" v-model="form.visibility" class="sr-only" />
+                            <span class="block text-sm font-semibold" :class="form.visibility === opt.value ? 'text-brand-700 dark:text-brand-300' : 'text-gray-700 dark:text-gray-300'">{{ opt.label }}</span>
+                            <span class="block mt-0.5 text-xs text-gray-500 dark:text-gray-400">{{ opt.desc }}</span>
+                        </label>
+                    </div>
+                </fieldset>
 
                 <!-- Sección 1: Categorización -->
                 <div class="bg-white dark:bg-gray-800/60 rounded-2xl border border-gray-100 dark:border-gray-700 p-6 space-y-5">
@@ -289,8 +322,8 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                     </div>
                 </div>
 
-                <!-- Checklist de calidad -->
-                <div class="rounded-2xl border border-gray-100 dark:border-gray-700 p-5">
+                <!-- Checklist de calidad (solo para las que se revisan) -->
+                <div v-if="!isPrivate" class="rounded-2xl border border-gray-100 dark:border-gray-700 p-5">
                     <div class="flex items-center justify-between">
                         <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Antes de enviar</h2>
                         <span class="text-xs font-medium tabular-nums" :class="checklistScore === checklist.length ? 'text-green-600 dark:text-green-400' : 'text-gray-400'">{{ checklistScore }}/{{ checklist.length }}</span>
@@ -316,11 +349,15 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                                 <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"/>
                                 <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
                             </svg>
-                            Publicando…
+                            {{ isPrivate ? 'Guardando…' : 'Publicando…' }}
                         </span>
-                        <span v-else>Enviar skill</span>
+                        <span v-else>{{ isPrivate ? 'Guardar skill privada' : 'Enviar skill' }}</span>
                     </button>
-                    <p class="text-xs text-gray-400 dark:text-gray-500">La revisaremos antes de publicarla y te avisaremos por email.</p>
+                    <p class="text-xs text-gray-400 dark:text-gray-500">
+                        {{ isPrivate
+                            ? 'Solo la verás tú. Podrás enviarla a publicar más adelante si quieres.'
+                            : 'La revisaremos antes de publicarla y te avisaremos por email.' }}
+                    </p>
                 </div>
 
             </form>

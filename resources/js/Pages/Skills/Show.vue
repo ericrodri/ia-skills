@@ -108,6 +108,9 @@ async function openDiff(version) {
 const page = usePage()
 const auth = page.props.auth
 
+// Skill privada: solo la ve su autor (SkillPolicy). Sin votos, guardados ni comentarios.
+const isPrivate = computed(() => props.skill.status === 'private')
+
 const voteScore = ref(props.skill.vote_score)
 const currentVote = ref(props.userVote)
 const saved = ref(props.userSaved)
@@ -298,6 +301,14 @@ function submitComment() {
         </Transition>
 
         <!-- Banner de estado para el autor / admin -->
+        <div v-if="isPrivate" class="bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-700">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+                <span class="text-lg" aria-hidden="true">🔒</span>
+                <span class="font-semibold text-gray-800 dark:text-gray-200">Skill privada.</span>
+                <span class="text-gray-600 dark:text-gray-400">Solo la ves tú: no aparece en la web ni en los buscadores.</span>
+                <Link :href="route('dashboard')" class="text-brand-600 dark:text-brand-400 hover:underline">Ver todas mis skills privadas</Link>
+            </div>
+        </div>
         <div v-if="skill.status === 'draft'" class="bg-amber-50 dark:bg-amber-900/20 border-b border-amber-200 dark:border-amber-700">
             <div class="max-w-4xl mx-auto px-4 sm:px-6 py-3 flex items-center gap-3 text-sm">
                 <span class="text-amber-600 dark:text-amber-400 text-lg">⏳</span>
@@ -655,8 +666,8 @@ function submitComment() {
                         </div>
                     </section>
 
-                    <!-- Comments -->
-                    <section id="comentarios" class="mt-8 scroll-mt-20">
+                    <!-- Comments (una privada no tiene comunidad: ni comentarios, ni votos, ni guardados) -->
+                    <section v-if="!isPrivate" id="comentarios" class="mt-8 scroll-mt-20">
                         <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-5">{{ skill.comments.length }} comentarios</h2>
 
                         <!-- Add comment -->
@@ -705,6 +716,7 @@ function submitComment() {
                 <!-- Sidebar actions -->
                 <aside class="lg:w-48 shrink-0 mt-8 lg:mt-0">
                     <div class="sticky top-20 flex flex-col gap-3">
+                        <template v-if="!isPrivate">
                         <!-- Vote -->
                         <div class="flex lg:flex-col items-center gap-2 p-4 rounded-xl border border-gray-200 dark:border-gray-700">
                             <button
@@ -730,6 +742,7 @@ function submitComment() {
                             <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z"/><path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"/></svg>
                             {{ saved ? 'Guardada' : 'Guardar' }}
                         </button>
+                        </template>
 
                         <!-- Stats -->
                         <div class="p-4 rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 space-y-2 text-sm">

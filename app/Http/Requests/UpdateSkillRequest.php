@@ -30,6 +30,9 @@ class UpdateSkillRequest extends FormRequest
             'use_case'          => ['nullable', 'string', 'max:500'],
             'resource_type'     => ['nullable', 'in:prompt,claude_skill,claude_plugin,mcp_server'],
             'changelog'         => ['nullable', 'string', 'max:500'],
+            // Solo cuenta mientras nadie más la ve (borrador, rechazada o privada):
+            // una publicada no puede volverse privada.
+            'visibility'        => ['nullable', 'in:public,private'],
         ];
     }
 }

@@ -76,7 +76,9 @@ class SkillImportCommand extends Command
                 continue;
             }
 
-            if (Skill::whereRaw('LOWER(title) = ?', [strtolower(trim($item['title']))])->exists()) {
+            // Una skill privada de un usuario no cuenta: no puede impedir que
+            // el catálogo publique una con el mismo título.
+            if (Skill::whereRaw('LOWER(title) = ?', [strtolower(trim($item['title']))])->where('status', '!=', Skill::PRIVATE)->exists()) {
                 $this->line("  ⚠ Título duplicado: {$item['title']} — omitida");
                 $skipped++;
                 continue;
@@ -132,7 +134,7 @@ class SkillImportCommand extends Command
 
     private function updateExisting(array $item): ?string
     {
-        $skill = Skill::where('slug', $item['slug'])->first();
+        $skill = Skill::where('slug', $item['slug'])->where('status', '!=', Skill::PRIVATE)->first();
 
         if (! $skill) {
             $this->line("  ⚠ No existe la skill {$item['slug']} — omitida");
@@ -198,8 +200,8 @@ class SkillImportCommand extends Command
 
     private function mergeExisting(array $item): ?string
     {
-        $from = Skill::where('slug', $item['slug'])->first();
-        $into = Skill::where('slug', $item['merge_into'])->first();
+        $from = Skill::where('slug', $item['slug'])->where('status', '!=', Skill::PRIVATE)->first();
+        $into = Skill::where('slug', $item['merge_into'])->where('status', '!=', Skill::PRIVATE)->first();
 
         if (! $from || ! $into) {
             $this->line("  ⚠ No existe {$item['slug']} o {$item['merge_into']} — omitida");

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Comment;
+use App\Models\Skill;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -35,6 +36,13 @@ class DashboardController extends Controller
             ->orderByDesc('created_at')
             ->get(self::COLUMNS);
 
+        // Skills privadas: solo las ve su autor, aquí y en su ficha.
+        $private = $user->skills()
+            ->where('status', Skill::PRIVATE)
+            ->with('profession:id,name,slug')
+            ->orderByDesc('updated_at')
+            ->get(self::COLUMNS);
+
         $published = $user->skills()
             ->published()
             ->with('profession:id,name,slug')
@@ -60,6 +68,7 @@ class DashboardController extends Controller
 
         return Inertia::render('Dashboard', [
             'pending' => $pending,
+            'private' => $private,
             'published' => $published,
             'stats' => [
                 'published' => (int) $totals->skills,

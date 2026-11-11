@@ -91,6 +91,21 @@ class SkillMarkdown
     }
 
     /**
+     * URL del SKILL.md. La de una skill privada lleva su enlace secreto, para
+     * que Claude Code la descargue sin iniciar sesión.
+     */
+    public static function url(Skill $skill): string
+    {
+        $parameters = ['skill' => $skill->slug];
+
+        if ($skill->isPrivate() && $skill->access_token) {
+            $parameters['token'] = $skill->access_token;
+        }
+
+        return route('skills.markdown', $parameters);
+    }
+
+    /**
      * Comando de terminal que instala el skill en el directorio personal.
      */
     public static function installCommand(Skill $skill): string
@@ -98,9 +113,9 @@ class SkillMarkdown
         $dir = '~/.claude/skills/'.self::name($skill);
 
         return sprintf(
-            'mkdir -p %s && curl -fsSL %s -o %s/SKILL.md',
+            'mkdir -p %s && curl -fsSL "%s" -o %s/SKILL.md',
             $dir,
-            route('skills.markdown', ['skill' => $skill->slug]),
+            self::url($skill),
             $dir,
         );
     }
@@ -140,7 +155,7 @@ class SkillMarkdown
     public static function installPrompt(iterable $skills): string
     {
         $skills = collect($skills);
-        $urls = $skills->map(fn (Skill $s) => '- '.route('skills.markdown', ['skill' => $s->slug]))->implode("\n");
+        $urls = $skills->map(fn (Skill $s) => '- '.self::url($s))->implode("\n");
         $what = $skills->count() === 1 ? 'esta skill' : "estas {$skills->count()} skills";
 
         // "con curl": WebFetch devuelve el contenido procesado por un modelo y

@@ -15,6 +15,9 @@ class CommentController extends Controller
 {
     public function store(Request $request, Skill $skill): RedirectResponse
     {
+        // Solo se comenta lo publicado: un borrador o una privada no existen para los demás.
+        abort_unless($skill->status === 'published', 404);
+
         $request->validate([
             'content' => 'required|string|max:2000',
             // La respuesta tiene que colgar de un comentario de esta misma skill.

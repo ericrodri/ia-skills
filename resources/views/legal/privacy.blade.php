@@ -46,6 +46,7 @@
                 <li>Nombre, email y contraseña. La contraseña se guarda cifrada con un algoritmo irreversible: nadie, tampoco nosotros, puede leerla.</li>
                 <li>Nombre de usuario y, si la escribes, una bio. Ambos aparecen en tu perfil público (<code>/autores/tu-usuario</code>).</li>
                 <li>Lo que publicas: skills, comentarios y sus versiones. Son públicos y aparecen con tu nombre.</li>
+                <li>Tus skills privadas, si guardas alguna: solo las ves tú. No aparecen en la web, en los buscadores, en la API ni en el resumen semanal, y no las revisamos ni las leemos. Cada una tiene un enlace secreto para instalarla en Claude Code: quien tenga ese enlace puede descargarla, así que no lo compartas si no quieres que otros la vean.</li>
                 <li>Tus votos y las skills que guardas. No se muestran a otras personas.</li>
                 <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave).</li>
                 <li>Mientras tienes la sesión abierta, la dirección IP y el navegador asociados a ella.</li>
@@ -71,11 +72,11 @@
             </ul>
             <p>La tipografía de la web se sirve desde nuestro propio servidor, así que cargar una página no envía tu dirección IP a terceros.</p>
             <p><strong>Enlaces de afiliado.</strong> Algunas fichas y guías recomiendan herramientas (por ejemplo, ElevenLabs) con un enlace de afiliado, marcado como tal junto al botón: si contratas un plan, recibimos una comisión sin que te cueste más. Al hacer clic contamos el clic (herramienta, día y página de origen, sin ningún dato tuyo) y te llevamos a la web de esa empresa, que puede usar sus propias cookies para atribuir la compra según su política de privacidad.</p>
-            <p>Lo que publicas en tu perfil, tus skills y tus comentarios es público: cualquiera puede verlo, y los buscadores pueden indexarlo.</p>
+            <p>Lo que publicas en tu perfil, tus skills y tus comentarios es público: cualquiera puede verlo, y los buscadores pueden indexarlo. Tus skills privadas no.</p>
 
             <h2 id="conservacion">5. Cuánto tiempo los guardamos</h2>
             <ul>
-                <li><strong>Cuenta:</strong> hasta que la borres. Al eliminarla desde tu perfil se borran también tus skills, comentarios, votos y guardadas.</li>
+                <li><strong>Cuenta:</strong> hasta que la borres. Al eliminarla desde tu perfil se borran también tus skills (también las privadas), comentarios, votos y guardadas.</li>
                 <li><strong>Sesiones:</strong> caducan tras {{ $sessionMinutes }} minutos sin actividad, salvo que marques «Recordarme».</li>
                 <li><strong>Resumen semanal sin cuenta:</strong> mientras sigas suscrito. Las altas que no se confirman y las bajas se borran a los 30 días.</li>
                 <li><strong>Estadísticas de instalación:</strong> el resumen de IP y navegador se descarta a las 24 horas. Solo queda el recuento total de cada skill, que no está asociado a nadie.</li>

@@ -36,6 +36,11 @@ class SkillMerger
             throw new InvalidArgumentException("La ficha de destino {$into->slug} ya está fusionada en otra.");
         }
 
+        // Las privadas son de su autor: nunca se fusionan con el catálogo.
+        if ($from->isPrivate() || $into->isPrivate()) {
+            throw new InvalidArgumentException('Una ficha privada no se puede fusionar.');
+        }
+
         DB::transaction(function () use ($from, $into) {
             DB::table('comments')->where('skill_id', $from->id)->update(['skill_id' => $into->id]);
 

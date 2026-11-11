@@ -10,6 +10,9 @@ class SavedSkillController extends Controller
 {
     public function toggle(Request $request, Skill $skill): JsonResponse
     {
+        // Solo se guarda lo publicado: un borrador o una privada no existen para los demás.
+        abort_unless($skill->status === 'published', 404);
+
         $user = $request->user();
 
         if ($user->hasSaved($skill)) {

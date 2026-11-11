@@ -11,6 +11,9 @@ class VoteController extends Controller
 {
     public function __invoke(Request $request, Skill $skill): JsonResponse
     {
+        // Solo se vota lo publicado: un borrador o una privada no existen para los demás.
+        abort_unless($skill->status === 'published', 404);
+
         $request->validate(['value' => 'required|in:1,-1']);
 
         $user = $request->user();

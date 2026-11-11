@@ -89,14 +89,22 @@ class SkillController extends Controller
     public function store(StoreSkillRequest $request): RedirectResponse
     {
         $data = $request->validated();
+        $private = ($data['visibility'] ?? 'public') === 'private';
+        unset($data['visibility']);
 
-        $skill = Skill::create([
+        $skill = new Skill([
             ...$data,
             'user_id' => $request->user()->id,
             'slug' => $this->uniqueSlug($data['title']),
             'status' => 'draft',
             'resource_type' => $data['resource_type'] ?? 'prompt',
         ]);
+
+        if ($private) {
+            $skill->makePrivate();
+        }
+
+        $skill->save();
 
         SkillVersion::create([
             'skill_id' => $skill->id,
@@ -108,7 +116,9 @@ class SkillController extends Controller
 
         // skills_count se incrementa solo cuando el admin la aprueba
         return redirect()->route('skills.show', $skill)
-            ->with('success', '¡Skill enviada! La revisaremos y la publicaremos en breve.');
+            ->with('success', $private
+                ? 'Skill guardada. Es privada: solo la ves tú.'
+                : '¡Skill enviada! La revisaremos y la publicaremos en breve.');
     }
 
     public function edit(Skill $skill): Response
@@ -130,16 +140,32 @@ class SkillController extends Controller
     {
         $data = $request->validated();
         $changelog = $data['changelog'] ?? null;
-        unset($data['changelog']);
+        $visibility = $data['visibility'] ?? null;
+        unset($data['changelog'], $data['visibility']);
 
         // Versionamos solo cuando cambia el contenido del prompt: editar metadatos
         // (título, dificultad, caso de uso...) no genera una versión nueva.
         $promptChanged = $data['prompt_content'] !== $skill->prompt_content;
 
-        DB::transaction(function () use ($skill, $data, $changelog, $promptChanged, $request) {
+        // Cambiar de privada a pública (o al revés) solo mientras nadie más la
+        // ve. Hacerla pública la manda a moderación, como una skill nueva.
+        $wasPrivate = $skill->isPrivate();
+        $visibilityChange = in_array($skill->status, Skill::OWNER_STATUSES, true)
+            && $visibility !== null
+            && ($visibility === 'private') !== $wasPrivate;
+
+        DB::transaction(function () use ($skill, $data, $changelog, $promptChanged, $request, $visibilityChange, $wasPrivate) {
             // El slug no se toca aunque cambie el título: las URLs ya publicadas,
             // indexadas y compartidas deben seguir resolviendo.
             $skill->fill($data);
+
+            if ($visibilityChange) {
+                if ($wasPrivate) {
+                    $skill->status = 'draft';
+                } else {
+                    $skill->makePrivate();
+                }
+            }
 
             if ($promptChanged) {
                 $skill->version = $skill->version + 1;
@@ -158,12 +184,14 @@ class SkillController extends Controller
             }
         });
 
-        return redirect()->route('skills.show', $skill)->with(
-            'success',
-            $promptChanged
-                ? "Skill actualizada. Se guardó la versión {$skill->version}."
-                : 'Skill actualizada.'
-        );
+        $message = match (true) {
+            $visibilityChange && $wasPrivate => 'Skill enviada a revisión. La publicaremos en cuanto la aprobemos.',
+            $visibilityChange => 'Skill guardada como privada: solo la ves tú.',
+            $promptChanged => "Skill actualizada. Se guardó la versión {$skill->version}.",
+            default => 'Skill actualizada.',
+        };
+
+        return redirect()->route('skills.show', $skill)->with('success', $message);
     }
 
     public function show(Request $request, Skill $skill): Response|RedirectResponse
@@ -210,7 +238,7 @@ class SkillController extends Controller
             'canEdit'   => $user ? $user->can('update', $skill) : false,
             'install'   => [
                 'name'     => SkillMarkdown::name($skill),
-                'url'      => route('skills.markdown', ['skill' => $skill->slug]),
+                'url'      => SkillMarkdown::url($skill),
                 'command'  => SkillMarkdown::installCommand($skill),
                 'prompt'   => SkillMarkdown::installPrompt([$skill]),
                 'mcp'      => SkillMarkdown::mcpAvailable() ? SkillMarkdown::mcpCommand() : null,

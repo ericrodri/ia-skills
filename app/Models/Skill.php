@@ -11,6 +11,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Str;
 
 #[ObservedBy([SkillObserver::class])]
 class Skill extends Model
@@ -44,7 +45,37 @@ class Skill extends Model
      */
     protected $hidden = [
         'search_vector',
+        // Enlace secreto del SKILL.md de una skill privada: nunca en un payload.
+        'access_token',
     ];
+
+    /** Solo la ve su autor. Ver la migración 2026_11_11_000001_add_private_skills. */
+    public const PRIVATE = 'private';
+
+    /** Estados que el autor puede cambiar entre sí: los que nadie más ve. */
+    public const OWNER_STATUSES = ['draft', 'rejected', self::PRIVATE];
+
+    public function isPrivate(): bool
+    {
+        return $this->status === self::PRIVATE;
+    }
+
+    /**
+     * Pasa la skill a privada, con su enlace secreto para el SKILL.md.
+     */
+    public function makePrivate(): void
+    {
+        $this->status = self::PRIVATE;
+        $this->access_token ??= Str::random(40);
+    }
+
+    public function hasAccessToken(?string $token): bool
+    {
+        return $this->isPrivate()
+            && $this->access_token !== null
+            && is_string($token)
+            && hash_equals($this->access_token, $token);
+    }
 
     protected $casts = [
         'estimated_minutes' => 'integer',

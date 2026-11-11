@@ -7,6 +7,8 @@ import Pagination from '@/Components/Pagination.vue'
 const props = defineProps({
     // Pendientes y rechazadas (todas) + publicadas (paginadas): ver DashboardController
     pending: { type: Array, default: () => [] },
+    // Skills privadas: solo las ve su autor
+    private: { type: Array, default: () => [] },
     published: { type: Object, required: true },
     stats: { type: Object, required: true },
     recentComments: { type: Array, default: () => [] },
@@ -66,8 +68,38 @@ const formatNumber = (n) => new Intl.NumberFormat('es-ES').format(n ?? 0)
             </div>
 
             <div class="lg:flex gap-10">
+                <div class="flex-1 min-w-0 space-y-10">
+                <!-- Skills privadas: solo las ve su autor -->
+                <section>
+                    <div class="flex flex-wrap items-end justify-between gap-3 mb-4">
+                        <h2 class="font-semibold text-gray-900 dark:text-gray-100">
+                            Solo para ti
+                            <span class="ml-2 text-xs font-normal text-gray-400 dark:text-gray-500">skills privadas, nadie más las ve</span>
+                        </h2>
+                        <Link v-if="private.length" :href="route('skills.create', { privada: 1 })" class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline">+ Guardar otra</Link>
+                    </div>
+
+                    <div v-if="!private.length" class="rounded-xl border border-dashed border-gray-300 dark:border-gray-700 p-6">
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Guarda aquí los prompts que usas en tu trabajo y no quieres publicar.</p>
+                        <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Los tendrás a mano para copiarlos, rellenar sus datos o instalarlos en Claude Code. No pasan por revisión ni aparecen en la web.</p>
+                        <Link :href="route('skills.create', { privada: 1 })" class="mt-4 inline-flex btn-secondary text-sm">Guardar una skill privada</Link>
+                    </div>
+
+                    <ul v-else class="divide-y divide-gray-100 dark:divide-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+                        <li v-for="skill in private" :key="skill.id" class="p-4 flex items-start justify-between gap-4">
+                            <div class="min-w-0">
+                                <Link :href="route('skills.show', skill.slug)" class="font-medium text-gray-900 dark:text-gray-100 hover:text-brand-600 dark:hover:text-brand-400 line-clamp-2">{{ skill.title }}</Link>
+                                <p class="mt-0.5 text-xs text-gray-400 dark:text-gray-500">
+                                    <span v-if="skill.profession">{{ skill.profession.name }} · </span>v{{ skill.version }}
+                                </p>
+                            </div>
+                            <Link :href="route('skills.edit', skill.slug)" class="shrink-0 text-xs text-gray-500 dark:text-gray-400 hover:text-brand-600">Editar</Link>
+                        </li>
+                    </ul>
+                </section>
+
                 <!-- Mis skills -->
-                <section class="flex-1 min-w-0">
+                <section>
                     <h2 class="font-semibold text-gray-900 dark:text-gray-100 mb-4">
                         Mis skills
                         <span v-if="stats.pending" class="ml-2 text-xs font-normal text-amber-600 dark:text-amber-400">{{ stats.pending }} pendiente{{ stats.pending === 1 ? '' : 's' }} de revisión</span>
@@ -104,6 +136,7 @@ const formatNumber = (n) => new Intl.NumberFormat('es-ES').format(n ?? 0)
 
                     <Pagination :paginator="published" />
                 </section>
+                </div>
 
                 <aside class="lg:w-80 shrink-0 mt-10 lg:mt-0 space-y-8">
                     <!-- Comentarios recibidos -->

@@ -15,7 +15,10 @@ class AdminController extends Controller
 {
     public function index(Request $request): Response
     {
-        $status = $request->get('status', 'draft');
+        // Las privadas no se moderan ni se listan: son solo de su autor.
+        $status = in_array($request->get('status'), ['draft', 'published', 'rejected'], true)
+            ? $request->get('status')
+            : 'draft';
 
         $skills = Skill::where('status', $status)
             ->with([
@@ -41,6 +44,9 @@ class AdminController extends Controller
 
     public function approve(Skill $skill): RedirectResponse
     {
+        // Aprobar una privada la publicaría sin que su autor lo pidiera.
+        abort_if($skill->isPrivate(), 404);
+
         $wasUnpublished = $skill->status !== 'published';
 
         $skill->update([
@@ -60,6 +66,8 @@ class AdminController extends Controller
 
     public function reject(Request $request, Skill $skill): RedirectResponse
     {
+        abort_if($skill->isPrivate(), 404);
+
         $request->validate([
             'reason' => 'required|string|max:1000',
         ]);

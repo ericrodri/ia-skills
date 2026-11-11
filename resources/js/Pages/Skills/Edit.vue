@@ -20,7 +20,16 @@ const form = useForm({
     use_case: props.skill.use_case ?? '',
     resource_type: props.skill.resource_type ?? 'prompt',
     changelog: '',
+    visibility: props.skill.status === 'private' ? 'private' : 'public',
 })
+
+// Pública o privada solo se elige mientras nadie más la ve: una publicada
+// no puede volverse privada (tiene votos, guardados y una URL indexada).
+const canChangeVisibility = computed(() => ['draft', 'rejected', 'private'].includes(props.skill.status))
+const visibilityOptions = [
+    { value: 'private', label: 'Solo para mí', desc: 'Privada: no se publica ni pasa por revisión.' },
+    { value: 'public', label: 'Compartirla', desc: 'La revisamos y la publicamos en el catálogo.' },
+]
 
 // El changelog solo tiene sentido si cambia el prompt: es lo único que se versiona.
 const promptChanged = computed(() => form.prompt_content !== props.skill.prompt_content)
@@ -72,6 +81,28 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
             </div>
 
             <form @submit.prevent="submit" class="space-y-8">
+
+                <!-- Visibilidad: solo mientras nadie más la ve -->
+                <fieldset v-if="canChangeVisibility">
+                    <legend class="mb-2 text-sm font-medium text-gray-700 dark:text-gray-300">¿Quién puede verla?</legend>
+                    <div class="grid grid-cols-2 gap-3">
+                        <label
+                            v-for="opt in visibilityOptions"
+                            :key="opt.value"
+                            class="cursor-pointer rounded-xl border-2 p-3 transition-all"
+                            :class="form.visibility === opt.value
+                                ? 'border-brand-400 bg-brand-50 dark:bg-brand-900/30'
+                                : 'border-gray-200 dark:border-gray-700 hover:border-gray-300 dark:hover:border-gray-600'"
+                        >
+                            <input type="radio" :value="opt.value" v-model="form.visibility" class="sr-only" />
+                            <span class="block text-sm font-semibold" :class="form.visibility === opt.value ? 'text-brand-700 dark:text-brand-300' : 'text-gray-700 dark:text-gray-300'">{{ opt.label }}</span>
+                            <span class="block mt-0.5 text-xs text-gray-500 dark:text-gray-400">{{ opt.desc }}</span>
+                        </label>
+                    </div>
+                    <p v-if="skill.status === 'private' && form.visibility === 'public'" class="mt-2 text-xs text-amber-700 dark:text-amber-400">
+                        Al guardar, la enviaremos a revisión. Dejará de ser privada y, si la aprobamos, cualquiera podrá verla.
+                    </p>
+                </fieldset>
 
                 <!-- Sección 1: Categorización -->
                 <div class="bg-white dark:bg-gray-800/60 rounded-2xl border border-gray-100 dark:border-gray-700 p-6 space-y-5">

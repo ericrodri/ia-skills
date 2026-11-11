@@ -85,8 +85,8 @@ class SkillMarkdownTest extends TestCase
                 ->where('install.name', 'mi-skill')
                 ->where('install.prompt', fn ($p) => str_starts_with($p, 'Instala esta skill de ia-skills.com')
                     && str_ends_with($p, '- '.route('skills.markdown', ['skill' => 'mi-skill'])))
-                ->where('install.command', 'mkdir -p ~/.claude/skills/mi-skill && curl -fsSL '
-                    .route('skills.markdown', ['skill' => 'mi-skill']).' -o ~/.claude/skills/mi-skill/SKILL.md'));
+                ->where('install.command', 'mkdir -p ~/.claude/skills/mi-skill && curl -fsSL "'
+                    .route('skills.markdown', ['skill' => 'mi-skill']).'" -o ~/.claude/skills/mi-skill/SKILL.md'));
     }
 
     public function test_version_endpoint_returns_the_version_and_the_previous_one(): void
