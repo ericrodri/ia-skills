@@ -356,4 +356,35 @@ class PrivateSkillsTest extends TestCase
 
         $this->assertSame($before, Skill::count());
     }
+
+    public function test_su_autor_puede_borrarla_y_nadie_mas(): void
+    {
+        SkillVersion::create(['skill_id' => $this->skill->id, 'user_id' => $this->owner->id, 'version' => 1, 'prompt_content' => 'x', 'changelog' => 'Versión inicial']);
+
+        $this->actingAs($this->owner)->get(route('skills.show', $this->skill->slug))
+            ->assertInertia(fn ($page) => $page->where('canDelete', true));
+
+        // Ni otra persona ni un admin.
+        $this->actingAs(User::factory()->create())->delete(route('skills.destroy', $this->skill->slug))->assertNotFound();
+        $this->actingAs(User::factory()->create(['is_admin' => true]))->delete(route('skills.destroy', $this->skill->slug))->assertNotFound();
+        $this->assertModelExists($this->skill);
+
+        $this->actingAs($this->owner)
+            ->delete(route('skills.destroy', $this->skill->slug))
+            ->assertRedirect(route('dashboard'));
+
+        $this->assertModelMissing($this->skill);
+        $this->assertSame(0, SkillVersion::where('skill_id', $this->skill->id)->count());
+    }
+
+    public function test_una_publicada_no_se_puede_borrar(): void
+    {
+        $published = Skill::published()->first();
+
+        $this->actingAs($this->owner)->get(route('skills.show', $published->slug))
+            ->assertInertia(fn ($page) => $page->where('canDelete', false));
+
+        $this->actingAs($this->owner)->delete(route('skills.destroy', $published->slug))->assertNotFound();
+        $this->assertModelExists($published);
+    }
 }

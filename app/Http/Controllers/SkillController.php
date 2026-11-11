@@ -240,6 +240,8 @@ class SkillController extends Controller
             'userVote'  => $user ? $user->hasVoted($skill) : null,
             'userSaved' => $user ? $user->hasSaved($skill) : false,
             'canEdit'   => $user ? $user->can('update', $skill) : false,
+            // Solo su autor y mientras nadie más la ve (SkillController::destroy).
+            'canDelete' => $user?->id === $skill->user_id && in_array($skill->status, Skill::OWNER_STATUSES, true),
             'install'   => [
                 'name'     => SkillMarkdown::name($skill),
                 'url'      => SkillMarkdown::url($skill),
@@ -276,6 +278,25 @@ class SkillController extends Controller
             'viaLink' => $viaLink,
             'url' => $isOwner ? SkillMarkdown::shareUrl($skill) : null,
         ];
+    }
+
+    /**
+     * Borra una skill propia mientras nadie más la ve: privada, borrador o
+     * rechazada. Las publicadas no, porque tienen votos, guardados de otras
+     * personas y una URL indexada. Versiones, votos, comentarios y guardados
+     * se borran en cascada.
+     */
+    public function destroy(Request $request, Skill $skill): RedirectResponse
+    {
+        abort_unless(
+            $request->user()->id === $skill->user_id && in_array($skill->status, Skill::OWNER_STATUSES, true),
+            404,
+        );
+
+        $title = $skill->title;
+        $skill->delete();
+
+        return redirect()->route('dashboard')->with('success', "Skill «{$title}» eliminada.");
     }
 
     /**

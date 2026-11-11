@@ -63,5 +63,10 @@ class AppServiceProvider extends ServiceProvider
         // La API es pública y sin sesión: se limita por token, o por IP si no lo hay.
         RateLimiter::for('api', fn (Request $request) => Limit::perMinute(60)
             ->by($request->query('api_key') ?? $request->bearerToken() ?? $request->ip()));
+
+        // Conector MCP: Claude encadena varias llamadas por pregunta. Se limita
+        // por clave (resumida, para no guardarla en claro en la caché) o por IP.
+        RateLimiter::for('mcp', fn (Request $request) => Limit::perMinute(120)
+            ->by('mcp:'.($request->route('clave') ? hash('sha256', $request->route('clave')) : $request->ip())));
     }
 }

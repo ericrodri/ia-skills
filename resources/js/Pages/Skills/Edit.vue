@@ -1,5 +1,5 @@
 <script setup>
-import { Head, Link, useForm } from '@inertiajs/vue3'
+import { Head, Link, router, useForm, usePage } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import { errorLabels, scrollToFirstError } from '@/utils/formErrors'
@@ -27,6 +27,13 @@ const form = useForm({
 // Pública o privada solo se elige mientras nadie más la ve: una publicada
 // no puede volverse privada (tiene votos, guardados y una URL indexada).
 const canChangeVisibility = computed(() => ['draft', 'rejected', 'private'].includes(props.skill.status))
+
+// Borrar: solo su autor (un admin puede editar borradores ajenos, no borrarlos).
+const canDelete = computed(() => canChangeVisibility.value && props.skill.user_id === usePage().props.auth?.user?.id)
+function deleteSkill() {
+    if (!confirm(`¿Eliminar «${props.skill.title}»? Se borra para siempre, también su historial, y su enlace deja de funcionar.`)) return
+    router.delete(route('skills.destroy', props.skill.slug))
+}
 const visibilityOptions = [
     { value: 'private', label: 'Privada', desc: 'Para ti y tu equipo: no se publica ni pasa por revisión. La compartes con un enlace.' },
     { value: 'public', label: 'Compartirla', desc: 'La revisamos y la publicamos en el catálogo.' },
@@ -310,6 +317,12 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                 </div>
 
             </form>
+
+            <div v-if="canDelete" class="mt-12 rounded-2xl border border-red-200 dark:border-red-900/60 p-5">
+                <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Eliminar esta skill</h2>
+                <p class="mt-1 text-xs text-gray-500 dark:text-gray-400">Se borra para siempre, con su historial de versiones. Si la compartiste, su enlace deja de funcionar.</p>
+                <button type="button" @click="deleteSkill" class="mt-3 px-3 py-1.5 text-sm font-medium rounded-lg border border-red-300 dark:border-red-800 text-red-600 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors">Eliminar skill</button>
+            </div>
         </div>
     </AppLayout>
 </template>

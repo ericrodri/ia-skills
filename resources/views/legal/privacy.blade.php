@@ -48,7 +48,7 @@
                 <li>Lo que publicas: skills, comentarios y sus versiones. Son públicos y aparecen con tu nombre.</li>
                 <li>Tus skills privadas, si guardas alguna: solo las ves tú. No aparecen en la web, en los buscadores, en la API ni en el resumen semanal, y no las revisamos ni las leemos. Cada una tiene un enlace secreto para compartirla con quien quieras o instalarla en Claude Code: quien tenga ese enlace puede verla y descargarla, aunque no tenga cuenta. Puedes cambiar el enlace cuando quieras desde la propia skill y el anterior deja de funcionar.</li>
                 <li>Tus votos y las skills que guardas. No se muestran a otras personas.</li>
-                <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave).</li>
+                <li>Tus preferencias de email y, si la generas, tu clave de API (solo guardamos un resumen cifrado, no la clave). Esa clave es la que usa el conector de Claude: con ella, Claude puede leer tus skills, también las privadas, cuando tú se lo pides en una conversación. Solo lectura: no puede cambiar ni borrar nada. Lo que Claude haga con lo que lee se rige por las condiciones de Anthropic. Si generas una clave nueva o la revocas, el conector deja de funcionar.</li>
                 <li>Mientras tienes la sesión abierta, la dirección IP y el navegador asociados a ella.</li>
             </ul>
             <p><strong>Si te suscribes al resumen semanal sin cuenta</strong>, tratamos tu email, la página desde la que te apuntaste y las fechas de alta, confirmación y baja.</p>

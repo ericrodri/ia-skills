@@ -105,6 +105,8 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
     Route::get('/skills/{skill:slug}/editar', [SkillController::class, 'edit'])->name('skills.edit');
     Route::patch('/skills/{skill:slug}', [SkillController::class, 'update'])->middleware('throttle:skill-writes')->name('skills.update');
+    // Borrar una skill propia que nadie más ve (privada, borrador o rechazada)
+    Route::delete('/skills/{skill:slug}', [SkillController::class, 'destroy'])->middleware('throttle:skill-writes')->name('skills.destroy');
 
     Route::post('/skills/{skill:slug}/votar', VoteController::class)->middleware('throttle:votes')->name('skills.vote');
     Route::post('/skills/{skill:slug}/guardar', [SavedSkillController::class, 'toggle'])->middleware('throttle:votes')->name('skills.save');

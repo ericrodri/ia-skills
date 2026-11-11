@@ -15,6 +15,8 @@ const props = defineProps({
     userVote: { type: Number, default: null },
     userSaved: { type: Boolean, default: false },
     canEdit: { type: Boolean, default: false },
+    // Solo su autor y mientras nadie más la ve (privada, borrador o rechazada).
+    canDelete: { type: Boolean, default: false },
     // SKILL.md instalable: { name, url, command } (App\Support\SkillMarkdown)
     install: { type: Object, default: null },
     // Enlazado interno (App\Support\RelatedContent). Las guías son Blade:
@@ -122,6 +124,11 @@ function copyShareLink() {
     navigator.clipboard.writeText(props.share.url)
     shareCopied.value = true
     setTimeout(() => shareCopied.value = false, 2000)
+}
+
+function deleteSkill() {
+    if (!confirm(`¿Eliminar «${props.skill.title}»? Se borra para siempre, también su historial, y su enlace deja de funcionar.`)) return
+    router.delete(route('skills.destroy', props.skill.slug))
 }
 
 function resetShareLink() {
@@ -426,6 +433,7 @@ function submitComment() {
 
                     <div class="flex items-start justify-between gap-4">
                         <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-gray-100 leading-tight">{{ skill.title }}</h1>
+                        <div v-if="canEdit || canDelete" class="shrink-0 flex flex-col sm:flex-row gap-2">
                         <Link
                             v-if="canEdit"
                             :href="route('skills.edit', skill.slug)"
@@ -433,6 +441,15 @@ function submitComment() {
                         >
                             <span aria-hidden="true">✏️</span> Editar
                         </Link>
+                        <button
+                            v-if="canDelete"
+                            type="button"
+                            @click="deleteSkill"
+                            class="shrink-0 mt-1 inline-flex items-center gap-1.5 rounded-lg border border-gray-200 dark:border-gray-700 px-3 py-1.5 text-sm font-medium text-gray-600 dark:text-gray-300 hover:border-red-300 hover:text-red-600 dark:hover:border-red-500 dark:hover:text-red-400 transition-colors"
+                        >
+                            <span aria-hidden="true">🗑</span> Eliminar
+                        </button>
+                        </div>
                     </div>
                     <p class="mt-3 text-gray-600 dark:text-gray-400 dark:text-gray-500 leading-relaxed">{{ skill.description }}</p>
 

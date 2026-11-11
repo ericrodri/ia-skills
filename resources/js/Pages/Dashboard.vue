@@ -76,7 +76,10 @@ const formatNumber = (n) => new Intl.NumberFormat('es-ES').format(n ?? 0)
                             Solo para ti
                             <span class="ml-2 text-xs font-normal text-gray-400 dark:text-gray-500">skills privadas: solo tú y quien tenga su enlace</span>
                         </h2>
-                        <Link v-if="private.length" :href="route('skills.create', { privada: 1 })" class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline">+ Guardar otra</Link>
+                        <div v-if="private.length" class="flex items-center gap-4">
+                            <a :href="route('profile.edit') + '#conector'" class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline">Úsalas desde Claude</a>
+                            <Link :href="route('skills.create', { privada: 1 })" class="text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline">+ Guardar otra</Link>
+                        </div>
                     </div>
 
                     <div v-if="!private.length" class="rounded-xl border border-dashed border-gray-300 dark:border-gray-700 p-6">
