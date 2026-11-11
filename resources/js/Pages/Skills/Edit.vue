@@ -2,6 +2,7 @@
 import { Head, Link, useForm } from '@inertiajs/vue3'
 import { computed } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
+import { errorLabels, scrollToFirstError } from '@/utils/formErrors'
 
 const props = defineProps({
     skill: Object,
@@ -48,8 +49,10 @@ const difficultyOptions = [
 ]
 
 function submit() {
-    form.patch(route('skills.update', props.skill.slug))
+    form.patch(route('skills.update', props.skill.slug), { preserveScroll: true, onError: scrollToFirstError })
 }
+
+const missingFields = computed(() => errorLabels(form.errors))
 
 const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 placeholder-gray-400 dark:placeholder-gray-500 px-4 py-2.5 text-sm focus:border-brand-400 focus:ring-2 focus:ring-brand-100 dark:focus:ring-brand-900/30 outline-none transition-colors'
 </script>
@@ -115,7 +118,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             <option value="" disabled>Selecciona una profesión…</option>
                             <option v-for="p in professions" :key="p.id" :value="p.id">{{ p.name }}</option>
                         </select>
-                        <p v-if="form.errors.profession_id" class="mt-1.5 text-xs text-red-500">{{ form.errors.profession_id }}</p>
+                        <p data-field-error v-if="form.errors.profession_id" class="mt-1.5 text-xs text-red-500">{{ form.errors.profession_id }}</p>
                     </div>
 
                     <!-- Resource type -->
@@ -157,7 +160,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                                 ]"
                             >{{ t }}</button>
                         </div>
-                        <p v-if="form.errors.tool_name" class="mt-1.5 text-xs text-red-500">{{ form.errors.tool_name }}</p>
+                        <p data-field-error v-if="form.errors.tool_name" class="mt-1.5 text-xs text-red-500">{{ form.errors.tool_name }}</p>
                     </div>
 
                     <!-- Difficulty -->
@@ -197,7 +200,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             :class="inputClass"
                         />
                         <div class="flex justify-between mt-1.5">
-                            <p v-if="form.errors.title" class="text-xs text-red-500">{{ form.errors.title }}</p>
+                            <p data-field-error v-if="form.errors.title" class="text-xs text-red-500">{{ form.errors.title }}</p>
                             <p class="text-xs text-gray-400 dark:text-gray-500 ml-auto">{{ form.title.length }}/200</p>
                         </div>
                     </div>
@@ -212,7 +215,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             :class="inputClass + ' resize-none'"
                         />
                         <div class="flex justify-between mt-1.5">
-                            <p v-if="form.errors.description" class="text-xs text-red-500">{{ form.errors.description }}</p>
+                            <p data-field-error v-if="form.errors.description" class="text-xs text-red-500">{{ form.errors.description }}</p>
                             <p class="text-xs text-gray-400 dark:text-gray-500 ml-auto">{{ form.description.length }}/1000</p>
                         </div>
                     </div>
@@ -228,7 +231,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             rows="12"
                             :class="inputClass + ' font-mono resize-y'"
                         />
-                        <p v-if="form.errors.prompt_content" class="mt-1.5 text-xs text-red-500">{{ form.errors.prompt_content }}</p>
+                        <p data-field-error v-if="form.errors.prompt_content" class="mt-1.5 text-xs text-red-500">{{ form.errors.prompt_content }}</p>
                     </div>
 
                     <!-- Changelog: solo cuando cambia el prompt -->
@@ -247,7 +250,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                         <p class="mt-2 text-xs text-brand-700 dark:text-brand-400">
                             Al cambiar el prompt se guardará la versión v{{ skill.version + 1 }}. Las anteriores quedan en el historial.
                         </p>
-                        <p v-if="form.errors.changelog" class="mt-1.5 text-xs text-red-500">{{ form.errors.changelog }}</p>
+                        <p data-field-error v-if="form.errors.changelog" class="mt-1.5 text-xs text-red-500">{{ form.errors.changelog }}</p>
                     </div>
                 </div>
 
@@ -268,7 +271,7 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                             max="480"
                             :class="inputClass"
                         />
-                        <p v-if="form.errors.estimated_minutes" class="mt-1.5 text-xs text-red-500">{{ form.errors.estimated_minutes }}</p>
+                        <p data-field-error v-if="form.errors.estimated_minutes" class="mt-1.5 text-xs text-red-500">{{ form.errors.estimated_minutes }}</p>
                     </div>
 
                     <!-- Use case -->
@@ -285,6 +288,10 @@ const inputClass = 'w-full rounded-xl border border-gray-200 dark:border-gray-70
                         />
                     </div>
                 </div>
+
+                <p v-if="missingFields.length" data-field-error role="alert" class="rounded-xl border border-red-200 dark:border-red-800 bg-red-50 dark:bg-red-900/20 px-4 py-3 text-sm text-red-700 dark:text-red-300">
+                    No se ha guardado. Revisa: {{ missingFields.join(', ') }}.
+                </p>
 
                 <!-- Submit -->
                 <div class="flex items-center gap-4">

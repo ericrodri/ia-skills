@@ -343,4 +343,17 @@ class PrivateSkillsTest extends TestCase
             ->post(route('skills.share.reset', $published->slug))
             ->assertNotFound();
     }
+
+    public function test_sin_herramienta_avisa_en_espanol_y_no_crea_nada(): void
+    {
+        $before = Skill::count();
+
+        $this->actingAs($this->owner)
+            ->from(route('skills.create'))
+            ->post(route('skills.store'), $this->payload(['tool_name' => '', 'visibility' => 'private']))
+            ->assertRedirect(route('skills.create'))
+            ->assertSessionHasErrors(['tool_name' => 'El campo herramienta es obligatorio.']);
+
+        $this->assertSame($before, Skill::count());
+    }
 }

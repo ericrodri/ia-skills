@@ -1,0 +1,95 @@
+<?php
+
+/*
+ * Mensajes de validación en español. Sin este fichero, los formularios
+ * mostraban la clave tal cual («validation.required») junto a cada campo.
+ * Si añades una regla nueva a un formulario, añade aquí su mensaje.
+ */
+return [
+    'accepted' => 'Debes aceptar el campo :attribute.',
+    'active_url' => 'El campo :attribute no es una URL válida.',
+    'alpha_dash' => 'El campo :attribute solo puede tener letras, números, guiones y guiones bajos.',
+    'alpha_num' => 'El campo :attribute solo puede tener letras y números.',
+    'array' => 'El campo :attribute debe ser una lista.',
+    'boolean' => 'El campo :attribute debe ser sí o no.',
+    'between' => [
+        'numeric' => 'El campo :attribute debe estar entre :min y :max.',
+        'string' => 'El campo :attribute debe tener entre :min y :max caracteres.',
+        'array' => 'El campo :attribute debe tener entre :min y :max elementos.',
+        'file' => 'El campo :attribute debe pesar entre :min y :max kilobytes.',
+    ],
+    'confirmed' => 'La confirmación del campo :attribute no coincide.',
+    'current_password' => 'La contraseña no es correcta.',
+    'date' => 'El campo :attribute no es una fecha válida.',
+    'different' => 'El campo :attribute y :other deben ser distintos.',
+    'email' => 'El campo :attribute debe ser un email válido.',
+    'exists' => 'El valor elegido en el campo :attribute no es válido.',
+    'image' => 'El campo :attribute debe ser una imagen.',
+    'in' => 'El valor elegido en el campo :attribute no es válido.',
+    'integer' => 'El campo :attribute debe ser un número entero.',
+    'lowercase' => 'El campo :attribute debe ir en minúsculas.',
+    'max' => [
+        'numeric' => 'El campo :attribute no puede ser mayor que :max.',
+        'string' => 'El campo :attribute no puede tener más de :max caracteres.',
+        'array' => 'El campo :attribute no puede tener más de :max elementos.',
+        'file' => 'El campo :attribute no puede pesar más de :max kilobytes.',
+    ],
+    'mimes' => 'El campo :attribute debe ser un archivo de tipo :values.',
+    'min' => [
+        'numeric' => 'El campo :attribute debe ser al menos :min.',
+        'string' => 'El campo :attribute debe tener al menos :min caracteres.',
+        'array' => 'El campo :attribute debe tener al menos :min elementos.',
+        'file' => 'El campo :attribute debe pesar al menos :min kilobytes.',
+    ],
+    'not_in' => 'El valor elegido en el campo :attribute no es válido.',
+    'numeric' => 'El campo :attribute debe ser un número.',
+    'password' => [
+        'letters' => 'El campo :attribute debe tener al menos una letra.',
+        'mixed' => 'El campo :attribute debe tener al menos una mayúscula y una minúscula.',
+        'numbers' => 'El campo :attribute debe tener al menos un número.',
+        'symbols' => 'El campo :attribute debe tener al menos un símbolo.',
+        'uncompromised' => 'Esa contraseña ha aparecido en una filtración de datos. Elige otra.',
+    ],
+    'regex' => 'El formato del campo :attribute no es válido.',
+    'required' => 'El campo :attribute es obligatorio.',
+    'required_if' => 'El campo :attribute es obligatorio cuando :other es :value.',
+    'required_with' => 'El campo :attribute es obligatorio cuando hay :values.',
+    'same' => 'El campo :attribute y :other deben coincidir.',
+    'size' => [
+        'numeric' => 'El campo :attribute debe ser :size.',
+        'string' => 'El campo :attribute debe tener :size caracteres.',
+        'array' => 'El campo :attribute debe tener :size elementos.',
+        'file' => 'El campo :attribute debe pesar :size kilobytes.',
+    ],
+    'string' => 'El campo :attribute debe ser un texto.',
+    'unique' => 'Ese :attribute ya está en uso.',
+    'url' => 'El campo :attribute debe ser una URL válida.',
+
+    'custom' => [],
+
+    // Nombres de los campos tal como se ven en los formularios.
+    'attributes' => [
+        'bio' => 'bio',
+        'changelog' => 'qué ha cambiado',
+        'content' => 'comentario',
+        'current_password' => 'contraseña actual',
+        'description' => 'descripción',
+        'difficulty' => 'dificultad',
+        'email' => 'email',
+        'estimated_minutes' => 'tiempo estimado',
+        'name' => 'nombre',
+        'password' => 'contraseña',
+        'password_confirmation' => 'confirmación de la contraseña',
+        'profession_id' => 'profesión',
+        'prompt_content' => 'prompt',
+        'resource_type' => 'tipo',
+        'title' => 'título',
+        'tool_name' => 'herramienta',
+        'use_case' => 'caso de uso',
+        'username' => 'nombre de usuario',
+        'visibility' => 'visibilidad',
+        'company' => 'empresa',
+        'message' => 'mensaje',
+        'team_size' => 'tamaño del equipo',
+    ],
+];
