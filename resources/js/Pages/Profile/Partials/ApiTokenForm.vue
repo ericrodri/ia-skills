@@ -77,12 +77,13 @@ const boxClass = 'flex-1 min-w-0 rounded-lg border border-gray-200 dark:border-g
 
                 <div class="rounded-lg bg-brand-50 dark:bg-brand-900/20 border border-brand-100 dark:border-brand-800 px-4 py-3 text-sm text-brand-900 dark:text-brand-200 space-y-3">
                     <div>
-                        <p class="font-medium">En Claude (web, escritorio o móvil)</p>
+                        <p class="font-medium">En Claude (web o escritorio)</p>
                         <ol class="mt-1 list-decimal list-inside space-y-0.5 text-brand-800 dark:text-brand-300">
-                            <li>Abre <strong>Ajustes → Conectores</strong> y pulsa <strong>Añadir conector personalizado</strong>.</li>
-                            <li>Ponle de nombre <strong>ia-skills</strong> y pega la dirección de arriba. No hace falta nada más.</li>
-                            <li>En una conversación, actívalo desde el botón de herramientas y pídele tus skills.</li>
+                            <li>Abre <strong>Personalizar → Conectores</strong> (<a href="https://claude.ai/customize/connectors" target="_blank" rel="noopener" class="underline">claude.ai/customize/connectors</a>), pulsa <strong>Añadir</strong> y elige <strong>conector personalizado</strong>.</li>
+                            <li>Ponle de nombre <strong>ia-skills</strong>, pega la dirección de arriba y, en la autenticación, elige <strong>sin inicio de sesión</strong>.</li>
+                            <li>En una conversación, pulsa el <strong>+</strong> de abajo a la izquierda, entra en <strong>Conectores</strong>, actívalo y pídele tus skills.</li>
                         </ol>
+                        <p class="mt-2 text-xs text-brand-700 dark:text-brand-400">Paso a paso y ejemplos de qué pedirle: <a href="/guias/conectar-ia-skills-a-claude" class="underline">cómo conectar ia-skills a Claude</a>.</p>
                     </div>
                     <div>
                         <p class="font-medium">En Claude Code</p>

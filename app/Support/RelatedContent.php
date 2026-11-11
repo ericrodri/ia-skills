@@ -233,6 +233,7 @@ class RelatedContent
         'analisis-de-competencia-seo' => [['marketing'], 'competencia'],
         'que-es-jev-modelo-system-one' => [['desarrollo'], 'agente'],
         'conectar-claude-con-unity' => [['desarrollo'], 'mcp'],
+        'conectar-ia-skills-a-claude' => [['desarrollo', 'freelancers', 'marketing'], null],
         'skills-de-ia-mas-virales' => [['desarrollo', 'diseno', 'marketing'], null],
     ];
 

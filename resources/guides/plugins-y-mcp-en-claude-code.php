@@ -10,9 +10,9 @@ return [
     'published' => '2026-08-24',
     'updated' => '2026-08-26',
     'readingMinutes' => 7,
-    'words' => 1120,
+    'words' => 1163,
     'about' => 'Model Context Protocol',
-    'related' => ['que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
+    'related' => ['conectar-ia-skills-a-claude', 'que-son-los-skills-de-claude-code', 'como-crear-un-skill-para-claude-code', 'automatizar-tareas-con-ia-en-el-trabajo'],
     'toc' => [
         'tres-piezas' => 'Tres piezas, tres problemas distintos',
         'plugins' => 'Plugins: empaquetar lo que ya funciona',
@@ -78,6 +78,8 @@ return [
 </ul>
 
 <p>Lo interesante no es la conexión en sí, es lo que habilita: dejar de ser el humano que copia datos de un sistema a otro. «Mira las incidencias abiertas de esta semana, agrúpalas por causa raíz y escribe el resumen para el comité» es una tarea que sin MCP implica exportar un CSV, y con MCP no implica nada.</p>
+
+<p>Un ejemplo sencillo para probarlo: el <a href="/guias/conectar-ia-skills-a-claude">conector de ia-skills para Claude</a> deja que Claude busque y lea prompts del catálogo, o tus skills privadas, desde la propia conversación.</p>
 
 <p>El precio es real: hay que instalar y mantener el servidor, gestionar credenciales y decidir permisos. Por eso el criterio es sencillo: <strong>monta un MCP cuando el trasiego manual de datos te cueste más de una hora a la semana.</strong> Por debajo de eso, no compensa.</p>
 

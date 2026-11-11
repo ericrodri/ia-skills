@@ -127,6 +127,7 @@ class Guides
         'ia-para-programar',
         'claude-code-vs-cursor',
         'plugins-y-mcp-en-claude-code',
+        'conectar-ia-skills-a-claude',
         'automatizar-tareas-con-ia-en-el-trabajo',
         'automatizar-sin-programar-n8n-make-zapier',
         'crear-tu-herramienta-con-ia-sin-programar',

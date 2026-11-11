@@ -336,6 +336,19 @@ const faqItems = [
                         </div>
                     </div>
                 </div>
+
+                <!-- Atajo: el conector de Claude se salta los tres pasos.
+                     La guía es Blade: enlace con <a>, nunca con <Link>. -->
+                <div class="mt-14 rounded-2xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
+                    <div class="text-4xl shrink-0" aria-hidden="true">🔌</div>
+                    <div class="flex-1">
+                        <h3 class="font-semibold text-gray-900 dark:text-white">O deja que Claude las busque por ti</h3>
+                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                            Añade ia-skills como conector en Claude y pídele «búscame un prompt para revisar contratos» sin salir de la conversación. Funciona en la web, la app de escritorio y Claude Code, también con el plan gratuito. Con tu cuenta, además, ve tus skills privadas.
+                        </p>
+                    </div>
+                    <a href="/guias/conectar-ia-skills-a-claude" class="btn-primary shrink-0 text-center">Cómo conectarlo</a>
+                </div>
             </section>
 
             <!-- AI Tools section -->

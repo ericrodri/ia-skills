@@ -10,9 +10,9 @@ return [
     'published' => '2026-09-30',
     'updated' => '2026-09-30',
     'readingMinutes' => 9,
-    'words' => 1456,
+    'words' => 1502,
     'about' => 'Uso práctico de Claude, el asistente de IA de Anthropic, en el entorno profesional',
-    'related' => ['claude-vs-chatgpt-para-trabajar', 'gpts-proyectos-y-skills', 'que-son-los-skills-de-claude-code', 'como-usar-chatgpt', 'como-usar-gemini', 'como-escribir-prompts-efectivos'],
+    'related' => ['conectar-ia-skills-a-claude', 'claude-vs-chatgpt-para-trabajar', 'gpts-proyectos-y-skills', 'que-son-los-skills-de-claude-code', 'como-usar-chatgpt', 'como-usar-gemini', 'como-escribir-prompts-efectivos'],
     'toc' => [
         'empezar' => 'Empezar: cuenta, planes y ajustes',
         'pedir' => 'Cómo pedirle las cosas',
@@ -86,7 +86,7 @@ contradice las tarifas.</code></pre>
 
 <ul>
     <li><strong>Artefactos.</strong> Cuando pides un documento, una tabla, un diagrama o una pequeña aplicación, Claude lo abre en un panel aparte que puedes editar, descargar o compartir. Muchas personas construyen así calculadoras o formularios sin saber programar, como contamos en <a href="/guias/crear-tu-herramienta-con-ia-sin-programar">crear tu herramienta con IA sin programar</a>.</li>
-    <li><strong>Conectores.</strong> Permiten a Claude consultar tus herramientas: Google Drive, Gmail, el calendario, Notion y muchas más. Actívalos solo los que vayas a usar. La tecnología que hay detrás, MCP, se explica en <a href="/guias/plugins-y-mcp-en-claude-code">plugins y MCP</a>.</li>
+    <li><strong>Conectores.</strong> Permiten a Claude consultar tus herramientas: Google Drive, Gmail, el calendario, Notion y muchas más. Actívalos solo los que vayas a usar. La tecnología que hay detrás, MCP, se explica en <a href="/guias/plugins-y-mcp-en-claude-code">plugins y MCP</a>. Si usas nuestros prompts, puedes <a href="/guias/conectar-ia-skills-a-claude">conectar ia-skills a Claude</a> y pedírselos sin salir del chat.</li>
     <li><strong>Skills.</strong> Son paquetes de instrucciones y archivos que enseñan a Claude a hacer una tarea concreta a tu manera: preparar un informe con tu plantilla, revisar textos con tu guía de estilo. Qué son y cómo se crean está en la guía de <a href="/guias/que-son-los-skills-de-claude-code">qué son los skills</a>.</li>
 </ul>
 
