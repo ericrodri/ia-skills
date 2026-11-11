@@ -36,6 +36,9 @@ class AiUsage
         'PerplexityBot' => ['Perplexity (índice)', 'asistente'],
         'MistralAI-User' => ['Mistral', 'asistente'],
         'DuckAssistBot' => ['DuckDuckGo IA', 'asistente'],
+        // Parallel Web Systems: Shap-User lee a petición de un usuario; su
+        // rastreador, ShapBot, va con los índices.
+        'Shap-User' => ['Parallel', 'asistente'],
         'ia-skills-cli' => ['CLI y MCP de ia-skills', 'agente'],
         'claude-code' => ['Claude Code', 'agente'],
         'GPTBot' => ['OpenAI (entrenamiento)', 'indice'],
@@ -48,6 +51,9 @@ class AiUsage
         'Bytespider' => ['ByteDance', 'indice'],
         'CCBot' => ['Common Crawl', 'indice'],
         'cohere-ai' => ['Cohere', 'indice'],
+        'ShapBot' => ['Parallel (índice)', 'indice'],
+        'ExaSearchBot' => ['Exa (índice)', 'indice'],
+        'AIWebIndex' => ['AIWebIndex', 'indice'],
     ];
 
     /** Descargas directas de skill.md sin navegador: así instala Claude Code con curl. */

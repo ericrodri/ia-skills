@@ -38,6 +38,32 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
+# ShapBot (Parallel Web Systems) puede leer todo el contenido, pero el 11 de
+# noviembre de 2026 descargó los archivos de /build/ unas 300.000 veces en un
+# día. No le sirven para indexar: no se los pedimos. Un grupo propio sustituye
+# al de «*», así que repite sus reglas. A Google no se le aplica: necesita
+# /build/ para ver las páginas, que se pintan con JavaScript.
+User-agent: ShapBot
+Allow: /
+Disallow: /build/
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /guardadas
+Disallow: /admin/
+Disallow: /ir/
+Disallow: /skills/crear
+Disallow: /login
+Disallow: /register
+Disallow: /forgot-password
+Disallow: /reset-password
+Disallow: /verify-email
+Disallow: /confirm-password
+Disallow: /*/editar$
+Disallow: /*?q=
+Disallow: /*&q=
+Disallow: /*?sort=
+Disallow: /*&sort=
+
 Sitemap: https://ia-skills.com/sitemap.xml
 
 # Índice en Markdown para motores generativos: https://ia-skills.com/llms.txt

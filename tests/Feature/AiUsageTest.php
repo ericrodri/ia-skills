@@ -26,6 +26,28 @@ class AiUsageTest extends TestCase
         $this->assertSame('Descarga directa (curl…)', AiUsage::classify('curl/8.5.0', '/skills/x/skill.md')['agent']);
         $this->assertSame(['agent' => 'Google y Gemini', 'grp' => 'indice', 'kind' => 'ficha', 'path' => ''],
             AiUsage::classify('Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)', '/skills/x'));
+
+        // Parallel: su rastreador y su lector a petición de un usuario.
+        $this->assertSame(['Parallel (índice)', 'indice'], array_values(array_slice(
+            AiUsage::classify('Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ShapBot/0.1.0', '/skills/x'), 0, 2)));
+        $this->assertSame('asistente', AiUsage::classify('Shap-User/0.1.0', '/guias/x')['grp']);
+        // Sus descargas de /build/ no son contenido.
+        $this->assertNull(AiUsage::classify('Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko); compatible; ShapBot/0.1.0', '/build/assets/app.js'));
+    }
+
+    public function test_robots_txt_pide_a_shapbot_que_no_descargue_build_sin_tocar_a_google(): void
+    {
+        $robots = file_get_contents(public_path('robots.txt'));
+
+        $this->assertMatchesRegularExpression('/User-agent: ShapBot\nAllow: \/\nDisallow: \/build\//', $robots);
+        // El grupo general no lo prohíbe: Google necesita /build/ para ver las páginas.
+        $general = strstr(strstr($robots, 'User-agent: *'), 'User-agent: GPTBot', true);
+        $this->assertStringNotContainsString('/build/', $general);
+        // El grupo propio repite las zonas privadas del general.
+        $shap = strstr(strstr($robots, 'User-agent: ShapBot'), 'Sitemap:', true);
+        foreach (['/dashboard', '/profile', '/admin/', '/*?q='] as $rule) {
+            $this->assertStringContainsString("Disallow: {$rule}", $shap);
+        }
     }
 
     public function test_ignora_navegadores_estaticos_y_curl_fuera_de_skill_md(): void
