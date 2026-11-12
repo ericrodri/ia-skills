@@ -9,6 +9,7 @@ use App\Models\Skill;
 use App\Models\SkillVersion;
 use App\Support\Affiliates;
 use App\Support\RelatedContent;
+use App\Support\SearchMisses;
 use App\Support\Seo;
 use App\Support\SiteData;
 use App\Support\SkillMarkdown;
@@ -65,6 +66,14 @@ class SkillController extends Controller
 
         $skills = $query->paginate(20)->withQueryString();
 
+        // Sin resultados: se apunta la búsqueda (qué fichas faltan) y, en vez
+        // de una página vacía, se sugieren fichas cercanas.
+        $suggestions = [];
+        if ($request->filled('q') && $skills->total() === 0) {
+            SearchMisses::record($request, (string) $request->q);
+            $suggestions = $this->searchSuggestions((string) $request->q);
+        }
+
         $this->shareIndexSeo($request, $skills);
 
         return Inertia::render('Skills/Index', [
@@ -74,7 +83,27 @@ class SkillController extends Controller
             // Solo las herramientas con skills publicadas: ofrecer "Midjourney"
             // como filtro para llegar a un listado vacío es un callejón sin salida.
             'tools' => SiteData::tools(),
+            'suggestions' => $suggestions,
         ]);
+    }
+
+    /**
+     * Fichas para sugerir cuando una búsqueda no encuentra nada: primero las
+     * que coinciden con alguna de sus palabras (sin los filtros aplicados) y,
+     * si tampoco hay, las más vistas.
+     */
+    private function searchSuggestions(string $term): Collection
+    {
+        $base = fn () => Skill::published()
+            ->with(['profession:id,name,slug', 'author:id,name,username,avatar,is_verified_expert'])
+            ->withCount('comments');
+
+        $related = $base();
+        $suggestions = SkillSearch::anyWord($related, $term) ? $related->limit(6)->get() : new Collection;
+
+        return $suggestions->isNotEmpty()
+            ? $suggestions
+            : $base()->orderByDesc('views_count')->limit(6)->get();
     }
 
     public function create(): Response

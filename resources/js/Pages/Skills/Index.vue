@@ -9,6 +9,8 @@ const props = defineProps({
     professions: Array,
     filters: Object,
     tools: Array,
+    // Si la búsqueda no encuentra nada: fichas cercanas o las más vistas.
+    suggestions: { type: Array, default: () => [] },
 })
 
 const search = ref(props.filters?.q || '')
@@ -226,6 +228,19 @@ function clearAll() {
 
                     <div v-if="skills.data.length" class="flex flex-col gap-3">
                         <SkillCard v-for="skill in skills.data" :key="skill.id" :skill="skill" />
+                    </div>
+                    <div v-else-if="suggestions.length">
+                        <div class="rounded-xl border border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 px-4 py-3 text-sm">
+                            <p class="font-medium text-gray-800 dark:text-gray-200">
+                                No hay nada<template v-if="filters?.q"> para «{{ filters.q }}»</template><template v-if="activeFilters.length > 1"> con esos filtros</template>.
+                            </p>
+                            <p class="mt-0.5 text-gray-500 dark:text-gray-400">
+                                Prueba con otras palabras<template v-if="activeFilters.length > 1"> o <button type="button" @click="clearAll" class="text-brand-600 dark:text-brand-400 hover:underline">quita los filtros</button></template>. Mientras, quizá te sirvan estas:
+                            </p>
+                        </div>
+                        <div class="mt-4 flex flex-col gap-3">
+                            <SkillCard v-for="skill in suggestions" :key="skill.id" :skill="skill" />
+                        </div>
                     </div>
                     <div v-else class="text-center py-20 text-gray-400 dark:text-gray-500">
                         <p class="text-lg">No hay skills con esos filtros.</p>

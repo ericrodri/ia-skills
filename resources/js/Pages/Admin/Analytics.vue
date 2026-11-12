@@ -200,6 +200,21 @@ const kindNames = { skill_md: 'skill.md', llms: 'llms.txt', api: 'API', guia: 'G
                 </div>
             </section>
 
+            <!-- Búsquedas sin resultados (App\Support\SearchMisses) -->
+            <section class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
+                <h2 class="font-semibold text-gray-900 dark:text-white">Búsquedas sin resultados</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                    Lo que la gente busca en el catálogo y no encuentra: fichas por escribir o sinónimos que faltan en la búsqueda. Registro desde el 12 de noviembre de 2026.
+                </p>
+                <ul v-if="report.searchMisses?.length" class="mt-3 grid gap-x-8 gap-y-1.5 text-sm sm:grid-cols-2">
+                    <li v-for="m in report.searchMisses" :key="m.label" class="flex justify-between gap-3">
+                        <a :href="`/skills?q=${encodeURIComponent(m.label)}`" target="_blank" rel="noopener" class="truncate text-gray-700 dark:text-gray-300 hover:text-brand-600">{{ m.label }}</a>
+                        <span class="tabular-nums text-gray-900 dark:text-white">{{ n(m.hits) }}</span>
+                    </li>
+                </ul>
+                <p v-else class="mt-3 text-sm text-gray-400">Ninguna en este periodo.</p>
+            </section>
+
             <!-- Visitantes por día -->
             <section class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
                 <h2 class="font-semibold text-gray-900 dark:text-white">Visitantes por día</h2>

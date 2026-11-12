@@ -1,6 +1,6 @@
 <script setup>
 import { Head, Link, router, usePage } from '@inertiajs/vue3'
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, onMounted, onBeforeUnmount } from 'vue'
 import AppLayout from '@/Layouts/AppLayout.vue'
 import AffiliateBox from '@/Components/AffiliateBox.vue'
 import SkillPackOffer, { markPackOffered, packOfferAllowed } from '@/Components/SkillPackOffer.vue'
@@ -217,9 +217,42 @@ function copyPrompt() {
     offerPack()
 }
 
+// Un prompt se manda tal cual, igual que al copiarlo. Las skills, plugins y
+// MCP llevan delante la petición de generarla.
+const isPromptFicha = computed(() => (props.skill.resource_type ?? 'prompt') === 'prompt')
+const promptToSend = computed(() => isPromptFicha.value
+    ? filledPrompt.value
+    : `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`)
+
+// El botón principal abre la IA para la que está escrita la ficha: la
+// mayoría de visitas llegan a prompts de ChatGPT y Gemini, y «Abrir en
+// ChatGPT», escondido en el desplegable, se usaba más que «Abrir en Claude».
+const AI_TOOLS = [
+    { id: 'claude', name: 'Claude', emoji: '🟠', hint: 'app o web', color: 'bg-[#D97757] hover:bg-[#c46440]' },
+    { id: 'chatgpt', name: 'ChatGPT', emoji: '🟢', hint: 'precarga prompt', color: 'bg-[#10a37f] hover:bg-[#0d8a6b]' },
+    { id: 'gemini', name: 'Gemini', emoji: '🔵', hint: 'copia prompt', color: 'bg-[#1a73e8] hover:bg-[#1558b0]' },
+    { id: 'copilot', name: 'Copilot', emoji: '🟣', hint: 'precarga prompt', color: 'bg-[#6b4fbb] hover:bg-[#5a3fa6]' },
+    { id: 'perplexity', name: 'Perplexity', emoji: '⚫', hint: 'precarga prompt', color: 'bg-[#20808d] hover:bg-[#1a6b76]' },
+]
+const TOOL_BY_NAME = { ChatGPT: 'chatgpt', Gemini: 'gemini', Copilot: 'copilot', Perplexity: 'perplexity' }
+const primaryTool = computed(() => AI_TOOLS.find(t => t.id === (TOOL_BY_NAME[props.skill.tool_name] ?? 'claude')))
+const otherTools = computed(() => AI_TOOLS.filter(t => t.id !== primaryTool.value.id))
+
+function openIn(id) {
+    showAIMenu.value = false
+    if (id === 'claude') openInClaude()
+    else openInTool(id)
+}
+
+// En el móvil, los botones de copiar y abrir quedan fijos abajo: el prompt
+// suele ser más largo que la pantalla. El body deja sitio para que la barra
+// no tape el pie de la página.
+onMounted(() => { if (isPromptFicha.value) document.body.classList.add('pb-20', 'sm:pb-0') })
+onBeforeUnmount(() => document.body.classList.remove('pb-20', 'sm:pb-0'))
+
 function openInClaude() {
     track('abrir_claude')
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
+    const fullPrompt = promptToSend.value
     const encoded = encodeURIComponent(fullPrompt)
     const desktopUrl = 'claude://claude.ai/new?q=' + encoded
     const webUrl = 'https://claude.ai/new?q=' + encoded
@@ -238,7 +271,7 @@ function openInClaude() {
 function openInTool(toolId) {
     track('abrir_' + toolId)
     showAIMenu.value = false
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
+    const fullPrompt = promptToSend.value
     const encoded = encodeURIComponent(fullPrompt)
 
     // Herramientas que aceptan ?q= para pre-cargar el prompt automáticamente
@@ -281,7 +314,7 @@ function openInTool(toolId) {
 
 function openInOpenCode() {
     track('abrir_opencode')
-    const fullPrompt = `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`
+    const fullPrompt = promptToSend.value
     const encoded = encodeURIComponent(fullPrompt)
 
     // Use append deep link - inserts text into current session prompt input
@@ -305,7 +338,7 @@ function submitComment() {
     <AppLayout>
         <!-- Toast notificación otras IAs -->
         <Transition enter-active-class="transition ease-out duration-200" enter-from-class="opacity-0 translate-y-2" enter-to-class="opacity-100 translate-y-0" leave-active-class="transition ease-in duration-150" leave-from-class="opacity-100" leave-to-class="opacity-0">
-            <div v-if="aiToast" class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium rounded-xl shadow-xl">
+            <div v-if="aiToast" class="fixed bottom-24 sm:bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 px-4 py-3 bg-gray-900 dark:bg-gray-100 text-white dark:text-gray-900 text-sm font-medium rounded-xl shadow-xl">
                 <svg class="w-4 h-4 text-green-400 dark:text-green-600 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
                 {{ aiToast }}
             </div>
@@ -469,75 +502,65 @@ function submitComment() {
 
                     <!-- Prompt -->
                     <div class="mt-8">
-                        <div class="flex items-center justify-between mb-3">
+                        <div class="flex flex-wrap items-center justify-between gap-3 mb-3">
                             <h2 class="font-semibold text-gray-900 dark:text-gray-100">Prompt / Workflow</h2>
-                            <div class="flex items-center gap-2">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <!-- Copiar: la acción más usada, y casi siempre a mano porque
+                                     el botón apenas se veía. Ahora es el principal. -->
+                                <button
+                                    @click="copyPrompt"
+                                    class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-lg bg-brand-600 hover:bg-brand-700 text-white text-sm font-semibold transition-colors"
+                                >
+                                    <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                                    <svg v-else class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                                    {{ copied ? '¡Copiado!' : 'Copiar prompt' }}
+                                </button>
 
-                                <!-- Split button: Abrir en Claude + dropdown otras IAs -->
+                                <!-- Abrir en la IA de la ficha + desplegable con las demás -->
                                 <div class="relative flex">
-                                    <!-- Botón principal: Claude -->
                                     <button
-                                        @click="openInClaude"
-                                        class="flex items-center gap-1.5 px-3 py-1.5 rounded-l-lg bg-[#D97757] hover:bg-[#c46440] text-white text-xs font-semibold transition-colors"
-                                        title="Abrir en la app de Claude (o en la web si no está instalada)"
+                                        @click="openIn(primaryTool.id)"
+                                        :class="primaryTool.color"
+                                        class="flex items-center gap-1.5 px-3 py-2 rounded-l-lg text-white text-sm font-semibold transition-colors"
+                                        :title="`Abrir en ${primaryTool.name} con el prompt`"
                                     >
-                                        <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm0 3c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z"/></svg>
-                                        Abrir en Claude
+                                        Abrir en {{ primaryTool.name }}
                                     </button>
-                                    <!-- Dropdown trigger -->
                                     <button
                                         @click.stop="showAIMenu = !showAIMenu"
-                                        class="flex items-center px-1.5 py-1.5 rounded-r-lg bg-[#c46440] hover:bg-[#b05530] text-white border-l border-[#b05530] transition-colors"
+                                        :class="primaryTool.color"
+                                        class="flex items-center px-2 py-2 rounded-r-lg text-white border-l border-white/25 transition-colors"
                                         title="Abrir en otra IA"
+                                        aria-label="Abrir en otra IA"
                                     >
                                         <svg class="w-3 h-3 transition-transform" :class="showAIMenu ? 'rotate-180' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
                                     </button>
 
-                                    <!-- Dropdown menu -->
                                     <div
                                         v-if="showAIMenu"
                                         v-click-outside="() => showAIMenu = false"
-                                        class="absolute top-full right-0 mt-1.5 w-48 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg z-20 py-1 overflow-hidden"
+                                        class="absolute top-full right-0 mt-1.5 w-52 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-lg z-20 py-1 overflow-hidden"
                                     >
-                                        <p class="px-3 py-1.5 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Otras IAs</p>
-
-                                        <button @click="openInTool('chatgpt')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
-                                            <span class="text-base">🟢</span>
-                                            <span class="font-medium">ChatGPT</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
+                                        <p class="px-3 py-1.5 text-[10px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">Otras IA</p>
+                                        <button
+                                            v-for="t in otherTools"
+                                            :key="t.id"
+                                            @click="openIn(t.id)"
+                                            class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left"
+                                        >
+                                            <span class="text-base">{{ t.emoji }}</span>
+                                            <span class="font-medium">{{ t.name }}</span>
+                                            <span class="ml-auto text-[10px] text-gray-400">{{ t.hint }}</span>
                                         </button>
-                                        <button @click="openInTool('gemini')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
-                                            <span class="text-base">🔵</span>
-                                            <span class="font-medium">Gemini</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">copia prompt</span>
-                                        </button>
-                                        <button @click="openInTool('copilot')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
-                                            <span class="text-base">🟣</span>
-                                            <span class="font-medium">Copilot</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
-                                        </button>
-                                        <button @click="openInTool('perplexity')" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
-                                            <span class="text-base">⚫</span>
-                                            <span class="font-medium">Perplexity</span>
-                                            <span class="ml-auto text-[10px] text-gray-400">precarga prompt</span>
-                                        </button>
-
                                         <div class="border-t border-gray-100 dark:border-gray-800 mt-1 pt-1">
                                             <button @click="openInOpenCode(); showAIMenu = false" class="w-full flex items-center gap-2.5 px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors text-left">
                                                 <span class="text-base">🟪</span>
                                                 <span class="font-medium">OpenCode</span>
-                                                <span class="ml-auto text-[10px] text-gray-400">deep link</span>
+                                                <span class="ml-auto text-[10px] text-gray-400">enlace directo</span>
                                             </button>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Copiar -->
-                                <button @click="copyPrompt" class="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
-                                    <svg v-if="!copied" class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
-                                    <svg v-else class="w-4 h-4 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
-                                    {{ copied ? 'Copiado' : 'Copiar' }}
-                                </button>
                             </div>
                         </div>
                         <!-- Huecos del prompt: se rellenan aquí y los botones de arriba
@@ -603,7 +626,14 @@ function submitComment() {
                                 <p class="mt-3 text-xs text-gray-500 dark:text-gray-400">Lo que escribes no sale de tu navegador. Los datos que dejes vacíos se envían entre corchetes, para que se los des a la IA.</p>
                             </div>
                         </div>
-                        <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
+                        <div class="relative">
+                            <button
+                                type="button"
+                                @click="copyPrompt"
+                                class="absolute top-2.5 right-2.5 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-gray-100 text-xs font-medium transition-colors"
+                            >{{ copied ? '¡Copiado!' : 'Copiar' }}</button>
+                            <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 pt-12 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
+                        </div>
                     </div>
 
                     <SkillPackOffer v-if="showPackOffer" :profession="skill.profession" @close="closePackOffer" />
@@ -617,13 +647,14 @@ function submitComment() {
                         <ul v-if="nextStep.skills.length" class="mt-3 space-y-2">
                             <li v-for="s in nextStep.skills" :key="s.slug" class="flex gap-2 text-sm">
                                 <span class="text-brand-500 shrink-0" aria-hidden="true">→</span>
-                                <Link :href="route('skills.show', s.slug)" class="text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">{{ s.title }}</Link>
+                                <Link :href="route('skills.show', s.slug)" @click="track('siguiente')" class="text-gray-700 dark:text-gray-300 hover:text-brand-600 dark:hover:text-brand-400 transition-colors">{{ s.title }}</Link>
                             </li>
                         </ul>
                         <!-- Guías = Blade: <a>, no <Link> -->
                         <a
                             v-if="nextStep.guide"
                             :href="nextStep.guide.url"
+                            @click="track('siguiente')"
                             class="mt-3 block rounded-lg bg-gray-50 dark:bg-gray-900 px-3 py-2.5 hover:bg-brand-50 dark:hover:bg-brand-900/20 transition-colors"
                         >
                             <span class="block text-xs text-gray-400 dark:text-gray-500">Guía</span>
@@ -852,6 +883,18 @@ function submitComment() {
                     </div>
                 </aside>
             </div>
+        </div>
+        <!-- Móvil: copiar y abrir siempre a mano, el prompt suele ocupar más que la pantalla -->
+        <div
+            v-if="isPromptFicha"
+            class="sm:hidden fixed inset-x-0 bottom-0 z-40 flex gap-2 border-t border-gray-200 dark:border-gray-800 bg-white/95 dark:bg-gray-900/95 backdrop-blur px-4 pt-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))]"
+        >
+            <button type="button" @click="copyPrompt" class="flex-1 rounded-xl bg-brand-600 active:bg-brand-700 text-white text-sm font-semibold py-2.5">
+                {{ copied ? '¡Copiado!' : 'Copiar prompt' }}
+            </button>
+            <button type="button" @click="openIn(primaryTool.id)" :class="primaryTool.color" class="flex-1 rounded-xl text-white text-sm font-semibold py-2.5">
+                Abrir en {{ primaryTool.name }}
+            </button>
         </div>
     </AppLayout>
 

@@ -46,6 +46,8 @@ Route::get('/llms.txt', LlmsTxtController::class)->name('llms');
 
 // Feed RSS de las últimas skills
 Route::get('/feed.xml', [FeedController::class, 'index'])->name('feed');
+// Lectores de feeds que prueban la ruta de WordPress (/feed/): unas 280 al día daban 404.
+Route::permanentRedirect('/feed', '/feed.xml');
 
 // OG Images (dynamic PNG per skill/profession)
 Route::get('/og/default.png', [OgImageController::class, 'default'])->name('og.default');

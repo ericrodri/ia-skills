@@ -193,6 +193,7 @@ class Analytics
             'affiliates' => self::affiliateClicks($from, $to),
             'ai' => AiUsage::report($from, $to),
             'skillActions' => SkillActions::report($from, $to),
+            'searchMisses' => SearchMisses::report($from, $to),
         ];
     }
 

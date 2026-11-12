@@ -36,6 +36,9 @@ class SkillActions
         // cuentan aparte, por el `source` "pack:{profesión}:ficha".
         'pack_visto' => 'Ver la oferta del pack tras copiar',
         'pack_cerrar' => 'Cerrar la oferta del pack',
+        // Enlaces del bloque «Siguiente paso» bajo el prompt: si sirve para
+        // que quien llega desde Google vea una segunda ficha.
+        'siguiente' => 'Ir a una ficha o guía de «Siguiente paso»',
     ];
 
     public static function record(Request $request): bool
