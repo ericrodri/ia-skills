@@ -70,7 +70,10 @@ class SkillController extends Controller
         // de una página vacía, se sugieren fichas cercanas.
         $suggestions = [];
         if ($request->filled('q') && $skills->total() === 0) {
-            SearchMisses::record($request, (string) $request->q);
+            // Con otros filtros, el vacío puede ser culpa del filtro y no del catálogo.
+            if (array_filter($request->only(['profession', 'tool', 'difficulty', 'type'])) === []) {
+                SearchMisses::record($request, (string) $request->q);
+            }
             $suggestions = $this->searchSuggestions((string) $request->q);
         }
 

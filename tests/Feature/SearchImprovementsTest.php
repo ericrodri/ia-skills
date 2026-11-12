@@ -24,7 +24,7 @@ class SearchImprovementsTest extends TestCase
     private const BROWSER = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0 Safari/537.36';
 
     /** Una búsqueda como la que hace la página mientras se escribe. */
-    private function searchFromPage(string $q, string $agent = self::BROWSER)
+    private function searchFromPage(string $q, string $agent = self::BROWSER, string $extra = '')
     {
         $version = app(HandleInertiaRequests::class)->version(Request::create('/'));
 
@@ -32,7 +32,7 @@ class SearchImprovementsTest extends TestCase
             'User-Agent' => $agent,
             'X-Inertia' => 'true',
             'X-Inertia-Version' => $version,
-        ]))->get('/skills?q='.urlencode($q));
+        ]))->get('/skills?q='.urlencode($q).$extra);
     }
 
     public function test_los_sinonimos_encuentran_lo_que_el_catalogo_dice_de_otra_forma(): void
@@ -101,6 +101,8 @@ class SearchImprovementsTest extends TestCase
         $this->searchFromPage('nadaqueencontrar', 'Mozilla/5.0 (compatible; bingbot/2.0)');
         // Muy corto: es alguien empezando a escribir.
         $this->searchFromPage('zq');
+        // Con otro filtro, el vacío puede deberse al filtro.
+        $this->searchFromPage('nadaqueencontrar', self::BROWSER, '&tool=Gemini')->assertOk();
         // El admin probando la búsqueda.
         $this->actingAs(User::factory()->create(['is_admin' => true]));
         $this->searchFromPage('nadaqueencontrar');
