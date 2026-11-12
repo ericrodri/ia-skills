@@ -29,7 +29,7 @@ return [
         '¿Es seguro subir fotos de mis hijos?' => 'Lee qué hace el servicio con las imágenes que subes y si las usa para entrenar sus modelos; muchos permiten desactivarlo. Y piensa dos veces antes de publicar el resultado en abierto: es una foto más de tus hijos circulando por internet.',
     ],
     'ctaTitle' => 'Skills para crear imágenes',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar y editar imágenes con IA, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-hacer-una-foto-de-tus-hijos-con-papa-noel-o-los-reyes-magos-con-gemini">hacer una foto de tus hijos con Papá Noel o los Reyes Magos</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar y editar imágenes con IA, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>«Cómo hacer fotos con IA» fue una de las consultas sobre inteligencia artificial más repetidas en Google en España en 2025, y en diciembre casi siempre significa lo mismo: un retrato navideño a partir de una foto propia. Jersey de punto, chimenea, luces desenfocadas detrás y, si hay suerte, la cara de siempre. Esta guía explica cómo conseguirlo con las herramientas actuales, qué escribir y por qué a veces la persona de la foto ya no eres tú.</p>
 

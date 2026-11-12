@@ -33,8 +33,12 @@ function labelFor(prompt, index, inner) {
 }
 
 function optionsFor(inner) {
-    const main = inner.split(';')[0]
+    let main = inner.split(';')[0]
     if (!main.includes(' / ')) return []
+    // «[fondo: azul / gris]»: lo que va antes de los dos puntos es la
+    // etiqueta, no parte de la primera opción.
+    const colon = main.indexOf(':')
+    if (colon > 0 && colon < main.indexOf(' / ') && colon <= 40) main = main.slice(colon + 1)
     const options = main.split(' / ').map(o => o.trim()).filter(Boolean)
     return options.length > 1 && options.every(o => o.length <= 60) ? options : []
 }

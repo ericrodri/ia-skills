@@ -412,7 +412,8 @@ function submitComment() {
                 <article class="flex-1 min-w-0">
                     <!-- Badges -->
                     <div class="flex flex-wrap gap-2 mb-4">
-                        <span class="badge-tool">{{ skill.tool_name }}</span>
+                        <Link v-if="page.props.nav?.tools?.[skill.tool_name]" :href="route('tools.show', page.props.nav.tools[skill.tool_name])" class="badge-tool hover:opacity-80 transition-opacity">{{ skill.tool_name }}</Link>
+                        <span v-else class="badge-tool">{{ skill.tool_name }}</span>
 
                         <!-- Plugin / Skill badge con tooltip explicativo -->
                         <span

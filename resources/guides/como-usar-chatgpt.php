@@ -28,7 +28,7 @@ return [
         '¿Qué diferencia hay entre un proyecto y un GPT?' => 'Un proyecto agrupa conversaciones, archivos e instrucciones sobre un mismo tema para tu propio uso. Un GPT es un asistente configurado con unas instrucciones y archivos fijos que puedes reutilizar o compartir con otras personas. Los proyectos son para organizar tu trabajo; los GPT, para repetir una tarea siempre igual.',
     ],
     'ctaTitle' => 'Prompts de ChatGPT listos para tu profesión',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay cientos de instrucciones probadas que puedes pegar en ChatGPT o convertir en un GPT. Empieza por tu <a href="/profesiones">profesión</a>.',
+    'ctaBody' => 'Tienes los <a href="/herramientas/chatgpt">prompts para ChatGPT</a> reunidos en una página: imágenes, escritura, estudio y trabajo. En el <a href="/skills">catálogo de skills</a> hay cientos más por <a href="/profesiones">profesión</a> que puedes pegar en ChatGPT o convertir en un GPT.',
     'body' => <<<'HTML'
 <p>ChatGPT se puede usar en dos minutos y se tarda semanas en usarlo bien. La mayoría de gente se queda en la primera fase: pregunta algo, recibe una respuesta genérica y concluye que «está bien, pero no es para tanto». Esta guía recoge lo que marca la diferencia en el uso profesional. Casi todo sirve igual para <a href="/guias/como-usar-claude">Claude</a>, <a href="/guias/como-usar-gemini">Gemini</a> o Copilot. Si aún no has decidido cuál usar, empieza por <a href="/guias/chatgpt-vs-gemini">ChatGPT o Gemini</a>.</p>
 

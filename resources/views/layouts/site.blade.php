@@ -121,6 +121,7 @@
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.index') }}">Todas las skills</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('professions.index') }}">Profesiones</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('collections.index') }}">Colecciones</a></li>
+                        <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('tools.index') }}">Prompts por herramienta</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('rankings.index') }}">Ranking</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('guides.index') }}">Guías</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('how-it-works') }}">Cómo funciona</a></li>

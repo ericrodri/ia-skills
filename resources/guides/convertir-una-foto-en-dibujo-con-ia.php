@@ -29,7 +29,7 @@ return [
         '¿Puedo imprimir el dibujo en grande?' => 'Las imágenes generadas suelen salir a una resolución pensada para pantalla. Para una lámina o un lienzo, amplíala antes con un reescalador y exporta a 300 ppp. Por debajo de eso, en tamaños grandes se notan bordes blandos y manchas.',
     ],
     'ctaTitle' => 'Instrucciones listas para ilustrar',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar ilustraciones con un estilo constante, preparar imágenes para redes y retocar fotos, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-convertir-una-foto-en-pixel-art-de-videojuego-retro-con-chatgpt">convertir una foto en pixel art</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar ilustraciones con un estilo constante, preparar imágenes para redes y retocar fotos, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Convertir una foto en dibujo es de las cosas que más se le piden a la IA: un retrato de la familia en estilo acuarela, la mascota en dibujo animado, una caricatura para una despedida o la foto de perfil en anime. El problema habitual no es que el dibujo quede feo, sino que la persona deja de parecerse a sí misma. Esta guía explica cómo evitarlo, qué foto elegir y cómo describir el estilo para que salga lo que imaginabas.</p>
 

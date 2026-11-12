@@ -5,6 +5,7 @@ namespace App\Http\Middleware;
 use App\Support\BotGuard;
 use App\Support\SiteData;
 use App\Support\SkillMarkdown;
+use App\Support\ToolPages;
 use Illuminate\Http\Request;
 use Inertia\Middleware;
 
@@ -49,6 +50,9 @@ class HandleInertiaRequests extends Middleware
                 'primary' => fn () => SiteData::primaryNav(),
                 // null si el paquete npm no esta disponible: /mcp daria 404.
                 'mcp' => fn () => SkillMarkdown::mcpAvailable() ? route('mcp') : null,
+                // tool_name => slug de /herramientas/{slug}: la etiqueta de
+                // herramienta de las fichas enlaza a su página.
+                'tools' => fn () => ToolPages::slugsByToolName(),
             ],
             // Ficha antibots de los formularios públicos (App\Support\BotGuard).
             // Se renueva en cada visita; los formularios la leen al enviar.

@@ -1,0 +1,88 @@
+[
+    {
+        "slug": "gemini",
+        "tool_name": "Gemini",
+        "name": "Gemini",
+        "heading": "Prompts para Gemini",
+        "seoTitle": ":count prompts para Gemini listos para copiar",
+        "description": "Prompts en español para Gemini y Nano Banana: editar fotos sin que cambie la cara, cambiar fondos, restaurar y crear imágenes. Listos para copiar.",
+        "intro": [
+            "Gemini, el asistente de Google, edita fotos muy bien con su modelo de imagen, conocido como Nano Banana: subes tu foto, pides el cambio y te devuelve la imagen editada. Aquí tienes los prompts que mejor funcionan, en español y con los datos que tienes que cambiar marcados para rellenarlos en la propia ficha.",
+            "Cada ficha de imagen incluye una versión en inglés, que Gemini suele respetar mejor en las ediciones finas, variantes y qué decirle si el resultado no sale bien. El botón «Abrir en Gemini» copia el prompt y abre Gemini: solo tienes que pegarlo."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo se usa un prompt en Gemini?",
+                "a": "Abre Gemini en el navegador o en la app, sube tu foto si el prompt lo pide, pega el texto y envíalo. Si la ficha tiene datos entre corchetes, rellénalos antes con «Rellenar aquí» para que el prompt salga completo."
+            },
+            {
+                "q": "¿Gemini cambia la cara al editar una foto?",
+                "a": "A veces sí, porque regenera la imagen. Ayuda decir «edita esta imagen» en vez de «crea una imagen», pedir un solo cambio por mensaje y añadir el bloque de identidad de la ficha «Prompt para que Gemini no cambie la cara al editar una foto»."
+            },
+            {
+                "q": "¿Gemini puede hacer una imagen con fondo transparente?",
+                "a": "No devuelve imágenes con transparencia. El truco es pedirle un fondo liso de un solo color y quitarlo después con una herramienta de recorte, o usar ChatGPT, que sí puede entregar un PNG con fondo transparente."
+            },
+            {
+                "q": "¿Estos prompts sirven también en ChatGPT?",
+                "a": "Casi todos. Están escritos pensando en Gemini, pero ChatGPT entiende las mismas instrucciones. Desde el desplegable de cada ficha puedes abrir el prompt en otra IA."
+            }
+        ]
+    },
+    {
+        "slug": "chatgpt",
+        "tool_name": "ChatGPT",
+        "name": "ChatGPT",
+        "heading": "Prompts para ChatGPT",
+        "seoTitle": ":count prompts para ChatGPT en español",
+        "description": "Prompts para ChatGPT en español, listos para copiar: editar y crear imágenes, escribir, estudiar, ordenar tus finanzas y trabajar mejor.",
+        "intro": [
+            "ChatGPT sirve para casi todo, pero la diferencia entre una respuesta mediocre y una útil está en cómo se lo pides. Estos prompts ya llevan el contexto, el formato de la respuesta y los límites que ChatGPT necesita: tú solo cambias los datos entre corchetes.",
+            "Las fichas de imagen incluyen una versión en inglés y qué decirle si el resultado falla. El botón «Abrir en ChatGPT» abre una conversación nueva con el prompt ya escrito."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo se usa un prompt en ChatGPT?",
+                "a": "Copia el prompt, pégalo en una conversación nueva y envíalo. Si tiene datos entre corchetes, rellénalos antes en la ficha con «Rellenar aquí». Empieza una conversación nueva para cada tarea: un historial largo empeora las respuestas."
+            },
+            {
+                "q": "¿ChatGPT puede editar mis fotos?",
+                "a": "Sí: sube la foto en la conversación y pide el cambio. ChatGPT regenera la imagen, así que conviene pedir un solo cambio por mensaje y revisar las caras y los textos, que es donde más se equivoca."
+            },
+            {
+                "q": "¿Por qué ChatGPT se inventa datos?",
+                "a": "Porque genera el texto que le parece más probable, no lo comprueba. Pídele que cite sus fuentes y que diga «no lo sé» cuando no esté seguro, y revisa siempre las cifras, las fechas y los nombres."
+            },
+            {
+                "q": "¿Estos prompts sirven en Gemini o en Claude?",
+                "a": "Sí, en su mayoría. Están escritos pensando en ChatGPT, pero los otros asistentes entienden las mismas instrucciones. Desde el desplegable de cada ficha puedes abrirlo en otra IA."
+            }
+        ]
+    },
+    {
+        "slug": "claude",
+        "tool_name": "Claude",
+        "name": "Claude",
+        "heading": "Prompts y skills para Claude",
+        "seoTitle": "Prompts y skills para Claude en español",
+        "description": "Prompts y skills para Claude en español: análisis, redacción, programación y trabajo por profesión. Cópialos o instálalos como skill en Claude Code.",
+        "intro": [
+            "La mayor parte del catálogo está escrita para Claude: prompts con método, ejemplos y formato de respuesta para tareas de trabajo de cada profesión. Aquí están los más usados; en el catálogo puedes buscar entre todos.",
+            "Además de copiarlos, cualquier prompt se puede instalar como skill en Claude Code o usar desde el propio Claude con el conector de ia-skills, sin salir de la conversación."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué diferencia hay entre un prompt y una skill?",
+                "a": "Un prompt se pega en la conversación cada vez que lo necesitas. Una skill es un archivo SKILL.md que Claude Code guarda y aplica solo cuando hace falta, o cuando la llamas por su nombre."
+            },
+            {
+                "q": "¿Cómo uso estas skills desde Claude?",
+                "a": "Conecta ia-skills a Claude, como explica la guía «Cómo conectar ia-skills a Claude», y pídele en la conversación que busque una skill del catálogo para lo que necesitas."
+            },
+            {
+                "q": "¿Estos prompts sirven en ChatGPT o en Gemini?",
+                "a": "Sí, en su mayoría. Están escritos pensando en Claude, pero los otros asistentes entienden las mismas instrucciones. Desde el desplegable de cada ficha puedes abrirlo en otra IA."
+            }
+        ]
+    }
+]

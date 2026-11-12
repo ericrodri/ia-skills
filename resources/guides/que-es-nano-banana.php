@@ -29,7 +29,7 @@ return [
         '¿Se puede usar Nano Banana con fotos de personas?' => 'Sí, puedes editar fotos tuyas o de personas que te hayan dado permiso, y es donde más destaca porque respeta bien los rasgos. Google bloquea las ediciones que sexualizan a alguien, las fotos de menores en ciertos contextos y los montajes engañosos con personajes públicos. Usar la cara de otra persona sin su permiso puede vulnerar su derecho a la propia imagen aunque la herramienta lo permita.',
     ],
     'ctaTitle' => 'Prompts de imagen listos para copiar',
-    'ctaBody' => 'Nano Banana responde mucho mejor a instrucciones concretas. En el <a href="/skills">catálogo</a> tienes prompts probados para editar fotos y crear imágenes, y más ejemplos en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con IA</a>.',
+    'ctaBody' => 'Nano Banana responde mucho mejor a instrucciones concretas. En la página de <a href="/herramientas/gemini">prompts para Gemini</a> tienes los que mejor funcionan para editar fotos y crear imágenes, y más ejemplos en <a href="/guias/prompts-para-editar-fotos-con-ia">prompts para editar fotos con IA</a>.',
     'body' => <<<'HTML'
 <p>En pocas semanas de 2025, millones de personas subieron una foto suya a Gemini y le pidieron que la convirtiera en una figura de colección, con su caja y su peana. El responsable de aquella moda tenía un nombre poco serio: Nano Banana. Desde entonces es una de las búsquedas de IA más repetidas, y también una de las más confusas, porque ya hay varias versiones con nombres parecidos.</p>
 

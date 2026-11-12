@@ -33,7 +33,9 @@ class SiteData
         ['label' => 'Explorar',      'route' => 'skills.index',      'inertia' => true,  'active' => 'skills.index'],
         ['label' => 'Profesiones',   'route' => 'professions.index', 'inertia' => true,  'active' => 'professions.*'],
         ['label' => 'Colecciones',   'route' => 'collections.index', 'inertia' => true,  'active' => 'collections.*'],
-        ['label' => 'Ranking',       'route' => 'rankings.index',    'inertia' => true,  'active' => 'rankings.index'],
+        // «Herramientas» sustituyó a «Ranking» (noviembre de 2026): el ranking
+        // apenas se visitaba y la gente busca «prompts para Gemini». Sigue en el pie.
+        ['label' => 'Herramientas',  'route' => 'tools.index',       'inertia' => true,  'active' => 'tools.*'],
         ['label' => 'Guías',         'route' => 'guides.index',      'inertia' => false, 'active' => 'guides.*'],
         ['label' => 'Cómo funciona', 'route' => 'how-it-works',      'inertia' => true,  'active' => 'how-it-works'],
         ['label' => 'Guardadas',     'route' => 'skills.saved',      'inertia' => true,  'active' => 'skills.saved'],

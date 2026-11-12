@@ -1,9 +1,13 @@
 <script setup>
-import { Link } from '@inertiajs/vue3'
+import { Link, usePage } from '@inertiajs/vue3'
 
 defineProps({
     skill: { type: Object, required: true },
 })
+
+// La etiqueta de herramienta enlaza a /herramientas/{slug} cuando existe esa página.
+const page = usePage()
+const toolSlug = (name) => page.props.nav?.tools?.[name] ?? null
 
 const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', advanced: 'Avanzado' }
 const difficultyClass = { beginner: 'badge-difficulty-beginner', intermediate: 'badge-difficulty-intermediate', advanced: 'badge-difficulty-advanced' }
@@ -31,7 +35,8 @@ const resourceTypeClass = {
         <!-- Content -->
         <div class="flex-1 min-w-0">
             <div class="flex flex-wrap items-center gap-2 mb-1.5">
-                <span class="badge-tool">{{ skill.tool_name }}</span>
+                <Link v-if="toolSlug(skill.tool_name)" :href="route('tools.show', toolSlug(skill.tool_name))" class="badge-tool hover:opacity-80 transition-opacity">{{ skill.tool_name }}</Link>
+                <span v-else class="badge-tool">{{ skill.tool_name }}</span>
                 <span
                     v-if="skill.resource_type && skill.resource_type !== 'prompt'"
                     :class="resourceTypeClass[skill.resource_type]"

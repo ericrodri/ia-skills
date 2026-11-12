@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Pedirle a ChatGPT o a Gemini que edite una foto funciona sorprendentemente bien… hasta que te cambia la cara. La diferencia está en cómo se pide. Aquí tienes la regla que lo evita, una plantilla base y más de cuarenta prompts listos para copiar, ordenados por lo que quieres hacer.',
     'category' => 'Práctica',
     'published' => '2026-11-02',
-    'updated' => '2026-11-09',
-    'readingMinutes' => 8,
-    'words' => 1321,
+    'updated' => '2026-11-12',
+    'readingMinutes' => 9,
+    'words' => 1545,
     'about' => 'Instrucciones (prompts) para editar fotografías con ChatGPT y Gemini',
     'related' => ['editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
@@ -68,6 +68,7 @@ return [
     <li><a href="/skills/prompt-para-quitar-personas-u-objetos-de-una-foto-con-chatgpt-o-gemini">Quitar personas u objetos</a> de una foto.</li>
     <li><a href="/skills/prompt-para-quitar-la-fecha-un-texto-o-un-objeto-pequeno-de-una-foto-con-ia">Quitar la fecha, un texto o un objeto pequeño</a>.</li>
     <li><a href="/skills/prompt-para-restaurar-fotos-antiguas-o-danadas-con-chatgpt-o-gemini">Restaurar fotos antiguas o dañadas</a> y <a href="/skills/prompt-para-colorear-una-foto-en-blanco-y-negro-de-forma-realista">colorear una foto en blanco y negro</a>.</li>
+    <li><a href="/skills/prompt-para-enderezar-una-foto-torcida-o-corregir-la-perspectiva-con-gemini">Enderezar una foto torcida</a> o corregir la perspectiva de un edificio, un cuadro o un documento.</li>
 </ul>
 
 <p>Si quieres entender qué se puede recuperar y qué no en una foto vieja, lo explicamos en <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar fotos antiguas con IA</a>.</p>
@@ -79,6 +80,9 @@ return [
     <li><a href="/skills/prompt-para-ampliar-una-foto-con-ia-o-pasarla-de-horizontal-a-vertical-para-historias">Ampliar una foto o pasarla de horizontal a vertical</a> para historias.</li>
     <li><a href="/skills/prompt-para-cambiar-la-estacion-o-la-hora-de-una-foto-con-ia-nieve-atardecer-o-noche">Cambiar la estación o la hora</a>: nieve, atardecer o noche.</li>
     <li><a href="/skills/prompt-para-animar-una-foto-con-ia-y-darle-movimiento-sutil">Animar una foto</a> con un movimiento sutil.</li>
+    <li><a href="/skills/prompt-para-cambiar-el-color-de-la-ropa-el-coche-o-una-pared-en-una-foto-con-gemini">Cambiar el color de la ropa, el coche o una pared</a> sin que se note.</li>
+    <li><a href="/skills/prompt-para-quitar-el-fondo-de-una-foto-y-dejarlo-transparente-en-png-con-chatgpt-o-gemini">Quitar el fondo y dejarlo transparente</a> en PNG.</li>
+    <li><a href="/skills/prompt-para-ver-tu-jardin-terraza-o-balcon-reformado-a-partir-de-una-foto-con-gemini">Ver tu jardín, terraza o balcón reformado</a> a partir de una foto.</li>
 </ul>
 
 <h2 id="personas">Juntar personas en una foto</h2>
@@ -91,6 +95,8 @@ return [
     <li><a href="/skills/prompt-para-hacer-una-foto-profesional-para-linkedin-o-el-curriculum-a-partir-de-un-selfie">Foto profesional para LinkedIn o el currículum</a> a partir de un selfie.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-estilo-polaroid-con-ia-a-partir-de-tus-fotos">Foto estilo Polaroid</a> con marco blanco y flash, también juntando a dos personas.</li>
     <li><a href="/skills/prompt-para-preparar-una-foto-de-carnet-con-ia-fondo-blanco-encuadre-y-luz">Foto tipo carnet</a> con fondo blanco, para usos que no son oficiales.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-de-tus-hijos-con-papa-noel-o-los-reyes-magos-con-gemini">Foto de tus hijos con Papá Noel o los Reyes Magos</a>, solo para la familia.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-de-orla-o-de-graduacion-con-toga-y-birrete-con-gemini">Foto de orla o de graduación</a> con toga y birrete.</li>
 </ul>
 
 <h2 id="probar">Probar cambios en ti antes de hacerlos</h2>
@@ -100,6 +106,7 @@ return [
     <li><a href="/skills/prompt-para-probarte-ropa-en-tu-foto-con-ia-ve-como-te-queda-un-look-antes-de-comprarlo">Probarte ropa</a> antes de comprarla.</li>
     <li><a href="/skills/prompt-para-ver-como-queda-un-tatuaje-sobre-tu-piel-antes-de-hacertelo">Ver cómo queda un tatuaje sobre tu piel</a>, y <a href="/skills/prompt-para-disenar-un-tatuaje-y-su-plantilla-stencil-para-el-tatuador">diseñarlo con su plantilla</a> para el tatuador.</li>
     <li><a href="/skills/prompt-para-envejecer-o-rejuvenecer-una-foto-con-ia-como-te-verias-dentro-de-30-anos">Envejecer o rejuvenecer una foto</a>.</li>
+    <li><a href="/skills/prompt-para-probarte-gafas-de-ver-o-de-sol-en-tu-foto-antes-de-comprarlas-con-gemini">Probarte gafas de ver o de sol</a> antes de comprarlas.</li>
 </ul>
 
 <h2 id="estilos">Estilos, dibujos y creatividad</h2>
@@ -118,6 +125,14 @@ return [
     <li><a href="/skills/prompt-para-crear-una-imagen-realista-con-ia-que-no-parezca-hecha-con-ia">Crear una imagen realista que no parezca hecha con IA</a>.</li>
     <li><a href="/skills/prompt-para-crear-un-personaje-que-salga-igual-en-varias-imagenes-con-ia">Un personaje que salga igual en varias imágenes</a>.</li>
     <li><a href="/skills/prompt-para-sacar-el-prompt-de-una-imagen-y-poder-recrearla-con-ia">Sacar el prompt de una imagen</a> para recrearla.</li>
+    <li><a href="/skills/prompt-para-convertir-una-foto-en-pixel-art-de-videojuego-retro-con-chatgpt">Convertir una foto en pixel art</a> de videojuego retro.</li>
+    <li><a href="/skills/prompt-para-convertir-tus-fotos-en-una-pagina-de-comic-con-vinetas-y-bocadillos-con-chatgpt">Una página de cómic con tus fotos</a>, con viñetas y bocadillos.</li>
+    <li><a href="/skills/prompt-para-convertir-el-dibujo-de-tu-hijo-en-un-muneco-3d-o-una-imagen-realista-con-chatgpt">Convertir el dibujo de tu hijo en un muñeco 3D</a> o una imagen realista.</li>
+    <li><a href="/skills/prompt-para-hacer-un-cuento-ilustrado-con-tu-hijo-de-protagonista-con-chatgpt">Un cuento ilustrado con tu hijo de protagonista</a>.</li>
+    <li><a href="/skills/prompt-para-crear-un-fondo-de-pantalla-para-el-movil-a-tu-medida-con-chatgpt">Un fondo de pantalla para el móvil</a> a tu medida.</li>
+    <li><a href="/skills/prompt-para-hacer-un-mapa-ilustrado-de-tu-viaje-o-de-tu-ciudad-con-chatgpt">Un mapa ilustrado de tu viaje o de tu ciudad</a>.</li>
+    <li><a href="/skills/prompt-para-hacer-un-calendario-de-2027-con-tus-fotos-y-la-misma-estetica-con-gemini">Un calendario de 2027 con tus fotos</a>, con la misma estética todos los meses.</li>
+    <li><a href="/skills/prompt-para-hacer-una-invitacion-de-boda-comunion-o-bautizo-con-vuestra-foto-con-gemini">Una invitación de boda, comunión o bautizo</a> con vuestra foto.</li>
 </ul>
 
 <h2 id="negocio">Para tu negocio</h2>
@@ -130,6 +145,11 @@ return [
     <li><a href="/skills/prompt-para-amueblar-con-ia-la-foto-de-un-piso-vacio-para-el-anuncio-de-venta-o-alquiler">Amueblar la foto de un piso vacío</a> para el anuncio.</li>
     <li><a href="/skills/prompt-para-decorar-una-habitacion-a-partir-de-una-foto-estilo-paleta-muebles-y-presupuesto">Decorar una habitación a partir de una foto</a> y <a href="/skills/prompt-para-render-realista-de-un-espacio-a-partir-de-un-plano-o-una-foto">render realista desde un plano</a>.</li>
     <li><a href="/skills/prompt-para-hacer-un-logo-con-chatgpt-o-gemini-propuestas-variantes-y-que-hacer-despues">Hacer un logo</a> y <a href="/skills/prompt-para-vectorizar-un-logo-o-dibujo-con-ia-limpiar-la-imagen-y-pasarla-a-vector">vectorizarlo</a>.</li>
+    <li><a href="/skills/prompt-para-disenar-una-tarjeta-de-visita-con-chatgpt-lista-para-imprimir">Diseñar una tarjeta de visita</a> lista para imprimir.</li>
+    <li><a href="/skills/prompt-para-disenar-la-etiqueta-de-un-producto-casero-o-artesano-con-chatgpt">Diseñar la etiqueta de un producto casero o artesano</a>.</li>
+    <li><a href="/skills/prompt-para-hacer-un-cartel-de-concierto-fiesta-o-mercadillo-con-texto-legible-con-chatgpt">Hacer un cartel para un concierto, una fiesta o un mercadillo</a> con texto legible.</li>
+    <li><a href="/skills/prompt-para-hacer-una-miniatura-de-youtube-que-se-lea-en-el-movil-con-chatgpt">Una miniatura de YouTube</a> que se lea en el móvil.</li>
+    <li><a href="/skills/prompt-para-hacer-la-portada-de-un-podcast-o-de-una-lista-de-reproduccion-con-chatgpt">La portada de un pódcast</a> o de una lista de reproducción.</li>
 </ul>
 
 <p>Antes de usar cualquiera de estas imágenes en publicidad o en un producto, revisa qué permite tu plan y qué derechos tienes sobre lo generado: está en <a href="/guias/imagenes-con-ia-derechos-y-uso-comercial">imágenes con IA: derechos y uso comercial</a>.</p>

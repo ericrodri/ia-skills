@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Support\Guides;
 use App\Support\SiteData;
+use App\Support\ToolPages;
 use Illuminate\Http\Response;
 
 /**
@@ -57,6 +58,19 @@ class LlmsTxtController extends Controller
                 route('professions.show', ['profession' => $profession['slug']]),
                 $profession['name'],
                 $profession['skills_count'],
+            );
+        }
+
+        $lines[] = '';
+        $lines[] = '## Prompts por herramienta';
+        $lines[] = '';
+
+        foreach (ToolPages::all() as $tool) {
+            $lines[] = sprintf(
+                '- [%s](%s): %s',
+                $tool['heading'],
+                route('tools.show', ['slug' => $tool['slug']]),
+                $tool['description'],
             );
         }
 

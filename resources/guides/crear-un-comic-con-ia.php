@@ -29,7 +29,7 @@ return [
         '¿Se puede hacer un cómic con personajes conocidos?' => 'Para un uso privado, como un regalo o un trabajo de clase, nadie suele poner pegas. Para publicarlo o venderlo, no: los personajes de cómics, películas y series tienen dueño. Pide a la IA un personaje original inspirado en un estilo, no una copia de uno existente.',
     ],
     'ctaTitle' => 'Más instrucciones para crear imágenes',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones listas para generar ilustraciones con un estilo constante, escribir guiones y preparar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-convertir-tus-fotos-en-una-pagina-de-comic-con-vinetas-y-bocadillos-con-chatgpt">convertir tus fotos en una página de cómic</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones listas para generar ilustraciones con un estilo constante, escribir guiones y preparar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Hacer un cómic con IA es más fácil que nunca y, a la vez, tiene una trampa que no tienen otras imágenes: una historia necesita que el protagonista sea el mismo de la primera a la última viñeta, y los generadores tienden a cambiarle el peinado, la ropa o la edad sin avisar. Esta guía explica el orden de trabajo que evita ese problema y el otro gran fallo, los textos ilegibles dentro de los bocadillos. Sirve para una tira cómica para redes, un cómic de regalo o un trabajo de clase.</p>
 

@@ -29,7 +29,7 @@ return [
         '¿Puedo usar un cartel hecho con IA para mi negocio?' => 'En general sí, pero revisa las condiciones de la herramienta y no pidas imitar marcas, personajes ni obras de artistas concretos. Si el cartel lleva tu logotipo o fotos de personas reales, asegúrate de tener derecho a usarlas.',
     ],
     'ctaTitle' => 'Skills para diseño y comunicación',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para crear imágenes, escribir textos publicitarios y preparar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-hacer-un-cartel-de-concierto-fiesta-o-mercadillo-con-texto-legible-con-chatgpt">hacer un cartel de concierto, fiesta o mercadillo</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones para crear imágenes, escribir textos publicitarios y preparar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>El mercadillo navideño del colegio, la fiesta de fin de año de la asociación, las rebajas de tu tienda o una charla en la biblioteca: casi cualquier actividad necesita un cartel, y casi nunca hay un diseñador a mano. La IA puede sacarte del apuro en una tarde. Esta guía explica cómo hacerlo para que el resultado se lea bien, no tenga letras deformadas y se pueda imprimir sin sorpresas.</p>
 

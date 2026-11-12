@@ -29,7 +29,7 @@ return [
         '¿Puedo usar un personaje de una serie o una marca en mi fondo?' => 'Para tu propio móvil nadie te lo va a impedir, pero muchos generadores bloquean personajes con derechos. Lo que no debes hacer es compartirlo o venderlo como propio: esas imágenes no son tuyas aunque las haya generado una IA.',
     ],
     'ctaTitle' => 'Skills para crear imágenes',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar y retocar imágenes con un estilo propio, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-crear-un-fondo-de-pantalla-para-el-movil-a-tu-medida-con-chatgpt">crear un fondo de pantalla para el móvil a tu medida</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones para generar y retocar imágenes con un estilo propio, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Los fondos de pantalla son una de las cosas que más se piden a los generadores de imágenes: uno de tu perro en estilo acuarela, un paisaje de invierno para Navidad, un fondo minimalista que no tape los iconos. La IA lo hace en segundos, pero la primera imagen casi nunca sirve tal cual: sale cuadrada, con el motivo justo donde va el reloj o borrosa al ponerla a pantalla completa. Esta guía explica cómo evitarlo.</p>
 

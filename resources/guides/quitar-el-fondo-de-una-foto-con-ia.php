@@ -28,7 +28,7 @@ return [
         '¿La IA recorta bien el pelo?' => 'Cada vez mejor, sobre todo con pelo oscuro sobre fondo claro. Los mechones sueltos sobre un fondo de color parecido siguen siendo el punto débil. Si el resultado queda con halo, repasa el borde con la herramienta de ajuste de la app o haz la foto de nuevo con un fondo que contraste.',
     ],
     'ctaTitle' => 'Skills para editar imágenes',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones para preparar fotos de producto, crear miniaturas y editar imágenes con IA, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-quitar-el-fondo-de-una-foto-y-dejarlo-transparente-en-png-con-chatgpt-o-gemini">quitar el fondo y dejarlo transparente con ChatGPT o Gemini</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones para preparar fotos de producto, crear miniaturas y editar imágenes con IA, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Quitar el fondo de una foto era uno de esos trabajos que llevaban media hora de lazo y borrador. Hoy lo hace la inteligencia artificial en un segundo: tocas la persona o el objeto, y el resto desaparece. Sirve para fotos de producto, para una foto de perfil con fondo neutro, para hacer stickers o para montar una invitación. Esta guía explica dónde hacerlo gratis, por qué unas veces queda perfecto y otras se nota, y cómo guardarlo para no perder la transparencia.</p>
 

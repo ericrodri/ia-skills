@@ -28,7 +28,7 @@ return [
         '¿Es seguro subir fotos de mi casa a la IA?' => 'Revisa qué se ve antes de subirlas: documentos, fotos familiares, la vista desde la ventana o cualquier detalle que permita saber dónde vives. Recorta o tapa lo que no haga falta. Comprueba también si el servicio usa tus imágenes para entrenar y desactívalo si puedes; con los asistentes conocidos suele estar en los ajustes de privacidad.',
     ],
     'ctaTitle' => 'Instrucciones de diseño que ya funcionan',
-    'ctaBody' => 'Lo que aprendes pidiendo un salón sirve para cualquier imagen. En el <a href="/skills">catálogo de skills</a> hay instrucciones probadas de diseño y edición visual, por ejemplo en <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-ver-tu-jardin-terraza-o-balcon-reformado-a-partir-de-una-foto-con-gemini">ver tu jardín, terraza o balcón reformado</a>. Lo que aprendes pidiendo un salón sirve para cualquier imagen. En el <a href="/skills">catálogo de skills</a> hay instrucciones probadas de diseño y edición visual, por ejemplo en <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Decidir si el sofá verde quedará bien, si merece la pena pintar una pared o qué lámpara pide el salón es difícil con la imaginación sola. La IA permite verlo antes: subes una foto de la habitación, describes el cambio y en unos segundos tienes una imagen de cómo podría quedar. Es una herramienta estupenda para decidir. Lo que no es, aunque lo parezca, es un plano ni un catálogo: dibuja muebles que no existen y no conoce las medidas de tu casa.</p>
 

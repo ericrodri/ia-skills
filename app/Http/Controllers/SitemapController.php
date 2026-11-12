@@ -9,6 +9,7 @@ use App\Support\Collections;
 use App\Support\SkillMarkdown;
 use App\Support\Guides;
 use App\Support\ProfessionTasks;
+use App\Support\ToolPages;
 use Illuminate\Http\Response;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Cache;
@@ -64,8 +65,17 @@ class SitemapController extends Controller
             ['loc' => route('how-it-works'), 'changefreq' => 'monthly', 'priority' => '0.6'],
             ['loc' => route('rankings.index'), 'changefreq' => 'daily', 'priority' => '0.7'],
             ['loc' => route('collections.index'), 'changefreq' => 'weekly', 'priority' => '0.7'],
+            ['loc' => route('tools.index'), 'changefreq' => 'weekly', 'priority' => '0.7'],
             ['loc' => route('legal.privacy'), 'changefreq' => 'yearly', 'priority' => '0.2'],
         ];
+
+        foreach (ToolPages::all() as $tool) {
+            $urls[] = [
+                'loc' => route('tools.show', ['slug' => $tool['slug']]),
+                'changefreq' => 'weekly',
+                'priority' => '0.8',
+            ];
+        }
 
         // /mcp solo existe con el paquete npm disponible: si no, daria 404.
         if (SkillMarkdown::mcpAvailable()) {

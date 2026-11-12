@@ -29,7 +29,7 @@ return [
         '¿Es mejor Gemini o ChatGPT?' => 'Depende de dónde trabajes. Si tu día pasa por Gmail, Docs, Sheets y Drive, Gemini tiene la ventaja de estar ya dentro. Para tareas sueltas de redacción o análisis los resultados son parecidos, y lo más sensato es probar la misma tarea en los dos y quedarte con el que mejor te funcione.',
     ],
     'ctaTitle' => 'Instrucciones listas para convertir en Gems',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay cientos de instrucciones probadas por profesión que puedes pegar en Gemini o guardar como un Gem. Empieza por tu <a href="/profesiones">profesión</a>.',
+    'ctaBody' => 'Tienes los <a href="/herramientas/gemini">prompts para Gemini</a> reunidos en una página, con los de editar fotos primero. En el <a href="/skills">catálogo de skills</a> hay cientos más por profesión que puedes pegar en Gemini o guardar como un Gem.',
     'body' => <<<'HTML'
 <p>Gemini es el asistente de inteligencia artificial de Google. Como chat funciona igual que ChatGPT o Claude: escribes, responde. Lo que lo distingue es dónde está: dentro de Gmail, Docs, Sheets, Drive, el buscador y Android. Si tu trabajo ya pasa por esas herramientas, Gemini puede leer el correo, el documento o la hoja en la que estás sin que tengas que copiar nada. Esta guía se centra en el uso profesional; lo básico de cómo pedirle cosas a una IA sirve igual en cualquier asistente.</p>
 

@@ -29,7 +29,7 @@ return [
         '¿Qué tamaño tiene que tener para imprimirla?' => 'Los tamaños habituales son 10×15 cm y A6 (10,5×14,8 cm), que entran cuatro en un A4. Exporta en PDF o PNG a 300 ppp y deja unos 3 mm de margen sin texto en los bordes, porque la guillotina nunca corta exacto.',
     ],
     'ctaTitle' => 'Más ideas para tus celebraciones',
-    'ctaBody' => 'En el <a href="/skills">catálogo de skills</a> hay instrucciones listas para generar imágenes, redactar textos con tono cercano y diseñar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a> pero igual de útiles para una fiesta en casa.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-hacer-una-invitacion-de-boda-comunion-o-bautizo-con-vuestra-foto-con-gemini">hacer una invitación de boda, comunión o bautizo con vuestra foto</a>. En el <a href="/skills">catálogo de skills</a> hay instrucciones listas para generar imágenes, redactar textos con tono cercano y diseñar piezas para redes, muchas pensadas para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a> pero igual de útiles para una fiesta en casa.',
     'body' => <<<'HTML'
 <p>Una invitación tiene dos partes: lo que dice y cómo se ve. La IA ayuda en las dos, pero no igual de bien. Escribe un texto simpático en segundos y dibuja una ilustración que parece de papelería, y en cambio todavía se equivoca al escribir una fecha o una dirección dentro de la imagen. Esta guía explica cómo repartir el trabajo para que salga una invitación bonita y sin erratas, tanto para mandar por WhatsApp como para imprimir.</p>
 

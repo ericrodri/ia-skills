@@ -29,7 +29,7 @@ return [
         '¿Puedo vender calendarios hechos con IA?' => 'Depende de las condiciones del generador que uses y de si aparecen personas, marcas o personajes protegidos. Para uso personal o regalo no suele haber problema; para venderlos, revisa antes los derechos de las imágenes.',
     ],
     'ctaTitle' => 'Skills para crear imágenes',
-    'ctaBody' => 'En <a href="/profesiones/diseno">Diseño</a> hay skills para escribir prompts de imagen, mantener un estilo coherente en una serie y preparar archivos para imprimir; también puedes buscar «imagen» en el <a href="/skills">catálogo</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-hacer-un-calendario-de-2027-con-tus-fotos-y-la-misma-estetica-con-gemini">hacer un calendario de 2027 con tus fotos</a>. En <a href="/profesiones/diseno">Diseño</a> hay skills para escribir prompts de imagen, mantener un estilo coherente en una serie y preparar archivos para imprimir; también puedes buscar «imagen» en el <a href="/skills">catálogo</a>.',
     'body' => <<<'HTML'
 <p>Noviembre es el mes en que más gente busca cómo hacer un calendario del año siguiente: para regalar a los abuelos con fotos de la familia, para la cocina, para el negocio o para planificar el curso. La IA lo pone fácil, porque puede crear doce ilustraciones con un estilo coherente o mejorar fotos antiguas en pocos minutos. Pero hay una parte del calendario en la que la IA falla casi siempre, y conviene saberlo antes de empezar.</p>
 

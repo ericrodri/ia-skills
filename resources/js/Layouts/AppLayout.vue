@@ -202,6 +202,7 @@ function logout() {
                         <Link :href="route('skills.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Explorar</Link>
                         <Link :href="route('professions.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Profesiones</Link>
                         <Link :href="route('collections.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Colecciones</Link>
+                        <Link :href="route('tools.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Herramientas</Link>
                         <Link :href="route('rankings.index')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Ranking</Link>
                         <a href="/guias" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guías</a>
                         <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-white transition-colors">RSS</a>

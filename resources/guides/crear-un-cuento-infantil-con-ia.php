@@ -30,7 +30,7 @@ return [
         '¿Puede la IA leer el cuento en voz alta?' => 'Sí. Las herramientas de texto a voz convierten el cuento en audio con voces naturales, y algunas permiten elegir el tono o usar varias voces para los personajes. Para un regalo, grabar tu propia voz sigue siendo lo que más emociona.',
     ],
     'ctaTitle' => 'Instrucciones creativas reutilizables',
-    'ctaBody' => 'Si haces cuentos a menudo, para tus hijos o para un aula, guarda el estilo y las reglas en unas instrucciones fijas. En el <a href="/skills">catálogo de skills</a> hay plantillas de escritura e imagen, por ejemplo para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
+    'ctaBody' => 'Tienes el prompt listo para <a href="/skills/prompt-para-hacer-un-cuento-ilustrado-con-tu-hijo-de-protagonista-con-chatgpt">hacer un cuento ilustrado con tu hijo de protagonista</a>. Si haces cuentos a menudo, para tus hijos o para un aula, guarda el estilo y las reglas en unas instrucciones fijas. En el <a href="/skills">catálogo de skills</a> hay plantillas de escritura e imagen, por ejemplo para <a href="/profesiones/diseno">diseño</a> y <a href="/profesiones/marketing">marketing</a>.',
     'body' => <<<'HTML'
 <p>Un cuento hecho con IA puede ser un regalo precioso o un texto de plantilla con dibujos que cambian de aspecto en cada página. La diferencia está en tres cosas: los detalles que solo conoces tú del niño o la niña, una extensión adecuada a su edad y un personaje que se mantenga igual de principio a fin. Esta guía va del texto a las ilustraciones y al libro impreso.</p>
 

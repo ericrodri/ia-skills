@@ -27,6 +27,7 @@ use App\Http\Controllers\SitemapController;
 use App\Http\Controllers\SkillController;
 use App\Http\Controllers\SkillMarkdownController;
 use App\Http\Controllers\SkillVersionController;
+use App\Http\Controllers\ToolController;
 use App\Http\Controllers\VoteController;
 use Illuminate\Support\Facades\Route;
 
@@ -70,6 +71,10 @@ Route::get('/profesiones/{profession:slug}/{task}', [ProfessionController::class
 // Colecciones curadas (resources/data/collections.json)
 Route::get('/colecciones', [CollectionController::class, 'index'])->name('collections.index');
 Route::get('/colecciones/{slug}', [CollectionController::class, 'show'])->where('slug', '[a-z0-9-]+')->name('collections.show');
+
+// Prompts por herramienta (copy en resources/data/tool-pages.json)
+Route::get('/herramientas', [ToolController::class, 'index'])->name('tools.index');
+Route::get('/herramientas/{slug}', [ToolController::class, 'show'])->where('slug', '[a-z0-9-]+')->name('tools.show');
 
 // Ranking y perfiles públicos de autor
 Route::get('/ranking', [RankingController::class, 'index'])->name('rankings.index');
