@@ -7,6 +7,10 @@ use App\Models\Skill;
 use App\Support\Collections;
 use App\Support\Seo;
 use App\Support\SiteData;
+use App\Support\ToolPages;
+use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 use Inertia\Inertia;
 use Inertia\Response;
 
@@ -36,6 +40,15 @@ class HomeController extends Controller
             ->limit(5)
             ->get();
 
+        $popular = $this->popularSkills();
+
+        $tools = collect(ToolPages::all())->map(fn (array $p) => [
+            'name' => $p['name'],
+            'heading' => $p['heading'],
+            'url' => route('tools.show', ['slug' => $p['slug']]),
+            'countLabel' => number_format(ToolPages::count($p), 0, ',', '.'),
+        ])->values()->all();
+
         $count = SiteData::skillsCountLabel();
 
         // La home es la que recibe las búsquedas de marca y sus variantes
@@ -57,7 +70,7 @@ class HomeController extends Controller
                 'links' => $professions->toBase()->mapWithKeys(fn (Profession $p) => [
                     "Prompts de IA para {$p->name}" => route('professions.show', ['profession' => $p->slug]),
                 ])->merge(
-                    $topSkills->mapWithKeys(fn (Skill $skill) => [
+                    $popular->concat($topSkills)->mapWithKeys(fn (Skill $skill) => [
                         $skill->title => route('skills.show', ['skill' => $skill->slug]),
                     ])
                 )->merge([
@@ -108,6 +121,8 @@ class HomeController extends Controller
 
         return Inertia::render('Welcome', [
             'professions' => $professions,
+            'popularSkills' => $popular,
+            'tools' => $tools,
             'topSkills' => $topSkills,
             'whatIsASkill' => self::WHAT_IS_A_SKILL,
             'collections' => collect(Collections::all())
@@ -123,5 +138,43 @@ class HomeController extends Controller
                 ->values()
                 ->all(),
         ]);
+    }
+
+    /**
+     * Las fichas con más visitantes en los últimos 7 días (Analytics). La
+     * portada es la página más vista, pero «más valoradas» no cambia porque
+     * apenas se vota: esto enseña lo que de verdad se está usando.
+     * La caché guarda solo los slugs (ver CLAUDE.md: nunca modelos).
+     */
+    private function popularSkills(int $limit = 6): Collection
+    {
+        $slugs = Cache::remember('home:popular-slugs', now()->addHour(), fn () => DB::table('page_views')
+            ->where('day', '>=', now()->subDays(7)->toDateString())
+            ->where('path', 'like', '/skills/%')
+            ->selectRaw('path, count(distinct visitor) as visitors')
+            ->groupBy('path')
+            ->orderByDesc('visitors')
+            ->limit(30)
+            ->pluck('path')
+            ->map(fn (string $path) => substr($path, strlen('/skills/')))
+            ->filter(fn (string $slug) => $slug !== '' && ! str_contains($slug, '/'))
+            ->values()
+            ->all());
+
+        if ($slugs === []) {
+            return collect();
+        }
+
+        $order = array_flip($slugs);
+
+        // published() deja fuera las privadas (tienen su propio estado).
+        return Skill::published()
+            ->whereIn('slug', $slugs)
+            ->with(['profession:id,name,slug', 'author:id,name,username,is_verified_expert'])
+            ->withCount('comments')
+            ->get()
+            ->sortBy(fn (Skill $skill) => $order[$skill->slug])
+            ->take($limit)
+            ->values();
     }
 }

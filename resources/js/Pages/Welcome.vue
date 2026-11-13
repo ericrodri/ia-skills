@@ -6,6 +6,8 @@ import SkillCard from '@/Components/SkillCard.vue'
 
 defineProps({
     professions: Array,
+    popularSkills: { type: Array, default: () => [] },
+    tools: { type: Array, default: () => [] },
     topSkills: Array,
     collections: { type: Array, default: () => [] },
     whatIsASkill: { type: Array, default: () => [] },
@@ -45,6 +47,33 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
                         ¿Cómo funciona?
                     </Link>
                 </div>
+            </div>
+        </section>
+
+        <!-- Lo más usado: las fichas con más visitantes en 7 días (HomeController::popularSkills) -->
+        <section v-if="popularSkills.length" class="max-w-6xl mx-auto px-4 sm:px-6 pt-12">
+            <div class="flex items-baseline justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white">Lo más usado esta semana</h2>
+                <Link :href="route('skills.index')" class="text-sm text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Ver catálogo →</Link>
+            </div>
+            <div class="flex flex-col gap-3">
+                <SkillCard v-for="skill in popularSkills" :key="skill.id" :skill="skill" />
+            </div>
+        </section>
+
+        <!-- Prompts por herramienta -->
+        <section v-if="tools.length" class="max-w-6xl mx-auto px-4 sm:px-6 pt-12">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">¿Qué IA usas?</h2>
+            <div class="grid gap-3 sm:grid-cols-3">
+                <Link
+                    v-for="t in tools"
+                    :key="t.url"
+                    :href="t.url"
+                    class="flex items-center justify-between gap-3 rounded-xl border border-gray-200 dark:border-gray-800 p-4 hover:border-brand-300 dark:hover:border-brand-600 hover:bg-brand-50 dark:hover:bg-gray-800/50 transition-all group"
+                >
+                    <span class="font-semibold text-gray-800 dark:text-gray-200 group-hover:text-brand-700 dark:group-hover:text-brand-400">{{ t.heading }}</span>
+                    <span class="shrink-0 text-xs text-gray-400 dark:text-gray-500">{{ t.countLabel }} fichas</span>
+                </Link>
             </div>
         </section>
 

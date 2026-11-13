@@ -7,6 +7,7 @@ import SkillPackOffer, { markPackOffered, packOfferAllowed } from '@/Components/
 import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
 import { promptFields, fillPrompt, promptSegments } from '@/utils/promptFields'
+import { manualCopyPart } from '@/utils/manualCopy'
 
 import { computed } from 'vue'
 
@@ -44,10 +45,17 @@ function track(action) {
 // Mucha gente no pulsa «Copiar»: selecciona el prompt y hace Ctrl+C. Se
 // cuenta una vez por visita y solo si se copia un trozo con sustancia.
 let manualCopyTracked = false
-function onManualCopy() {
-    if (manualCopyTracked) return
+let manualCopyParts = 0
+function onManualCopy(event) {
     const selected = String(window.getSelection?.() ?? '').trim()
     if (selected.length < 40) return
+    // Qué bloque se copia, en cada copia (hasta 5 por visita): si la gente
+    // copia a mano porque solo quiere una parte, pondremos un botón por bloque.
+    if (manualCopyParts < 5) {
+        manualCopyParts++
+        track(manualCopyPart(event.currentTarget?.textContent ?? '', selected))
+    }
+    if (manualCopyTracked) return
     manualCopyTracked = true
     track('copiar_mano')
     offerPack()
