@@ -105,6 +105,40 @@ class AffiliateTest extends TestCase
             ->assertSee('Enlace de afiliado');
     }
 
+    public function test_pixa_sale_por_el_titulo_de_la_ficha_y_no_por_el_prompt(): void
+    {
+        $con = Skill::factory()->create(['title' => 'Prompt para quitar el fondo de una foto con ChatGPT', 'prompt_content' => 'Deja la imagen en PNG.']);
+        $sin = Skill::factory()->create(['title' => 'Diseño de emails de marketing', 'description' => 'Emails', 'tool_name' => 'Claude', 'prompt_content' => 'Usa el logo con fondo transparente y fotos de producto.']);
+
+        $this->get(route('skills.show', $con))->assertInertia(fn ($page) => $page
+            ->where('affiliateTools.0.slug', 'pixa')
+            ->where('affiliateTools.0.href', route('affiliates.go', ['tool' => 'pixa', 'desde' => '/skills/'.$con->slug])));
+
+        $this->get(route('skills.show', $sin))->assertInertia(fn ($page) => $page->where('affiliateTools', []));
+    }
+
+    public function test_las_guias_de_fotos_llevan_a_su_pagina_de_pixa_sin_sid(): void
+    {
+        $this->get(route('guides.show', ['slug' => 'quitar-el-fondo-de-una-foto-con-ia']))
+            ->assertOk()
+            ->assertSee('/ir/pixa?desde=', false);
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'pixa', 'desde' => '/guias/quitar-el-fondo-de-una-foto-con-ia']))
+            ->assertRedirect('https://getpixa.link/ia-skills-fondo');
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'pixa', 'desde' => '/skills/otra']))
+            ->assertRedirect('https://getpixa.link/ia-skills');
+    }
+
+    public function test_una_guia_que_solo_enlaza_a_la_de_mejorar_fotos_no_muestra_pixa(): void
+    {
+        $this->get(route('guides.show', ['slug' => 'chatgpt-no-funciona']))
+            ->assertOk()
+            ->assertDontSee('/ir/pixa', false);
+    }
+
     public function test_el_informe_incluye_los_clics(): void
     {
         DB::table('affiliate_clicks')->insert([

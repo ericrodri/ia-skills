@@ -1,6 +1,8 @@
 <script setup>
-// Recuadro «Herramientas que usa esta skill» con enlace de afiliado
+// Recuadro «Herramientas para esta tarea» con enlace de afiliado
 // (App\Support\Affiliates). El enlace pasa por /ir/{tool}, que cuenta el clic.
+// No dice «que usa esta skill»: algunas salen por el tema (Pixa), no porque
+// la ficha las nombre.
 // Mismo diseño que resources/views/partials/affiliate-box.blade.php.
 defineProps({
     tools: { type: Array, required: true },
@@ -10,7 +12,7 @@ defineProps({
 
 <template>
     <section v-if="tools.length" class="mt-8 rounded-2xl border border-gray-100 dark:border-gray-800 p-5" aria-labelledby="affiliate-tools-title">
-        <h2 id="affiliate-tools-title" class="text-sm font-semibold text-gray-900 dark:text-gray-100">Herramientas que usa esta skill</h2>
+        <h2 id="affiliate-tools-title" class="text-sm font-semibold text-gray-900 dark:text-gray-100">Herramientas para esta tarea</h2>
         <div v-for="tool in tools" :key="tool.slug" class="mt-3 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
             <div>
                 <p class="font-medium text-gray-900 dark:text-white">{{ tool.name }}</p>

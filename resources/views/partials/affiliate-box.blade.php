@@ -5,7 +5,7 @@
 --}}
 @if(! empty($tools))
     <section class="mt-14 rounded-2xl border border-gray-100 dark:border-gray-800 p-5" aria-labelledby="affiliate-tools-title">
-        <h2 id="affiliate-tools-title" class="text-sm font-semibold text-gray-900 dark:text-gray-100">{{ $title ?? 'Herramientas de esta guía' }}</h2>
+        <h2 id="affiliate-tools-title" class="text-sm font-semibold text-gray-900 dark:text-gray-100">{{ $title ?? 'Herramientas para esta tarea' }}</h2>
         @foreach($tools as $tool)
             <div class="mt-3 flex flex-col sm:flex-row sm:items-center gap-3 sm:justify-between">
                 <div>

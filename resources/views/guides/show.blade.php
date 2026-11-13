@@ -71,7 +71,7 @@
             @endif
 
             @include('partials.affiliate-box', [
-                'tools' => \App\Support\Affiliates::forText($guide['title'].' '.$guide['body'], '/guias/'.$guide['slug']),
+                'tools' => \App\Support\Affiliates::forText($guide['title'].' '.$guide['body'], '/guias/'.$guide['slug'], $guide['title']),
             ])
 
             <section class="guide-callout mt-14">

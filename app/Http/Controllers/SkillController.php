@@ -284,10 +284,12 @@ class SkillController extends Controller
             'guides'     => $guides,
             'neighbours' => $neighbours,
             'nextStep'   => $nextStep,
-            // Recuadro de herramientas con enlace de afiliado que menciona la ficha.
+            // Recuadro de herramientas con enlace de afiliado: las que menciona la
+            // ficha o, para las de `match` => 'title', las que encajan con su título.
             'affiliateTools' => Affiliates::forText(
                 implode(' ', [$skill->title, $skill->tool_name, $skill->description, $skill->prompt_content]),
                 '/skills/'.$skill->slug,
+                $skill->title,
             ),
             'affiliateDisclosure' => Affiliates::DISCLOSURE,
             'share' => $this->shareData($skill, $user?->id === $skill->user_id, $viaLink),
