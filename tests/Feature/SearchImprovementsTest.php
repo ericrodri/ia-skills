@@ -48,6 +48,18 @@ class SearchImprovementsTest extends TestCase
                 ->where('suggestions', []));
     }
 
+    public function test_las_palabras_vacias_no_bloquean_la_busqueda(): void
+    {
+        Skill::factory()->create(['title' => 'Prompt para retocar un selfie con Gemini', 'description' => 'Luz y piel']);
+        Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
+
+        $this->get('/skills?q='.urlencode('retocar una selfie'))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('skills.total', 1)
+                ->where('skills.data.0.title', 'Prompt para retocar un selfie con Gemini'));
+    }
+
     public function test_los_sinonimos_ignoran_tildes_y_mayusculas(): void
     {
         $this->assertSame(['enfermera', 'enfermero', 'salud', 'paciente'], SkillSearch::synonyms('Enfermería'));

@@ -70,12 +70,12 @@ class SkillSearch
      *
      * @param  Builder|Relation  $query
      * @param  bool  $matchProfessionName  Amplía la búsqueda al nombre de la
-     *         profesión. Solo tiene sentido en el listado global: dentro de una
-     *         profesión la consulta ya está acotada a ella.
-     * @return bool  true si se aplicó ordenación por relevancia, y por tanto el
-     *         llamante NO debe aplicar su propio criterio de orden. En SQLite
-     *         devuelve false: el respaldo con LIKE no sabe puntuar relevancia,
-     *         así que se mantiene el orden normal.
+     *                                     profesión. Solo tiene sentido en el listado global: dentro de una
+     *                                     profesión la consulta ya está acotada a ella.
+     * @return bool true si se aplicó ordenación por relevancia, y por tanto el
+     *              llamante NO debe aplicar su propio criterio de orden. En SQLite
+     *              devuelve false: el respaldo con LIKE no sabe puntuar relevancia,
+     *              así que se mantiene el orden normal.
      */
     public static function apply($query, ?string $term, bool $matchProfessionName = false): bool
     {
@@ -85,6 +85,16 @@ class SkillSearch
         if ($words === []) {
             return false;
         }
+
+        // Las palabras se combinan con AND, así que un «una» o un «de» obligaba
+        // a que la ficha lo contuviera: «retocar una selfie» daba 0 resultados
+        // aunque hubiera fichas de retocar selfies. Se descartan, salvo que la
+        // búsqueda no tenga otra cosa.
+        $content = array_values(array_filter(
+            $words,
+            fn ($w) => ! in_array(self::normalize($w), self::STOPWORDS, true),
+        ));
+        $words = $content !== [] ? $content : $words;
 
         // Sinónimos de la búsqueda entera, para el nombre de la profesión:
         // «medicina» también encuentra la profesión Salud.
