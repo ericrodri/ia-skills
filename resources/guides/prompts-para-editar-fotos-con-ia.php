@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Pedirle a ChatGPT o a Gemini que edite una foto funciona sorprendentemente bien… hasta que te cambia la cara. La diferencia está en cómo se pide. Aquí tienes la regla que lo evita, una plantilla base y más de cuarenta prompts listos para copiar, ordenados por lo que quieres hacer.',
     'category' => 'Práctica',
     'published' => '2026-11-02',
-    'updated' => '2026-11-12',
-    'readingMinutes' => 9,
-    'words' => 1545,
+    'updated' => '2026-11-13',
+    'readingMinutes' => 10,
+    'words' => 1664,
     'about' => 'Instrucciones (prompts) para editar fotografías con ChatGPT y Gemini',
     'related' => ['editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
@@ -72,6 +72,19 @@ return [
 </ul>
 
 <p>Si quieres entender qué se puede recuperar y qué no en una foto vieja, lo explicamos en <a href="/guias/restaurar-fotos-antiguas-con-ia">restaurar fotos antiguas con IA</a>.</p>
+
+<h2 id="selfies">Retocar un selfie</h2>
+
+<p>Los selfies tienen problemas propios: la cámara frontal deforma la cara de cerca, el brazo estirado delata la foto y el espejo devuelve el flash. Estos prompts los arreglan sin cambiarte la cara:</p>
+
+<ul>
+    <li><a href="/skills/prompt-para-retocar-un-selfie-con-gemini-luz-piel-y-encuadre-sin-cambiarte-la-cara">Retocar un selfie</a>: luz, piel y encuadre, sin efecto filtro.</li>
+    <li><a href="/skills/prompt-para-corregir-la-cara-deformada-de-un-selfie-nariz-grande-y-cara-alargada-por-el-movil">Corregir la cara deformada por el móvil</a>: la nariz grande y la cara alargada de los selfies hechos de cerca.</li>
+    <li><a href="/skills/prompt-para-cambiar-la-expresion-de-un-selfie-con-ia-sonrisa-natural-u-ojos-abiertos">Cambiar la expresión</a>: abrir los ojos o quitar una sonrisa forzada.</li>
+    <li><a href="/skills/prompt-para-arreglar-un-selfie-en-el-espejo-con-ia-quitar-el-movil-el-flash-y-las-manchas">Arreglar un selfie en el espejo</a>: quitar el flash, las manchas y el móvil.</li>
+    <li><a href="/skills/prompt-para-que-tu-selfie-parezca-una-foto-que-te-ha-hecho-otra-persona">Que tu selfie parezca una foto que te ha hecho otra persona</a>, sin brazo estirado.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-clon-con-ia-salir-dos-o-tres-veces-en-la-misma-foto">Hacer una foto clon</a>: salir dos o tres veces en la misma foto.</li>
+</ul>
 
 <h2 id="escena">Cambiar la escena</h2>
 

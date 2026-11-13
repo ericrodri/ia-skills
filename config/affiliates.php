@@ -64,4 +64,21 @@ return [
         'blurb' => 'Quita fondos, borra objetos y mejora la calidad de tus fotos con IA en un clic, sin escribir prompts. En español y gratis para probar.',
         'cta' => 'Probar Pixa gratis',
     ],
+    // Higgsfield (FirstPromoter): hasta 25 % durante 12 meses. Prohibido pujar
+    // por su marca en buscadores, anuncios que enlacen directo al afiliado y
+    // webs de cupones. Nuestras páginas no lo nombran: sale por el título
+    // (animar fotos, fotos en vídeo) y en las dos guías de vídeo.
+    'higgsfield' => [
+        'name' => 'Higgsfield',
+        'url' => 'https://higgsfield.ai/?fpr=eric-1d1979',
+        'pages' => [
+            '/guias/animar-una-foto-con-ia' => 'https://higgsfield.ai/?fpr=eric-1d1979',
+            '/guias/crear-videos-con-ia' => 'https://higgsfield.ai/?fpr=eric-1d1979',
+        ],
+        'match' => 'title',
+        'pattern' => '/higgsfield|animar\s+(?:una|tu|la|tus|las)?\s*fotos?|fotos?\s+en\s+(?:un\s+)?v[ií]deo'
+            .'|v[ií]deos?\s+a\s+partir\s+de\s+(?:una|tu|tus)?\s*(?:fotos?|im[aá]gen(?:es)?)/iu',
+        'blurb' => 'Convierte tus fotos en vídeo y crea clips con IA con movimientos de cámara de cine, con varios de los mejores modelos de vídeo en un mismo sitio.',
+        'cta' => 'Probar Higgsfield',
+    ],
 ];

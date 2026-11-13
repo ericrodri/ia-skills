@@ -38,6 +38,13 @@ class SkillSearch
         'imagenes' => ['imagen', 'foto'],
         'cara' => ['rostro'],
         'rostro' => ['cara'],
+        // «retocar una selfie», «modificar selfie» y «hacer clon de una selfie»
+        // salieron como búsquedas sin resultados el 13-11-2026.
+        'selfie' => ['selfi', 'autorretrato', 'retrato'],
+        'selfi' => ['selfie', 'autorretrato', 'retrato'],
+        'retocar' => ['retoque', 'retocado', 'editar', 'mejorar'],
+        'modificar' => ['editar', 'cambiar', 'retocar'],
+        'clon' => ['clonar', 'clones', 'duplicar'],
         'logo' => ['logotipo'],
         'logotipo' => ['logo'],
         'redaccion' => ['redactar', 'escribir', 'textos', 'copywriting'],

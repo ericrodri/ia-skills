@@ -139,6 +139,22 @@ class AffiliateTest extends TestCase
             ->assertDontSee('/ir/pixa', false);
     }
 
+    public function test_higgsfield_sale_en_las_guias_de_video_y_en_la_ficha_de_animar_una_foto(): void
+    {
+        $this->get(route('guides.show', ['slug' => 'animar-una-foto-con-ia']))
+            ->assertOk()
+            ->assertSee('/ir/higgsfield?desde=', false);
+
+        $ficha = Skill::factory()->create(['title' => 'Prompt para animar una foto con IA y darle movimiento sutil', 'prompt_content' => 'Anima la foto.']);
+
+        $this->get(route('skills.show', $ficha))->assertInertia(fn ($page) => $page
+            ->where('affiliateTools.0.slug', 'higgsfield'));
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'higgsfield', 'desde' => '/guias/crear-videos-con-ia']))
+            ->assertRedirect('https://higgsfield.ai/?fpr=eric-1d1979');
+    }
+
     public function test_el_informe_incluye_los_clics(): void
     {
         DB::table('affiliate_clicks')->insert([
