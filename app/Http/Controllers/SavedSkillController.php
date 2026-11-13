@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Skill;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Inertia\Inertia;
+use Inertia\Response;
 
 class SavedSkillController extends Controller
 {
@@ -17,11 +19,11 @@ class SavedSkillController extends Controller
 
         if ($user->hasSaved($skill)) {
             $user->savedSkills()->detach($skill->id);
-            $skill->decrement('saves_count');
+            $skill->bump('saves_count', -1);
             $saved = false;
         } else {
             $user->savedSkills()->attach($skill->id);
-            $skill->increment('saves_count');
+            $skill->bump('saves_count');
             $saved = true;
         }
 
@@ -31,10 +33,10 @@ class SavedSkillController extends Controller
         ]);
     }
 
-    public function index(Request $request): \Inertia\Response
+    public function index(Request $request): Response
     {
         if (! $request->user()) {
-            return \Inertia\Inertia::render('Skills/Saved', [
+            return Inertia::render('Skills/Saved', [
                 'skills' => null,
                 'hasApiToken' => false,
             ]);
@@ -46,7 +48,7 @@ class SavedSkillController extends Controller
             ->orderByDesc('saved_skills.created_at')
             ->paginate(20);
 
-        return \Inertia\Inertia::render('Skills/Saved', [
+        return Inertia::render('Skills/Saved', [
             'skills' => $skills,
             'hasApiToken' => (bool) $request->user()->api_token,
         ]);

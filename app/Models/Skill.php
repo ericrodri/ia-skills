@@ -126,6 +126,18 @@ class Skill extends Model
         return $this->hasMany(Comment::class)->whereNull('parent_id')->orderBy('created_at');
     }
 
+    /**
+     * Suma (o resta, con $amount negativo) a un contador sin tocar updated_at.
+     *
+     * updated_at es la fecha de modificación que ven Google (dateModified y
+     * lastmod del sitemap): si cada visita o voto la movía, todo el catálogo
+     * parecía cambiar a diario y Google deja de fiarse de esas fechas.
+     */
+    public function bump(string $column, int $amount = 1): void
+    {
+        static::withoutTimestamps(fn () => $this->increment($column, $amount));
+    }
+
     public function versions(): HasMany
     {
         return $this->hasMany(SkillVersion::class)->orderByDesc('version');

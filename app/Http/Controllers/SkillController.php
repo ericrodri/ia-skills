@@ -17,6 +17,7 @@ use App\Support\SkillMarkdown;
 use App\Support\SkillSearch;
 use App\Support\SkillTemplates;
 use App\Support\ThemePack;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -59,10 +60,10 @@ class SkillController extends Controller
 
         if (! $rankedByRelevance) {
             match ($sort) {
-                'new'      => $query->orderByDesc('created_at'),
-                'saved'    => $query->orderByDesc('saves_count')->orderByDesc('vote_score'),
+                'new' => $query->orderByDesc('created_at'),
+                'saved' => $query->orderByDesc('saves_count')->orderByDesc('vote_score'),
                 'trending' => $query->where('created_at', '>=', now()->subDays(30))->orderByDesc('views_count'),
-                default    => $query->orderByDesc('vote_score'),
+                default => $query->orderByDesc('vote_score'),
             };
         }
 
@@ -248,7 +249,7 @@ class SkillController extends Controller
 
         abort_unless($canView || $viaLink, 404);
 
-        $skill->increment('views_count');
+        $skill->bump('views_count');
 
         $skill->load([
             'profession:id,name,slug',
@@ -269,23 +270,23 @@ class SkillController extends Controller
         $this->shareShowSeo($skill, $guides, $neighbours);
 
         return Inertia::render('Skills/Show', [
-            'skill'     => $skill,
-            'versions'  => $this->versionHistory($skill),
-            'userVote'  => $user ? $user->hasVoted($skill) : null,
+            'skill' => $skill,
+            'versions' => $this->versionHistory($skill),
+            'userVote' => $user ? $user->hasVoted($skill) : null,
             'userSaved' => $user ? $user->hasSaved($skill) : false,
-            'canEdit'   => $user ? $user->can('update', $skill) : false,
+            'canEdit' => $user ? $user->can('update', $skill) : false,
             // Solo su autor y mientras nadie más la ve (SkillController::destroy).
             'canDelete' => $user?->id === $skill->user_id && in_array($skill->status, Skill::OWNER_STATUSES, true),
-            'install'   => [
-                'name'     => SkillMarkdown::name($skill),
-                'url'      => SkillMarkdown::url($skill),
-                'command'  => SkillMarkdown::installCommand($skill),
-                'prompt'   => SkillMarkdown::installPrompt([$skill]),
-                'mcp'      => SkillMarkdown::mcpAvailable() ? SkillMarkdown::mcpCommand() : null,
+            'install' => [
+                'name' => SkillMarkdown::name($skill),
+                'url' => SkillMarkdown::url($skill),
+                'command' => SkillMarkdown::installCommand($skill),
+                'prompt' => SkillMarkdown::installPrompt([$skill]),
+                'mcp' => SkillMarkdown::mcpAvailable() ? SkillMarkdown::mcpCommand() : null,
             ],
-            'guides'     => $guides,
+            'guides' => $guides,
             'neighbours' => $neighbours,
-            'nextStep'   => $nextStep,
+            'nextStep' => $nextStep,
             // Recuadro de herramientas con enlace de afiliado: las que menciona la
             // ficha o, para las de `match` => 'title', las que encajan con su título.
             'affiliateTools' => Affiliates::forText(
@@ -385,7 +386,7 @@ class SkillController extends Controller
      * profesión canonicaliza hacia su landing, y el resto de combinaciones van
      * noindex/follow para que Google siga los enlaces sin inflar el índice.
      *
-     * @param  \Illuminate\Contracts\Pagination\LengthAwarePaginator<Skill>  $skills
+     * @param  LengthAwarePaginator<Skill>  $skills
      */
     private function shareIndexSeo(Request $request, $skills): void
     {
@@ -472,13 +473,36 @@ class SkillController extends Controller
      * completo y sus metadatos lleguen a un crawler que no ejecute JavaScript.
      */
     /**
+     * La descripción que enseña Google bajo el título. Antes acababa en
+     * «· Prompt de IA para Diseño.», que no le dice nada a quien busca cómo
+     * mejorar una foto; ahora remata con lo que encuentra al entrar, si cabe en
+     * los ~160 caracteres que muestra Google.
+     */
+    private function metaDescription(Skill $skill): string
+    {
+        $description = Seo::clean($skill->description);
+        $description .= preg_match('/[.!?…)]$/u', $description) ? '' : '.';
+        $tool = Seo::clean($skill->tool_name);
+        $endings = $tool !== ''
+            ? [" Prompt gratis, listo para copiar y pegar en {$tool}.", " Gratis y listo para pegar en {$tool}.", ' Gratis y listo para copiar.']
+            : [' Prompt gratis, listo para copiar y pegar.', ' Gratis y listo para copiar.'];
+
+        foreach ($endings as $ending) {
+            if (mb_strlen($description.$ending) <= 160) {
+                return $description.$ending;
+            }
+        }
+
+        return $description;
+    }
+
+    /**
      * @param  array<int, array{title: string, url: string}>  $guides
      * @param  array<int, array{slug: string, title: string}>  $neighbours
      */
     private function shareShowSeo(Skill $skill, array $guides = [], array $neighbours = []): void
     {
         $url = route('skills.show', ['skill' => $skill->slug]);
-        $profession = $skill->profession?->name;
 
         $howTo = array_filter([
             '@context' => 'https://schema.org',
@@ -507,9 +531,7 @@ class SkillController extends Controller
 
         Seo::share([
             'title' => $skill->title,
-            'description' => $profession
-                ? Seo::clean($skill->description).' · Prompt de IA para '.$profession.'.'
-                : Seo::clean($skill->description),
+            'description' => $this->metaDescription($skill),
             'canonical' => $url,
             'robots' => $skill->status === 'published' ? null : 'noindex, nofollow',
             'referrer' => $skill->isPrivate() ? 'no-referrer' : null,

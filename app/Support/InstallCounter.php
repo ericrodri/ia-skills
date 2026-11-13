@@ -51,7 +51,7 @@ class InstallCounter
             return false;
         }
 
-        $skill->increment('installs_count');
+        $skill->bump('installs_count');
 
         return true;
     }

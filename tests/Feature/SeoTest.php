@@ -247,4 +247,27 @@ class SeoTest extends TestCase
             $this->assertSame(range(1, count($positions)), $positions, "posiciones no correlativas en {$url}");
         }
     }
+
+    public function test_la_descripcion_de_la_ficha_remata_con_lo_que_encuentra_quien_entra(): void
+    {
+        $this->skill->forceFill(['tool_name' => 'ChatGPT'])->save();
+
+        $this->get(route('skills.show', $this->skill))
+            ->assertOk()
+            ->assertSee('<meta name="description" content="Revisa los problemas técnicos que bloquean la indexación de un sitio. Prompt gratis, listo para copiar y pegar en ChatGPT.">', false)
+            ->assertDontSee('Prompt de IA para Marketing');
+    }
+
+    public function test_las_visitas_y_los_votos_no_cambian_la_fecha_de_modificacion(): void
+    {
+        $this->skill->forceFill(['updated_at' => now()->subMonth()])->saveQuietly();
+        $before = $this->skill->fresh()->updated_at->toAtomString();
+
+        $this->get(route('skills.show', $this->skill))->assertOk();
+        $this->skill->fresh()->bump('vote_score', -1);
+
+        $skill = $this->skill->fresh();
+        $this->assertSame(1, $skill->views_count - $this->skill->views_count);
+        $this->assertSame($before, $skill->updated_at->toAtomString());
+    }
 }

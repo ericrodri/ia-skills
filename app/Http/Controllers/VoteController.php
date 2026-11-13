@@ -25,18 +25,18 @@ class VoteController extends Controller
             if ($existing->value === $value) {
                 // Undo vote
                 $existing->delete();
-                $skill->decrement('vote_score', $value);
+                $skill->bump('vote_score', -$value);
                 $newVote = null;
             } else {
                 // Change vote direction
                 $diff = $value - $existing->value;
                 $existing->update(['value' => $value]);
-                $skill->increment('vote_score', $diff);
+                $skill->bump('vote_score', $diff);
                 $newVote = $value;
             }
         } else {
             Vote::create(['user_id' => $user->id, 'skill_id' => $skill->id, 'value' => $value]);
-            $skill->increment('vote_score', $value);
+            $skill->bump('vote_score', $value);
             $newVote = $value;
         }
 
