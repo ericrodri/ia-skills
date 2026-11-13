@@ -14,7 +14,7 @@ class Affiliates
 {
     public const DISCLOSURE = 'Enlace de afiliado: si contratas un plan, ia-skills recibe una comisión sin que a ti te cueste más. No cambia lo que recomendamos.';
 
-    /** @return array<string, array{name: string, url: string, pattern: string, blurb: string, cta: string}> */
+    /** @return array<string, array{name: string, url: string, pages?: array<string, string>, pattern: string, blurb: string, cta: string}> */
     public static function all(): array
     {
         return config('affiliates', []);
@@ -23,6 +23,23 @@ class Affiliates
     public static function find(string $slug): ?array
     {
         return self::all()[$slug] ?? null;
+    }
+
+    /**
+     * Destino del clic: el enlace propio de la página de origen si lo tiene, o
+     * el general, con `sid1` = página de origen para el panel del programa.
+     */
+    public static function urlFor(array $tool, ?string $from): string
+    {
+        $url = ($from !== null ? ($tool['pages'][$from] ?? null) : null) ?? $tool['url'];
+
+        $sid = $from !== null ? trim(preg_replace('/[^a-z0-9]+/', '-', strtolower($from)), '-') : '';
+
+        if ($sid === '') {
+            return $url;
+        }
+
+        return $url.(str_contains($url, '?') ? '&' : '?').'sid1='.substr($sid, 0, 80);
     }
 
     /**

@@ -23,10 +23,43 @@ class AffiliateTest extends TestCase
     {
         $this->withHeaders(['User-Agent' => self::BROWSER])
             ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/skills/locucion']))
-            ->assertRedirect(config('affiliates.elevenlabs.url'))
+            ->assertRedirect(config('affiliates.elevenlabs.url').'?sid1=skills-locucion')
             ->assertHeader('X-Robots-Tag', 'noindex, nofollow');
 
         $this->assertDatabaseHas('affiliate_clicks', ['tool' => 'elevenlabs', 'from' => '/skills/locucion']);
+    }
+
+    public function test_una_pagina_con_enlace_propio_lleva_a_su_destino(): void
+    {
+        config(['affiliates.elevenlabs.pages' => ['/guias/doblar-un-video-con-ia' => 'https://try.example/doblaje']]);
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/doblar-un-video-con-ia']))
+            ->assertRedirect('https://try.example/doblaje?sid1=guias-doblar-un-video-con-ia');
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/clonar-tu-voz-con-ia']))
+            ->assertRedirect(config('affiliates.elevenlabs.url').'?sid1=guias-clonar-tu-voz-con-ia');
+
+        $this->assertSame(2, DB::table('affiliate_clicks')->count());
+    }
+
+    public function test_sin_origen_va_al_enlace_general_sin_sid(): void
+    {
+        $this->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs')
+            ->assertRedirect(config('affiliates.elevenlabs.url'));
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs?desde=https://spam.example')
+            ->assertRedirect(config('affiliates.elevenlabs.url'));
+    }
+
+    public function test_los_enlaces_por_pagina_apuntan_a_guias_que_existen(): void
+    {
+        foreach (Affiliates::all() as $tool) {
+            foreach (array_keys($tool['pages'] ?? []) as $path) {
+                $this->get($path)->assertOk();
+            }
+        }
     }
 
     public function test_una_herramienta_desconocida_da_404(): void

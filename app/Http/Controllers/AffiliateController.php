@@ -20,18 +20,19 @@ class AffiliateController extends Controller
         $affiliate = Affiliates::find($tool);
         abort_unless($affiliate, 404);
 
-        if (! Analytics::isBot((string) $request->userAgent()) && ! $request->user()?->is_admin) {
-            $from = (string) $request->query('desde', '');
+        $from = (string) $request->query('desde', '');
+        $from = str_starts_with($from, '/') ? Str::limit($from, 255, '') : null;
 
+        if (! Analytics::isBot((string) $request->userAgent()) && ! $request->user()?->is_admin) {
             DB::table('affiliate_clicks')->insert([
                 'tool' => $tool,
                 'day' => now()->toDateString(),
-                'from' => str_starts_with($from, '/') ? Str::limit($from, 255, '') : null,
+                'from' => $from,
                 'created_at' => now(),
             ]);
         }
 
-        return redirect()->away($affiliate['url'])
+        return redirect()->away(Affiliates::urlFor($affiliate, $from))
             ->header('X-Robots-Tag', 'noindex, nofollow')
             ->header('Referrer-Policy', 'no-referrer-when-downgrade');
     }

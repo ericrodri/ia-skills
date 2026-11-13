@@ -10,12 +10,23 @@
  * Condiciones de cada programa (no las incumplas en el contenido):
  *  - ElevenLabs (PartnerStack): prohibido pujar en anuncios de buscadores por
  *    términos de ElevenLabs. 22 % recurrente 12 meses (11 % en Business).
+ *
+ * `pages` (opcional): enlace distinto según la página de origen, para llevar
+ * a una página concreta de la herramienta. Se crean en el panel del programa
+ * (en PartnerStack, «Enlaces personalizados», con destinos ya aprobados).
+ * Las demás páginas usan `url`. A todos se les añade `sid1` con la página de
+ * origen, para ver en el panel del programa qué página trae cada alta.
  */
 
 return [
     'elevenlabs' => [
         'name' => 'ElevenLabs',
         'url' => env('AFFILIATE_ELEVENLABS_URL', 'https://try.elevenlabs.io/03fvt05citih'),
+        // Prueba desde el 13-11-2026: ¿convierte mejor la página concreta que la portada?
+        'pages' => [
+            '/guias/doblar-un-video-con-ia' => 'https://try.elevenlabs.io/ia-skills-doblaje',
+            '/guias/clonar-tu-voz-con-ia' => 'https://try.elevenlabs.io/ia-skills-clonar-voz',
+        ],
         'pattern' => '/eleven\s?labs/i',
         'blurb' => 'Voces de IA muy naturales en español: locuciones, audiolibros, doblaje y clonación de voz. Tiene plan gratuito para probar.',
         'cta' => 'Probar ElevenLabs gratis',
