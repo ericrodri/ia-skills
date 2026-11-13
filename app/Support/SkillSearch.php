@@ -62,8 +62,14 @@ class SkillSearch
         'docente' => ['profesor', 'educacion'],
     ];
 
-    /** Palabras que no aportan en la búsqueda amplia (anyWord). */
-    private const STOPWORDS = ['de', 'del', 'la', 'las', 'el', 'los', 'un', 'una', 'y', 'o', 'en', 'con', 'para', 'por', 'que', 'mi', 'tu', 'al'];
+    /**
+     * Palabras que no aportan: las vacías y las genéricas del catálogo
+     * («skill para generación de vídeos» exigía que la ficha dijera «skill»).
+     */
+    private const STOPWORDS = [
+        'de', 'del', 'la', 'las', 'el', 'los', 'un', 'una', 'y', 'o', 'en', 'con', 'para', 'por', 'que', 'mi', 'tu', 'al',
+        'skill', 'skills', 'prompt', 'prompts', 'ia', 'ai',
+    ];
 
     /**
      * Filtra $query por $term y, cuando se puede, la ordena por relevancia.

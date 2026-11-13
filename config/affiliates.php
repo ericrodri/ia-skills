@@ -59,7 +59,8 @@ return [
         'pattern' => '/(?:quitar|eliminar|borrar)(?:le)?\s+(?:el\s+)?fondo|fondo\s+transparente'
             .'|(?:mejor(?:ar|e|a)|aument(?:ar|e)|sub(?:ir|a))(?:le)?\s+(?:la\s+)?(?:calidad|resoluci[oó]n|nitidez)\s+(?:a|de)\s+(?:una?|la|las|tu|tus|esta)?\s*(?:fotos?|im[aá]gen(?:es)?)'
             .'|ampl[ií](?:ar|e)\s+(?:una?|la|tu)?\s*(?:fotos?|im[aá]gen(?:es)?)|reescalar|upscal'
-            .'|(?:quitar|eliminar|borrar)\s+(?:a\s+)?(?:personas|objetos|gente)\s+de\s+(?:una?|la|tus?)?\s*(?:fotos?|im[aá]gen(?:es)?)'
+            .'|(?:quitar|eliminar|borrar)\s+(?:a\s+)?(?:personas|objetos|gente)(?:\s+[uoy]\s+(?:personas|objetos|gente))?\s+de\s+(?:una?|la|tus?)?\s*(?:fotos?|im[aá]gen(?:es)?)'
+            .'|restaur(?:ar|a)\s+(?:una?|la|las|tus?)?\s*fotos?'
             .'|fotos?\s+de\s+productos?/iu',
         'blurb' => 'Quita fondos, borra objetos y mejora la calidad de tus fotos con IA en un clic, sin escribir prompts. En español y gratis para probar.',
         'cta' => 'Probar Pixa gratis',

@@ -117,6 +117,21 @@ class AffiliateTest extends TestCase
         $this->get(route('skills.show', $sin))->assertInertia(fn ($page) => $page->where('affiliateTools', []));
     }
 
+    public function test_pixa_sale_en_las_fichas_de_borrar_objetos_y_restaurar_fotos(): void
+    {
+        $titles = [
+            'Prompt para quitar personas u objetos de una foto con ChatGPT o Gemini',
+            'Prompt para restaurar fotos antiguas o dañadas con ChatGPT o Gemini',
+        ];
+
+        foreach ($titles as $title) {
+            $skill = Skill::factory()->create(['title' => $title]);
+
+            $this->get(route('skills.show', $skill))->assertInertia(fn ($page) => $page
+                ->where('affiliateTools.0.slug', 'pixa'));
+        }
+    }
+
     public function test_las_guias_de_fotos_llevan_a_su_pagina_de_pixa_sin_sid(): void
     {
         $this->get(route('guides.show', ['slug' => 'quitar-el-fondo-de-una-foto-con-ia']))

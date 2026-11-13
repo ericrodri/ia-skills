@@ -60,6 +60,18 @@ class SearchImprovementsTest extends TestCase
                 ->where('skills.data.0.title', 'Prompt para retocar un selfie con Gemini'));
     }
 
+    public function test_las_palabras_genericas_del_catalogo_no_bloquean_la_busqueda(): void
+    {
+        Skill::factory()->create(['title' => 'Crear videos de producto con Runway', 'description' => 'Anuncios cortos']);
+        Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
+
+        $this->get('/skills?q='.urlencode('skill para crear videos con IA'))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('skills.total', 1)
+                ->where('skills.data.0.title', 'Crear videos de producto con Runway'));
+    }
+
     public function test_los_sinonimos_ignoran_tildes_y_mayusculas(): void
     {
         $this->assertSame(['enfermera', 'enfermero', 'salud', 'paciente'], SkillSearch::synonyms('Enfermería'));
