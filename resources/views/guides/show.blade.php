@@ -84,7 +84,11 @@
             </section>
 
             <div class="mt-14">
-                @include('partials.newsletter-form', ['source' => 'guia:'.$guide['slug']])
+                {{-- Las guías de un tema (fotos) ofrecen su pack (App\Support\ThemePack). --}}
+                @php($themePack = \App\Support\ThemePack::forGuide($guide['slug']))
+                @include('partials.newsletter-form', $themePack
+                    ? ['source' => \App\Support\ThemePack::source($themePack['key'], 'guia'), 'packTitle' => \App\Support\ThemePack::title($themePack)]
+                    : ['source' => 'guia:'.$guide['slug']])
             </div>
 
             @if(! empty($related))

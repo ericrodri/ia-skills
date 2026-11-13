@@ -75,7 +75,8 @@ class ProfessionPackTest extends TestCase
 
         $this->post(URL::temporarySignedRoute('newsletter.confirm.store', now()->addDay(), ['subscriber' => $subscriber->id]))
             ->assertOk()
-            ->assertSee('Abrir el pack de Legal');
+            ->assertSee('Abrir el pack')
+            ->assertSee('skills de IA más votadas para Legal');
     }
 
     public function test_confirming_shows_the_pack_link(): void
@@ -84,7 +85,8 @@ class ProfessionPackTest extends TestCase
 
         $this->post(URL::temporarySignedRoute('newsletter.confirm.store', now()->addDay(), ['subscriber' => $subscriber->id]))
             ->assertOk()
-            ->assertSee('Abrir el pack de Legal')
+            ->assertSee('Abrir el pack')
+            ->assertSee('skills de IA más votadas para Legal')
             ->assertSee('/profesiones/legal/pack', false);
 
         $this->assertTrue($subscriber->fresh()->isActive());

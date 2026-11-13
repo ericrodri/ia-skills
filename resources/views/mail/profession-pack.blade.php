@@ -1,7 +1,7 @@
 <x-mail::message>
-# Tu pack de skills para {{ $professionName }}
+# Tu pack para {{ $packName }}
 
-Aquí tienes las {{ $size }} skills de IA más votadas para {{ $professionName }}, con el prompt completo de cada una. Desde la página puedes guardarlas como PDF.
+{{ $packTitle }}, con el prompt completo de cada uno. Desde la página puedes guardarlos como PDF.
 
 <x-mail::button :url="$packUrl">
 Abrir el pack

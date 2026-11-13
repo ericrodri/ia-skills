@@ -1,12 +1,20 @@
 {{--
     Alta en el resumen semanal sin cuenta (doble opt-in, ver NewsletterController).
     Uso: @include('partials.newsletter-form', ['source' => 'guia:'.$guide['slug']])
+    Con `packTitle` (y un source "tema:…"), ofrece además un pack temático.
 --}}
 <section id="newsletter" class="scroll-mt-20 rounded-2xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-6">
-    <h2 class="text-lg font-bold text-gray-900 dark:text-white">Recibe las mejores skills cada lunes</h2>
-    <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
-        Un email a la semana con las skills de IA más votadas y las guías nuevas. Sin spam, baja con un clic.
-    </p>
+    @if(! empty($packTitle))
+        <h2 class="text-lg font-bold text-gray-900 dark:text-white">Llévate gratis {{ $packTitle }}</h2>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+            En un PDF para guardar o imprimir, con el prompt completo de cada uno. Te lo mandamos al confirmar tu email, junto con el resumen semanal de prompts nuevos. Baja con un clic.
+        </p>
+    @else
+        <h2 class="text-lg font-bold text-gray-900 dark:text-white">Recibe las mejores skills cada lunes</h2>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+            Un email a la semana con las skills de IA más votadas y las guías nuevas. Sin spam, baja con un clic.
+        </p>
+    @endif
 
     @if(session('newsletter_status'))
         <p @class([
@@ -34,7 +42,7 @@
                 value="{{ old('email') }}"
                 class="flex-1 rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 px-4 py-2.5 text-sm text-gray-900 dark:text-gray-100 placeholder-gray-400 focus:border-brand-400 focus:ring-2 focus:ring-brand-100 outline-none"
             >
-            <button type="submit" class="btn-primary justify-center">Suscribirme</button>
+            <button type="submit" class="btn-primary justify-center">{{ empty($packTitle) ? 'Suscribirme' : 'Quiero el pack' }}</button>
         </form>
         @error('email')
             <p class="mt-2 text-sm text-red-600 dark:text-red-400">{{ $message }}</p>

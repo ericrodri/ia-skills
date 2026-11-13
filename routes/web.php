@@ -20,6 +20,7 @@ use App\Http\Controllers\OgImageController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\ProfessionController;
 use App\Http\Controllers\ProfessionPackController;
+use App\Http\Controllers\ThemePackController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\RankingController;
 use App\Http\Controllers\SavedSkillController;
@@ -63,6 +64,11 @@ Route::get('/profesiones/{profession:slug}', [ProfessionController::class, 'show
 Route::get('/profesiones/{profession:slug}/pack', [ProfessionPackController::class, 'show'])
     ->middleware('signed')
     ->name('professions.pack');
+// Pack temático (App\Support\ThemePack), mismo mecanismo con enlace firmado.
+Route::get('/packs/{tema}', [ThemePackController::class, 'show'])
+    ->where('tema', '[a-z0-9-]+')
+    ->middleware('signed')
+    ->name('packs.theme');
 // Landings profesión × tarea (copy en resources/data/profession-tasks.json)
 Route::get('/profesiones/{profession:slug}/{task}', [ProfessionController::class, 'task'])
     ->where('task', '[a-z0-9-]+')

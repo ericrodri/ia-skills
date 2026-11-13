@@ -30,6 +30,8 @@ const props = defineProps({
     // Herramientas con enlace de afiliado que menciona la ficha (App\Support\Affiliates)
     affiliateTools: { type: Array, default: () => [] },
     affiliateDisclosure: { type: String, default: '' },
+    // Pack que se ofrece tras copiar: { source, headline } (SkillController::packOffer)
+    packOffer: { type: Object, default: null },
     // Skill privada: { viaLink, url }. url (el enlace para compartir) solo
     // llega al autor; viaLink indica que quien la ve llegó con ese enlace.
     share: { type: Object, default: null },
@@ -65,7 +67,7 @@ function onManualCopy(event) {
 // Una vez por visita, nunca a usuarios con cuenta (eligen en su perfil).
 const showPackOffer = ref(false)
 function offerPack() {
-    if (page.props.auth?.user || !props.skill.profession || !packOfferAllowed()) return
+    if (page.props.auth?.user || !props.packOffer || !packOfferAllowed()) return
     markPackOffered()
     showPackOffer.value = true
     track('pack_visto')
@@ -645,7 +647,7 @@ function submitComment() {
                         </div>
                     </div>
 
-                    <SkillPackOffer v-if="showPackOffer" :profession="skill.profession" @close="closePackOffer" />
+                    <SkillPackOffer v-if="showPackOffer && packOffer" :offer="packOffer" @close="closePackOffer" />
 
                     <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 

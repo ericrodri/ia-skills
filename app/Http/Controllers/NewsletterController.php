@@ -7,7 +7,7 @@ use App\Mail\ProfessionPackMail;
 use App\Models\NewsletterSubscriber;
 use App\Models\User;
 use App\Support\BotGuard;
-use App\Support\ProfessionPack;
+use App\Support\Packs;
 use App\Support\Seo;
 use App\Support\SiteData;
 use Illuminate\Contracts\View\View;
@@ -78,7 +78,7 @@ class NewsletterController extends Controller
         $alreadyGetsIt = User::where('email', $email)->where('newsletter_opt_in', true)->exists();
 
         $subscriber = NewsletterSubscriber::firstOrNew(['email' => $email]);
-        $pack = ProfessionPack::professionFromSource($data['source'] ?? null);
+        $pack = Packs::fromSource($data['source'] ?? null);
 
         if ($pack && ($alreadyGetsIt || $subscriber->isActive())) {
             // Ya recibe el resumen: no hay nada que confirmar, se le manda el
@@ -104,7 +104,7 @@ class NewsletterController extends Controller
             // Un pack pedido manda sobre el origen anterior: es lo que se
             // entrega al confirmar.
             $subscriber->source = $pack
-                ? ProfessionPack::source($pack, ProfessionPack::originFromSource($data['source'] ?? null))
+                ? Packs::normalizeSource($data['source'] ?? null)
                 : ($subscriber->source ?? $data['source'] ?? null);
             $subscriber->confirmed_at = null;
             $subscriber->unsubscribed_at = null;
@@ -135,15 +135,13 @@ class NewsletterController extends Controller
     }
 
     /**
-     * Profesión y enlace del pack que pidió el suscriptor, si pidió uno.
+     * Nombre y enlace del pack que pidió el suscriptor, si pidió uno.
      *
-     * @return array{name: string, url: string}|null
+     * @return array{name: string, title: string, url: string}|null
      */
     private function pack(NewsletterSubscriber $subscriber): ?array
     {
-        $profession = ProfessionPack::professionFromSource($subscriber->source);
-
-        return $profession ? ['name' => $profession->name, 'url' => ProfessionPack::url($profession)] : null;
+        return Packs::fromSource($subscriber->source);
     }
 
     public function confirm(User $user): View

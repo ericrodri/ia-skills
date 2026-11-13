@@ -2,18 +2,19 @@
 import { ref } from 'vue'
 import { useForm, usePage } from '@inertiajs/vue3'
 
-// Oferta del pack de la profesión justo después de copiar el prompt, que es
-// cuando la ficha acaba de demostrar que sirve. Recuadro en la página, nunca
-// una ventana encima. Mismo alta con doble opt-in que ProfessionPackForm; el
-// `source` "pack:{slug}:ficha" la distingue en las altas.
+// Oferta de un pack justo después de copiar el prompt, que es cuando la ficha
+// acaba de demostrar que sirve. Recuadro en la página, nunca una ventana
+// encima. Mismo alta con doble opt-in que ProfessionPackForm. Qué pack se
+// ofrece lo decide el servidor (SkillController::packOffer): el del tema de
+// la ficha (fotos, "tema:fotos:ficha") o el de su profesión ("pack:{slug}:ficha").
 const props = defineProps({
-    profession: { type: Object, required: true },
+    offer: { type: Object, required: true },
 })
 
 const emit = defineEmits(['close'])
 
 const page = usePage()
-const form = useForm({ email: '', website: '', source: `pack:${props.profession.slug}:ficha` })
+const form = useForm({ email: '', website: '', source: props.offer.source })
 const sent = ref(false)
 
 function submit() {
@@ -74,7 +75,7 @@ export function packOfferAllowed() {
     <div class="mt-3 rounded-xl border border-brand-200 dark:border-brand-800/60 bg-brand-50 dark:bg-brand-900/10 p-4" role="region" aria-label="Pack de prompts gratis">
         <div class="flex items-start justify-between gap-3">
             <div class="min-w-0">
-                <p class="text-sm font-semibold text-gray-900 dark:text-white">¿Te ha servido? Llévate gratis los 20 mejores prompts de {{ profession.name }}</p>
+                <p class="text-sm font-semibold text-gray-900 dark:text-white">¿Te ha servido? {{ offer.headline }}</p>
                 <p class="mt-0.5 text-xs text-gray-600 dark:text-gray-400">
                     En un PDF para guardar o imprimir. Te lo mandamos al confirmar tu email, junto con el resumen semanal de prompts nuevos.
                     Te das de baja con un clic.

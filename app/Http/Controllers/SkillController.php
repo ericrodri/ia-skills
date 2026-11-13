@@ -8,6 +8,7 @@ use App\Models\Profession;
 use App\Models\Skill;
 use App\Models\SkillVersion;
 use App\Support\Affiliates;
+use App\Support\ProfessionPack;
 use App\Support\RelatedContent;
 use App\Support\SearchMisses;
 use App\Support\Seo;
@@ -15,6 +16,7 @@ use App\Support\SiteData;
 use App\Support\SkillMarkdown;
 use App\Support\SkillSearch;
 use App\Support\SkillTemplates;
+use App\Support\ThemePack;
 use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -292,8 +294,34 @@ class SkillController extends Controller
                 $skill->title,
             ),
             'affiliateDisclosure' => Affiliates::DISCLOSURE,
+            'packOffer' => $this->packOffer($skill),
             'share' => $this->shareData($skill, $user?->id === $skill->user_id, $viaLink),
         ]);
+    }
+
+    /**
+     * Pack que se ofrece tras copiar el prompt (SkillPackOffer.vue): el del
+     * tema si la ficha es de uno (las de fotos, ThemePack) y si no, el de su
+     * profesión. A quien copia un prompt para editar una foto, «los 20 mejores
+     * prompts de Diseño» no le sirve.
+     *
+     * @return array{source: string, headline: string}|null
+     */
+    private function packOffer(Skill $skill): ?array
+    {
+        if ($theme = ThemePack::forSkill($skill->slug)) {
+            return [
+                'source' => ThemePack::source($theme['key'], 'ficha'),
+                'headline' => 'Llévate gratis '.ThemePack::title($theme),
+            ];
+        }
+
+        $profession = $skill->profession;
+
+        return $profession ? [
+            'source' => ProfessionPack::source($profession, 'ficha'),
+            'headline' => 'Llévate gratis los '.ProfessionPack::SIZE." mejores prompts de {$profession->name}",
+        ] : null;
     }
 
     /**
