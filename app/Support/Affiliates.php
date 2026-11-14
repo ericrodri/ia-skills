@@ -12,6 +12,13 @@ namespace App\Support;
  */
 class Affiliates
 {
+    /**
+     * Parámetro que el recuadro añade al enlace al pulsarlo (pointerdown o
+     * click). Solo los clics que lo traen se cuentan: los robots siguen el
+     * href sin él. Ver AffiliateController.
+     */
+    public const PRESSED = 'pulsado';
+
     public const DISCLOSURE = 'Enlace de afiliado: si contratas un plan, ia-skills recibe una comisión sin que a ti te cueste más. No cambia lo que recomendamos.';
 
     /** @return array<string, array{name: string, url: string, pages?: array<string, string>, sid?: string, match?: string, pattern: string, blurb: string, cta: string}> */

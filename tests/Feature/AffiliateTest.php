@@ -22,11 +22,25 @@ class AffiliateTest extends TestCase
     public function test_ir_cuenta_el_clic_y_redirige_al_afiliado(): void
     {
         $this->withHeaders(['User-Agent' => self::BROWSER])
-            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/skills/locucion']))
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/skills/locucion', 'pulsado' => 1]))
             ->assertRedirect(config('affiliates.elevenlabs.url').'?sid1=skills-locucion')
             ->assertHeader('X-Robots-Tag', 'noindex, nofollow');
 
         $this->assertDatabaseHas('affiliate_clicks', ['tool' => 'elevenlabs', 'from' => '/skills/locucion']);
+    }
+
+    public function test_sin_la_marca_de_pulsado_redirige_pero_no_cuenta(): void
+    {
+        // Así llegaban los robots: directos al href, con un Chrome normal.
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/skills/locucion']))
+            ->assertRedirect(config('affiliates.elevenlabs.url').'?sid1=skills-locucion');
+
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'pulsado' => 'si']))
+            ->assertRedirect();
+
+        $this->assertSame(0, DB::table('affiliate_clicks')->count());
     }
 
     public function test_una_pagina_con_enlace_propio_lleva_a_su_destino(): void
@@ -34,11 +48,11 @@ class AffiliateTest extends TestCase
         config(['affiliates.elevenlabs.pages' => ['/guias/doblar-un-video-con-ia' => 'https://try.example/doblaje']]);
 
         $this->withHeaders(['User-Agent' => self::BROWSER])
-            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/doblar-un-video-con-ia']))
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/doblar-un-video-con-ia', 'pulsado' => 1]))
             ->assertRedirect('https://try.example/doblaje?sid1=guias-doblar-un-video-con-ia');
 
         $this->withHeaders(['User-Agent' => self::BROWSER])
-            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/clonar-tu-voz-con-ia']))
+            ->get(route('affiliates.go', ['tool' => 'elevenlabs', 'desde' => '/guias/clonar-tu-voz-con-ia', 'pulsado' => 1]))
             ->assertRedirect(config('affiliates.elevenlabs.url').'?sid1=guias-clonar-tu-voz-con-ia');
 
         $this->assertSame(2, DB::table('affiliate_clicks')->count());
@@ -69,17 +83,18 @@ class AffiliateTest extends TestCase
 
     public function test_los_bots_y_los_admins_redirigen_sin_contar(): void
     {
-        $this->withHeaders(['User-Agent' => 'Googlebot/2.1'])->get('/ir/elevenlabs')->assertRedirect();
+        $this->withHeaders(['User-Agent' => 'Googlebot/2.1'])->get('/ir/elevenlabs?pulsado=1')->assertRedirect();
         $this->actingAs(User::factory()->create(['is_admin' => true]))
-            ->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs')->assertRedirect();
+            ->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs?pulsado=1')->assertRedirect();
 
         $this->assertSame(0, DB::table('affiliate_clicks')->count());
     }
 
     public function test_un_origen_externo_no_se_guarda(): void
     {
-        $this->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs?desde=https://spam.example');
+        $this->withHeaders(['User-Agent' => self::BROWSER])->get('/ir/elevenlabs?pulsado=1&desde=https://spam.example');
 
+        $this->assertSame(1, DB::table('affiliate_clicks')->count());
         $this->assertNull(DB::table('affiliate_clicks')->value('from'));
     }
 
@@ -102,7 +117,10 @@ class AffiliateTest extends TestCase
             ->assertOk()
             ->assertSee('/ir/elevenlabs?desde=', false)
             ->assertSee('rel="sponsored noopener"', false)
-            ->assertSee('Enlace de afiliado');
+            ->assertSee('Enlace de afiliado')
+            // El script que añade la marca de pulsado; sin él no contaría nada.
+            ->assertSee('data-afiliado', false)
+            ->assertSee('"pulsado"', false);
     }
 
     public function test_pixa_sale_por_el_titulo_de_la_ficha_y_no_por_el_prompt(): void

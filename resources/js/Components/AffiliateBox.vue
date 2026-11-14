@@ -8,6 +8,19 @@ defineProps({
     tools: { type: Array, required: true },
     disclosure: { type: String, required: true },
 })
+
+// Marca el enlace como pulsado por una persona justo antes de seguirlo
+// (también con clic central, Ctrl+clic o Intro). El servidor solo cuenta los
+// clics que llevan la marca: los robots siguen el href sin ella.
+// Mismo nombre que App\Support\Affiliates::PRESSED.
+function markPressed(event) {
+    const link = event.currentTarget
+    const url = new URL(link.href, window.location.href)
+    if (url.searchParams.get('pulsado') !== '1') {
+        url.searchParams.set('pulsado', '1')
+        link.href = url.toString()
+    }
+}
 </script>
 
 <template>
@@ -18,7 +31,7 @@ defineProps({
                 <p class="font-medium text-gray-900 dark:text-white">{{ tool.name }}</p>
                 <p class="text-sm text-gray-600 dark:text-gray-400">{{ tool.blurb }}</p>
             </div>
-            <a :href="tool.href" target="_blank" rel="sponsored noopener" class="btn-secondary shrink-0 justify-center">{{ tool.cta }} ↗</a>
+            <a :href="tool.href" target="_blank" rel="sponsored noopener" @pointerdown="markPressed" @click="markPressed" class="btn-secondary shrink-0 justify-center">{{ tool.cta }} ↗</a>
         </div>
         <p class="mt-4 text-xs text-gray-400 dark:text-gray-500">{{ disclosure }}</p>
     </section>

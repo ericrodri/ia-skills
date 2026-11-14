@@ -12,9 +12,26 @@
                     <p class="font-medium text-gray-900 dark:text-white">{{ $tool['name'] }}</p>
                     <p class="text-sm text-gray-600 dark:text-gray-400">{{ $tool['blurb'] }}</p>
                 </div>
-                <a href="{{ $tool['href'] }}" target="_blank" rel="sponsored noopener" class="btn-secondary shrink-0 justify-center">{{ $tool['cta'] }} ↗</a>
+                <a href="{{ $tool['href'] }}" target="_blank" rel="sponsored noopener" data-afiliado class="btn-secondary shrink-0 justify-center">{{ $tool['cta'] }} ↗</a>
             </div>
         @endforeach
         <p class="mt-4 text-xs text-gray-400 dark:text-gray-500">{{ \App\Support\Affiliates::DISCLOSURE }}</p>
     </section>
+    {{-- Marca el enlace como pulsado por una persona antes de seguirlo: el
+         servidor solo cuenta los clics con la marca (los robots siguen el
+         href sin ella). Ver App\Support\Affiliates::PRESSED. --}}
+    <script>
+        (function () {
+            function mark(event) {
+                var link = event.target.closest && event.target.closest('a[data-afiliado]');
+                if (!link) return;
+                var url = new URL(link.href, window.location.href);
+                if (url.searchParams.get(@json(\App\Support\Affiliates::PRESSED)) === '1') return;
+                url.searchParams.set(@json(\App\Support\Affiliates::PRESSED), '1');
+                link.href = url.toString();
+            }
+            document.addEventListener('pointerdown', mark, true);
+            document.addEventListener('click', mark, true);
+        })();
+    </script>
 @endif
