@@ -30,6 +30,9 @@ class SkillSearch
         'medico' => ['salud', 'medicina', 'clinico'],
         'sanidad' => ['salud', 'sanitario'],
         'enfermeria' => ['enfermera', 'enfermero', 'salud', 'paciente'],
+        // «skill para generación de vídeos»: ninguna ficha dice «generación».
+        'generacion' => ['crear', 'generar', 'hacer'],
+        'generar' => ['crear', 'hacer'],
         'vectorizar' => ['vector', 'vectorial', 'svg'],
         'vector' => ['vectorizar', 'vectorial', 'svg'],
         'foto' => ['fotografia', 'imagen'],

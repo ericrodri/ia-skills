@@ -65,7 +65,7 @@ class SearchImprovementsTest extends TestCase
         Skill::factory()->create(['title' => 'Crear videos de producto con Runway', 'description' => 'Anuncios cortos']);
         Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
 
-        $this->get('/skills?q='.urlencode('skill para crear videos con IA'))
+        $this->get('/skills?q='.urlencode('skill para generación de videos'))
             ->assertOk()
             ->assertInertia(fn ($page) => $page
                 ->where('skills.total', 1)
