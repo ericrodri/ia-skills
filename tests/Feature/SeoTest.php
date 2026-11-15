@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Support\Guides;
+use App\Support\SkillContent;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -256,6 +257,31 @@ class SeoTest extends TestCase
             ->assertOk()
             ->assertSee('<meta name="description" content="Revisa los problemas técnicos que bloquean la indexación de un sitio. Prompt gratis, listo para copiar y pegar en ChatGPT.">', false)
             ->assertDontSee('Prompt de IA para Marketing');
+    }
+
+    public function test_la_ficha_con_contenido_extra_muestra_respuesta_y_preguntas_frecuentes(): void
+    {
+        $slug = 'como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion';
+        $extra = SkillContent::for($slug);
+        $this->assertNotEmpty($extra['answer']);
+        $this->assertNotEmpty($extra['faq']);
+
+        $skill = Skill::factory()->create(['slug' => $slug, 'profession_id' => $this->profession->id, 'status' => 'published']);
+        $question = $extra['faq'][0]['q'];
+
+        $this->get(route('skills.show', $skill))
+            ->assertOk()
+            // FAQPage para Google y el mismo texto en <noscript> para quien no ejecuta JS.
+            ->assertSee('"@type":"FAQPage"', false)
+            ->assertSee(json_encode($question, JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES), false)
+            ->assertSee('Respuesta rápida: '.$extra['answer'])
+            ->assertInertia(fn ($page) => $page->where('extra.faq.0.q', $question));
+
+        // Las demás fichas no llevan nada extra ni FAQPage.
+        $this->get(route('skills.show', $this->skill))
+            ->assertOk()
+            ->assertDontSee('"@type":"FAQPage"', false)
+            ->assertInertia(fn ($page) => $page->where('extra', null));
     }
 
     public function test_las_visitas_y_los_votos_no_cambian_la_fecha_de_modificacion(): void

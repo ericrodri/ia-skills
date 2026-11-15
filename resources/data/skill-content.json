@@ -1,0 +1,41 @@
+{
+    "como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion": {
+        "answer": "Sube la foto original a ChatGPT y pídele, con palabras concretas, qué debe mejorar (nitidez, ruido, tamaño) y qué no puede cambiar (caras, objetos, encuadre). Un simple «mejora esta foto» suele devolver otra imagen distinta; el prompt de abajo ya lleva esas reglas.",
+        "steps": [
+            "Abre ChatGPT (sirve el plan gratis) y pulsa + para adjuntar la foto. Usa el archivo original, no una captura de pantalla ni la copia que reenvía WhatsApp, que pierde calidad.",
+            "Copia el prompt de abajo, rellena qué aparece en la foto y para qué la quieres, y envíalo junto con la imagen.",
+            "Compara el resultado con el original. Si ha cambiado una cara o un detalle, escribe: «Vuelve al original y prioriza la fidelidad sobre la nitidez».",
+            "Descarga la imagen. Si la necesitas para imprimir en grande o en 4K, amplíala después con un programa de ampliación: ChatGPT no la entrega a ese tamaño."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT mejorar la calidad de una foto?",
+                "a": "Sí, aunque no «desenfoca al revés»: genera una imagen nueva muy parecida a la original, más nítida y sin ruido. Con fotos algo borrosas, pixeladas o comprimidas el resultado suele ser bueno. Si la foto está muy borrosa, los detalles finos son una reconstrucción y pueden no coincidir con la realidad, así que no sirve para leer matrículas ni documentos."
+            },
+            {
+                "q": "¿Es gratis mejorar una foto con ChatGPT?",
+                "a": "Sí, se puede con el plan gratuito, pero con un límite de imágenes al día que OpenAI no publica y que cambia según la demanda (suele rondar las dos o tres). Los planes de pago permiten muchas más."
+            },
+            {
+                "q": "¿Puedo pedirle a ChatGPT la foto en 4K?",
+                "a": "Puedes pedírselo, pero dentro del chat la imagen que devuelve es bastante más pequeña: suele rondar los 1.000 a 1.500 píxeles por lado. Comprueba el tamaño al descargarla y, si necesitas 4K o imprimir en grande, amplíala después con un programa de ampliación."
+            },
+            {
+                "q": "¿Por qué ChatGPT me cambia la cara al mejorar la foto?",
+                "a": "Porque vuelve a dibujar la imagen entera. Para evitarlo hay que decirle de forma expresa que no cambie rasgos, expresión ni proporciones, como hace el prompt de esta página. Si aun así la cambia, pídele que vuelva al original y priorice la fidelidad sobre la nitidez, o prueba con Gemini."
+            },
+            {
+                "q": "¿Sirve el mismo prompt en Gemini?",
+                "a": "Sí. Adjunta la foto en Gemini y pega el mismo texto. Cada uno falla en cosas distintas, así que si el resultado de uno no te convence, prueba con el otro antes de cambiar el prompt."
+            },
+            {
+                "q": "¿Sirve para fotos antiguas o dañadas?",
+                "a": "Para quitar ruido y dar nitidez, sí. Si la foto tiene rayas, manchas, dobleces o partes rotas, usa el prompt para restaurar fotos antiguas, que además repara esos daños y puede colorearla."
+            },
+            {
+                "q": "¿Puedo mejorar fotos de otras personas?",
+                "a": "Solo fotos tuyas o con permiso de quien aparece en ellas. ChatGPT, además, puede negarse a editar algunas fotos de personas reales por sus normas de uso."
+            }
+        ]
+    }
+}

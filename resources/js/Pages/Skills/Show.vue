@@ -27,6 +27,10 @@ const props = defineProps({
     neighbours: { type: Array, default: () => [] },
     // «Siguiente paso» bajo el prompt: { skills: [{slug, title}], guide: {url, title, excerpt} | null }
     nextStep: { type: Object, default: () => ({ skills: [], guide: null }) },
+    // Respuesta rápida, pasos y preguntas frecuentes de las fichas con más
+    // tráfico: { answer, steps: [], faq: [{q, a}] } (App\Support\SkillContent).
+    // El servidor emite lo mismo en el FAQPage y en <noscript>.
+    extra: { type: Object, default: null },
     // Herramientas con enlace de afiliado que menciona la ficha (App\Support\Affiliates)
     affiliateTools: { type: Array, default: () => [] },
     affiliateDisclosure: { type: String, default: '' },
@@ -483,6 +487,19 @@ function submitComment() {
                     </div>
                     <p class="mt-3 text-gray-600 dark:text-gray-400 dark:text-gray-500 leading-relaxed">{{ skill.description }}</p>
 
+                    <!-- Respuesta rápida: quien llega desde Google pregunta «cómo le
+                         pido a ChatGPT que…»; aquí está la respuesta antes del prompt. -->
+                    <section v-if="extra?.answer || extra?.steps?.length" class="mt-5 rounded-xl border border-gray-100 dark:border-gray-800 p-4" aria-labelledby="quick-answer-title">
+                        <h2 id="quick-answer-title" class="text-sm font-semibold text-gray-900 dark:text-gray-100">Respuesta rápida</h2>
+                        <p v-if="extra.answer" class="mt-2 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{{ extra.answer }}</p>
+                        <ol v-if="extra.steps?.length" class="mt-3 space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                            <li v-for="(step, i) in extra.steps" :key="i" class="flex gap-2.5">
+                                <span class="shrink-0 w-5 h-5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-semibold flex items-center justify-center mt-0.5">{{ i + 1 }}</span>
+                                <span class="leading-relaxed">{{ step }}</span>
+                            </li>
+                        </ol>
+                    </section>
+
                     <!-- Use case -->
                     <div v-if="skill.use_case" class="mt-5 p-4 bg-brand-50 dark:bg-brand-900/20 rounded-xl border border-brand-100 dark:border-brand-800/50">
                         <p class="text-xs font-semibold text-brand-700 dark:text-brand-400 uppercase tracking-wider mb-1">Caso de uso</p>
@@ -671,6 +688,20 @@ function submitComment() {
                             <span class="block text-xs text-gray-400 dark:text-gray-500">Guía</span>
                             <span class="block text-sm font-medium text-gray-800 dark:text-gray-200">{{ nextStep.guide.title }}</span>
                         </a>
+                    </section>
+
+                    <!-- Preguntas frecuentes (mismo texto que el FAQPage del servidor) -->
+                    <section v-if="extra?.faq?.length" class="mt-8" aria-labelledby="faq-title">
+                        <h2 id="faq-title" class="font-semibold text-gray-900 dark:text-gray-100">Preguntas frecuentes</h2>
+                        <div class="mt-3 divide-y divide-gray-100 dark:divide-gray-800 border-y border-gray-100 dark:border-gray-800">
+                            <details v-for="(item, i) in extra.faq" :key="i" class="group py-3" :open="i === 0">
+                                <summary class="cursor-pointer list-none flex items-start justify-between gap-3 text-sm font-medium text-gray-900 dark:text-gray-100">
+                                    <span>{{ item.q }}</span>
+                                    <span class="shrink-0 text-gray-400 transition-transform group-open:rotate-45" aria-hidden="true">+</span>
+                                </summary>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{{ item.a }}</p>
+                            </details>
+                        </div>
                     </section>
 
                     <!-- Usar como Skill de Claude Code: SKILL.md generado desde la ficha -->

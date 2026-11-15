@@ -13,6 +13,7 @@ use App\Support\RelatedContent;
 use App\Support\SearchMisses;
 use App\Support\Seo;
 use App\Support\SiteData;
+use App\Support\SkillContent;
 use App\Support\SkillMarkdown;
 use App\Support\SkillSearch;
 use App\Support\SkillTemplates;
@@ -287,6 +288,9 @@ class SkillController extends Controller
             'guides' => $guides,
             'neighbours' => $neighbours,
             'nextStep' => $nextStep,
+            // Respuesta rápida, pasos y preguntas frecuentes de las fichas con
+            // más tráfico (resources/data/skill-content.json).
+            'extra' => SkillContent::for($skill->slug),
             // Recuadro de herramientas con enlace de afiliado: las que menciona la
             // ficha o, para las de `match` => 'title', las que encajan con su título.
             'affiliateTools' => Affiliates::forText(
@@ -529,6 +533,15 @@ class SkillController extends Controller
 
         $breadcrumbs[$skill->title] = $url;
 
+        // Lo mismo que muestra la ficha en «Respuesta rápida» y «Preguntas
+        // frecuentes», para la versión sin JavaScript.
+        $extra = SkillContent::for($skill->slug) ?? [];
+        $extraParagraphs = array_merge(
+            isset($extra['answer']) ? ['Respuesta rápida: '.$extra['answer']] : [],
+            collect($extra['steps'] ?? [])->map(fn (string $step, int $i) => ($i + 1).'. '.$step)->all(),
+            collect($extra['faq'] ?? [])->map(fn (array $item) => $item['q'].' '.$item['a'])->all(),
+        );
+
         Seo::share([
             'title' => $skill->title,
             'description' => $this->metaDescription($skill),
@@ -540,11 +553,11 @@ class SkillController extends Controller
             'ogImageAlt' => $skill->title,
             'fallback' => [
                 'heading' => $skill->title,
-                'paragraphs' => array_filter([
+                'paragraphs' => array_merge(array_filter([
                     Seo::clean($skill->description),
                     $skill->use_case ? 'Cuándo usarlo: '.Seo::clean($skill->use_case) : null,
                     $skill->tool_name ? 'Herramienta recomendada: '.$skill->tool_name : null,
-                ]),
+                ]), $extraParagraphs),
                 'pre' => $skill->prompt_content,
                 'links' => collect($skill->profession ? [
                     'Más prompts de IA para '.$skill->profession->name => route('professions.show', ['profession' => $skill->profession->slug]),
@@ -553,11 +566,12 @@ class SkillController extends Controller
                     ->merge(collect($guides)->mapWithKeys(fn (array $g) => ['Guía: '.$g['title'] => $g['url']]))
                     ->all(),
             ],
-            'schema' => [
+            'schema' => array_values(array_filter([
                 Seo::organization(),
                 Seo::breadcrumbs($breadcrumbs),
                 $howTo,
-            ],
+                Seo::faq(SkillContent::faqPairs($skill->slug)),
+            ])),
         ]);
     }
 
