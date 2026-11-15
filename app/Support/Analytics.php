@@ -192,6 +192,7 @@ class Analytics
             'devices' => $top('device', 3),
             'affiliates' => self::affiliateClicks($from, $to),
             'ai' => AiUsage::report($from, $to),
+            'mcp' => McpUsage::report($from, $to),
             'skillActions' => SkillActions::report($from, $to),
             'searchMisses' => SearchMisses::report($from, $to),
         ];

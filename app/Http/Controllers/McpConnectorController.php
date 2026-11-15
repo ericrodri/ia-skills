@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Support\McpConnector;
+use App\Support\McpUsage;
 use App\Support\OAuth;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
@@ -98,11 +99,19 @@ class McpConnectorController extends Controller
 
         // Lotes (versiones antiguas del protocolo): una respuesta por petición.
         if (array_is_list($payload)) {
-            $responses = array_values(array_filter(array_map(fn ($message) => is_array($message) ? $this->dispatch($connector, $message) : null, $payload)));
+            $responses = array_values(array_filter(array_map(function ($message) use ($connector, $request, $user) {
+                if (! is_array($message)) {
+                    return null;
+                }
+                $this->track($request, $user, $message);
+
+                return $this->dispatch($connector, $message);
+            }, $payload)));
 
             return $responses ? response()->json($responses) : response()->noContent(202);
         }
 
+        $this->track($request, $user, $payload);
         $response = $this->dispatch($connector, $payload);
 
         // Notificaciones y respuestas del cliente: sin cuerpo.
@@ -115,6 +124,23 @@ class McpConnectorController extends Controller
     public function stream(): Response
     {
         return response('Este servidor MCP solo admite POST.', 405)->header('Allow', 'POST');
+    }
+
+    /**
+     * Cuenta conexiones y llamadas a herramientas (App\Support\McpUsage).
+     *
+     * @param  array<string, mixed>  $message
+     */
+    private function track(Request $request, ?User $user, array $message): void
+    {
+        $method = $message['method'] ?? null;
+        $params = is_array($message['params'] ?? null) ? $message['params'] : [];
+
+        if ($method === 'initialize') {
+            McpUsage::record($request, $user, 'initialize');
+        } elseif ($method === 'tools/call') {
+            McpUsage::record($request, $user, (string) ($params['name'] ?? ''), is_array($params['arguments'] ?? null) ? $params['arguments'] : []);
+        }
     }
 
     /**

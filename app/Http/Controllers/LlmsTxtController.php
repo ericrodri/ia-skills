@@ -87,6 +87,7 @@ class LlmsTxtController extends Controller
             '',
             '## Acceso programático',
             '',
+            '- [Servidor MCP remoto]('.route('api.mcp').'): Streamable HTTP, sin clave ni instalación. Herramientas search_skills (buscar en el catálogo) y get_skill (prompt completo por slug). Instrucciones para Claude, ChatGPT y otros clientes en '.route('mcp').'.',
             '- [API del catálogo]('.route('api.skills.index').'): JSON de solo lectura, sin clave. Parámetros: q, profession, type, sort, limit.',
             '- Cada ficha tiene su SKILL.md instalable en /skills/{slug}/skill.md (formato Agent Skills, listo para ~/.claude/skills/).',
             '',

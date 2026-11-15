@@ -64,6 +64,13 @@ const aiGroups = [
 ]
 const groupNames = { asistente: 'asistente', agente: 'agente', indice: 'rastreo' }
 const kindNames = { skill_md: 'skill.md', llms: 'llms.txt', api: 'API', guia: 'Guías', ficha: 'Fichas', otra: 'Otras páginas' }
+
+const mcpCards = [
+    { key: 'conectar', label: 'Conexiones', value: (m) => m.actions.conectar },
+    { key: 'buscar', label: 'Búsquedas', value: (m) => m.actions.buscar },
+    { key: 'leer', label: 'Fichas leídas', value: (m) => m.actions.leer },
+    { key: 'cuenta', label: 'Con cuenta', value: (m) => m.access.cuenta },
+]
 </script>
 
 <template>
@@ -154,6 +161,52 @@ const kindNames = { skill_md: 'skill.md', llms: 'llms.txt', api: 'API', guia: 'G
                                 <span class="tabular-nums text-gray-900 dark:text-white">{{ n(s.hits) }}</span>
                             </li>
                             <li v-if="!report.ai.topInstalled.length" class="text-gray-400">Aún no hay instalaciones.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Conector MCP remoto (App\Support\McpUsage) -->
+            <section v-if="report.mcp" class="rounded-2xl border border-gray-100 dark:border-gray-800 p-5">
+                <h2 class="font-semibold text-gray-900 dark:text-white">Conector MCP</h2>
+                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Uso de /api/mcp sin contar el nuestro (administradores: {{ n(report.mcp.access.propio) }}). Registro desde el 15 de noviembre de 2026.</p>
+
+                <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div v-for="m in mcpCards" :key="m.key" class="rounded-xl border border-gray-100 dark:border-gray-800 p-4">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">{{ m.label }}</p>
+                        <p class="mt-1 text-2xl font-bold text-gray-900 dark:text-white tabular-nums">{{ n(m.value(report.mcp)) }}</p>
+                    </div>
+                </div>
+
+                <div class="mt-6 grid gap-6 lg:grid-cols-3">
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Por cliente</h3>
+                        <ul class="mt-2 space-y-1.5 text-sm">
+                            <li v-for="c in report.mcp.clients" :key="c.label" class="flex justify-between gap-3">
+                                <span class="text-gray-700 dark:text-gray-300">{{ c.label }}</span>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(c.hits) }}</span>
+                            </li>
+                            <li v-if="!report.mcp.clients.length" class="text-gray-400">Sin uso externo en este periodo.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Qué buscan</h3>
+                        <ul class="mt-2 space-y-1.5 text-xs">
+                            <li v-for="s in report.mcp.searches" :key="s.label" class="flex justify-between gap-3">
+                                <span class="truncate text-gray-600 dark:text-gray-400" :title="s.label">{{ s.label }}</span>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(s.hits) }}</span>
+                            </li>
+                            <li v-if="!report.mcp.searches.length" class="text-gray-400">Todavía ninguna búsqueda.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-gray-900 dark:text-white">Fichas que leen</h3>
+                        <ul class="mt-2 space-y-1.5 text-xs">
+                            <li v-for="r in report.mcp.reads" :key="r.label" class="flex justify-between gap-3">
+                                <a :href="`/skills/${r.label}`" target="_blank" rel="noopener" class="truncate text-gray-600 dark:text-gray-400 hover:text-brand-600" :title="r.label">{{ r.label }}</a>
+                                <span class="tabular-nums text-gray-900 dark:text-white">{{ n(r.hits) }}</span>
+                            </li>
+                            <li v-if="!report.mcp.reads.length" class="text-gray-400">Todavía ninguna lectura.</li>
                         </ul>
                     </div>
                 </div>

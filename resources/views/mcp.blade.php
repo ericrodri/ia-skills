@@ -22,9 +22,32 @@
             {{ $skillsCount }} prompts y skills de IA en español, sin que tengas que volver a abrir la web.
         </p>
 
+        {{-- Conector remoto: sin instalar nada (McpConnectorController) --}}
+        <div class="mt-8 rounded-2xl border border-brand-200 dark:border-brand-800 bg-brand-50/60 dark:bg-brand-900/10 p-5">
+            <p class="text-sm font-semibold text-brand-900 dark:text-brand-200">Sin instalar nada: conector remoto</p>
+            <div class="mt-3 flex items-stretch gap-2">
+                <pre id="mcp-remote" class="flex-1 min-w-0 bg-gray-900 text-gray-100 rounded-lg px-4 py-3 text-sm font-mono overflow-x-auto whitespace-nowrap">{{ route('api.mcp') }}</pre>
+                <button
+                    type="button"
+                    data-copy="#mcp-remote"
+                    class="shrink-0 px-4 rounded-lg text-sm font-semibold bg-brand-600 hover:bg-brand-700 text-white transition-colors"
+                >Copiar</button>
+            </div>
+            <p class="mt-3 text-sm text-gray-700 dark:text-gray-300">
+                En Claude (web o escritorio), pégala en <strong>Personalizar → Conectores → Añadir conector personalizado</strong>.
+                En Claude Code:
+            </p>
+            <pre class="mt-2 bg-gray-900 text-gray-100 rounded-lg px-4 py-3 text-sm font-mono overflow-x-auto whitespace-nowrap">claude mcp add --transport http ia-skills {{ route('api.mcp') }}</pre>
+            <p class="mt-3 text-xs text-gray-600 dark:text-gray-400">
+                Sirve en cualquier cliente que admita servidores MCP remotos (Streamable HTTP). Sin cuenta ni clave.
+                El paso a paso, con capturas y cómo usar tus skills privadas, está en la guía
+                <a href="{{ route('guides.show', ['slug' => 'conectar-ia-skills-a-claude']) }}" class="underline">conectar ia-skills a Claude</a>.
+            </p>
+        </div>
+
         {{-- Comando --}}
-        <div class="mt-8 rounded-2xl border border-violet-200 dark:border-violet-800 bg-violet-50/60 dark:bg-violet-900/10 p-5">
-            <p class="text-sm font-semibold text-violet-900 dark:text-violet-200">Pégalo en tu terminal</p>
+        <div class="mt-6 rounded-2xl border border-violet-200 dark:border-violet-800 bg-violet-50/60 dark:bg-violet-900/10 p-5">
+            <p class="text-sm font-semibold text-violet-900 dark:text-violet-200">Con instalación local, para instalar skills en tu equipo</p>
             <div class="mt-3 flex items-stretch gap-2">
                 <pre id="mcp-command" class="flex-1 min-w-0 bg-gray-900 text-gray-100 rounded-lg px-4 py-3 text-sm font-mono overflow-x-auto whitespace-nowrap">{{ $command }}</pre>
                 <button
@@ -105,9 +128,16 @@ npx {{ $package }} install &lt;slug&gt;</code></pre>
 
             <h3>¿Funciona fuera de Claude Code?</h3>
             <p>
-                Funciona con cualquier cliente compatible con MCP que admita servidores locales por
-                <code>stdio</code>. El comando de arriba es el de Claude Code; en otros clientes, el servidor se arranca
-                con <code>npx -y {{ $package }} mcp</code>.
+                Sí. El conector remoto (<code>{{ route('api.mcp') }}</code>) funciona en Claude en la web y en el escritorio, y
+                en cualquier cliente que admita servidores MCP remotos. La versión local funciona en los clientes que
+                admiten servidores por <code>stdio</code>: se arranca con <code>npx -y {{ $package }} mcp</code>.
+            </p>
+
+            <h3>¿Qué diferencia hay entre el conector remoto y la versión local?</h3>
+            <p>
+                Los dos buscan y leen el catálogo. El remoto no necesita instalar nada y, si inicias sesión, también
+                ve tus skills privadas. El local, además, puede instalar una skill como archivo en tu equipo
+                (<code>~/.claude/skills/</code>), porque se ejecuta en él.
             </p>
 
             <h3>¿Cómo lo quito?</h3>
