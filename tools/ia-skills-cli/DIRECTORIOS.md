@@ -25,7 +25,8 @@ registro, así que **antes de enviar nada a mano, busca si ya apareces**.
 | Repositorio | https://github.com/ericrodri/ia-skills (carpeta `tools/ia-skills-cli`) |
 | Web | https://ia-skills.com/mcp |
 | Licencia | MIT |
-| Transporte | stdio (local) |
+| Transporte | stdio (local) y Streamable HTTP (remoto, desde 0.1.3) |
+| URL remota | https://ia-skills.com/api/mcp (sin clave; `/api/mcp/cuenta` con OAuth para las skills propias) |
 | Lenguaje | JavaScript (Node.js 18+, sin dependencias) |
 | Requiere clave | No |
 
