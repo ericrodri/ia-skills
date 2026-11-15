@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Una sesión de fotos profesional cuesta lo que un mes de suscripción a varias IA. Cómo conseguir un retrato creíble a partir de tus selfis, qué revisar para que siga siendo tu cara y dónde no se puede usar.',
     'category' => 'Práctica',
     'published' => '2026-10-06',
-    'updated' => '2026-10-06',
+    'updated' => '2026-11-15',
     'readingMinutes' => 7,
-    'words' => 1108,
+    'words' => 1195,
     'about' => 'Creación de retratos y fotos de perfil profesionales para LinkedIn y currículum con inteligencia artificial',
     'related' => ['crear-un-avatar-con-ia', 'mejorar-perfil-de-linkedin-con-ia', 'cv-y-carta-de-presentacion-con-ia', 'editar-fotos-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'entrevista-de-trabajo-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'crear-imagenes-con-ia'],
     'toc' => [
@@ -70,6 +70,8 @@ return [
 <blockquote>«Convierte esta foto en un retrato profesional para LinkedIn. Fondo gris claro liso con un ligero degradado, luz suave de estudio, encuadre de cabeza y hombros. Viste [americana azul marino con camisa blanca / jersey liso]. No cambies mi cara, mi peinado, mi edad ni mis rasgos: ni suavizar la piel, ni blanquear los dientes, ni cambiar la forma de los ojos.»</blockquote>
 
 <p>Adapta el fondo y la ropa a tu sector: en un despacho de abogados encaja la americana; en diseño o tecnología, algo más informal. Si el resultado se aleja de tu cara, no sigas corrigiendo sobre la imagen generada: vuelve a la original y pídelo de nuevo, porque cada edición encadenada degrada los rasgos. Hay más trucos de este tipo en <a href="/guias/prompts-para-diseno-grafico">prompts para diseño gráfico</a>.</p>
+
+<p>Si la foto ya te gusta y solo falla la ropa, porque sales en camiseta, no hace falta rehacerla: basta con <a href="/skills/prompt-para-ponerte-traje-o-ropa-formal-en-tu-foto-con-ia-para-el-cv-linkedin-o-una-boda">ponerte traje o ropa formal con IA</a> sin tocar nada más. Y para redes personales, donde un retrato de empresa queda frío, usa el prompt de <a href="/skills/prompt-para-hacer-una-foto-de-perfil-para-instagram-o-whatsapp-con-ia-que-siga-pareciendo-tu">foto de perfil para Instagram o WhatsApp</a>.</p>
 
 <h2 id="revisar">Qué revisar antes de publicarla</h2>
 

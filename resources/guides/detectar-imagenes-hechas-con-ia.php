@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Las imágenes generadas con IA ya no se delatan por los seis dedos. Lo que sigue funcionando es combinar tres comprobaciones: el contexto de dónde sale la imagen, los metadatos y marcas de agua de procedencia, y la búsqueda inversa.',
     'category' => 'Práctica',
     'published' => '2026-10-14',
-    'updated' => '2026-10-14',
+    'updated' => '2026-11-15',
     'readingMinutes' => 7,
-    'words' => 1165,
+    'words' => 1195,
     'about' => 'Verificación de imágenes generadas o manipuladas con inteligencia artificial',
     'related' => ['identificar-plantas-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion', 'se-nota-si-un-texto-lo-escribe-una-ia', 'crear-imagenes-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial', 'alucinaciones-de-la-ia', 'editar-fotos-con-ia'],
     'toc' => [
@@ -98,7 +98,7 @@ return [
     <li><strong>Dan falsos positivos</strong> con fotos reales muy editadas o hechas con modo retrato.</li>
 </ul>
 
-<p>Si usas un asistente como ChatGPT o Gemini para analizarla, pídele que enumere los detalles concretos que le hacen dudar y por qué. Una respuesta del tipo «parece generada» sin detalles comprobables vale poco: los asistentes también pueden <a href="/guias/alucinaciones-de-la-ia">inventar</a> con mucha seguridad.</p>
+<p>Si usas un asistente como ChatGPT o Gemini para analizarla, pídele que enumere los detalles concretos que le hacen dudar y por qué. Una respuesta del tipo «parece generada» sin detalles comprobables vale poco: los asistentes también pueden <a href="/guias/alucinaciones-de-la-ia">inventar</a> con mucha seguridad. Tienes un prompt listo que le pide justo eso, también para fotos retocadas o montajes y no solo para imágenes generadas: <a href="/skills/prompt-para-saber-si-una-foto-esta-retocada-o-es-falsa-con-chatgpt-o-gemini">saber si una foto está retocada o es falsa</a>.</p>
 
 <h2 id="rutina">Una rutina de dos minutos</h2>
 

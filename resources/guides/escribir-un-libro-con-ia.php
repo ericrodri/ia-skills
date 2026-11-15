@@ -8,9 +8,9 @@ return [
     'excerpt' => 'La IA puede escribir trescientas páginas en una tarde, y nadie querrá leerlas. Donde de verdad ayuda es en lo que hace que la mayoría abandone un libro a medias: ordenar las ideas, sostener la estructura durante meses y revisar sin cansarse.',
     'category' => 'Práctica',
     'published' => '2026-10-09',
-    'updated' => '2026-10-09',
-    'readingMinutes' => 8,
-    'words' => 1331,
+    'updated' => '2026-11-15',
+    'readingMinutes' => 9,
+    'words' => 1413,
     'about' => 'Escritura de libros de ficción y no ficción con ayuda de asistentes de inteligencia artificial, autoría y publicación',
     'related' => ['escribir-una-biografia-con-ia', 'crear-un-cuento-infantil-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ventana-de-contexto-conversaciones-largas', 'imagenes-con-ia-derechos-y-uso-comercial', 'gpts-proyectos-y-skills', 'como-escribir-prompts-efectivos', 'alucinaciones-de-la-ia'],
     'toc' => [
@@ -53,6 +53,8 @@ return [
 <p><strong>2. Pide varias estructuras.</strong> Con tus respuestas, pide tres índices distintos: uno cronológico, uno que empiece por el final, uno con dos líneas temporales. Quédate con lo mejor de cada uno. En no ficción, pide que cada capítulo responda a una pregunta concreta del lector. Si el libro cuenta la vida de alguien de tu familia, en <a href="/guias/escribir-una-biografia-con-ia">escribir una biografía con IA</a> explicamos cómo prepararlo a partir de entrevistas.</p>
 
 <p><strong>3. Una línea por capítulo.</strong> Antes de escribir nada, cada capítulo debe tener una frase que diga qué pasa o qué aprende el lector. Si no sabes escribir esa frase, el capítulo no está listo.</p>
+
+<p>Si prefieres seguir un método ya montado, tienes dos prompts que hacen estos pasos por fases y piden a la IA que haga de editor y no escriba por ti: uno para <a href="/skills/prompt-para-escribir-un-libro-con-chatgpt-de-la-idea-al-indice-y-los-capitulos-sin-perder-tu-voz">escribir un libro de no ficción con ChatGPT</a> (memorias, divulgación o un libro sobre tu oficio) y otro para <a href="/skills/prompt-para-escribir-una-novela-con-ia-sin-perder-tu-voz-premisa-personajes-y-escaleta">escribir una novela sin perder tu voz</a>.</p>
 
 <h2 id="la-biblia">El documento que sostiene el libro</h2>
 

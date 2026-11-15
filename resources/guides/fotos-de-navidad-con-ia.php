@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Cada diciembre se llenan las redes de retratos navideños hechos con IA: jerséis de renos, chimeneas y nieve de estudio. Hacer el tuyo cuesta un minuto. Que la persona de la foto siga pareciéndose a ti cuesta algo más, y depende sobre todo de cómo se lo pidas.',
     'category' => 'Práctica',
     'published' => '2026-10-27',
-    'updated' => '2026-10-27',
+    'updated' => '2026-11-15',
     'readingMinutes' => 8,
-    'words' => 1286,
+    'words' => 1355,
     'about' => 'Creación de retratos y fotografías navideñas a partir de fotos propias con herramientas de edición de imagen por inteligencia artificial',
     'related' => ['hacer-un-calendario-con-ia', 'crear-fondos-de-pantalla-con-ia', 'felicitar-la-navidad-con-ia', 'editar-fotos-con-ia', 'crear-imagenes-con-ia', 'animar-una-foto-con-ia', 'foto-de-perfil-profesional-con-ia', 'estafas-con-ia-deepfakes-y-suplantacion'],
     'toc' => [
@@ -78,6 +78,8 @@ return [
 <p><strong>Estilo ilustración, para la tarjeta:</strong></p>
 
 <blockquote>«Convierte esta foto en una ilustración navideña de acuarela, manteniendo los rasgos reconocibles de las tres personas. Fondo con nieve y estrellas, colores cálidos, formato vertical.»</blockquote>
+
+<p><strong>Toda la familia, aunque no estéis juntos:</strong> si alguien vive lejos o no coincidís hasta el día 24, se puede juntar a todos a partir de una foto de cada uno. Sale bien con dos a cinco personas, y el truco está en fijar el sitio y la altura de cada una. Lo tienes paso a paso en el prompt para <a href="/skills/prompt-para-hacer-la-foto-familiar-de-navidad-con-ia-aunque-no-esteis-juntos">hacer la foto familiar de Navidad con IA</a>.</p>
 
 <p>Si la foto va a acabar en una felicitación, la guía de <a href="/guias/felicitar-la-navidad-con-ia">felicitar la Navidad con IA</a> explica cómo añadir el texto y prepararla para imprimir o enviar. Y si quieres que la foto se mueva, con la nieve cayendo o un saludo, puedes <a href="/guias/animar-una-foto-con-ia">animarla con IA</a> después. También puedes convertir la mejor en el fondo del móvil durante las fiestas siguiendo <a href="/guias/crear-fondos-de-pantalla-con-ia">crear fondos de pantalla con IA</a>, o montar con las de todo el año un <a href="/guias/hacer-un-calendario-con-ia">calendario personalizado</a> para regalar.</p>
 

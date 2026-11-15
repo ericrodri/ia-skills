@@ -63,6 +63,15 @@ class SkillSearch
         'ventas' => ['comercial', 'vender'],
         'profesor' => ['docente', 'educacion', 'clase'],
         'docente' => ['profesor', 'educacion'],
+        // Búsquedas de fotos que Google sugiere (15-11-2026): «foto estudio
+        // bebé», «poner traje a una foto», «saber si una foto está retocada».
+        'bebe' => ['recien', 'nacido', 'newborn'],
+        'newborn' => ['bebe', 'recien', 'nacido'],
+        'traje' => ['americana', 'formal', 'corbata'],
+        'retocada' => ['retoque', 'editada', 'manipulada', 'falsa'],
+        'editada' => ['retocada', 'manipulada', 'falsa'],
+        'falsa' => ['retocada', 'manipulada', 'montaje', 'fake'],
+        'fake' => ['falsa', 'retocada', 'manipulada'],
     ];
 
     /**

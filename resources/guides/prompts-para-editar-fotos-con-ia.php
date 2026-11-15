@@ -8,9 +8,9 @@ return [
     'excerpt' => 'Pedirle a ChatGPT o a Gemini que edite una foto funciona sorprendentemente bien… hasta que te cambia la cara. La diferencia está en cómo se pide. Aquí tienes la regla que lo evita, una plantilla base y más de cuarenta prompts listos para copiar, ordenados por lo que quieres hacer.',
     'category' => 'Práctica',
     'published' => '2026-11-02',
-    'updated' => '2026-11-13',
+    'updated' => '2026-11-15',
     'readingMinutes' => 10,
-    'words' => 1664,
+    'words' => 1717,
     'about' => 'Instrucciones (prompts) para editar fotografías con ChatGPT y Gemini',
     'related' => ['editar-fotos-con-ia', 'borrar-personas-de-una-foto-con-ia', 'mejorar-calidad-de-una-foto-con-ia', 'restaurar-fotos-antiguas-con-ia', 'crear-imagenes-con-ia', 'quitar-el-fondo-de-una-foto-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
@@ -103,9 +103,10 @@ return [
 <ul>
     <li><a href="/skills/prompt-para-unir-a-dos-personas-en-una-foto-con-ia">Unir a dos personas en una foto</a>, con luz y escala coherentes.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-de-pareja-con-ia-para-aniversario-o-san-valentin">Foto de pareja</a> para un aniversario o San Valentín.</li>
-    <li><a href="/skills/prompt-para-hacer-una-foto-familiar-con-ia-juntando-fotos-de-varias-personas">Foto familiar juntando fotos de varias personas</a>.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-familiar-con-ia-juntando-fotos-de-varias-personas">Foto familiar juntando fotos de varias personas</a>, y su versión para <a href="/skills/prompt-para-hacer-la-foto-familiar-de-navidad-con-ia-aunque-no-esteis-juntos">la foto familiar de Navidad aunque no estéis juntos</a>.</li>
     <li><a href="/skills/prompt-para-hacer-una-sesion-de-fotos-con-ia-6-poses-y-escenarios-con-la-misma-persona">Sesión de fotos con IA</a>: seis poses y escenarios con la misma persona.</li>
-    <li><a href="/skills/prompt-para-hacer-una-foto-profesional-para-linkedin-o-el-curriculum-a-partir-de-un-selfie">Foto profesional para LinkedIn o el currículum</a> a partir de un selfie.</li>
+    <li><a href="/skills/prompt-para-hacer-una-sesion-de-fotos-de-estudio-de-tu-bebe-con-ia-a-partir-de-una-foto-del-movil">Sesión de fotos de estudio de tu bebé</a> a partir de una foto del móvil.</li>
+    <li><a href="/skills/prompt-para-hacer-una-foto-profesional-para-linkedin-o-el-curriculum-a-partir-de-un-selfie">Foto profesional para LinkedIn o el currículum</a> a partir de un selfie, o <a href="/skills/prompt-para-hacer-una-foto-de-perfil-para-instagram-o-whatsapp-con-ia-que-siga-pareciendo-tu">foto de perfil para Instagram o WhatsApp</a> con un estilo más personal.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-estilo-polaroid-con-ia-a-partir-de-tus-fotos">Foto estilo Polaroid</a> con marco blanco y flash, también juntando a dos personas.</li>
     <li><a href="/skills/prompt-para-preparar-una-foto-de-carnet-con-ia-fondo-blanco-encuadre-y-luz">Foto tipo carnet</a> con fondo blanco, para usos que no son oficiales.</li>
     <li><a href="/skills/prompt-para-hacer-una-foto-de-tus-hijos-con-papa-noel-o-los-reyes-magos-con-gemini">Foto de tus hijos con Papá Noel o los Reyes Magos</a>, solo para la familia.</li>
@@ -116,7 +117,7 @@ return [
 
 <ul>
     <li><a href="/skills/prompt-para-probarte-un-corte-o-un-color-de-pelo-en-tu-foto-antes-de-ir-a-la-peluqueria">Probarte un corte o un color de pelo</a> antes de ir a la peluquería.</li>
-    <li><a href="/skills/prompt-para-probarte-ropa-en-tu-foto-con-ia-ve-como-te-queda-un-look-antes-de-comprarlo">Probarte ropa</a> antes de comprarla.</li>
+    <li><a href="/skills/prompt-para-probarte-ropa-en-tu-foto-con-ia-ve-como-te-queda-un-look-antes-de-comprarlo">Probarte ropa</a> antes de comprarla, o <a href="/skills/prompt-para-ponerte-traje-o-ropa-formal-en-tu-foto-con-ia-para-el-cv-linkedin-o-una-boda">ponerte traje o ropa formal</a> para el currículum o una boda.</li>
     <li><a href="/skills/prompt-para-ver-como-queda-un-tatuaje-sobre-tu-piel-antes-de-hacertelo">Ver cómo queda un tatuaje sobre tu piel</a>, y <a href="/skills/prompt-para-disenar-un-tatuaje-y-su-plantilla-stencil-para-el-tatuador">diseñarlo con su plantilla</a> para el tatuador.</li>
     <li><a href="/skills/prompt-para-envejecer-o-rejuvenecer-una-foto-con-ia-como-te-verias-dentro-de-30-anos">Envejecer o rejuvenecer una foto</a>.</li>
     <li><a href="/skills/prompt-para-probarte-gafas-de-ver-o-de-sol-en-tu-foto-antes-de-comprarlas-con-gemini">Probarte gafas de ver o de sol</a> antes de comprarlas.</li>

@@ -177,5 +177,215 @@
                 "a": "Sí, con los planes gratuitos de ChatGPT y Gemini, aunque con un límite de imágenes al día. Si necesitas varios intentos, puede que tengas que esperar al día siguiente."
             }
         ]
+    },
+    "prompt-para-hacer-la-foto-familiar-de-navidad-con-ia-aunque-no-esteis-juntos": {
+        "answer": "Sube a Gemini o a ChatGPT una foto de cada persona y pídele una sola escena navideña en la que cada uno conserve su cara, su edad y su altura. Sale bien con dos a cinco personas; con más, conviene hacerla por partes o partir de una foto real de todos juntos.",
+        "steps": [
+            "Elige una foto de cada persona: de frente, con buena luz y con la cara grande. Evita fotos de grupo pequeñas o con gafas de sol.",
+            "Abre Gemini o ChatGPT, adjunta todas las fotos en el mismo mensaje y pega el prompt de abajo diciendo quién va en cada sitio.",
+            "Revisa una a una las caras. Si alguien no se parece, pide que copie su cara de su foto sin tocar a los demás.",
+            "Descarga la imagen y, si es para una felicitación, añade tú el texto con cualquier editor: la IA suele escribirlo con errores."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede hacer una foto familiar de Navidad con IA sin estar juntos?",
+                "a": "Sí. Gemini y ChatGPT aceptan varias fotos en un mismo mensaje y las combinan en una escena. Funciona mejor con dos a cinco personas y con fotos en las que se vea bien la cara."
+            },
+            {
+                "q": "¿Cuántas personas pueden salir?",
+                "a": "Hasta cinco suele salir bien. Con más, la IA empieza a parecerse las caras entre sí. Para familias grandes, haz la foto por partes (primero tres y luego añade al resto) o parte de una foto real de todos juntos y cambia solo el fondo y la ropa."
+            },
+            {
+                "q": "¿Qué es mejor, Gemini o ChatGPT?",
+                "a": "Los dos sirven y el resultado cambia de una foto a otra. Gemini suele conservar algo mejor las caras al combinar varias fotos; si con uno no se parecen, prueba el mismo prompt en el otro."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Sí, con los planes gratuitos de Gemini y ChatGPT, pero con un límite de imágenes al día que cambia a menudo. Si necesitas muchos intentos, puede que tengas que seguir al día siguiente."
+            },
+            {
+                "q": "¿Puedo ponerles a todos jerséis navideños a juego?",
+                "a": "Sí: dilo en el prompt, con el color y el motivo. Pide también que no cambie la complexión de nadie, porque al cambiar la ropa la IA tiende a hacer a todos más delgados o iguales."
+            },
+            {
+                "q": "¿Es seguro subir fotos de niños?",
+                "a": "Mira si el servicio usa tus imágenes para entrenar y desactívalo si puedes. Y piensa antes de publicarla en abierto: mejor mandarla por un grupo privado que colgarla en una red pública."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-sesion-de-fotos-de-estudio-de-tu-bebe-con-ia-a-partir-de-una-foto-del-movil": {
+        "answer": "Sube a Gemini o a ChatGPT una foto de tu bebé con buena luz y pídele que la convierta en retrato de estudio cambiando solo el fondo, la ropa y la luz. La clave es decirle que no le cambie la cara ni la edad y que no invente posturas que el bebé no podría hacer.",
+        "steps": [
+            "Elige una foto con luz de día, sin filtros y en la que se le vea bien la cara. Si es posible, tómala desde arriba con el bebé tumbado sobre una manta lisa.",
+            "Abre Gemini o ChatGPT, adjunta la foto y pega el prompt de abajo con la edad, el fondo y la ropa que quieras.",
+            "Revisa manos, orejas y ojos: la IA a veces inventa dedos o cambia rasgos. Si no se parece, pide que copie la cara exactamente de la original.",
+            "Descarga la foto. Para un anuncio del nacimiento, añade tú el nombre, la fecha y el peso con un editor."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede hacer una sesión de fotos de recién nacido con IA?",
+                "a": "Sí, a partir de una foto normal del móvil. La IA cambia el fondo, la ropa y la luz para que parezca hecha en un estudio. No sustituye a una sesión real, pero da un resultado muy bonito para enmarcar o compartir con la familia."
+            },
+            {
+                "q": "¿La IA le cambiará la cara a mi bebé?",
+                "a": "Puede pasar, porque vuelve a dibujar la imagen entera y las caras de bebé tienen pocos rasgos marcados. Por eso el prompt le pide que conserve cara, ojos, forma de la cabeza y marcas de nacimiento. Si aun así cambia, pide que copie su cara de la foto original."
+            },
+            {
+                "q": "¿Qué foto de partida funciona mejor?",
+                "a": "Una con luz natural de ventana, el bebé tranquilo y la cara bien visible, sin filtros. Las fotos oscuras, movidas o muy de cerca dan peores resultados."
+            },
+            {
+                "q": "¿Es seguro subir fotos de mi bebé a la IA?",
+                "a": "Lee qué hace el servicio con las imágenes y desactiva el uso para entrenar si te deja. Y piensa dónde la publicas: una vez en internet, la foto ya no es solo tuya."
+            },
+            {
+                "q": "¿Puedo hacer una foto de cada mes?",
+                "a": "Sí. Usa cada mes el mismo prompt, con el mismo fondo y la misma ropa, y tendrás una serie para ver cómo crece. Guarda el prompt en una nota para repetirlo igual."
+            },
+            {
+                "q": "¿Por qué no copiar las poses de los fotógrafos de recién nacidos?",
+                "a": "Porque muchas (el bebé apoyado sobre sus manos o colgado de una tela) son montajes de varias fotos en las que alguien lo sujeta. Pedírselas a la IA da posturas poco naturales, y no deben imitarse con el bebé de verdad."
+            }
+        ]
+    },
+    "prompt-para-ponerte-traje-o-ropa-formal-en-tu-foto-con-ia-para-el-cv-linkedin-o-una-boda": {
+        "answer": "Sube tu foto a ChatGPT o a Gemini y pídele que cambie solo la ropa por la prenda concreta que quieres (traje, americana o vestido), sin tocar la cara, el peinado, la complexión ni la postura. Pide también que la ropa se ajuste a tus hombros y tenga la misma luz que el resto de la foto.",
+        "steps": [
+            "Elige una foto de medio cuerpo con la cara bien iluminada. Da igual que lleves camiseta o sudadera.",
+            "Abre ChatGPT o Gemini, adjunta la foto y pega el prompt de abajo con la ropa concreta y para qué es la foto.",
+            "Comprueba el cuello de la camisa, las solapas y los hombros, que es donde suele fallar. Si algo queda raro, pide que lo corrija solo a eso.",
+            "Si la cara ha cambiado, pide volver a la original y cambiar solo de los hombros para abajo. Luego descárgala."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo pongo un traje en una foto con IA?",
+                "a": "Sube la foto a ChatGPT o Gemini y pide que cambie solo la ropa por un traje concreto (color, camisa, con o sin corbata), dejando igual la cara, el peinado y la postura. Cuanto más concreta sea la prenda, mejor queda."
+            },
+            {
+                "q": "¿Vale una foto con traje hecha con IA para el currículum?",
+                "a": "Sí, mientras solo cambie la ropa y sigas siendo tú. En la entrevista tienen que reconocerte, así que no cambies nada de la cara."
+            },
+            {
+                "q": "¿Sirve para el DNI o el pasaporte?",
+                "a": "No. Las fotos de documentos oficiales no pueden estar editadas con IA y tienen sus propias normas de fondo, luz y encuadre."
+            },
+            {
+                "q": "¿Por qué la ropa parece pegada encima?",
+                "a": "Porque la luz o las sombras de la ropa no coinciden con las de la cara. Pide que ajuste la luz y las sombras de la ropa a las del resto de la foto y que tenga arrugas naturales."
+            },
+            {
+                "q": "¿Funciona con vestidos y ropa de mujer?",
+                "a": "Sí, igual que con trajes. Indica el tipo de vestido o de conjunto, el color y el largo, y pide que respete tu figura sin hacerte más delgada."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Sí, con los planes gratuitos de ChatGPT y Gemini, que tienen un límite de imágenes al día. Para una foto con dos o tres intentos suele bastar."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-foto-de-perfil-para-instagram-o-whatsapp-con-ia-que-siga-pareciendo-tu": {
+        "answer": "Sube un selfie a Gemini o a ChatGPT y pide una foto de perfil cambiando solo el fondo, la luz, el encuadre y, si quieres, la ropa. Pide un encuadre de hombros para arriba con aire sobre la cabeza, porque la foto se verá recortada en un círculo pequeño.",
+        "steps": [
+            "Elige una o dos fotos en las que se te vea bien la cara, con luz de día. Un selfie normal sirve.",
+            "Abre Gemini o ChatGPT, adjunta la foto y pega el prompt de abajo eligiendo red social, estilo y fondo.",
+            "Mírala en pequeño, como se verá en la red. Si no te reconoces, pide que vuelva a tu cara original y mejore solo la luz y el fondo.",
+            "Descárgala y súbela como foto de perfil. Comprueba que el círculo no te corta la cabeza."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una foto de perfil con IA a partir de un selfie?",
+                "a": "Sube el selfie a Gemini o ChatGPT y pide que mantenga tu cara y cambie la luz, el fondo y el encuadre al estilo que quieras. El prompt de esta ficha ya incluye las reglas para que sigas pareciéndote a ti."
+            },
+            {
+                "q": "¿Qué diferencia hay con una foto de perfil para LinkedIn?",
+                "a": "La de LinkedIn busca un aspecto profesional, con ropa formal y fondo neutro. Para Instagram o WhatsApp puedes elegir un estilo más personal: urbano, de vacaciones, minimalista o con tu mascota."
+            },
+            {
+                "q": "¿Qué tamaño debe tener una foto de perfil?",
+                "a": "Cuadrada y con la cara centrada. Instagram y WhatsApp la recortan en círculo y la muestran muy pequeña, así que deja aire alrededor de la cabeza y evita fondos recargados."
+            },
+            {
+                "q": "¿Se nota que está hecha con IA?",
+                "a": "Si se pide demasiado retoque, sí: piel sin poros y rasgos perfectos. Pide un retoque discreto y que se vea la textura de la piel para que parezca una foto real."
+            },
+            {
+                "q": "¿Puedo usar la cara de otra persona?",
+                "a": "No es buena idea: usar la cara de otro en tu perfil puede ser suplantación de identidad. Usa solo fotos tuyas."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Sí, con los planes gratuitos de Gemini y ChatGPT, con un límite de imágenes al día que suele bastar para varios intentos."
+            }
+        ]
+    },
+    "prompt-para-saber-si-una-foto-esta-retocada-o-es-falsa-con-chatgpt-o-gemini": {
+        "answer": "Sube la foto a ChatGPT o a Gemini y pídele que revise luz, sombras, bordes y detalles como haría un perito, diciendo dónde ve cada señal y si es fuerte o dudosa. Te ayudará a saber dónde mirar, pero no da certezas: para confirmarlo, busca la foto original con Google Lens o TinEye y mira quién la publicó primero.",
+        "steps": [
+            "Consigue el archivo más original posible: mejor la foto descargada que una captura de pantalla, que borra los metadatos.",
+            "Sube la foto a ChatGPT o Gemini y pega el prompt de abajo, diciendo de dónde sale y qué quieres saber.",
+            "Comprueba tú cada señal que te indique, ampliando la zona de la foto. Ignora los porcentajes de «falsa» o «real».",
+            "Haz una búsqueda inversa con Google Lens o TinEye para encontrar la foto original y compararlas."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo saber si una foto está retocada?",
+                "a": "Mira si las sombras van todas en la misma dirección, si hay líneas rectas que se curvan cerca de una persona, bordes con halos o piel sin textura. La IA te ayuda a señalar esos detalles, y una búsqueda inversa con Google Lens o TinEye te puede mostrar la foto original."
+            },
+            {
+                "q": "¿Puede ChatGPT saber si una foto es falsa?",
+                "a": "Puede señalar detalles sospechosos, pero no lo sabe con seguridad: no lee todas las marcas de agua ni todos los metadatos, y se equivoca con mucha confianza. Úsalo para saber dónde mirar y confirma con una búsqueda inversa."
+            },
+            {
+                "q": "¿Cómo saber si una foto es falsa desde el móvil?",
+                "a": "Abre la foto en Google Lens (en la app de Google o en la galería de Android) para buscar dónde más aparece, y súbela a la app de ChatGPT o Gemini con el prompt de esta ficha. En iPhone, Google Lens está dentro de la app de Google."
+            },
+            {
+                "q": "¿Una foto retocada es una foto falsa?",
+                "a": "No necesariamente. Los móviles retocan todas las fotos de forma automática (luz, piel, nitidez). Lo importante es si se ha añadido, quitado o cambiado algo que altera lo que muestra, como una persona, un objeto o un lugar."
+            },
+            {
+                "q": "¿Cómo saber si una foto está hecha con IA?",
+                "a": "Busca marcas de agua o credenciales de contenido (algunas imágenes de Google llevan SynthID), revisa manos, letras y reflejos, y haz una búsqueda inversa. Lo explicamos a fondo en la guía para detectar imágenes hechas con IA."
+            },
+            {
+                "q": "¿Qué hago si encuentro una foto falsa sobre mí?",
+                "a": "Guarda capturas con la fecha y el enlace, denúnciala en la plataforma donde está publicada y, si hay suplantación, amenazas o contenido íntimo, acude a la policía. En España también puedes pedir la retirada a la Agencia Española de Protección de Datos."
+            }
+        ]
+    },
+    "prompt-para-escribir-un-libro-con-chatgpt-de-la-idea-al-indice-y-los-capitulos-sin-perder-tu-voz": {
+        "answer": "Usa ChatGPT como editor, no como escritor: que te entreviste para sacar tus historias, proponga el índice y revise los capítulos que escribes tú. El prompt de abajo organiza el trabajo en cinco fases, de la idea al borrador revisado, y le prohíbe inventar datos.",
+        "steps": [
+            "Abre un chat nuevo en ChatGPT (o un proyecto, para que recuerde todo el libro) y pega el prompt con tu tema, tu lector y la extensión.",
+            "Responde a la entrevista con anécdotas concretas. Es la fase que más material da y la que hace que el libro sea tuyo.",
+            "Cuando tengas el índice y la ficha del libro, guárdalos y pégalos al empezar cada sesión de trabajo.",
+            "Escribe cada capítulo tú y pásaselo para revisarlo. Aplica lo que te sirva y comprueba todo lo marcado con [COMPROBAR]."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede escribir un libro con ChatGPT?",
+                "a": "Sí, si lo usas como editor: para ordenar ideas, proponer el índice, hacerte preguntas y revisar lo que escribes. Un libro escrito entero por la IA se nota, repite frases hechas y aporta poco frente a lo que solo tú sabes."
+            },
+            {
+                "q": "¿Cuál es el mejor prompt para escribir un libro?",
+                "a": "Uno que trabaje por fases y no deje a la IA escribir por ti: entrevista, idea en una frase, índice, ficha de estilo y revisión capítulo a capítulo. Es lo que hace el prompt de esta ficha."
+            },
+            {
+                "q": "¿Sirve para escribir una novela?",
+                "a": "Este prompt está pensado para no ficción (memorias, divulgación, guías o libros sobre tu oficio). Para una novela tenemos una ficha propia que trabaja premisa, personajes y escaleta."
+            },
+            {
+                "q": "¿Qué IA es mejor para escribir un libro: ChatGPT, Claude o Gemini?",
+                "a": "Las tres sirven para este trabajo de editor. Claude suele respetar mejor el estilo de quien escribe y ChatGPT recuerda mejor el contexto si usas un proyecto. Lo importante es darle la ficha del libro en cada sesión."
+            },
+            {
+                "q": "¿De quién son los derechos de un libro escrito con IA?",
+                "a": "Tuyos, en la medida en que el texto sea tuyo: lo que la IA genera por sí sola no tiene autor. Por eso conviene que escribas tú y uses la IA para revisar. En España puedes inscribir la obra en el Registro de la Propiedad Intelectual."
+            },
+            {
+                "q": "¿Puedo publicar en Amazon un libro escrito con ayuda de la IA?",
+                "a": "Sí. Amazon KDP pide declarar el texto o las imágenes generados con IA, pero no la ayuda para corregir o revisar lo que has escrito tú."
+            }
+        ]
     }
 }
