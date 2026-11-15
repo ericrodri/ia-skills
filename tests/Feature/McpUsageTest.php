@@ -95,6 +95,24 @@ class McpUsageTest extends TestCase
         $this->assertSame('desconocido', McpUsage::client(''));
     }
 
+    public function test_borra_los_recuentos_de_hace_mas_de_25_meses(): void
+    {
+        DB::table('mcp_usage')->insert([
+            ['day' => now()->subMonths(26)->toDateString(), 'client' => 'curl', 'access' => 'anonimo', 'action' => 'conectar', 'subject' => '', 'hits' => 1],
+            ['day' => now()->subMonths(24)->toDateString(), 'client' => 'curl', 'access' => 'anonimo', 'action' => 'conectar', 'subject' => '', 'hits' => 1],
+        ]);
+
+        $this->assertSame(1, McpUsage::prune());
+        $this->assertSame(1, DB::table('mcp_usage')->count());
+    }
+
+    public function test_la_politica_de_privacidad_explica_las_estadisticas_del_conector(): void
+    {
+        $this->get(route('legal.privacy'))
+            ->assertOk()
+            ->assertSee('Estadísticas del conector');
+    }
+
     public function test_el_panel_muestra_el_uso_del_mcp(): void
     {
         $this->rpc('tools/call', ['name' => 'search_skills', 'arguments' => ['query' => 'contratos']])->assertOk();

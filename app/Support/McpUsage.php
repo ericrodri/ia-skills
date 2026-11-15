@@ -74,6 +74,14 @@ class McpUsage
         return $first === '' ? 'desconocido' : Str::limit($first, 40, '');
     }
 
+    /**
+     * Borra los recuentos de hace más de 25 meses (política de privacidad).
+     */
+    public static function prune(): int
+    {
+        return DB::table('mcp_usage')->where('day', '<', now()->subMonths(25)->toDateString())->delete();
+    }
+
     private static function publicSlug(string $slug): string
     {
         $slug = trim($slug);

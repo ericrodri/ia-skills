@@ -16,6 +16,126 @@ registro, así que **antes de enviar nada a mano, busca si ya apareces**.
 - Nombre en el registro: `io.github.ericrodri/ia-skills`
 - Ficha web: https://ia-skills.com/mcp
 
+## Directorio de conectores de Claude (Anthropic)
+
+Es el directorio que más importa: ahí buscan conectores quienes usan Claude.
+Ficha preparada el 2026-11-15 con los requisitos de
+https://claude.com/docs/connectors/building/submission y
+https://claude.com/docs/connectors/building/review-criteria.
+
+**Quién y dónde:** https://claude.ai/directory/manage → «Submit new» → «MCP
+connector». Hace falta un plan de pago. En Pro, Max o Ultra lo envía tu propia
+cuenta. En Team o Enterprise solo puede enviarlo un propietario (Owner), y la
+ficha queda a nombre de esa organización.
+
+**Antes de enviarlo:** comprueba que la política de privacidad publicada ya
+incluye el apartado «Estadísticas del conector» (actualizada el 2026-11-15).
+
+### 1. Connection
+
+- **Server URL:** `https://ia-skills.com/api/mcp`
+- **URL type:** una sola dirección para todos (ni «Multiple URLs» ni «URL
+  pattern»: esas opciones solo se publican con la etiqueta Verified).
+
+### 2. Tools
+
+Se sincronizan solas. Las dos públicas (`search_skills`, `get_skill`) tienen
+título y `readOnlyHint: true`, así que no deberían salir avisos.
+
+### 3. Listing
+
+- **Server name** (máx. 100): `ia-skills`
+- **One-liner** (máx. 200):
+
+  > 7,000+ ready-to-use AI prompts and skills in Spanish, organized by profession: marketing, legal, sales, HR, finance, software development and more.
+
+- **Description** (máx. 2.000):
+
+  > ia-skills (ia-skills.com) is a free, community-curated library of more than 7,000 AI prompts and skills written in Spanish for professionals, organized by profession and task: marketing, legal, sales, HR, finance, customer support, product, design, software development and freelancers. It also covers everyday tasks such as editing photos with ChatGPT or Gemini, writing letters or planning a trip.
+  >
+  > With this connector, Claude can find the right prompt for what you're working on and apply it directly in the conversation, without copying and pasting:
+  >
+  > - search_skills: searches the catalog by task and, optionally, by profession, ordered by popularity.
+  > - get_skill: returns the full prompt of a skill, including its fill-in fields in [brackets], its profession, the recommended tool and a link to its page.
+  >
+  > Example requests:
+  > - "Find me a prompt in ia-skills to review a services contract and use it with this one."
+  > - "Busca en ia-skills un prompt para preparar una entrevista de trabajo."
+  > - "Which ia-skills prompts are there for cold emailing B2B clients?"
+  >
+  > The connector is read-only: it only returns published content from the public catalog and cannot create, change or delete anything. No account or sign-in is needed. All content is in Spanish.
+
+- **Categories** (1 a 5, de las que ofrezca el formulario): *Productivity*,
+  *Education*, *Business*, *Writing* (las que existan con un nombre parecido).
+- **Documentation URL:** `https://ia-skills.com/guias/conectar-ia-skills-a-claude`
+- **Privacy policy URL:** `https://ia-skills.com/privacidad`
+- **Support contact:** `hola@ia-skills.com`
+- **Icon:** `public/icon-512.png` (512×512).
+- **URL slug:** `ia-skills`. **No se puede cambiar** una vez publicado.
+
+### 4. Use cases
+
+- **Primary use cases:**
+
+  > Professionals who use AI at work find a proven prompt for their task (contracts, proposals, campaigns, job descriptions, financial analysis, code reviews, photo editing…) and have Claude apply it to their own material in the same conversation.
+
+- **What users need before connecting:** `Nothing. No account, plan or setup is required.`
+- **Reads, writes or both:** `Reads only.`
+
+### 5. Company
+
+- **Company name:** `ia-skills`
+- **Website:** `https://ia-skills.com`
+- **Primary contact for review updates:** `hola@ia-skills.com`
+
+### 6. Authentication
+
+- **Authentication method:** `None` (sin autenticación).
+
+Se envía la versión pública a propósito:
+- No hace falta cuenta de prueba, así que la revisión es más sencilla.
+- Cualquiera puede usarlo sin registrarse, que es lo que buscamos: que las IA
+  consuman el catálogo.
+
+Quien quiera sus skills privadas sigue teniendo `https://ia-skills.com/api/mcp/cuenta`
+como conector personalizado, con OAuth. Si algún día se quiere todo en una
+sola ficha, habría que implementar autenticación perezosa (*lazy auth*): el
+catálogo abierto y `my_skills` pidiendo iniciar sesión con un 401. Claude
+ignora el `WWW-Authenticate` si la respuesta es un 200.
+
+### 7. Data handling (respuestas reales)
+
+- **Whose API:** our own first-party API (ia-skills.com).
+- **Personal health data:** no.
+- **Sponsored content:** no. El conector devuelve el prompt y el enlace a la
+  ficha; los enlaces de afiliado solo están en la web.
+- Si preguntan qué se guarda:
+
+  > Aggregated daily counts of connections, searches and skills read, including the search text, the slug of the public skill read, the client name taken from the User-Agent and whether the request was signed in. No IP address or user ID is stored in these counts; they are kept for 25 months. The web server also keeps standard access logs (IP, URL, date) for security. No data is shared with third parties.
+
+### 8. Test & launch
+
+Antes de enviarlo, prueba las dos herramientas como conector personalizado en
+Claude (Personalizar → Conectores → Añadir conector personalizado, con la
+dirección de arriba y sin autenticación). Pide, por ejemplo: «Busca en
+ia-skills un prompt para revisar un contrato y enséñamelo». No pongas
+credenciales en el portal.
+
+### 9. Compliance
+
+Son 7 casillas obligatorias. Léelas y márcalas tú: son compromisos de
+ia-skills con Anthropic (normas del directorio, API propia, sin transacciones
+financieras, sin generar imágenes ni vídeo con IA, sin inyección de
+instrucciones, sin recoger conversaciones y documentación pública).
+
+### Después
+
+- **Revisión:** un sistema automático revisa la ficha y, si cumple, sale como
+  **Community**. Anthropic puede llevarla después a la revisión **Verified**.
+- **Plazos:** no los publican.
+- **Estado:** se sigue en el mismo portal.
+- **Si se atasca:** mcp-review@anthropic.com.
+
 ## Datos comunes
 
 | Campo | Valor |

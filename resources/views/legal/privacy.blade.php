@@ -62,6 +62,7 @@
                 <li><strong>Seguridad y prevención de abusos</strong> (límites de peticiones por IP, protección contra spam y accesos no autorizados): interés legítimo en mantener la web segura (art. 6.1.f RGPD).</li>
                 <li><strong>Estadísticas de uso</strong> (contar cuántas veces se instala cada skill, sin identificarte): se guarda durante 24 horas un resumen no reversible de tu IP y tu navegador para no contar dos veces la misma instalación. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
                 <li><strong>Estadísticas de visitas</strong> (cuántas personas visitan cada página, desde qué web llegan y con qué tipo de dispositivo): no usamos cookies ni servicios de terceros, y no guardamos tu IP. Para contar visitantes únicos guardamos un resumen de tu IP y tu navegador calculado con una clave aleatoria que cambia cada día y se borra a los dos días; después no hay forma de saber a quién corresponde. También contamos qué botones se pulsan en las fichas y qué búsquedas del catálogo no encuentran nada (solo el texto buscado, sin asociarlo a nadie), para saber qué fichas faltan. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
+                <li><strong>Estadísticas del conector</strong> (el servidor MCP que usan Claude y otras aplicaciones de IA): contamos por día cuántas conexiones, búsquedas y lecturas de fichas llegan, con el texto buscado, la ficha pública leída, el nombre de la aplicación que hace la petición y si se usa con cuenta o sin ella. No guardamos tu IP ni tu usuario en esos recuentos, y de las skills privadas no guardamos ni el nombre. Interés legítimo en saber qué contenido resulta útil (art. 6.1.f RGPD).</li>
             </ul>
             <p>No tomamos decisiones automatizadas con efectos sobre ti ni elaboramos perfiles con fines comerciales.</p>
 
@@ -83,6 +84,7 @@
                 <li><strong>Resumen semanal sin cuenta:</strong> mientras sigas suscrito. Las altas que no se confirman y las bajas se borran a los 30 días.</li>
                 <li><strong>Estadísticas de instalación:</strong> el resumen de IP y navegador se descarta a las 24 horas. Solo queda el recuento total de cada skill, que no está asociado a nadie.</li>
                 <li><strong>Estadísticas de visitas:</strong> 25 meses. La clave que permite calcular el resumen de IP y navegador se borra a los dos días, así que lo que se conserva no está asociado a nadie.</li>
+                <li><strong>Estadísticas del conector:</strong> 25 meses. Son recuentos por día que no están asociados a nadie.</li>
                 <li><strong>Registros técnicos del servidor:</strong> el tiempo imprescindible para la seguridad y la resolución de errores.</li>
             </ul>
 

@@ -5,6 +5,7 @@ use App\Models\OAuthAuthCode;
 use App\Models\OAuthClient;
 use App\Models\OAuthToken;
 use App\Models\PageView;
+use App\Support\McpUsage;
 use Illuminate\Foundation\Inspiring;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schedule;
@@ -31,5 +32,11 @@ Schedule::command('indexnow:submit')
 // Borra las suscripciones sin confirmar y las bajas a los 30 días, como
 // promete la política de privacidad (NewsletterSubscriber::prunable()).
 Schedule::command('model:prune', ['--model' => [NewsletterSubscriber::class, PageView::class, OAuthAuthCode::class, OAuthToken::class, OAuthClient::class]])
+    ->daily()
+    ->onOneServer();
+
+// Estadísticas del conector MCP: 25 meses, como dice la política de privacidad.
+Schedule::call(fn () => McpUsage::prune())
+    ->name('mcp-usage-prune')
     ->daily()
     ->onOneServer();
