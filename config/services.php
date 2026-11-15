@@ -46,4 +46,16 @@ return [
         'bing' => env('BING_SITE_VERIFICATION'),
     ],
 
+    /*
+     * IndexNow: avisa a Bing (y a Yandex, Seznam, Naver…) de las páginas
+     * nuevas o cambiadas en cuanto se publican (App\Support\IndexNow). La
+     * clave no es secreta: el protocolo exige publicarla en /{clave}.txt, que
+     * está en public/. Si se cambia aquí, hay que renombrar ese fichero.
+     */
+    'indexnow' => [
+        'key' => env('INDEXNOW_KEY', 'a3f5fc96d750576ba86b2af99cac63c2'),
+        'endpoint' => 'https://api.indexnow.org/indexnow',
+        'enabled' => (bool) env('INDEXNOW_ENABLED', env('APP_ENV') === 'production'),
+    ],
+
 ];

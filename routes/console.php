@@ -21,6 +21,13 @@ Schedule::command('newsletter:weekly')
     ->withoutOverlapping()
     ->onOneServer();
 
+// Avisa a Bing (IndexNow) de las fichas y guías nuevas o corregidas. Así
+// entran también las que publica la comunidad entre un deploy y otro.
+Schedule::command('indexnow:submit')
+    ->hourly()
+    ->withoutOverlapping()
+    ->onOneServer();
+
 // Borra las suscripciones sin confirmar y las bajas a los 30 días, como
 // promete la política de privacidad (NewsletterSubscriber::prunable()).
 Schedule::command('model:prune', ['--model' => [NewsletterSubscriber::class, PageView::class, OAuthAuthCode::class, OAuthToken::class, OAuthClient::class]])
