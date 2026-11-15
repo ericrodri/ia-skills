@@ -37,5 +37,145 @@
                 "a": "Solo fotos tuyas o con permiso de quien aparece en ellas. ChatGPT, además, puede negarse a editar algunas fotos de personas reales por sus normas de uso."
             }
         ]
+    },
+    "prompt-para-que-gemini-no-cambie-la-cara-al-editar-una-foto": {
+        "answer": "Escribe primero el cambio que quieres y añade después unas reglas de identidad: que no toque la forma de la cara, los ojos, la nariz, la boca, el tono de piel ni la expresión, y que cambie solo lo que has pedido. El bloque de abajo ya lleva esas reglas, en español y en inglés, y sirve igual en Gemini que en ChatGPT.",
+        "steps": [
+            "Abre Gemini o ChatGPT y adjunta una foto con la cara grande, de frente, nítida y bien iluminada. Cuanto más pequeña sale la cara, más la reinventa la IA.",
+            "Escribe el cambio concreto (fondo, ropa, luz o estilo) empezando por «Edita esta imagen», para que parta de tu foto y no cree otra.",
+            "Pega debajo el bloque de identidad. Si aun así cambia la cara, prueba con la versión en inglés.",
+            "Haz un solo cambio por mensaje. Si encadenas varios, vuelve a subir la foto original cada dos o tres pasos."
+        ],
+        "faq": [
+            {
+                "q": "¿Por qué Gemini me cambia la cara al editar una foto?",
+                "a": "Porque no recorta y pega: vuelve a generar la imagen entera a partir de la tuya. Cuanto más pequeña es la cara y más cambios encadenas, más se nota. Una cara grande y nítida, un solo cambio por mensaje y unas reglas de identidad explícitas lo reducen mucho."
+            },
+            {
+                "q": "¿Sirve el mismo prompt para que ChatGPT no cambie la cara?",
+                "a": "Sí. El bloque funciona igual en ChatGPT: escribe el cambio, pega las reglas y adjunta la foto. Si una de las dos te cambia la cara con una foto concreta, prueba con la otra."
+            },
+            {
+                "q": "¿Es mejor escribir el prompt en inglés?",
+                "a": "A menudo sí: estos modelos siguen con más precisión instrucciones técnicas en inglés, como «preserve face shape». Si en español no sale, prueba la versión en inglés antes de cambiar nada más."
+            },
+            {
+                "q": "¿Puede quedar la cara exactamente igual?",
+                "a": "No al 100 %: la imagen se regenera y siempre hay pequeñas variaciones. Compara ojos, nariz y sonrisa con el original y, si algo ha cambiado, di exactamente qué («la nariz es más fina») y pide que corrija solo eso."
+            },
+            {
+                "q": "¿Qué hago si sigue cambiando la cara?",
+                "a": "Empieza una conversación nueva, sube otra vez la foto original y pega el prompt completo: un historial largo empeora los resultados. Si aun así falla, pide el cambio en dos pasos, primero el fondo y después lo demás."
+            },
+            {
+                "q": "¿Puedo editar fotos de otras personas?",
+                "a": "Solo con su permiso. Además, Gemini y ChatGPT pueden negarse a algunas ediciones de personas reales por sus normas de uso."
+            }
+        ]
+    },
+    "prompt-para-quitar-personas-u-objetos-de-una-foto-con-chatgpt-o-gemini": {
+        "answer": "Sube la foto y dile qué quieres quitar, dónde está y qué hay detrás para rellenar el hueco (pared, arena, cielo). Cuanto más concreta sea la ubicación («la persona de rojo a la izquierda»), menos se equivoca. Dile también quién se queda, para que no le cambie la cara ni la ropa. El prompt de abajo ya lleva todo eso.",
+        "steps": [
+            "Abre ChatGPT o Gemini y adjunta la foto original.",
+            "Copia el prompt y rellena qué quieres borrar, dónde está y con qué debe rellenar el hueco.",
+            "Indica quién o qué debe quedarse tal cual.",
+            "Si queda una mancha borrosa o borra lo que no era, quita los elementos de uno en uno, en mensajes separados."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede quitar a una persona de una foto con ChatGPT?",
+                "a": "Sí. Sube la foto, describe a quién quieres quitar y dónde está, y pídele que rellene el hueco con el fondo. ChatGPT vuelve a generar la imagen, así que revisa que las personas que se quedan no hayan cambiado."
+            },
+            {
+                "q": "¿Es mejor ChatGPT o Gemini para eliminar personas de una foto?",
+                "a": "Los dos lo hacen bien con fotos sencillas y el mismo prompt sirve en ambos. Depende de la foto: si uno cambia lo que no debía, prueba en el otro antes de reescribir el prompt."
+            },
+            {
+                "q": "¿Por qué borra a quien no era?",
+                "a": "Porque no sabe a quién te refieres. Di la posición exacta («la segunda por la izquierda, al fondo»), algún rasgo (ropa, color) y quién debe quedarse. Si sigue fallando, recorta la foto para que se vea más claro."
+            },
+            {
+                "q": "¿Y si la persona tapa mucho fondo?",
+                "a": "Lo que aparezca detrás será inventado. Funciona bien con fondos sencillos (cielo, arena, pared) y peor con cosas que la IA no puede conocer, como un cartel o la fachada de un edificio concreto."
+            },
+            {
+                "q": "¿Hay alguna forma de hacerlo sin escribir un prompt?",
+                "a": "Sí: el Borrador mágico de Google Fotos, la herramienta Limpiar de Fotos en los iPhone con Apple Intelligence y los editores online con borrador. Para quitar algo pequeño suelen ser más rápidos; para fotos con mucha gente, el prompt da más control."
+            },
+            {
+                "q": "¿Sirve para quitar marcas de agua?",
+                "a": "No lo uses para eso: quitar la marca de agua de una foto ajena vulnera los derechos de su autor, y estas herramientas suelen negarse a hacerlo."
+            }
+        ]
+    },
+    "prompt-para-restaurar-fotos-antiguas-o-danadas-con-chatgpt-o-gemini": {
+        "answer": "Digitaliza la foto, súbela a ChatGPT y pídele que quite arañazos, manchas y el tono amarillento sin cambiar ninguna cara. Lo importante es la segunda parte: sin esa regla, la IA suele «embellecer» o rejuvenecer a tus familiares. El prompt de abajo ya la incluye.",
+        "steps": [
+            "Digitaliza la foto con un escáner o con el móvil, de frente, con luz uniforme y sin reflejos. Si tiene cristal, sácala del marco.",
+            "Abre ChatGPT o Gemini, adjunta la imagen y pega el prompt indicando el año aproximado y quién aparece.",
+            "Compara cara por cara con el original. Si alguien ha cambiado, pide que limite la restauración al fondo, la ropa y los daños.",
+            "Si la quieres en color, pídelo en un segundo mensaje, después de restaurarla."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT restaurar fotos antiguas?",
+                "a": "Sí: quita arañazos, polvo, manchas y desvaído, y corrige el amarillo del papel. Lo que no puede es recuperar lo que falta: si una cara está borrada o rota, lo que aparezca será una suposición."
+            },
+            {
+                "q": "¿Cómo le pido a ChatGPT que mejore una foto antigua?",
+                "a": "Súbela y explica qué daños tiene, qué debe conservar (caras, ropa, encuadre) y si quieres mantener el blanco y negro o el sepia. Un «mejora esta foto» a secas suele devolver una imagen demasiado moderna o con las caras cambiadas."
+            },
+            {
+                "q": "¿Puede colorear la foto?",
+                "a": "Sí, pero mejor en dos pasos: primero restaurar y después, en otro mensaje, pedir que la coloree de forma realista. Los colores de la ropa y los objetos son una suposición, así que si sabes alguno (un vestido azul), díselo."
+            },
+            {
+                "q": "¿Es gratis restaurar fotos con ChatGPT o Gemini?",
+                "a": "Sí, con los planes gratuitos de los dos, aunque con un límite de imágenes al día que no publican de forma fija. Para restaurar unas pocas fotos suele bastar."
+            },
+            {
+                "q": "¿Sirve para imprimir la foto restaurada?",
+                "a": "Para verla en pantalla o imprimirla a tamaño pequeño, sí. La imagen que devuelve el chat no es muy grande, así que para imprimir en grande amplíala después con un programa de ampliación. Guarda siempre el escaneo original sin tocar."
+            },
+            {
+                "q": "¿Es seguro subir fotos familiares?",
+                "a": "Sube solo fotos de tu familia o con permiso de quien aparece. Si no quieres que se usen para entrenar los modelos, desactívalo en la configuración: en ChatGPT, «Mejorar el modelo para todos»; en Gemini, la actividad de las apps de Gemini."
+            }
+        ]
+    },
+    "prompt-para-unir-a-dos-personas-en-una-foto-con-ia": {
+        "answer": "Sube las dos fotos en el mismo mensaje y pide una sola foto realista con las dos personas, indicando postura, lugar y la altura de cada una. Para que no parezca un montaje, pide la misma luz para las dos, la misma perspectiva y sombras donde se tocan. El prompt de abajo ya lo incluye.",
+        "steps": [
+            "Elige dos fotos con la cara de frente o de tres cuartos, nítidas y con una luz parecida.",
+            "Abre ChatGPT o Gemini y adjunta las dos fotos en el mismo mensaje.",
+            "Pega el prompt y rellena postura, lugar, plano y la altura aproximada de cada persona.",
+            "Si una persona parece pegada o las caras cambian, corrige una cosa por mensaje con las frases del apartado «Si no sale bien»."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede unir a dos personas en una foto con ChatGPT?",
+                "a": "Sí: adjunta una foto de cada persona en el mismo mensaje y pide una imagen nueva con las dos juntas. No es un recorta y pega, sino una imagen creada desde cero, así que revisa que las caras sigan siendo las de cada uno."
+            },
+            {
+                "q": "¿Funciona igual en Gemini?",
+                "a": "Sí. Gemini también admite varias fotos en un mensaje y el mismo prompt sirve. Si con una no se parecen, prueba con la otra."
+            },
+            {
+                "q": "¿Por qué la foto parece un montaje?",
+                "a": "Casi siempre por la luz o la escala: una persona iluminada de lado y otra de frente, o tamaños que no cuadran. Pide que iguale la luz y el color de las dos y di cuánto mide cada una."
+            },
+            {
+                "q": "¿Por qué cambian las caras?",
+                "a": "Porque la IA genera la escena entera. Con fotos pequeñas o de perfil se nota más. Usa fotos con la cara grande y, si cambian, pide en otro mensaje que corrija solo las caras para que sean idénticas a las originales."
+            },
+            {
+                "q": "¿Se puede hacer con un familiar que ha fallecido?",
+                "a": "Se puede, y es uno de los usos más habituales para regalar. Hazlo con el acuerdo de la familia y no presentes la imagen como una foto real."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Sí, con los planes gratuitos de ChatGPT y Gemini, aunque con un límite de imágenes al día. Si necesitas varios intentos, puede que tengas que esperar al día siguiente."
+            }
+        ]
     }
 }

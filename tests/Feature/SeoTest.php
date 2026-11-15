@@ -284,6 +284,23 @@ class SeoTest extends TestCase
             ->assertInertia(fn ($page) => $page->where('extra', null));
     }
 
+    public function test_el_contenido_extra_de_las_fichas_esta_completo(): void
+    {
+        $all = SkillContent::all();
+        $this->assertNotEmpty($all, 'resources/data/skill-content.json no se lee o no es JSON válido');
+
+        foreach ($all as $slug => $content) {
+            $this->assertNotEmpty($content['answer'] ?? null, "$slug sin respuesta rápida");
+            $this->assertNotEmpty($content['steps'] ?? null, "$slug sin pasos");
+            $this->assertNotEmpty($content['faq'] ?? null, "$slug sin preguntas frecuentes");
+
+            foreach ($content['faq'] as $item) {
+                $this->assertStringEndsWith('?', $item['q'], "$slug: la pregunta «{$item['q']}» no acaba en ?");
+                $this->assertNotEmpty($item['a']);
+            }
+        }
+    }
+
     public function test_las_visitas_y_los_votos_no_cambian_la_fecha_de_modificacion(): void
     {
         $this->skill->forceFill(['updated_at' => now()->subMonth()])->saveQuietly();

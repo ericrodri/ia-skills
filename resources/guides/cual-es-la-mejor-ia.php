@@ -3,26 +3,28 @@
 return [
     'title' => '¿Cuál es la mejor IA en 2026? Comparativa según lo que necesitas',
     'navTitle' => 'Cuál es la mejor IA',
-    'seoTitle' => '¿Cuál es la mejor IA en 2026? Comparativa por usos',
-    'description' => 'ChatGPT, Gemini, Claude, Copilot, Perplexity o DeepSeek: cuál es mejor para escribir, buscar, programar o crear imágenes, con tabla comparativa y precios.',
+    'seoTitle' => '¿Cuál es la mejor IA? Las mejores IA de 2026 por uso',
+    'description' => 'ChatGPT, Gemini, Claude, Copilot o Perplexity, y las mejores IA para imágenes, vídeo, voz y música: cuál elegir según lo que necesitas, con precios.',
     'excerpt' => 'Preguntar cuál es la mejor IA es como preguntar cuál es el mejor coche: depende de para qué. Esta guía te dice qué asistente encaja con cada tarea y cómo comprobarlo tú mismo en media hora.',
     'category' => 'Herramientas',
     'published' => '2026-10-04',
-    'updated' => '2026-11-01',
-    'readingMinutes' => 7,
-    'words' => 1204,
+    'updated' => '2026-11-15',
+    'readingMinutes' => 9,
+    'words' => 1492,
     'about' => 'Comparativa de asistentes de inteligencia artificial según el tipo de tarea',
     'related' => ['chatgpt-vs-gemini', 'claude-vs-chatgpt-para-trabajar', 'vale-la-pena-pagar-chatgpt-plus', 'herramientas-de-ia-gratis', 'como-usar-perplexity', 'como-usar-deepseek'],
     'toc' => [
         'respuesta-corta' => 'La respuesta corta',
         'tabla' => 'Comparativa de las principales IA',
         'por-tarea' => 'La mejor IA para cada tarea',
+        'mas-alla-del-chat' => 'Las mejores IA para imágenes, vídeo, voz y música',
         'ecosistema' => 'El factor que más pesa: dónde trabajas',
         'privacidad' => 'Privacidad y datos de empresa',
         'prueba' => 'Cómo comprobarlo tú en media hora',
         'errores' => 'Errores habituales al elegir',
     ],
     'faq' => [
+        '¿Cuáles son las mejores IA en 2026?' => 'Entre los asistentes generales, ChatGPT, Gemini y Claude, con Copilot para quien trabaja en Microsoft 365 y Perplexity para buscar con fuentes. Para tareas concretas hay herramientas especializadas: Midjourney para imágenes artísticas, Veo y Sora para vídeo, ElevenLabs para voz, Suno y Udio para música y Gamma para presentaciones.',
         '¿Cuál es la mejor IA gratis?' => 'Para uso general, ChatGPT y Gemini tienen las versiones gratuitas más completas. Para buscar información con fuentes, Perplexity. Para textos largos y documentos, Claude. La diferencia real entre ellas en el plan gratuito está más en los límites de uso que en la calidad de las respuestas.',
         '¿Qué IA es mejor, ChatGPT o Gemini?' => 'Rinden de forma parecida en la mayoría de tareas. ChatGPT suele ser más versátil y tiene más extras (proyectos, GPTs, agentes); Gemini encaja mejor si trabajas en Gmail, Google Drive y Docs, porque accede a tus archivos sin copiar y pegar.',
         '¿Cuál es la mejor IA para programar?' => 'Los modelos de Anthropic (Claude) y de OpenAI son los más usados por desarrolladores, sobre todo a través de herramientas como Claude Code, Cursor o Codex, que trabajan directamente sobre el proyecto en lugar de en un chat.',
@@ -75,6 +77,30 @@ return [
 </ul>
 
 <p>Si dudas entre las dos más populares, tienes la comparativa detallada de <a href="/guias/chatgpt-vs-gemini">ChatGPT vs Gemini</a>, y si tu duda es para el trabajo, la de <a href="/guias/claude-vs-chatgpt-para-trabajar">Claude vs ChatGPT</a>. Para buscar información, compara <a href="/guias/perplexity-vs-chatgpt">Perplexity vs ChatGPT</a>, y si usas Office, <a href="/guias/copilot-vs-chatgpt">Copilot vs ChatGPT</a>.</p>
+
+<h2 id="mas-alla-del-chat">Las mejores IA para imágenes, vídeo, voz y música</h2>
+
+<p>Los asistentes de la tabla hacen un poco de todo, pero para algunas tareas hay herramientas especializadas que dan mejor resultado. Estas son las más usadas en noviembre de 2026:</p>
+
+<figure>
+<table>
+    <thead>
+        <tr><th>Tarea</th><th>Las más usadas</th><th>Cómo empezar</th></tr>
+    </thead>
+    <tbody>
+        <tr><td><strong>Crear imágenes</strong></td><td>Gemini (Nano Banana) y ChatGPT para crear y editar con instrucciones; Midjourney para un acabado artístico; Firefly si trabajas con Adobe</td><td><a href="/guias/crear-imagenes-con-ia">Crear imágenes con IA</a></td></tr>
+        <tr><td><strong>Retocar fotos</strong></td><td>ChatGPT y Gemini con un buen prompt para mejorar, restaurar o borrar objetos; editores con IA para quitar el fondo</td><td><a href="/guias/editar-fotos-con-ia">Editar fotos con IA</a></td></tr>
+        <tr><td><strong>Vídeo</strong></td><td>Veo (dentro de Gemini) y Sora para tomas realistas; Kling y Runway para controlar la cámara; CapCut para montar</td><td><a href="/guias/crear-videos-con-ia">Crear vídeos con IA</a></td></tr>
+        <tr><td><strong>Voz y locución</strong></td><td>ElevenLabs para voces naturales, doblaje y clonar tu propia voz</td><td><a href="/guias/convertir-texto-a-voz-con-ia">Convertir texto a voz</a></td></tr>
+        <tr><td><strong>Música</strong></td><td>Suno y Udio para canciones completas con voz</td><td><a href="/guias/crear-musica-con-ia">Crear música con IA</a></td></tr>
+        <tr><td><strong>Presentaciones</strong></td><td>Copilot en PowerPoint o Gemini en Slides si usas plantillas de empresa; Gamma para un diseño rápido</td><td><a href="/guias/presentaciones-con-ia">Presentaciones con IA</a></td></tr>
+        <tr><td><strong>Traducir</strong></td><td>DeepL o Google Traductor para documentos; ChatGPT, Claude o Gemini cuando importan el tono y el contexto</td><td><a href="/guias/traducir-con-ia">Traducir con IA</a></td></tr>
+        <tr><td><strong>Pasar audio a texto</strong></td><td>Las transcripciones de los propios asistentes o Whisper si prefieres hacerlo en tu ordenador</td><td><a href="/guias/pasar-audio-a-texto-con-ia">Pasar audio a texto</a></td></tr>
+    </tbody>
+</table>
+</figure>
+
+<p>No hace falta probarlas todas. Empieza por el asistente que ya usas, que cubre la mayoría de estas tareas de forma aceptable, y pasa a la herramienta especializada cuando notes que se queda corto.</p>
 
 <h2 id="ecosistema">El factor que más pesa: dónde trabajas</h2>
 
