@@ -48,6 +48,15 @@ class SearchImprovementsTest extends TestCase
                 ->where('suggestions', []));
     }
 
+    public function test_creacion_encuentra_las_fichas_que_dicen_crear(): void
+    {
+        Skill::factory()->create(['title' => 'Prompt para crear el personaje de tus anuncios', 'description' => 'Mismo protagonista']);
+
+        $this->get('/skills?q='.urlencode('creación de personaje'))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('skills.total', 1));
+    }
+
     public function test_las_palabras_vacias_no_bloquean_la_busqueda(): void
     {
         Skill::factory()->create(['title' => 'Prompt para retocar un selfie con Gemini', 'description' => 'Luz y piel']);

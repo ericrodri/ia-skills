@@ -387,5 +387,250 @@
                 "a": "Sí. Amazon KDP pide declarar el texto o las imágenes generados con IA, pero no la ayuda para corregir o revisar lo que has escrito tú."
             }
         ]
+    },
+    "prompt-para-vectorizar-un-logo-o-dibujo-con-ia-limpiar-la-imagen-y-pasarla-a-vector": {
+        "answer": "ChatGPT y Gemini no exportan archivos vectoriales: siempre devuelven una imagen de píxeles (PNG o JPG). El truco es usarlos para limpiar el logo (fondo blanco, colores planos y bordes nítidos) con el prompt de abajo y después convertir esa imagen limpia a SVG con un vectorizador.",
+        "steps": [
+            "Sube a ChatGPT la mejor foto o captura del logo que tengas, lo más recta y grande posible.",
+            "Copia el prompt de abajo, indica cuántos colores tiene el logo y el texto exacto que lleva, y envíalo con la imagen.",
+            "Revisa el resultado con zoom: que no haya cambiado la forma, que no tenga degradados y que el texto esté bien escrito. Si algo falla, usa las correcciones de «Si no sale bien».",
+            "Descarga el PNG y conviértelo a SVG con un vectorizador, por ejemplo Adobe Express (gratis) o Inkscape (gratis, con «Trazar mapa de bits», atajo Mayús + Alt + B)."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT convertir una imagen a vector?",
+                "a": "No directamente. ChatGPT genera imágenes PNG, no archivos SVG, aunque se lo pidas. Lo que sí hace muy bien es dejar el logo limpio y con colores planos, que es lo que necesita un vectorizador para dar un buen resultado."
+            },
+            {
+                "q": "¿Qué programa gratis convierte un PNG a SVG?",
+                "a": "Adobe Express lo convierte gratis desde el navegador e Inkscape es un programa gratuito con la función «Trazar mapa de bits». En Canva, vectorizar y descargar en SVG es de pago (Pro). Recraft vectoriza en su plan gratuito, pero lo que creas ahí es público y no puede usarse con fines comerciales."
+            },
+            {
+                "q": "¿Por qué el texto del logo sale con letras inventadas?",
+                "a": "Los generadores de imágenes todavía fallan con el texto. Si después de dos intentos no lo escribe bien, pide la imagen sin texto, vectorízala y añade las letras en el programa de diseño con la tipografía correcta."
+            },
+            {
+                "q": "¿Por qué el vector sale con muchos nodos o bordes raros?",
+                "a": "Suele ser porque la imagen tenía degradados, sombras o poca resolución. Pide a ChatGPT menos colores y solo colores planos, descárgala en el mayor tamaño posible y vuelve a vectorizar."
+            },
+            {
+                "q": "¿Sirve para grabado o corte láser?",
+                "a": "Sí, pide la versión en una sola tinta (negro puro sobre blanco) y vectorízala. Si el uso principal es el láser, hay una ficha específica para preparar logos para grabado o corte láser."
+            },
+            {
+                "q": "¿Puedo vectorizar el logo de otra marca?",
+                "a": "Solo si es tuyo, de tu empresa o tienes permiso de quien lo diseñó. Los logos de otras marcas están protegidos aunque los redibujes."
+            }
+        ]
+    },
+    "prompt-para-animar-una-foto-con-ia-y-darle-movimiento-sutil": {
+        "answer": "Para animar una foto necesitas un generador de vídeo a partir de imagen, como la función de vídeo de Gemini. Subes la foto como imagen inicial y describes qué se mueve (pelo, mirada, agua) y qué debe quedarse quieto. Cuanto más sutil sea el movimiento que pides, más natural y fiel a la foto sale.",
+        "steps": [
+            "Elige una foto nítida, con la cara grande y bien iluminada si sale una persona.",
+            "Abre el generador de vídeo (por ejemplo, la opción de crear vídeo en Gemini) y sube la foto como imagen inicial.",
+            "Copia el prompt de abajo, rellena qué se mueve, qué se queda quieto y cómo se mueve la cámara, y envíalo.",
+            "Si la cara se deforma o el movimiento es exagerado, pide «la mitad de movimiento» o «solo parpadeo, cabeza quieta» y vuelve a generarlo."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué IA sirve para animar una foto?",
+                "a": "Cualquier generador de vídeo que acepte una imagen inicial. Gemini lo tiene integrado, aunque la creación de vídeo no siempre está incluida en el plan gratuito y cambia según la cuenta y el país. El prompt sirve igual en otros generadores de vídeo a partir de imagen."
+            },
+            {
+                "q": "¿Cuánto dura el vídeo?",
+                "a": "Unos pocos segundos. Estos generadores hacen clips cortos; para algo más largo se generan varios y se unen en un editor de vídeo."
+            },
+            {
+                "q": "¿Por qué se deforma la cara al animar la foto?",
+                "a": "Porque la IA tiene que inventar cómo se mueve la persona, y cuanto más movimiento pides, más se aleja de la foto. Reduce el movimiento a un parpadeo y una leve sonrisa y usa una foto donde la cara se vea grande y nítida."
+            },
+            {
+                "q": "¿Se puede animar la foto de un familiar que ya no está?",
+                "a": "Sí, y es uno de los usos más habituales, pero hazlo con el acuerdo de la familia. Ten en cuenta que el movimiento es inventado: no recupera cómo se movía de verdad esa persona."
+            },
+            {
+                "q": "¿Cómo consigo que el vídeo quede en bucle?",
+                "a": "Pide un efecto cinemagraph: todo quieto excepto un elemento (una vela, el agua, el pelo) que se mueve en bucle continuo. Es el tipo de animación que mejor sale."
+            },
+            {
+                "q": "¿Puedo añadir sonido?",
+                "a": "Algunos generadores añaden sonido ambiente si se lo pides en el prompt («con sonido de mar»). Si el tuyo no lo hace, añádelo después en cualquier editor de vídeo del móvil."
+            }
+        ]
+    },
+    "prompt-para-aprender-un-idioma-desde-cero-con-chatgpt-o-claude-plan-de-90-dias-japones-frances-y-mas": {
+        "answer": "Con ChatGPT o Claude puedes tener un plan de 90 días adaptado a tu tiempo y a tu motivo, y un tutor que te da cada día la lección, corrige tus respuestas y repasa contigo. El prompt de abajo primero crea el plan y luego funciona como tutor: escribes «lección 1» y empiezas.",
+        "steps": [
+            "Abre ChatGPT o Claude y crea una conversación (o un proyecto) solo para el idioma, para que no se mezcle con otros temas.",
+            "Copia el prompt de abajo, rellena el idioma, tu motivo, el tiempo real que tienes al día y cómo aprendes mejor, y envíalo.",
+            "Revisa el plan y pide cambios si el objetivo te parece poco realista o la rutina no te cabe en el día.",
+            "Cada día escribe «lección» con su número en esa misma conversación. Haz los ejercicios y deja que te corrija."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede aprender un idioma con ChatGPT?",
+                "a": "Sí, como tutor es muy útil: explica la gramática en español, adapta los ejercicios a tu nivel, corrige al momento y no se cansa de repetir. Funciona mejor si lo combinas con escuchar el idioma real (series, pódcast) y con una app de repetición espaciada para el vocabulario."
+            },
+            {
+                "q": "¿Qué nivel puedo alcanzar en 90 días?",
+                "a": "Depende del idioma y del tiempo diario. Con 30 minutos al día, lo realista es un nivel básico para presentarte, pedir en un restaurante o entender diálogos sencillos. En idiomas cercanos al español, como el italiano o el portugués, se avanza más rápido que en japonés o en coreano."
+            },
+            {
+                "q": "¿Sirve para aprender japonés o coreano desde cero?",
+                "a": "Sí. El plan dedica las primeras semanas al sistema de escritura (hiragana y katakana en japonés, hangul en coreano) antes de la gramática. Los kanji llevan mucho más tiempo que 90 días: el plan te dirá cuáles aprender primero."
+            },
+            {
+                "q": "¿Puedo practicar conversación hablando?",
+                "a": "Sí, con el modo de voz de la aplicación de ChatGPT o de Claude en el móvil. Pídele que hable despacio, que use solo el vocabulario que llevas y que te corrija la pronunciación al final de cada respuesta."
+            },
+            {
+                "q": "¿Cómo hago que recuerde mi progreso?",
+                "a": "Usa siempre la misma conversación o un proyecto dedicado. Al final de cada semana pídele un resumen de lo aprendido y tus errores frecuentes, y guárdalo: si la conversación se alarga mucho, puedes empezar otra pegando ese resumen."
+            },
+            {
+                "q": "¿Sustituye a un profesor o a una academia?",
+                "a": "Para empezar y practicar a diario, es un buen sustituto barato. Si necesitas un título oficial (JLPT, DELF, Goethe), conviene preparar el examen con materiales oficiales y, si puedes, con alguien que hable el idioma."
+            }
+        ]
+    },
+    "prompt-para-convertir-tu-foto-en-una-postal-de-navidad-con-ia-con-texto-y-sin-que-cambie-la-cara": {
+        "answer": "Sube a Gemini o a ChatGPT una foto con buena luz y pídele que la convierta en postal navideña dejando claro que no cambie las caras ni el número de personas. El prompt de abajo ya incluye esas reglas, el estilo de la postal, el texto que quieras y el formato para WhatsApp o para imprimir.",
+        "steps": [
+            "Elige una foto en la que se vean bien todas las caras, sin contraluces y con buena resolución.",
+            "Abre Gemini o ChatGPT, adjunta la foto y pega el prompt de abajo.",
+            "Elige el estilo (clásica, nevada, ilustración o divertida), escribe el texto exacto de la felicitación y el formato, y envíalo.",
+            "Revisa caras, manos y texto antes de enviarla. Si algo ha cambiado, usa las correcciones del propio prompt."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es mejor para hacer una postal de Navidad, Gemini o ChatGPT?",
+                "a": "Los dos sirven y el prompt funciona en ambos. Gemini (con su modelo de imágenes Nano Banana) suele respetar mejor las caras al editar una foto; ChatGPT suele escribir mejor el texto. Si uno falla, prueba con el otro."
+            },
+            {
+                "q": "¿Cómo evito que la IA cambie las caras?",
+                "a": "Díselo de forma expresa, como hace el prompt: mismas caras, rasgos, expresión, peinado y número de personas, sin rejuvenecer ni embellecer. Si aun así cambia a alguien, pídele que vuelva a la foto original y cambie solo el fondo y la ropa."
+            },
+            {
+                "q": "¿Se puede poner el texto de la felicitación en la postal?",
+                "a": "Sí. Escribe entre comillas el texto exacto y pide que no añada ningún otro. Revisa la ortografía letra a letra: si se equivoca, pídele que lo corrija sin tocar nada más, o añade tú el texto después en cualquier editor."
+            },
+            {
+                "q": "¿Es gratis hacer la postal con IA?",
+                "a": "Sí, con los planes gratuitos de Gemini o de ChatGPT, que tienen un límite de imágenes al día. En Gemini gratis la imagen lleva además un pequeño símbolo visible."
+            },
+            {
+                "q": "¿Y si no estamos todos en la misma foto?",
+                "a": "Usa el prompt para hacer la foto familiar de Navidad aunque no estéis juntos: une a varias personas de fotos distintas en una sola escena."
+            },
+            {
+                "q": "¿Puedo imprimir la postal?",
+                "a": "Para tamaño postal o para enviarla por WhatsApp suele bastar. Pide el formato horizontal para imprimir y la mayor resolución posible; si la quieres más grande, amplíala antes con un programa de ampliación."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-sesion-de-fotos-con-ia-6-poses-y-escenarios-con-la-misma-persona": {
+        "answer": "Sube una a tres fotos nítidas tuyas a Gemini o ChatGPT y pide la sesión foto a foto dentro de la misma conversación, con una ficha de la persona que se respete en todas. Así se mantiene la cara y el estilo en las seis imágenes; pedirlas todas a la vez suele dar caras distintas.",
+        "steps": [
+            "Elige una a tres fotos tuyas nítidas: de frente, de tres cuartos y, si puedes, de cuerpo entero.",
+            "Abre Gemini o ChatGPT, adjunta las fotos y pega el prompt de abajo con el estilo de la sesión, los escenarios y la ropa.",
+            "Revisa la primera foto. Cuando te guste, escribe «siguiente» para la segunda, y así hasta la sexta.",
+            "Si en alguna cambia la cara, vuelve a subir la foto original y pide que la use como referencia para esa imagen."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué IA mantiene la misma cara en varias fotos?",
+                "a": "Gemini (Nano Banana) y ChatGPT pueden hacerlo si trabajas en la misma conversación y les das buenas fotos de referencia. Aun así, mantener la misma cara en seis imágenes es lo más difícil para estas herramientas: es normal repetir una o dos."
+            },
+            {
+                "q": "¿Cuántas fotos mías tengo que subir?",
+                "a": "Entre una y tres. Con una de frente basta para retratos; si quieres fotos de cuerpo entero, añade una donde se te vea entero para que respete tu complexión."
+            },
+            {
+                "q": "¿Puedo pedir las seis fotos a la vez?",
+                "a": "Puedes, pero suele salir peor: las caras varían más y los escenarios se mezclan. Es mejor una por una con «siguiente», revisando cada resultado."
+            },
+            {
+                "q": "¿Por qué cambia la cara de una foto a otra?",
+                "a": "Porque cada imagen se genera de nuevo. Vuelve a subir la foto original y di «usa como referencia esta cara para la foto 4». También ayuda evitar planos muy lejanos, donde la cara sale pequeña."
+            },
+            {
+                "q": "¿Puedo usar estas fotos para LinkedIn o un perfil de citas?",
+                "a": "Para LinkedIn o el currículum hay una ficha específica de foto profesional a partir de un selfie. En perfiles de citas, no las uses sin indicar que están hechas con IA: es engañar a quien te ve."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Sí, con los planes gratuitos de Gemini o ChatGPT, aunque tienen un límite de imágenes al día. Si se te acaba, sigue la sesión al día siguiente en la misma conversación."
+            }
+        ]
+    },
+    "prompt-para-colorear-una-foto-en-blanco-y-negro-de-forma-realista": {
+        "answer": "Sube la foto a Gemini o ChatGPT y pídele que solo añada color, sin cambiar caras ni encuadre, dándole el lugar, la época y los colores que conozcas. Así evitas el tono marrón uniforme y la piel de cera. Recuerda que la IA adivina los colores: el resultado es una interpretación, no los colores reales.",
+        "steps": [
+            "Si la foto tiene rayas, manchas o roturas, restáurala antes en otro mensaje.",
+            "Abre Gemini o ChatGPT, adjunta la foto y pega el prompt de abajo.",
+            "Rellena el lugar, la época y la ocasión, y añade los colores que sepas (el vestido, los ojos, el coche). Envíalo.",
+            "Si los colores salen apagados, todos marrones o demasiado intensos, usa las correcciones de «Si no sale bien»."
+        ],
+        "faq": [
+            {
+                "q": "¿Los colores que pone la IA son los reales?",
+                "a": "No. Una foto en blanco y negro no guarda información de color, así que la IA elige los más probables. Por eso conviene darle los colores que conozcas: los respeta y el resultado se parece más a la realidad."
+            },
+            {
+                "q": "¿Qué IA colorea mejor una foto antigua?",
+                "a": "Gemini y ChatGPT dan buenos resultados con este prompt. Gemini suele respetar mejor las caras al editar; si uno no te convence, prueba el mismo texto en el otro."
+            },
+            {
+                "q": "¿Cómo consigo tonos de piel naturales?",
+                "a": "Pide tonos distintos entre personas y variaciones naturales en la piel, sin suavizar. Si sale anaranjada o de cera, usa la corrección «piel con variaciones naturales de tono, mejillas algo más cálidas»."
+            },
+            {
+                "q": "¿Qué hago si la foto además está dañada?",
+                "a": "Restáurala primero con el prompt para restaurar fotos antiguas o dañadas y colorea después el resultado. Hacerlo en dos pasos sale mejor que pedir las dos cosas a la vez."
+            },
+            {
+                "q": "¿Se puede hacer al revés, pasar una foto a blanco y negro?",
+                "a": "Sí, y también color selectivo: todo en blanco y negro salvo un elemento. Para un retrato en blanco y negro con aspecto de estudio hay una ficha específica."
+            },
+            {
+                "q": "¿Es gratis colorear una foto con IA?",
+                "a": "Sí, con los planes gratuitos de Gemini o ChatGPT, que tienen un límite de imágenes al día. Si vas a compartir la foto, sobre todo si tiene valor histórico, indica que está coloreada con IA."
+            }
+        ]
+    },
+    "prompt-para-crear-el-personaje-de-tus-anuncios-de-video-con-ia-el-mismo-protagonista-en-todas-las-escenas": {
+        "answer": "Primero se crea el personaje en imagen (una ficha cerrada y una hoja de referencia con su cara y su ropa) y después se anima cada escena con un generador de vídeo a partir de esa imagen. Subir siempre la misma referencia es lo que hace que el protagonista salga igual en todo el anuncio.",
+        "steps": [
+            "Abre Gemini o ChatGPT, pega el prompt de abajo y rellena tu producto, tu público, el tono de la marca y el formato del anuncio.",
+            "Elige uno de los tres personajes que te propone y genera su hoja de referencia. Guárdala: la vas a usar en todas las escenas.",
+            "Pide el guion en tabla y, escena a escena, genera la imagen inicial y anímala en el generador de vídeo con el texto que te da.",
+            "Une los clips en un editor de vídeo, añade el texto en pantalla y la música, y revisa que el personaje sea el mismo en todo el anuncio."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo consigo que el personaje salga igual en todos los vídeos?",
+                "a": "Con una hoja de referencia fija y un texto de descripción que pegas en cada petición. Cada escena se genera a partir de una imagen inicial hecha con esa referencia, no desde cero. Aun así, es normal tener que repetir alguna escena."
+            },
+            {
+                "q": "¿Qué herramientas necesito?",
+                "a": "Una IA que genere imágenes (Gemini o ChatGPT) para el personaje y las imágenes iniciales, un generador de vídeo a partir de imagen para animar cada escena y un editor de vídeo (CapCut, Canva u otro) para montar el anuncio."
+            },
+            {
+                "q": "¿Puedo usar la cara de una persona real o de un famoso?",
+                "a": "No sin su permiso por escrito, y nunca la de un famoso. El prompt está pensado para inventar un personaje propio, que además es tuyo y puedes usar en todos tus anuncios."
+            },
+            {
+                "q": "¿Tengo que avisar de que el anuncio está hecho con IA?",
+                "a": "Las principales plataformas piden etiquetar el contenido realista generado con IA, así que revisa las normas de la que uses antes de publicar. Tampoco presentes al personaje como un cliente real ni como un testimonio auténtico."
+            },
+            {
+                "q": "¿Cuánto dura cada clip de vídeo?",
+                "a": "Unos pocos segundos. Por eso el guion se divide en escenas cortas: cada una es un clip y el anuncio se monta uniéndolos."
+            },
+            {
+                "q": "¿Sirve para una mascota de marca en vez de una persona?",
+                "a": "Sí, y suele ser más fácil de mantener igual entre escenas. Usa la variante de mascota de marca: un animal u objeto con personalidad en estilo 3D de animación."
+            }
+        ]
     }
 }

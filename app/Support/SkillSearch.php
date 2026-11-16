@@ -33,6 +33,8 @@ class SkillSearch
         // «skill para generación de vídeos»: ninguna ficha dice «generación».
         'generacion' => ['crear', 'generar', 'hacer'],
         'generar' => ['crear', 'hacer'],
+        // «creación de personajes» daba 0: las fichas dicen «crear».
+        'creacion' => ['crear', 'disenar', 'hacer'],
         'vectorizar' => ['vector', 'vectorial', 'svg'],
         'vector' => ['vectorizar', 'vectorial', 'svg'],
         'foto' => ['fotografia', 'imagen'],
