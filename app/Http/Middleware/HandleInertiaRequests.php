@@ -7,6 +7,7 @@ use App\Support\SiteData;
 use App\Support\SkillMarkdown;
 use App\Support\ToolPages;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\View;
 use Inertia\Middleware;
 
 class HandleInertiaRequests extends Middleware
@@ -43,7 +44,7 @@ class HandleInertiaRequests extends Middleware
             ],
             'flash' => [
                 'success' => fn () => $request->session()->get('success'),
-                'error'   => fn () => $request->session()->get('error'),
+                'error' => fn () => $request->session()->get('error'),
             ],
             // Fuente única de la navegación, compartida con layouts/site.blade.php.
             'nav' => [
@@ -57,6 +58,11 @@ class HandleInertiaRequests extends Middleware
             // Ficha antibots de los formularios públicos (App\Support\BotGuard).
             // Se renueva en cada visita; los formularios la leen al enviar.
             'formToken' => fn () => BotGuard::token(),
+            // Título SEO del servidor (Seo::share). Sin él, el <Head> de Vue
+            // sustituía al cargar el título trabajado por uno genérico, y
+            // Google indexa el título que queda tras ejecutar el JavaScript.
+            // Es un closure: se resuelve después del controlador.
+            'seoTitle' => fn () => View::shared('seo')['title'] ?? null,
         ];
     }
 }
