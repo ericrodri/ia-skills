@@ -632,5 +632,40 @@
                 "a": "Sí, y suele ser más fácil de mantener igual entre escenas. Usa la variante de mascota de marca: un animal u objeto con personalidad en estilo 3D de animación."
             }
         ]
+    },
+    "prompt-para-crear-un-catalogo-digital-de-tus-productos-con-ia-en-pdf-o-para-whatsapp-business": {
+        "answer": "Se le pasa a la IA la lista de productos con sus precios y ella la ordena en secciones, escribe una ficha corta para cada producto, la portada y la página de cómo pedir, y monta el PDF o deja los textos listos para el catálogo de WhatsApp Business. Las fotos y los precios tienen que ser los tuyos.",
+        "steps": [
+            "Abre ChatGPT o Claude, pega el prompt de abajo, rellena tu negocio y adjunta tu lista de productos con precios (hoja de cálculo, foto o texto).",
+            "Revisa las secciones que te propone y completa los datos que te diga que faltan.",
+            "Repasa la tabla de fichas de producto: nombres, descripciones y, sobre todo, precios.",
+            "Pide el PDF o los textos para WhatsApp Business, añade tus fotos y envíalo con uno de los mensajes que te prepara."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede la IA hacerme el PDF del catálogo?",
+                "a": "ChatGPT y Claude pueden generar el PDF con la maqueta básica. Si quieres un diseño más cuidado, pide solo los textos ordenados por página y móntalos en una plantilla de catálogo de Canva."
+            },
+            {
+                "q": "¿Sirve para el catálogo de WhatsApp Business?",
+                "a": "Sí. WhatsApp Business tiene su propia función de catálogo; el prompt te da para cada producto el nombre, el precio y la descripción listos para pegar, agrupados en colecciones."
+            },
+            {
+                "q": "¿Puedo usar fotos de producto hechas con IA?",
+                "a": "No para mostrar el producto: el cliente compra lo que ve, así que la foto tiene que ser real. La IA sí puede ayudarte a mejorar el fondo o la luz de tus fotos, o a crear imágenes de ambiente para la portada."
+            },
+            {
+                "q": "¿Qué hago si tengo cientos de productos?",
+                "a": "Haz un catálogo corto con los más vendidos o por temporada y deja el resto en una lista de precios aparte. Un catálogo largo se lee mal en el móvil."
+            },
+            {
+                "q": "¿Me inventará precios o características?",
+                "a": "El prompt le pide usar solo los datos de tu lista y marcar lo que falte. Aun así, repasa los precios antes de enviarlo: un error te compromete con el cliente."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de ChatGPT o de Claude, aunque los límites de archivos y de mensajes son menores. Canva y WhatsApp Business también tienen versión gratuita."
+            }
+        ]
     }
 }

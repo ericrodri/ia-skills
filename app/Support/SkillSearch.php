@@ -35,6 +35,9 @@ class SkillSearch
         'generar' => ['crear', 'hacer'],
         // «creación de personajes» daba 0: las fichas dicen «crear».
         'creacion' => ['crear', 'disenar', 'hacer'],
+        // «lector pdf» daba 0 (16-11-2026): las fichas de PDF dicen resumir,
+        // leer o hacer preguntas, nunca «lector».
+        'lector' => ['leer', 'lectura', 'resumir', 'analizar', 'preguntas'],
         'vectorizar' => ['vector', 'vectorial', 'svg'],
         'vector' => ['vectorizar', 'vectorial', 'svg'],
         'foto' => ['fotografia', 'imagen'],

@@ -57,6 +57,18 @@ class SearchImprovementsTest extends TestCase
             ->assertInertia(fn ($page) => $page->where('skills.total', 1));
     }
 
+    public function test_lector_pdf_encuentra_las_fichas_de_resumir_pdfs(): void
+    {
+        Skill::factory()->create(['title' => 'Prompt para resumir un PDF largo con IA', 'description' => 'Sin perder lo importante']);
+        Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
+
+        $this->get('/skills?q='.urlencode('lector pdf'))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('skills.total', 1)
+                ->where('skills.data.0.title', 'Prompt para resumir un PDF largo con IA'));
+    }
+
     public function test_las_palabras_vacias_no_bloquean_la_busqueda(): void
     {
         Skill::factory()->create(['title' => 'Prompt para retocar un selfie con Gemini', 'description' => 'Luz y piel']);
