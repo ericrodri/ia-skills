@@ -18,6 +18,9 @@ class Seo
 {
     public const SITE_NAME = 'ia-skills';
 
+    /** Perfiles oficiales: van en `sameAs` y en el pie de página. */
+    public const INSTAGRAM = 'https://www.instagram.com/ia_skills/';
+
     public const TITLE_SUFFIX = ' | ia-skills';
 
     public const TITLE_MAX = 65;
@@ -154,6 +157,7 @@ class Seo
             ],
             'description' => 'Biblioteca colaborativa de prompts y skills de IA organizados por profesión.',
             'inLanguage' => 'es',
+            'sameAs' => [self::INSTAGRAM],
         ];
     }
 }

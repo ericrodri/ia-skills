@@ -247,7 +247,11 @@ function logout() {
                     </form>
                 </div>
 
-                <p class="mt-8 text-xs text-gray-400 dark:text-gray-500">© {{ new Date().getFullYear() }} ia-skills.com</p>
+                <p class="mt-8 text-xs text-gray-400 dark:text-gray-500">
+                    © {{ new Date().getFullYear() }} ia-skills.com ·
+                    <!-- Misma dirección que Seo::INSTAGRAM -->
+                    <a href="https://www.instagram.com/ia_skills/" rel="me noopener" target="_blank" class="hover:text-gray-900 dark:hover:text-white transition-colors">Instagram</a>
+                </p>
             </div>
         </footer>
     </div>

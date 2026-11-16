@@ -114,6 +114,7 @@
                 <div>
                     <p class="font-bold text-gray-900 dark:text-white flex items-center gap-2"><img src="/logo.png?v=2" alt="" width="24" height="24" class="w-6 h-6" loading="lazy"> ia-skills</p>
                     <p class="mt-3 text-gray-500 dark:text-gray-400">La biblioteca colaborativa de prompts y skills de IA para profesionales, organizada por profesión.</p>
+                    <p class="mt-3"><a class="text-gray-500 dark:text-gray-400 hover:text-brand-600 dark:hover:text-brand-400" href="{{ \App\Support\Seo::INSTAGRAM }}" rel="me noopener" target="_blank">Síguenos en Instagram</a></p>
                 </div>
                 <div>
                     <p class="font-semibold text-gray-900 dark:text-white">Explorar</p>

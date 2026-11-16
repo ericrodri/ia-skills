@@ -5,6 +5,7 @@ namespace Tests\Feature;
 use App\Models\Profession;
 use App\Models\Skill;
 use App\Support\Guides;
+use App\Support\Seo;
 use App\Support\SkillContent;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
@@ -299,6 +300,14 @@ class SeoTest extends TestCase
                 $this->assertNotEmpty($item['a']);
             }
         }
+    }
+
+    public function test_la_organizacion_enlaza_el_perfil_de_instagram(): void
+    {
+        $this->assertSame([Seo::INSTAGRAM], Seo::organization()['sameAs']);
+
+        $this->get(route('how-it-works'))->assertOk()->assertSee('"sameAs"', false);
+        $this->get(route('guides.index'))->assertOk()->assertSee(Seo::INSTAGRAM, false);
     }
 
     public function test_las_visitas_y_los_votos_no_cambian_la_fecha_de_modificacion(): void
