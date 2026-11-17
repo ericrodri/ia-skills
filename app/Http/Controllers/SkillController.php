@@ -270,6 +270,21 @@ class SkillController extends Controller
 
         $this->shareShowSeo($skill, $guides, $neighbours);
 
+        $from = '/skills/'.$skill->slug;
+        $extra = SkillContent::for($skill->slug);
+        // Si la ficha recomienda la herramienta dentro de sus pasos, no se
+        // repite en el recuadro (prueba de Pixa del 17-11-2026: 0 clics en el
+        // recuadro con ~100 visitantes reales en tres días).
+        $toolTip = Affiliates::tip($extra['tool_tip'] ?? null, $from);
+        $affiliateTools = array_values(array_filter(
+            Affiliates::forText(
+                implode(' ', [$skill->title, $skill->tool_name, $skill->description, $skill->prompt_content]),
+                $from,
+                $skill->title,
+            ),
+            fn (array $tool) => $tool['slug'] !== ($toolTip['slug'] ?? null),
+        ));
+
         return Inertia::render('Skills/Show', [
             'skill' => $skill,
             'versions' => $this->versionHistory($skill),
@@ -290,14 +305,11 @@ class SkillController extends Controller
             'nextStep' => $nextStep,
             // Respuesta rápida, pasos y preguntas frecuentes de las fichas con
             // más tráfico (resources/data/skill-content.json).
-            'extra' => SkillContent::for($skill->slug),
+            'extra' => $extra,
             // Recuadro de herramientas con enlace de afiliado: las que menciona la
             // ficha o, para las de `match` => 'title', las que encajan con su título.
-            'affiliateTools' => Affiliates::forText(
-                implode(' ', [$skill->title, $skill->tool_name, $skill->description, $skill->prompt_content]),
-                '/skills/'.$skill->slug,
-                $skill->title,
-            ),
+            'affiliateTools' => $affiliateTools,
+            'toolTip' => $toolTip,
             'affiliateDisclosure' => Affiliates::DISCLOSURE,
             'packOffer' => $this->packOffer($skill),
             'share' => $this->shareData($skill, $user?->id === $skill->user_id, $viaLink),

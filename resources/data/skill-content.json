@@ -7,6 +7,12 @@
             "Compara el resultado con el original. Si ha cambiado una cara o un detalle, escribe: «Vuelve al original y prioriza la fidelidad sobre la nitidez».",
             "Descarga la imagen. Si la necesitas para imprimir en grande o en 4K, amplíala después con un programa de ampliación: ChatGPT no la entrega a ese tamaño."
         ],
+        "tool_tip": {
+            "tool": "pixa",
+            "step": 4,
+            "text": "Para ese último paso puedes usar Pixa: amplía la foto a 4K u 8K en el navegador, gratis, sin registrarte y sin marca de agua.",
+            "cta": "Ampliar con Pixa"
+        },
         "faq": [
             {
                 "q": "¿Puede ChatGPT mejorar la calidad de una imagen?",

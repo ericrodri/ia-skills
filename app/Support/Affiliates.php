@@ -56,6 +56,31 @@ class Affiliates
      *
      * @return list<array{slug: string, name: string, blurb: string, cta: string, href: string}>
      */
+    /**
+     * Nota con enlace dentro de los pasos de una ficha (`tool_tip` en
+     * skill-content.json): la herramienta recomendada en el momento en que
+     * hace falta, en vez de en el recuadro. null si la herramienta no existe.
+     *
+     * @param  array{tool?: string, step?: int, text?: string, cta?: string}|null  $tip
+     * @return array{slug: string, step: int, text: string, cta: string, href: string}|null
+     */
+    public static function tip(?array $tip, string $from): ?array
+    {
+        $slug = $tip['tool'] ?? null;
+
+        if ($slug === null || self::find($slug) === null || empty($tip['text'])) {
+            return null;
+        }
+
+        return [
+            'slug' => $slug,
+            'step' => (int) ($tip['step'] ?? 1),
+            'text' => $tip['text'],
+            'cta' => $tip['cta'] ?? self::find($slug)['cta'],
+            'href' => route('affiliates.go', ['tool' => $slug, 'desde' => $from]),
+        ];
+    }
+
     public static function forText(string $text, string $from, ?string $title = null): array
     {
         $tools = [];

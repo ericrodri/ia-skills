@@ -9,6 +9,7 @@ import { lineDiff } from '@/utils/lineDiff'
 import { promptFields, fillPrompt, promptSegments } from '@/utils/promptFields'
 import { manualCopyPart } from '@/utils/manualCopy'
 import { promptParts } from '@/utils/promptParts'
+import { markPressed } from '@/utils/affiliate'
 
 import { computed } from 'vue'
 
@@ -28,6 +29,8 @@ const props = defineProps({
     neighbours: { type: Array, default: () => [] },
     // «Siguiente paso» bajo el prompt: { skills: [{slug, title}], guide: {url, title, excerpt} | null }
     nextStep: { type: Object, default: () => ({ skills: [], guide: null }) },
+    // Nota con enlace de afiliado dentro de un paso: { slug, step, text, cta, href }
+    toolTip: { type: Object, default: null },
     // Respuesta rápida, pasos y preguntas frecuentes de las fichas con más
     // tráfico: { answer, steps: [], faq: [{q, a}] } (App\Support\SkillContent).
     // El servidor emite lo mismo en el FAQPage y en <noscript>.
@@ -509,7 +512,16 @@ function submitComment() {
                         <ol v-if="extra.steps?.length" class="mt-3 space-y-2 text-sm text-gray-700 dark:text-gray-300">
                             <li v-for="(step, i) in extra.steps" :key="i" class="flex gap-2.5">
                                 <span class="shrink-0 w-5 h-5 rounded-full bg-brand-100 dark:bg-brand-900/40 text-brand-700 dark:text-brand-300 text-xs font-semibold flex items-center justify-center mt-0.5">{{ i + 1 }}</span>
-                                <span class="leading-relaxed">{{ step }}</span>
+                                <span class="leading-relaxed">
+                                    {{ step }}
+                                    <!-- Herramienta recomendada justo en el paso donde hace falta
+                                         (tool_tip en skill-content.json, Affiliates::tip). -->
+                                    <span v-if="toolTip && toolTip.step === i + 1" class="mt-2 block rounded-lg bg-gray-50 dark:bg-gray-900 px-3 py-2">
+                                        {{ toolTip.text }}
+                                        <a :href="toolTip.href" target="_blank" rel="sponsored noopener" @pointerdown="markPressed" @click="markPressed" class="font-semibold text-brand-600 dark:text-brand-400 hover:underline whitespace-nowrap">{{ toolTip.cta }} ↗</a>
+                                        <span class="block mt-1 text-xs text-gray-400 dark:text-gray-500">{{ affiliateDisclosure }}</span>
+                                    </span>
+                                </span>
                             </li>
                         </ol>
                     </section>

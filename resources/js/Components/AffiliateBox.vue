@@ -4,23 +4,12 @@
 // No dice «que usa esta skill»: algunas salen por el tema (Pixa), no porque
 // la ficha las nombre.
 // Mismo diseño que resources/views/partials/affiliate-box.blade.php.
+import { markPressed } from '@/utils/affiliate'
+
 defineProps({
     tools: { type: Array, required: true },
     disclosure: { type: String, required: true },
 })
-
-// Marca el enlace como pulsado por una persona justo antes de seguirlo
-// (también con clic central, Ctrl+clic o Intro). El servidor solo cuenta los
-// clics que llevan la marca: los robots siguen el href sin ella.
-// Mismo nombre que App\Support\Affiliates::PRESSED.
-function markPressed(event) {
-    const link = event.currentTarget
-    const url = new URL(link.href, window.location.href)
-    if (url.searchParams.get('pulsado') !== '1') {
-        url.searchParams.set('pulsado', '1')
-        link.href = url.toString()
-    }
-}
 </script>
 
 <template>

@@ -16,7 +16,9 @@
  * (en PartnerStack, «Enlaces personalizados», con destinos ya aprobados).
  * Las demás páginas usan `url`.
  *
- * Una página con enlace propio en `pages` muestra siempre el recuadro.
+ * Una página con enlace propio en `pages` muestra siempre el recuadro, salvo
+ * las fichas con `tool_tip` en resources/data/skill-content.json: ahí la
+ * herramienta va en una frase dentro de los pasos y no en el recuadro.
  * `match` => 'title' (opcional): `pattern` se busca solo en el título.
  *
  * `sid` (opcional): nombre del parámetro con el que el programa recibe la
@@ -52,6 +54,8 @@ return [
             '/guias/restaurar-fotos-antiguas-con-ia' => 'https://getpixa.link/ia-skills-calidad',
             '/guias/editar-fotos-con-ia' => 'https://getpixa.link/ia-skills',
             '/guias/prompts-para-editar-fotos-con-ia' => 'https://getpixa.link/ia-skills',
+            // Ficha con la nota en el paso 4 (tool_tip en skill-content.json).
+            '/skills/como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion' => 'https://getpixa.link/ia-skills-calidad',
         ],
         // Solo el título: en el cuerpo, «fondo transparente» o el enlace a la
         // guía de mejorar fotos aparecen en páginas que no van de esto.

@@ -70,7 +70,8 @@ class AffiliateTest extends TestCase
     public function test_los_enlaces_por_pagina_apuntan_a_guias_que_existen(): void
     {
         foreach (Affiliates::all() as $tool) {
-            foreach (array_keys($tool['pages'] ?? []) as $path) {
+            // Las fichas viven en la base de datos, que aquí está vacía.
+            foreach (array_filter(array_keys($tool['pages'] ?? []), fn ($p) => str_starts_with($p, '/guias/')) as $path) {
                 $this->get($path)->assertOk();
             }
         }
@@ -121,6 +122,23 @@ class AffiliateTest extends TestCase
             // El script que añade la marca de pulsado; sin él no contaría nada.
             ->assertSee('data-afiliado', false)
             ->assertSee('"pulsado"', false);
+    }
+
+    public function test_la_ficha_con_nota_en_los_pasos_no_repite_el_recuadro(): void
+    {
+        $slug = 'como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion';
+        $skill = Skill::factory()->create(['slug' => $slug, 'title' => 'Cómo pedirle a ChatGPT que mejore la calidad de una imagen y la amplíe']);
+
+        $this->get(route('skills.show', $skill))->assertInertia(fn ($page) => $page
+            ->where('toolTip.slug', 'pixa')
+            ->where('toolTip.step', 4)
+            ->where('toolTip.href', route('affiliates.go', ['tool' => 'pixa', 'desde' => '/skills/'.$slug]))
+            ->where('affiliateTools', []));
+
+        // Y el clic lleva a la página de mejorar calidad de Pixa.
+        $this->withHeaders(['User-Agent' => self::BROWSER])
+            ->get(route('affiliates.go', ['tool' => 'pixa', 'desde' => '/skills/'.$slug, 'pulsado' => 1]))
+            ->assertRedirect('https://getpixa.link/ia-skills-calidad');
     }
 
     public function test_pixa_sale_por_el_titulo_de_la_ficha_y_no_por_el_prompt(): void
