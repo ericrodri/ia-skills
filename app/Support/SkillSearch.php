@@ -77,6 +77,19 @@ class SkillSearch
         'editada' => ['retocada', 'manipulada', 'falsa'],
         'falsa' => ['retocada', 'manipulada', 'montaje', 'fake'],
         'fake' => ['falsa', 'retocada', 'manipulada'],
+        // Erratas reales (17-11-2026).
+        'carruzel' => ['carrusel'],
+    ];
+
+    /**
+     * Expresiones de varias palabras que el catálogo dice con una sola. Se
+     * sustituyen antes de partir la búsqueda en palabras: «hoja de vida»
+     * (currículum en Latinoamérica) exigía «hoja» y «vida» y no daba nada.
+     * Claves en minúsculas y sin tildes.
+     */
+    private const PHRASES = [
+        'hoja de vida' => 'curriculum',
+        'hojas de vida' => 'curriculum',
     ];
 
     /**
@@ -102,7 +115,7 @@ class SkillSearch
      */
     public static function apply($query, ?string $term, bool $matchProfessionName = false): bool
     {
-        $term = trim((string) $term);
+        $term = self::replacePhrases(trim((string) $term));
         $words = array_values(array_filter(preg_split('/\s+/', $term)));
 
         if ($words === []) {
@@ -189,7 +202,7 @@ class SkillSearch
     public static function anyWord($query, ?string $term): bool
     {
         $words = array_values(array_filter(
-            preg_split('/\s+/', self::normalize((string) $term)),
+            preg_split('/\s+/', self::replacePhrases(self::normalize((string) $term))),
             fn ($w) => mb_strlen($w) >= 3 && ! in_array($w, self::STOPWORDS, true),
         ));
 
@@ -236,6 +249,23 @@ class SkillSearch
     public static function synonyms(string $word): array
     {
         return self::SYNONYMS[self::normalize($word)] ?? [];
+    }
+
+    /**
+     * Cambia las expresiones de PHRASES por su palabra. Si no hay ninguna,
+     * devuelve el texto tal cual (con sus tildes, que el ranking agradece).
+     */
+    private static function replacePhrases(string $term): string
+    {
+        $normalized = self::normalize($term);
+
+        foreach (self::PHRASES as $phrase => $word) {
+            if (preg_match('/\b'.preg_quote($phrase, '/').'\b/', $normalized)) {
+                return trim((string) preg_replace('/\b'.preg_quote($phrase, '/').'\b/', $word, $normalized));
+            }
+        }
+
+        return $term;
     }
 
     /** Minúsculas, sin tildes y con los espacios colapsados. */

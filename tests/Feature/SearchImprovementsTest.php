@@ -69,6 +69,18 @@ class SearchImprovementsTest extends TestCase
                 ->where('skills.data.0.title', 'Prompt para resumir un PDF largo con IA'));
     }
 
+    public function test_hoja_de_vida_encuentra_las_fichas_de_curriculum(): void
+    {
+        Skill::factory()->create(['title' => 'Prompt para adaptar tu currículum a una oferta', 'description' => 'Ajusta tu CV']);
+        Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
+
+        $this->get('/skills?q='.urlencode('Hoja de vida'))
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page
+                ->where('skills.total', 1)
+                ->where('skills.data.0.title', 'Prompt para adaptar tu currículum a una oferta'));
+    }
+
     public function test_las_palabras_vacias_no_bloquean_la_busqueda(): void
     {
         Skill::factory()->create(['title' => 'Prompt para retocar un selfie con Gemini', 'description' => 'Luz y piel']);
