@@ -8,6 +8,7 @@ import axios from 'axios'
 import { lineDiff } from '@/utils/lineDiff'
 import { promptFields, fillPrompt, promptSegments } from '@/utils/promptFields'
 import { manualCopyPart } from '@/utils/manualCopy'
+import { promptParts } from '@/utils/promptParts'
 
 import { computed } from 'vue'
 
@@ -186,6 +187,9 @@ const showFields = ref(false)
 const filledCount = computed(() => fields.value.filter(f => values.value[f.key]?.trim()).length)
 const filledPrompt = computed(() => fillPrompt(props.skill.prompt_content, values.value))
 const segments = computed(() => promptSegments(props.skill.prompt_content, values.value))
+// Lo que se manda: solo el prompt, sin la nota «Uso:», la versión en inglés
+// ni los consejos (utils/promptParts). «Copiar todo» sigue disponible.
+const parts = computed(() => promptParts(filledPrompt.value))
 let trackedFill = false
 
 function openFields(key = null) {
@@ -225,9 +229,19 @@ async function toggleSave() {
 
 function copyPrompt() {
     track('copiar')
-    navigator.clipboard.writeText(filledPrompt.value)
+    navigator.clipboard.writeText(parts.value.main)
     copied.value = true
     setTimeout(() => copied.value = false, 2000)
+    offerPack()
+}
+
+// Copias secundarias bajo el prompt: la versión en inglés o el texto entero.
+const extraCopied = ref('')
+function copyExtra(kind) {
+    track(kind === 'english' ? 'copiar_en' : 'copiar_todo')
+    navigator.clipboard.writeText(kind === 'english' ? parts.value.english : parts.value.full)
+    extraCopied.value = kind
+    setTimeout(() => extraCopied.value = '', 2000)
     offerPack()
 }
 
@@ -235,7 +249,7 @@ function copyPrompt() {
 // MCP llevan delante la petición de generarla.
 const isPromptFicha = computed(() => (props.skill.resource_type ?? 'prompt') === 'prompt')
 const promptToSend = computed(() => isPromptFicha.value
-    ? filledPrompt.value
+    ? parts.value.main
     : `Genérame la skill "${props.skill.title}":\n\n${filledPrompt.value}`)
 
 // El botón principal abre la IA para la que está escrita la ficha: la
@@ -661,6 +675,12 @@ function submitComment() {
                                 class="absolute top-2.5 right-2.5 z-10 inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-white/10 hover:bg-white/20 text-gray-100 text-xs font-medium transition-colors"
                             >{{ copied ? '¡Copiado!' : 'Copiar' }}</button>
                             <pre class="bg-gray-900 text-gray-100 rounded-xl p-5 pt-12 text-sm leading-relaxed overflow-x-auto whitespace-pre-wrap font-mono" @copy="onManualCopy"><template v-for="(seg, i) in segments" :key="i"><span v-if="seg.key" role="button" tabindex="0" @click="openFields(seg.key)" @keydown.enter="openFields(seg.key)" class="cursor-pointer rounded px-0.5" :class="seg.filled ? 'bg-emerald-400/20 text-emerald-200' : 'bg-amber-400/20 text-amber-200 hover:bg-amber-400/30'" :title="seg.filled ? 'Cambiar este dato' : 'Rellenar este dato'">{{ seg.text }}</span><template v-else>{{ seg.text }}</template></template></pre>
+                            <!-- «Copiar» manda solo el prompt; aquí, lo demás por si se quiere. -->
+                            <div v-if="parts.split" class="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-500 dark:text-gray-400">
+                                <span>«Copiar» copia solo el prompt, sin las notas ni los consejos.</span>
+                                <button v-if="parts.english" type="button" @click="copyExtra('english')" class="font-medium text-brand-600 dark:text-brand-400 hover:underline">{{ extraCopied === 'english' ? '¡Copiada!' : 'Copiar la versión en inglés' }}</button>
+                                <button type="button" @click="copyExtra('all')" class="font-medium text-brand-600 dark:text-brand-400 hover:underline">{{ extraCopied === 'all' ? '¡Copiado!' : 'Copiar todo el texto' }}</button>
+                            </div>
                         </div>
                     </div>
 

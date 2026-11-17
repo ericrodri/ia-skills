@@ -3,19 +3,21 @@
 return [
     'title' => 'ChatGPT no funciona: qué hacer cuando falla, va lento o no te deja subir archivos',
     'navTitle' => 'ChatGPT no funciona',
-    'seoTitle' => 'ChatGPT no funciona: causas y cómo solucionarlo',
-    'description' => 'Cómo saber si ChatGPT está caído o el fallo es tuyo, y qué hacer si va lento, no responde, no te deja entrar, subir archivos o crear imágenes.',
+    // Las búsquedas son preguntas («porque chat gpt no me funciona»): puesto 9-10 a 17-11-2026.
+    'seoTitle' => '¿Por qué ChatGPT no funciona? Causas y solución',
+    'description' => 'Cómo saber si ChatGPT está caído o el fallo es tuyo, qué significa «algunas herramientas no están disponibles» y qué hacer si va lento o no sube archivos.',
     'excerpt' => 'Antes de borrar la caché o reinstalar la aplicación, comprueba una cosa: si el fallo es de OpenAI o es tuyo. Cada caso tiene su arreglo, y casi todos llevan menos de dos minutos.',
     'category' => 'Herramientas',
     'published' => '2026-11-03',
-    'updated' => '2026-11-03',
-    'readingMinutes' => 10,
-    'words' => 1675,
+    'updated' => '2026-11-17',
+    'readingMinutes' => 12,
+    'words' => 1954,
     'about' => 'Fallos habituales de ChatGPT y cómo resolverlos',
     'related' => ['como-usar-chatgpt', 'vale-la-pena-pagar-chatgpt-plus', 'ventana-de-contexto-conversaciones-largas', 'gemini-no-genera-imagenes', 'cual-es-la-mejor-ia', 'herramientas-de-ia-gratis'],
     'toc' => [
         'caido' => 'Primero: ¿está caído o es tu cuenta?',
         'no-responde' => 'No responde o da error al generar',
+        'herramientas' => '«Algunas herramientas no están disponibles»',
         'lento' => 'Va lento o tarda mucho en responder',
         'sesion' => 'No te deja iniciar sesión',
         'archivos' => 'No te deja subir archivos o fotos',
@@ -24,6 +26,7 @@ return [
     ],
     'faq' => [
         '¿Cómo sé si ChatGPT está caído hoy?' => 'Mira la página de estado oficial de OpenAI, status.openai.com, que indica si hay una incidencia abierta y qué funciones afecta. Si ahí todo aparece en verde pero mucha gente se queja a la vez en redes o en webs de avisos de caídas, puede que la incidencia aún no se haya publicado. Si el estado es normal y nadie más tiene problemas, el fallo está casi seguro en tu navegador, tu conexión o tu cuenta.',
+        '¿Qué significa «algunas herramientas no están disponibles por el momento» en ChatGPT?' => 'Que fallan las funciones que leen archivos, crean documentos, ejecutan código o transcriben el dictado, aunque el chat de texto siga funcionando. Suele ser una incidencia de OpenAI: mira status.openai.com, prueba en un chat nuevo y, mientras tanto, pega el texto en vez de subir el archivo.',
         '¿Por qué ChatGPT tarda tanto en responder?' => 'Por tres motivos habituales: hay mucha demanda, sobre todo por la tarde en España, que coincide con la mañana en Estados Unidos; la conversación es muy larga y el modelo tiene que releerla entera en cada respuesta; o estás usando un modelo de razonamiento o una investigación en profundidad, que dedican segundos o minutos a pensar antes de escribir. Un chat nuevo con un resumen de lo importante suele ser lo que más acelera.',
         '¿Por qué ChatGPT no me deja subir archivos?' => 'Lo más común es haber llegado al límite de subidas del plan gratuito, que es de pocos archivos al día, o que el archivo supere el tamaño máximo o tenga un formato que no admite. También falla si la conexión se corta durante la subida o si una extensión del navegador bloquea la carga. Prueba con otro navegador o con la aplicación del móvil para descartar lo último.',
         '¿Por qué ChatGPT no genera imágenes?' => 'Normalmente porque has agotado las imágenes del día de tu plan, porque la petición choca con sus normas de uso (personas reales reconocibles, marcas, contenido sexual o violento) o porque el servicio de imágenes tiene una incidencia aunque el chat funcione. Si te contesta con texto en lugar de con una imagen, pídelo de forma explícita: «genera una imagen de…».',
@@ -69,6 +72,19 @@ return [
 </ul>
 
 <p>Si el error sale siempre en la misma conversación y en las demás no, el problema es esa conversación: suele estar demasiado cargada. Abre un chat nuevo y pega lo imprescindible.</p>
+
+<h2 id="herramientas">«Algunas herramientas no están disponibles por el momento»</h2>
+
+<p>Este aviso significa que falla una parte de ChatGPT, no el chat entero: las herramientas que leen los archivos que subes, crean documentos u hojas de cálculo, ejecutan código o transcriben lo que dictas. Por eso puedes seguir escribiendo y recibiendo respuestas de texto, pero no te deja subir un PDF, generar un archivo o usar el dictado.</p>
+
+<p>Casi siempre es un fallo de OpenAI, no de tu cuenta. Pasó, por ejemplo, el 14 de septiembre de 2026, cuando estas funciones dejaron de responder en todo el mundo durante horas mientras el chat de texto seguía funcionando. OpenAI no tiene una página de ayuda específica para este mensaje, así que lo práctico es:</p>
+
+<ul>
+    <li><strong>Mirar status.openai.com.</strong> Si hay una incidencia abierta con archivos, herramientas o el modo de trabajo, toca esperar: no se arregla desde tu lado.</li>
+    <li><strong>Abrir un chat nuevo.</strong> A veces el aviso se queda pegado a una conversación aunque el servicio ya funcione.</li>
+    <li><strong>Pegar el texto en lugar de subir el archivo.</strong> Si necesitas trabajar ya, copia el contenido del documento en el mensaje: el chat de texto no depende de esas herramientas.</li>
+    <li><strong>Avisar a OpenAI si dura más de un día.</strong> Desde el menú de ayuda de ChatGPT, indicando la hora y qué intentabas hacer.</li>
+</ul>
 
 <h2 id="lento">Va lento o tarda mucho en responder</h2>
 

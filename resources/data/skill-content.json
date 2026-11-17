@@ -9,7 +9,7 @@
         ],
         "faq": [
             {
-                "q": "¿Puede ChatGPT mejorar la calidad de una foto?",
+                "q": "¿Puede ChatGPT mejorar la calidad de una imagen?",
                 "a": "Sí, aunque no «desenfoca al revés»: genera una imagen nueva muy parecida a la original, más nítida y sin ruido. Con fotos algo borrosas, pixeladas o comprimidas el resultado suele ser bueno. Si la foto está muy borrosa, los detalles finos son una reconstrucción y pueden no coincidir con la realidad, así que no sirve para leer matrículas ni documentos."
             },
             {
@@ -23,6 +23,10 @@
             {
                 "q": "¿Por qué ChatGPT me cambia la cara al mejorar la foto?",
                 "a": "Porque vuelve a dibujar la imagen entera. Para evitarlo hay que decirle de forma expresa que no cambie rasgos, expresión ni proporciones, como hace el prompt de esta página. Si aun así la cambia, pídele que vuelva al original y priorice la fidelidad sobre la nitidez, o prueba con Gemini."
+            },
+            {
+                "q": "¿Cómo le digo a ChatGPT que deje una foto con aspecto profesional?",
+                "a": "Dile qué significa «profesional» para esa foto: luz suave y uniforme, buen contraste, colores naturales y fondo limpio o desenfocado. Añade siempre que no cambie la cara ni la composición, porque al pedir «más profesional» suele retocar los rasgos. Si es un retrato, pega también el bloque del prompt para que Gemini no cambie la cara."
             },
             {
                 "q": "¿Sirve el mismo prompt en Gemini?",

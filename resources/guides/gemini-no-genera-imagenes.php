@@ -3,7 +3,8 @@
 return [
     'title' => 'Gemini no genera imágenes o no edita tus fotos: causas y soluciones',
     'navTitle' => 'Gemini no genera imágenes',
-    'seoTitle' => 'Gemini no genera imágenes: causas y soluciones',
+    // Se busca como pregunta («porque gemini no me genera imagenes»), puesto 7-11 a 17-11-2026.
+    'seoTitle' => '¿Por qué Gemini no me genera imágenes? Soluciones',
     'description' => 'Por qué Gemini no crea imágenes, no edita tus fotos o te cambia la cara, y qué hacer en cada caso: límites del plan, cuenta, normas y cómo pedirlo.',
     'excerpt' => 'Gemini contesta con texto, dice que no puede ayudarte con eso o te devuelve a otra persona en lugar de tu foto. Son tres problemas distintos, y cada uno tiene su arreglo.',
     'category' => 'Herramientas',

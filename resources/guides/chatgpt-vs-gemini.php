@@ -3,8 +3,10 @@
 return [
     'title' => 'ChatGPT o Gemini: cuál elegir según lo que vayas a hacer',
     'navTitle' => 'ChatGPT o Gemini',
-    'seoTitle' => 'ChatGPT vs Gemini en 2026: cuál es mejor y para qué',
-    'description' => 'ChatGPT o Gemini: diferencias en textos, búsqueda, documentos, imágenes, plan gratis y precio (unos 23 € frente a 22 €), y cómo decidir en una semana.',
+    // Las búsquedas piden un veredicto («que ia es mejor chatgpt o gemini»):
+    // 1.041 impresiones y 0 clics en el puesto 8-11 a 17-11-2026.
+    'seoTitle' => '¿Qué es mejor, ChatGPT o Gemini? Respuesta por tarea',
+    'description' => 'Gemini, si vives en Gmail y Drive o trabajas con documentos largos; ChatGPT, para redactar, hablar por voz y crear GPTs. Comparativa por tarea y precio.',
     'excerpt' => 'Los dos cuestan lo mismo y responden a un nivel parecido. La diferencia está en lo que los rodea: tu correo, tus documentos y las herramientas que ya usas. Así se decide sin perder el tiempo.',
     'category' => 'Herramientas',
     'published' => '2026-10-02',

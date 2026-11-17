@@ -3,7 +3,9 @@
 return [
     'title' => 'Qué es un skill en IA, para qué sirve y en qué se diferencia de un prompt',
     'navTitle' => 'Qué es un skill de IA',
-    'seoTitle' => 'Qué es un skill en IA y su diferencia con un prompt',
+    // «que es un skill/una skill en ia»: 2.427 impresiones y 17 clics en el
+    // puesto 8 a 17-11-2026. Pregunta tal cual se busca.
+    'seoTitle' => '¿Qué es una skill en IA? Diferencia con un prompt',
     'description' => 'Una skill de IA son instrucciones guardadas que el asistente aplica solo cuando reconoce la tarea. Qué es, diferencia con un prompt, ejemplos y cómo empezar.',
     'excerpt' => 'Un prompt lo pegas tú cada vez. Un skill lo aplica el asistente por su cuenta cuando reconoce la tarea. Qué es exactamente, en qué se diferencia de un GPT, un agente o un servidor MCP, y cómo empezar.',
     'category' => 'Fundamentos',

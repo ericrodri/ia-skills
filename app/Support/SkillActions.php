@@ -20,6 +20,10 @@ class SkillActions
     public const ACTIONS = [
         'copiar' => 'Copiar el prompt',
         'copiar_mano' => 'Copiar el prompt a mano (seleccionar y Ctrl+C)',
+        // Desde el 2026-11-17 «Copiar» manda solo el prompt (utils/promptParts.js);
+        // estos dos copian lo demás.
+        'copiar_en' => 'Copiar la versión en inglés',
+        'copiar_todo' => 'Copiar todo el texto (con notas y consejos)',
         // Qué se copia a mano (Skills/Show.vue, manualCopyPart). Para saber si
         // la gente copia a mano porque solo quiere un bloque del prompt.
         'mano_todo' => 'Copia a mano: el prompt entero',
