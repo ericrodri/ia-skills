@@ -686,10 +686,10 @@ function submitComment() {
 
                     <SkillPackOffer v-if="showPackOffer && packOffer" :offer="packOffer" @close="closePackOffer" />
 
-                    <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
-
                     <!-- Siguiente paso: la mayoría llega desde Google a una ficha y se va
-                         tras usarla. Aquí, sin bajar, las fichas de la misma tarea y la guía. -->
+                         tras usarla. Justo debajo del prompt (antes iba tras el pack y los
+                         afiliados y no tuvo ni un clic el 16 y el 17-11), las fichas de la
+                         misma tarea y la guía. -->
                     <section v-if="nextStep.skills.length || nextStep.guide" class="mt-6 rounded-xl border border-gray-100 dark:border-gray-800 p-4">
                         <h2 class="text-sm font-semibold text-gray-900 dark:text-gray-100">Siguiente paso</h2>
                         <ul v-if="nextStep.skills.length" class="mt-3 space-y-2">
@@ -709,6 +709,8 @@ function submitComment() {
                             <span class="block text-sm font-medium text-gray-800 dark:text-gray-200">{{ nextStep.guide.title }}</span>
                         </a>
                     </section>
+
+                    <AffiliateBox :tools="affiliateTools" :disclosure="affiliateDisclosure" />
 
                     <!-- Preguntas frecuentes (mismo texto que el FAQPage del servidor) -->
                     <section v-if="extra?.faq?.length" class="mt-8" aria-labelledby="faq-title">
