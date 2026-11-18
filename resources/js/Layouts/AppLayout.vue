@@ -12,6 +12,12 @@ const showMobileNav = ref(false)
 // que añadir un enlace aquí lo añade también en las guías.
 const primaryNav = computed(() => page.props.nav?.primary ?? [])
 
+// Con sesión, «Guardadas» ya está en el menú del avatar: quitarla de la barra
+// deja sitio a «Admin» y «Compartir skill» sin que nada se parta en dos líneas.
+const desktopNav = computed(() => auth.value?.user
+    ? primaryNav.value.filter((item) => item.route !== 'skills.saved')
+    : primaryNav.value)
+
 // Alta en el resumen semanal sin cuenta (NewsletterController::subscribe).
 // Los usuarios registrados se suscriben desde su perfil.
 const newsletter = useForm({ email: '', website: '', source: 'footer' })
@@ -39,12 +45,12 @@ function logout() {
         <!-- Nav -->
         <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-200">
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-                <div class="flex items-center gap-8">
-                    <Link :href="route('home')" class="flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <div class="flex items-center gap-6">
+                    <Link :href="route('home')" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
                     </Link>
-                    <div class="hidden lg:flex items-center gap-1">
+                    <div class="hidden xl:flex items-center gap-1">
                         <!--
                             Los enlaces salen de SiteData::primaryNav(). Los que no
                             son páginas Inertia (las guías) usan <a>: con <Link>,
@@ -52,22 +58,23 @@ function logout() {
                             una respuesta suya.
                         -->
                         <component
-                            v-for="item in primaryNav"
+                            v-for="item in desktopNav"
                             :key="item.route"
                             :is="item.inertia ? Link : 'a'"
                             :href="item.href"
-                            class="px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+                            class="whitespace-nowrap px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
                         >
                             {{ item.label }}
                         </component>
                     </div>
                 </div>
 
-                <div class="flex items-center gap-3">
-                    <!-- Menú móvil: por debajo de md el nav principal está oculto -->
+                <div class="shrink-0 whitespace-nowrap flex items-center gap-3">
+                    <!-- Menú móvil: por debajo de xl el nav principal está oculto
+                         (con sesión iniciada no cabe entero en 1024-1279 px). -->
                     <button
                         @click="showMobileNav = !showMobileNav"
-                        class="lg:hidden p-1.5 -ml-1 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                        class="xl:hidden p-1.5 -ml-1 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                         :aria-expanded="showMobileNav"
                         aria-controls="mobile-nav"
                         aria-label="Menú de navegación"
@@ -161,7 +168,7 @@ function logout() {
             <div
                 v-if="showMobileNav"
                 id="mobile-nav"
-                class="lg:hidden border-t border-gray-100 dark:border-gray-800 px-4 sm:px-6 py-2"
+                class="xl:hidden border-t border-gray-100 dark:border-gray-800 px-4 sm:px-6 py-2"
             >
                 <component
                     v-for="item in primaryNav"

@@ -28,19 +28,21 @@
     <div class="min-h-screen flex flex-col">
         <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-                <div class="flex items-center gap-8">
-                    <a href="{{ route('home') }}" class="flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
+                <div class="flex items-center gap-6">
+                    <a href="{{ route('home') }}" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
                     </a>
                     {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
                          fuente que alimenta AppLayout.vue. No los dupliques aquí. --}}
-                    <div class="hidden lg:flex items-center gap-1">
+                    {{-- Con sesión, «Guardadas» ya está en el menú del avatar (igual que en AppLayout.vue). --}}
+                    <div class="hidden xl:flex items-center gap-1">
                         @foreach($primaryNav as $item)
+                            @continue(auth()->check() && $item['route'] === 'skills.saved')
                             <a
                                 href="{{ $item['href'] }}"
                                 @class([
-                                    'px-3 py-1.5 text-sm rounded-lg transition-colors',
+                                    'whitespace-nowrap px-3 py-1.5 text-sm rounded-lg transition-colors',
                                     'font-semibold text-brand-700 dark:text-brand-400' => request()->routeIs($item['active']),
                                     'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
                                 ])
@@ -52,10 +54,10 @@
                 {{-- Misma cabecera que AppLayout.vue (sesión, admin, avatar). Estas
                      páginas no se cachean por usuario: si algún día se cachea su
                      HTML, esta parte tiene que salir de la caché. --}}
-                <div class="flex items-center gap-3">
+                <div class="shrink-0 whitespace-nowrap flex items-center gap-3">
                     {{-- Menú móvil con <details>: estas páginas no cargan Vue, así que
                          el desplegable tiene que funcionar sin JavaScript. --}}
-                    <details class="lg:hidden relative" data-close-outside>
+                    <details class="xl:hidden relative" data-close-outside>
                         <summary
                             class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                             aria-label="Menú de navegación"
