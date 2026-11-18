@@ -3,12 +3,12 @@
 return [
     'title' => '¿Vale la pena pagar ChatGPT Plus? Gratis, Plus, Gemini o Claude de pago',
     'navTitle' => '¿Vale la pena pagar ChatGPT Plus?',
-    'seoTitle' => '¿Vale la pena pagar ChatGPT Plus? Precio y opciones',
-    'description' => 'ChatGPT Plus cuesta unos 23 € al mes y Go, unos 8 €. Qué ganas frente al plan gratis, cuándo compensa y cómo se compara con Gemini y Claude de pago.',
+    'seoTitle' => '¿Vale la pena pagar ChatGPT Plus? 23 € en España',
+    'description' => 'ChatGPT Plus cuesta 23 € al mes en España y Go, 8 €. Qué ganas frente al plan gratis, cuándo compensa pagar y cómo se compara con Gemini y Claude.',
     'excerpt' => 'Unos 23 euros al mes no son mucho si te ahorran horas, y son demasiado si usas la IA dos veces por semana. Qué incluye cada plan, cuándo basta con el barato y cómo decidir con números en lugar de con la publicidad.',
     'category' => 'Herramientas',
     'published' => '2026-10-04',
-    'updated' => '2026-11-01',
+    'updated' => '2026-11-18',
     'readingMinutes' => 7,
     'words' => 1211,
     'about' => 'Planes de pago de asistentes de inteligencia artificial: ChatGPT Plus, Gemini y Claude',
@@ -24,7 +24,7 @@ return [
         'decidir' => 'Cómo decidir en un mes',
     ],
     'faq' => [
-        '¿Cuánto cuesta ChatGPT Plus en España?' => 'Unos 23 euros al mes (22,99 € en la página de planes de OpenAI en otoño de 2026). Los precios cambian y pueden variar por país, así que confirma la cifra antes de suscribirte.',
+        '¿Cuánto cuesta ChatGPT Plus en España?' => '23 euros al mes con IVA incluido (22,99 € si lo contratas desde la app del móvil), según los precios de noviembre de 2026. Los precios cambian y pueden variar por país, así que confirma la cifra antes de suscribirte.',
         '¿Qué es ChatGPT Go y cuánto cuesta?' => 'Es el plan de pago barato de OpenAI, de unos 8 euros al mes en España. Da bastante más margen que el plan gratuito con el modelo principal, las imágenes y la subida de archivos, pero no incluye todo lo de Plus, como los modelos de razonamiento más avanzados o las funciones de agente con el mismo margen.',
         '¿Qué diferencia hay entre ChatGPT gratis y Plus?' => 'Con Plus tienes límites de uso mucho más altos, acceso preferente a los modelos más capaces y a los de razonamiento, más generación de imágenes, investigación a fondo (Deep Research), modo de voz avanzado y funciones de agente con más margen. El plan gratuito usa modelos parecidos pero con cupos que se agotan rápido si lo usas a diario.',
         '¿Es mejor pagar ChatGPT Plus o Gemini?' => 'Depende de dónde trabajas. Si usas Gmail y Google Drive, el plan de pago de Google suele compensar más porque incluye almacenamiento y la IA dentro de tus documentos. Si tu trabajo es más variado o usas otras herramientas, ChatGPT Plus es más versátil.',
@@ -34,6 +34,8 @@ return [
     'ctaTitle' => 'Saca más partido a lo que pagas',
     'ctaBody' => 'Una suscripción solo compensa si la usas bien. En el <a href="/skills">catálogo de skills</a> tienes instrucciones listas para tu trabajo, organizadas por <a href="/profesiones">profesión</a>.',
     'body' => <<<'HTML'
+<p><strong>Respuesta corta:</strong> ChatGPT Plus cuesta 23 € al mes en España (IVA incluido) y vale la pena si usas la IA a diario para trabajar y te quedas sin cupo en el plan gratis varias veces por semana. Si la usas de vez en cuando, basta con el gratuito, y si solo se te queda corto a ratos, con ChatGPT Go, de 8 € al mes.</p>
+
 <p>La versión gratuita de ChatGPT es tan buena que mucha gente se pregunta si tiene sentido pagar. La respuesta depende menos de lo que hace Plus y más de cuánto usas la IA y para qué. Esta guía te explica qué cambia al pagar, cuándo basta con el plan barato, en qué casos compensa Plus y cómo compararlo con las suscripciones de Gemini y Claude, que cuestan más o menos lo mismo.</p>
 
 <h2 id="precios">Cuánto cuesta cada plan</h2>
