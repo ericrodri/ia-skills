@@ -130,6 +130,7 @@ return [
     <li><a href="/skills/prompt-para-hacer-una-caricatura-a-partir-de-una-foto-con-chatgpt">Caricatura a partir de una foto</a>.</li>
     <li><a href="/skills/prompt-para-convertir-tu-foto-en-un-retrato-de-los-anos-80-con-ia">Retrato de los años 80</a>, con peinado, ropa y fondo de época.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-ilustracion-de-animacion-japonesa-clasica-dibujada-a-mano">Ilustración de animación japonesa clásica</a>.</li>
+    <li><a href="/skills/prompt-estilo-gta-6-convierte-tu-foto-con-chatgpt-o-gemini">Tu foto al estilo de la portada de GTA 6</a>: ilustración con contornos marcados, atardecer de Florida y neón.</li>
     <li><a href="/skills/prompt-para-convertir-una-foto-en-dibujo-a-lapiz-o-acuarela-con-ia">Dibujo a lápiz o acuarela</a>.</li>
     <li><a href="/skills/prompt-para-hacer-un-retrato-de-tu-mascota-como-un-cuadro-clasico">Retrato de tu mascota como un cuadro clásico</a>, o una <a href="/skills/prompt-para-hacer-una-foto-de-tu-perro-o-tu-gato-con-ia-sesion-de-estudio-disfraz-o-escena">foto de tu perro o tu gato</a> de estudio, disfrazado o en una escena.</li>
     <li><a href="/skills/prompt-para-hacer-un-retrato-profesional-en-blanco-y-negro-con-ia-a-partir-de-tu-foto">Retrato profesional en blanco y negro</a>, con luz y fondo de estudio.</li>
