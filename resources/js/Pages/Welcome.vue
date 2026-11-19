@@ -113,6 +113,9 @@ const shareRoute = computed(() => auth?.user ? route('skills.create') : route('r
             <h2 class="text-2xl font-bold text-gray-900 dark:text-white">¿Qué es una skill de IA?</h2>
             <p v-for="(paragraph, i) in whatIsASkill" :key="i" class="mt-4 text-gray-600 dark:text-gray-400 leading-relaxed">{{ paragraph }}</p>
             <p class="mt-4 text-sm">
+                <!-- La guía es la página que responde a «qué es una skill en IA»; la home solo resume. -->
+                <a href="/guias/que-es-un-skill-de-ia" class="text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Qué es una skill de IA y en qué se diferencia de un prompt →</a>
+                <span class="mx-2 text-gray-300 dark:text-gray-600">·</span>
                 <a href="/guias/que-son-los-skills-de-claude-code" class="text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Qué son los skills de Claude Code →</a>
                 <span class="mx-2 text-gray-300 dark:text-gray-600">·</span>
                 <a href="/guias/prompts-de-ia-por-profesion" class="text-brand-600 dark:text-brand-500 hover:text-brand-700 dark:hover:text-brand-400 font-medium">Prompts de IA por profesión →</a>

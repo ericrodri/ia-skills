@@ -18,8 +18,11 @@ class HomeController extends Controller
 {
     /**
      * Bloque «¿Qué es una skill de IA?»: responde a la intención informativa
-     * de «skill ia» sin crear una página aparte que compita con la home. Se
-     * pasa como prop para que el texto visible y el del fallback sean el mismo.
+     * de «skill ia» con un resumen corto. La explicación completa es la guía
+     * que-es-un-skill-de-ia, y el bloque la enlaza: en noviembre de 2026 la
+     * home y la guía se repartían las búsquedas «qué es una skill en IA» (la
+     * guía en el puesto 8 con 1.400 impresiones al mes). Se pasa como prop
+     * para que el texto visible y el del fallback sean el mismo.
      */
     private const WHAT_IS_A_SKILL = [
         'Una skill de IA es un procedimiento reutilizable que le explica a un asistente como Claude, ChatGPT o Gemini cómo hacer una tarea concreta de tu trabajo: qué contexto necesita, qué pasos seguir y qué formato debe tener el resultado. Un prompt resuelve una petición; una skill convierte esa petición en un método que puedes repetir cada semana con el mismo nivel de calidad.',
@@ -74,6 +77,7 @@ class HomeController extends Controller
                         $skill->title => route('skills.show', ['skill' => $skill->slug]),
                     ])
                 )->merge([
+                    'Qué es una skill de IA y en qué se diferencia de un prompt' => route('guides.show', ['slug' => 'que-es-un-skill-de-ia']),
                     'Qué son los skills de Claude Code' => route('guides.show', ['slug' => 'que-son-los-skills-de-claude-code']),
                     'Prompts de IA por profesión' => route('guides.show', ['slug' => 'prompts-de-ia-por-profesion']),
                 ])->all(),

@@ -54,7 +54,7 @@ return [
     <li><strong>Photoshop y Lightroom</strong>: tienen funciones de «Súper resolución» y de mejora de detalle y ruido. Lo más controlado si ya los usas.</li>
     <li><strong>Topaz Photo AI</strong> y programas parecidos: de pago, especializados en ruido, desenfoque y ampliación, con muy buenos resultados en fotos difíciles.</li>
     <li><strong>Webs de aumento de resolución</strong> (Canva, Adobe Express y muchas otras): cómodas para un caso suelto, con límites en la versión gratis. Revisa qué hacen con tus imágenes antes de subir fotos de personas.</li>
-    <li><strong>Un asistente de chat</strong>: útil cuando lo que quieres es una imagen bonita inspirada en la tuya, no la tuya ampliada.</li>
+    <li><strong>Un asistente de chat</strong>: útil cuando lo que quieres es una imagen bonita inspirada en la tuya, no la tuya ampliada. Si vas a hacerlo con ChatGPT, usa el <a href="/skills/como-pedirle-a-chatgpt-que-mejore-la-calidad-de-una-imagen-y-la-amplie-a-alta-resolucion">prompt para pedirle a ChatGPT que mejore la calidad de una imagen</a>, que le dice qué puede tocar y qué no.</li>
 </ul>
 
 <h2 id="paso-a-paso">Paso a paso</h2>
