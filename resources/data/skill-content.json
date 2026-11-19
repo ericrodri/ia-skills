@@ -677,5 +677,41 @@
                 "a": "Puedes hacerlo con la versión gratuita de ChatGPT o de Claude, aunque los límites de archivos y de mensajes son menores. Canva y WhatsApp Business también tienen versión gratuita."
             }
         ]
+    },
+    "prompt-estilo-gta-6-convierte-tu-foto-con-chatgpt-o-gemini": {
+        "answer": "Sube tu foto a ChatGPT o a Gemini y pega un prompt que describa el estilo con palabras (contornos negros marcados, sombras de cómic, atardecer de Florida, neón y viñetas) en lugar de escribir el nombre del juego. Así la herramienta no se niega, no mete logotipos y te sigue reconociendo.",
+        "steps": [
+            "Elige una foto en la que se te vea bien la cara, con buena luz y sin filtros.",
+            "Abre ChatGPT o Gemini, sube la foto y pega el prompt de abajo.",
+            "Rellena los corchetes: la composición (retrato, viñetas o de cuerpo entero), la ambientación, la pose, la ropa y el formato.",
+            "Si no te pareces o parece una foto con filtro, usa las frases de «Si no sale bien» en el mismo chat.",
+            "Añade el título o tu nombre después con Canva u otra aplicación: la IA escribe mal las letras."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo se hace una foto al estilo GTA 6 con ChatGPT?",
+                "a": "Sube tu foto, pega el prompt de esta ficha y rellena la ambientación y la pose. ChatGPT genera la imagen en el mismo chat; si no te pareces, pídele que copie la cara exactamente de la foto original."
+            },
+            {
+                "q": "¿Funciona también con Gemini?",
+                "a": "Sí, el mismo prompt sirve en Gemini. Suele respetar mejor la cara al editar una foto, mientras que ChatGPT suele dar un acabado más de ilustración. Si una no te convence, prueba con la otra."
+            },
+            {
+                "q": "¿Por qué el prompt no nombra el juego?",
+                "a": "Porque al escribir el nombre la herramienta a veces se niega o copia logotipos y personajes. Describir el estilo con palabras da mejor resultado y la imagen no imita ninguna portada concreta."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerla con la versión gratuita de ChatGPT o de Gemini, pero las dos tienen un límite de imágenes al día. Si se te acaba, espera al día siguiente o prueba en la otra."
+            },
+            {
+                "q": "¿Puedo hacerla con mi pareja o con mis amigos?",
+                "a": "Sí: sube una foto de cada persona y usa las variantes «En pareja» o «Con amigos». Funciona mejor con dos a cuatro personas; con más, la IA empieza a mezclar caras."
+            },
+            {
+                "q": "¿Puedo usar la imagen para mi negocio?",
+                "a": "Para tu foto de perfil o tus historias, sí. Para vender productos o hacer publicidad no: el juego y su estilo son de Rockstar Games y la imagen no debe parecer oficial."
+            }
+        ]
     }
 }
