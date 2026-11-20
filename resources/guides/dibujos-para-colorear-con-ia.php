@@ -52,6 +52,8 @@ return [
 
 <p>Las palabras clave son <strong>contorno</strong>, <strong>línea negra</strong>, <strong>fondo blanco</strong> y <strong>sin sombreado</strong>. «Formas cerradas» evita que queden huecos por donde «se escapa» el color, algo que importa mucho si luego se pinta en una tableta con el bote de pintura.</p>
 
+<p>El <a href="/skills/prompt-para-hacer-dibujos-para-colorear-con-ia-y-listos-para-a4">prompt para hacer dibujos para colorear listos para A4</a> recoge todo esto con huecos para el tema, la edad y el número de láminas, y sirve también a partir de una foto.</p>
+
 <h2 id="por-edades">La dificultad según la edad</h2>
 
 <p>El mismo tema sirve para cualquier edad si cambias el grosor de la línea y el tamaño de las zonas:</p>

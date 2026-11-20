@@ -54,6 +54,8 @@ return [
 
 <p>Lo de empezar por un recuerdo marca la diferencia: «¿Te acuerdas de la noche que nos quedamos sin gasolina en Teruel?» engancha mucho más que «Desde que te conocí mi vida cambió».</p>
 
+<p>Tienes una versión más completa, con variantes para aniversario, reconciliación o distancia, en el <a href="/skills/prompt-para-escribir-una-carta-de-amor-con-ia-sin-cursilerias">prompt para escribir una carta de amor sin cursilerías</a>.</p>
+
 <p>Si quieres que suene más a ti, pégale un par de mensajes tuyos reales (sin datos de otras personas) y pide: «imita mi forma de escribir de estos ejemplos». Las técnicas para que el asistente entienda bien lo que quieres están en <a href="/guias/como-escribir-prompts-efectivos">cómo escribir peticiones efectivas</a>.</p>
 
 <h2 id="tipos">Según la ocasión</h2>

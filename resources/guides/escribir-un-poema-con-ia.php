@@ -75,6 +75,8 @@ return [
 
 <p>Pide después dos o tres versiones con un enfoque distinto, por ejemplo una centrada solo en el huerto, y quédate con los mejores versos de cada una. Escribir es elegir, y esa parte es tuya.</p>
 
+<p>Si prefieres no montar la petición desde cero, el <a href="/skills/prompt-para-un-poema-de-amor-o-personalizado-con-chatgpt">prompt para un poema de amor o personalizado</a> te pide los detalles, la forma y las palabras prohibidas, y sirve para aniversarios, hijos o despedidas.</p>
+
 <h2 id="corregir">Corregir los vicios del modelo</h2>
 
 <p>El primer borrador casi nunca es el bueno. Algunas instrucciones de corrección que funcionan:</p>

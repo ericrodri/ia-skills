@@ -87,6 +87,8 @@ return [
 
 <p>Pide movimientos pequeños y lentos, sobre todo con caras. Si el primer intento no convence, cambia una sola cosa de la instrucción cada vez; así sabes qué ha mejorado el resultado.</p>
 
+<p>Para algo sutil, como un retrato que parpadea, tienes el <a href="/skills/prompt-para-animar-una-foto-con-ia-y-darle-movimiento-sutil">prompt para animar una foto con movimiento sutil</a>. Si quieres más acción, con movimientos de cámara, sonido o diálogo, usa el <a href="/skills/prompt-para-convertir-una-foto-en-video-con-gemini-veo-o-grok">prompt para convertir una foto en vídeo</a>.</p>
+
 <h2 id="errores">Los fallos típicos y cómo evitarlos</h2>
 
 <ul>

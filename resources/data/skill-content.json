@@ -1197,5 +1197,593 @@
                 "a": "Sí: pega el código o una captura y pide que señale todo lo que la hace parecer genérica, ordenado de lo que más se nota a lo que menos, con cómo cambiar cada cosa sin rehacerla entera."
             }
         ]
+    },
+    "prompt-para-hacer-un-flyer-o-volante-para-tu-negocio-con-chatgpt": {
+        "answer": "Pega en ChatGPT un prompt con el texto exacto de tu flyer (titular, oferta y contacto, entre comillas y cortos), el estilo y el formato: A5 para imprimir o 4:5 para WhatsApp. Revisa letra a letra teléfonos, precios y fechas, y si vas a imprimir, monta el diseño final en Canva a la medida que pida la imprenta.",
+        "steps": [
+            "Escribe los textos del flyer: un titular de no más de seis palabras, la oferta o el precio, el contacto y las condiciones.",
+            "Abre ChatGPT, sube tu logotipo o la foto de tu producto si quieres que salgan y pega el prompt de abajo.",
+            "Rellena los corchetes: tipo de negocio, objetivo, estilo, colores y formato (A5 para imprimir o 4:5 para WhatsApp).",
+            "Revisa el texto letra a letra y corrige con las frases de «Si no sale bien»; si una errata no se va, pide la versión sin texto.",
+            "Para imprimir, pasa el diseño a Canva, ajusta el texto y exporta un PDF a la medida y con el sangrado que te pida la imprenta."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago un flyer para mi negocio con ChatGPT?",
+                "a": "Pega el prompt de esta ficha con tu titular, tu oferta y tus datos de contacto escritos entre comillas, y elige el estilo y el formato. ChatGPT genera el flyer en el mismo chat; después revisa el texto y pide los cambios con frases concretas."
+            },
+            {
+                "q": "¿Qué medida tiene un flyer A5 para imprimir?",
+                "a": "Un A5 mide 148 x 210 mm. A 300 ppp son 1.748 x 2.480 píxeles, o 1.819 x 2.551 con 3 mm de sangrado por cada lado. Confirma con tu imprenta el sangrado que pide, porque alguna pide más."
+            },
+            {
+                "q": "¿Puedo imprimir directamente la imagen que me da la IA?",
+                "a": "Normalmente no conviene: suele tener menos píxeles de los necesarios y no lleva sangrado. Ábrela en Canva o en otro editor, ponla a la medida exacta, revisa el texto y exporta un PDF para la imprenta."
+            },
+            {
+                "q": "¿Por qué salen faltas en el texto del flyer?",
+                "a": "Porque los generadores de imágenes dibujan las letras en lugar de escribirlas. Usa textos cortos, entrecomíllalos y pide que los copie letra a letra. Si aun así fallan, genera el diseño sin texto y añádelo tú en Canva."
+            },
+            {
+                "q": "¿Qué formato uso para mandarlo por WhatsApp?",
+                "a": "Uno vertical 4:5 se ve bien en el chat y en Instagram; para el estado de WhatsApp, 9:16. Puedes pedir a la IA que adapte el mismo flyer sin cambiar el texto."
+            },
+            {
+                "q": "¿Qué tiene que poner obligatoriamente si anuncio precios?",
+                "a": "Si te diriges a particulares, el precio final con los impuestos incluidos, y conviene dejar claras las condiciones de la oferta, como las fechas. Ante cualquier duda sobre tu caso, consulta a tu gestoría o a la oficina de consumo."
+            }
+        ]
+    },
+    "prompt-para-hacer-el-banner-de-linkedin-o-youtube-a-su-medida": {
+        "answer": "La portada de un perfil de LinkedIn mide 1.584 x 396 píxeles y el banner de YouTube, 2.560 x 1.440, aunque en YouTube solo se ve en todos los aparatos un rectángulo central de 1.546 x 423. Pide a ChatGPT o a Gemini un fondo continuo con el texto en la zona segura y ajusta la medida exacta después en Canva.",
+        "steps": [
+            "Decide la frase de la portada: corta, de no más de seis palabras, y si quieres una segunda línea.",
+            "Abre ChatGPT o Gemini, sube tu logotipo o tu foto si quieres que salgan y pega el prompt de abajo.",
+            "Rellena los corchetes: plataforma, a qué te dedicas, fondo, colores y estilo.",
+            "Revisa el texto y su posición: en LinkedIn, lejos de la esquina de abajo a la izquierda; en YouTube, en la franja central.",
+            "Abre la imagen en Canva, recórtala a 1.584 x 396 o a 2.560 x 1.440, súbela y compruébala en el móvil y en el ordenador."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué medida tiene el banner de LinkedIn?",
+                "a": "LinkedIn recomienda 1.584 x 396 píxeles (proporción 4:1) para la portada de un perfil personal. La de una página de empresa tiene otra medida, que ha cambiado hace poco: compruébala en la ayuda de LinkedIn."
+            },
+            {
+                "q": "¿Qué medida tiene el banner de YouTube?",
+                "a": "2.560 x 1.440 píxeles (16:9), con un mínimo de 2.048 x 1.152 y un máximo de 6 MB. Lo que se ve en todos los aparatos es un rectángulo central de 1.546 x 423 píxeles: ahí deben ir el texto y el logotipo."
+            },
+            {
+                "q": "¿Qué es la zona segura de una portada?",
+                "a": "Es la parte de la imagen que no se recorta ni queda tapada en ningún aparato. En YouTube es la franja central; en LinkedIn hay que evitar la esquina de abajo a la izquierda, donde va la foto de perfil, y los lados, que el móvil recorta."
+            },
+            {
+                "q": "¿Por qué la foto de perfil tapa el texto de mi portada de LinkedIn?",
+                "a": "Porque la foto se superpone a la parte de abajo a la izquierda de la portada. Pide a la IA que deje esa zona vacía y ponga el texto en la mitad derecha."
+            },
+            {
+                "q": "¿ChatGPT puede hacerla con la medida exacta?",
+                "a": "Rara vez. Lo normal es que entregue una imagen 16:9 o parecida. Pide un fondo continuo hasta los bordes para poder recortarla sin problemas y ajusta la medida en Canva, que tiene plantillas para cada portada."
+            },
+            {
+                "q": "¿Puedo usar la misma imagen para LinkedIn y YouTube?",
+                "a": "Con el mismo estilo, sí, pero no con el mismo recorte: una es 4:1 y la otra 16:9 con una zona segura muy estrecha. Pide las dos imágenes a juego y adapta cada una."
+            }
+        ]
+    },
+    "prompt-para-hacer-dibujos-para-colorear-con-ia-y-listos-para-a4": {
+        "answer": "Pide a ChatGPT o a Gemini un dibujo de solo contornos negros sobre fondo blanco, sin grises ni sombras, con líneas cerradas y en formato vertical A4, y ajusta el grosor de línea y el detalle a la edad de quien lo vaya a colorear. Si partes de una foto, pide que la convierta en dibujo de contorno, no en una foto en blanco y negro.",
+        "steps": [
+            "Decide el tema o elige la foto que quieres convertir en dibujo (tuya, de tu mascota o de un sitio).",
+            "Abre ChatGPT o Gemini, sube la foto si la usas y pega el prompt de abajo.",
+            "Rellena los corchetes: qué dibujar, para qué edad, si lleva marco y si quieres un título corto.",
+            "Si sale con grises, zonas negras o demasiado detalle, corrígelo con las frases de «Si no sale bien».",
+            "Descarga la imagen e imprímela en A4 con la opción «Ajustar a la página»."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago dibujos para colorear con ChatGPT?",
+                "a": "Pega el prompt de esta ficha, di qué quieres dibujar y para qué edad. La clave es pedir solo contornos negros sobre blanco, sin grises ni sombras, con líneas cerradas y en formato A4."
+            },
+            {
+                "q": "¿Puedo convertir una foto en un dibujo para colorear?",
+                "a": "Sí: sube la foto y pide que la convierta en un dibujo de contorno limpio con el fondo simplificado. Funciona bien con mascotas, casas y paisajes; con personas, que sean tú o alguien que te haya dado permiso."
+            },
+            {
+                "q": "¿Se pueden imprimir en A4 con buena calidad?",
+                "a": "Para colorear en casa, sí. Un A4 a 300 ppp necesita 2.480 x 3.508 píxeles y la IA suele dar menos, así que las líneas muy finas pueden verse algo borrosas. Para niños, las líneas gruesas lo disimulan."
+            },
+            {
+                "q": "¿Puedo pedir dibujos de personajes de dibujos animados?",
+                "a": "No es buena idea: la herramienta puede negarse y esos personajes tienen dueño. Describe un personaje parecido con tus palabras, por ejemplo «un dinosaurio verde con gorra»."
+            },
+            {
+                "q": "¿Sirve para hacer dibujos para colorear para adultos?",
+                "a": "Sí: elige el público adulto y pide líneas finas, muchos detalles y patrones de flores o mandalas. Conviene pedir que no haya zonas rellenas de negro."
+            },
+            {
+                "q": "¿Puedo hacer un cuaderno entero con el mismo personaje?",
+                "a": "Sí, pidiendo las láminas de una en una en el mismo chat y repitiendo que mantenga el personaje y el grosor de línea. Si el personaje empieza a cambiar, vuelve a subir la primera lámina como referencia."
+            }
+        ]
+    },
+    "prompt-para-ver-a-tu-perro-o-tu-gato-como-si-fuera-humano-con-ia": {
+        "answer": "Sube a Gemini o a ChatGPT una foto nítida de tu mascota y pide que la imagine como persona traduciendo sus rasgos: el color del pelaje al pelo, la misma mirada, las manchas a la ropa y el carácter a la expresión y la postura. Queda más gracioso si pides a los dos sentados juntos con la misma pose.",
+        "steps": [
+            "Elige una foto de tu perro o tu gato en la que se le vea bien la cara, con buena luz.",
+            "Abre Gemini o ChatGPT, sube la foto y pega el prompt de abajo.",
+            "Rellena los corchetes: nombre, raza, color, rasgos llamativos, carácter, edad aparente y escena.",
+            "Genera varias versiones: cada vez sale una persona distinta.",
+            "Si no recuerda a tu mascota o le pone orejas de animal, usa las frases de «Si no sale bien»."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo veo a mi perro como si fuera humano?",
+                "a": "Sube su foto a Gemini o a ChatGPT y pega el prompt de esta ficha. Pide que traduzca sus rasgos a una persona: el color de su pelaje al pelo, su mirada, sus manchas a la ropa y su carácter a la expresión."
+            },
+            {
+                "q": "¿Funciona también con gatos?",
+                "a": "Sí, igual que con perros. Con gatos funcionan muy bien los ojos, el color del pelo y la actitud: un gato señorial y algo estirado da personas muy reconocibles."
+            },
+            {
+                "q": "¿Es mejor Gemini o ChatGPT para esto?",
+                "a": "Gemini suele respetar mejor al animal cuando sale en la misma imagen que su versión humana; ChatGPT a veces da escenas más graciosas. Si una no te convence, prueba la otra con el mismo prompt."
+            },
+            {
+                "q": "¿Por qué le pone orejas de perro a la persona?",
+                "a": "Porque mezcla los dos conceptos. Pide expresamente una persona normal, sin orejas, hocico ni rasgos de disfraz, y que el parecido venga del pelo, la mirada y la ropa."
+            },
+            {
+                "q": "¿Puedo salir yo junto a mi mascota humana?",
+                "a": "Sí: sube también una foto tuya y usa la variante «Con su dueño», pidiendo que no te cambie la cara, la edad ni la complexión."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de Gemini o de ChatGPT, aunque las dos tienen un límite de imágenes al día."
+            }
+        ]
+    },
+    "prompt-para-convertir-una-foto-o-un-logo-en-un-bordado-con-ia": {
+        "answer": "Sube tu foto, tu logotipo o un dibujo a ChatGPT o a Gemini y pide que lo convierta en un bordado realista, indicando el tipo (punto de cruz, a máquina o a mano), la tela y la presentación. Pide también que simplifique la imagen a pocos colores planos: así parece bordado de verdad. Es una simulación: no sirve como archivo para una bordadora.",
+        "steps": [
+            "Elige la imagen: un logotipo, una foto de tu mascota, un dibujo o un nombre corto.",
+            "Abre ChatGPT o Gemini, súbela y pega el prompt de abajo.",
+            "Rellena los corchetes: tipo de bordado, tela, presentación, número de colores y formato.",
+            "Si parece un filtro o ha cambiado el logotipo, corrígelo con las frases de «Si no sale bien».",
+            "Si quieres bordarlo de verdad, lleva la imagen a un taller o a un servicio de digitalización para que hagan el archivo de puntadas."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago el efecto bordado en una foto con IA?",
+                "a": "Sube la foto a ChatGPT o a Gemini, pega el prompt de esta ficha y elige el tipo de bordado y la tela. Lo que más ayuda es pedir que simplifique la imagen a pocos colores planos y que se vean las puntadas con brillo y relieve."
+            },
+            {
+                "q": "¿Puedo usar la imagen en mi bordadora?",
+                "a": "No directamente. Las bordadoras usan archivos de puntadas, como PES o DST según la marca, y un PNG hay que digitalizarlo antes con un programa específico o con un servicio de digitalización."
+            },
+            {
+                "q": "¿La IA puede hacerme un esquema de punto de cruz?",
+                "a": "No uno fiable: la cuadrícula que dibuja no se puede contar. Lo que sí puedes pedir es una versión plana con pocos colores y pasarla a un programa de esquemas de punto de cruz."
+            },
+            {
+                "q": "¿Sirve para ver mi logo bordado en una prenda?",
+                "a": "Sí: usa la variante de la maqueta de producto y pide el logotipo bordado en una gorra, un polo o una bolsa. Es útil para enseñar la idea al taller, aunque el resultado real dependerá de la tela y del tamaño."
+            },
+            {
+                "q": "¿Por qué cambia las letras de mi logotipo?",
+                "a": "Porque la IA redibuja el texto y se equivoca. Pide que copie las letras exactamente de tu imagen; si aun así fallan, revisa la imagen y corrige el texto después con un editor."
+            },
+            {
+                "q": "¿Qué tipo de bordado queda mejor con una foto?",
+                "a": "Con fotos de personas o mascotas suele quedar mejor el bordado a mano o a máquina con pocos colores. El punto de cruz queda bien con dibujos sencillos, letras y logotipos."
+            }
+        ]
+    },
+    "prompt-para-renovar-la-fachada-de-tu-casa-a-partir-de-una-foto": {
+        "answer": "Sube a Gemini una foto de tu fachada hecha de frente y de día, y pide que la renueve cambiando solo colores, materiales, ventanas y jardín, sin tocar la forma de la casa ni el punto de vista. Así puedes comparar ideas antes de gastar dinero, pero recuerda que pintar o cambiar la fachada suele necesitar permiso del ayuntamiento y, en edificios con vecinos, de la comunidad.",
+        "steps": [
+            "Haz una foto de la fachada de frente, de día y con luz uniforme, y tapa a las personas y las matrículas que salgan.",
+            "Abre Gemini, sube la foto y pega el prompt de abajo.",
+            "Rellena los corchetes: tipo de casa, estilo, pared, zócalo, ventanas, puerta, jardín, clima y presupuesto.",
+            "Compara varias propuestas con las variantes de presupuestos, colores o antes y después.",
+            "Antes de encargar nada, pide muestras de color y pregunta en tu ayuntamiento qué permiso necesitas."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo veo mi fachada con otro color antes de pintarla?",
+                "a": "Sube una foto de frente a Gemini o a ChatGPT y pide que cambie solo el color de la pared, sin tocar la forma de la casa ni el punto de vista. Con la variante «Comparar colores» ves varias opciones a la vez."
+            },
+            {
+                "q": "¿Necesito licencia para pintar la fachada de mi casa?",
+                "a": "Depende de tu municipio: en muchos basta una comunicación previa y en otros se pide licencia de obra menor. En cascos históricos y edificios catalogados las normas son más estrictas, y algunos municipios tienen carta de colores. Pregunta en tu ayuntamiento."
+            },
+            {
+                "q": "¿Y si vivo en un piso o en un adosado con comunidad?",
+                "a": "La fachada es un elemento común, así que cambiar su color o su aspecto necesita el acuerdo de la comunidad de propietarios, además del permiso municipal que corresponda."
+            },
+            {
+                "q": "¿Es fiable el color que sale en la imagen?",
+                "a": "No: es orientativo. Lo que ves en pantalla cambia con la luz y el móvil. Pide muestras al pintor o en la tienda y pruébalas en un trozo de pared, a distintas horas."
+            },
+            {
+                "q": "¿Por qué la IA cambia las ventanas o el tejado?",
+                "a": "Porque tiende a rehacer la casa entera. Pide expresamente que mantenga la misma forma, las mismas ventanas y el mismo tejado, y que cambie solo acabados, colores y jardín."
+            },
+            {
+                "q": "¿Puede decirme cuánto costará la reforma?",
+                "a": "No con fiabilidad: no conoce las medidas ni los precios de tu zona. Úsala para decidir la idea y pide después presupuesto a varios profesionales con la imagen como referencia."
+            }
+        ]
+    },
+    "prompt-para-escribir-un-relato-de-terror-corto-con-giro-final": {
+        "answer": "Dale a ChatGPT un lugar concreto, el público, cuánto tiene que durar contada en voz alta y una lista de tópicos prohibidos, y pídele un giro final preparado con pistas desde el principio. Así sale una historia que da miedo por lo que pasa y no por los adjetivos. El prompt de abajo marca además dónde hacer pausas para contarla.",
+        "steps": [
+            "Elige dónde la vas a contar y para quién: no es lo mismo una acampada con adolescentes que un vídeo de un minuto.",
+            "Abre ChatGPT, pega el prompt y rellena los corchetes: lugar, tipo de miedo, intensidad y narrador.",
+            "Comprueba en la lista final que las pistas del giro están en la historia; si el giro se ve venir, pide tres alternativas.",
+            "Usa las frases de «Si no sale bien» para quitar tópicos o recortarla.",
+            "Léela en voz alta una vez, respeta las marcas de pausa y cambia lo que no te salga natural."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una historia de terror corta que dé miedo de verdad?",
+                "a": "Parte de algo cotidiano y concreto que deja de encajar, sube la tensión con señales pequeñas y no expliques lo que pasa. El miedo sale de lo que el oyente imagina, no de palabras como «aterrador»."
+            },
+            {
+                "q": "¿Qué es un buen giro final?",
+                "a": "Uno que cambia el sentido de lo que has contado y que estaba preparado: al recordar la historia, las pistas estaban ahí. Los finales tipo «era un sueño» o «estaba muerto desde el principio» sin pistas previas decepcionan."
+            },
+            {
+                "q": "¿Sirve para hacer historias de terror para TikTok?",
+                "a": "Sí: usa la variante para TikTok, que la divide en partes de menos de un minuto con un gancho al final de cada una y con lo que se ve en pantalla entre corchetes."
+            },
+            {
+                "q": "¿Puedo pedir una historia de miedo para niños?",
+                "a": "Sí. Elige la intensidad «suave, para niños» o la variante para niños, que evita muertes y sangre y acaba bien. Léela antes tú, porque cada niño se asusta con cosas distintas."
+            },
+            {
+                "q": "¿Puedo usar una leyenda real de mi pueblo?",
+                "a": "Sí, cuéntasela en la variante de leyenda y pídele que cambie el final. Evita nombres de vecinos reales y sucesos con víctimas reales."
+            }
+        ]
+    },
+    "prompt-para-un-poema-de-amor-o-personalizado-con-chatgpt": {
+        "answer": "Cuéntale a ChatGPT para quién es, la ocasión y al menos tres recuerdos o detalles reales, elige si lo quieres con rima o en verso libre y prohíbele los tópicos de tarjeta. Con eso el poema suena a quien lo regala. El prompt de abajo te da dos versiones y te dice qué ha añadido la IA.",
+        "steps": [
+            "Apunta tres recuerdos o detalles que solo conozcáis vosotros: un sitio, una frase, una costumbre.",
+            "Abre ChatGPT, pega el prompt y rellena los corchetes: persona, ocasión, formato, rima, largo y tono.",
+            "Elige una de las dos versiones y comprueba en la lista de debajo que no se ha inventado recuerdos.",
+            "Si suena cursi o la rima chirría, usa las frases de «Si no sale bien» en el mismo chat.",
+            "Léelo en voz alta, cambia lo que tú no dirías y pásalo a mano o a la tarjeta."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago un poema de amor original con IA?",
+                "a": "Dale recuerdos concretos de los dos y prohíbele las frases de siempre («eres mi todo», «media naranja», estrellas y lunas). Lo que hace original un poema es lo que solo sabéis vosotros, no las palabras bonitas."
+            },
+            {
+                "q": "¿Mejor con rima o sin rima?",
+                "a": "Si no tienes claro, verso libre o rima asonante. La rima consonante obligatoria hace que la IA fuerce palabras raras o cambie el sentido para que cuadre."
+            },
+            {
+                "q": "¿Puede hacer un soneto o un poema con métrica?",
+                "a": "Puede intentarlo con la variante del soneto, pero cuenta mal las sílabas. Pídele que te avise de los versos dudosos y compruébalos tú, teniendo en cuenta las sinalefas."
+            },
+            {
+                "q": "¿Sirve para un poema para un hijo o una hija?",
+                "a": "Sí. Elige «mi hijo o mi hija» y la ocasión (nacimiento, cumpleaños, graduación). La regla de que lo entienda también de mayor evita los poemas que solo funcionan el día en que se regalan."
+            },
+            {
+                "q": "¿Y para una despedida o un funeral?",
+                "a": "Sí, con tono sereno y un recuerdo alegre, sin consuelos hechos. Léelo antes a alguien de confianza y ten en cuenta que leerlo en voz alta ese día cuesta más de lo que parece."
+            }
+        ]
+    },
+    "prompt-para-escribir-una-carta-de-amor-con-ia-sin-cursilerias": {
+        "answer": "Dale a ChatGPT tus recuerdos concretos, vuestras palabras y un plan para los próximos días, pídele que empiece por un recuerdo y prohíbele las frases de película. La carta sale con tu voz y sin cursilerías. El prompt de abajo sirve para aniversarios, reconciliaciones y relaciones a distancia.",
+        "steps": [
+            "Apunta en sucio tres recuerdos concretos, vuestros apodos o bromas y algo que queráis hacer pronto.",
+            "Pega el prompt en ChatGPT, rellena los corchetes y completa solo el bloque que te toque: reconciliación o distancia.",
+            "Revisa la lista de detalles añadidos y quita lo que no haya pasado.",
+            "Cambia tú las tres frases que la IA marca como las más artificiales.",
+            "Pásala a mano si puedes y léela en voz alta antes de darla."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo empiezo una carta de amor?",
+                "a": "Con un recuerdo concreto: un día, un sitio, algo que dijo. Empezar con «eres lo más importante de mi vida» suena a plantilla; empezar con «¿te acuerdas de cuando perdimos el último tren?» suena a vosotros."
+            },
+            {
+                "q": "¿Qué pongo en una carta para reconciliarme?",
+                "a": "Qué pasó en tus palabras, de qué te haces cargo y qué vas a hacer distinto en concreto. Sin «pero» después de la disculpa, sin culpar y sin presionar para que te responda."
+            },
+            {
+                "q": "¿Y si es una relación a distancia?",
+                "a": "Describe con detalle lo que echas de menos y termina con cuándo os vais a ver o qué haréis juntos. Un plan concreto pesa más que diez frases sobre la añoranza."
+            },
+            {
+                "q": "¿Se nota que la ha escrito una IA?",
+                "a": "Si está llena de frases grandilocuentes y no tiene ningún detalle vuestro, sí. Con tus recuerdos, tus palabras y un repaso final con tus expresiones, en lo que importa la carta es tuya."
+            },
+            {
+                "q": "¿Qué largo debe tener una carta de amor?",
+                "a": "La que puedas llenar con cosas verdaderas. Media página bien escrita funciona mejor que dos caras de relleno; si dudas, pide la versión corta."
+            }
+        ]
+    },
+    "prompt-para-el-marco-teorico-de-tu-tfg-tfm-o-tesis-con-apa-7": {
+        "answer": "Pega en Claude tu pregunta de investigación, tus objetivos y las fuentes que ya has leído, y pídele un esqueleto del marco teórico: conceptos clave, enfoques, índice, huecos y las citas en APA 7. La regla clave es que trabaje solo con tus fuentes y marque con [COMPLETAR] lo que falte. La redacción final la haces tú.",
+        "steps": [
+            "Revisa la normativa de tu universidad sobre el uso de IA y coméntalo con tu tutor.",
+            "Reúne la pregunta, los objetivos y tus fuentes: referencias completas con tus notas o fragmentos con página, o los PDF.",
+            "Pega el prompt en Claude, rellena los corchetes y añade tus fuentes al final.",
+            "Comprueba cada atribución en el original, busca las fuentes que faltan en los [COMPLETAR] y corrige los [FALTA] de las referencias.",
+            "Escribe tú el marco teórico siguiendo el esqueleto y pide después una revisión con la variante «Revisar tu borrador»."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué lleva un marco teórico?",
+                "a": "Los conceptos clave definidos según autores, los enfoques o teorías que explican tu tema, cómo se relacionan entre sí y por qué sostienen tu pregunta de investigación. No es una lista de resúmenes, sino un argumento ordenado de lo general a tu caso."
+            },
+            {
+                "q": "¿Qué diferencia hay entre marco teórico y estado de la cuestión?",
+                "a": "El estado de la cuestión resume qué se ha investigado sobre el tema y qué falta; el marco teórico fija los conceptos y teorías desde los que miras tu problema. Muchas guías los piden juntos: sigue la estructura de tu facultad."
+            },
+            {
+                "q": "¿Puedo usar ChatGPT o Claude para el marco teórico del TFG?",
+                "a": "Depende de tu universidad: muchas lo permiten para ordenar y revisar si lo declaras, y prohíben presentar texto generado como propio. Lee su normativa y pregunta a tu tutor antes de empezar."
+            },
+            {
+                "q": "¿Cómo evito que la IA invente referencias?",
+                "a": "Dale tú las fuentes, prohíbele añadir otras y pídele que indique de qué página sale cada idea. Aun así, comprueba cada cita en el original y en Google Académico o el catálogo de la biblioteca."
+            },
+            {
+                "q": "¿Cómo se cita en APA 7 con tres o más autores?",
+                "a": "Con el apellido del primer autor y «et al.» desde la primera cita, por ejemplo (García et al., 2021). En la lista de referencias se ponen los autores completos, hasta veinte."
+            },
+            {
+                "q": "¿Cuánto debe ocupar el marco teórico?",
+                "a": "Lo marca la guía de tu titulación. Como orientación, en un TFG suele ser una parte importante pero no la mayor del trabajo; pregunta a tu tutor la extensión que espera."
+            }
+        ]
+    },
+    "prompt-para-un-articulo-cientifico-imryd-resumen-y-carta": {
+        "answer": "Dale a Claude tus métodos, tus tablas de resultados, tus referencias y las normas de la revista, y pídele el esqueleto IMRyD, una revisión de coherencia, el resumen y la carta al editor, con la prohibición expresa de inventar datos o referencias. La IA ordena y revisa; los datos, las conclusiones y la responsabilidad son tuyos. Antes, lee la política de la revista sobre el uso de IA.",
+        "steps": [
+            "Descarga las instrucciones para autores de la revista y lee su política sobre IA.",
+            "Reúne objetivo, métodos, tablas de resultados con sus valores y las referencias que vas a citar.",
+            "Pega el prompt en Claude, rellena los corchetes y pega tu material.",
+            "Revisa el esqueleto y la lista de incoherencias, completa los [COMPLETAR] y comprueba cada cifra con tus datos originales.",
+            "Escribe o ajusta tú el manuscrito, y adapta el resumen y la carta al editor a las normas de la revista."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es la estructura IMRyD?",
+                "a": "Las siglas de Introducción, Métodos, Resultados y Discusión, el orden habitual de los artículos originales: por qué se hizo el estudio, cómo se hizo, qué se encontró y qué significa. Cada revista puede añadir apartados, como conclusiones o limitaciones."
+            },
+            {
+                "q": "¿Puedo usar ChatGPT o Claude para escribir un artículo científico?",
+                "a": "Muchas revistas lo permiten para tareas como ordenar o corregir el idioma si se declara, pero ninguna admite la IA como autora y los autores responden de todo el contenido. Lee la política de tu revista antes de usarla."
+            },
+            {
+                "q": "¿Dónde se declara el uso de IA?",
+                "a": "Depende de la revista: en la carta de presentación, en métodos o en agradecimientos, o en una declaración aparte. Las recomendaciones del ICMJE piden describirlo en la carta y en el manuscrito cuando proceda."
+            },
+            {
+                "q": "¿Qué pongo en la carta al editor?",
+                "a": "Qué envías, qué aporta y por qué encaja en la revista, que es original y no está en evaluación en otra, conflictos de interés, financiación y uso de IA. Breve y sin elogios: el editor quiere decidir rápido si lo manda a revisión."
+            },
+            {
+                "q": "¿Puede revisar mi resumen para que cumpla el límite de palabras?",
+                "a": "Sí, pídele que lo ajuste a la estructura y al límite de la revista copiando las cifras de tus resultados. Después compara cada número con tus tablas: es donde más se cuelan errores."
+            }
+        ]
+    },
+    "prompt-para-una-planeacion-didactica-o-sesion-de-aprendizaje": {
+        "answer": "Copia del currículo oficial de tu país los elementos que vas a trabajar (PDA en México, competencias y desempeños en Perú, DBA en Colombia, OA en Chile, NAP en Argentina), pégalos en ChatGPT con el prompt y pide la planeación con inicio, desarrollo, cierre y evaluación. Si no le das el texto oficial, la IA inventa competencias que parecen reales.",
+        "steps": [
+            "Abre el programa o currículo oficial de tu país y copia los elementos de tu grado y área; ten a mano la plantilla de tu escuela si la hay.",
+            "Pega el prompt en ChatGPT y rellena país, nivel, área, tema, duración, grupo y recursos.",
+            "Pega debajo los elementos curriculares y, si la tienes, la plantilla.",
+            "Comprueba que los elementos coinciden palabra por palabra con el documento oficial y que los tiempos suman la duración.",
+            "Pide lo que te falte: lista de cotejo, rúbrica, fichas de trabajo o la versión multigrado."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una planeación didáctica de la Nueva Escuela Mexicana con IA?",
+                "a": "Copia de tu programa sintético o analítico el campo formativo, el contenido, los PDA y los ejes articuladores, pégalos con el prompt y elige «planeación didáctica» y la metodología que te pidan. Revisa que todo coincida con tu programa analítico."
+            },
+            {
+                "q": "¿Qué partes tiene una sesión de aprendizaje en Perú?",
+                "a": "En los materiales del Minedu suelen aparecer el propósito, las competencias, capacidades y desempeños, los criterios de evaluación, la evidencia y la secuencia de inicio, desarrollo y cierre. El formato exacto lo marca tu institución o tu UGEL."
+            },
+            {
+                "q": "¿Sirve para Colombia, Chile, Argentina o Ecuador?",
+                "a": "Sí, porque no depende de que la IA se sepa el currículo: pegas tú los elementos oficiales (DBA y estándares, OA, NAP o el documento vigente en tu país) y le pides tu vocabulario escolar."
+            },
+            {
+                "q": "¿Por qué no basta con pedirle «hazme una planeación»?",
+                "a": "Porque la IA rellena con competencias y códigos que suenan oficiales y no lo son. Si la revisa un directivo o un supervisor, se nota enseguida."
+            },
+            {
+                "q": "¿Puedo usarla en una escuela multigrado?",
+                "a": "Sí, describe el grupo como multigrado y usa la variante correspondiente: una misma situación con actividades distintas para cada grado."
+            },
+            {
+                "q": "¿Y si trabajo en España?",
+                "a": "Usa la ficha de situación de aprendizaje LOMLOE, pensada para los decretos de cada comunidad autónoma."
+            }
+        ]
+    },
+    "prompt-para-hacer-un-triptico-o-folleto-de-tu-negocio-con-chatgpt": {
+        "answer": "Pide a ChatGPT el texto de cada cara del tríptico por separado (portada, solapa, contraportada y las tres caras interiores) con tus datos reales, y móntalo después en una plantilla de tríptico de Canva o en el programa que use tu imprenta. Un tríptico es un A4 apaisado doblado en tres, con 3 mm de sangrado y nada importante junto a los pliegues.",
+        "steps": [
+            "Reúne los datos reales: servicios o programa, precios, contacto, dirección, horario y el enlace del código QR.",
+            "Pega el prompt en ChatGPT, rellena los corchetes y elige uno de los tres titulares que te propone para la portada.",
+            "Abre una plantilla de tríptico en Canva (A4 apaisado) y coloca cada texto en su cara siguiendo el orden que te da la IA.",
+            "Activa el sangrado, revisa teléfonos, fechas y faltas, y prueba el código QR con el móvil.",
+            "Imprime una copia en casa, dóblala para comprobar el orden y descarga el PDF para impresión para la imprenta."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué medidas tiene un tríptico?",
+                "a": "Lo habitual es un A4 apaisado (297 x 210 mm) doblado en tres cuerpos de unos 99 mm. En el plegado envolvente, la solapa que se dobla hacia dentro se hace 2 o 3 mm más estrecha para que cierre sin abombarse."
+            },
+            {
+                "q": "¿En qué orden van las caras de un tríptico?",
+                "a": "En la cara exterior, de izquierda a derecha: la solapa que se ve al abrir la portada, la contraportada y la portada. En la cara interior van las tres partes que se leen al abrirlo del todo."
+            },
+            {
+                "q": "¿Puede la IA hacer el tríptico entero como imagen?",
+                "a": "No conviene. Los generadores de imágenes escriben mal los textos largos y el resultado no tiene la resolución ni el sangrado que pide una imprenta. Usa la IA para el texto y monta el diseño en Canva."
+            },
+            {
+                "q": "¿Qué es el sangrado y por qué lo piden en la imprenta?",
+                "a": "Es un margen extra de 3 mm alrededor del diseño que se corta al final. Si el fondo o una foto llegan al borde, el sangrado evita que quede una línea blanca por un corte imperfecto."
+            },
+            {
+                "q": "¿Qué diferencia hay entre un tríptico y un díptico?",
+                "a": "El díptico es una hoja doblada por la mitad (cuatro caras) y el tríptico, una hoja doblada en tres (seis caras). El díptico sirve para poco contenido; el tríptico, para servicios, programas o precios."
+            }
+        ]
+    },
+    "prompt-para-un-carrusel-de-instagram-que-se-lea-hasta-el-final": {
+        "answer": "Un carrusel que se lee hasta el final tiene una portada con un gancho concreto, una sola idea por diapositiva con poco texto, un resumen que invita a guardarlo y una única llamada a la acción al final. Pide a ChatGPT el texto con esa estructura y móntalo en Canva a 1080 x 1350 píxeles, la medida 4:5 recomendada para Instagram.",
+        "steps": [
+            "Pega el prompt en ChatGPT y rellena el tema, el público, la idea principal y tu material o ejemplo real.",
+            "Elige uno de los tres ganchos de portada y pide que recorte las diapositivas que tengan más de 25 palabras.",
+            "Crea en Canva un diseño de 1080 x 1350 píxeles con tantas páginas como diapositivas y la misma plantilla en todas.",
+            "Descarga las páginas en PNG y súbelas juntas en una sola publicación de Instagram, en orden.",
+            "Pega el texto de la publicación con la primera línea que funcione sola y añade el texto alternativo de cada diapositiva."
+        ],
+        "faq": [
+            {
+                "q": "¿Cuántas diapositivas puede tener un carrusel de Instagram?",
+                "a": "Hasta 20 fotos o vídeos por publicación. Para que se lea hasta el final suelen funcionar mejor entre 6 y 10 diapositivas."
+            },
+            {
+                "q": "¿Qué tamaño tiene que tener un carrusel de Instagram?",
+                "a": "La medida recomendada es 1080 x 1350 píxeles (proporción 4:5). Instagram muestra todas las diapositivas con la misma proporción que la primera, así que usa la misma medida en todas."
+            },
+            {
+                "q": "¿Puedo usar el formato 3:4 en un carrusel?",
+                "a": "La aplicación de Instagram admite 3:4 (1080 x 1440), pero muchas herramientas de programación solo aceptan hasta 4:5. Si programas tus publicaciones, quédate con 4:5."
+            },
+            {
+                "q": "¿Qué poner en la primera diapositiva?",
+                "a": "Un gancho de menos de 10 palabras que prometa algo concreto que el carrusel cumple: un número de pasos, un error frecuente o una pregunta que tu público se hace. Si promete y no cumple, la gente no vuelve."
+            },
+            {
+                "q": "¿Puede la IA diseñar las diapositivas directamente?",
+                "a": "Puede darte ideas de diseño, pero si le pides las imágenes con el texto dentro suele cambiar letras y variar el estilo entre diapositivas. Es más fiable usar la IA para el texto y montar el diseño en Canva."
+            }
+        ]
+    },
+    "prompt-para-crear-una-habilidad-en-gemini-antes-llamada-gem": {
+        "answer": "En las cuentas personales, los Gems de Gemini se han sustituido por habilidades: desde el 17 de noviembre de 2026 no se pueden crear Gems nuevos y los que había desaparecen el 17 de diciembre. Una habilidad se crea en la barra lateral, en Personalizar > Habilidades > Crear, o pidiéndole a Gemini en un chat «Crea una habilidad a partir de estas instrucciones», y se usa escribiendo «/» y su nombre.",
+        "steps": [
+            "Pega el prompt en Gemini, rellena la tarea, el formato, el tono y los límites, y contesta a sus preguntas.",
+            "Revisa el nombre, la descripción y las instrucciones que te propone, y ajusta lo que no encaje.",
+            "Escribe «Crea una habilidad a partir de estas instrucciones» o ve a Personalizar > Habilidades > Crear > Crear manualmente y pega los tres campos.",
+            "Añade los archivos de referencia (PDF, .docx, .xlsx, imágenes) sin pasar de 100 MB en total.",
+            "Pruébala con las tres peticiones de prueba escribiendo «/» y el nombre de la habilidad en un chat nuevo."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué ha pasado con los Gems de Gemini?",
+                "a": "En las cuentas personales se han convertido en habilidades. Desde el 17 de noviembre de 2026 los Gems son de solo lectura y el 17 de diciembre de 2026 desaparecen; Google los convierte en habilidades automáticamente, con sus archivos compatibles."
+            },
+            {
+                "q": "¿Las habilidades de Gemini son gratis?",
+                "a": "Sí: están disponibles para mayores de 18 años con cuenta personal de Google, sin plan de pago. El despliegue es gradual, así que algunas cuentas tardan en verlas."
+            },
+            {
+                "q": "¿Puedo crear una habilidad desde el móvil?",
+                "a": "Sí, las habilidades funcionan en la aplicación móvil de Gemini, en la de Mac y en gemini.google.com. Compartirlas con otras personas, en cambio, solo se puede hacer desde la web."
+            },
+            {
+                "q": "¿Qué archivos puedo añadir a una habilidad?",
+                "a": "PDF, Word (.docx), texto, Markdown, hojas de cálculo (.csv, .xlsx), presentaciones (.pptx), imágenes y algunos formatos de código y datos, hasta 100 MB en total. No se admiten los formatos antiguos de Office (.doc, .xls, .ppt), el audio, el vídeo ni los archivos comprimidos."
+            },
+            {
+                "q": "¿Cómo uso una habilidad en una conversación?",
+                "a": "Escribe «/» y elige la habilidad. Gemini también puede usarla por su cuenta cuando la petición encaja con su descripción; si no quieres que lo haga, desactívala desde la página de habilidades."
+            },
+            {
+                "q": "Tengo Gemini en una cuenta de empresa, ¿sigo teniendo Gems?",
+                "a": "Sí, por ahora. En las cuentas de empresa y organizaciones sin ánimo de lucro de Google Workspace la transición está prevista para marzo de 2027, y en las de centros educativos para junio de 2027."
+            }
+        ]
+    },
+    "prompt-para-convertir-una-foto-en-video-con-gemini-veo-o-grok": {
+        "answer": "Sube la foto como imagen de partida y describe solo lo que pasa: una acción principal, un único movimiento de cámara, el sonido (ambiente, efectos y, si quieres, una frase de diálogo) y lo que no debe cambiar. En la aplicación de Gemini se hace desde Crear vídeo, con un plan de Google AI; en Flow puedes usar Veo 3.1 con 50 créditos gratis al día, y en Grok desde la pestaña Imagine con una suscripción de pago.",
+        "steps": [
+            "Elige una foto nítida, con el sujeto bien visible y la proporción que quieres para el vídeo (vertical para redes).",
+            "Rellena el prompt con una sola acción, un movimiento de cámara, el plano final y el sonido.",
+            "En Gemini, abre Crear vídeo, pulsa Añadir imagen, sube la foto y pega el prompt; en Flow o en Grok Imagine, sube la imagen y pega el mismo texto.",
+            "Revisa el resultado y, si algo se deforma, reduce el movimiento o la longitud del diálogo y vuelve a generar.",
+            "Descarga el clip (en Gemini, Compartir > Descargar vídeo) y, si hace falta, añade música o texto en un editor."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede usar Veo 3 en Gemini para animar una foto?",
+                "a": "En la aplicación de Gemini el modelo de vídeo es ahora Gemini Omni, que sustituye a Veo. Veo 3.1 sigue en Flow, aunque sus versiones Fast y Quality se retiran el 5 de diciembre de 2026 y queda la Lite."
+            },
+            {
+                "q": "¿Cuánto dura un vídeo hecho a partir de una foto?",
+                "a": "En Gemini, de 3 a 10 segundos (hasta 15 con AI Ultra). En Flow, Veo 3.1 Lite hace clips de 4, 6 u 8 segundos. En Grok Imagine son clips cortos, de unos segundos, cuya duración depende de la versión y del plan."
+            },
+            {
+                "q": "¿Se puede hacer gratis?",
+                "a": "En la aplicación de Gemini necesitas un plan de Google AI. Flow da 50 créditos gratis al día, suficientes para unos pocos clips con Veo 3.1 Lite, aunque en horas de mucha demanda puede no generar vídeo sin suscripción. Grok Imagine es de pago desde marzo de 2026."
+            },
+            {
+                "q": "¿Los vídeos tienen sonido?",
+                "a": "Sí, los tres pueden generar sonido con el vídeo: ambiente, efectos y diálogo. Si el audio no te convence, pídelo sin sonido y añádelo al montar."
+            },
+            {
+                "q": "¿Puedo animar la foto de otra persona?",
+                "a": "Solo si tienes derecho a usarla y su permiso. No animes fotos de menores, y si lo publicas, indica que es contenido hecho con IA."
+            },
+            {
+                "q": "¿En qué se diferencia de animar una foto con movimiento sutil?",
+                "a": "El movimiento sutil busca que la foto respire (un parpadeo, el pelo, el agua). Este prompt es para que ocurra una acción, con cámara, sonido y diálogo, como un plano corto de un anuncio."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-frutinovela-con-ia-guion-y-escenas": {
+        "answer": "Una frutinovela es un vídeo corto en el que frutas u objetos con cara viven un drama de telenovela. Se hace en tres pasos: la IA escribe el reparto, el guion por escenas y los prompts; generas la imagen de cada personaje y la conviertes en clips de pocos segundos con un generador de vídeo, y los montas con música dramática y subtítulos.",
+        "steps": [
+            "Pega el prompt en Gemini o ChatGPT y elige el escenario, el drama y el estilo visual.",
+            "Genera la hoja de referencia de cada personaje con los prompts de imagen y guárdalas.",
+            "Para cada escena, crea la imagen de inicio con los personajes y conviértela en vídeo con su prompt en Gemini, Flow o Grok Imagine.",
+            "Repite las escenas que salgan mal subiendo otra vez la hoja de referencia del personaje.",
+            "Monta los clips en CapCut o Canva con música dramática, subtítulos y un «Continuará…» al final, e indica que es contenido hecho con IA."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es una frutinovela?",
+                "a": "Es un formato de vídeo corto hecho con IA, muy compartido en redes en 2026, en el que frutas o verduras con rasgos humanos protagonizan dramas de telenovela: celos, secretos de familia, bodas interrumpidas y finales en suspense."
+            },
+            {
+                "q": "¿Con qué herramienta se hace una frutinovela?",
+                "a": "Con un generador de imágenes para crear los personajes (Gemini o ChatGPT), un generador de vídeo a partir de imagen para cada escena (Crear vídeo en Gemini, Flow o Grok Imagine) y un editor como CapCut o Canva para unir los clips."
+            },
+            {
+                "q": "¿Se puede hacer gratis?",
+                "a": "La historia y las imágenes, sí. El vídeo es lo que cuesta: Flow da 50 créditos gratis al día, mientras que Crear vídeo en Gemini necesita un plan de Google AI y Grok Imagine es de pago."
+            },
+            {
+                "q": "¿Cómo consigo que los personajes salgan iguales en todas las escenas?",
+                "a": "Crea antes una hoja de referencia de cada personaje y súbela en cada escena, junto con su descripción fija de unas 40 palabras. Aun así, es normal tener que repetir algún clip."
+            },
+            {
+                "q": "¿Cuánto dura cada escena?",
+                "a": "Entre 4 y 10 segundos, según la herramienta. Para un vídeo de 45 segundos necesitas unas seis escenas, cada una con una sola acción y una frase corta."
+            },
+            {
+                "q": "¿Puedo usarla para anunciar mi negocio?",
+                "a": "Sí, y funciona mejor si el producto forma parte de la historia en lugar de interrumpirla con un anuncio. Usa música libre de derechos y avisa de que el vídeo está hecho con IA."
+            }
+        ]
     }
 }

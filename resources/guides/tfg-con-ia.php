@@ -86,6 +86,8 @@ compruebo si mis datos los cumplen.</code></pre>
 <pre><code>Te paso un párrafo de mi marco teórico. No lo reescribas. Señala
 frases ambiguas, repeticiones y afirmaciones que necesitarían una cita.</code></pre>
 
+<p>Para ordenar el marco teórico a partir de tus fuentes, sin que la IA invente autores ni citas, usa el <a href="/skills/prompt-para-el-marco-teorico-de-tu-tfg-tfm-o-tesis-con-apa-7">prompt para el marco teórico de tu TFG, TFM o tesis</a>.</p>
+
 <p>Así el texto sigue sonando a ti. Un trabajo reescrito entero por la IA tiene un estilo muy reconocible, como se explica en <a href="/guias/se-nota-si-un-texto-lo-escribe-una-ia">¿se nota si un texto lo escribe una IA?</a>. Para una pasada de ortografía que no te cambie el estilo, sigue los pasos de <a href="/guias/corregir-ortografia-con-ia">corregir ortografía con IA</a>; y si vas a reformular una fuente, recuerda que <a href="/guias/parafrasear-textos-con-ia">parafrasear no es dejar de citar</a>.</p>
 
 <h2 id="bibliografia">El riesgo número uno: la bibliografía</h2>
