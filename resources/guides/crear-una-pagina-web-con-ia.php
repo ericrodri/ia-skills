@@ -70,6 +70,8 @@ return [
 
 <p>Fíjate en que dice quién, para qué, qué páginas y qué evitar. Es la misma lógica que cualquier buen prompt; tienes más en <a href="/guias/como-escribir-prompts-efectivos">cómo escribir prompts efectivos</a>.</p>
 
+<p>Si vas a hacerla con Claude, ChatGPT o Gemini, usa el <a href="/skills/prompt-para-crear-una-pagina-web-con-ia-que-no-parezca-de-ia">prompt para crear una página web con IA que no parezca de IA</a>: le prohíbe los degradados morados, las tres tarjetas iguales y los textos de relleno, y le pide los textos con tu voz. Si eres diseñador y quieres trabajar la interfaz a fondo, tienes la ficha para <a href="/skills/disenar-interfaces-con-personalidad-que-no-parezcan-hechas-por-ia">diseñar interfaces con personalidad que no parezcan hechas por IA</a>.</p>
+
 <h2 id="seo">Lo que la IA no hace por ti: que Google te encuentre</h2>
 
 <p>Una web bonita sin visitas no sirve. Revisa estos puntos, que los generadores suelen descuidar:</p>

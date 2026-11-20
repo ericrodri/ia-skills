@@ -713,5 +713,489 @@
                 "a": "Para tu foto de perfil o tus historias, sí. Para vender productos o hacer publicidad no: el juego y su estilo son de Rockstar Games y la imagen no debe parecer oficial."
             }
         ]
+    },
+    "prompt-para-probarte-vestidos-de-novia-en-tu-foto-con-gemini": {
+        "answer": "Sube a Gemini una foto tuya de cuerpo entero y pega un prompt que indique el corte, el escote, el tejido y el velo del vestido, o sube también la foto del vestido que te gusta. Pide expresamente que no te cambie la cara ni la complexión para ver cómo queda en tu cuerpo y no en el de una modelo.",
+        "steps": [
+            "Hazte una foto de cuerpo entero, de frente, con buena luz y ropa sencilla o ajustada.",
+            "Abre Gemini, sube la foto (y la del vestido, si tienes una) y pega el prompt de abajo.",
+            "Rellena los corchetes: corte, escote, mangas, tejido, velo, peinado y escena.",
+            "Pide la misma foto con otro corte en el mismo chat para comparar, o usa la variante de la cuadrícula con cuatro cortes.",
+            "Si te cambia la cara o la figura, usa las frases de «Si no sale bien» o empieza un chat nuevo con la foto original."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo me pruebo un vestido de novia con Gemini?",
+                "a": "Sube una foto tuya de cuerpo entero, pega el prompt de esta ficha y elige el corte, el escote y el tejido. Si tienes la foto de un vestido concreto, súbela como segunda imagen y Gemini intentará copiarlo sobre tu cuerpo."
+            },
+            {
+                "q": "¿Puedo subir la foto de un vestido que he visto en una tienda?",
+                "a": "Sí, para decidir tú. Súbela como imagen 2 junto a tu foto. Copiará el corte y el escote bastante bien, pero el encaje y la pedrería los simplifica o los inventa."
+            },
+            {
+                "q": "¿Qué corte de vestido de novia me favorece?",
+                "a": "Usa la variante de la cuadrícula: el mismo vestido en sirena, línea A, princesa y recto sobre tu foto. Verlos juntos con tu cuerpo ayuda más que cualquier regla general, aunque la decisión final se toma en la prueba."
+            },
+            {
+                "q": "¿Por qué la IA me hace más delgada?",
+                "a": "Porque tiende a copiar las fotos de catálogo con las que aprendió. Pídele que mantenga exactamente tu complexión y tus proporciones de la foto original, aunque el resultado quede menos de revista."
+            },
+            {
+                "q": "¿Sirve para saber la talla o cómo me quedará de verdad?",
+                "a": "No. Es una simulación: no conoce tus medidas ni cómo cae cada tejido. Sirve para descartar estilos y llegar a la tienda con las ideas claras."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de Gemini, pero tiene un límite de imágenes al día. Si se te acaba, sigue al día siguiente en el mismo chat."
+            }
+        ]
+    },
+    "prompt-para-un-retrato-de-epoca-con-ia-vikingo-vaquero-anos-20": {
+        "answer": "Sube tu foto a Gemini o a ChatGPT y pega un prompt que diga la época, la ropa propia de entonces, la escena y el estilo de imagen (foto realista, óleo o ferrotipo). Pide que conserve tu cara, tu edad y tu complexión y que la ropa parezca usada, no un disfraz.",
+        "steps": [
+            "Elige una foto en la que se te vea bien la cara, con buena luz y sin filtros.",
+            "Abre Gemini o ChatGPT, sube la foto y pega el prompt de abajo.",
+            "Rellena los corchetes: época, estilo de imagen, escena, pose y formato.",
+            "Si te ha cambiado la cara o parece un disfraz, usa las frases de «Si no sale bien» en el mismo chat.",
+            "Prueba la variante de cuatro épocas en cuadrícula para quedarte con la que más te guste."
+        ],
+        "faq": [
+            {
+                "q": "¿Cuál es el prompt para verme como vikingo con Gemini?",
+                "a": "Sube tu foto, pega el prompt de esta ficha y elige «vikingo o vikinga del siglo IX». El prompt ya describe la túnica de lana, la capa con broche y el escudo de madera, y pide un casco sin cuernos, como eran de verdad."
+            },
+            {
+                "q": "¿Cómo hago una foto de vaquero del Oeste con IA?",
+                "a": "Elige la época del Oeste hacia 1880 y, si quieres que parezca una foto antigua, el estilo «ferrotipo en blanco y negro con bordes gastados». Para un cartel de recompensa, usa la variante y añade el texto después."
+            },
+            {
+                "q": "¿Funciona también con ChatGPT?",
+                "a": "Sí, el mismo prompt sirve en los dos. Gemini suele respetar mejor la cara al editar una foto; ChatGPT a veces da un acabado más de ilustración. Si una no te convence, prueba con la otra."
+            },
+            {
+                "q": "¿Por qué los vikingos de la IA llevan cuernos?",
+                "a": "Porque copia la imagen de las películas y los dibujos. Los cascos vikingos no tenían cuernos: el prompt lo pide así y, si aun así aparecen, la frase de «Si no sale bien» lo corrige."
+            },
+            {
+                "q": "¿Puedo hacerlo en pareja o con amigos?",
+                "a": "Sí: sube una foto de cada persona y usa la variante de pareja o grupo. Funciona mejor con dos a cuatro personas; con más empieza a mezclar caras."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de Gemini o de ChatGPT, pero las dos tienen un límite de imágenes al día."
+            }
+        ]
+    },
+    "prompt-para-verte-como-jugador-de-futbol-en-un-cromo-con-gemini": {
+        "answer": "Sube tu foto a Gemini y pega un prompt que describa un cromo de futbolista con un club, una camiseta y un escudo inventados, tu dorsal, tu posición y el diseño del cromo. No pidas los de un equipo real: la herramienta puede negarse y usarías marcas ajenas.",
+        "steps": [
+            "Elige una foto en la que se te vea bien la cara, mejor de medio cuerpo.",
+            "Abre Gemini, sube la foto y pega el prompt de abajo.",
+            "Rellena los corchetes: nombre del club inventado, camiseta, escudo, dorsal, posición, pose y diseño del cromo.",
+            "Revisa el nombre y las cifras: si salen mal escritas, pide que quite el texto y añádelo con Canva.",
+            "Haz el cromo de tus amigos con la variante del álbum para que todos lleven la misma camiseta."
+        ],
+        "faq": [
+            {
+                "q": "¿Cuál es el prompt para verme como jugador de fútbol en Gemini?",
+                "a": "Sube tu foto, pega el prompt de esta ficha y rellena la camiseta, el dorsal, la posición y la pose. Gemini genera el cromo en el mismo chat y, si no te pareces, le pides que copie la cara de la foto original."
+            },
+            {
+                "q": "¿Puedo ponerme la camiseta de mi equipo?",
+                "a": "No es recomendable: los escudos y las camisetas de los clubes son marcas registradas y la herramienta puede negarse o hacer una copia rara. Inventa un club con los colores que te gusten."
+            },
+            {
+                "q": "¿Puedo hacer el cromo de mi hijo?",
+                "a": "Sí, si eres su padre o su madre o tienes su permiso. Usa la variante para niños y piensa bien dónde lo compartes: mejor en un grupo privado que en un perfil público."
+            },
+            {
+                "q": "¿Sirve para un grupo de amigos o un equipo?",
+                "a": "Sí: sube una foto de cada persona y usa la variante de la página de álbum. Con más de cuatro personas es mejor hacer un cromo por chat para que no mezcle caras."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de Gemini, pero tiene un límite de imágenes al día."
+            }
+        ]
+    },
+    "prompt-para-crear-sprites-en-pixel-art-para-tu-juego-con-chatgpt": {
+        "answer": "Pide a ChatGPT primero el personaje en reposo con un tamaño de fotograma, una paleta limitada y un fondo plano, y después una hoja de sprites por animación, en una sola fila y con los pies siempre a la misma altura. El resultado es un borrador: hay que limpiarlo y ajustarlo a la cuadrícula en un editor de pixel art antes de importarlo en Godot o Unity.",
+        "steps": [
+            "Decide el género, la vista (lateral o cenital) y el tamaño de cada fotograma, por ejemplo 32x32.",
+            "Pega el paso 1 en ChatGPT para diseñar el personaje y guarda la imagen y la paleta que te dé.",
+            "En el mismo chat, pide con el paso 2 una hoja de sprites por animación: reposo, andar, saltar, atacar.",
+            "Limpia cada hoja en Aseprite, LibreSprite o Piskel: cuadrícula exacta, reescalado de vecino más próximo, fondo transparente y pies alineados.",
+            "Importa el PNG en Godot (filtro Nearest y AnimatedSprite2D) o en Unity (Sprite Mode Multiple, Filter Mode Point y Slice por tamaño de celda)."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT hacer una hoja de sprites para mi juego?",
+                "a": "Puede hacer un buen borrador: el personaje y las posturas de cada fotograma. Lo que no garantiza es una cuadrícula exacta ni píxeles del tamaño real, así que hay que retocarla en un editor de pixel art antes de usarla."
+            },
+            {
+                "q": "¿Cómo consigo que el personaje sea igual en todos los fotogramas?",
+                "a": "Diseña primero el personaje solo, pide una animación por petición en el mismo chat y repite los rasgos fijos en cada una. Si abres un chat nuevo, sube la imagen del personaje del paso 1."
+            },
+            {
+                "q": "¿Por qué los sprites se ven borrosos en Godot?",
+                "a": "Porque el filtro de texturas por defecto suaviza los píxeles al escalar. Cambia en la configuración del proyecto Rendering > Textures > Default Texture Filter a Nearest, o ponlo en el propio nodo, en Texture > Filter."
+            },
+            {
+                "q": "¿Cómo importo la hoja de sprites en Unity?",
+                "a": "Selecciona el PNG y pon Texture Type en Sprite (2D and UI), Sprite Mode en Multiple, Filter Mode en Point (no filter) y Compression en None. Después, en el Sprite Editor, usa Slice > Grid By Cell Size con el tamaño de tu celda."
+            },
+            {
+                "q": "¿Por qué ChatGPT me da un fondo de cuadros en vez de transparente?",
+                "a": "A veces dibuja el tablero de cuadros dentro de la imagen en lugar de dejar el fondo transparente. Por eso el prompt pide un fondo de color plano, que se borra fácilmente en el editor."
+            },
+            {
+                "q": "¿Puedo usar estos sprites en un juego que voy a vender?",
+                "a": "Puedes, siempre que no copien personajes ni estilos de otros juegos. Si lo publicas en Steam, tendrás que declarar que el juego incluye contenido generado con IA."
+            }
+        ]
+    },
+    "prompt-para-un-mensaje-de-cumpleanos-personalizado-con-chatgpt": {
+        "answer": "Dale a ChatGPT un detalle que solo conozcáis vosotros (una anécdota, una manía, algo que repite), el tono y dónde lo va a leer, y prohíbele las frases hechas. Así el mensaje suena a ti y no a tarjeta de regalo. El prompt de abajo te devuelve tres versiones y te avisa de lo que ha añadido.",
+        "steps": [
+            "Piensa en una anécdota real y en algo que defina a la persona: es lo que hará que el mensaje sea suyo.",
+            "Abre ChatGPT, pega el prompt y rellena los corchetes: para quién es, dónde lo va a leer, el tono y el largo.",
+            "Elige una de las tres versiones y comprueba en la línea de debajo que no se ha inventado nada.",
+            "Si suena a IA o es demasiado largo, usa las frases de «Si no sale bien» en el mismo chat.",
+            "Léelo en voz alta, cambia lo que tú no dirías y mándalo."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo escribo una felicitación de cumpleaños original?",
+                "a": "Con un detalle concreto que solo sepáis vosotros: una anécdota, una manía o una frase que repite. Lo que suena a plantilla son los deseos genéricos; lo que suena a ti es lo que habéis vivido juntos."
+            },
+            {
+                "q": "¿Qué le escribo a un compañero de trabajo o a mi jefe?",
+                "a": "Algo corto, cordial y sin bromas sobre la edad o la vida privada. Elige el tono formal o «emotivo sin pasarse», el trato de usted si lo usáis, y la variante para el grupo del trabajo si lo firma todo el equipo."
+            },
+            {
+                "q": "¿Puede hacerme un poema de cumpleaños?",
+                "a": "Sí: usa la variante «Poema corto». Pide rima asonante y palabras sencillas; con rima consonante obligatoria la IA suele forzar palabras raras."
+            },
+            {
+                "q": "¿Y para mi abuela o una persona mayor?",
+                "a": "Pide frases muy cortas, sin abreviaturas, sin palabras en inglés y sin emojis, para que se entienda bien leído en voz alta o escrito en una tarjeta."
+            },
+            {
+                "q": "¿Se nota que lo ha escrito una IA?",
+                "a": "Se nota si no le das detalles reales o si lo mandas sin tocar. Con una anécdota tuya, la lista de frases prohibidas y un repaso final para cambiar lo que no dirías, no se nota."
+            }
+        ]
+    },
+    "prompt-para-tu-vision-board-de-ano-nuevo-con-chatgpt-o-gemini": {
+        "answer": "Primero pide a ChatGPT o a Gemini que ordene tus metas por áreas y las convierta en algo concreto, con una frase corta y una imagen para cada una. Después, en el mismo chat, pide el collage con el estilo y el formato que quieras: fondo del móvil, pantalla del ordenador o A4 para imprimir.",
+        "steps": [
+            "Apunta tus metas del año tal como te salgan, sin ordenarlas.",
+            "Pega el prompt en ChatGPT o Gemini y deja que haga la tabla: áreas, meta concreta, frase e imagen.",
+            "Corrige la tabla: quita metas, ajusta cifras y responde a lo que te pregunte.",
+            "Escribe «adelante» y elige estilo, colores, formato y si sales tú en el tablero.",
+            "Revisa la ortografía de las frases; si salen mal, pide la imagen sin texto y añádelo con Canva."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es un vision board?",
+                "a": "Un tablero de metas: un collage con imágenes y frases cortas de lo que quieres conseguir en el año, pensado para verlo a diario. Se suele hacer en diciembre o enero."
+            },
+            {
+                "q": "¿Cómo se hace un vision board con IA?",
+                "a": "En dos pasos: primero ordenas tus metas y las conviertes en algo concreto con ChatGPT o Gemini, y después pides que genere el collage con una imagen por área. El prompt de esta ficha hace las dos cosas en el mismo chat."
+            },
+            {
+                "q": "¿Qué áreas pongo en el tablero?",
+                "a": "Las habituales son salud, dinero, trabajo, familia y amigos, aprender, viajes y ocio, y casa. Mejor no pasar de seis: con más, el tablero se recarga y las metas se diluyen."
+            },
+            {
+                "q": "¿Puedo usarlo de fondo de pantalla del móvil?",
+                "a": "Sí: elige el formato vertical 9:16 y la variante «Fondo del móvil», que deja libre la parte de arriba para la hora y las notificaciones."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con la versión gratuita de ChatGPT o de Gemini, pero las dos limitan las imágenes al día. Si se te acaba, termina la tabla y genera la imagen al día siguiente."
+            },
+            {
+                "q": "¿Por qué salen mal las letras?",
+                "a": "Las dos herramientas escriben bien palabras sueltas, pero fallan a menudo con frases largas y tildes. Si pasa, pide la imagen sin texto y añade las frases con Canva."
+            }
+        ]
+    },
+    "prompt-para-escribir-tu-bio-de-tinder-bumble-o-hinge-sin-mentir": {
+        "answer": "Dale a ChatGPT datos verdaderos y concretos (qué haces un sábado, una manía tuya, qué buscas) y prohíbele los tópicos y las aficiones inventadas. Pídele varias versiones con el recuento de caracteres: unos 500 para Tinder, unos 300 para Bumble y respuestas de unos 150 para las preguntas de Hinge.",
+        "steps": [
+            "Apunta tres cosas concretas que haces en tu tiempo libre y un detalle tuyo que te haga gracia.",
+            "Pega el prompt en ChatGPT, elige la aplicación y el tono, y rellena los corchetes solo con cosas verdaderas.",
+            "Pega las preguntas del perfil que te ofrece la aplicación para que te proponga respuestas.",
+            "Elige una versión y comprueba en la aplicación que cabe: el recuento de la IA no siempre es exacto.",
+            "Quita cualquier dato que permita localizarte, como tu empresa o tus apellidos."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué pongo en la bio de Tinder?",
+                "a": "Dos o tres cosas concretas que haces, algo tuyo que tenga gracia y qué buscas, con una frase que invite a contestar. Evita la lista de «me gusta viajar, reír y salir con amigos», que vale para cualquiera."
+            },
+            {
+                "q": "¿Cuántos caracteres tiene la bio de Tinder, Bumble y Hinge?",
+                "a": "Tinder admite unos 500 caracteres y Bumble unos 300. Hinge no tiene bio libre: muestra tres respuestas a preguntas, de unos 150 caracteres cada una. Comprueba el contador de la aplicación porque los límites cambian."
+            },
+            {
+                "q": "¿Qué respondo a las preguntas de Hinge?",
+                "a": "Algo concreto y corto que dé pie a una conversación, no una frase ingeniosa vacía. Pega en el prompt las preguntas que te ofrece la aplicación y te dará dos opciones para cada una."
+            },
+            {
+                "q": "¿Se nota que la bio está hecha con IA?",
+                "a": "Se nota cuando está llena de adjetivos y tópicos. Si le das hechos tuyos, le prohíbes las frases típicas y retocas el resultado con tus palabras, no."
+            },
+            {
+                "q": "¿Qué no debo poner en un perfil de citas?",
+                "a": "Datos que permitan localizarte (apellidos, empresa exacta, dirección), listas de requisitos para la otra persona y cosas que no sean verdad: lo que escribas tiene que aguantar la primera cita."
+            }
+        ]
+    },
+    "prompt-para-crear-el-jingle-de-tu-negocio-con-suno": {
+        "answer": "Prepara con ChatGPT una letra corta con un gancho que lleve el nombre de tu negocio y una línea de estilo en inglés, y pégalas en el modo personalizado de Suno. Suno no deja fijar la duración, así que las versiones de 15 y 30 segundos se recortan después. Para usarlo en anuncios necesitas crearlo con un plan de pago.",
+        "steps": [
+            "Si lo vas a usar en publicidad, suscríbete antes a un plan de pago de Suno: lo hecho en el plan gratuito no se puede usar comercialmente.",
+            "Pega el prompt en ChatGPT y rellena el nombre, cómo se pronuncia, el estilo, la voz y dónde va a sonar.",
+            "En Suno, abre el modo personalizado y pega la letra en el campo de letra y la línea de estilo en el de estilo.",
+            "Escucha las versiones que genera y repite con las frases de «Si no sale bien» si pronuncia mal el nombre.",
+            "Recorta a 15 o 30 segundos con Crop (desde el ordenador) o con un editor de audio, y descárgala."
+        ],
+        "faq": [
+            {
+                "q": "¿Puedo usar una canción de Suno en un anuncio?",
+                "a": "Solo si la creaste mientras tenías un plan de pago (Pro o Premier). Con el plan gratuito las canciones son para uso no comercial, y un anuncio es uso comercial."
+            },
+            {
+                "q": "¿Si me suscribo después puedo usar lo que hice gratis?",
+                "a": "No. Los derechos de uso comercial dependen del plan que tenías al crear la canción: suscribirte después no los da con efecto retroactivo. Genera la versión definitiva ya suscrito."
+            },
+            {
+                "q": "¿Qué pasa si cancelo la suscripción?",
+                "a": "Las canciones que hiciste con Pro o Premier conservan los derechos de uso comercial aunque te des de baja."
+            },
+            {
+                "q": "¿Cómo hago que dure 15 o 30 segundos?",
+                "a": "Suno no permite elegir la duración. Usa poca letra y recorta el resultado con la función Crop, disponible en Pro y Premier desde la versión de ordenador, o con cualquier editor de audio."
+            },
+            {
+                "q": "¿Cuántas canciones puedo descargar?",
+                "a": "Desde el 3 de septiembre de 2026, Pro permite 20 descargas al mes y Premier 60, y se pueden comprar más. Las descargas de prueba del plan gratuito son solo para uso personal."
+            },
+            {
+                "q": "¿El jingle es mío y lo puedo registrar?",
+                "a": "La letra que escribes o retocas tú es tuya. La música generada por IA puede no tener protección de derechos de autor, así que consulta con el registro de propiedad intelectual si quieres protegerla."
+            }
+        ]
+    },
+    "prompt-para-hacer-un-mapa-conceptual-con-ia-a-partir-de-un-pdf": {
+        "answer": "Adjunta el PDF en Claude o ChatGPT y pídele el mapa conceptual en tres partes: los conceptos clave, una tabla con las frases de enlace y el mapa en código Mermaid. Ese código se convierte en dibujo al pegarlo en mermaid.live, y en draw.io puedes retocarlo a mano.",
+        "steps": [
+            "Abre Claude o ChatGPT y adjunta el PDF, o pega tus apuntes o el texto.",
+            "Pega el prompt y rellena los corchetes: la parte del documento, para qué es, el nivel y el tamaño del mapa.",
+            "Revisa la tabla de conceptos y enlaces: cada fila debe leerse como una frase con sentido.",
+            "Copia el código Mermaid, pégalo en mermaid.live y descarga el mapa en PNG o SVG, o ábrelo en draw.io para mover las cajas.",
+            "Mira qué ha quedado fuera en la comprobación final y pide un segundo mapa si falta algo importante."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué IA hace mapas conceptuales a partir de un PDF?",
+                "a": "Claude y ChatGPT leen PDF con texto y sacan el mapa con este prompt. Claude puede mostrarlo ya dibujado en un panel al lado del chat; con las dos, el código Mermaid se abre en mermaid.live."
+            },
+            {
+                "q": "¿Qué diferencia hay entre un mapa conceptual y un mapa mental?",
+                "a": "En un mapa mental las ideas salen en ramas desde un centro, sin explicar cómo se relacionan. En un mapa conceptual cada flecha lleva una frase de enlace con verbo («produce», «se divide en») y hay enlaces cruzados entre ramas, así que se lee como frases."
+            },
+            {
+                "q": "¿Cómo convierto el código Mermaid en una imagen?",
+                "a": "Entra en mermaid.live, borra el ejemplo del recuadro de la izquierda, pega el código y descarga el dibujo en PNG o SVG. Si da error, copia el mensaje en el chat y pide que lo corrija."
+            },
+            {
+                "q": "¿Puedo editar el mapa después?",
+                "a": "Sí. En draw.io ve a Organizar > Insertar > Mermaid, pega el código y elige insertarlo como diagrama: cada caja y cada flecha se pueden mover, cambiar de color o reescribir."
+            },
+            {
+                "q": "¿Funciona con apuntes escaneados o con fotos?",
+                "a": "Peor: si el PDF es una imagen, la IA puede leer mal el texto. Va mejor si pegas el texto o subes las páginas por partes y compruebas que lo ha entendido."
+            },
+            {
+                "q": "¿Es gratis?",
+                "a": "Puedes hacerlo con las versiones gratuitas de Claude y ChatGPT, que tienen límites de mensajes y de archivos. mermaid.live y draw.io también son gratuitos."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-linea-de-tiempo-con-ia-tabla-y-dibujo": {
+        "answer": "Pide a ChatGPT o a Claude la línea de tiempo en dos formatos: una tabla con fecha, hecho y por qué importa, y el mismo contenido en código Mermaid de tipo «timeline». Pega ese código en mermaid.live para verla dibujada y descargarla, y comprueba las fechas, porque la IA a veces se equivoca.",
+        "steps": [
+            "Escribe el tema (un periodo de historia, una biografía, un proyecto) o pega tus apuntes.",
+            "Pega el prompt y rellena para qué es, el nivel, el periodo y cuántos hitos quieres.",
+            "Revisa la tabla y comprueba en el libro o en una fuente fiable las fechas marcadas con «≈» y las que vayas a usar.",
+            "Copia el código Mermaid, pégalo en mermaid.live y descarga la línea de tiempo en PNG o SVG.",
+            "Si es un proyecto con fechas de inicio y fin, usa la variante gantt para ver cuánto dura cada fase."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué IA hace líneas de tiempo?",
+                "a": "ChatGPT y Claude preparan el contenido y el código para dibujarla. No hace falta ninguna herramienta de pago: el código se convierte en imagen en mermaid.live, que es gratuito."
+            },
+            {
+                "q": "¿Cómo hago una línea de tiempo en Word o PowerPoint con IA?",
+                "a": "Pega la tabla del prompt en Word o en una hoja de cálculo, o inserta la imagen que descargas de mermaid.live. Si prefieres diseñarla tú, usa la tabla como guion en una plantilla de línea de tiempo de Canva o de tu programa de presentaciones."
+            },
+            {
+                "q": "¿Son fiables las fechas que da la IA?",
+                "a": "No siempre: falla sobre todo en días y meses concretos y en personajes poco conocidos. Pégale tus apuntes para que use solo esos datos y comprueba las fechas importantes."
+            },
+            {
+                "q": "¿Por qué todos los periodos ocupan lo mismo en el dibujo?",
+                "a": "El diagrama «timeline» de Mermaid reparte el espacio por igual entre periodos, pase el tiempo que pase. Si necesitas la escala real, usa la variante gantt o dibújala a partir de la tabla."
+            },
+            {
+                "q": "¿Sirve para la línea de tiempo de un proyecto?",
+                "a": "Sí. Escribe las fases con sus fechas y pide la variante gantt: muestra cada tarea como una barra con su inicio y su fin."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-sopa-de-letras-y-un-crucigrama-con-ia": {
+        "answer": "Pide a ChatGPT primero la lista de palabras y las pistas, y después que monte la cuadrícula con un programa en Python que coloque cada palabra y compruebe que está. Así evitas el fallo típico de la IA, que dibuja sopas con palabras que no aparecen y crucigramas que no cuadran, y tienes la solución marcada para revisarla.",
+        "steps": [
+            "Pega el prompt en ChatGPT y rellena el tema o tu lista de vocabulario, la edad, el número de palabras y la dificultad.",
+            "Revisa la lista de palabras y pistas, cambia lo que no te convenza y confírmala.",
+            "Deja que ejecute el programa que coloca las palabras y comprueba en la lista final que están todas.",
+            "Descarga el archivo con la hoja del alumno y la solución.",
+            "Repasa la solución antes de imprimir: que estén todas las palabras y que cada pista cuadre con su casilla."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT hacer una sopa de letras?",
+                "a": "Sí, pero si la dibuja de memoria suele fallar y pone palabras que luego no están. Funciona bien cuando la monta con código, como pide este prompt, y te enseña la solución para comprobarla."
+            },
+            {
+                "q": "¿Cómo hago un crucigrama con IA que esté bien?",
+                "a": "Pide primero las palabras y las pistas, y después que un programa coloque las palabras cruzadas, numere las casillas y te dé la solución. Si alguna palabra no se puede cruzar, el programa la deja fuera y te avisa."
+            },
+            {
+                "q": "¿Se puede hacer gratis?",
+                "a": "Sí, con ChatGPT gratis, aunque la herramienta que ejecuta código tiene un límite de uso. Si se te acaba, copia la lista de palabras y pistas en un generador de sopas de letras o crucigramas en línea."
+            },
+            {
+                "q": "¿Qué hago con las tildes y la eñe?",
+                "a": "Se suelen quitar las tildes (CAMIÓN pasa a CAMION) para que todas las casillas tengan una sola letra sin marcas, pero la Ñ se mantiene porque es otra letra. El prompt ya lo pide así."
+            },
+            {
+                "q": "¿Sirve para repasar vocabulario de inglés?",
+                "a": "Sí: elige el inglés como idioma de las palabras y pide las pistas en español. Para los más pequeños, mejor solo en horizontal y vertical."
+            },
+            {
+                "q": "¿Se puede hacer con Claude?",
+                "a": "Sí: pide que lo haga como una página HTML interactiva que se pueda imprimir. También coloca las palabras con código, así que el resultado es igual de fiable, pero revisa la solución igualmente."
+            }
+        ]
+    },
+    "prompt-para-hacer-una-situacion-de-aprendizaje-lomloe-con-chatgpt": {
+        "answer": "Pega en ChatGPT las competencias específicas, los criterios de evaluación y los saberes básicos del decreto de tu comunidad, y pídele la situación de aprendizaje completa: contextualización, actividades por sesiones, medidas DUA, evaluación y rúbrica. Si no le das el texto del decreto, la IA inventa números y redacciones de criterios.",
+        "steps": [
+            "Abre el decreto de currículo de tu comunidad y copia las competencias específicas, los criterios de evaluación y los saberes básicos de tu área y curso.",
+            "Pega el prompt en ChatGPT y rellena la comunidad, el curso, el área, el tema, la duración, el producto final y cómo es el grupo.",
+            "Pega debajo los elementos del decreto y, si la tienes, la plantilla de tu comunidad o de tu centro.",
+            "Comprueba que los criterios y los saberes coinciden palabra por palabra con el decreto y que los tiempos de cada sesión son realistas.",
+            "Pide los materiales que te falten: fichas del alumno, listas de cotejo o la versión resumida para la programación."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué apartados tiene una situación de aprendizaje?",
+                "a": "Suele incluir descripción y contextualización, objetivos, competencias específicas, criterios de evaluación, saberes básicos, secuencia de actividades, atención a la diversidad y evaluación. Los apartados exactos y sus nombres dependen de la plantilla de tu comunidad o de tu centro."
+            },
+            {
+                "q": "¿Dónde encuentro las competencias específicas y los criterios de mi curso?",
+                "a": "En el decreto de currículo de primaria o de ESO de tu comunidad autónoma, que concreta los Reales Decretos 157/2022 y 217/2022. Muchas consejerías los publican también en su portal educativo."
+            },
+            {
+                "q": "¿Puede ChatGPT hacer una situación de aprendizaje?",
+                "a": "Sí, y ahorra mucho tiempo de redacción, pero no se sabe de memoria el decreto de cada comunidad. Dale tú los elementos curriculares y revisa el resultado como revisarías el trabajo de un compañero."
+            },
+            {
+                "q": "¿Qué es el DUA en una situación de aprendizaje?",
+                "a": "El Diseño Universal para el Aprendizaje propone ofrecer varias formas de implicación, de representación y de acción y expresión para que todo el alumnado pueda participar. La LOMLOE lo recoge como principio para atender a la diversidad."
+            },
+            {
+                "q": "¿Sirve para las oposiciones de maestro o de secundaria?",
+                "a": "Sirve como borrador, pero tienes que adaptarla a la convocatoria y al decreto de tu comunidad, personalizarla y poder defender cada decisión ante el tribunal."
+            },
+            {
+                "q": "¿Puedo pedirla en catalán, gallego, valenciano o euskera?",
+                "a": "Sí, añade «Escríbela en [lengua]». Revisa la terminología con el decreto publicado en esa lengua, porque la IA puede traducir los nombres de los apartados de otra forma."
+            }
+        ]
+    },
+    "prompt-para-hacer-un-diagrama-de-flujo-de-un-proceso-con-claude": {
+        "answer": "Describe el proceso con tus palabras, pégalo en Claude con este prompt y te devolverá los pasos ordenados, las dudas que deja tu descripción y el diagrama de flujo en código Mermaid, con un carril por responsable. Si tienes activados los artefactos, Claude suele mostrarlo dibujado; para guardarlo o editarlo, pégalo en mermaid.live o en draw.io.",
+        "steps": [
+            "Escribe cómo se hace el proceso, como se lo contarías a alguien nuevo: quién hace qué, cuándo y qué pasa si algo sale mal.",
+            "Pega el prompt en Claude, rellena los corchetes y añade tu descripción al final.",
+            "Repasa la lista de huecos con quien hace el trabajo y corrige los pasos marcados como «(supuesto)».",
+            "Copia el código Mermaid en mermaid.live para descargarlo en PNG o SVG, o en draw.io (Organizar > Insertar > Mermaid) para editarlo.",
+            "Si quieres mejorar el proceso, pide la versión mejorada y compara los dos diagramas."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede Claude hacer diagramas de flujo?",
+                "a": "Sí: escribe el diagrama en código Mermaid y, si tienes activados los artefactos, suele mostrarlo dibujado en un panel al lado del chat. Ese código también se abre en mermaid.live, draw.io, Notion o GitHub."
+            },
+            {
+                "q": "¿Cómo paso el diagrama a draw.io?",
+                "a": "En draw.io ve a Organizar > Insertar > Mermaid, pega el código y elige insertarlo como diagrama. Así las cajas se pueden mover, cambiar de color o reescribir como en cualquier otro dibujo."
+            },
+            {
+                "q": "¿Qué es Mermaid?",
+                "a": "Un lenguaje de texto para describir diagramas: cada línea es una caja o una flecha, y una herramienta lo convierte en dibujo. La ventaja es que la IA lo escribe con facilidad y tú puedes corregirlo como si fuera un texto."
+            },
+            {
+                "q": "¿Sirve para hacer un diagrama BPMN?",
+                "a": "No del todo: los carriles de Mermaid se parecen a los de BPMN, pero no tiene sus símbolos. Usa el resultado como borrador y redibújalo en draw.io, que tiene formas BPMN."
+            },
+            {
+                "q": "¿Funciona también con ChatGPT?",
+                "a": "Sí, el prompt sirve igual. Te dará el código Mermaid, que puedes abrir en mermaid.live o en draw.io para verlo dibujado."
+            },
+            {
+                "q": "¿Puedo partir de un documento en lugar de escribir el proceso?",
+                "a": "Sí: adjunta el procedimiento en PDF o Word, o pega la transcripción de la reunión en la que se explicó, y pide el mismo resultado."
+            }
+        ]
+    },
+    "prompt-para-crear-una-pagina-web-con-ia-que-no-parezca-de-ia": {
+        "answer": "Pide a Claude, ChatGPT o Gemini la web con datos concretos de tu negocio (qué te hace distinto, cómo hablas, quiénes son tus clientes) y dile expresamente qué no quieres: degradados morados, tres tarjetas iguales, textos de relleno y datos inventados. Lo que hace que una web no parezca de IA es lo que solo tú puedes contar, más tus propias fotos.",
+        "steps": [
+            "Apunta antes tres cosas: qué te hace distinto con un ejemplo real, cómo hablas con tus clientes y qué quieres que hagan al entrar.",
+            "Pega el prompt en Claude, ChatGPT o Gemini (en estos dos, con el modo lienzo para ver la página) y rellena los corchetes.",
+            "Elige uno de los dos estilos que te proponga y revisa que los textos suenen a ti; completa los huecos marcados.",
+            "Sustituye los recuadros de las fotos por fotos reales de tu negocio, tu trabajo o tu equipo.",
+            "Si ya tienes una web hecha con IA, usa el apartado «Si ya tienes la web» para que te diga qué cambiar."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo se nota que una web está hecha con IA?",
+                "a": "Por los degradados morados sin motivo, la fila de tres tarjetas iguales con icono, las sombras suaves y esquinas redondeadas en todo, y sobre todo por los textos: frases como «soluciones innovadoras» o «llevamos tu negocio al siguiente nivel» que valdrían para cualquier empresa."
+            },
+            {
+                "q": "¿Qué IA es mejor para crear una página web?",
+                "a": "Claude, ChatGPT y Gemini pueden escribir una web completa en HTML y enseñártela en el chat. Para una web sencilla de negocio, cualquiera sirve: importa más lo que le cuentas que la herramienta. Si no quieres tocar código, pide la estructura y los textos y móntala en WordPress, Wix o similar."
+            },
+            {
+                "q": "¿Puedo crear una página web con IA gratis?",
+                "a": "Puedes generar la página con la versión gratuita de Claude, ChatGPT o Gemini. Para que esté en internet necesitas alojamiento y un dominio: hay opciones gratuitas para una página sencilla, pero el dominio propio suele ser de pago."
+            },
+            {
+                "q": "¿Cómo hago que los textos de mi web no suenen a IA?",
+                "a": "Dale ejemplos reales y prohíbele las frases de relleno. Pídele que escriba como si se lo contaras a un cliente en la puerta del local, con frases cortas, y que deje huecos en lugar de inventar cifras u opiniones."
+            },
+            {
+                "q": "¿Puedo arreglar una web que ya hice con IA?",
+                "a": "Sí: pega el código o una captura y pide que señale todo lo que la hace parecer genérica, ordenado de lo que más se nota a lo que menos, con cómo cambiar cada cosa sin rehacerla entera."
+            }
+        ]
     }
 }
