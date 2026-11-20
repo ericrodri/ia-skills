@@ -98,7 +98,7 @@ class RelatedContent
         'escribir-un-poema-con-ia' => [['marketing', 'diseno'], 'redacción'],
         'organizar-tu-tiempo-con-ia' => [['product-management', 'freelancers'], 'planific'],
         'dibujos-para-colorear-con-ia' => [['diseno', 'marketing'], 'imagen'],
-        'felicitar-un-cumpleanos-con-ia' => [['marketing', 'rrhh'], 'redacción'],
+        'felicitar-un-cumpleanos-con-ia' => [['freelancers'], 'cumplea'],
         'nombre-para-tu-negocio-con-ia' => [['freelancers', 'marketing', 'diseno'], 'marca'],
         'hacer-invitaciones-con-ia' => [['diseno', 'marketing'], 'imagen'],
         'contar-calorias-con-ia' => [['freelancers', 'rrhh'], 'planific'],
