@@ -1785,5 +1785,37 @@
                 "a": "Sí, y funciona mejor si el producto forma parte de la historia en lugar de interrumpirla con un anuncio. Usa música libre de derechos y avisa de que el vídeo está hecho con IA."
             }
         ]
+    },
+    "prompt-para-hacer-una-caricatura-a-partir-de-una-foto-con-chatgpt": {
+        "answer": "Sube a ChatGPT o a Gemini una foto nítida de frente y pega el prompt indicando qué dos o tres rasgos exagerar, qué está haciendo la persona y el estilo de dibujo. Para la caricatura de tu trabajo, escribe tu oficio y los objetos de tu día a día en lugar de pedir «todo lo que sabes de mí». Si no se reconoce, pide que exagere menos.",
+        "steps": [
+            "Elige una foto nítida, de frente o de tres cuartos y con buena luz. Si es de otra persona, pregúntale antes.",
+            "Abre ChatGPT o Gemini, que generan imágenes gratis con un límite diario, sube la foto y pega el prompt.",
+            "Rellena los corchetes: los rasgos que quieres exagerar, qué está haciendo, el estilo de dibujo y el formato.",
+            "Si no se reconoce o queda poco amable, corrige con las frases de «Si no sale bien», cambiando una sola cosa cada vez.",
+            "Descarga la versión final en el tamaño más grande y, si es para regalar o publicar, enséñasela antes a la persona."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una caricatura de mi foto con ChatGPT?",
+                "a": "Sube la foto al chat, pega el prompt de esta ficha y rellena los rasgos que quieres exagerar, la escena y el estilo. ChatGPT la genera en el mismo chat y puedes pedirle cambios con frases concretas, como «exagera menos» o «más simpático»."
+            },
+            {
+                "q": "¿Funciona igual en Gemini?",
+                "a": "Sí. Sube la foto en la aplicación de Gemini y pega el mismo prompt. Si la cara cambia demasiado, añade «conserva exactamente los rasgos de la foto y exagera solo lo que te indico»."
+            },
+            {
+                "q": "¿Cómo se hace la caricatura de mi trabajo que se hizo viral?",
+                "a": "La tendencia de febrero de 2026 usaba la frase «Crea una caricatura de mí y de mi trabajo basada en todo lo que sabes de mí». Solo funciona si ChatGPT tiene la memoria activada y sabe cosas de ti; si no, se las inventa. Sale mejor con este prompt, poniendo en la escena tu profesión y tres objetos de tu trabajo."
+            },
+            {
+                "q": "¿Se puede hacer una caricatura con IA gratis?",
+                "a": "Sí. Las versiones gratuitas de ChatGPT y Gemini permiten generar varias imágenes al día, suficientes para probar dos o tres estilos. Si se te acaba el cupo, espera al día siguiente o prueba la misma foto en el otro asistente."
+            },
+            {
+                "q": "¿Puedo hacer la caricatura de otra persona?",
+                "a": "Para un regalo o una despedida, sí, siempre que sea amable y no se burle de su físico. Si la vas a publicar, pide permiso: es su imagen. Y no subas fotos de menores que no sean tuyos."
+            }
+        ]
     }
 }
