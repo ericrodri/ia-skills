@@ -35,6 +35,7 @@ class Guides
         'felicitar-la-navidad-con-ia',
         'menu-de-navidad-con-ia',
         'fotos-de-navidad-con-ia',
+        'loteria-de-navidad-con-ia',
         'carta-a-los-reyes-magos-con-ia',
         'propositos-de-ano-nuevo-con-ia',
         'hacer-un-calendario-con-ia',

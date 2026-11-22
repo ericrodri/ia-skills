@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-14',
     'updated' => '2026-10-14',
     'readingMinutes' => 7,
-    'words' => 1147,
+    'words' => 1203,
     'about' => 'Uso de asistentes de inteligencia artificial para elegir regalos y organizar el amigo invisible',
-    'related' => ['carta-a-los-reyes-magos-con-ia', 'hacer-un-arbol-genealogico-con-ia', 'comprar-con-ia-black-friday', 'felicitar-la-navidad-con-ia', 'crear-un-cuento-infantil-con-ia', 'restaurar-fotos-antiguas-con-ia', 'como-usar-perplexity', 'crear-musica-con-ia'],
+    'related' => ['carta-a-los-reyes-magos-con-ia', 'loteria-de-navidad-con-ia', 'hacer-un-arbol-genealogico-con-ia', 'comprar-con-ia-black-friday', 'felicitar-la-navidad-con-ia', 'crear-un-cuento-infantil-con-ia', 'restaurar-fotos-antiguas-con-ia', 'como-usar-perplexity', 'crear-musica-con-ia'],
     'toc' => [
         'perfil' => 'El truco: describir a la persona',
         'prompts' => 'Prompts para pedir ideas',
@@ -102,6 +102,6 @@ return [
     <li><strong>Dejarlo para el último día</strong>: los regalos personalizados impresos necesitan tiempo de producción y envío.</li>
 </ul>
 
-<p>Pensar el regalo con calma, con la ayuda de la IA, es la mejor forma de acertar y de gastar justo lo que habías planeado.</p>
+<p>Pensar el regalo con calma, con la ayuda de la IA, es la mejor forma de acertar y de gastar justo lo que habías planeado. Si el grupo del amigo invisible también comparte lotería, en <a href="/guias/loteria-de-navidad-con-ia">Lotería de Navidad con IA</a> explicamos cómo organizar el décimo compartido y por qué ningún asistente puede adivinar el número.</p>
 HTML,
 ];

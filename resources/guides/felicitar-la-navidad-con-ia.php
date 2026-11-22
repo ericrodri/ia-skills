@@ -10,9 +10,9 @@ return [
     'published' => '2026-10-13',
     'updated' => '2026-10-27',
     'readingMinutes' => 7,
-    'words' => 1225,
+    'words' => 1284,
     'about' => 'Creación de felicitaciones navideñas con herramientas de inteligencia artificial',
-    'related' => ['escribir-una-carta-de-agradecimiento-con-ia', 'fotos-de-navidad-con-ia', 'menu-de-navidad-con-ia', 'carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
+    'related' => ['fotos-de-navidad-con-ia', 'loteria-de-navidad-con-ia', 'escribir-una-carta-de-agradecimiento-con-ia', 'menu-de-navidad-con-ia', 'carta-a-los-reyes-magos-con-ia', 'felicitar-un-cumpleanos-con-ia', 'escribir-un-poema-con-ia', 'ideas-de-regalo-y-amigo-invisible-con-ia', 'crear-imagenes-con-ia', 'escribir-correos-con-ia', 'crear-videos-con-ia', 'editar-fotos-con-ia', 'convertir-texto-a-voz-con-ia', 'imagenes-con-ia-derechos-y-uso-comercial'],
     'toc' => [
         'mensaje' => 'Un mensaje que no parezca de plantilla',
         'tarjeta' => 'La tarjeta: imagen navideña con tu foto',
@@ -85,7 +85,7 @@ return [
     <li><strong>Revisa nombres y cargos</strong> si personalizas en masa: un error en el nombre estropea cualquier felicitación.</li>
 </ul>
 
-<p>Si vas a enviarla por correo, en <a href="/guias/escribir-correos-con-ia">escribir correos con IA</a> hay pautas para el asunto y el formato.</p>
+<p>Si vas a enviarla por correo, en <a href="/guias/escribir-correos-con-ia">escribir correos con IA</a> hay pautas para el asunto y el formato. Y si en la oficina compartís décimos, la IA también os ayuda a apuntar quién juega cuánto; lo contamos en <a href="/guias/loteria-de-navidad-con-ia">Lotería de Navidad con IA</a>, junto con por qué ningún asistente puede acertar el número.</p>
 
 <h2 id="imprimir">Imprimirla o enviarla</h2>
 

@@ -122,6 +122,7 @@ class RelatedContent
         'propositos-de-ano-nuevo-con-ia' => [['freelancers', 'product-management'], 'planific'],
         'carta-de-motivacion-con-ia' => [['rrhh', 'freelancers'], 'redacción'],
         'fotos-de-navidad-con-ia' => [['diseno', 'marketing'], 'imagen'],
+        'loteria-de-navidad-con-ia' => [['finanzas', 'freelancers'], 'presupuesto'],
         'menu-de-navidad-con-ia' => [['freelancers', 'product-management'], 'planific'],
         'comentario-de-texto-con-ia' => [['rrhh', 'freelancers'], 'aprendizaje'],
         'citar-en-apa-con-ia' => [['rrhh', 'freelancers'], 'investiga'],
