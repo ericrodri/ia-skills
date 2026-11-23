@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-29',
     'updated' => '2026-09-29',
     'readingMinutes' => 7,
-    'words' => 1192,
+    'words' => 1252,
     'about' => 'Uso de la inteligencia artificial para crear y gestionar contenido en redes sociales',
     'related' => ['hacer-una-infografia-con-ia', 'crear-videos-con-ia', 'crear-imagenes-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'ia-para-autonomos-y-pymes', 'video-y-audio-con-ia-en-el-trabajo', 'imagenes-con-ia-derechos-y-uso-comercial', 'como-escribir-prompts-efectivos'],
     'toc' => [
@@ -42,6 +42,8 @@ return [
 </ul>
 
 <p>La regla práctica: <strong>la idea y la experiencia las pones tú; la IA te ahorra el formato</strong>.</p>
+
+<p>Antes de planificar, conviene saber qué te funciona ya: el <a href="/skills/prompt-para-analizar-tu-perfil-de-instagram-y-saber-que-mejorar">prompt para analizar tu perfil de Instagram</a> revisa bio, cuadrícula y estadísticas y propone un plan de 30 días. Y si tu cuenta tira de humor, tienes el <a href="/skills/prompt-para-hacer-memes-originales-con-chatgpt">prompt para hacer memes originales</a>.</p>
 
 <h2 id="voz">Enséñale tu voz primero</h2>
 

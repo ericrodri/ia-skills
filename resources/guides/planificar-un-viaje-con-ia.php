@@ -102,6 +102,8 @@ return [
 
 <p>Si un asistente con modo agente se ofrece a reservar por ti, déjale comparar y preparar, pero el pago hazlo tú, revisando fechas, nombres y número de viajeros. Y no le pegues el número de pasaporte ni los datos de la tarjeta: para planificar no los necesita.</p>
 
+<p>Para comparar dónde dormir por el precio total, con tasas y limpieza incluidas, usa el <a href="/skills/prompt-para-buscar-hoteles-baratos-y-alojamiento-con-chatgpt">prompt para buscar hoteles baratos y alojamiento</a>.</p>
+
 <h2 id="durante-el-viaje">Durante el viaje</h2>
 
 <p>En destino, la IA del móvil sigue siendo útil. Con la cámara puedes traducir una carta o un cartel, y con la voz mantener una conversación sencilla con alguien que no habla tu idioma; lo contamos en <a href="/guias/traducir-con-ia">traducir con IA</a>. También sirve para replanificar sobre la marcha: «estamos en tal sitio, ha empezado a llover y tenemos tres horas, ¿qué hay a cubierto a menos de quince minutos andando?». Con la misma regla de siempre: lo que dependa de un horario, compruébalo antes de ir.</p>

@@ -102,5 +102,7 @@ return [
 <p>Un asistente puede ordenar tus ideas, pero no conoce tu cuerpo ni tu cuenta bancaria. Si un propósito toca la salud (perder mucho peso, dejar de fumar, empezar a entrenar con una lesión), consulta a un profesional antes de seguir un plan generado por IA. Si toca dinero, comprueba las cifras: los asistentes se equivocan en cálculos y en datos actualizados.</p>
 
 <p>Y cuenta solo lo necesario: no hace falta tu nombre ni tus números exactos para planificar. Con dos o tres propósitos concretos, una acción semanal para cada uno y diez minutos de revisión los domingos, es mucho más probable que en diciembre puedas tachar algo de la lista.</p>
+
+<p>Si antes de empezar quieres repasar el año que acaba, el <a href="/skills/prompt-para-hacer-tu-chatgpt-wrapped-el-resumen-de-tu-ano">prompt para hacer tu resumen del año con ChatGPT</a> te ayuda a ver en qué has invertido el tiempo. Y para felicitar el año a los tuyos tienes el <a href="/skills/prompt-para-una-imagen-de-feliz-ano-nuevo-para-whatsapp-y-redes">prompt para una imagen de feliz Año Nuevo</a>.</p>
 HTML,
 ];

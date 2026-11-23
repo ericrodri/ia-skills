@@ -1817,5 +1817,607 @@
                 "a": "Para un regalo o una despedida, sí, siempre que sea amable y no se burle de su físico. Si la vas a publicar, pide permiso: es su imagen. Y no subas fotos de menores que no sean tuyos."
             }
         ]
+    },
+    "prompt-para-fotos-con-familiares-fallecidos-como-homenaje": {
+        "answer": "Sube a Gemini tu foto actual y una de tu familiar y pide una escena serena, en casa o en un jardín, conservando las dos caras tal como son. Lo que más ayuda: fotos con luz y ángulo parecidos, la antigua restaurada antes si está dañada y el mismo acabado para los dos, todo en color o todo en blanco y negro.",
+        "steps": [
+            "Escoge una foto tuya y otra de tu familiar con luz y ángulo parecidos, a ser posible de frente o de tres cuartos.",
+            "Si la foto antigua está rota, manchada o borrosa, restáurala primero en una conversación aparte.",
+            "Sube las dos fotos a Gemini y pega el prompt con la escena, la postura y el acabado que quieres.",
+            "Compara las caras con las fotos originales y pide las correcciones de una en una.",
+            "Enséñasela al resto de la familia antes de compartirla o imprimirla."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer una foto con un familiar fallecido con IA?",
+                "a": "Sube a Gemini tu foto actual y una foto de tu familiar, y pide que las una en una sola escena realista conservando las dos caras tal como aparecen. Indica el lugar, la postura y si la quieres en color o en blanco y negro. Funciona mejor cuando las dos fotos tienen luz y ángulo parecidos."
+            },
+            {
+                "q": "¿Se puede hacer gratis con Gemini?",
+                "a": "Puedes probarlo en la app de Gemini subiendo las fotos y pidiendo los cambios en la conversación. Cuántas imágenes puedes crear depende de tu cuenta y las condiciones cambian a menudo, así que consúltalas en la propia aplicación."
+            },
+            {
+                "q": "¿Qué hago si la foto de mi familiar es antigua y está dañada?",
+                "a": "Restáurala antes, en una conversación aparte: pide que quite arañazos y manchas sin cambiar la cara ni la expresión. Después usa esa versión limpia para unirla con la tuya. Si la foto es muy pequeña, recórtala para que la cara ocupe más espacio."
+            },
+            {
+                "q": "¿Por qué la cara de mi familiar sale distinta?",
+                "a": "Ninguna IA garantiza conservar la cara al 100 %, y cuanto peor es la foto original más rasgos tiene que inventar. Pide que use la cara exacta de la foto antigua aunque se note el grano, y prueba con otra foto si sigue sin parecerse."
+            },
+            {
+                "q": "¿Funciona también con ChatGPT?",
+                "a": "Sí, ChatGPT también edita imágenes en la conversación y puedes usar el mismo texto. En las dos herramientas conviene comparar siempre el resultado con las fotos originales y repetir si los rasgos cambian."
+            },
+            {
+                "q": "¿Está bien publicar en redes una foto con un familiar fallecido hecha con IA?",
+                "a": "Es una recreación, no una foto real, así que conviene decirlo al publicarla. Antes de compartirla, pregunta al resto de la familia si les parece bien, porque a algunas personas les remueve. Y no la guardes en el álbum como si fuera una foto auténtica."
+            }
+        ]
+    },
+    "prompt-para-una-imagen-de-feliz-ano-nuevo-para-whatsapp-y-redes": {
+        "answer": "Pide a Gemini una escena de Nochevieja, el texto exacto («Feliz 2027») y el formato: 9:16 para estados e historias, 1:1 o 4:5 para chats y publicaciones. Si quieres salir tú, sube tu foto y pide que conserve la cara. Revisa el texto letra a letra; si sale con faltas, pide la imagen sin texto y añádelo en Canva.",
+        "steps": [
+            "Decide si sales tú, tu familia o solo una escena, y si es para un negocio, ten a mano el logo.",
+            "Sube la foto o el logo a Gemini y pega el prompt con la escena, el estilo y el texto exacto.",
+            "Elige el formato según dónde la vas a enviar: 9:16 para estados, 1:1 o 4:5 para chats y publicaciones.",
+            "Revisa el texto letra a letra y pide que lo corrija si hay faltas.",
+            "Si el texto sigue fallando, pide la imagen sin texto y escríbelo tú en Canva."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer una felicitación de Año Nuevo con IA?",
+                "a": "Describe a Gemini o a ChatGPT la escena (brindis, fuegos artificiales, mesa de Nochevieja), el estilo y el texto exacto que quieres, por ejemplo «Feliz 2027». Indica también el formato según dónde la vas a enviar. Si quieres salir tú, sube antes una foto tuya."
+            },
+            {
+                "q": "¿Qué tamaño tiene que tener una imagen para los estados de WhatsApp?",
+                "a": "Vertical, en proporción 9:16, por ejemplo 1080 x 1920 píxeles. Deja libres la franja de arriba y la de abajo, porque ahí se superponen los iconos. Para enviarla por chat o publicarla, el formato cuadrado 1:1 o el vertical 4:5 se ven mejor."
+            },
+            {
+                "q": "¿Por qué la IA escribe mal el texto de la felicitación?",
+                "a": "Los generadores de imágenes dibujan las letras en lugar de escribirlas, y a veces cambian o repiten alguna. Pide que corrija letra a letra lo que te ha salido mal. Si al segundo intento sigue fallando, pide la imagen sin texto y añádelo tú en Canva o en otra aplicación de diseño."
+            },
+            {
+                "q": "¿Puedo hacer una felicitación de Año Nuevo para mi empresa?",
+                "a": "Sí. Sube tu logo y pide que no aparezcan personas, que coloque el logo pequeño en una esquina sin deformarlo y que use sus colores en la escena. Revisa que el logo no haya cambiado antes de enviarla a tus clientes."
+            },
+            {
+                "q": "¿Se puede hacer con ChatGPT en lugar de Gemini?",
+                "a": "Sí, ChatGPT también crea y edita imágenes en la conversación y el mismo texto sirve. En las dos herramientas tendrás que revisar las letras y comparar tu cara con la foto original."
+            }
+        ]
+    },
+    "prompt-para-fotos-de-quinceanera-sesion-de-xv-anos-con-ia": {
+        "answer": "Sube a Gemini dos o tres fotos recientes de la quinceañera, con su permiso, y pide una sesión de varias fotos (jardín, escalinata, estudio) conservando su cara, su cuerpo y su edad real, con un vestido adecuado para 15 años. Es menor de edad: comparte las fotos solo con la familia o en cuentas privadas.",
+        "steps": [
+            "Pide permiso a la quinceañera y elige dos o tres fotos suyas recientes, de frente y con buena luz.",
+            "Sube las fotos a Gemini y pega el prompt con el peinado, el vestido y los escenarios.",
+            "Genera las fotos de una en una y compara cada cara con las originales.",
+            "Corrige lo que no encaje, sobre todo si la hace parecer mayor o cambia el vestido.",
+            "Comparte las fotos solo con la familia o en cuentas privadas, nunca en perfiles públicos."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer fotos de quinceañera con IA?",
+                "a": "Sube a Gemini fotos reales y recientes de la quinceañera y pide una sesión con el vestido, el peinado y los escenarios que quieras: jardín, escalinata o estudio. Pide que conserve su cara, su cuerpo y su edad real, y genera las fotos de una en una para revisarlas mejor."
+            },
+            {
+                "q": "¿Es seguro subir fotos de una menor a una IA?",
+                "a": "Hazlo solo con fotos de tu propia hija y con su permiso. Lo más importante es lo que haces después: no publiques el resultado en perfiles abiertos y compártelo por mensaje privado o en álbumes familiares. Si tienes dudas sobre qué guarda la herramienta, revisa la configuración de privacidad de tu cuenta."
+            },
+            {
+                "q": "¿Por qué la IA hace que parezca mayor?",
+                "a": "Al ponerle un vestido de gala o maquillaje, la IA puede añadir rasgos adultos sin que se lo pidas. Indica en el prompt que tiene 15 años y debe aparentarlos, pide maquillaje ligero y, si aun así cambia, escribe «Devuélvele la cara y la complexión de la foto original»."
+            },
+            {
+                "q": "¿Qué vestido pedir para unas fotos de XV años?",
+                "a": "Un vestido largo de gala, de princesa o sencillo, con escote cerrado o de barco y mangas o tirantes anchos, adecuado para su edad. Si quieres que se parezca al vestido real de la fiesta, súbelo en foto y pide que lo use tal cual."
+            },
+            {
+                "q": "¿Puedo hacer las fotos de quinceañera con ChatGPT?",
+                "a": "Sí, ChatGPT también edita fotos en la conversación y el mismo texto sirve. Ninguna IA garantiza conservar la cara al 100 %, así que compara cada foto con las originales y descarta las que no se parezcan."
+            },
+            {
+                "q": "¿Sirven estas fotos para imprimir en un álbum?",
+                "a": "Para una copia de 10 x 15 cm a buena calidad necesitas unos 1200 x 1800 píxeles. Comprueba el tamaño de la imagen que descargas antes de mandarla a imprimir y pide formato vertical 2:3, que es la proporción de esas copias."
+            }
+        ]
+    },
+    "prompt-para-el-efecto-earth-zoom-out-de-tu-foto-al-espacio": {
+        "answer": "Sube tu foto a un generador de vídeo que acepte una imagen inicial y pide un clip de 5 a 10 segundos en el que la cámara sube sin cortes desde ti, pasando por tu ciudad y tu país, hasta ver la Tierra desde el espacio. Funciona mejor con fotos al aire libre y diciendo dónde estás.",
+        "steps": [
+            "Elige una foto tuya al aire libre, mejor si está hecha desde arriba o con mucho cielo y suelo a la vista.",
+            "Abre un generador de vídeo que acepte una imagen inicial y sube la foto.",
+            "Pega el prompt indicando la ciudad o el paisaje, la región y el país para las capas intermedias.",
+            "Repasa el texto antes de generar, porque la generación de vídeo suele tener cupos pequeños o ser de pago.",
+            "Si hay saltos o la cara cambia, corrige con las frases del apartado «Si no sale bien» y vuelve a generar."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es el efecto earth zoom out?",
+                "a": "Es un vídeo corto que empieza en una foto de una persona y se aleja hacia arriba sin cortes, pasando por la ciudad y el país, hasta mostrar la Tierra entera desde el espacio. Se hace con un generador de vídeo a partir de una imagen inicial."
+            },
+            {
+                "q": "¿Con qué aplicación se hace el earth zoom out?",
+                "a": "Con cualquier generador de vídeo que acepte una imagen como punto de partida, como la app de Gemini, Kling o Hailuo. El mismo texto sirve en todos; lo que cambia es la duración máxima y la calidad de cada uno."
+            },
+            {
+                "q": "¿Se puede hacer el earth zoom out gratis?",
+                "a": "La generación de vídeo suele tener cupos pequeños o ser de pago, y las condiciones de cada herramienta cambian a menudo. Consulta las de la que vayas a usar y aprovecha cada intento revisando bien el texto antes de generar."
+            },
+            {
+                "q": "¿Qué foto funciona mejor para el earth zoom out?",
+                "a": "Una foto al aire libre, con las personas bien visibles y algo de suelo alrededor. Las vistas desde arriba, por ejemplo hechas desde un balcón o con un palo para el móvil, funcionan mejor que un retrato de cerca, porque la cámara ya parte de un plano cenital."
+            },
+            {
+                "q": "¿Por qué mi ciudad no sale bien vista desde arriba?",
+                "a": "La IA no usa mapas reales: inventa las capas intermedias a partir de tu descripción. Cuanto más concreta seas con el lugar (costa, montaña, una ciudad conocida), más coherente será el recorrido, pero no esperes que tu calle salga exacta."
+            },
+            {
+                "q": "¿Cómo hacer el vídeo de earth zoom out más largo?",
+                "a": "Si tu herramienta solo da clips cortos, haz dos: captura el último fotograma del primero, úsalo como imagen inicial del segundo y únelos en un editor de vídeo. Pide en ambos el mismo movimiento de cámara para que no se note el corte."
+            }
+        ]
+    },
+    "prompt-para-fotos-de-joyeria-para-tu-tienda-online-con-chatgpt": {
+        "answer": "Haz una foto de tu pieza real con luz de ventana y súbela a ChatGPT pidiendo fondo liso, reflejos controlados y escala real, o una foto puesta sobre una mano generada. La regla clave: que no cambie el diseño, el color del metal ni el tamaño, y compararla siempre con la pieza real antes de publicarla.",
+        "steps": [
+            "Fotografía la pieza real con luz de ventana, sin flash, sobre un fondo liso y con el móvil apoyado.",
+            "Súbela a ChatGPT y pega el prompt con la pieza, el material, la medida real y el tipo de foto.",
+            "Pide primero la foto de fondo blanco y después los detalles y las fotos puestas.",
+            "Compara cada imagen con la joya real: diseño, piedras, color del metal y tamaño.",
+            "Usa el mismo fondo y la misma luz en todas las piezas para que la tienda se vea ordenada."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer fotos de joyería con IA para vender?",
+                "a": "Parte siempre de una foto real de tu pieza y pide a ChatGPT que cambie solo el fondo y la luz, con reflejos controlados y la joya enfocada. Después puedes pedir detalles de cerca o una foto puesta sobre una mano o un cuello generados. Revisa cada imagen frente a la pieza real."
+            },
+            {
+                "q": "¿Puede la IA cambiar mi joya sin que me dé cuenta?",
+                "a": "Sí: puede alterar un engaste, el número de circonitas o el tono del metal. Por eso el prompt pide que la pieza quede idéntica, y aun así debes comparar cada imagen con la joya real antes de publicarla."
+            },
+            {
+                "q": "¿Es legal usar fotos de joyas hechas con IA en mi tienda online?",
+                "a": "Puedes usar imágenes editadas de tu propio producto, pero deben representar fielmente lo que vendes: diseño, material y tamaño. Una foto que no coincide con lo que envías puede acabar en reclamaciones o devoluciones. Si tienes dudas, consulta las normas de la plataforma donde vendes o a un profesional."
+            },
+            {
+                "q": "¿Cómo hacer fotos de joyas con fondo blanco?",
+                "a": "Haz la foto con luz de ventana sobre una cartulina blanca y pide a ChatGPT «fondo blanco puro, luz difusa y sombra suave debajo». Si necesitas la joya sin fondo, pídela en PNG con fondo transparente, que ChatGPT puede devolver si se lo pides expresamente."
+            },
+            {
+                "q": "¿Puedo hacerlo con Gemini en vez de ChatGPT?",
+                "a": "Sí, Gemini también edita fotos si la subes y pides los cambios. La diferencia es que Gemini no devuelve fondos transparentes: pide un fondo liso de un color y quítalo después con otra herramienta."
+            },
+            {
+                "q": "¿Cómo hacer la foto original de una joya con el móvil?",
+                "a": "Ponla junto a una ventana sin sol directo, sobre un fondo liso, y apoya el móvil para que no tiemble. Toca la pieza en la pantalla para enfocarla y acércate en lugar de usar el zoom digital. Un folio blanco al lado sirve para suavizar las sombras."
+            }
+        ]
+    },
+    "prompt-para-foto-con-flash-aesthetic-estilo-camara-de-los-2000": {
+        "answer": "Sube tu foto a Gemini y pide que parezca hecha de noche con una cámara digital compacta de los 2000: flash frontal duro, sombra marcada detrás, fondo oscuro, contraste alto y algo de ruido. Si quieres, añade la fecha naranja en la esquina, y pide que conserve tu cara tal cual.",
+        "steps": [
+            "Elige una foto de cuerpo entero o de medio cuerpo en la que se te vea bien.",
+            "Súbela a Gemini y pega el prompt con el ambiente, el tono de color y el formato.",
+            "Decide si quieres la fecha naranja en la esquina y escríbela tal como debe salir.",
+            "Compara tu cara con la foto original y revisa los números de la fecha.",
+            "Para una serie, pide en las siguientes fotos el mismo efecto que en la anterior."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer que una foto parezca hecha con flash?",
+                "a": "Pide a la IA luz frontal dura sobre las personas, una sombra marcada justo detrás de ellas y un fondo que cae rápido a oscuro. Son los tres rasgos que delatan el flash directo. Conviene añadir contraste alto y blancos algo quemados."
+            },
+            {
+                "q": "¿Cómo conseguir el efecto de cámara digital antigua con IA?",
+                "a": "Describe los rasgos de aquellas cámaras: contraste alto, algo de ruido digital, nitidez suave, viñeteado leve y colores algo fríos o cálidos. Pide expresamente que no parezca una foto moderna de móvil, porque la IA tiende a dejarla demasiado limpia."
+            },
+            {
+                "q": "¿Se puede añadir la fecha naranja de las cámaras antiguas?",
+                "a": "Sí, indica la fecha exacta y pide números naranjas de estilo digital en la esquina inferior derecha. Es texto dentro de la imagen y puede salir con números mal escritos; si no lo corrige, pide la foto sin fecha y añádela con una aplicación de edición."
+            },
+            {
+                "q": "¿Funciona este efecto con ChatGPT?",
+                "a": "Sí, ChatGPT también edita fotos en la conversación y el mismo texto sirve. En las dos herramientas revisa la cara, porque con cambios de luz tan fuertes es fácil que algún rasgo se altere."
+            },
+            {
+                "q": "¿Por qué la IA me cambia la cara al aplicar el efecto?",
+                "a": "Ninguna IA garantiza conservar la cara al 100 %, y un cambio de luz tan fuerte obliga a redibujar mucho la piel. Pide «Mantén mi cara exactamente igual; cambia solo la luz y el color» y usa una foto nítida y bien iluminada como punto de partida."
+            }
+        ]
+    },
+    "prompt-para-hacer-tu-chatgpt-wrapped-el-resumen-de-tu-ano": {
+        "answer": "Pega en ChatGPT, con la memoria activada, un prompt que le pida tus temas del año, cifras aproximadas, un apodo, un premio y un poema, y que diga de dónde saca cada dato. El truco es prohibirle inventar: sin memoria ni historial de chats no sabe nada de tu año y rellena con generalidades.",
+        "steps": [
+            "Comprueba en la configuración de personalización de ChatGPT que tienes activadas la memoria y la consulta del historial de chats.",
+            "Abre un chat normal, no uno temporal, y pega el prompt con el año y los temas que quieres dejar fuera.",
+            "Revisa la tabla de fuentes y pide que quite todo lo que no pueda justificar.",
+            "Ajusta el tono del poema o el apodo hasta que te guste.",
+            "Si quieres compartirlo, pide la versión de tarjeta vertical 9:16 y comprueba que no lleva datos privados ni faltas."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué es el ChatGPT Wrapped o «Your Year with ChatGPT»?",
+                "a": "En diciembre de 2025 OpenAI lanzó «Your Year with ChatGPT», un resumen anual con temas, estadísticas, un poema y un premio. Solo salió en algunos países (EE. UU., Reino Unido, Canadá, Australia, Nueva Zelanda e India) y necesitaba la memoria y el historial de chats activados. Con este prompt puedes hacer el tuyo cuando quieras."
+            },
+            {
+                "q": "¿Por qué no me sale el resumen del año de ChatGPT en España?",
+                "a": "Porque el resumen oficial de 2025 no se lanzó en España, solo en esa lista de países. Con el prompt de esta ficha puedes hacer uno parecido desde cualquier país, siempre que ChatGPT tenga la memoria activada."
+            },
+            {
+                "q": "¿Funciona si no tengo la memoria de ChatGPT activada?",
+                "a": "No bien. Sin memoria ni historial, ChatGPT no sabe de qué has hablado en otros chats y tenderá a inventar o a soltar generalidades. Si no quieres activarla, pega tú una lista de lo que has hecho con él este año y pide que haga el resumen solo con esa lista."
+            },
+            {
+                "q": "¿Las cifras del resumen son exactas?",
+                "a": "No las tomes como exactas. ChatGPT reconstruye el año con lo que recuerda y los chats que puede consultar, no con un recuento completo de tus mensajes. Por eso el prompt le pide marcar las estimaciones con «aprox.»."
+            },
+            {
+                "q": "¿Puedo hacer el resumen del año con Gemini u otra IA?",
+                "a": "Sí, el mismo prompt sirve en cualquier asistente que recuerde tus conversaciones anteriores. Si la herramienta no tiene acceso a tus otros chats, usa la variante de pegar tu propia lista."
+            },
+            {
+                "q": "¿Es seguro compartir la tarjeta del resumen en redes?",
+                "a": "Sí, si la revisas antes. Pide que no salgan nombres, cifras privadas ni temas de salud o dinero, y lee la imagen entera: el resumen sale de tus conversaciones y puede colarse algo personal."
+            }
+        ]
+    },
+    "prompt-para-ver-que-sabe-chatgpt-de-ti-corregirlo-y-borrarlo": {
+        "answer": "Pide a ChatGPT, en un chat normal, que liste lo que tiene en la memoria guardada y lo que deduce de tus chats, en una tabla con lo sensible marcado. Después revisa y borra en la configuración de personalización, que es la lista fiable, y repasa también los chats donde salió cada dato.",
+        "steps": [
+            "Abre un chat normal (no temporal) y pega el prompt indicando lo que más te preocupa.",
+            "Lee la tabla y fíjate en las filas marcadas como sensibles o como suposición.",
+            "Entra en la configuración de personalización de ChatGPT y compara su lista de memoria con la tabla.",
+            "Borra desde ahí los recuerdos que no quieras conservar y corrige los que estén mal.",
+            "Busca los chats donde aparecían esos datos y bórralos también si quieres que desaparezcan.",
+            "Para conversaciones delicadas a partir de ahora, usa el chat temporal."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo sé qué sabe ChatGPT de mí?",
+                "a": "Pregúntaselo con un prompt que separe la memoria guardada de lo que deduce de tus chats y contrástalo con la lista de recuerdos de la configuración de personalización. La lista de la configuración es la referencia, porque ChatGPT puede dejarse algo al describirla."
+            },
+            {
+                "q": "¿Cómo se borra la memoria de ChatGPT?",
+                "a": "En la configuración de personalización puedes ver los recuerdos guardados, borrarlos uno a uno o desactivar la memoria. Los nombres de los menús cambian con las actualizaciones, así que busca el apartado de memoria dentro de personalización."
+            },
+            {
+                "q": "Si borro un recuerdo, ¿se borran también los chats donde salió?",
+                "a": "No des por hecho que sí. Borrar un recuerdo no elimina las conversaciones en las que apareció ese dato, así que revisa esos chats y bórralos aparte si quieres quitarlo del todo."
+            },
+            {
+                "q": "¿Qué es el chat temporal de ChatGPT?",
+                "a": "Es un modo de conversación que no usa tu memoria, no guarda recuerdos nuevos y no aparece en tu historial. Sirve para consultas puntuales o delicadas que no quieres que influyan en futuras respuestas."
+            },
+            {
+                "q": "¿Qué datos no debería contarle a ChatGPT?",
+                "a": "Contraseñas, números de tarjeta o de cuenta, documentos de identidad y datos de clientes o de otras personas sin su permiso. Para temas de salud o dinero, valora usar el chat temporal y no dar datos que te identifiquen."
+            },
+            {
+                "q": "¿Desactivar la memoria impide que mis chats se usen para entrenar a ChatGPT?",
+                "a": "No, son opciones distintas. La memoria decide qué recuerda ChatGPT de ti; el uso de tus conversaciones para mejorar los modelos se controla en otro ajuste, dentro de los controles de datos. Revisa los dos."
+            }
+        ]
+    },
+    "prompt-para-que-chatgpt-sea-critico-y-brutalmente-honesto": {
+        "answer": "Pega al principio del chat unas reglas que le prohíban halagarte y le obliguen a ordenar los fallos por gravedad, a separar hechos de opiniones y a decir «no lo sé». Si las guardas en las instrucciones personalizadas, se aplican siempre. Pide que sea directo, pero no grosero ni contrario por sistema.",
+        "steps": [
+            "Decide si lo quieres para un chat concreto o para todos tus chats.",
+            "Para un chat, pega el prompt completo con lo que quieres revisar y el nivel de dureza.",
+            "Para todos, copia las reglas (sin la última línea) en las instrucciones personalizadas de ChatGPT.",
+            "Lee la tabla de fallos empezando por los de gravedad alta.",
+            "Si vuelve a darte la razón o se pasa de duro, recuérdale las reglas con las frases de «Si no sale bien».",
+            "Comprueba por tu cuenta los datos que marque como hechos."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago que ChatGPT no me dé siempre la razón?",
+                "a": "Dale reglas explícitas: sin halagos, fallos por orden de gravedad, hechos separados de opiniones y que mantenga su postura si no tienes razón. Funciona mejor si las guardas en las instrucciones personalizadas, porque así no se diluyen en chats largos."
+            },
+            {
+                "q": "¿Hay algún prompt para que ChatGPT diga siempre la verdad?",
+                "a": "No hay ninguno que lo garantice. Puedes pedirle que admita cuando no sabe algo y que no invente fuentes, lo que reduce errores, pero ChatGPT puede seguir equivocándose con mucha seguridad. Comprueba lo importante en fuentes fiables."
+            },
+            {
+                "q": "¿Dónde se ponen las instrucciones personalizadas de ChatGPT?",
+                "a": "En la configuración, dentro del apartado de personalización. Lo que escribas ahí se aplica a los chats nuevos, así que no hace falta pegar las reglas cada vez."
+            },
+            {
+                "q": "¿Por qué ChatGPT es tan complaciente?",
+                "a": "Los asistentes de IA tienden a darte la razón, a suavizar las críticas y a cambiar de opinión si insistes. Por eso conviene pedir de forma explícita lo contrario y recordárselo en las conversaciones largas."
+            },
+            {
+                "q": "¿El prompt sirve también en Gemini o Claude?",
+                "a": "Sí, las reglas son texto normal y funcionan en cualquier asistente. La mayoría permiten además guardar instrucciones para todos los chats; búscalo en su configuración."
+            },
+            {
+                "q": "¿Ser brutalmente honesto significa que me trate mal?",
+                "a": "No. Una crítica útil es directa y concreta, no ofensiva. El prompt le pide que no use sarcasmo y que no busque pegas artificiales, porque una crítica que lo ataca todo es tan poco útil como un halago."
+            }
+        ]
+    },
+    "prompt-para-escribir-una-felicitacion-de-navidad-personalizada": {
+        "answer": "Dile a ChatGPT para quién es, por qué canal la mandas y dos o tres detalles reales de vuestro año, y prohíbele las frases hechas navideñas. Pide tres versiones con la longitud adecuada (2 a 4 frases para WhatsApp, 40 a 80 palabras para una tarjeta) y quédate con la que suene más a ti.",
+        "steps": [
+            "Elige destinatario, tono y canal: WhatsApp, tarjeta o correo.",
+            "Apunta dos o tres cosas que hayan pasado de verdad este año con esa persona o ese grupo.",
+            "Pega el prompt con los huecos rellenos y pide las tres versiones.",
+            "Elige una y cambia cualquier palabra que tú no usarías.",
+            "Si es para clientes o para alguien que ha tenido un mal año, usa la variante correspondiente."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una felicitación de Navidad original con ChatGPT?",
+                "a": "Dale detalles reales del año (una mudanza, un nacimiento, un proyecto terminado) y una lista de frases prohibidas. Sin esos detalles, cualquier IA tira de tópicos y el mensaje suena reenviado."
+            },
+            {
+                "q": "¿Qué poner en una felicitación de Navidad para clientes?",
+                "a": "Un agradecimiento concreto por el trabajo del año, un deseo breve para el siguiente y tu firma. Evita ofertas y mensajes comerciales, y no menciones a otros clientes. Por correo, entre 80 y 150 palabras es suficiente."
+            },
+            {
+                "q": "¿Cómo felicitar la Navidad a alguien que ha perdido a un ser querido?",
+                "a": "Con un mensaje breve y cálido que reconozca que el año ha sido duro y diga que piensas en esa persona, sin un «felices fiestas» forzado ni frases de ánimo vacías. Ofrecer ayuda concreta suele valer más que cualquier frase bonita."
+            },
+            {
+                "q": "¿Sirve el prompt con Gemini o Copilot?",
+                "a": "Sí, es texto normal y funciona igual en Gemini, Copilot, Claude u otros asistentes. Lo que más cambia el resultado son los detalles que le des, no la herramienta."
+            },
+            {
+                "q": "¿Puedo hacer también la imagen de la felicitación con IA?",
+                "a": "Sí, mejor en un mensaje aparte con un prompt de imagen. Si el texto va dentro de la imagen, revísalo letra a letra, porque las IA de imagen a veces escriben con faltas."
+            },
+            {
+                "q": "¿Queda mal mandar una felicitación escrita con IA?",
+                "a": "No si la revisas y la haces tuya. Lo que queda mal es el mensaje genérico idéntico para todo el mundo: usa la IA como borrador y personaliza al menos el nombre y un detalle."
+            }
+        ]
+    },
+    "prompt-para-usar-chatgpt-como-entrenador-de-running-0-a-10-km": {
+        "answer": "Dale a ChatGPT tu nivel, los días y minutos que tienes, tu objetivo y tus molestias, y pide un plan semana a semana en tabla, con caminar y correr al principio, descanso entre sesiones y subidas de volumen de no más de un 10 % semanal como orientación. Con dudas de salud, consulta antes a tu médico.",
+        "steps": [
+            "Si tienes más de 40 años y eres sedentario, o tienes alguna enfermedad, lesión o estás embarazada, consulta antes con tu médico.",
+            "Rellena nivel, días, tiempo por sesión, objetivo y molestias, y pega el prompt.",
+            "Revisa que el plan empiece suave y tenga días de descanso entre sesiones.",
+            "Sigue la tabla y repite una semana si la anterior te costó demasiado.",
+            "Cada semana cuéntale a ChatGPT cómo te ha ido y pide que ajuste la siguiente.",
+            "Para y consulta si aparece dolor en el pecho, mareo o un dolor que no se va."
+        ],
+        "faq": [
+            {
+                "q": "¿Cuánto se tarda en correr 5 km empezando de cero?",
+                "a": "Los planes habituales para principiantes duran unas 8 o 9 semanas con 3 sesiones semanales, alternando caminar y correr. Depende de tu punto de partida: repetir alguna semana es normal."
+            },
+            {
+                "q": "¿Cuánto se tarda en pasar de 5 a 10 km?",
+                "a": "Como orientación, unas 8 a 10 semanas si ya corres 5 km seguidos con comodidad, subiendo el volumen poco a poco y con una semana más suave cada 3 o 4. Si tu carrera está más cerca, mejor ajustar el objetivo que forzar."
+            },
+            {
+                "q": "¿Es fiable un plan de running hecho con ChatGPT?",
+                "a": "Sirve como plan general si le das bien tus datos y le pides prudencia, pero no te ve correr ni conoce tu salud. Revisa que sea progresivo y escucha a tu cuerpo; con lesiones o enfermedades, consulta a un profesional."
+            },
+            {
+                "q": "¿Cuántos días a la semana hay que correr al empezar?",
+                "a": "Con tres días no seguidos es suficiente para progresar y dejar que el cuerpo se recupere. Los días de descanso puedes caminar o no hacer nada."
+            },
+            {
+                "q": "¿A qué ritmo tengo que correr si soy principiante?",
+                "a": "Lo bastante despacio como para poder hablar en frases cortas. Si te ahogas, baja el ritmo o camina: al principio importa más el tiempo en movimiento que la velocidad."
+            },
+            {
+                "q": "¿Hace falta ir al médico antes de empezar a correr?",
+                "a": "Es recomendable si tienes más de 40 años y llevas tiempo sin hacer ejercicio, o si tienes una enfermedad cardiaca, hipertensión, alguna lesión o estás embarazada. Y para siempre que notes dolor en el pecho o mareo."
+            }
+        ]
+    },
+    "prompt-para-buscar-hoteles-baratos-y-alojamiento-con-chatgpt": {
+        "answer": "Pide a ChatGPT con búsqueda web que te recomiende zona, fechas más baratas y tipo de alojamiento, y que monte una tabla con el precio total (tasas y limpieza incluidas), la cancelación y la distancia real al transporte. Después comprueba el precio y reserva en la web del alojamiento o en un comparador conocido.",
+        "steps": [
+            "Rellena destino, fechas, personas, presupuesto y lo imprescindible, y pega el prompt con la búsqueda web activada.",
+            "Elige zona y fechas con las recomendaciones de los pasos 1 y 2 del prompt.",
+            "Revisa la tabla comparando el precio total de la estancia, no el precio por noche.",
+            "Abre las opciones que te interesen y comprueba precio, fotos, opiniones y cancelación en la propia web.",
+            "Reserva en la web del alojamiento o en un comparador conocido, nunca por transferencia fuera de la plataforma."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT buscar hoteles baratos?",
+                "a": "Con la búsqueda web activada puede consultar información actual, proponer zonas y alojamientos y ordenarlos en una tabla. Pero sus precios son orientativos: la disponibilidad y el precio final hay que comprobarlos en la web donde reserves."
+            },
+            {
+                "q": "¿Cuándo sale más barato un hotel?",
+                "a": "Suele salir más barato entre semana, en temporada baja y lejos de festivos, puentes y grandes eventos del destino. Si tus fechas son flexibles, pide a ChatGPT que compare varias semanas."
+            },
+            {
+                "q": "¿Qué hay que comparar además del precio por noche?",
+                "a": "El precio total de la estancia con tasas, limpieza y tasa turística, la política de cancelación, los minutos a pie hasta el transporte y las opiniones recientes. Un precio por noche bajo puede acabar saliendo más caro con los extras."
+            },
+            {
+                "q": "¿Cómo evitar estafas al reservar alojamiento por internet?",
+                "a": "No pagues nunca por transferencia ni fuera de la plataforma aunque te ofrezcan descuento, desconfía de precios muy bajos con pocas opiniones y no sigas la conversación por canales externos. Si un anuncio te pide salir de la plataforma, denúncialo en ella."
+            },
+            {
+                "q": "¿Es mejor hotel o apartamento turístico?",
+                "a": "Depende. Para estancias cortas de una o dos personas, un hotel o un hostal suele compensar porque no pagas limpieza; para familias o estancias largas, un apartamento con cocina suele salir mejor. Compara siempre el precio total."
+            },
+            {
+                "q": "¿El prompt funciona con Gemini?",
+                "a": "Sí, funciona en cualquier asistente que pueda buscar en internet, como Gemini o Copilot. Sin búsqueda web, úsalo solo para elegir zona y tipo de alojamiento, y busca tú los precios."
+            }
+        ]
+    },
+    "prompt-para-hacer-memes-originales-con-chatgpt": {
+        "answer": "Pide a ChatGPT primero cinco ideas de chiste sobre una situación concreta y elige una; después, que genere la escena con personajes inventados y el texto arriba y abajo. El truco: revisar el texto letra a letra o pedir la imagen sin texto y ponerlo tú.",
+        "steps": [
+            "Describe una situación concreta y reconocible, no un tema general.",
+            "Indica dónde lo vas a compartir y el tono que quieres.",
+            "Elige una de las 5 ideas que te propone ChatGPT o pide otras.",
+            "Pide la imagen con la proporción de la red donde la vas a publicar.",
+            "Revisa el texto letra a letra y corrígelo o añádelo tú con un editor de fotos.",
+            "Si es para una marca, que otra persona lo lea antes de publicarlo."
+        ],
+        "faq": [
+            {
+                "q": "¿Se puede usar ChatGPT para hacer memes?",
+                "a": "Sí. Sirve para las dos partes: pensar el chiste y generar la imagen con el texto. Funciona mejor si le das una situación muy concreta y le pides varias ideas antes de generar nada."
+            },
+            {
+                "q": "¿Por qué ChatGPT escribe mal el texto de los memes?",
+                "a": "Los generadores de imágenes a veces cambian letras o se inventan palabras. Pídele que corrija letra a letra indicando el texto exacto, o genera la escena con las franjas vacías y añade tú el texto con cualquier editor."
+            },
+            {
+                "q": "¿Puedo usar plantillas de memes famosas o caras de famosos?",
+                "a": "Muchas plantillas son fotos o fotogramas con derechos de autor y de imagen, y usar la cara de un famoso o de otra persona sin permiso puede darte problemas, sobre todo si eres una marca. Crear la escena y el personaje desde cero evita el riesgo."
+            },
+            {
+                "q": "¿Puede una marca publicar memes hechos con IA?",
+                "a": "Sí, si la imagen es original y el humor no toca temas sensibles ni se burla de clientes o de la competencia. Que lo revise otra persona antes de publicarlo y comprueba el texto de la imagen."
+            },
+            {
+                "q": "¿Sirve Gemini para hacer memes?",
+                "a": "Sí, Gemini también genera imágenes y puedes usar el mismo texto. Revisa igual el texto dentro de la imagen, porque tampoco garantiza escribirlo sin errores."
+            }
+        ]
+    },
+    "prompt-para-crear-un-kahoot-o-un-cuestionario-con-ia": {
+        "answer": "Pide a ChatGPT las preguntas en una tabla con las columnas de la plantilla de Kahoot (pregunta, hasta 4 respuestas, tiempo y número de la correcta) y pégala en la hoja de cálculo oficial que se descarga en el creador. El truco: preguntas de 95 caracteres como máximo y respuestas de 60.",
+        "steps": [
+            "Descarga la plantilla de hoja de cálculo desde el creador de Kahoot.",
+            "Rellena tema, curso y número de preguntas y pega el prompt en ChatGPT.",
+            "Comprueba una a una las respuestas correctas con la lista que acompaña a la tabla.",
+            "Copia la tabla en la plantilla respetando el orden de las columnas.",
+            "Importa la hoja desde el creador de Kahoot y revisa que no falte ninguna pregunta."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hacer un Kahoot con ChatGPT?",
+                "a": "ChatGPT no crea el Kahoot por ti, pero sí prepara las preguntas en el formato de la plantilla. Pide una tabla con pregunta, cuatro respuestas, tiempo y número de la respuesta correcta, pégala en la hoja de cálculo oficial de Kahoot e impórtala desde el creador."
+            },
+            {
+                "q": "¿Qué preguntas se pueden importar en Kahoot desde una hoja de cálculo?",
+                "a": "Solo las de tipo cuestionario. Cada una necesita entre 2 y 4 respuestas, la correcta se indica con su número (varias, separadas por comas) y el tiempo tiene que ser 5, 10, 20, 30, 60 o 120 segundos."
+            },
+            {
+                "q": "¿Cuántos caracteres puede tener una pregunta de Kahoot?",
+                "a": "Circulan cifras distintas según la versión. Si escribes preguntas de 95 caracteres como máximo y respuestas de 60, caben siempre. Pídeselo así a la IA y que reescriba las que se pasen."
+            },
+            {
+                "q": "¿Sirve para Quizizz, Google Forms o Blooket?",
+                "a": "Las preguntas sí, porque son tipo test con respuestas y solución. Cómo se importan depende de cada herramienta, así que consulta su ayuda y pide a la IA la tabla con las columnas que te pida."
+            },
+            {
+                "q": "¿Me puedo fiar de las respuestas correctas que da la IA?",
+                "a": "No a ciegas. La IA se equivoca a veces en fechas, cálculos y datos, y lo afirma con seguridad. Por eso el prompt pide una lista con cada respuesta explicada: revísala antes de importar."
+            }
+        ]
+    },
+    "prompt-para-hacer-planos-de-casas-con-ia-distribucion-y-croquis": {
+        "answer": "ChatGPT puede proponerte distribuciones para una casa o un piso, una tabla de superficies por estancia y un croquis orientativo si le das metros, forma, orientación, ventanas y lo que no se puede mover. No sale a escala ni sirve como plano técnico ni para la licencia: úsalo para llegar con ideas al arquitecto.",
+        "steps": [
+            "Reúne los metros útiles, la forma, la orientación y dónde están ventanas, bajantes y pilares.",
+            "Rellena el prompt y sube un plano antiguo o un dibujo a mano si lo tienes.",
+            "Compara las dos o tres propuestas y revisa que las superficies de la tabla cuadren.",
+            "Pide el croquis solo de la propuesta que más te guste.",
+            "Lleva la propuesta y las preguntas a un arquitecto o un aparejador."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT hacer planos de casas?",
+                "a": "Puede proponer distribuciones, calcular superficies aproximadas por estancia y dibujar un croquis orientativo. Las imágenes no salen a escala ni con medidas exactas, así que no sirven como plano para construir."
+            },
+            {
+                "q": "¿Qué IA sirve para hacer planos de casas?",
+                "a": "Para pensar la distribución te vale ChatGPT o Gemini con un buen prompt. Un plano a escala requiere un programa de dibujo de planos, y un plano para obra o licencia lo tiene que hacer y firmar un técnico."
+            },
+            {
+                "q": "¿Sirve un plano hecho con IA para pedir la licencia de obra?",
+                "a": "No. La documentación para el ayuntamiento la prepara un arquitecto o un aparejador, que comprueba estructura, instalaciones y normativa. Lo que haces con la IA es llegar a esa reunión con las ideas claras."
+            },
+            {
+                "q": "¿Puedo subir el plano de mi piso a ChatGPT?",
+                "a": "Sí, puede leer una foto o un escaneo del plano, aunque a veces confunde cotas pequeñas: revisa lo que dice haber leído. Antes de subirlo, tapa la dirección y los datos personales que aparezcan."
+            },
+            {
+                "q": "¿Puedo tirar un tabique para cambiar la distribución?",
+                "a": "Depende de si es un muro de carga y de lo que pida tu ayuntamiento. Antes de tirar o mover un tabique, que lo vea un técnico; la IA no puede saberlo por una descripción."
+            },
+            {
+                "q": "¿Cómo puedo ver cómo quedaría la casa con la nueva distribución?",
+                "a": "Cuando tengas la distribución, usa la ficha de render realista de un espacio a partir de un plano o una foto para ver cada estancia. Para organizar la obra y el presupuesto, tienes la ficha de reformar tu casa por fases."
+            }
+        ]
+    },
+    "prompt-para-hacer-fichas-educativas-de-ejercicios-para-primaria": {
+        "answer": "Dale a ChatGPT el curso, el área, el tema concreto y el número de ejercicios, y pídele dificultad gradual, espacio para responder y la hoja de soluciones aparte, en texto listo para pegar en un A4. El truco: resuelve tú la ficha antes de imprimirla, porque la IA falla en cuentas y en tildes.",
+        "steps": [
+            "Elige curso, área y un tema concreto, no un bloque entero.",
+            "Indica cuántos ejercicios quieres y para qué alumnado es la ficha.",
+            "Pega el resultado en un documento A4 y ajusta los espacios para responder.",
+            "Resuelve la ficha y compara con la hoja de soluciones.",
+            "Si quieres un dibujo, pídelo aparte en línea negra para colorear.",
+            "Imprime la versión general y, si hace falta, la adaptada."
+        ],
+        "faq": [
+            {
+                "q": "¿Qué IA sirve para hacer fichas educativas?",
+                "a": "ChatGPT y Gemini sirven para redactar los ejercicios y las soluciones. Lo importante es darles curso, tema concreto y formato, y revisar el resultado antes de imprimirlo."
+            },
+            {
+                "q": "¿Se pueden hacer fichas de ejercicios con IA gratis?",
+                "a": "Para el texto de la ficha basta con la versión gratuita de ChatGPT o de Gemini. Copia el resultado en un documento de texto, ajusta los espacios y lo imprimes."
+            },
+            {
+                "q": "¿Cómo consigo que la ficha quede bien en un A4?",
+                "a": "Pide texto con listas numeradas y líneas de puntos, sin tablas complicadas, y que quepa en una o dos caras. Al pegarlo en el documento, revisa márgenes, saltos de página y que la hoja de soluciones vaya en una página aparte."
+            },
+            {
+                "q": "¿Puede la IA hacer dibujos para colorear para las fichas?",
+                "a": "Sí, pídelo en un mensaje aparte: línea negra gruesa sobre fondo blanco, sin sombras, sin grises y sin texto. Evita pedir personajes conocidos y describe el dibujo con tus palabras."
+            },
+            {
+                "q": "¿Me puedo fiar de las soluciones que da la IA?",
+                "a": "No del todo. Se equivoca en cálculos, en conteos y a veces en ortografía y tildes. Un adulto debe resolver la ficha completa antes de repartirla."
+            },
+            {
+                "q": "¿Sirve para adaptar fichas a niños con dificultades?",
+                "a": "Ayuda a preparar una versión con menos ejercicios, enunciados más cortos y ejemplos resueltos. Es un apoyo: las adaptaciones de cada alumno las marcan el maestro y el centro."
+            }
+        ]
+    },
+    "prompt-para-analizar-tu-perfil-de-instagram-y-saber-que-mejorar": {
+        "answer": "Sube a ChatGPT capturas de tu perfil y de las estadísticas de tus últimas 12 a 30 publicaciones, o pega los datos, y pídele un diagnóstico de bio, foto, cuadrícula y temas que funcionan, más un plan de 30 días. El truco: que cite la publicación en la que se basa cada conclusión.",
+        "steps": [
+            "Haz capturas de tu perfil (bio y cuadrícula) y de las estadísticas de tus últimas publicaciones.",
+            "Recorta o tapa los nombres y fotos de seguidores y cualquier mensaje privado.",
+            "Rellena tipo de cuenta, objetivo, público y tiempo disponible y pega el prompt.",
+            "Revisa que las cifras de la tabla coinciden con tus capturas.",
+            "Aplica los 3 cambios prioritarios y sigue el plan de 30 días.",
+            "Al terminar el mes, repite el análisis con los datos nuevos."
+        ],
+        "faq": [
+            {
+                "q": "¿Puede ChatGPT analizar mi cuenta de Instagram?",
+                "a": "No entra en tu cuenta ni ve tus estadísticas por sí solo. Analiza las capturas o los datos que le pasas, así que cuanto más completos y legibles sean, mejor será el diagnóstico."
+            },
+            {
+                "q": "¿Es seguro subir capturas de Instagram a ChatGPT?",
+                "a": "Sube solo lo necesario: tu perfil y tus estadísticas. Recorta nombres y fotos de seguidores y mensajes privados, y nunca compartas tu contraseña ni códigos de acceso."
+            },
+            {
+                "q": "¿Dónde veo las estadísticas de mis publicaciones de Instagram?",
+                "a": "Solo aparecen en cuentas profesionales, de creador o de empresa. Si tu cuenta es personal, puedes cambiarla a profesional desde la configuración de la app. Busca después las estadísticas de cada publicación y el panel profesional."
+            },
+            {
+                "q": "¿Cuántas publicaciones hacen falta para que el análisis sirva?",
+                "a": "Con menos de 10 las conclusiones son poco fiables. Lo razonable es pasar entre 12 y 30 publicaciones recientes, con formatos y temas variados, para poder comparar."
+            },
+            {
+                "q": "¿Sirve Gemini para analizar mi perfil de Instagram?",
+                "a": "Sí, también acepta capturas y el mismo prompt funciona. Revisa igual que las cifras que use coincidan con las tuyas, porque cualquier IA puede leer mal una captura."
+            },
+            {
+                "q": "¿Comprar seguidores ayuda a crecer en Instagram?",
+                "a": "No. Las normas de Instagram prohíben inflar seguidores o me gusta de forma artificial, y los seguidores falsos no interactúan, así que empeoran tus estadísticas. Es mejor publicar lo que tus datos dicen que funciona."
+            }
+        ]
     }
 }

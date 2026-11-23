@@ -10,7 +10,7 @@ return [
     'published' => '2026-10-04',
     'updated' => '2026-10-04',
     'readingMinutes' => 6,
-    'words' => 974,
+    'words' => 1044,
     'about' => 'Creación de páginas web con herramientas de inteligencia artificial sin programar',
     'related' => ['posicionar-una-web-nueva-en-google', 'crear-tu-herramienta-con-ia-sin-programar', 'ia-para-autonomos-y-pymes', 'titulos-y-meta-descriptions-que-consiguen-clics', 'seo-local-con-ia', 'escribir-contenido-seo-con-ia'],
     'toc' => [

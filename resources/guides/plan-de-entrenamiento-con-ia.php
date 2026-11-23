@@ -63,6 +63,8 @@ return [
 
 <p>Después ajusta lo que no encaje: «el miércoles no puedo, pásalo al jueves», «cambia el peso muerto convencional por una variante con barra hexagonal». Corregir es más rápido que empezar de nuevo, y cómo pedir las cosas con precisión está en <a href="/guias/como-escribir-prompts-efectivos">cómo escribir prompts efectivos</a>.</p>
 
+<p>Si lo tuyo es correr, el <a href="/skills/prompt-para-usar-chatgpt-como-entrenador-de-running-0-a-10-km">prompt para usar ChatGPT como entrenador de running</a> prepara un plan de 0 a 5 km o de 5 a 10 km, alternando caminar y correr al principio.</p>
+
 <p>Si una recomendación te parece rara, pregunta por qué. Los modelos a veces dan cifras con mucha seguridad y poco fundamento, por las razones que explicamos en <a href="/guias/alucinaciones-de-la-ia">alucinaciones de la IA</a>.</p>
 
 <h2 id="progresion">La progresión: el registro manda</h2>

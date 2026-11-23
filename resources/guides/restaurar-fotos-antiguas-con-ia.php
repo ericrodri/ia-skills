@@ -118,6 +118,7 @@ return [
     <li><strong>Guarda tres versiones</strong>: el escaneo original, la restaurada y, si la hay, la coloreada. Pon en el nombre del archivo quién sale y el año aproximado.</li>
     <li><strong>Indica que está restaurada con IA</strong> si la compartes o la usas en un <a href="/guias/hacer-un-arbol-genealogico-con-ia">árbol genealógico</a>, para que nadie la tome por un documento exacto.</li>
     <li><strong>Para imprimir</strong>, exporta a la máxima resolución y pide una prueba pequeña antes de encargar una copia grande.</li>
+    <li><strong>Un homenaje</strong>: con la foto restaurada de un abuelo o de un padre que ya no está, puedes crear una imagen en la que aparecéis juntos. Lo explica el <a href="/skills/prompt-para-fotos-con-familiares-fallecidos-como-homenaje">prompt para fotos con familiares fallecidos</a>, con el mismo cuidado de no presentarla como una foto real.</li>
     <li><strong>Animarla</strong>: algunas herramientas de vídeo convierten la foto en un clip corto en el que la persona sonríe o gira la cabeza. Emociona, pero es un efecto inventado; cómo hacerlo sin que la cara cambie está en <a href="/guias/animar-una-foto-con-ia">animar una foto con IA</a>.</li>
 </ul>
 

@@ -10,7 +10,7 @@ return [
     'published' => '2026-09-28',
     'updated' => '2026-09-28',
     'readingMinutes' => 8,
-    'words' => 1359,
+    'words' => 1438,
     'about' => 'Uso de la inteligencia artificial por el profesorado',
     'related' => ['ayudar-con-los-deberes-con-ia', 'hacer-un-examen-tipo-test-con-ia', 'resolver-problemas-de-matematicas-con-ia', 'estudiar-con-ia', 'tfg-con-ia', 'se-nota-si-un-texto-lo-escribe-una-ia', 'como-escribir-prompts-efectivos', 'usar-ia-sin-filtrar-datos-de-clientes', 'alucinaciones-de-la-ia'],
     'toc' => [
@@ -142,6 +142,8 @@ entendido. No pongas notas.</code></pre>
     <li>Revisa el resultado con lupa las tres primeras veces. Anota qué corriges y añádelo al prompt.</li>
     <li>Cuando el borrador te salga casi bien a la primera, pasa a la siguiente tarea.</li>
 </ol>
+
+<p>Dos tareas que suelen dar buen resultado desde el principio: preparar <a href="/skills/prompt-para-hacer-fichas-educativas-de-ejercicios-para-primaria">fichas de ejercicios para primaria</a> con su hoja de soluciones y montar un <a href="/skills/prompt-para-crear-un-kahoot-o-un-cuestionario-con-ia">Kahoot o un cuestionario</a> listo para importar.</p>
 
 <p>En un mes tendrás cuatro o cinco plantillas que te ahorran horas, y un criterio propio sobre dónde la IA te ayuda y dónde prefieres hacerlo tú. Y si las familias te preguntan cómo pueden ayudar en casa sin que la IA haga los deberes, puedes enviarles <a href="/guias/ayudar-con-los-deberes-con-ia">esta guía para padres</a>.</p>
 HTML,

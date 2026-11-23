@@ -81,7 +81,7 @@ return [
 <ul>
     <li><strong>Moodle</strong>: «Dame las preguntas en formato GIFT». Lo pegas en un archivo de texto y lo importas desde el banco de preguntas. El formato Aiken también vale y es más sencillo.</li>
     <li><strong>Google Forms</strong>: activa el modo cuestionario y pide una tabla con pregunta, opciones y respuesta correcta para copiar más rápido.</li>
-    <li><strong>Kahoot</strong>: admite importar desde una hoja de cálculo con su plantilla. Pide a la IA una tabla con esas columnas y con opciones de menos de 75 caracteres.</li>
+    <li><strong>Kahoot</strong>: admite importar desde una hoja de cálculo con su plantilla. Pide a la IA una tabla con esas columnas y con opciones de menos de 75 caracteres; el <a href="/skills/prompt-para-crear-un-kahoot-o-un-cuestionario-con-ia">prompt para crear un Kahoot con IA</a> ya lo trae preparado.</li>
     <li><strong>Papel</strong>: pide dos modelos con el orden de preguntas y opciones cambiado, y la plantilla de cada uno.</li>
 </ul>
 
