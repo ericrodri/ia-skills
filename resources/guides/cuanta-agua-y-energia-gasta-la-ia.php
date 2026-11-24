@@ -3,12 +3,13 @@
 return [
     'title' => 'Cuánta agua y energía gasta ChatGPT: los datos reales por pregunta',
     'navTitle' => 'Agua y energía de la IA',
-    'seoTitle' => 'Cuánta agua y energía gasta ChatGPT por pregunta',
-    'description' => 'Cuánta agua y electricidad gasta una pregunta a ChatGPT o Gemini según los datos publicados, por qué no coinciden y dónde está el impacto real.',
+    // Todas las búsquedas son «cuánta agua gasta ChatGPT por pregunta»: puesto 7 y 0 clics en 28 días a 24-11-2026.
+    'seoTitle' => 'Cuánta agua gasta ChatGPT por pregunta: unas gotas',
+    'description' => 'Una pregunta a ChatGPT o Gemini gasta unos 0,3 ml de agua, unas cinco gotas, según OpenAI y Google. Por qué otros estudios dicen medio litro.',
     'excerpt' => 'Unas cifras dicen que cada pregunta a ChatGPT gasta media botella de agua; otras, cinco gotas. Las dos vienen de fuentes serias. La diferencia está en qué se cuenta y qué se deja fuera.',
     'category' => 'Fundamentos',
     'published' => '2026-11-03',
-    'updated' => '2026-11-03',
+    'updated' => '2026-11-24',
     'readingMinutes' => 9,
     'words' => 1544,
     'about' => 'El consumo de agua y energía de la inteligencia artificial generativa',

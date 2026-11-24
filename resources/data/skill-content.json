@@ -2419,5 +2419,37 @@
                 "a": "No. Las normas de Instagram prohíben inflar seguidores o me gusta de forma artificial, y los seguidores falsos no interactúan, así que empeoran tus estadísticas. Es mejor publicar lo que tus datos dicen que funciona."
             }
         ]
+    },
+    "tu-yo-de-la-infancia-y-tu-yo-actual-juntos-en-la-misma-foto-con-ia": {
+        "answer": "Sube a ChatGPT o a Gemini una foto tuya de ahora y otra de cuando eras niño, pega el prompt y elige qué hacéis: abrazaros de lado, sentaros en un banco o daros la mano. Lo que más ayuda: que en las dos fotos se vea bien la cara, pedir la misma luz para los dos y una diferencia de estatura realista.",
+        "steps": [
+            "Busca una foto tuya de pequeño en la que se te vea bien la cara. Si es de papel, escanéala o hazle una foto de frente y con buena luz.",
+            "Elige una foto tuya actual con luz y ángulo parecidos, de frente o de tres cuartos.",
+            "Sube las dos a ChatGPT o Gemini, pega el prompt y rellena la edad, lo que hacéis, el lugar y el acabado.",
+            "Compara las dos caras con las fotos originales y corrige lo que falle de una en una con las frases de «Si no sale bien».",
+            "Descarga la versión final en el tamaño más grande."
+        ],
+        "faq": [
+            {
+                "q": "¿Cómo hago una foto con mi yo de niño con IA?",
+                "a": "Sube a ChatGPT o Gemini una foto tuya de ahora y otra de cuando eras pequeño, y pide que las una en una sola escena realista conservando cada cara tal como aparece. Indica la edad que tenías, qué hacéis y el lugar. Sale mejor si las dos fotos tienen luz y ángulo parecidos."
+            },
+            {
+                "q": "¿Cómo hago la foto abrazando a mi yo del pasado?",
+                "a": "Elige en el prompt el abrazo de lado y añade «con las dos caras visibles». Los abrazos de frente suelen tapar una cara o deformar las manos; de lado, o con la mano en el hombro, sale mejor a la primera."
+            },
+            {
+                "q": "¿Sirve el mismo prompt en Gemini y en ChatGPT?",
+                "a": "Sí. En los dos subes las fotos y pegas el texto en la misma conversación. Cuántas imágenes puedes crear gratis depende de tu cuenta y cambia a menudo; si se te acaba el cupo, prueba al día siguiente o en el otro asistente."
+            },
+            {
+                "q": "¿Por qué el niño se parece demasiado a mí de adulto?",
+                "a": "Porque la IA tiende a mezclar rasgos cuando las dos fotos son de la misma persona. Pide que el niño tenga exactamente la cara de la segunda foto, sin copiar rasgos del adulto, y si la foto de pequeño es diminuta, recórtala para que la cara ocupe más espacio."
+            },
+            {
+                "q": "¿Puedo hacerlo con fotos de otra persona?",
+                "a": "Solo con su permiso, porque es su imagen. Y si en tu foto de pequeño salen hermanos, primos o compañeros de clase, recórtalos o pregúntales antes de publicarla."
+            }
+        ]
     }
 }
