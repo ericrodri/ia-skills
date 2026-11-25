@@ -51,7 +51,7 @@ createInertiaApp({
     // página Vue solo se usa donde no hay Seo::share (panel, cuenta…).
     title: (title) =>
         usePage().props.seoTitle ||
-        (title.includes('ia-skills') ? title : `${title} | ia-skills`),
+        (title.includes('ia-skills') || title.length > 53 ? title : `${title} | ia-skills`),
     resolve: (name) =>
         resolvePageComponent(
             `./Pages/${name}.vue`,

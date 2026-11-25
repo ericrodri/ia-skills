@@ -6,6 +6,7 @@ use App\Http\Middleware\HandleInertiaRequests;
 use App\Models\Skill;
 use App\Models\User;
 use App\Support\SearchMisses;
+use App\Support\Seo;
 use App\Support\SkillSearch;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\Request;
@@ -67,6 +68,25 @@ class SearchImprovementsTest extends TestCase
             ->assertInertia(fn ($page) => $page
                 ->where('skills.total', 1)
                 ->where('skills.data.0.title', 'Prompt para resumir un PDF largo con IA'));
+    }
+
+    public function test_eccomerce_mal_escrito_encuentra_las_fichas_de_ecommerce(): void
+    {
+        Skill::factory()->create(['title' => 'Email marketing para ecommerce', 'description' => 'Carrito abandonado']);
+        Skill::factory()->create(['title' => 'Fotos de producto para tu tienda online', 'description' => 'Con IA']);
+        Skill::factory()->create(['title' => 'Plan de marketing', 'description' => 'Campañas']);
+
+        $this->get('/skills?q=eccomerce')
+            ->assertOk()
+            ->assertInertia(fn ($page) => $page->where('skills.total', 2));
+    }
+
+    public function test_el_title_lleva_la_marca_solo_si_cabe(): void
+    {
+        $this->assertSame('Prompt para un logo | ia-skills', Seo::normalize(['title' => 'Prompt para un logo'])['title']);
+
+        $largo = 'Prompt para hacer una foto con tu yo de niño con ChatGPT o Gemini';
+        $this->assertSame($largo, Seo::normalize(['title' => $largo])['title']);
     }
 
     public function test_hoja_de_vida_encuentra_las_fichas_de_curriculum(): void

@@ -397,9 +397,20 @@ class RelatedContent
             return [];
         }
 
-        $candidates = Cache::remember("related.similar.{$skill->id}", now()->addHours(self::CACHE_HOURS), function () use ($skill, $words) {
+        // Las fichas «Prompt para…» son tareas de uso personal (fotos, textos,
+        // estudios) repartidas entre diseño, autónomos y marketing. Para ellas
+        // se buscan parecidas del mismo tipo en cualquier profesión: desde la
+        // frutinovela, la profesión proponía estrategias de vídeo para empresas,
+        // y solo el 8-15 % de quien entra por una ficha veía otra página.
+        $consumer = Str::startsWith($skill->title, 'Prompt ');
+
+        $candidates = Cache::remember("related.similar.v2.{$skill->id}", now()->addHours(self::CACHE_HOURS), function () use ($skill, $words, $consumer) {
             $rows = Skill::published()
-                ->where('profession_id', $skill->profession_id)
+                ->when(
+                    $consumer,
+                    fn ($q) => $q->where('title', 'like', 'Prompt %'),
+                    fn ($q) => $q->where('profession_id', $skill->profession_id),
+                )
                 ->whereKeyNot($skill->getKey())
                 ->where(function ($q) use ($skill) {
                     // En SQL con las palabras tal cual (sin sinónimos): «foto»
@@ -449,6 +460,17 @@ class RelatedContent
      */
     public static function guideForSkill(Skill $skill, array $fallback = []): ?array
     {
+        return self::guidesForSkill($skill, 1)[0] ?? $fallback[0] ?? null;
+    }
+
+    /**
+     * Las guías que mejor encajan con una ficha, de más a menos, con el mismo
+     * criterio que guideForSkill(). Sin relleno: si no encaja ninguna, vacío.
+     *
+     * @return array<int, array{slug: string, title: string, excerpt: string, url: string}>
+     */
+    public static function guidesForSkill(Skill $skill, int $limit = 3): array
+    {
         $words = self::keywords($skill->title);
         $profession = $skill->profession?->slug;
 
@@ -462,8 +484,7 @@ class RelatedContent
 
         $frequency = array_count_values($guides->pluck('slugStems')->flatten()->all());
 
-        $best = null;
-        $bestScore = 0.0;
+        $scored = [];
 
         foreach ($guides as $guide) {
             $shared = array_intersect($words, $guide['stems']);
@@ -477,21 +498,26 @@ class RelatedContent
                 + ($ownProfession ? 0.05 : 0)
                 + count($shared) / count($guide['stems']) / 100;
 
-            if ($score > $bestScore) {
-                [$best, $bestScore] = [$guide, $score];
-            }
+            $scored[] = ['guide' => $guide, 'score' => $score, 'slugMatch' => array_intersect($shared, $guide['slugStems']) !== []];
         }
 
-        if ($best === null) {
-            return $fallback[0] ?? null;
-        }
-
-        return [
-            'slug' => $best['slug'],
-            'title' => $best['title'],
-            'excerpt' => $best['excerpt'],
-            'url' => route('guides.show', ['slug' => $best['slug']]),
-        ];
+        // Orden estable: a igual puntuación, la que va antes en Guides::all().
+        // Detrás de la primera solo entran las que comparten una palabra con
+        // su slug: coincidir en una palabra suelta del título («base» con la
+        // guía de DeepSeek) no basta para recomendarla.
+        return collect($scored)
+            ->sortByDesc('score')
+            ->values()
+            ->filter(fn (array $s, int $i) => $i === 0 || $s['slugMatch'])
+            ->take($limit)
+            ->map(fn (array $s) => [
+                'slug' => $s['guide']['slug'],
+                'title' => $s['guide']['title'],
+                'excerpt' => $s['guide']['excerpt'],
+                'url' => route('guides.show', ['slug' => $s['guide']['slug']]),
+            ])
+            ->values()
+            ->all();
     }
 
     /**

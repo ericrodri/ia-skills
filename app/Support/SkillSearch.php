@@ -79,6 +79,11 @@ class SkillSearch
         'fake' => ['falsa', 'retocada', 'manipulada'],
         // Erratas reales (17-11-2026).
         'carruzel' => ['carrusel'],
+        // «eccomerce» en tres intentos sin resultados (25-11-2026).
+        'eccomerce' => ['ecommerce', 'tienda'],
+        'ecomerce' => ['ecommerce', 'tienda'],
+        'eccommerce' => ['ecommerce', 'tienda'],
+        'ecommerce' => ['tienda'],
     ];
 
     /**

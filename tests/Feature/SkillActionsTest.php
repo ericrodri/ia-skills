@@ -91,12 +91,18 @@ class SkillActionsTest extends TestCase
         foreach (['Diseñar un logo con ChatGPT', 'Paleta de colores para una marca', 'Tipografías para una web', 'Moodboard de un proyecto'] as $title) {
             Skill::factory()->for($diseno)->create(['title' => $title, 'vote_score' => 50]);
         }
-        Skill::factory()->for($otra)->create(['title' => 'Prompt para mejorar una foto de producto']);
+        // Las fichas «Prompt para…» buscan parecidas del mismo tipo en
+        // cualquier profesión; las demás, solo en la suya.
+        $otraFoto = Skill::factory()->for($otra)->create(['title' => 'Prompt para mejorar una foto de producto', 'vote_score' => 0]);
+        Skill::factory()->for($otra)->create(['title' => 'Auditoría de fotos de producto para un ecommerce']);
 
         $similar = RelatedContent::similar($skill);
 
-        $this->assertSame([$parecida->slug], array_column($similar, 'slug'));
-        $this->assertSame([], RelatedContent::similar($skill, 3, [$parecida->slug]));
+        $this->assertSame([$parecida->slug, $otraFoto->slug], array_column($similar, 'slug'));
+        $this->assertSame([$otraFoto->slug], array_column(RelatedContent::similar($skill, 3, [$parecida->slug]), 'slug'));
+
+        $tecnica = Skill::factory()->for($diseno)->create(['title' => 'Auditoría de fotos para un catálogo']);
+        $this->assertNotContains($otraFoto->slug, array_column(RelatedContent::similar($tecnica), 'slug'));
 
         // Una guía de otra profesión necesita dos palabras en común
         // (auditoria-seo-tecnica es de marketing y desarrollo, no de ventas).
@@ -107,6 +113,9 @@ class SkillActionsTest extends TestCase
             ->assertOk()
             ->assertInertia(fn ($page) => $page
                 ->where('nextStep.skills.0.slug', $parecida->slug)
-                ->where('nextStep.guide.slug', 'borrar-personas-de-una-foto-con-ia'));
+                ->where('nextStep.guide.slug', 'borrar-personas-de-una-foto-con-ia')
+                // «Guías relacionadas» va por tema y no repite la de arriba.
+                ->has('guides', 2)
+                ->where('guides', fn ($guides) => ! collect($guides)->contains('slug', 'borrar-personas-de-una-foto-con-ia')));
     }
 }

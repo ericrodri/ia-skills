@@ -1,0 +1,8 @@
+[
+    {
+        "slug": "migracion-de-base-de-datos-sin-downtime",
+        "title": "Migración de base de datos sin tiempo de inactividad",
+        "description": "Migra el esquema de tu base de datos en producción sin tiempo de inactividad (downtime): expand-contract, blue-green, migración por lotes y vuelta atrás.",
+        "changelog": "Título y descripción con lo que se busca: migración sin tiempo de inactividad"
+    }
+]

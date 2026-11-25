@@ -259,13 +259,25 @@ class SkillController extends Controller
             'comments.replies.user:id,name,username,avatar',
         ]);
 
-        $guides = RelatedContent::guidesForProfession($skill->profession?->slug, 2);
+        // Guías por tema: la que mejor encaja va en «Siguiente paso» y las dos
+        // siguientes en «Guías relacionadas». Antes estas salían por profesión
+        // («Los skills más virales» y «Felicitar la Navidad» en la ficha de
+        // mejorar la calidad de una foto); la profesión queda de relleno.
+        $topicGuides = RelatedContent::guidesForSkill($skill, 3);
+        $professionGuides = RelatedContent::guidesForProfession($skill->profession?->slug, 3);
+        $nextGuide = $topicGuides[0] ?? $professionGuides[0] ?? null;
+        $guides = collect([...array_slice($topicGuides, 1), ...$professionGuides])
+            ->unique('slug')
+            ->reject(fn (array $g) => $g['slug'] === ($nextGuide['slug'] ?? null))
+            ->take(2)
+            ->values()
+            ->all();
         $neighbours = RelatedContent::neighbours($skill);
         // «Siguiente paso» bajo el prompt: fichas de la misma tarea y la guía
         // que mejor encaja. Sin repetir las vecinas del final de la página.
         $nextStep = [
             'skills' => RelatedContent::similar($skill, 3, array_column($neighbours, 'slug')),
-            'guide' => RelatedContent::guideForSkill($skill, $guides),
+            'guide' => $nextGuide,
         ];
 
         $this->shareShowSeo($skill, $guides, $neighbours);

@@ -45,7 +45,12 @@ class Seo
     {
         $title = self::clean($data['title'] ?? config('app.name'));
 
-        if (! Str::endsWith($title, self::TITLE_SUFFIX) && ! Str::contains($title, self::SITE_NAME)) {
+        // La marca solo se añade si cabe: dos de cada tres fichas tienen títulos
+        // de más de 53 caracteres y, con « | ia-skills», Google los cortaba a
+        // media frase. Mejor que se lea entero lo que la gente buscó.
+        if (! Str::endsWith($title, self::TITLE_SUFFIX)
+            && ! Str::contains($title, self::SITE_NAME)
+            && mb_strlen($title.self::TITLE_SUFFIX) <= self::TITLE_MAX) {
             $title .= self::TITLE_SUFFIX;
         }
 
