@@ -8,9 +8,11 @@ return [
     'excerpt' => 'Le cuentas una idea a ChatGPT y le parece brillante. Le cuentas la contraria y también. No es casualidad: es un sesgo conocido, y se corrige bastante bien con dos cambios.',
     'category' => 'Fundamentos',
     'published' => '2026-11-02',
-    'updated' => '2026-11-02',
+    // 26-11-2026: enlace a la ficha «crítico y brutalmente honesto». La guía
+    // seguía «Descubierta: actualmente sin indexar», sin impresiones.
+    'updated' => '2026-11-26',
     'readingMinutes' => 10,
-    'words' => 1752,
+    'words' => 1785,
     'about' => 'La complacencia de los asistentes de IA y cómo conseguir respuestas sinceras',
     'related' => ['alucinaciones-de-la-ia', 'como-escribir-prompts-efectivos', 'como-usar-chatgpt', 'errores-al-usar-ia-en-el-trabajo', 'que-la-ia-escriba-como-un-humano', 'claude-vs-chatgpt-para-trabajar'],
     'toc' => [
@@ -30,7 +32,7 @@ return [
         '¿Gemini y Claude también te dan la razón?' => 'Sí, en mayor o menor grado según la versión, porque se entrenan con métodos parecidos. Los tres permiten guardar instrucciones permanentes: en ChatGPT están en Personalización, en Gemini en las instrucciones guardadas o en una Gema, y en Claude en las preferencias del perfil o en las instrucciones de un proyecto. El mismo texto sirve para los tres.',
     ],
     'ctaTitle' => 'Prompts para pedir una crítica de verdad',
-    'ctaBody' => 'La instrucción completa, lista para copiar, está en el <a href="/skills/prompt-para-que-la-ia-no-sea-complaciente-instrucciones-permanentes-para-chatgpt-gemini-o-claude">prompt para que la IA no sea complaciente</a>. Hay versiones para casos concretos: la <a href="/skills/critica-sincera-de-una-idea-de-negocio-sin-halagos-y-con-lo-que-tendria-que-ser-verdad-para-que-funcione">crítica sincera de una idea de negocio</a> y la <a href="/skills/opinion-sincera-de-tu-curriculum-como-lo-leeria-un-reclutador-esceptico">opinión sincera de tu currículum</a>.',
+    'ctaBody' => 'La instrucción completa, lista para copiar, está en el <a href="/skills/prompt-para-que-la-ia-no-sea-complaciente-instrucciones-permanentes-para-chatgpt-gemini-o-claude">prompt para que la IA no sea complaciente</a>, y para una sola conversación, en el <a href="/skills/prompt-para-que-chatgpt-sea-critico-y-brutalmente-honesto">prompt para que ChatGPT sea crítico y brutalmente honesto</a>. Hay versiones para casos concretos: la <a href="/skills/critica-sincera-de-una-idea-de-negocio-sin-halagos-y-con-lo-que-tendria-que-ser-verdad-para-que-funcione">crítica sincera de una idea de negocio</a> y la <a href="/skills/opinion-sincera-de-tu-curriculum-como-lo-leeria-un-reclutador-esceptico">opinión sincera de tu currículum</a>.',
     'body' => <<<'HTML'
 <p>Le cuentas a ChatGPT que vas a dejar tu trabajo para montar una cafetería y le parece una gran idea. Abres otro chat, le dices que te lo estás pensando pero tienes dudas, y también le parecen muy razonables tus dudas. Le enseñas un texto y es «claro y bien estructurado». Le enseñas el mismo texto diciendo que no te convence y entonces le encuentra cuatro problemas.</p>
 
@@ -85,7 +87,7 @@ return [
 
 <h2 id="prompts">Prompts para una conversación concreta</h2>
 
-<p>Si no quieres cambiar el comportamiento general, o necesitas una crítica más dura de lo normal en un caso concreto, estas frases funcionan solas:</p>
+<p>Si no quieres cambiar el comportamiento general, o necesitas una crítica más dura de lo normal en un caso concreto, estas frases funcionan solas. Si prefieres un prompt completo para pegar al empezar el chat, que ordene los fallos por gravedad y separe hechos de opiniones, tienes el <a href="/skills/prompt-para-que-chatgpt-sea-critico-y-brutalmente-honesto">prompt para que ChatGPT sea crítico y brutalmente honesto</a>.</p>
 
 <ul>
     <li><strong>Antes de tu opinión:</strong> «Dame primero los tres argumentos más fuertes en contra de esta idea. Después, tu valoración.»</li>

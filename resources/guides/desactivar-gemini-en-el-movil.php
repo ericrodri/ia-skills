@@ -3,14 +3,16 @@
 return [
     'title' => 'Cómo desactivar Gemini en el móvil: botón de encendido, «Hey Google» y actividad',
     'navTitle' => 'Desactivar Gemini en el móvil',
-    'seoTitle' => 'Cómo desactivar Gemini en Android, Samsung y Xiaomi',
-    'description' => 'Cómo quitar Gemini del botón de encendido, apagar «Hey Google», dejar de usarlo como asistente y borrar su actividad en Android, Samsung y Xiaomi.',
+    // 26-11-2026: 0,4 % de CTR en el puesto 7,7. Casi todas las búsquedas son
+    // de quien ve Gemini al intentar apagar el móvil, y muchas dicen «celular».
+    'seoTitle' => 'Cómo desactivar Gemini y quitarlo del botón de apagado',
+    'description' => '¿Te sale Gemini al apagar el móvil o el celular? Cómo quitarlo del botón de encendido en Samsung, Xiaomi y Pixel, apagar «Hey Google» y borrar su actividad.',
     'excerpt' => 'Gemini sustituyó al Asistente de Google en los móviles Android y ya no hay botón para volver atrás. Lo que sí puedes hacer es que no salte al mantener pulsado el botón, que no escuche «Hey Google» y que no guarde tus conversaciones.',
     'category' => 'Herramientas',
     'published' => '2026-11-06',
-    'updated' => '2026-11-06',
+    'updated' => '2026-11-26',
     'readingMinutes' => 7,
-    'words' => 1367,
+    'words' => 1445,
     'about' => 'Desactivar el asistente Gemini en teléfonos Android',
     'related' => ['como-usar-gemini', 'gemini-no-genera-imagenes', 'chatgpt-vs-gemini', 'hablar-con-chatgpt-por-voz', 'ia-local-privada-en-tu-ordenador', 'memoria-e-historial-de-chatgpt'],
     'toc' => [
@@ -22,6 +24,7 @@ return [
         'cual-elegir' => 'Qué desactivar según lo que te moleste',
     ],
     'faq' => [
+        '¿Por qué me sale Gemini cuando intento apagar el móvil?' => 'Porque en muchos móviles Android mantener pulsado el botón lateral abre el asistente en lugar del menú de apagado, y ese asistente ahora es Gemini. Se cambia en los ajustes del sistema: busca «botón lateral» o «botón de encendido» y elige «Menú de apagado». Mientras tanto, en móviles como los Samsung o los Pixel puedes apagar desde el icono de apagado del panel que se despliega desde arriba.',
         '¿Se puede volver al Asistente de Google en lugar de Gemini?' => 'En los móviles Android, ya no. Google retiró el Asistente en septiembre de 2026 y quitó del menú de Gemini la opción de «Cambiar al Asistente de Google». Lo que sí puedes hacer es que Gemini no se abra con el botón ni con la voz, o dejar el móvil sin ningún asistente. Los altavoces y pantallas Nest no se ven afectados por ese cambio.',
         '¿Cómo quito Gemini del botón de encendido?' => 'En Ajustes, busca «botón» o «gestos». En un Pixel está en Sistema, Gestos, Mantener pulsado el botón de encendido; en Samsung, en Funciones avanzadas, Botón lateral. Cambia la acción de mantener pulsado a «Menú de apagado». A partir de ahí el botón vuelve a mostrar las opciones de apagar y reiniciar.',
         '¿Puedo desinstalar Gemini?' => 'Depende del móvil. Si venía de fábrica, Android suele ofrecer «Desactivar» en lugar de «Desinstalar». Ojo: según la propia ayuda de Google, borrar la aplicación no quita Gemini como asistente predeterminado. Para eso hay que ir a Aplicaciones predeterminadas, Aplicación de asistente digital, y elegir «Ninguna».',
