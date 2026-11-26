@@ -164,6 +164,14 @@ function logout() {
                                 >
                                     Skills guardadas
                                 </Link>
+                                <!-- /mcp es Blade, no Inertia: enlace normal -->
+                                <a
+                                    v-if="$page.props.nav?.mcp"
+                                    :href="$page.props.nav.mcp"
+                                    class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                                >
+                                    Conectar con Claude
+                                </a>
                                 <hr class="my-1 border-gray-100 dark:border-gray-700" />
                                 <button
                                     @click="logout"
@@ -235,7 +243,7 @@ function logout() {
                         <a href="/guias" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guías</a>
                         <a href="/feed.xml" class="hover:text-gray-900 dark:hover:text-white transition-colors">RSS</a>
                         <!-- /mcp es Blade, no Inertia: enlace normal -->
-                        <a v-if="$page.props.nav?.mcp" :href="$page.props.nav.mcp" class="hover:text-gray-900 dark:hover:text-white transition-colors">Claude Code (MCP)</a>
+                        <a v-if="$page.props.nav?.mcp" :href="$page.props.nav.mcp" class="hover:text-gray-900 dark:hover:text-white transition-colors">Usar en Claude (MCP)</a>
                         <Link :href="route('how-it-works')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Cómo funciona</Link>
                         <Link :href="route('skills.saved')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Guardadas</Link>
                         <Link v-if="!auth?.user" :href="route('register')" class="hover:text-gray-900 dark:hover:text-white transition-colors">Registrarse</Link>

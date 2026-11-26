@@ -105,6 +105,9 @@
                                 @endif
                                 <a href="{{ route('profile.edit') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">Ajustes</a>
                                 <a href="{{ route('skills.saved') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">Skills guardadas</a>
+                                @if(\App\Support\SkillMarkdown::mcpAvailable())
+                                    <a href="{{ route('mcp') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">Conectar con Claude</a>
+                                @endif
                                 <hr class="my-1 border-gray-100 dark:border-gray-700">
                                 <form method="POST" action="{{ route('logout') }}">
                                     @csrf
@@ -143,7 +146,7 @@
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('how-it-works') }}">Cómo funciona</a></li>
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('skills.saved') }}">Guardadas</a></li>
                         @if(\App\Support\SkillMarkdown::mcpAvailable())
-                            <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('mcp') }}">Claude Code (MCP)</a></li>
+                            <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('mcp') }}">Usar en Claude (MCP)</a></li>
                         @endif
                         <li><a class="hover:text-brand-600 dark:hover:text-brand-400" href="{{ route('legal.privacy') }}">Privacidad</a></li>
                     </ul>

@@ -53,7 +53,7 @@ defineProps({ skills: { type: Object, default: null }, hasApiToken: Boolean })
                     Claude, saved_skills (App\Support\McpConnector) devuelve estas
                     fichas sin copiar ninguna clave. La API key queda para las
                     herramientas que no permiten iniciar sesión.
-                    La guía es Blade, no Inertia: <a>, no <Link>.
+                    /mcp y la guía son Blade, no Inertia: <a>, no <Link>.
                 -->
                 <div class="mb-6 flex items-start gap-3 rounded-xl border border-brand-100 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/20 px-4 py-3">
                     <span class="text-lg shrink-0 mt-0.5">🔌</span>
@@ -63,7 +63,7 @@ defineProps({ skills: { type: Object, default: null }, hasApiToken: Boolean })
                             Añade el conector MCP de ia-skills en Claude (web, escritorio, móvil o Claude Code) e inicia sesión. Después basta con decirle «usa mis guardadas de ia-skills» y te trae el prompt completo, sin copiar ni pegar.
                         </p>
                         <p class="text-xs text-brand-600 dark:text-brand-400 mt-2 flex flex-wrap gap-x-4 gap-y-1">
-                            <a href="/guias/conectar-ia-skills-a-claude" class="font-medium hover:underline">Cómo conectarlo (2 minutos) →</a>
+                            <a :href="$page.props.nav?.mcp ?? '/guias/conectar-ia-skills-a-claude'" class="font-medium hover:underline">Cómo conectarlo (2 minutos) →</a>
                             <Link :href="route('profile.edit') + '#api'" class="hover:underline">
                                 {{ hasApiToken ? 'Ver tu API key' : 'API key' }} para otras herramientas
                             </Link>

@@ -30,7 +30,8 @@ class McpPageTest extends TestCase
 
         $this->get(route('mcp'))
             ->assertOk()
-            ->assertSee('ia-skills dentro de Claude Code')
+            ->assertSee('Usa ia-skills dentro de Claude')
+            ->assertSee(route('api.mcp.account'), false)
             ->assertSee('claude mcp add ia-skills -- npx -y ia-skills mcp', false);
     }
 
@@ -52,7 +53,8 @@ class McpPageTest extends TestCase
 
         $this->get(route('mcp'))
             ->assertOk()
-            ->assertSee('Qué puede hacer Claude con él')
+            ->assertSee('Qué puede ver y qué no')
+            ->assertSee('Personalizar → Conectores')
             ->assertSee('¿Qué datos envía?')
             ->assertSee(route('professions.show', ['profession' => 'legal']), false);
     }

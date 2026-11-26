@@ -8,7 +8,8 @@ use App\Support\SkillMarkdown;
 use Illuminate\Contracts\View\View;
 
 /**
- * /mcp — el catálogo dentro de Claude Code.
+ * /mcp — ia-skills dentro de Claude: el conector remoto (web, escritorio,
+ * móvil y Claude Code) y la versión local que instala skills como archivos.
  *
  * Es la URL que se comparte fuera: la que figura como `websiteUrl` en el
  * registro oficial de MCP, la que se envía a los directorios y la que se pega
@@ -29,14 +30,14 @@ class McpController extends Controller
         $package = config('distribution.npm_package');
 
         Seo::share([
-            'title' => 'ia-skills en Claude Code: servidor MCP con prompts en español',
-            'description' => "Conecta Claude Code al catálogo de ia-skills con un comando y deja que Claude busque e instale por su cuenta {$count} prompts y skills de IA en español para tu profesión.",
+            'title' => 'Usa ia-skills en Claude: conector MCP con prompts en español',
+            'description' => "Conecta ia-skills a Claude (web, móvil o Claude Code) y pídele sin salir del chat {$count} prompts en español, tus guardadas y tus skills privadas.",
             'canonical' => route('mcp'),
             'schema' => [
                 Seo::organization(),
                 Seo::breadcrumbs([
                     'Inicio' => route('home'),
-                    'Claude Code (MCP)' => route('mcp'),
+                    'Usar en Claude (MCP)' => route('mcp'),
                 ]),
                 [
                     '@context' => 'https://schema.org',
@@ -44,7 +45,7 @@ class McpController extends Controller
                     'name' => 'ia-skills MCP',
                     'applicationCategory' => 'DeveloperApplication',
                     'operatingSystem' => 'macOS, Linux, Windows',
-                    'description' => "Servidor MCP que da a Claude Code acceso al catálogo de ia-skills: {$count} prompts y skills de IA en español, organizados por profesión.",
+                    'description' => "Conector MCP que da a Claude acceso al catálogo de ia-skills: {$count} prompts y skills de IA en español, organizados por profesión, más las fichas guardadas y las skills privadas de quien inicia sesión.",
                     'url' => route('mcp'),
                     'downloadUrl' => "https://www.npmjs.com/package/{$package}",
                     'inLanguage' => 'es',
