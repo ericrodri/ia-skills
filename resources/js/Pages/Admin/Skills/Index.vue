@@ -14,7 +14,7 @@ const rejectingSkill = ref(null)
 const rejectForm = useForm({ reason: '' })
 
 function approve(skill) {
-    router.post(route('admin.skills.approve', skill.id), {}, {
+    router.post(route('admin.skills.approve', skill.slug), {}, {
         preserveScroll: true,
     })
 }
@@ -25,7 +25,7 @@ function openReject(skill) {
 }
 
 function submitReject() {
-    rejectForm.post(route('admin.skills.reject', rejectingSkill.value.id), {
+    rejectForm.post(route('admin.skills.reject', rejectingSkill.value.slug), {
         preserveScroll: true,
         onSuccess: () => {
             rejectingSkill.value = null
