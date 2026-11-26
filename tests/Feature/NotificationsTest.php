@@ -9,7 +9,6 @@ use App\Models\User;
 use App\Notifications\CommentReplied;
 use App\Notifications\NewCommentOnSkill;
 use App\Notifications\SkillApproved;
-use App\Notifications\SkillRejected;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Notifications\ChannelManager;
 use Illuminate\Support\Facades\Notification;
@@ -56,13 +55,26 @@ class NotificationsTest extends TestCase
         Notification::assertNothingSent();
     }
 
-    public function test_rejecting_a_skill_sends_the_reason(): void
+    public function test_rejecting_a_skill_sends_no_email(): void
     {
         $this->actingAs($this->admin)
             ->post(route('admin.skills.reject', $this->skill), ['reason' => 'Falta el formato de salida'])
             ->assertRedirect();
 
-        Notification::assertSentTo($this->author, SkillRejected::class, fn ($n) => $n->reason === 'Falta el formato de salida');
+        Notification::assertNothingSent();
+        $this->assertSame('rejected', $this->skill->fresh()->status);
+        $this->assertSame('Falta el formato de salida', $this->skill->fresh()->rejection_reason);
+    }
+
+    public function test_rejecting_without_a_reason_is_allowed(): void
+    {
+        $this->actingAs($this->admin)
+            ->post(route('admin.skills.reject', $this->skill))
+            ->assertRedirect()
+            ->assertSessionHasNoErrors();
+
+        $this->assertSame('rejected', $this->skill->fresh()->status);
+        $this->assertNull($this->skill->fresh()->rejection_reason);
     }
 
     public function test_the_author_can_opt_out_of_emails(): void

@@ -175,7 +175,7 @@ const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', 
                 <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl w-full max-w-md p-6">
                     <h3 class="font-semibold text-gray-900 dark:text-white mb-1">Rechazar skill</h3>
                     <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                        Indica el motivo para que el autor pueda corregirla y volver a enviarla.
+                        No se envía ningún correo. El motivo es opcional: si lo escribes, el autor lo verá en su panel.
                     </p>
                     <p class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-3 bg-gray-50 dark:bg-gray-900 rounded-lg px-3 py-2">
                         "{{ rejectingSkill.title }}"
@@ -183,14 +183,14 @@ const difficultyLabel = { beginner: 'Principiante', intermediate: 'Intermedio', 
                     <textarea
                         v-model="rejectForm.reason"
                         rows="4"
-                        placeholder="Ej: El prompt contiene código potencialmente malicioso. Por favor, revisa las secciones X e Y."
+                        placeholder="Motivo (opcional)"
                         class="w-full rounded-xl border border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 px-4 py-3 text-sm focus:border-brand-400 focus:ring-2 focus:ring-brand-100 outline-none resize-none"
                     />
                     <p v-if="rejectForm.errors.reason" class="text-xs text-red-500 mt-1">{{ rejectForm.errors.reason }}</p>
                     <div class="flex gap-3 mt-4">
                         <button
                             @click="submitReject"
-                            :disabled="rejectForm.processing || !rejectForm.reason.trim()"
+                            :disabled="rejectForm.processing"
                             class="flex-1 py-2.5 rounded-xl bg-red-600 hover:bg-red-700 disabled:opacity-50 text-white text-sm font-semibold transition-colors"
                         >
                             Confirmar rechazo

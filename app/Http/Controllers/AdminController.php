@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Skill;
 use App\Notifications\SkillApproved;
-use App\Notifications\SkillRejected;
 use App\Support\Notify;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -49,12 +48,15 @@ class AdminController extends Controller
 
         $wasUnpublished = $skill->status !== 'published';
 
-        $skill->update([
+        // forceFill: los campos de revisión no están en $fillable (los
+        // formularios del autor no deben poder tocarlos) y update() los
+        // descartaba en silencio, así que el motivo nunca se guardaba.
+        $skill->forceFill([
             'status'           => 'published',
             'reviewed_by'      => auth()->id(),
             'reviewed_at'      => now(),
             'rejection_reason' => null,
-        ]);
+        ])->save();
 
         if ($wasUnpublished) {
             $skill->profession->increment('skills_count');
@@ -69,23 +71,25 @@ class AdminController extends Controller
         abort_if($skill->isPrivate(), 404);
 
         $request->validate([
-            'reason' => 'required|string|max:1000',
+            'reason' => 'nullable|string|max:1000',
         ]);
 
         $wasPublished = $skill->status === 'published';
 
-        $skill->update([
+        $skill->forceFill([
             'status'           => 'rejected',
             'rejection_reason' => $request->reason,
             'reviewed_by'      => auth()->id(),
             'reviewed_at'      => now(),
-        ]);
+        ])->save();
 
         if ($wasPublished) {
             $skill->profession->decrement('skills_count');
         }
 
-        Notify::send($skill->author, new SkillRejected($skill, $request->reason));
+        // Sin correo al autor (decisión de 2026-11-26): casi todo lo que se
+        // rechaza no es un prompt aprovechable y el aviso no aportaba nada.
+        // Si hay motivo, lo ve en su panel (Dashboard.vue).
 
         return back()->with('success', "Skill rechazada.");
     }
