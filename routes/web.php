@@ -113,6 +113,11 @@ Route::get('/mcp', McpController::class)->name('mcp');
 Route::get('/privacidad', [LegalController::class, 'privacy'])->name('legal.privacy');
 
 
+// Guardar no exige confirmar el email: es privado y no publica nada. Antes lo
+// exigía y solo una de cada cuatro altas llegaba a confirmarlo (26-11-2026).
+Route::post('/skills/{skill:slug}/guardar', [SavedSkillController::class, 'toggle'])
+    ->middleware(['auth', 'throttle:votes'])->name('skills.save');
+
 // Auth-protected routes
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/skills/crear', [SkillController::class, 'create'])->name('skills.create');
@@ -124,7 +129,6 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::delete('/skills/{skill:slug}', [SkillController::class, 'destroy'])->middleware('throttle:skill-writes')->name('skills.destroy');
 
     Route::post('/skills/{skill:slug}/votar', VoteController::class)->middleware('throttle:votes')->name('skills.vote');
-    Route::post('/skills/{skill:slug}/guardar', [SavedSkillController::class, 'toggle'])->middleware('throttle:votes')->name('skills.save');
 
     Route::post('/skills/{skill:slug}/comentarios', [CommentController::class, 'store'])->middleware('throttle:comments')->name('comments.store');
     Route::delete('/comentarios/{comment}', [CommentController::class, 'destroy'])->name('comments.destroy');

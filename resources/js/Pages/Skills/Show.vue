@@ -224,7 +224,13 @@ async function vote(value) {
 }
 
 async function toggleSave() {
-    if (!auth?.user) { router.visit(route('login')); return }
+    // Sin cuenta: al registro, que vuelve aquí con la ficha ya guardada
+    // (App\Support\PendingSave).
+    if (!auth?.user) {
+        track('guardar_sin_cuenta')
+        router.visit(route('register', { guardar: props.skill.slug }))
+        return
+    }
     const { data } = await axios.post(route('skills.save', props.skill.slug))
     saved.value = data.saved
     savesCount.value = data.saves_count

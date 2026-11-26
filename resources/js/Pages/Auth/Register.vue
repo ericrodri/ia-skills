@@ -1,7 +1,13 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue'
 import InputError from '@/Components/InputError.vue'
+import GoogleButton from '@/Components/GoogleButton.vue'
 import { Head, Link, useForm, usePage } from '@inertiajs/vue3'
+
+defineProps({
+    // Ficha que se quería guardar sin cuenta (App\Support\PendingSave).
+    pendingSave: { type: Object, default: null },
+})
 
 const page = usePage()
 
@@ -28,9 +34,16 @@ const submit = () => {
 
         <!-- Header -->
         <div class="mb-6">
-            <h1 class="text-xl font-bold text-gray-900 dark:text-white">Crea tu cuenta</h1>
-            <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Únete a la comunidad de profesionales de IA</p>
+            <h1 class="text-xl font-bold text-gray-900 dark:text-white">
+                {{ pendingSave ? 'Crea tu cuenta para guardar esta ficha' : 'Crea tu cuenta' }}
+            </h1>
+            <p v-if="pendingSave" class="mt-1 text-sm text-gray-500 dark:text-gray-400">
+                «{{ pendingSave.title }}» quedará en tus guardadas y volverás a ella. Es gratis y no hace falta confirmar el email para guardar.
+            </p>
+            <p v-else class="mt-1 text-sm text-gray-500 dark:text-gray-400">Guarda tus prompts favoritos y crea los tuyos, privados o públicos.</p>
         </div>
+
+        <GoogleButton :guardar="pendingSave?.slug" />
 
         <form @submit.prevent="submit" class="space-y-4">
             <input v-model="form.website" type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true" />
@@ -139,7 +152,7 @@ const submit = () => {
         <!-- Login link -->
         <p class="mt-6 text-center text-sm text-gray-500 dark:text-gray-400">
             ¿Ya tienes cuenta?
-            <Link :href="route('login')" class="font-medium text-brand-600 dark:text-brand-400 hover:underline">
+            <Link :href="route('login', pendingSave ? { guardar: pendingSave.slug } : {})" class="font-medium text-brand-600 dark:text-brand-400 hover:underline">
                 Inicia sesión
             </Link>
         </p>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Middleware;
 
+use App\Http\Controllers\Auth\GoogleController;
 use App\Support\BotGuard;
 use App\Support\SiteData;
 use App\Support\SkillMarkdown;
@@ -58,6 +59,8 @@ class HandleInertiaRequests extends Middleware
             // Ficha antibots de los formularios públicos (App\Support\BotGuard).
             // Se renueva en cada visita; los formularios la leen al enviar.
             'formToken' => fn () => BotGuard::token(),
+            // Botón «Continuar con Google» en el registro y el inicio de sesión.
+            'googleLogin' => fn () => $request->user() === null && GoogleController::enabled(),
             // Título SEO del servidor (Seo::share). Sin él, el <Head> de Vue
             // sustituía al cargar el título trabajado por uno genérico, y
             // Google indexa el título que queda tras ejecutar el JavaScript.

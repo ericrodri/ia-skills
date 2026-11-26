@@ -1,11 +1,14 @@
 <script setup>
 import GuestLayout from '@/Layouts/GuestLayout.vue'
 import InputError from '@/Components/InputError.vue'
+import GoogleButton from '@/Components/GoogleButton.vue'
 import { Head, Link, useForm } from '@inertiajs/vue3'
 
 defineProps({
     canResetPassword: { type: Boolean },
     status: { type: String },
+    // Ficha que se quería guardar sin cuenta (App\Support\PendingSave).
+    pendingSave: { type: Object, default: null },
 })
 
 const form = useForm({
@@ -35,6 +38,14 @@ const submit = () => {
         <div v-if="status" class="mb-4 rounded-lg bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 px-4 py-3 text-sm text-green-700 dark:text-green-400">
             {{ status }}
         </div>
+        <div v-if="$page.props.flash?.error" class="mb-4 rounded-lg bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 px-4 py-3 text-sm text-red-700 dark:text-red-400">
+            {{ $page.props.flash.error }}
+        </div>
+        <p v-if="pendingSave" class="mb-4 text-sm text-gray-600 dark:text-gray-400">
+            Al entrar se guardará «{{ pendingSave.title }}» y volverás a la ficha.
+        </p>
+
+        <GoogleButton :guardar="pendingSave?.slug" />
 
         <form @submit.prevent="submit" class="space-y-4">
             <!-- Email -->

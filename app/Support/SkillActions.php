@@ -2,6 +2,7 @@
 
 namespace App\Support;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -50,14 +51,23 @@ class SkillActions
         // Enlaces del bloque «Siguiente paso» bajo el prompt: si sirve para
         // que quien llega desde Google vea una segunda ficha.
         'siguiente' => 'Ir a una ficha o guía de «Siguiente paso»',
+        // Embudo de «Guardar» sin cuenta (App\Support\PendingSave), desde el
+        // 2026-11-26. Los tres últimos los apunta el servidor, no el navegador.
+        'guardar_sin_cuenta' => 'Pulsar «Guardar» sin cuenta',
+        'registro_guardar' => 'Crear cuenta para guardar la ficha',
+        'entrar_guardar' => 'Entrar con su cuenta para guardar la ficha',
+        'google_guardar' => 'Entrar con Google para guardar la ficha',
     ];
+
+    /** Las que solo apunta el servidor: el navegador no puede inventarlas. */
+    private const SERVER_ONLY = ['registro_guardar', 'entrar_guardar', 'google_guardar'];
 
     public static function record(Request $request): bool
     {
         $action = (string) $request->input('a', '');
         $slug = (string) $request->input('s', '');
 
-        if (! array_key_exists($action, self::ACTIONS) || $slug === '' || strlen($slug) > 255) {
+        if (! array_key_exists($action, self::ACTIONS) || in_array($action, self::SERVER_ONLY, true) || $slug === '' || strlen($slug) > 255) {
             return false;
         }
 
@@ -71,13 +81,23 @@ class SkillActions
             return false;
         }
 
+        self::count($skillId, $action);
+
+        return true;
+    }
+
+    /** Suma una acción a la ficha (también desde el servidor). Los admins no cuentan. */
+    public static function count(int $skillId, string $action, ?User $user = null): void
+    {
+        if ($user?->is_admin) {
+            return;
+        }
+
         DB::table('skill_actions')->upsert(
             [['day' => now()->toDateString(), 'skill_id' => $skillId, 'action' => $action, 'hits' => 1]],
             ['day', 'skill_id', 'action'],
             ['hits' => DB::raw('skill_actions.hits + 1')],
         );
-
-        return true;
     }
 
     /**

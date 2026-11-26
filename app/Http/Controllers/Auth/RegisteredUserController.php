@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Support\BotGuard;
+use App\Support\PendingSave;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -21,9 +22,12 @@ class RegisteredUserController extends Controller
     /**
      * Display the registration view.
      */
-    public function create(): Response
+    public function create(Request $request): Response
     {
-        return Inertia::render('Auth/Register');
+        return Inertia::render('Auth/Register', [
+            // ?guardar={slug}: viene de pulsar «Guardar» en una ficha sin cuenta.
+            'pendingSave' => PendingSave::remember($request, $request->query('guardar')),
+        ]);
     }
 
     /**
@@ -60,6 +64,8 @@ class RegisteredUserController extends Controller
         event(new Registered($user));
 
         Auth::login($user);
+
+        PendingSave::apply($request, $user, 'registro_guardar');
 
         // Si se registró a mitad de conectar Claude, vuelve a la pantalla de permiso.
         return AuthenticatedSessionController::toIntended(route('skills.saved', absolute: false));
