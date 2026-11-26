@@ -18,6 +18,13 @@ const desktopNav = computed(() => auth.value?.user
     ? primaryNav.value.filter((item) => item.route !== 'skills.saved')
     : primaryNav.value)
 
+// Sección activa, igual que en layouts/site.blade.php (`active` es el patrón
+// de ruta de SiteData::primaryNav(), p. ej. 'professions.*'). Sin negrita: el
+// cambio de ancho movería la barra, que con sesión iniciada va justa.
+const isActive = (item) => route().current(item.active)
+const activeClass = 'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20'
+const idleClass = 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50'
+
 // Alta en el resumen semanal sin cuenta (NewsletterController::subscribe).
 // Los usuarios registrados se suscriben desde su perfil.
 const newsletter = useForm({ email: '', website: '', source: 'footer' })
@@ -62,7 +69,9 @@ function logout() {
                             :key="item.route"
                             :is="item.inertia ? Link : 'a'"
                             :href="item.href"
-                            class="whitespace-nowrap px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+                            :aria-current="isActive(item) ? 'page' : undefined"
+                            class="whitespace-nowrap px-3 py-1.5 text-sm rounded-lg transition-colors"
+                            :class="isActive(item) ? activeClass : idleClass"
                         >
                             {{ item.label }}
                         </component>
@@ -214,7 +223,9 @@ function logout() {
                     :is="item.inertia ? Link : 'a'"
                     :href="item.href"
                     @click="showMobileNav = false"
-                    class="block px-2 py-2.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    :aria-current="isActive(item) ? 'page' : undefined"
+                    class="block px-2 py-2.5 text-sm transition-colors"
+                    :class="isActive(item) ? 'text-brand-700 dark:text-brand-400 font-medium' : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white'"
                 >
                     {{ item.label }}
                 </component>

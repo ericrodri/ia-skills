@@ -43,9 +43,11 @@
                                 href="{{ $item['href'] }}"
                                 @class([
                                     'whitespace-nowrap px-3 py-1.5 text-sm rounded-lg transition-colors',
-                                    'font-semibold text-brand-700 dark:text-brand-400' => request()->routeIs($item['active']),
-                                    'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
+                                    // Mismo resaltado que AppLayout.vue, sin negrita para no mover la barra.
+                                    'text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20' => request()->routeIs($item['active']),
+                                    'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50' => ! request()->routeIs($item['active']),
                                 ])
+                                @if(request()->routeIs($item['active'])) aria-current="page" @endif
                             >{{ $item['label'] }}</a>
                         @endforeach
                     </div>
@@ -69,7 +71,11 @@
                         </summary>
                         <div class="absolute right-0 top-full mt-2 w-56 bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 rounded-xl shadow-lg py-1 z-50">
                             @foreach($primaryNav as $item)
-                                <a href="{{ $item['href'] }}" class="block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">{{ $item['label'] }}</a>
+                                <a href="{{ $item['href'] }}" @class([
+                                    'block px-4 py-2.5 text-sm hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors',
+                                    'text-brand-700 dark:text-brand-400 font-medium' => request()->routeIs($item['active']),
+                                    'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
+                                ]) @if(request()->routeIs($item['active'])) aria-current="page" @endif>{{ $item['label'] }}</a>
                             @endforeach
                         </div>
                     </details>
