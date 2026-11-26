@@ -27,16 +27,6 @@ class PrimaryNavTest extends TestCase
         $this->assertContains('skills.saved', $routes);
     }
 
-    public function test_usar_en_claude_solo_aparece_si_la_pagina_mcp_existe(): void
-    {
-        config(['distribution.mcp_enabled' => true]);
-        $this->assertContains('mcp', array_column(SiteData::primaryNav(), 'route'));
-        $this->get(route('guides.index'))->assertSee('Usar en Claude');
-
-        config(['distribution.mcp_enabled' => false]);
-        $this->assertNotContains('mcp', array_column(SiteData::primaryNav(), 'route'));
-    }
-
     public function test_every_primary_nav_route_resolves(): void
     {
         foreach (SiteData::primaryNav() as $item) {

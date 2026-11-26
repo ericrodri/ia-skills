@@ -337,17 +337,41 @@ const faqItems = [
                     </div>
                 </div>
 
-                <!-- Atajo: el conector de Claude se salta los tres pasos.
-                     La guía es Blade: enlace con <a>, nunca con <Link>. -->
-                <div class="mt-14 rounded-2xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-6 sm:p-8 flex flex-col sm:flex-row sm:items-center gap-6">
-                    <div class="text-4xl shrink-0" aria-hidden="true">🔌</div>
-                    <div class="flex-1">
-                        <h3 class="font-semibold text-gray-900 dark:text-white">O deja que Claude las busque por ti</h3>
-                        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                            Añade ia-skills como conector en Claude y pídele «búscame un prompt para revisar contratos» sin salir de la conversación. Funciona en la web, la app de escritorio y Claude Code, también con el plan gratuito. Con tu cuenta, además, ve tus skills privadas.
-                        </p>
+                <!--
+                    Atajo: el conector MCP se salta los tres pasos. Es el sitio
+                    del conector en «Cómo funciona» (no en la cabecera, donde
+                    no cabía). /mcp y la guía son Blade: <a>, nunca <Link>.
+                -->
+                <div id="usar-en-claude" class="mt-14 scroll-mt-20 rounded-2xl border border-brand-100 dark:border-brand-800/50 bg-brand-50/60 dark:bg-brand-900/10 p-6 sm:p-8">
+                    <div class="flex items-start gap-4">
+                        <div class="text-4xl shrink-0" aria-hidden="true">🔌</div>
+                        <div class="flex-1 min-w-0">
+                            <h3 class="text-lg font-semibold text-gray-900 dark:text-white">O úsalas dentro de Claude, sin copiar nada</h3>
+                            <p class="mt-1 text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Con el conector MCP de ia-skills, Claude busca y lee los prompts por ti: le pides «búscame un prompt para revisar contratos» o «usa mis guardadas de ia-skills» y lo trae a la conversación. Es gratis, funciona en la web, el escritorio, el móvil y Claude Code, y el plan gratuito de Claude lo admite.
+                            </p>
+                        </div>
                     </div>
-                    <a href="/guias/conectar-ia-skills-a-claude" class="btn-primary shrink-0 text-center">Cómo conectarlo</a>
+
+                    <ol class="mt-6 grid sm:grid-cols-3 gap-4 text-sm">
+                        <li class="rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-4">
+                            <p class="font-semibold text-gray-900 dark:text-white"><span class="text-brand-600 dark:text-brand-400">1.</span> Añade el conector</p>
+                            <p class="mt-1 text-gray-500 dark:text-gray-400">En Claude: Personalizar → Conectores → Añadir conector personalizado, y pega la dirección de ia-skills.</p>
+                        </li>
+                        <li class="rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-4">
+                            <p class="font-semibold text-gray-900 dark:text-white"><span class="text-brand-600 dark:text-brand-400">2.</span> Inicia sesión (opcional)</p>
+                            <p class="mt-1 text-gray-500 dark:text-gray-400">Con tu cuenta de ia-skills, Claude ve también tus guardadas y tus skills privadas. Sin ella, el catálogo.</p>
+                        </li>
+                        <li class="rounded-xl bg-white dark:bg-gray-900 border border-gray-100 dark:border-gray-800 p-4">
+                            <p class="font-semibold text-gray-900 dark:text-white"><span class="text-brand-600 dark:text-brand-400">3.</span> Pídeselo</p>
+                            <p class="mt-1 text-gray-500 dark:text-gray-400">Activa ia-skills desde el botón + de la conversación y pide el prompt con tus palabras.</p>
+                        </li>
+                    </ol>
+
+                    <div class="mt-6 flex flex-wrap items-center gap-x-5 gap-y-3">
+                        <a :href="$page.props.nav?.mcp ?? '/guias/conectar-ia-skills-a-claude'" class="btn-primary">Ver la dirección y los pasos</a>
+                        <a href="/guias/conectar-ia-skills-a-claude" class="text-sm font-medium text-brand-600 dark:text-brand-400 hover:underline">Guía completa, con los errores habituales →</a>
+                    </div>
                 </div>
             </section>
 

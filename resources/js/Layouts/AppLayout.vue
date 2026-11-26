@@ -48,7 +48,7 @@ function logout() {
                 <div class="flex items-center gap-4">
                     <Link :href="route('home')" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
-                        <span>ia-skills</span>
+                        <span :class="auth?.user ? 'hidden min-[400px]:inline' : 'hidden min-[360px]:inline'">ia-skills</span>
                     </Link>
                     <div class="hidden xl:flex items-center gap-1">
                         <!--
@@ -62,7 +62,7 @@ function logout() {
                             :key="item.route"
                             :is="item.inertia ? Link : 'a'"
                             :href="item.href"
-                            class="whitespace-nowrap px-2 2xl:px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
+                            class="whitespace-nowrap px-3 py-1.5 text-sm text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 rounded-lg transition-colors"
                         >
                             {{ item.label }}
                         </component>
@@ -77,7 +77,7 @@ function logout() {
                          (con sesión iniciada no cabe entero en 1024-1279 px). -->
                     <button
                         @click="showMobileNav = !showMobileNav"
-                        class="xl:hidden p-1.5 -ml-1 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                        class="order-last xl:hidden p-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                         :aria-expanded="showMobileNav"
                         aria-controls="mobile-nav"
                         aria-label="Menú de navegación"
@@ -99,7 +99,7 @@ function logout() {
                             title="Administración"
                             class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
                         >
-                            🛡<span class="hidden 2xl:inline"> Admin</span>
+                            🛡
                         </Link>
 
                         <!-- Guardadas a la vista: es lo primero que busca quien vuelve
@@ -116,7 +116,7 @@ function logout() {
                             <svg class="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
                             </svg>
-                            <span class="hidden sm:inline xl:hidden 2xl:inline">Guardadas</span>
+                            <span class="hidden sm:inline">Guardadas</span>
                         </Link>
 
                         <Link :href="route('skills.create')" class="btn-primary">

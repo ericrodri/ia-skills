@@ -31,7 +31,7 @@
                 <div class="flex items-center gap-4">
                     <a href="{{ route('home') }}" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
-                        <span>ia-skills</span>
+                        <span class="{{ auth()->check() ? 'hidden min-[400px]:inline' : 'hidden min-[360px]:inline' }}">ia-skills</span>
                     </a>
                     {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
                          fuente que alimenta AppLayout.vue. No los dupliques aquí. --}}
@@ -42,7 +42,7 @@
                             <a
                                 href="{{ $item['href'] }}"
                                 @class([
-                                    'whitespace-nowrap px-2 2xl:px-3 py-1.5 text-sm rounded-lg transition-colors',
+                                    'whitespace-nowrap px-3 py-1.5 text-sm rounded-lg transition-colors',
                                     'font-semibold text-brand-700 dark:text-brand-400' => request()->routeIs($item['active']),
                                     'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
                                 ])
@@ -58,7 +58,7 @@
                 <div class="shrink-0 whitespace-nowrap flex items-center gap-2 sm:gap-3">
                     {{-- Menú móvil con <details>: estas páginas no cargan Vue, así que
                          el desplegable tiene que funcionar sin JavaScript. --}}
-                    <details class="xl:hidden relative" data-close-outside>
+                    <details class="order-last xl:hidden relative" data-close-outside>
                         <summary
                             class="list-none [&::-webkit-details-marker]:hidden cursor-pointer p-1.5 rounded-lg text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                             aria-label="Menú de navegación"
@@ -76,7 +76,7 @@
 
                     @auth
                         @if(auth()->user()->is_admin)
-                            <a href="{{ route('admin.skills.index') }}" class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors" title="Administración">🛡<span class="hidden 2xl:inline"> Admin</span></a>
+                            <a href="{{ route('admin.skills.index') }}" class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors" title="Administración">🛡</a>
                         @endif
 
                         <a
@@ -88,7 +88,7 @@
                             <svg class="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
                             </svg>
-                            <span class="hidden sm:inline xl:hidden 2xl:inline">Guardadas</span>
+                            <span class="hidden sm:inline">Guardadas</span>
                         </a>
 
                         <a href="{{ route('skills.create') }}" class="btn-primary"><span>+ Compartir<span class="hidden sm:inline"> skill</span></span></a>
