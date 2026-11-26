@@ -22,7 +22,7 @@ class SiteLayoutHeaderTest extends TestCase
             ->assertSee(route('login'), false)
             ->assertSee(route('register'), false)
             ->assertDontSee('Cerrar sesión')
-            ->assertDontSee('🛡 Admin');
+            ->assertDontSee(route('admin.skills.index'), false);
     }
 
     public function test_con_sesion_muestra_el_menu_de_usuario(): void
@@ -31,11 +31,12 @@ class SiteLayoutHeaderTest extends TestCase
 
         $this->actingAs($user)->get(route('guides.index'))
             ->assertOk()
-            ->assertSee('+ Compartir skill')
+            ->assertSee('+ Compartir')
+            ->assertSee('aria-label="Skills guardadas"', false)
             ->assertSee(route('dashboard'), false)
             ->assertSee(route('authors.show', ['user' => 'ana']), false)
             ->assertSee('Cerrar sesión')
-            ->assertDontSee('🛡 Admin')
+            ->assertDontSee(route('admin.skills.index'), false)
             ->assertDontSee('>Registrarse<', false);
     }
 
@@ -45,7 +46,7 @@ class SiteLayoutHeaderTest extends TestCase
 
         $this->actingAs($admin)->get(route('legal.privacy'))
             ->assertOk()
-            ->assertSee('🛡 Admin')
+            ->assertSee('title="Administración"', false)
             ->assertSee(route('admin.skills.index'), false);
     }
 }

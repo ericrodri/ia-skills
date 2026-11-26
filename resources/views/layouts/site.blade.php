@@ -28,14 +28,14 @@
     <div class="min-h-screen flex flex-col">
         <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800">
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4">
                     <a href="{{ route('home') }}" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
                     </a>
                     {{-- Enlaces desde App\Support\SiteData::primaryNav(), la misma
                          fuente que alimenta AppLayout.vue. No los dupliques aquí. --}}
-                    {{-- Con sesión, «Guardadas» ya está en el menú del avatar (igual que en AppLayout.vue). --}}
+                    {{-- Con sesión, «Guardadas» tiene su propio botón junto a «Compartir skill» (igual que en AppLayout.vue). --}}
                     <div class="hidden xl:flex items-center gap-1">
                         @foreach($primaryNav as $item)
                             @continue(auth()->check() && $item['route'] === 'skills.saved')
@@ -54,7 +54,8 @@
                 {{-- Misma cabecera que AppLayout.vue (sesión, admin, avatar). Estas
                      páginas no se cachean por usuario: si algún día se cachea su
                      HTML, esta parte tiene que salir de la caché. --}}
-                <div class="shrink-0 whitespace-nowrap flex items-center gap-3">
+                {{-- gap-2 en el móvil: con sesión no cabe con gap-3 (ver AppLayout.vue). --}}
+                <div class="shrink-0 whitespace-nowrap flex items-center gap-2 sm:gap-3">
                     {{-- Menú móvil con <details>: estas páginas no cargan Vue, así que
                          el desplegable tiene que funcionar sin JavaScript. --}}
                     <details class="xl:hidden relative" data-close-outside>
@@ -75,10 +76,22 @@
 
                     @auth
                         @if(auth()->user()->is_admin)
-                            <a href="{{ route('admin.skills.index') }}" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors">🛡 Admin</a>
+                            <a href="{{ route('admin.skills.index') }}" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors" title="Administración">🛡<span class="hidden 2xl:inline"> Admin</span></a>
                         @endif
 
-                        <a href="{{ route('skills.create') }}" class="btn-primary">+ Compartir skill</a>
+                        <a
+                            href="{{ route('skills.saved') }}"
+                            class="flex items-center gap-1.5 p-1.5 sm:px-3 text-sm rounded-lg text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
+                            aria-label="Skills guardadas"
+                            title="Skills guardadas"
+                        >
+                            <svg class="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                            </svg>
+                            <span class="hidden sm:inline">Guardadas</span>
+                        </a>
+
+                        <a href="{{ route('skills.create') }}" class="btn-primary">+ Compartir<span class="hidden sm:inline">&nbsp;skill</span></a>
 
                         <details class="relative" data-close-outside>
                             <summary

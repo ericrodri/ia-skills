@@ -12,8 +12,8 @@ const showMobileNav = ref(false)
 // que añadir un enlace aquí lo añade también en las guías.
 const primaryNav = computed(() => page.props.nav?.primary ?? [])
 
-// Con sesión, «Guardadas» ya está en el menú del avatar: quitarla de la barra
-// deja sitio a «Admin» y «Compartir skill» sin que nada se parta en dos líneas.
+// Con sesión, «Guardadas» tiene su propio botón junto a «Compartir skill»
+// (visible también en el móvil), así que sobra en la lista de enlaces.
 const desktopNav = computed(() => auth.value?.user
     ? primaryNav.value.filter((item) => item.route !== 'skills.saved')
     : primaryNav.value)
@@ -45,7 +45,7 @@ function logout() {
         <!-- Nav -->
         <header class="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm border-b border-gray-100 dark:border-gray-800 transition-colors duration-200">
             <nav class="max-w-6xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-                <div class="flex items-center gap-6">
+                <div class="flex items-center gap-4">
                     <Link :href="route('home')" class="shrink-0 whitespace-nowrap flex items-center gap-2 font-bold text-gray-900 dark:text-white hover:text-brand-600 dark:hover:text-brand-400 transition-colors">
                         <img src="/logo.png?v=2" alt="" width="28" height="28" class="w-7 h-7">
                         <span>ia-skills</span>
@@ -69,7 +69,10 @@ function logout() {
                     </div>
                 </div>
 
-                <div class="shrink-0 whitespace-nowrap flex items-center gap-3">
+                <!-- gap-2 en el móvil: con sesión iniciada (menú, Guardadas,
+                     Compartir y avatar) en 375 px no cabe con gap-3 y el menú
+                     se monta sobre el logo. -->
+                <div class="shrink-0 whitespace-nowrap flex items-center gap-2 sm:gap-3">
                     <!-- Menú móvil: por debajo de xl el nav principal está oculto
                          (con sesión iniciada no cabe entero en 1024-1279 px). -->
                     <button
@@ -93,13 +96,31 @@ function logout() {
                         <Link
                             v-if="auth.user.is_admin"
                             :href="route('admin.skills.index')"
+                            title="Administración"
                             class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
                         >
-                            🛡 Admin
+                            🛡<span class="hidden 2xl:inline"> Admin</span>
+                        </Link>
+
+                        <!-- Guardadas a la vista: es lo primero que busca quien vuelve
+                             tras guardar una ficha. En el móvil, solo el icono. -->
+                        <Link
+                            :href="route('skills.saved')"
+                            class="flex items-center gap-1.5 p-1.5 sm:px-3 text-sm rounded-lg transition-colors"
+                            :class="route().current('skills.saved')
+                                ? 'font-semibold text-brand-700 dark:text-brand-400 bg-brand-50 dark:bg-brand-900/20'
+                                : 'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50'"
+                            aria-label="Skills guardadas"
+                            title="Skills guardadas"
+                        >
+                            <svg class="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
+                            </svg>
+                            <span class="hidden sm:inline">Guardadas</span>
                         </Link>
 
                         <Link :href="route('skills.create')" class="btn-primary">
-                            + Compartir skill
+                            + Compartir<span class="hidden sm:inline">&nbsp;skill</span>
                         </Link>
 
                         <!-- Avatar + dropdown -->
