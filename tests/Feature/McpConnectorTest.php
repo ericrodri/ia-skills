@@ -109,6 +109,7 @@ class McpConnectorTest extends TestCase
     {
         $tools = collect($this->rpc('tools/list', [], $this->key)->json('result.tools'))->pluck('name')->all();
         $this->assertContains('my_skills', $tools);
+        $this->assertContains('saved_skills', $tools);
 
         $found = $this->tool('search_skills', ['query' => 'contratos'], $this->key);
         $this->assertStringContainsString('contratos-internos', $found);
@@ -128,6 +129,22 @@ class McpConnectorTest extends TestCase
             ->assertJsonPath('result.isError', true);
 
         $this->assertNotNull($this->owner->fresh()->api_token_last_used_at);
+    }
+
+    public function test_con_clave_lista_sus_guardadas_publicadas(): void
+    {
+        $this->assertStringContainsString('Todavía no has guardado', $this->tool('saved_skills', [], $this->key));
+
+        $retirada = Skill::factory()->create(['status' => 'draft', 'slug' => 'ficha-retirada']);
+        $this->owner->savedSkills()->attach([$this->public->id, $retirada->id]);
+        User::factory()->create()->savedSkills()->attach(Skill::factory()->create(['slug' => 'guardada-de-otro'])->id);
+
+        $saved = $this->tool('saved_skills', [], $this->key);
+        $this->assertStringContainsString('revisor-publico', $saved);
+        $this->assertStringNotContainsString('ficha-retirada', $saved);
+        $this->assertStringNotContainsString('guardada-de-otro', $saved);
+
+        $this->rpc('tools/call', ['name' => 'saved_skills', 'arguments' => []])->assertJsonPath('error.code', -32602);
     }
 
     public function test_una_clave_invalida_o_regenerada_no_entra(): void

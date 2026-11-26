@@ -33,7 +33,7 @@ class McpConnector
             .'Los campos entre [corchetes] del prompt son datos que el usuario debe rellenar: pídeselos o rellénalos con lo que ya sepas.';
 
         return $this->user
-            ? $base.' Este conector es personal: my_skills lista las skills propias del usuario, incluidas las privadas, que solo ve él y quien tenga su enlace. No las compartas fuera de esta conversación.'
+            ? $base.' Este conector es personal: my_skills lista las skills propias del usuario, incluidas las privadas, que solo ve él y quien tenga su enlace. No las compartas fuera de esta conversación. saved_skills lista las fichas que ha guardado en la web.'
             : $base;
     }
 
@@ -86,6 +86,13 @@ class McpConnector
                 ],
                 'annotations' => ['readOnlyHint' => true, 'openWorldHint' => false],
             ];
+            $tools[] = [
+                'name' => 'saved_skills',
+                'title' => 'Mis guardadas',
+                'description' => 'Lista las fichas que el usuario ha guardado en ia-skills.com con el botón «Guardar». Úsala cuando pida "mis guardadas", "mis favoritos" o "los prompts que guardé".',
+                'inputSchema' => ['type' => 'object', 'properties' => (object) []],
+                'annotations' => ['readOnlyHint' => true, 'openWorldHint' => false],
+            ];
         }
 
         return $tools;
@@ -104,6 +111,7 @@ class McpConnector
             'search_skills' => $this->search($args),
             'get_skill' => $this->get($args),
             'my_skills' => $this->user ? $this->mine($args) : null,
+            'saved_skills' => $this->user ? $this->saved() : null,
             default => null,
         };
     }
@@ -205,6 +213,27 @@ class McpConnector
 
         if ($skills->isEmpty()) {
             return $this->text('Todavía no tienes skills en ia-skills.com. Puedes guardar una privada en '.route('skills.create', ['privada' => 1]));
+        }
+
+        return $this->text($skills->map(fn (Skill $s) => $this->line($s))->implode("\n")."\n\nUsa get_skill con el slug para leer el prompt completo.");
+    }
+
+    /**
+     * Las fichas guardadas, las últimas primero. Solo las publicadas: una
+     * guardada que luego se fusionó o se retiró ya no tiene ficha que leer.
+     *
+     * @return array{text: string, isError: bool}
+     */
+    private function saved(): array
+    {
+        $skills = $this->user->savedSkills()
+            ->where('skills.status', 'published')
+            ->orderByDesc('saved_skills.created_at')
+            ->limit(100)
+            ->get(['skills.id', 'skills.slug', 'skills.title', 'skills.description', 'skills.status']);
+
+        if ($skills->isEmpty()) {
+            return $this->text('Todavía no has guardado ninguna ficha. Pulsa «Guardar» en cualquier ficha de '.route('skills.index').' y aparecerá aquí.');
         }
 
         return $this->text($skills->map(fn (Skill $s) => $this->line($s))->implode("\n")."\n\nUsa get_skill con el slug para leer el prompt completo.");

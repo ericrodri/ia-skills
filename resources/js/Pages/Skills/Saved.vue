@@ -29,8 +29,8 @@ defineProps({ skills: { type: Object, default: null }, hasApiToken: Boolean })
                     </div>
                     <div class="rounded-xl border border-brand-100 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/20 p-5">
                         <div class="text-2xl mb-3">🔌</div>
-                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm mb-1">API para tus IAs</h3>
-                        <p class="text-xs text-gray-500 dark:text-gray-400">Genera una API key y pega el endpoint en cualquier IA para importar tus skills guardadas en formato JSON al instante.</p>
+                        <h3 class="font-semibold text-gray-900 dark:text-white text-sm mb-1">Tenlas dentro de Claude</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400">Con el conector MCP de ia-skills, Claude te trae tus guardadas con el prompt completo cuando se las pidas.</p>
                     </div>
                 </div>
 
@@ -48,16 +48,27 @@ defineProps({ skills: { type: Object, default: null }, hasApiToken: Boolean })
             <template v-else>
                 <h1 class="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-6">Skills guardadas</h1>
 
-                <!-- API callout -->
+                <!--
+                    El conector MCP es la vía principal: con la sesión iniciada en
+                    Claude, saved_skills (App\Support\McpConnector) devuelve estas
+                    fichas sin copiar ninguna clave. La API key queda para las
+                    herramientas que no permiten iniciar sesión.
+                    La guía es Blade, no Inertia: <a>, no <Link>.
+                -->
                 <div class="mb-6 flex items-start gap-3 rounded-xl border border-brand-100 dark:border-brand-800 bg-brand-50 dark:bg-brand-900/20 px-4 py-3">
                     <span class="text-lg shrink-0 mt-0.5">🔌</span>
                     <div class="flex-1 min-w-0">
-                        <p class="text-sm font-medium text-brand-800 dark:text-brand-300">Accede a estas skills desde cualquier IA</p>
-                        <p class="text-xs text-brand-600 dark:text-brand-400 mt-0.5">Genera una API key y pega el endpoint en Claude, ChatGPT o cualquier IA para importar tus skills guardadas al instante.</p>
+                        <p class="text-sm font-medium text-brand-800 dark:text-brand-300">Pídeselas a Claude sin salir de la conversación</p>
+                        <p class="text-xs text-brand-600 dark:text-brand-400 mt-0.5">
+                            Añade el conector MCP de ia-skills en Claude (web, escritorio, móvil o Claude Code) e inicia sesión. Después basta con decirle «usa mis guardadas de ia-skills» y te trae el prompt completo, sin copiar ni pegar.
+                        </p>
+                        <p class="text-xs text-brand-600 dark:text-brand-400 mt-2 flex flex-wrap gap-x-4 gap-y-1">
+                            <a href="/guias/conectar-ia-skills-a-claude" class="font-medium hover:underline">Cómo conectarlo (2 minutos) →</a>
+                            <Link :href="route('profile.edit') + '#api'" class="hover:underline">
+                                {{ hasApiToken ? 'Ver tu API key' : 'API key' }} para otras herramientas
+                            </Link>
+                        </p>
                     </div>
-                    <Link :href="route('profile.edit') + '#api'" class="shrink-0 text-xs font-medium text-brand-600 dark:text-brand-400 hover:underline whitespace-nowrap mt-0.5">
-                        {{ hasApiToken ? 'Ver API key →' : 'Generar API key →' }}
-                    </Link>
                 </div>
 
                 <div v-if="skills.data.length" class="flex flex-col gap-3">

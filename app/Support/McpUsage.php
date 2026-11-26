@@ -25,6 +25,7 @@ class McpUsage
         'search_skills' => 'buscar',
         'get_skill' => 'leer',
         'my_skills' => 'mis_skills',
+        'saved_skills' => 'guardadas',
     ];
 
     /**
