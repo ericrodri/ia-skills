@@ -8,9 +8,11 @@ return [
     'excerpt' => 'ChatGPT recuerda cosas de ti de dos formas distintas, y borrar una no borra la otra. Esta guía explica dónde está cada una, cómo limpiarlas y qué hacer cuando aparece el aviso de memoria llena.',
     'category' => 'Herramientas',
     'published' => '2026-11-05',
-    'updated' => '2026-11-06',
+    // 26-11-2026: «papelera de ChatGPT» en 8 variantes de búsqueda sin
+    // respuesta en la guía; se añade la pregunta y el enlace a la ficha.
+    'updated' => '2026-11-26',
     'readingMinutes' => 8,
-    'words' => 1447,
+    'words' => 1563,
     'about' => 'Memoria, historial de conversaciones y privacidad en ChatGPT',
     'related' => ['como-usar-chatgpt', 'usar-ia-sin-filtrar-datos-de-clientes', 'ventana-de-contexto-conversaciones-largas', 'gpts-proyectos-y-skills', 'chatgpt-no-funciona', 'vale-la-pena-pagar-chatgpt-plus'],
     'toc' => [
@@ -27,6 +29,7 @@ return [
         '¿Cómo borro el historial de ChatGPT en el móvil?' => 'Para borrar una conversación, mantén pulsado su nombre en la lista de chats o abre su menú de tres puntos y elige eliminar. Para borrarlas todas, ve a los ajustes y busca la opción de eliminar todos los chats en el apartado de controles de datos. Lo que borres en el móvil desaparece también del ordenador, porque el historial va ligado a la cuenta.',
         '¿ChatGPT recuerda conversaciones anteriores?' => 'Sí, si tienes activada la memoria. Por un lado guarda recuerdos concretos, que puedes ver y editar. Por otro, puede consultar tus conversaciones anteriores para personalizar las respuestas. Las dos opciones se activan o desactivan por separado en los ajustes de personalización. Si las desactivas, cada chat empieza desde cero, aunque el historial siga visible en la barra lateral.',
         '¿Dónde están los chats archivados de ChatGPT?' => 'No aparecen en la barra lateral, pero no se han borrado. En el ordenador, entra en Ajustes, Controles de datos, Chats archivados y pulsa Gestionar: ahí puedes abrirlos, desarchivarlos o borrarlos. En el móvil están en el mismo apartado de los ajustes. El buscador del historial también los encuentra.',
+        '¿Tiene papelera ChatGPT? ¿Puedo recuperar un chat borrado?' => 'No. ChatGPT no tiene papelera ni carpeta de eliminados recientes, y OpenAI indica que un chat borrado no se puede restaurar, ni desde la aplicación ni pidiéndolo al soporte. Si un chat ha desaparecido sin que lo borraras, busca en los chats archivados, dentro de los ajustes. Si exportaste tus datos antes de borrarlo, la conversación sigue en ese archivo.',
         '¿Si borro un chat, OpenAI lo borra de verdad?' => 'Desaparece de tu cuenta al momento, y OpenAI dice que lo elimina de sus sistemas en un plazo de unos 30 días, salvo que tenga que conservarlo por motivos legales o de seguridad. Si ese chat ya se usó para entrenar modelos, borrarlo no deshace ese entrenamiento; por eso conviene desactivar la opción de mejorar el modelo antes de compartir información delicada.',
     ],
     'ctaTitle' => 'Instrucciones que no ocupan memoria',
@@ -65,7 +68,7 @@ return [
     <li><strong>Borra lo que no quieras</strong>, uno a uno con la papelera o todo de golpe.</li>
 </ol>
 
-<p>Merece la pena revisar la lista de vez en cuando. Es habitual encontrar cosas que guardó sin que se lo pidieras, como un dato de un familiar o algo que solo era para una tarea concreta. También puedes gestionarla hablando: «¿qué recuerdas de mí?», «olvida lo de mi viaje a Roma» o «recuerda que escribo siempre en español de España».</p>
+<p>Merece la pena revisar la lista de vez en cuando. Es habitual encontrar cosas que guardó sin que se lo pidieras, como un dato de un familiar o algo que solo era para una tarea concreta. También puedes gestionarla hablando: «¿qué recuerdas de mí?», «olvida lo de mi viaje a Roma» o «recuerda que escribo siempre en español de España». Si quieres un repaso completo, tienes un <a href="/skills/prompt-para-ver-que-sabe-chatgpt-de-ti-corregirlo-y-borrarlo">prompt para ver qué sabe ChatGPT de ti, corregirlo y borrarlo</a>.</p>
 
 <p>Si prefieres que no recuerde nada, apaga los dos interruptores. ChatGPT seguirá funcionando igual, pero cada conversación empezará de cero.</p>
 
@@ -94,6 +97,8 @@ return [
 </ul>
 
 <p>El historial va ligado a tu cuenta, así que lo que borres en el móvil desaparece también del ordenador y de la web. OpenAI elimina los chats borrados de sus sistemas en un plazo de unos 30 días, salvo obligaciones legales o de seguridad.</p>
+
+<p>Antes de borrar, ten en cuenta que <strong>ChatGPT no tiene papelera</strong>: un chat eliminado no se puede recuperar. Si dudas, archívalo, o exporta tus datos antes (lo explicamos más abajo).</p>
 
 <h2 id="temporal">Chat temporal y entrenamiento: que no guarde nada</h2>
 
