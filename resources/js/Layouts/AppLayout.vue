@@ -97,7 +97,7 @@ function logout() {
                             v-if="auth.user.is_admin"
                             :href="route('admin.skills.index')"
                             title="Administración"
-                            class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
+                            class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors"
                         >
                             🛡<span class="hidden 2xl:inline"> Admin</span>
                         </Link>
@@ -120,7 +120,7 @@ function logout() {
                         </Link>
 
                         <Link :href="route('skills.create')" class="btn-primary">
-                            + Compartir<span class="hidden sm:inline">&nbsp;skill</span>
+                            <span>+ Compartir<span class="hidden sm:inline"> skill</span></span>
                         </Link>
 
                         <!-- Avatar + dropdown -->
@@ -135,6 +135,15 @@ function logout() {
                                 v-if="showUserMenu"
                                 class="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl shadow-lg py-1 z-50"
                             >
+                                <!-- En el móvil el botón de admin de la barra no cabe: aquí sí. -->
+                                <Link
+                                    v-if="auth.user.is_admin"
+                                    :href="route('admin.skills.index')"
+                                    @click="showUserMenu = false"
+                                    class="sm:hidden block px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors"
+                                >
+                                    🛡 Administración
+                                </Link>
                                 <Link
                                     :href="route('dashboard')"
                                     @click="showUserMenu = false"

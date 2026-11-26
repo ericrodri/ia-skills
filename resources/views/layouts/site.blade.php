@@ -76,7 +76,7 @@
 
                     @auth
                         @if(auth()->user()->is_admin)
-                            <a href="{{ route('admin.skills.index') }}" class="px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors" title="Administración">🛡<span class="hidden 2xl:inline"> Admin</span></a>
+                            <a href="{{ route('admin.skills.index') }}" class="hidden sm:inline-flex items-center px-3 py-1.5 text-xs font-semibold rounded-lg bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400 hover:bg-amber-200 dark:hover:bg-amber-900/50 transition-colors" title="Administración">🛡<span class="hidden 2xl:inline"> Admin</span></a>
                         @endif
 
                         <a
@@ -91,7 +91,7 @@
                             <span class="hidden sm:inline xl:hidden 2xl:inline">Guardadas</span>
                         </a>
 
-                        <a href="{{ route('skills.create') }}" class="btn-primary">+ Compartir<span class="hidden sm:inline">&nbsp;skill</span></a>
+                        <a href="{{ route('skills.create') }}" class="btn-primary"><span>+ Compartir<span class="hidden sm:inline"> skill</span></span></a>
 
                         <details class="relative" data-close-outside>
                             <summary
@@ -99,6 +99,10 @@
                                 aria-label="Menú de usuario"
                             >{{ mb_strtoupper(mb_substr(auth()->user()->name, 0, 1)) }}</summary>
                             <div class="absolute right-0 mt-2 w-44 bg-white dark:bg-gray-800 border border-gray-100 dark:border-gray-700 rounded-xl shadow-lg py-1 z-50">
+                                {{-- En el móvil el botón de admin de la barra no cabe: aquí sí. --}}
+                                @if(auth()->user()->is_admin)
+                                    <a href="{{ route('admin.skills.index') }}" class="sm:hidden block px-4 py-2 text-sm font-semibold text-amber-700 dark:text-amber-400 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">🛡 Administración</a>
+                                @endif
                                 <a href="{{ route('dashboard') }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">Mi panel</a>
                                 @if(auth()->user()->username)
                                     <a href="{{ route('authors.show', ['user' => auth()->user()->username]) }}" class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700/50 transition-colors">Perfil público</a>
