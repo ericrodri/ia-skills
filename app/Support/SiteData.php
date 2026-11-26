@@ -37,6 +37,8 @@ class SiteData
         // apenas se visitaba y la gente busca «prompts para Gemini». Sigue en el pie.
         ['label' => 'Herramientas',  'route' => 'tools.index',       'inertia' => true,  'active' => 'tools.*'],
         ['label' => 'Guías',         'route' => 'guides.index',      'inertia' => false, 'active' => 'guides.*'],
+        // /mcp: cómo conectar ia-skills a Claude. Blade, como las guías.
+        ['label' => 'Usar en Claude', 'route' => 'mcp',              'inertia' => false, 'active' => 'mcp'],
         ['label' => 'Cómo funciona', 'route' => 'how-it-works',      'inertia' => true,  'active' => 'how-it-works'],
         ['label' => 'Guardadas',     'route' => 'skills.saved',      'inertia' => true,  'active' => 'skills.saved'],
     ];
@@ -50,7 +52,13 @@ class SiteData
      */
     public static function primaryNav(): array
     {
-        return array_map(fn (array $item) => [
+        // Sin el paquete npm, /mcp da 404 (McpController): fuera del menú.
+        $items = array_filter(
+            self::PRIMARY_NAV,
+            fn (array $item) => $item['route'] !== 'mcp' || SkillMarkdown::mcpAvailable(),
+        );
+
+        return array_values(array_map(fn (array $item) => [
             'label'   => $item['label'],
             'route'   => $item['route'],
             'href'    => route($item['route']),
@@ -58,7 +66,7 @@ class SiteData
             // Patrón para `request()->routeIs()`: 'guides.*' mantiene "Guías"
             // resaltado también en el detalle de cada guía.
             'active'  => $item['active'],
-        ], self::PRIMARY_NAV);
+        ], $items));
     }
 
     /**

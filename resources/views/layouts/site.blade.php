@@ -42,7 +42,7 @@
                             <a
                                 href="{{ $item['href'] }}"
                                 @class([
-                                    'whitespace-nowrap px-3 py-1.5 text-sm rounded-lg transition-colors',
+                                    'whitespace-nowrap px-2 2xl:px-3 py-1.5 text-sm rounded-lg transition-colors',
                                     'font-semibold text-brand-700 dark:text-brand-400' => request()->routeIs($item['active']),
                                     'text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white' => ! request()->routeIs($item['active']),
                                 ])
@@ -88,7 +88,7 @@
                             <svg class="w-5 h-5 sm:w-4 sm:h-4" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24" aria-hidden="true">
                                 <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0 1 11.186 0Z" />
                             </svg>
-                            <span class="hidden sm:inline">Guardadas</span>
+                            <span class="hidden sm:inline xl:hidden 2xl:inline">Guardadas</span>
                         </a>
 
                         <a href="{{ route('skills.create') }}" class="btn-primary">+ Compartir<span class="hidden sm:inline">&nbsp;skill</span></a>
