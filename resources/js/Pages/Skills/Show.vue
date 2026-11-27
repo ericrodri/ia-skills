@@ -945,7 +945,7 @@ function submitComment() {
                             @click="toggleSave"
                             :class="['w-full flex items-center justify-center gap-2 px-4 py-2.5 rounded-xl text-sm font-medium border transition-colors', saved ? 'bg-brand-50 border-brand-300 text-brand-700' : 'border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-400 dark:text-gray-500 hover:border-brand-300 hover:bg-brand-50']"
                         >
-                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z"/><path d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"/></svg>
+                            <svg class="w-4 h-4" viewBox="0 0 20 20" :fill="saved ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linejoin="round" d="M5 3.5h10a.5.5 0 0 1 .5.5v12.8a.3.3 0 0 1-.48.24L10 13.5l-5.02 3.54a.3.3 0 0 1-.48-.24V4a.5.5 0 0 1 .5-.5z"/></svg>
                             {{ saved ? 'Guardada' : 'Guardar' }}
                         </button>
                         </template>
@@ -974,8 +974,21 @@ function submitComment() {
             <button type="button" @click="copyPrompt" class="flex-1 rounded-xl bg-brand-600 active:bg-brand-700 text-white text-sm font-semibold py-2.5">
                 {{ copied ? '¡Copiado!' : 'Copiar prompt' }}
             </button>
-            <button type="button" @click="openIn(primaryTool.id)" :class="primaryTool.color" class="flex-1 rounded-xl text-white text-sm font-semibold py-2.5">
-                Abrir en {{ primaryTool.name }}
+            <button type="button" @click="openIn(primaryTool.id)" :class="primaryTool.color" class="flex-1 rounded-xl text-white text-sm font-semibold py-2.5 whitespace-nowrap">
+                <span class="hidden min-[360px]:inline">Abrir en </span>{{ primaryTool.name }}
+            </button>
+            <!-- En el móvil el «Guardar» de la columna lateral queda al final de
+                 la página, tras los comentarios: nadie llegaba a verlo. -->
+            <button
+                v-if="!isPrivate"
+                type="button"
+                @click="toggleSave"
+                :aria-label="saved ? 'Guardada' : 'Guardar'"
+                :aria-pressed="saved"
+                :class="saved ? 'bg-brand-50 border-brand-300 text-brand-700 dark:bg-brand-900/30 dark:border-brand-700 dark:text-brand-300' : 'border-gray-300 dark:border-gray-700 text-gray-600 dark:text-gray-300'"
+                class="shrink-0 w-11 flex items-center justify-center rounded-xl border"
+            >
+                <svg class="w-5 h-5" viewBox="0 0 20 20" :fill="saved ? 'currentColor' : 'none'" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path stroke-linejoin="round" d="M5 3.5h10a.5.5 0 0 1 .5.5v12.8a.3.3 0 0 1-.48.24L10 13.5l-5.02 3.54a.3.3 0 0 1-.48-.24V4a.5.5 0 0 1 .5-.5z"/></svg>
             </button>
         </div>
     </AppLayout>
